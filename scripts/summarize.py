@@ -13,7 +13,15 @@ import time
 import urllib.request
 import urllib.error
 
-MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash-lite")
+# Cadena de modelos: la cuota diaria gratis es PerModel, así que cuando uno
+# se agota (429 PerDay) rotamos al siguiente y sumamos su cupo gratis.
+# Configurable con GEMINI_MODELS (lista separada por comas) o GEMINI_MODEL.
+_DEFAULT_MODELS = "gemini-2.5-flash-lite,gemini-2.0-flash-lite,gemini-2.0-flash,gemini-2.5-flash"
+MODELS = [
+    m.strip() for m in
+    os.environ.get("GEMINI_MODELS", os.environ.get("GEMINI_MODEL", _DEFAULT_MODELS)).split(",")
+    if m.strip()
+]
 _ENDPOINT = (
     "https://generativelanguage.googleapis.com/v1beta/models/"
     "{model}:generateContent"
@@ -104,8 +112,8 @@ def _api_key() -> str:
     return key
 
 
-def _call(prompt: str, key: str, retries: int = 3) -> dict:
-    url = _ENDPOINT.format(model=MODEL) + f"?key={key}"
+def _call(prompt: str, key: str, model: str, retries: int = 3) -> dict:
+    url = _ENDPOINT.format(model=model) + f"?key={key}"
     body = json.dumps({
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
@@ -147,15 +155,15 @@ def _call(prompt: str, key: str, retries: int = 3) -> dict:
     raise GeminiError(f"Gemini falló tras {retries} intentos: {last_err}")
 
 
-def summarize(paper: dict, key: str) -> dict:
-    """Devuelve un objeto summary_es para el paper dado."""
+def summarize(paper: dict, key: str, model: str) -> dict:
+    """Devuelve un objeto summary_es para el paper dado, con el modelo dado."""
     prompt = _PROMPT.format(
         title=paper.get("title", ""),
         venue=paper.get("venue") or paper.get("source", ""),
         abstract=paper.get("abstract_en", ""),
     )
-    result = _call(prompt, key)
-    result["model"] = MODEL
+    result = _call(prompt, key, model)
+    result["model"] = model
     result["generated_at"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     return result
 
@@ -166,6 +174,10 @@ def summarize_all(papers: list[dict], cache: dict, throttle: bool = True) -> dic
     Devuelve la caché actualizada. Errores por paper -> summary_es=None.
     """
     key = _api_key()
+    models = list(MODELS) or [_DEFAULT_MODELS.split(",")[0]]
+    mi = 0  # índice del modelo activo en la cadena
+    print(f"  cadena de modelos: {', '.join(models)}")
+
     for i, p in enumerate(papers):
         pid = p["id"]
         if pid in cache and cache[pid]:
@@ -174,20 +186,32 @@ def summarize_all(papers: list[dict], cache: dict, throttle: bool = True) -> dic
         if not p.get("abstract_en"):
             p["summary_es"] = None
             continue
-        try:
-            summary = summarize(p, key)
-            p["summary_es"] = summary
-            cache[pid] = summary
-        except QuotaExhaustedError as e:
-            # Cuota DIARIA agotada: el resto fallaría igual. Cortamos y
-            # conservamos lo ya cacheado (los pendientes se harán en otro run).
-            print(f"  ! {e} -> se detiene la generación (los pendientes "
-                  f"quedan para el próximo run; la caché se conserva)")
+
+        # Intentar con el modelo activo; si su cuota diaria está agotada,
+        # rotar al siguiente de la cadena y reintentar el mismo paper.
+        while mi < len(models):
+            try:
+                summary = summarize(p, key, models[mi])
+                p["summary_es"] = summary
+                cache[pid] = summary
+                break
+            except QuotaExhaustedError as e:
+                print(f"  ~ '{models[mi]}': {e}")
+                mi += 1
+                if mi < len(models):
+                    print(f"  ~ rotando a '{models[mi]}'")
+            except GeminiError as e:
+                print(f"  ! resumen falló para {pid}: {e}")
+                p["summary_es"] = None
+                break
+
+        if mi >= len(models):
+            # Toda la cadena sin cuota diaria: cortar y conservar la caché.
+            print("  ! todos los modelos con cuota diaria agotada -> se detiene "
+                  "(los pendientes quedan para el próximo run; caché conservada)")
             p["summary_es"] = None
             break
-        except GeminiError as e:
-            print(f"  ! resumen falló para {pid}: {e}")
-            p["summary_es"] = None
+
         if throttle and i < len(papers) - 1:
             time.sleep(_SLEEP_SECONDS)
     return cache
