@@ -134,10 +134,11 @@ def _call(prompt: str, key: str, model: str, retries: int = 3) -> dict:
             text = data["candidates"][0]["content"]["parts"][0]["text"]
             return json.loads(text)
         except urllib.error.HTTPError as e:
-            body = e.read().decode("utf-8", "replace")
-            last_err = f"HTTP {e.code}: {body[:300]}"
+            # OJO: no reusar el nombre `body` (es el payload en bytes del POST).
+            err_body = e.read().decode("utf-8", "replace")
+            last_err = f"HTTP {e.code}: {err_body[:300]}"
             if e.code == 429:
-                is_daily, retry_s, detail = _parse_429(body)
+                is_daily, retry_s, detail = _parse_429(err_body)
                 if is_daily:
                     # Cuota diaria agotada: no tiene sentido reintentar hoy.
                     raise QuotaExhaustedError(f"cuota diaria agotada ({detail})")
@@ -148,7 +149,7 @@ def _call(prompt: str, key: str, model: str, retries: int = 3) -> dict:
             if e.code in (500, 503):  # transitorio
                 time.sleep(_SLEEP_SECONDS * (attempt + 2))
                 continue
-            raise GeminiError(f"HTTP {e.code}: {body[:300]}")
+            raise GeminiError(f"HTTP {e.code}: {err_body[:300]}")
         except (urllib.error.URLError, TimeoutError, KeyError, json.JSONDecodeError) as e:
             last_err = e
             time.sleep(_SLEEP_SECONDS * (attempt + 1))
