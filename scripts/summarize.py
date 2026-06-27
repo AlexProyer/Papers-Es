@@ -18,8 +18,10 @@ _ENDPOINT = (
     "https://generativelanguage.googleapis.com/v1beta/models/"
     "{model}:generateContent"
 )
-# Pausa entre llamadas para no exceder la cuota gratuita (req/min).
-_SLEEP_SECONDS = float(os.environ.get("GEMINI_SLEEP", "4"))
+# Pausa entre llamadas para no exceder la cuota gratuita.
+# Free tier de gemini-2.0-flash: 15 RPM. 6s => ~10 req/min, deja margen
+# para los reintentos sin chocar con el techo del minuto.
+_SLEEP_SECONDS = float(os.environ.get("GEMINI_SLEEP", "6"))
 
 _RESPONSE_SCHEMA = {
     "type": "object",

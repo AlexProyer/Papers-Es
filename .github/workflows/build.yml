@@ -42,6 +42,7 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: gemini-2.0-flash
+          GEMINI_SLEEP: "6"   # segundos entre llamadas (~10 req/min < 15 RPM free)
         run: python scripts/build.py
 
       - name: Commit data & cache
