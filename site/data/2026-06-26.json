@@ -33,7 +33,22 @@
       ],
       "abstract_en": "With a profusion of jailbreaks for LLMs now widely known, a growing concern is that non-expert malicious actors (\"the average Jane\") could elicit actionable responses to malicious requests. In this work, we examine whether this concern is justified. A non-expert malicious actor requires two ingredients for a successful attack: a powerful jailbreak for their target model, acting on an effective malicious query. For the former, we propose a novel attack strategy based on the multi-armed bandit framework. This allows efficient online learning of the optimal jailbreak from a large choice set via noisy exploration on a small number of queries, with subsequent application of the learnt policy on an exploitation set. For the latter, we curate $\\mathrm{FrankensteinBench}$, a safety benchmark of $11,279$ malicious queries drawn from manual curation over $7$ existing benchmarks, along with automated enhancement and generation. Each query is categorized as simple or complex by the technical expertise required to craft it. Our findings confirm the concern. Our bandit-based attack achieves success rates as high as $97\\%$ on average over $15$ SoTA open-weight LLMs. Moreover, adding complexity to queries raises the attack success rate by up to $26\\%$ on average across models -- making it an effective, automatable prompting strategy.",
       "abstract_full": true,
-      "summary_es": null
+      "summary_es": {
+        "tldr": "Algoritmos de bandit aprenden automáticamente los mejores 'jailbreaks' para que cualquiera pueda atacar modelos de lenguaje.",
+        "problema": "Actores maliciosos no expertos pueden usar 'jailbreaks' para que los modelos de lenguaje (LLMs) generen respuestas dañinas, pero necesitan saber qué 'jailbreak' y qué consulta usar.",
+        "propuesta": "Se propone un método basado en algoritmos de bandit para aprender eficientemente el 'jailbreak' óptimo de un conjunto grande de opciones. También se presenta FrankensteinBench, un conjunto de datos de 11,279 consultas maliciosas, categorizadas por complejidad.",
+        "resultados": "El método de bandit logra tasas de éxito de hasta el 97% en 15 LLMs de última generación. Añadir complejidad a las consultas aumenta la tasa de éxito hasta un 26%.",
+        "por_que_importa": "Demuestra que es fácil para usuarios no expertos realizar ataques exitosos a LLMs, incluso con consultas simples, lo que subraya la necesidad urgente de mejorar la seguridad de estos modelos.",
+        "tags": [
+          "LLMs",
+          "ciberseguridad",
+          "jailbreaking",
+          "seguridad IA",
+          "ataques"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-06-27T01:47:12Z"
+      }
     },
     {
       "id": "arxiv:2606.27091v1",
@@ -61,7 +76,23 @@
       ],
       "abstract_en": "LLMs fine-tuned for security classification are usually evaluated on held-out examples from the same distribution as their training data. We show that this can miss vulnerabilities introduced by fine-tuning itself: models can learn token-level indicator semantics that preserve canonical accuracy while failing under behavior-preserving transformations such as PowerShell alias substitution, command reconstruction, string construction, execution indirection, and case mutation. We study Foundation-Sec-8B-Instruct and its base model, Llama-3.1-8B-Instruct, on matched PowerShell classification cohorts. Causal interventions localize the classification circuit to a late-attention route inherited from Llama rather than created by fine-tuning. Fine-tuning concentrates and semantically specializes this inherited structure, improving baseline behavior while creating transformation-sensitive attack surfaces. A three-tier evasion benchmark finds Foundation-Sec misses on iwr substitution, Invoke-Expression reconstruction, and case-mutated Invoke-Expression/IEX variants that Llama does not share. We also derive a pre-deployment monitoring method: a linear probe at the classification boundary and an indicator-token sign test identify command families where canonical indicators change role after fine-tuning. These signals prioritize red-team variant generation using only canonical inputs, showing that security fine-tuning can improve task accuracy while expanding the evasion surface. These results caution against treating small task-specific fine-tunes as straightforwardly safer security classifiers: specialization can convert inherited model structure into brittle indicator rules that preserve held-out accuracy while expanding the evasion surface. Robust AI-enabled security will require specifying the full transformation space of the task and monitoring semantic drift through fine-tuning.",
       "abstract_full": true,
-      "summary_es": null
+      "summary_es": {
+        "tldr": "Ajustar modelos de lenguaje para seguridad puede crear vulnerabilidades ocultas que las evaluaciones estándar no detectan.",
+        "problema": "Los modelos de IA ajustados para clasificar código malicioso pueden volverse vulnerables a ataques sutiles que las métricas de evaluación convencionales no identifican.",
+        "propuesta": "Se investiga cómo el ajuste fino (fine-tuning) de LLMs para seguridad puede introducir vulnerabilidades al especializar semánticamente rutas de atención heredadas, creando puntos débiles ante transformaciones de comandos.",
+        "resultados": "El modelo Foundation-Sec-8B-Instruct falla en variantes de PowerShell (sustitución de alias, reconstrucción, mutación de mayúsculas) que su modelo base Llama-3.1-8B-Instruct no comparte. Se propone un método de monitoreo que detecta cambios en el rol de indicadores de comandos después del ajuste fino.",
+        "por_que_importa": "El ajuste fino para seguridad, aunque mejora la precisión en datos estándar, puede expandir la superficie de ataque. Es crucial monitorear la deriva semántica y considerar el espacio completo de transformaciones para una ciberseguridad robusta.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "LLMs",
+          "Ajuste Fino",
+          "Vulnerabilidades",
+          "Evaluación"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-06-27T01:47:21Z"
+      }
     },
     {
       "id": "arxiv:2606.26590v1",
@@ -90,7 +121,23 @@
       ],
       "abstract_en": "Security misconfigurations in Terraform Infrastructure-as-Code are a growing risk in cloud deployments, and large language models are increasingly used as automated repair agents. Existing evaluations often treat a repair as successful when the targeted static-analysis finding disappears, without checking planning validity, behavioral change, or security intent. This paper presents TerraProbe, a five-layer oracle framework for evaluating LLM-assisted Terraform security repair. We apply TerraProbe to 288 first-pass repairs generated by gemini-2.5-flash-lite, GPT-4o, and Claude 3.5 Sonnet across 68 real-world TerraDS modules and 28 controlled injected-defect modules. The results show that targeted Checkov removal overstates repair success. Although targeted removal reaches 83.3 percent for the primary model, full-scanner cleanliness drops to 10.4 percent, Terraform planning succeeds for 39.6 percent, and plan comparison is reachable for 38.5 percent. Human adjudication further shows that 71.4 percent of plan-compared real-world repairs are deceptive fixes that pass automated checks while leaving the underlying vulnerability in place. This pattern is statistically indistinguishable across the three models, with deceptive-fix rates from 57.1 percent to 71.4 percent and pairwise Fisher exact p-values above 0.10. The paper introduces a four-dimensional taxonomy of deceptive fixes, validated with Cohen kappa of 0.78 and Krippendorff alpha of 0.76. IAM permission analysis confirms that wildcard Resource grants persist in all nine CKV2 AWS 11 deceptive-fix cases. TerraProbe contributes an evaluation methodology, a replication package, and the Multi-Layer Oracle Evaluation framework for distinguishing intent-aligned security repairs from scanner-passing false successes.",
       "abstract_full": true,
-      "summary_es": null
+      "summary_es": {
+        "tldr": "TerraProbe evalúa reparaciones de seguridad de IA en Terraform, revelando que muchas 'soluciones' son engañosas y no arreglan el problema real.",
+        "problema": "Las configuraciones erróneas de seguridad en Terraform son un riesgo creciente, y las IA que intentan repararlas a menudo generan 'arreglos' que parecen solucionar el problema para las herramientas de análisis, pero en realidad no corrigen la vulnerabilidad subyacente, lo que se conoce como 'arreglos engañosos'.",
+        "propuesta": "Se propone TerraProbe, un marco de evaluación con cinco capas de oráculos, para evaluar de manera integral las reparaciones de seguridad de Terraform asistidas por IA, verificando no solo la eliminación de hallazgos de análisis estático, sino también la validez de la planificación, el cambio de comportamiento y la intención de seguridad.",
+        "resultados": "En 288 reparaciones de IA (Gemini, GPT-4o, Claude 3.5 Sonnet), la eliminación del hallazgo de Checkov alcanzó el 83.3%, pero la limpieza completa del escáner solo llegó al 10.4%. La planificación de Terraform tuvo éxito en el 39.6% de los casos. El 71.4% de las reparaciones en módulos reales fueron arreglos engañosos, manteniendo la vulnerabilidad original. Las tasas de arreglos engañosos fueron similares entre los modelos de IA.",
+        "por_que_importa": "Es crucial para la práctica porque las herramientas actuales de evaluación de reparaciones de IA pueden ser engañadas fácilmente, llevando a una falsa sensación de seguridad. TerraProbe proporciona una metodología para distinguir las reparaciones de seguridad genuinas de las falsas, mejorando la fiabilidad de la IA en la ciberseguridad de la nube.",
+        "tags": [
+          "IA",
+          "Terraform",
+          "Ciberseguridad",
+          "Reparación de Código",
+          "Arreglos Engañosos",
+          "Evaluación de Modelos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-06-27T01:47:32Z"
+      }
     },
     {
       "id": "arxiv:2606.27291v1",
@@ -121,7 +168,23 @@
       ],
       "abstract_en": "Job-search platforms rely on low-bandwidth query interfaces that often fail to capture the high-dimensional complexity of candidate profiles. We present an end-to-end RLAIF (Reinforcement Learning from AI Feedback) framework to generate \\emph{portable} job search queries, terms that abstract away seeker-specific identifiers while preserving generalizable qualifications. This task introduces a highly adversarial reward surface where policy optimization frequently exploits flaws in LLM-as-judge rubrics, resulting in degenerate verbatim-copying behaviors. We conducted comprehensive empirical experiments to isolate the impact of optimization mechanics against structured reward engineering. Our results demonstrate that for critic-free optimizers, performance is overwhelmingly dictated by robust reward shaping, rendering the specific choice of algorithm largely immaterial. While critic-free per-rollout baseline methods (RLOO and REINFORCE++) natively resist reward-hacking, the group-relative advantage normalization in GRPO appears uniquely sensitive to spurious reward signals, making it disproportionately susceptible to exploitation. We show that introducing a deterministic, rule-based reward floor to correct for rewards assigned to verbatim copying mitigates this failure mode, resulting in a substantial $+0.147$ quality improvement on a cross-family evaluation judge. Ultimately, we show that the training-time reward model inflates performance gains by $2.4\\times$, confirming that the training success is fundamentally dependent on enforcing reward-shaping disciplines rather than selecting alternative optimizers.",
       "abstract_full": true,
-      "summary_es": null
+      "summary_es": {
+        "tldr": "Generamos consultas de búsqueda de empleo más inteligentes y portátiles usando IA, mejorando la relevancia y evitando trampas de optimización.",
+        "problema": "Las interfaces de búsqueda de empleo actuales son de baja calidad y no capturan la complejidad de los perfiles de los candidatos, lo que lleva a resultados de búsqueda deficientes.",
+        "propuesta": "Se propone un marco RLAIF (Aprendizaje por Refuerzo con Retroalimentación de IA) para generar consultas de búsqueda de empleo 'portátiles' que abstraen identificadores específicos del solicitante pero conservan las cualificaciones generalizables. Se enfoca en la ingeniería de recompensas para evitar que la IA copie textualmente las respuestas.",
+        "resultados": "La ingeniería de recompensas robusta es más importante que el algoritmo de optimización. Un 'suelo de recompensa' basado en reglas para corregir la copia textual mejoró la calidad en +0.147. El modelo de recompensa infla las ganancias de rendimiento en 2.4x.",
+        "por_que_importa": "Mejora la eficacia de las plataformas de búsqueda de empleo, haciendo que las coincidencias entre candidatos y ofertas sean más precisas y eficientes, y proporciona una guía práctica sobre cómo entrenar modelos de IA en escenarios adversarios.",
+        "tags": [
+          "IA",
+          "Búsqueda de Empleo",
+          "Aprendizaje por Refuerzo",
+          "Ingeniería de Recompensas",
+          "Ciberseguridad",
+          "Procesamiento de Lenguaje Natural"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-06-27T01:47:42Z"
+      }
     },
     {
       "id": "arxiv:2606.26793v1",
@@ -151,7 +214,23 @@
       ],
       "abstract_en": "Multimodal agentic retrieval-augmented generation (RAG) systems expand the attack surface beyond prompt injection to include text poisoning, image injection, direct-query attacks, and orchestrator-level tool manipulation. Existing red-teaming approaches are typically surface-specific and often recycle known attack templates; on text-poisoning benchmarks we measure 73-84% exact duplication. We present MIRROR, a unified cross-surface framework that performs memory-guided Monte Carlo tree search while conditioning candidate generation on retrieved context under an explicit novelty constraint. A deterministic Novelty Gate rejects any candidate matching the retrieval set under normalized comparison, allowing retrieval to inform search priors without enabling prompt copying. Across four attack surfaces on a multimodal agentic RAG target, MIRROR attains 76% ASR on image poisoning compared with 52% for baselines, 97% ASR on orchestrator attacks at half the query cost, and the lowest cross-surface variance (coefficient of variation 0.47). In contrast, specialized baselines collapse across surfaces: suffix optimization reaches 79% ASR on text poisoning but 1% on direct queries. We release ART-SafeBench with 41,815 in-package records and runtime adapters yielding 41,991+ total records across four surfaces.",
       "abstract_full": true,
-      "summary_es": null
+      "summary_es": {
+        "tldr": "MIRROR revoluciona el red-teaming de sistemas RAG multimodales, descubriendo vulnerabilidades nuevas y diversas de forma eficiente.",
+        "problema": "Los sistemas RAG multimodales son vulnerables a múltiples tipos de ataques (envenenamiento de texto/imagen, manipulación de herramientas) que los métodos actuales de red-teaming no abordan de forma unificada ni descubren ataques novedosos, reciclando los conocidos.",
+        "propuesta": "MIRROR usa una búsqueda de árbol Monte Carlo guiada por memoria y una restricción de novedad explícita. Una 'Novelty Gate' rechaza ataques que copian el contexto recuperado, permitiendo que la memoria informe la búsqueda sin permitir el plagio de prompts.",
+        "resultados": "MIRROR logra un 76% de ASR en envenenamiento de imágenes (vs 52% de los baselines), un 97% en ataques al orquestador con la mitad de coste, y la menor varianza entre superficies (0.47). Los métodos especializados fallan en otras superficies (ej. 1% ASR en consultas directas).",
+        "por_que_importa": "Proporciona un marco unificado y más eficaz para evaluar la seguridad de sistemas RAG multimodales, descubriendo vulnerabilidades más allá de las conocidas y reduciendo el coste de las pruebas.",
+        "tags": [
+          "ciberseguridad",
+          "IA",
+          "RAG",
+          "red-teaming",
+          "vulnerabilidades",
+          "multimodal"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-06-27T01:47:51Z"
+      }
     },
     {
       "id": "arxiv:2606.26707v1",
@@ -181,7 +260,23 @@
       ],
       "abstract_en": "Adversarial APKs are Android applications modified in the problem space to evade machine-learning malware detectors. In this work, we first show that, despite claims, existing problem-space attacks remain largely impractical. Most techniques leverage software transplantation to inject entire benign modules, introducing many side-effect features and often causing build-time failures. Fine-grained methods that inject only a narrow subset of components exhibit limited effectiveness, while those that also use obfuscation rely on brittle bytecode rewriting, producing APKs that are syntactically valid but semantically unusable. Prior work further overestimates attack success rates by running smoke tests that only validate installation and basic execution, without assessing whether the modified APK still preserves its intended behavior. To overcome these limitations, we present DROIDBREAKER, a practical (build-safe) and functional (semantics-preserving) problem-space attack framework that provides: (i) query-efficient white- and black-box attacks by manipulating only the APK components most influential to the target model; (ii) a set of fine-grained, build-safe manipulations (including injection and obfuscation of API calls, app modules, permissions, and URLs) with minimal side effects; and (iii) a semantics-preserving functionality test that enforces runtime equivalence by comparing execution logs and API-level traces between the initial and the modified APK. Evaluated on a recent corpus of Android applications, DROIDBREAKER achieves high evasion rates with few queries and minimal side effects in both white-box and black-box settings, and drastically reduces detections by commercial malware scanners hosted on VirusTotal.",
       "abstract_full": true,
-      "summary_es": null
+      "summary_es": {
+        "tldr": "DroidBreaker crea APKs maliciosos indetectables para mejorar la seguridad de los detectores de malware basados en IA.",
+        "problema": "Los ataques actuales contra detectores de malware de Android son poco prácticos, causan fallos o no preservan la funcionalidad original de las aplicaciones, y sobreestiman su éxito.",
+        "propuesta": "DroidBreaker es un framework que realiza ataques en el espacio del problema, manipulando componentes clave del APK de forma eficiente y segura para evitar la detección sin afectar la funcionalidad.",
+        "resultados": "DroidBreaker logra altas tasas de evasión con pocas consultas, minimiza efectos secundarios y reduce drásticamente las detecciones por escáneres comerciales en entornos white-box y black-box.",
+        "por_que_importa": "Permite evaluar de forma realista la robustez de los detectores de malware de IA y desarrollar defensas más efectivas contra amenazas del mundo real.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Android",
+          "Malware",
+          "Ataques Adversariales",
+          "Detección"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-06-27T01:48:01Z"
+      }
     },
     {
       "id": "arxiv:2606.26627v1",
@@ -209,7 +304,23 @@
       ],
       "abstract_en": "Large language model agents increasingly query databases, search document collections, call external APIs, remember past interactions, and act on a user's behalf. As they move from answering questions to operating over sensitive data, privacy becomes harder to enforce. An agent touches many data sources, runs multi-step workflows, keeps state across sessions, and acts with delegated permissions. Sensitive information can therefore leak not only through its final answer but through the queries it issues, the intermediate results it handles, the memory it writes, and the messages it exchanges with other agents. We survey the privacy of LLM agents from a data-centric view, organizing the field around the data an agent touches rather than by attack type, and we use data agent as shorthand for an LLM agent that works with data. Research on these risks is active but scattered across retrieval-augmented generation, text-to-SQL interfaces, agent memory, prompt injection, access control, and contextual privacy. This survey brings that work together: we taxonomize the data sources an agent touches, the privacy risks each source creates, and the governance mechanisms that address them; we map the benchmarks used to measure these risks and identify what is missing; and we set out the open problems. Two findings recur: among governance mechanisms only information-flow control covers both compositional and cross-session inference leakage, the two least-protected risks; and no benchmark drives an agent across its data surfaces under one privacy policy, the instrument the field most lacks. Our goal is a reference that situates the scattered literature and gives future work a common framing.",
       "abstract_full": true,
-      "summary_es": null
+      "summary_es": {
+        "tldr": "Los agentes de LLM manejan datos sensibles; esta investigación clasifica los riesgos de privacidad y propone soluciones.",
+        "problema": "Los agentes de modelos de lenguaje grandes (LLM) interactúan cada vez más con datos sensibles a través de bases de datos, APIs y memoria, lo que dificulta la aplicación de la privacidad. La información sensible puede filtrarse a través de consultas, resultados intermedios, memoria y comunicaciones.",
+        "propuesta": "Se realiza una encuesta centrada en los datos que los agentes de LLM tocan, clasificando las fuentes de datos, los riesgos de privacidad asociados y los mecanismos de gobernanza. Se analizan los benchmarks existentes y se identifican las lagunas.",
+        "resultados": "Solo el control del flujo de información aborda las fugas de inferencia composicional y entre sesiones. Ningún benchmark evalúa un agente en todas sus superficies de datos bajo una única política de privacidad.",
+        "por_que_importa": "Proporciona un marco unificado para comprender y abordar los riesgos de privacidad en los agentes de LLM, guiando la investigación futura y la implementación práctica para proteger datos sensibles.",
+        "tags": [
+          "privacidad",
+          "LLM",
+          "agentes",
+          "ciberseguridad",
+          "datos sensibles",
+          "gobernanza"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-06-27T01:48:11Z"
+      }
     },
     {
       "id": "arxiv:2606.27215v1",
@@ -238,7 +349,22 @@
       ],
       "abstract_en": "Deep learning models have achieved impressive performance across various fields but remain vulnerable to adversarial inputs, particularly in NLP, where such attacks can have significant real-world consequences. Adversarial attacks often involve small, semantically similar token replacements to fool NLP models, and recent methods have become more precise by targeting specific vulnerable words, often by exploiting some level of access to the model's internal structure. This paper proposes GAversary, a hybrid Genetic Algorithm (GA) to generate adversarial attacks on natural language models. The GA is able to treat the target model as a black box, requiring only the logit value output by the model to guide the search. GAversary differs from GAs previously proposed for this problem by using GloVe embeddings to propose word replacements (the mutation operator) to improve the semantic similarity of the adversarial examples. GAversary is applied to several benchmark data sets and well-known target models. GAversary is able to substantially reduce the target model's accuracy on test data compared to the BAE and A2T attacks compared against (in the best case, reducing a 76.8% accuracy to 5.8%, compared to BAE's 27.6%). The trade-off is that GAversary perturbs just under twice as many words as the other two methods, with a slightly lower semantic similarity to the original text and around a 5% increase in run-time.",
       "abstract_full": true,
-      "summary_es": null
+      "summary_es": {
+        "tldr": "Generamos ataques de texto adversario para modelos de lenguaje usando algoritmos genéticos, logrando reducir su precisión significativamente.",
+        "problema": "Los clasificadores de lenguaje natural, a pesar de su precisión, son vulnerables a textos adversarios diseñados para engañarlos, lo que puede tener graves consecuencias.",
+        "propuesta": "Proponemos GAversary, un algoritmo genético híbrido que trata al modelo objetivo como una caja negra y utiliza embeddings de GloVe para generar reemplazos de palabras semánticamente similares y engañar al modelo.",
+        "resultados": "GAversary reduce la precisión de los modelos objetivo sustancialmente (del 76.8% al 5.8% en el mejor caso), superando a otros ataques como BAE y A2T. Sin embargo, perturba más palabras y tiene una similitud semántica ligeramente menor.",
+        "por_que_importa": "Demuestra la vulnerabilidad de los modelos de lenguaje a ataques de caja negra y propone un método efectivo para generar estos ataques, crucial para el desarrollo de defensas más robustas.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Procesamiento de Lenguaje Natural",
+          "Ataques Adversarios",
+          "Algoritmos Genéticos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-06-27T01:48:21Z"
+      }
     },
     {
       "id": "arxiv:2606.26904",
@@ -267,7 +393,22 @@
       ],
       "abstract_en": "Video reasoning language models implicitly assume that every input frame is equally reliable. This leads to what we term the Blind Trust Problem: under realistic perturbations such as motion blur, glare, or occlusion, frontier video reasoning models can suffer 15-30%p accuracy drops on real-world embodied benchmarks, while remaining unaware that their visual evidence has been degraded. To address this challenge, we propose Robust-TO, an agentic video understanding framework that explicitly integrates per-frame trustworthiness into every stage of reasoning. Robust-TO organizes heterogeneous visual perception tools under a unified evidence interface. Each tool receives a sub-query derived from the original question and a set of trustworthy frames selected by the reliability-relevance score. It returns evidence in a shared format: a concrete prediction (e.g., a bounding box, motion trajectory, recognized text, or action label), temporal grounding, and a calibrated reliability score. During reasoning, these calibrated scores guide evidence weighting in a three-tier synthesis process (high/medium/low) and define a confidence-cost GRPO reward that jointly optimizes correctness, evidence reliability, and efficiency. On two video reasoning benchmarks spanning eight tasks, Robust-TO achieves 56.4% average accuracy on clean inputs, surpassing the strongest open-source baseline by 10.6%p and outperforming Gemini-2.5-Pro (46.2%). Under five realistic corruption types, Robust-TO maintains 54.3% average accuracy, 5.8%p above the strongest open-source baseline, while exhibiting the smallest clean-to-corrupted accuracy drop among all compared methods.",
       "abstract_full": true,
-      "summary_es": null
+      "summary_es": {
+        "tldr": "Modelos de IA para videos confían ciegamente en cada fotograma, bajando su precisión ante problemas visuales.",
+        "problema": "Los modelos de razonamiento de video actuales sufren caídas de precisión del 15-30% ante perturbaciones visuales (desenfoque, oclusión) sin ser conscientes de la degradación de la evidencia.",
+        "propuesta": "Se propone Robust-TO, un marco que integra la fiabilidad de cada fotograma en el razonamiento. Organiza herramientas de percepción visual y utiliza una puntuación de fiabilidad-relevancia para seleccionar fotogramas y guiar la ponderación de la evidencia en un proceso de síntesis de tres niveles.",
+        "resultados": "Robust-TO alcanza un 56.4% de precisión promedio en datos limpios (superando al mejor baseline en 10.6%p y a Gemini-2.5-Pro) y mantiene un 54.3% en datos corruptos (5.8%p por encima del mejor baseline), con la menor caída de precisión.",
+        "por_que_importa": "Mejora la robustez y fiabilidad de los modelos de IA en tareas de video del mundo real, donde la calidad de la imagen no siempre es perfecta, asegurando un rendimiento más consistente.",
+        "tags": [
+          "IA",
+          "Video",
+          "Robustez",
+          "Ciberseguridad",
+          "Comprensión de Video"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-06-27T01:48:31Z"
+      }
     },
     {
       "id": "arxiv:2606.26875",
@@ -297,7 +438,23 @@
       ],
       "abstract_en": "Reasoning capability has advanced rapidly in large language models (LLMs), leading to an increasing size of key-value (KV) cache in both prefilling and decoding stages. Existing KV cache compression methods mainly rely on attention weights to estimate token importance. While attention effectively captures contextual relevance, it overlooks complementary information-theoretic signals related to predictive uncertainty and token informativeness. In this paper, we revisit token importance from a forward-looking perspective and introduce \\textit{Forward Influence}, a metric that measures how compressed tokens affect future contexts. Our analysis reveals that tokens selected by attention scores mainly influence nearby contexts, whereas tokens associated with high predictive uncertainty exhibit substantially stronger influence on distant future contexts. Based on the observation, we propose \\textbf{InfoKV}, an entropy-aware KV cache compression framework that incorporates information-theoretic signals. It combines token-level predictive uncertainty with layer-wise representation evolution and integrates the resulting entropy scores with attention scores during reasoning. Experiments on long-context reasoning benchmarks with Llama-3.1, Llama-3.2, and DeepSeek-R1 demonstrate that InfoKV consistently outperforms existing attention-based KV compression methods in both long prefilling and decoding scenarios.",
       "abstract_full": true,
-      "summary_es": null
+      "summary_es": {
+        "tldr": "InfoKV revoluciona la compresión de caché KV en LLMs, mejorando el razonamiento largo al usar incertidumbre predictiva, superando métodos de atención.",
+        "problema": "Los modelos de lenguaje grandes (LLMs) generan cachés KV de gran tamaño durante el prellenado y la decodificación, lo que dificulta el razonamiento con contextos largos. Los métodos de compresión existentes solo usan pesos de atención, ignorando señales de incertidumbre predictiva e informatividad del token.",
+        "propuesta": "Proponen \"InfoKV\", un marco de compresión de caché KV que considera la entropía. Introducen \"Forward Influence\" para medir cómo los tokens comprimidos afectan contextos futuros. InfoKV combina la incertidumbre predictiva a nivel de token con la evolución de la representación por capa, integrando estas puntuaciones de entropía con las puntuaciones de atención durante el razonamiento.",
+        "resultados": "InfoKV supera consistentemente a los métodos de compresión de caché KV basados en atención existentes en escenarios de prellenado y decodificación largos. Esto se demostró en benchmarks de razonamiento de contexto largo usando modelos como Llama-3.1, Llama-3.2 y DeepSeek-R1. El resumen no especifica cifras exactas de mejora.",
+        "por_que_importa": "Permite que los LLMs manejen contextos mucho más largos de manera más eficiente, mejorando su capacidad de razonamiento. Al optimizar la caché KV, se reduce el consumo de memoria y se acelera el procesamiento, lo que es crucial para aplicaciones que requieren comprender y generar texto extenso.",
+        "tags": [
+          "Compresión KV",
+          "LLMs",
+          "Razonamiento Largo",
+          "Incertidumbre Predictiva",
+          "Optimización de Modelos",
+          "Eficiencia IA"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-06-27T01:49:05Z"
+      }
     },
     {
       "id": "arxiv:2606.26907",
@@ -327,7 +484,22 @@
       ],
       "abstract_en": "While text-to-image (T2I) models have achieved remarkable progress, they struggle with real-world requests that are often underspecified, implicit, or dependent on up-to-date knowledge. We identify this challenge as the Context Gap: the mismatch between the user context and the sufficient generation context for T2I models. To bridge this gap, we propose Qwen-Image-Agent, a unified agentic framework that integrates plan, reason, search, memory and feedback in a context-centric manner. Qwen-Image-Agent treats user input as partial context and progressively constructs the generation context through Context-Aware Planning and Context Grounding. Specifically, Context-Aware Planning identifies missing context and plans how it should be acquired and used, while Context Grounding gathers this context from reason, search, memory, and feedback. To evaluate agentic image generation, we further introduce Image Agent Bench (IA-Bench), a benchmark covering four core image agent capabilities: Plan, Reason, Search, and Memory. Experiments on IA-Bench, Mindbench and WISE-Verified show that Qwen-Image-Agent outperforms strong baselines and achieves state-of-the-art performance.",
       "abstract_full": true,
-      "summary_es": null
+      "summary_es": {
+        "tldr": "Qwen-Image-Agent cierra la brecha de contexto en la generación de imágenes, permitiendo que los modelos T2I entiendan mejor las solicitudes complejas del mundo real.",
+        "problema": "Los modelos de texto a imagen (T2I) actuales tienen dificultades con solicitudes del mundo real que son ambiguas, implícitas o requieren conocimiento actualizado. Esto crea una 'brecha de contexto' entre lo que el usuario pide y lo que el modelo necesita para generar una imagen adecuada.",
+        "propuesta": "Se propone Qwen-Image-Agent, un marco unificado basado en agentes que integra planificación, razonamiento, búsqueda, memoria y retroalimentación. Trata la entrada del usuario como contexto parcial y lo construye progresivamente mediante 'Planificación Consciente del Contexto' (identifica y planifica la adquisición de contexto faltante) y 'Fundamentación del Contexto' (recopila contexto de razonamiento, búsqueda, memoria y retroalimentación).",
+        "resultados": "Qwen-Image-Agent supera a las líneas base robustas y logra un rendimiento de vanguardia en los benchmarks IA-Bench (que evalúa planificación, razonamiento, búsqueda y memoria), Mindbench y WISE-Verified. El resumen no especifica resultados numéricos concretos.",
+        "por_que_importa": "Este avance es crucial porque mejora significativamente la capacidad de los modelos de texto a imagen para interpretar y responder a solicitudes complejas y poco especificadas del mundo real, haciéndolos mucho más útiles y aplicables en escenarios prácticos.",
+        "tags": [
+          "Generación de imágenes",
+          "IA conversacional",
+          "Agentes inteligentes",
+          "Contexto IA",
+          "Modelos T2I"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-06-27T01:50:06Z"
+      }
     },
     {
       "id": "arxiv:2606.18394",
@@ -357,7 +529,23 @@
       ],
       "abstract_en": "Speculative decoding (SD) accelerates autoregressive Large Language Models (LLMs) by drafting multiple tokens and verifying them in parallel, but it faces a scaling limitation: increasing the draft budget improves speed only when acceptance remains high and drafting overhead stays low. This ceiling has been difficult to break because prior head-based SD methods face a causality-efficiency dilemma. Autoregressive drafters produce path-conditioned candidates that are effective for tree speculative decoding with higher acceptance length, but their drafting cost grows with tree depth. Bidirectional block-diffusion drafters generate all positions in one pass, but their branch-agnostic marginals can form individually plausible yet mutually inconsistent trees, wasting budget and reducing acceptance. We propose JetSpec, a head-based SD framework that combines one-forward drafting efficiency with branch-wise causal conditioning. JetSpec trains a causal parallel draft head over fused hidden states from the frozen target model, producing candidate trees whose scores align with the target model's autoregressive factorization. This enables JetSpec to convert larger draft budgets into longer accepted prefixes and higher end-to-end speedup. Across math, coding, and chat benchmarks on dense and MoE Qwen3 models, JetSpec consistently outperforms bidirectional-head and tree-based SD baselines. On H100 GPUs, JetSpec achieves up to 9.64x speedup on MATH-500 and 4.58x on open-ended conversational workloads, with further latency gains demonstrated through vLLM integration under realistic serving loads. Our code and models are available at https://github.com/hao-ai-lab/JetSpec.",
       "abstract_full": true,
-      "summary_es": null
+      "summary_es": {
+        "tldr": "JetSpec rompe el límite de escalabilidad de la decodificación especulativa en LLMs, logrando aceleraciones significativas al generar candidatos de forma más eficiente y consistente.",
+        "problema": "La decodificación especulativa (SD) para LLMs enfrenta un límite de escalabilidad: aumentar el presupuesto de borrador no siempre mejora la velocidad debido a la baja aceptación o la alta sobrecarga. Los métodos existentes tienen un dilema entre causalidad y eficiencia, produciendo borradores costosos o inconsistentes que reducen la aceptación.",
+        "propuesta": "JetSpec es un framework de SD basado en 'heads' que combina la eficiencia de un borrador de una sola pasada con el condicionamiento causal por rama. Entrena un 'draft head' paralelo causal sobre estados ocultos fusionados del modelo objetivo, generando árboles candidatos cuyas puntuaciones se alinean con la factorización autorregresiva del modelo.",
+        "resultados": "JetSpec superó consistentemente a las líneas base de SD basadas en 'bidirectional-head' y árboles en benchmarks de matemáticas, codificación y chat con modelos Qwen3 densos y MoE. En GPUs H100, logró una aceleración de hasta 9.64x en MATH-500 y 4.58x en cargas de trabajo conversacionales abiertas. También demostró mejoras adicionales en latencia con la integración de vLLM bajo cargas de servicio realistas.",
+        "por_que_importa": "JetSpec ofrece mejoras sustanciales en la velocidad de inferencia de LLMs, lo que es crucial para reducir costos operativos y mejorar la capacidad de respuesta en aplicaciones de IA. Su capacidad para escalar la decodificación especulativa de manera más efectiva lo hace valioso para tareas complejas como matemáticas y codificación, así como para interacciones conversacionales, facilitando despliegues más eficientes y de baja latencia.",
+        "tags": [
+          "LLMs",
+          "Decodificación Especulativa",
+          "Aceleración IA",
+          "Inferencia LLM",
+          "Procesamiento Lenguaje Natural",
+          "Optimización Rendimiento"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-06-27T01:51:09Z"
+      }
     },
     {
       "id": "arxiv:2606.14397",
@@ -387,7 +575,23 @@
       ],
       "abstract_en": "As agentic systems continue to evolve and are widely deployed in real-world scenarios, there is a growing demand to faithfully evaluate their capabilities. However, current benchmarks are typically built on popular applications with relatively simple tasks and focus on a narrow set of capabilities while overlooking broader dimensions, resulting in saturated performance on modern agents and failing to probe their limitations. To this end, we introduce GauntletBench, a web-based benchmark for evaluating agent generalisation in challenging scenarios, focusing on three underexplored capabilities (temporal perception, graphical understanding, and 3D reasoning), across five less-covered professional applications (Video Editor, Workflow Builder, 3D Modeller, Flight Analyser, and Circuit Designer), each with 20 vision-intensive tasks (100 in total). Our benchmark provides a modular pipeline that comprises an environment compatible with both open- and closed-source agent frameworks, a controlled web-based application, a well-structured task suite, and an automated evaluation engine with diverse metrics. Contrary to widespread expectations, our empirical results reveal that frontier agentic systems remain far from achieving human-level performance. Even the state-of-the-art agent achieves only a 19.1% success rate on our GauntletBench, highlighting the limitations in these overlooked capabilities and generalisation. By comparison, non-expert human annotators achieve over 80% success on our challenging yet feasible tasks, revealing the substantial gap between current agent capabilities and those required for complex real-world scenarios.",
       "abstract_full": true,
-      "summary_es": null
+      "summary_es": {
+        "tldr": "Un nuevo benchmark revela que los agentes de IA de vanguardia fallan estrepitosamente en tareas profesionales complejas, mostrando una brecha enorme con el rendimiento humano.",
+        "problema": "Los benchmarks actuales para sistemas de agentes de IA son demasiado simples, se centran en capacidades limitadas y aplicaciones populares, lo que lleva a un rendimiento saturado y no logra identificar las verdaderas limitaciones de los agentes en escenarios desafiantes y capacidades poco exploradas.",
+        "propuesta": "Se introduce GauntletBench, un benchmark basado en web para evaluar la generalización de agentes en escenarios desafiantes. Se enfoca en tres capacidades poco exploradas (percepción temporal, comprensión gráfica y razonamiento 3D) a través de cinco aplicaciones profesionales menos cubiertas (editor de vídeo, constructor de flujos de trabajo, modelador 3D, analizador de vuelos y diseñador de circuitos), con un total de 100 tareas intensivas en visión. Incluye un pipeline modular con un entorno compatible, una aplicación web controlada, un conjunto de tareas estructurado y un motor de evaluación automatizado.",
+        "resultados": "Los sistemas de agentes de vanguardia están lejos de alcanzar el rendimiento humano. El agente más avanzado logró solo un 19.1% de tasa de éxito en GauntletBench. En contraste, los anotadores humanos no expertos lograron más del 80% de éxito en las mismas tareas, revelando una brecha sustancial en las capacidades de generalización y las habilidades específicas evaluadas.",
+        "por_que_importa": "Este benchmark es crucial porque expone las limitaciones significativas de los agentes de IA actuales en la generalización y en capacidades críticas como la percepción temporal, la comprensión gráfica y el razonamiento 3D, que son esenciales para aplicaciones profesionales complejas. Contradice las expectativas generalizadas sobre el rendimiento de la IA, indicando que los agentes aún no están listos para muchos escenarios del mundo real.",
+        "tags": [
+          "Evaluación IA",
+          "Generalización Agentes",
+          "Benchmarks IA",
+          "Percepción Temporal",
+          "Razonamiento 3D",
+          "Brecha Humano-IA"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-06-27T01:52:07Z"
+      }
     },
     {
       "id": "arxiv:2606.26790",
@@ -416,7 +620,23 @@
       ],
       "abstract_en": "Outcome-based reinforcement learning provides a stable optimization backbone for language agents, but its sparse trajectory-level rewards provide little guidance on which intermediate decisions should be reinforced or suppressed. On-policy self-distillation offers dense token-level supervision, yet existing skill-conditioned variants often rely on external skill memories or retrieved privileged context, which are costly to maintain and can be mismatched with the state distribution induced by the current policy in multi-turn interaction. We propose \\textbf{OPID} (\\textbf{O}n-\\textbf{P}olicy Sk\\textbf{i}ll \\textbf{D}istillation), a framework that extracts skill supervision directly from completed on-policy trajectories. OPID represents trajectory hindsight as hierarchical skills: episode-level skills capture global workflows or failure-avoidance rules, while step-level skills capture local decision knowledge at critical timesteps. A critical-first routing mechanism uses step-level skills when critical decisions are identified and falls back to episode-level skills as default guidance otherwise. The selected skill is injected into the interaction history, allowing the old policy to re-score the same sampled response under both original and skill-augmented contexts. The resulting log-probability shift yields a token-level self-distillation advantage, which is combined with the outcome advantage for policy optimization. OPID thus preserves RL as the primary training objective while introducing dense, distribution-matched hindsight supervision. Experiments on ALFWorld, WebShop and Search-based QA demonstrate that OPID generally improves agent performance, sample efficiency, and robustness over outcome-only RL and existing skill-distillation baselines. Our code is available at https://github.com/jinyangwu/OPID/tree/main.",
       "abstract_full": true,
-      "summary_es": null
+      "summary_es": {
+        "tldr": "OPID mejora el aprendizaje por refuerzo para agentes de lenguaje extrayendo habilidades jerárquicas directamente de trayectorias pasadas, lo que resulta en un mejor rendimiento y eficiencia.",
+        "problema": "El aprendizaje por refuerzo basado en resultados para agentes de lenguaje sufre de recompensas escasas a nivel de trayectoria, lo que dificulta guiar decisiones intermedias. Las variantes existentes de destilación de habilidades son costosas y pueden generar desajustes contextuales.",
+        "propuesta": "OPID (On-Policy Skill Distillation) extrae supervisión de habilidades directamente de trayectorias completadas. Representa el conocimiento retrospectivo como habilidades jerárquicas (a nivel de episodio para flujos globales y a nivel de paso para decisiones críticas). Un mecanismo de enrutamiento prioriza habilidades de paso en momentos críticos y usa las de episodio por defecto. La habilidad seleccionada se inyecta en el historial de interacción para re-puntuar respuestas, generando una ventaja de auto-destilación a nivel de token que se combina con la ventaja de resultado para la optimización de la política.",
+        "resultados": "Los experimentos en ALFWorld, WebShop y Search-based QA demuestran que OPID generalmente mejora el rendimiento del agente, la eficiencia de muestreo y la robustez en comparación con el RL solo por resultados y las líneas base de destilación de habilidades existentes. El resumen no especifica números concretos.",
+        "por_que_importa": "Esta propuesta es importante porque aborda la limitación de las recompensas escasas en el aprendizaje por refuerzo, proporcionando una supervisión más densa y relevante. Al extraer habilidades directamente de las trayectorias de la política actual, evita los costos y desajustes de contexto de los métodos existentes, lo que lleva a agentes de lenguaje más eficientes, robustos y con mejor rendimiento en diversas tareas.",
+        "tags": [
+          "Aprendizaje por Refuerzo",
+          "Agentes de Lenguaje",
+          "Destilación de Habilidades",
+          "Supervisión Densa",
+          "Eficiencia de Muestreo",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-06-27T01:52:24Z"
+      }
     },
     {
       "id": "arxiv:2606.16613",
@@ -446,7 +666,23 @@
       ],
       "abstract_en": "As LLM agents become capable of increasingly long-horizon tasks, evaluating their performance in economic systems is becoming increasingly important. Unlike existing benchmarks that primarily evaluate a single agent interacting with a passive environment, economic systems are inherently multi-agent, requiring autonomous agents to communicate, negotiate, and transact while pursuing their own objectives over extended periods. We introduce CoffeeBench, a benchmark for evaluating LLM agents in a long-horizon multi-agent economy composed of heterogeneous firms. In CoffeeBench, two farmers, two roasters, and two retailers autonomously operate their businesses over a 90-day simulation, each seeking to maximize cumulative net income through communication and transactions while managing cash, inventory, and pricing. The evaluated model controls one coffee roaster, while the remaining firms are controlled by fixed reference agents. Across several recent open-weight and proprietary LLMs, all models outperform a passive baseline that takes no actions, with most achieving positive net income. Analysis of agent behavior reveals substantial differences in long-horizon economic interaction: higher-performing models communicate more actively with other firms, whereas Claude~Haiku~4.5 exhibits an idle-drift failure mode, repeatedly choosing inaction despite producing coherent assessments and plans. We release our code and agent trajectories to support future research.",
       "abstract_full": true,
-      "summary_es": null
+      "summary_es": {
+        "tldr": "CoffeeBench es un nuevo benchmark que evalúa cómo los agentes LLM se desempeñan en una economía simulada de café, interactuando y negociando con otras empresas durante 90 días.",
+        "problema": "Los benchmarks existentes evalúan principalmente a un solo agente interactuando con un entorno pasivo. Sin embargo, los sistemas económicos son inherentemente multi-agente y requieren que los agentes autónomos se comuniquen, negocien y realicen transacciones mientras persiguen sus objetivos a largo plazo.",
+        "propuesta": "Se introduce CoffeeBench, un benchmark para evaluar agentes LLM en una economía multi-agente de largo plazo compuesta por empresas heterogéneas. Simula una economía de café de 90 días con dos agricultores, dos tostadores y dos minoristas. Un tostador es controlado por el LLM evaluado, mientras que los demás son agentes de referencia fijos. Los agentes buscan maximizar sus ingresos netos mediante comunicación y transacciones, gestionando efectivo, inventario y precios.",
+        "resultados": "Todos los modelos evaluados (LLM de código abierto y propietarios) superaron una línea base pasiva que no realiza acciones, y la mayoría logró ingresos netos positivos. Los modelos de mayor rendimiento se comunicaron más activamente. Claude Haiku 4.5 mostró un modo de fallo de 'deriva inactiva', eligiendo la inacción a pesar de producir evaluaciones y planes coherentes.",
+        "por_que_importa": "Este benchmark es crucial para desarrollar agentes de IA más sofisticados y autónomos, capaces de operar en entornos económicos complejos del mundo real. Permite comprender y mejorar la capacidad de los LLM para la comunicación, negociación y toma de decisiones estratégicas a largo plazo en sistemas multi-agente, yendo más allá de las evaluaciones de un solo agente en entornos pasivos.",
+        "tags": [
+          "Agentes LLM",
+          "Economía Multi-Agente",
+          "Benchmarking AI",
+          "Simulación Económica",
+          "Interacción AI",
+          "Negociación AI"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-06-27T01:52:37Z"
+      }
     },
     {
       "id": "arxiv:2606.26080",
@@ -476,8 +712,24 @@
       ],
       "abstract_en": "Process reward models enable fine-grained, step-level evaluation of LLMs, yet building them for agentic settings remains prohibitively difficult: long-horizon interactions, irreversible actions, and stochastic environment feedback make both human annotation and Monte Carlo estimation infeasible at scale. In this work, we show that reinforcement learning (RL) post-training already provides the ingredients for effective step-level scoring, eliminating the need for dedicated reward model training altogether. Concretely, we derive an implicit advantage under a general stochastic Markov decision process, which we term progress advantage -- log-probability ratio between the RL-trained policy and its reference policy exactly recovers the optimal advantage function. This formulation makes the resulting signal annotation-free, domain-agnostic, and available as a byproduct of the standard RL post-training pipeline. We validate the effectiveness of the progress advantage across three different applications: test-time scaling, uncertainty quantification, and failure attribution on five benchmarks and four model families. Across all settings, it consistently outperforms confidence-based baselines and, despite requiring no task-specific training, surpasses dedicated trained reward models. We complement these results with deeper analyses on characteristics of progress advantage, offering practical guidance for adoption in real-world agentic systems.",
       "abstract_full": true,
-      "summary_es": null
+      "summary_es": {
+        "tldr": "Una nueva técnica llamada \"ventaja de progreso\" permite evaluar agentes LLM paso a paso sin entrenar modelos de recompensa, aprovechando el post-entrenamiento de RL existente.",
+        "problema": "Es extremadamente difícil construir modelos de recompensa detallados para evaluar agentes LLM en entornos complejos, debido a interacciones de largo plazo, acciones irreversibles y retroalimentación estocástica, lo que hace inviable la anotación humana y la estimación Monte Carlo a gran escala.",
+        "propuesta": "El estudio propone que el post-entrenamiento con aprendizaje por refuerzo (RL) ya contiene los elementos necesarios para una puntuación efectiva a nivel de paso. Derivan una \"ventaja de progreso\" implícita, que es una relación de log-probabilidad entre la política entrenada con RL y una política de referencia, recuperando la función de ventaja óptima y eliminando la necesidad de entrenar modelos de recompensa dedicados.",
+        "resultados": "La ventaja de progreso fue validada en tres aplicaciones (escalado en tiempo de prueba, cuantificación de incertidumbre y atribución de fallos) en cinco benchmarks y cuatro familias de modelos. Superó consistentemente a las líneas base basadas en confianza y, a pesar de no requerir entrenamiento específico de tarea, superó a los modelos de recompensa entrenados dedicados.",
+        "por_que_importa": "Esta formulación proporciona una señal de evaluación sin necesidad de anotación, agnóstica al dominio y disponible como subproducto del pipeline estándar de post-entrenamiento RL. Esto simplifica drásticamente la evaluación de agentes LLM en sistemas reales, ahorrando tiempo y recursos al eliminar la necesidad de desarrollar y entrenar modelos de recompensa específicos.",
+        "tags": [
+          "Agentes LLM",
+          "Aprendizaje por Refuerzo",
+          "Evaluación IA",
+          "Modelos de Recompensa",
+          "Post-entrenamiento",
+          "Ventaja de Progreso"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-06-27T01:52:52Z"
+      }
     }
   ],
-  "generated_at": "2026-06-27T01:28:05Z"
+  "generated_at": "2026-06-27T01:52:52Z"
 }
