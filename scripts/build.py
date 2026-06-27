@@ -123,8 +123,15 @@ def main() -> int:
     else:
         cache = summarize.summarize_all(papers, cache)
         _write_json(CACHE_PATH, cache)
+        want = sum(1 for p in papers if p.get("abstract_en"))
         done = sum(1 for p in papers if p.get("summary_es"))
         print(f"  resúmenes generados/reusados: {done}/{len(papers)}")
+        # Aviso visible en GitHub Actions si quedaron resúmenes sin generar.
+        if done < want:
+            print(f"::warning title=Resúmenes incompletos::"
+                  f"{done}/{want} papers con resumen. Probablemente 429 de "
+                  f"Gemini (cuota). Re-ejecuta el workflow: la caché conserva "
+                  f"lo hecho y solo se reintentan los pendientes.")
 
     # 5. Escribir salida ----------------------------------------------------
     day["generated_at"] = _now()
