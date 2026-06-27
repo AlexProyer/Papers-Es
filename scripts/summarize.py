@@ -13,13 +13,13 @@ import time
 import urllib.request
 import urllib.error
 
-MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
+MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash-lite")
 _ENDPOINT = (
     "https://generativelanguage.googleapis.com/v1beta/models/"
     "{model}:generateContent"
 )
 # Pausa entre llamadas para no exceder la cuota gratuita.
-# Free tier de gemini-2.0-flash: 15 RPM (puede ser menor tras los recortes).
+# El free tier limita por minuto (RPM) y por día (RPD, por modelo).
 # 8s => ~7,5 req/min. Además respetamos el retryDelay que envía Google en
 # cada 429 por-minuto, así que el ritmo se auto-ajusta si aún es alto.
 _SLEEP_SECONDS = float(os.environ.get("GEMINI_SLEEP", "8"))

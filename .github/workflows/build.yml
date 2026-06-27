@@ -41,7 +41,9 @@ jobs:
       - name: Build data (parse + arXiv + Gemini)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: gemini-2.0-flash
+          # Cuota diaria es PerModel: flash-lite tiene su propio cupo (mayor) y
+          # gratis. Si se agota, cambiar a otro modelo da cuota fresca el mismo día.
+          GEMINI_MODEL: gemini-2.5-flash-lite
           GEMINI_SLEEP: "8"   # segundos entre llamadas (~7,5 req/min); +retryDelay
         run: python scripts/build.py
 
