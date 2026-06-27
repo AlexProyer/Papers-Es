@@ -85,6 +85,7 @@ def _parse_429(body: str) -> tuple[bool, float | None, str]:
     is_daily = False
     retry_seconds = None
     detail = body[:300]
+    daily_detail = None
     try:
         err = json.loads(body).get("error", {})
         detail = err.get("message", detail)
@@ -93,6 +94,7 @@ def _parse_429(body: str) -> tuple[bool, float | None, str]:
                 qid = v.get("quotaId", "")
                 if "PerDay" in qid:
                     is_daily = True
+                    daily_detail = qid  # un 429 puede traer varias violaciones
                 detail = qid or detail
             delay = d.get("retryDelay", "")  # p.ej. "38s"
             if delay.endswith("s"):
@@ -102,7 +104,8 @@ def _parse_429(body: str) -> tuple[bool, float | None, str]:
                     pass
     except (json.JSONDecodeError, AttributeError):
         pass
-    return is_daily, retry_seconds, detail
+    # Si hubo violación diaria, mostrarla a ella (no la última de la lista).
+    return is_daily, retry_seconds, (daily_detail or detail)
 
 
 def _api_key() -> str:
