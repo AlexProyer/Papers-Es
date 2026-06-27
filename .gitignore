@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Local env
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# NOTA: site/data/ y cache/summaries.json SÍ se commitean
+# (son los datos publicados y la caché persistente de resúmenes).
+
+# Config local de Claude Code
+.claude/settings.local.json

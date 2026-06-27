@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>papers-es · Resúmenes diarios de papers de IA y ciberseguridad</title>
+  <meta name="description" content="Resúmenes en español, generados a diario, de los papers más relevantes de inteligencia artificial, ciberseguridad y tecnología." />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>📡 papers-es</h1>
+      <p class="tagline">
+        Resúmenes en español de los papers más relevantes de
+        <strong>IA</strong>, <strong>ciberseguridad</strong> y <strong>tecnología</strong>.
+        Actualizado a diario.
+      </p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="controls" aria-label="Filtros">
+      <div class="control">
+        <label for="date-select">Fecha</label>
+        <select id="date-select"></select>
+      </div>
+      <div class="control">
+        <label for="source-select">Fuente</label>
+        <select id="source-select"><option value="">Todas</option></select>
+      </div>
+      <div class="control">
+        <label for="topic-select">Tema</label>
+        <select id="topic-select"><option value="">Todos</option></select>
+      </div>
+      <div class="control grow">
+        <label for="search">Buscar</label>
+        <input id="search" type="search" placeholder="título, autor, palabra clave…" />
+      </div>
+    </section>
+
+    <p id="status" class="status" role="status"></p>
+    <section id="papers" class="papers"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>
+        Datos del proyecto
+        <a href="https://github.com/AlexProyer/Daily-Papers" target="_blank" rel="noopener">Daily-Papers</a>.
+        Resúmenes generados con Gemini. Sitio estático en GitHub Pages.
+      </p>
+      <p class="muted">Los resúmenes en español son generados por IA y pueden contener errores. Consulta siempre el paper original.</p>
+    </div>
+  </footer>
+
+  <template id="card-template">
+    <article class="card">
+      <div class="card-head">
+        <span class="score" title="Score de relevancia"></span>
+        <div class="meta">
+          <span class="source"></span>
+          <span class="date"></span>
+        </div>
+      </div>
+      <h2 class="title"></h2>
+      <p class="authors"></p>
+      <p class="tldr"></p>
+      <div class="tags"></div>
+      <details class="summary">
+        <summary>Ver resumen completo</summary>
+        <dl class="summary-body"></dl>
+      </details>
+      <div class="links"></div>
+    </article>
+  </template>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

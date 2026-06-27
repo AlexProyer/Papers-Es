@@ -1,0 +1,73 @@
+name: Build & Deploy papers-es
+
+on:
+  # Diario, después de que el Proyecto 1 publica (7:00 AM Colombia = 12:00 UTC).
+  schedule:
+    - cron: "30 12 * * *"
+  # Ejecución manual desde la pestaña Actions.
+  workflow_dispatch:
+  # Permite que el Proyecto 1 dispare este build vía repository_dispatch
+  # (OPCIONAL: requiere un PAT y un step en el Proyecto 1; ver README).
+  repository_dispatch:
+    types: [daily-papers-updated]
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "site/**"
+      - ".github/workflows/build.yml"
+
+permissions:
+  contents: write   # commitear data/ y cache/ de vuelta
+  pages: write      # desplegar a GitHub Pages
+  id-token: write   # OIDC para el deploy de Pages
+
+concurrency:
+  group: papers-es-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build data (parse + arXiv + Gemini)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: gemini-2.0-flash
+        run: python scripts/build.py
+
+      - name: Commit data & cache
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add site/data cache/summaries.json
+          if git diff --staged --quiet; then
+            echo "Sin cambios en los datos."
+          else
+            git commit -m "data: build $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

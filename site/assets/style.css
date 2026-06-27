@@ -1,0 +1,164 @@
+:root {
+  --bg: #0f1115;
+  --surface: #181b22;
+  --surface-2: #20242e;
+  --border: #2a2f3a;
+  --text: #e6e9ef;
+  --muted: #9aa3b2;
+  --accent: #6ea8fe;
+  --accent-2: #a78bfa;
+  --good: #4ade80;
+  --warn: #fbbf24;
+  --radius: 14px;
+  --maxw: 1100px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f6f7f9;
+    --surface: #ffffff;
+    --surface-2: #f0f2f6;
+    --border: #e2e6ec;
+    --text: #1a1d24;
+    --muted: #5b6472;
+    --accent: #2563eb;
+    --accent-2: #7c3aed;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.55;
+}
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 1.25rem; }
+
+.site-header {
+  background: linear-gradient(135deg, rgba(110,168,254,0.12), rgba(167,139,250,0.12));
+  border-bottom: 1px solid var(--border);
+  padding: 2.5rem 0 2rem;
+}
+.site-header h1 { margin: 0 0 0.35rem; font-size: 2rem; }
+.tagline { margin: 0; color: var(--muted); max-width: 60ch; }
+.tagline strong { color: var(--text); }
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin: 1.75rem 0 1rem;
+}
+.control { display: flex; flex-direction: column; gap: 0.3rem; }
+.control.grow { flex: 1 1 240px; }
+.control label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+select, input[type="search"] {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.95rem;
+  min-width: 150px;
+}
+input[type="search"] { width: 100%; }
+select:focus, input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+.status { color: var(--muted); font-size: 0.9rem; margin: 0.25rem 0 1rem; }
+
+.papers {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.15rem 1.2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.score {
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+}
+.score.high { color: var(--good); border-color: var(--good); }
+.score.mid { color: var(--warn); border-color: var(--warn); }
+.meta { display: flex; gap: 0.5rem; font-size: 0.78rem; color: var(--muted); flex-wrap: wrap; justify-content: flex-end; }
+.source { font-weight: 600; color: var(--accent); }
+
+.title { font-size: 1.08rem; margin: 0; line-height: 1.35; }
+.authors { margin: 0; font-size: 0.82rem; color: var(--muted); }
+.tldr { margin: 0.2rem 0; font-size: 0.98rem; }
+.tldr.fallback { font-style: italic; color: var(--muted); font-size: 0.9rem; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.tag {
+  font-size: 0.72rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.summary > summary {
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--accent);
+  user-select: none;
+}
+.summary-body { margin: 0.6rem 0 0; display: grid; gap: 0.5rem; }
+.summary-body dt {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-bottom: 0.1rem;
+}
+.summary-body dd { margin: 0; font-size: 0.92rem; }
+
+.links { display: flex; gap: 0.6rem; margin-top: auto; padding-top: 0.4rem; }
+.links a {
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.3rem 0.65rem;
+}
+.links a:hover { border-color: var(--accent); }
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.75rem 0 2.5rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.site-footer a { color: var(--accent); }
+.muted { color: var(--muted); font-size: 0.78rem; }
+
+.empty { grid-column: 1 / -1; text-align: center; color: var(--muted); padding: 3rem 1rem; }
