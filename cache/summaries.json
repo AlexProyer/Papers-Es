@@ -266,5 +266,22 @@
     ],
     "model": "gemini-2.5-flash",
     "generated_at": "2026-06-27T01:52:52Z"
+  },
+  "arxiv:2606.22873": {
+    "tldr": "SingGuard protege modelos multimodales de IA adaptándose a políticas de seguridad cambiantes en tiempo real.",
+    "problema": "Los modelos de lenguaje visual (VLMs) son vulnerables a riesgos de seguridad en diversas aplicaciones, y las políticas de moderación existentes son inflexibles ante cambios en tiempo de ejecución.",
+    "propuesta": "Presentamos SingGuard, un sistema de protección multimodal que acepta políticas de seguridad como entrada y evalúa el contenido regla por regla, ofreciendo diferentes modos de inferencia (rápido, híbrido, lento) para balancear eficiencia e interpretabilidad.",
+    "resultados": "SingGuard logra un F1 promedio de última generación en seis familias de benchmarks (35 datasets) y mejora la precisión en el seguimiento de políticas dinámicas de 0.6465 a 0.7415.",
+    "por_que_importa": "Permite desplegar VLMs de forma más segura en aplicaciones críticas al adaptarse dinámicamente a las normativas, mejorando la confianza y el cumplimiento.",
+    "tags": [
+      "IA multimodal",
+      "Ciberseguridad",
+      "Guardrails",
+      "Modelos de Lenguaje",
+      "Adaptabilidad",
+      "Seguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-06-29T16:22:49Z"
   }
 }
