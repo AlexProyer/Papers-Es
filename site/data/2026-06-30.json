@@ -1,0 +1,592 @@
+{
+  "date": "2026-06-30",
+  "report_type": "filtrado",
+  "evaluated": 183,
+  "selected": 20,
+  "papers": [
+    {
+      "id": "arxiv:2606.30566v1",
+      "rank": 1,
+      "title": "Forensic Trajectory Signatures for Agent Memory Poisoning Detection",
+      "authors": [
+        "Jun Wen Leong"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-06-29",
+      "url": "https://arxiv.org/abs/2606.30566v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.30566v1",
+      "score": 56,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "We discover a behavioral invariant in LLM agents under persistent memory poisoning: in architectures where routing information is retrieved through observable memory-tool invocations, successful attacks require calling memory_recall_fact before email_send_email, a transition that non-exfiltrating sessions rarely exhibit. Under the evaluated architecture, this invariant follows from the attack's information-retrieval dependency rather than being merely an empirical correlation, and suppressing it breaks the attack. A simple rule exploiting this invariant alone achieves AUC = 0.9563. A Random Forest classifier over 19 trajectory features refines it to AUC = 0.9904 (BCa 95% CI [0.987, 0.993], N=10,000 resamples), demonstrating that the attack imprints on multiple independent behavioral channels. The signature is overdetermined: removing all recall-related features (half the feature set) leaves AUC unchanged at 0.990, confirming that memory poisoning induces a distributed trajectory signature rather than a single observable anomaly. Cross-model hold-out on 9 models (7B-120B parameters) confirms AUC = 1.000 on 6/9 hold-out splits, with all three exceptions mechanistically explained. The invariant generalizes to frontier models (GPT-4.1, GPT-4o) without retraining. A strictly prefix-only variant achieves AUC = 0.934, suggesting that real-time blocking is feasible with moderate degradation. The boundary is forensically useful: prompt-injection attacks that bypass memory produce a distinct trajectory (score = 0.541), enabling incident responders to distinguish memory-channel attacks from prompt-injection attacks using tool-call logs alone.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2606.30555v1",
+      "rank": 2,
+      "title": "Linguistic Firewall: Geometry as Defense in Multi-Agent Systems Routing",
+      "authors": [
+        "Dvir Alsheich",
+        "Adar Peleg",
+        "Ben Hagag",
+        "Rom Himelstein"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-06-29",
+      "url": "https://arxiv.org/abs/2606.30555v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.30555v1",
+      "score": 56,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "The rapid integration of Large Language Models (LLMs) has driven the evolution of Multi-Agent Systems (MAS), where specialized agents collaborate to execute complex workflows. Effective orchestration in these environments requires robust routing mechanisms to efficiently allocate tasks to the most suitable agent. However, existing routers fundamentally rely on unverified proxies, ranging from textual self-descriptions to static surrogate representations, to gauge an agent's competence. This reliance on non-empirical data creates a critical gap between an agent's projected profile and its actual operational capabilities, introducing severe security vulnerabilities. Malicious agents can easily misrepresent their proficiencies or harbor covert backdoors that evade both standard external analysis and static representation-learning techniques. In this work, we introduce ANTAP (Automatic Non-Textual Agent Picker), an evaluation-driven routing architecture that discards indirect proxies in favor of active capability testing. By dynamically querying agents to ascertain their true competencies empirically, ANTAP distills performance into fixed behavioral operators within a shared semantic space. At inference time, routing is performed via a purely non-textual algebraic projection, establishing a \"linguistic firewall\" that renders metadata-based attacks inexpressible. In our experiments, ANTAP achieves near-zero ASR against description-based injection attacks, compared to 67.3\\% and above for the description-based router baseline. Against adaptive embedding attacks, ANTAP achieves substantially lower ASR than the embedding-based baseline, with a 20\\% reduction, while remaining resilient to description manipulation by design.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Un cortafuegos lingüístico usa geometría para proteger sistemas multiagente de ataques maliciosos, evaluando capacidades reales en lugar de descripciones.",
+        "problema": "Los sistemas multiagente actuales usan descripciones no verificadas de los agentes para enrutarlos, lo que crea vulnerabilidades de seguridad que permiten ataques de suplantación o puertas traseras ocultas.",
+        "propuesta": "Se introduce ANTAP, una arquitectura de enrutamiento basada en la evaluación activa de las capacidades de los agentes. En lugar de usar descripciones, ANTAP consulta dinámicamente a los agentes, destila su rendimiento en operadores algebraicos y realiza el enrutamiento mediante proyecciones no textuales, creando un 'cortafuegos lingüístico'.",
+        "resultados": "ANTAP logra una Tasa de Éxito de Ataque (ASR) cercana a cero contra ataques de inyección basados en descripciones (comparado con 67.3% o más para el router base). Contra ataques de incrustación adaptativa, reduce la ASR en un 20% respecto a la base, y es inherentemente resistente a la manipulación de descripciones.",
+        "por_que_importa": "Mejora drásticamente la seguridad de los sistemas multiagente al hacerlos resistentes a ataques que explotan la confianza en metadatos o descripciones, permitiendo una colaboración más segura y fiable entre agentes.",
+        "tags": [
+          "ciberseguridad",
+          "sistemas multiagente",
+          "enrutamiento",
+          "IA",
+          "defensa"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-06-30T15:08:46Z"
+      }
+    },
+    {
+      "id": "arxiv:2606.30602v1",
+      "rank": 3,
+      "title": "MESA: Prioritizing Vulnerable Communication Channels for Securing Multi-Agent Systems",
+      "authors": [
+        "Kunyang Li",
+        "Kyle Domico",
+        "Jonathan Gregory",
+        "Patrick McDaniel"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-06-29",
+      "url": "https://arxiv.org/abs/2606.30602v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.30602v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Multi-agent systems (MAS) are increasingly used to automate complex, distributed workflows. However, their inter-agent communication channels introduce new attack surfaces that remain poorly understood and are difficult to defend against. In this paper, we address how defenders should prioritize limited security effort to protect vulnerable communication channels before attacks are observed. This is motivated by our observation that the channel-level attack impact is highly non-uniform: a single compromised edge can account for up to 75% of total attack success. We introduce Mesa, a label-free framework for proactively ranking which MAS edges are most security-critical -- that is, most likely to affect the system's decision if compromised. Mesa combines six graph-theoretic metrics and two dynamic probes (ablation and masking) without requiring attack traces. We evaluate Mesa against a dynamic misinformation attack pipeline across three diverse MAS scenarios, eight network topologies, and five open-source LLMs from Qwen, Llama, and Gemma families. Mesa rankings correlate strongly with empirical per-edge attack success rate, achieving mean Spearman $ρ=+0.60$ (peaking at $+0.73$). In resource-constrained defense deployment, monitoring the top 10% of Mesa-ranked edges intercepts about 3x the successful attacks as random allocation. We further test Mesa under varying attacker and defender models and LangGraph workflows and characterize its limits under adaptive attacks and high-redundancy graphs. Overall, our results show that edge-level risk in MAS is often concentrated and predictable, allowing proactive hardening of multi-agent infrastructures.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2606.30632v1",
+      "rank": 4,
+      "title": "GROW$^2$: Grounding Which and Where for Robot Tool Use",
+      "authors": [
+        "Yuhong Deng",
+        "Yuyao Liu",
+        "David Hsu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-06-29",
+      "url": "https://arxiv.org/abs/2606.30632v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.30632v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Can the robot use a plate to cut a cake if no knife is available? Tool use greatly expands robot capabilities, but to use tools creatively beyond their intended functions, the robot faces the challenge of $\\textit{open-world affordance grounding}$: select an open-category object to act as a tool and localize its specific region of action. To this end, we introduce GROW$^2$ (GROunding Which and Where), which leverages object parts as a natural abstraction to split the grounding process hierarchically into semantic and geometric levels, thus bypassing the need for data-heavy, end-to-end training. Semantically, GROW$^2$ harnesses the commonsense reasoning of Vision-Language Models (VLMs) to parse a natural-language task instruction, select a suitable object as the tool, and identify task-relevant parts on the tool and the target object. Geometrically, vision foundation models then ground the selected parts into precise 3D regions from a single RGB-D image. Experiments on established benchmarks show that GROW$^2$ outperforms state-of-the-art baselines on affordance prediction benchmarks. Further, it achieves zero-shot generalization over open-category objects and outperforms baselines in both simulated and real-world robot tool use experiments.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2606.30479v1",
+      "rank": 5,
+      "title": "COHORT: Collaborative Orchestration for Hardening via Offensive Replay on Emulated Topologies",
+      "authors": [
+        "Chen Frydman",
+        "Aviram Zilberman",
+        "Rubin Krief",
+        "Abed Showgan"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-06-29",
+      "url": "https://arxiv.org/abs/2606.30479v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.30479v1",
+      "score": 53,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Mitigating an observed adversary in an enterprise network typically takes weeks of expert work: an analyst derives a mitigation tailored to that adversary, validates it without breaking production, and verifies it disrupts the specific attack. The procedure relies on expert judgment and cannot safely be exercised against the production network. COHORT is the first end-to-end framework to automate this procedure for deployable mitigations. A role-decomposed multi-agent LLM workflow proposes candidates, implements them as real device commands, and refines them through a critique loop, all on a high-fidelity GNS3 emulator running real vendor firmware (firewall, switch, router). Each candidate is evaluated by offensive replay: re-executing the original adversary on the mitigated network for a paired comparison against the unmitigated baseline, rather than the reward-signal or expert-judgment proxies used in prior simulation, hybrid, and configuration-generation work. Two further checks complement replay: a connectivity-regression check (LAN ping and internet HTTP probe) rejects mitigations that disrupt legitimate LAN or internet connectivity, and a cumulative evaluation stacks approved mitigations onto a persistent state to surface compound effects. Across three topologies and four attack scenarios (ransomware, lateral movement, DNS exfiltration, data theft), 46.7% of generated mitigations both disrupt the attack and preserve connectivity under replay, 4.4 times the rate of a single-agent baseline using the same model and tool access. A demo video walking through the framework is available with our released artifacts.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2606.30571v1",
+      "rank": 6,
+      "title": "Attractor States Emerge in Multi-Turn LLM Conversations",
+      "authors": [
+        "Ting-Wen Ko",
+        "Jonas Geiping"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.LG]",
+      "category": "cs.LG",
+      "date": "2026-06-29",
+      "url": "https://arxiv.org/abs/2606.30571v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.30571v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Large language models (LLMs) are increasingly used in open-ended multi-agent settings, but the long-run dynamics of model--model interaction remain poorly understood. We study whether open-ended LLM discussions exhibit attractor-like behavior, i.e. topic-independent stable sets of behaviors which conversations settle into. Across 7 LLMs and 20 controversial topics, we compare self-play and mixed-play dyadic debates, tracking trajectories in representation space, discourse traits, and stances. We find self-play trajectories to be model-specific attractors that draw their conversation partners asymmetrically in mixed-play debates, influencing the other models' stylistic choices and behavior. For example, Claude Haiku is a strong attractor of other models in latent space, corresponding to other models taking on its traits like metacommentary, and models like GPT-4.1 nano are especially malleable. Our results suggest that open-ended LLM interactions are partially predictable from model-specific attractors, but shaped by structured and asymmetric partner influence. Overall, our analysis sheds some light on the complex behavior of open-ended multi-agent interaction, which we hope is helpful in designing, predicting, and monitoring autonomous agentic systems in the real world.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2606.29963v1",
+      "rank": 7,
+      "title": "Explainability-Aware Frustum Attack: Exposing Structural Vulnerabilities in LiDAR-Based 3D Object Detectors",
+      "authors": [
+        "Chengzeng You",
+        "Binbin Xu",
+        "Soteris Demetriou"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-06-29",
+      "url": "https://arxiv.org/abs/2606.29963v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.29963v1",
+      "score": 52,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "The structural vulnerabilities of point cloud-based 3D object detectors remain poorly understood. Prior work has studied adversarial robustness primarily on isolated 3D object models, while recent LiDAR spoofing attacks target richer and more realistic driving scenes but focus mainly on physical realizability rather than understanding detector behavior or attack efficiency. In this work, we investigate how LiDAR-based detectors rely on spatial evidence in complex scenes and whether these reliance patterns can be exploited to induce failures more efficiently. To this end, we propose an explainability-guided adversarial analysis methodology. We introduce the Saliency-LiDAR (SALL) method, which aggregates Integrated Gradient attributions across scenes to produce universal saliency maps for LiDAR-based 3D object detectors. Guided by these maps, we design the Explainability-aware Frustum Attack (EFA), which selectively perturbs only the most influential frustums rather than uniformly attacking entire object regions. Experiments on KITTI and nuScenes, across detectors such as PointPillars and SECOND, show that EFA reduces detection recall by more than 15 percentage points while requiring 25-50% fewer perturbed frustums than the state-of-the-art non-saliency-aware baseline. These findings reveal that modern 3D detectors concentrate discriminative evidence in a small subset of spatial regions, exposing a structural robustness vulnerability in current LiDAR perception systems. Our code is released at https://github.com/SecMindLab/Saliency_LiDAR.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2606.30219v1",
+      "rank": 8,
+      "title": "EvalSafetyGap: A Hybrid Survey and Conceptual Framework for LLM Evaluation-Safety Failures",
+      "authors": [
+        "Buğra Alperen Uluırmak",
+        "Rifat Kurban"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-06-29",
+      "url": "https://arxiv.org/abs/2606.30219v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.30219v1",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "LLM evaluation and AI safety face a shared measurement problem: benchmark scores, reward-model signals, and reported safety metrics can improve while the latent properties they are meant to represent remain difficult to verify. This paper combines a hybrid survey - a systematic search paired with narrative synthesis and separately tracked grey evidence - with a conceptual framework and a structured ten-model audit. The synthesis spans eight evidence streams: benchmark validity, dynamic evaluation, LLM-as-judge reliability, safety evaluation, jailbreak/refusal robustness, reward hacking, mechanistic interpretability, and governance/auditability, covering 2018-2026 evaluation-safety measurement work. We introduce EvalSafetyGap as an organizing hypothesis for comparing evaluation-side and alignment-side proxy failures under optimization pressure, using Goodhart's Law together with two constructs we develop here - an Instability Decomposition and an Alignment Trilemma - as tools for generating testable comparisons. The audit shows how conclusions shift when capability, behavioral safety, and governance are measured separately. In this sample (n = 10), the association between capability and sustained adversarial robustness is statistically indeterminate using the displayed Table 3 inputs (Pearson r = +0.232, p = 0.520), and the apparent open-closed safety gap is modest, driven mainly by governance and disclosure rather than behavioral robustness, and sensitive to how a single borderline model is classified; attempt-budget results are protocol dependent. Because the public evidence uses heterogeneous protocols, the audit is diagnostic rather than rank-generating. The contribution is a shared vocabulary and evidence map to support dynamic evaluation, transparent source reporting, multi-attempt safety measurement, and auditable alignment practice.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Este estudio aborda la brecha entre las métricas de evaluación de LLM y la seguridad real, proponiendo un marco para una medición más robusta y auditable.",
+        "problema": "Los modelos de lenguaje grandes (LLM) y la seguridad de la IA enfrentan un problema de medición: las puntuaciones de los benchmarks y las métricas de seguridad pueden mejorar, pero las propiedades subyacentes que representan son difíciles de verificar, creando una brecha entre la evaluación y la seguridad real.",
+        "propuesta": "El estudio propone un marco conceptual llamado 'EvalSafetyGap' y realiza una auditoría estructurada de diez modelos, combinando una revisión sistemática de ocho áreas (validez de benchmarks, evaluación dinámica, fiabilidad de LLM como juez, evaluación de seguridad, robustez ante jailbreaks, reward hacking, interpretabilidad, gobernanza/auditabilidad). Utiliza la Ley de Goodhart, una 'Descomposición de Inestabilidad' y un 'Trilema de Alineación' para comparar fallos de proxy bajo presión de optimización.",
+        "resultados": "La auditoría de 10 modelos muestra que las conclusiones cambian al medir la capacidad, la seguridad conductual y la gobernanza por separado. La asociación entre capacidad y robustez adversaria sostenida es estadísticamente indeterminada (Pearson r = +0.232, p = 0.520). La brecha de seguridad aparente entre modelos abiertos y cerrados es modesta, impulsada principalmente por la gobernanza y la divulgación, no por la robustez conductual, y es sensible a la clasificación de un modelo límite. Los resultados de intentos múltiples dependen del protocolo, y la auditoría es diagnóstica, no generadora de rankings, debido a protocolos heterogéneos.",
+        "por_que_importa": "Este trabajo proporciona un vocabulario compartido y un mapa de evidencia crucial para desarrollar una evaluación dinámica, informes de fuentes transparentes, medición de seguridad con múltiples intentos y prácticas de alineación auditables. Esto es fundamental para asegurar que las mejoras reportadas en la seguridad de la IA reflejen una seguridad real y verificable.",
+        "tags": [
+          "Evaluación LLM",
+          "Seguridad IA",
+          "Métricas",
+          "Goodhart's Law",
+          "Alineación IA",
+          "Auditoría de Modelos"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-06-30T15:17:20Z"
+      }
+    },
+    {
+      "id": "arxiv:2606.29705",
+      "rank": 1,
+      "title": "GUICrafter: Weakly-Supervised GUI Agent Leveraging Massive Unannotated Screenshots",
+      "authors": [
+        "Sunqi Fan",
+        "Lingshan Chen",
+        "Runqi Yin",
+        "Qingle Liu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-06-29",
+      "url": "https://arxiv.org/abs/2606.29705",
+      "pdf_url": "https://arxiv.org/pdf/2606.29705",
+      "score": 65,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Data, as the fundamental substrate of modern intelligence, has greatly driven the development of current foundation models. Naturally, researchers aim to extend this paradigm to the domain of GUI agents, hoping to build strong GUI agents through a similar paradigm. However, GUI agent data cannot be directly harvested from the internet, making it costly and difficult to collect at scale. As a result, current GUI agents suffer from poor cross-device generalization and limited visual grounding ability for fine-grained GUI elements. As an attempt to address data challenge in GUI agents, we propose GUICrafter, a weakly-supervised GUI agent leveraging massive unannotated screenshots to substantially reduce the reliance on expensive human annotations. GUICrafter explores a curriculum learning framework for training GUI agents through two progressive stages. First, the model learns visual grounding from large-scale unannotated screenshots and webpages, leveraging the rich contextual signals inherent in GUI interactions without human annotations. Then, in Stage 2, we leverage a small amount of high-quality data to calibrate the model via reinforcement learning. Experiments show that GUICrafter achieves competitive, or even superior, performance to advanced systems like UI-TARS while using only 0.1% of its data. Furthermore, under the same amount of annotated data, GUICrafter surpasses all previous methods such as GUI-R1. Code, data, and models are available at https://github.com/fansunqi/GUICrafter.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "GUICrafter crea agentes de interfaz gráfica (GUI) más potentes y generalizables usando muchísimos menos datos anotados que los métodos actuales.",
+        "problema": "La recolección de datos para entrenar agentes de interfaz gráfica (GUI) es costosa y difícil a gran escala, lo que lleva a una pobre generalización entre dispositivos y una limitada capacidad de comprensión visual de elementos finos de la GUI en los agentes actuales.",
+        "propuesta": "Proponen GUICrafter, un agente GUI con supervisión débil que utiliza una gran cantidad de capturas de pantalla sin anotar para reducir drásticamente la dependencia de anotaciones humanas costosas. Emplea un marco de aprendizaje curricular en dos etapas: primero, aprende la comprensión visual de datos no anotados; luego, se calibra con una pequeña cantidad de datos de alta calidad mediante aprendizaje por refuerzo.",
+        "resultados": "GUICrafter logra un rendimiento competitivo, e incluso superior, a sistemas avanzados como UI-TARS, utilizando solo el 0.1% de sus datos. Además, con la misma cantidad de datos anotados, supera a todos los métodos anteriores como GUI-R1.",
+        "por_que_importa": "Este avance es crucial porque permite desarrollar agentes GUI más robustos y con mejor generalización entre dispositivos sin incurrir en los altos costos y la dificultad de la recolección masiva de datos anotados, democratizando el acceso a esta tecnología.",
+        "tags": [
+          "Agentes GUI",
+          "Supervisión Débil",
+          "Eficiencia de Datos",
+          "Automatización",
+          "Aprendizaje por Refuerzo"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-06-30T15:17:34Z"
+      }
+    },
+    {
+      "id": "arxiv:2606.30410",
+      "rank": 2,
+      "title": "Beyond IID: How General Are Tabular Foundation Models, Really?",
+      "authors": [
+        "Lennart Purucker",
+        "Andrej Tschalzev",
+        "Nick Erickson",
+        "Gioia Blayer"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-06-29",
+      "url": "https://arxiv.org/abs/2606.30410",
+      "pdf_url": "https://arxiv.org/pdf/2606.30410",
+      "score": 60,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Foundation models for predictive machine learning on tabular data have recently gained significant traction in academia and industry. Research communities across disciplines are increasingly evaluating tabular foundation models on diverse datasets and tasks. However, these task- and discipline-specific evaluations remain largely inaccessible to model researchers because benchmark software and evaluation protocols are fragmented. As a result, model researchers rely on standard benchmarks, which are mostly defined for tasks where tabular foundation models already excel. The most challenging scenarios are excluded, limiting meaningful progress in the field by focusing on marginal improvements on IID data rather than on broader, more demanding challenges. To overcome this, we introduce BeyondArena, the first unified holistic benchmark for tabular data that supports diverse task types (IID, temporal, grouped), across sample size and feature dimensionality scales, with diverse feature types (with text, with high cardinality) from a broad range of disciplines. To enable unified benchmarking beyond standard benchmarks, we introduce Data Foundry, a Python framework and metadata schema for curating tabular datasets for predictive machine learning. Our results across 11 models and 142 curated datasets show that existing tabular foundation models excel on tiny- to medium-sized IID data, while traditional tree-based and deep learning models still dominate on non-IID, large, and high-dimensional datasets. BeyondArena guides model research for the most demanding challenges in tabular data, enabling progress towards truly foundational tabular models.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los modelos fundacionales para datos tabulares no son tan generales como se cree; un nuevo benchmark revela sus límites y dónde los modelos tradicionales aún dominan.",
+        "problema": "La evaluación de los modelos fundacionales para datos tabulares está fragmentada, y los benchmarks actuales se centran en escenarios donde ya sobresalen (datos IID), ignorando desafíos más complejos y limitando el progreso significativo en el campo.",
+        "propuesta": "Introducen BeyondArena, el primer benchmark unificado y holístico para datos tabulares, que soporta diversos tipos de tareas (IID, temporales, agrupadas), escalas de tamaño de muestra y dimensionalidad de características, y tipos de características variados. También presentan Data Foundry, un framework Python para curar datasets tabulares.",
+        "resultados": "Evaluaron 11 modelos en 142 datasets curados. Los modelos fundacionales existentes sobresalen en datos IID de tamaño pequeño a mediano. Sin embargo, los modelos tradicionales basados en árboles y de aprendizaje profundo aún dominan en datasets no-IID, grandes y de alta dimensionalidad.",
+        "por_que_importa": "BeyondArena es crucial porque redirige la investigación de modelos hacia los desafíos más exigentes en datos tabulares, permitiendo el desarrollo de modelos verdaderamente fundacionales y superando la limitación de centrarse solo en mejoras marginales en datos IID.",
+        "tags": [
+          "Modelos Fundacionales",
+          "Datos Tabulares",
+          "Benchmarks",
+          "Evaluación IA",
+          "Aprendizaje Automático",
+          "No-IID"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-06-30T15:17:48Z"
+      }
+    },
+    {
+      "id": "arxiv:2606.30251",
+      "rank": 3,
+      "title": "TACO: Tool-Augmented Credit Optimization for Agentic Tool Use",
+      "authors": [
+        "Mingkuan Feng",
+        "Jinyang Wu",
+        "Hao Gu",
+        "Fangrui Lv"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-06-29",
+      "url": "https://arxiv.org/abs/2606.30251",
+      "pdf_url": "https://arxiv.org/pdf/2606.30251",
+      "score": 60,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "Agentic multimodal models perform diverse operations on an image via code and reason over the returned view, an effective paradigm for fine-grained visual question answering. However, code operations can be useful, redundant, or misleading. Outcome-only rewards cannot precisely distinguish these cases, and existing process rewards either fail to attribute final correctness to individual tool calls, or require an external judge model. To address this, we introduce Tool-Augmented Credit Optimization (TACO), a GRPO variant for code-tool agents built on two coupled advantage channels. The first, Differential Answer-Probe Reward (DAPR), is a self-supervised, judge-free tool-contribution advantage that credits each tool call by its own effect on answering correctly. Probe tokens inserted into the model's reasoning elicit its predictions with and without the tool, and the difference in outcome reward is taken as the call's value: positive for a useful call, negative for a misleading one, and zero for one that changes nothing. This reuses the existing answer checker with no auxiliary judge, and, being a difference rather than an absolute probe score, is naturally robust to probe-hacking. The second is the outcome advantage from the final answer, distributed by Outcome-Gated Advantage Routing (OGAR): a parameter-free rule that, conditioned on the call's outcome, delivers this credit only to the responsible segments, suppressing wasted tool calls without any cost term. We train TACO through a two-stage SFT+RL pipeline. Extensive experiments across perception, reasoning, and general multimodal benchmarks show that it yields consistent accuracy gains and learns to invoke its tools only when they help.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "TACO mejora el uso de herramientas en agentes de IA para tareas visuales, premiando las llamadas útiles y penalizando las engañosas sin necesidad de un juez externo.",
+        "problema": "Los modelos multimodales que usan herramientas para tareas visuales tienen problemas para distinguir si las operaciones de código son útiles, redundantes o engañosas. Las recompensas basadas solo en el resultado final no son precisas, y las recompensas de proceso existentes no atribuyen correctamente el crédito a llamadas de herramientas individuales o requieren un modelo juez externo.",
+        "propuesta": "TACO (Tool-Augmented Credit Optimization) es una variante de GRPO para agentes que usan herramientas de código, construida sobre dos canales de ventaja acoplados. El primero, DAPR (Differential Answer-Probe Reward), es una ventaja de contribución de herramienta auto-supervisada y sin juez que acredita cada llamada a la herramienta por su propio efecto en la respuesta correcta. Inserta tokens de sondeo en el razonamiento del modelo para elicitar sus predicciones con y sin la herramienta, tomando la diferencia como el valor de la llamada. El segundo es OGAR (Outcome-Gated Advantage Routing), una regla sin parámetros que distribuye la ventaja de la respuesta final solo a los segmentos responsables, suprimiendo llamadas de herramientas inútiles sin costo. TACO se entrena mediante un pipeline de dos etapas (SFT+RL).",
+        "resultados": "Experimentos exhaustivos en benchmarks de percepción, razonamiento y multimodales generales demuestran que TACO produce mejoras consistentes en la precisión y que el modelo aprende a invocar sus herramientas solo cuando son útiles. El resumen no especifica números concretos.",
+        "por_que_importa": "TACO mejora significativamente la fiabilidad y eficiencia de los agentes de IA que utilizan herramientas para tareas visuales complejas, como la respuesta a preguntas visuales detalladas. Al no requerir un modelo juez externo, simplifica el entrenamiento y despliegue, y asegura que los agentes usen sus herramientas de manera más inteligente y precisa, evitando llamadas inútiles o engañosas.",
+        "tags": [
+          "Agentes IA",
+          "Uso de Herramientas",
+          "Aprendizaje por Refuerzo",
+          "Modelos Multimodales",
+          "VQA",
+          "Asignación de Crédito"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-06-30T15:18:04Z"
+      }
+    },
+    {
+      "id": "arxiv:2606.29887",
+      "rank": 4,
+      "title": "SafePyramid: A Hierarchical Benchmark for In-context Policy Guardrailing",
+      "authors": [
+        "Jiacheng Zhang",
+        "Haoyu He",
+        "Sen Zhang",
+        "Shen Wang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-06-29",
+      "url": "https://arxiv.org/abs/2606.29887",
+      "pdf_url": "https://arxiv.org/pdf/2606.29887",
+      "score": 60,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "In real-world applications, guardrails are often expected to identify unsafe user-model interactions according to application-specific safety policies, rather than relying on predefined risk taxonomies. In this work, we study this setting under the paradigm of in-context policy guardrailing, where guardrails predict safety violations based on policy specifications provided in context. To systematically evaluate this capability, we introduce SafePyramid, a safety benchmark comprising 1,000 multi-turn conversations across 10 domains and 3,000 corresponding application-specific policies, which together contain 61,699 distinct natural-language rules. SafePyramid organizes the evaluation into three difficulty levels: L0 evaluates individual-rule understanding, L1 evaluates reasoning over rule dependencies, and L2 evaluates adaptation of full novel policy frameworks defined in context. To ensure benchmark quality, we employ a rigorous multi-stage pipeline to construct and validate the benchmark. Using SafePyramid, we evaluate 10 frontier LLMs and 5 policy-configurable guardrails and find that in-context policy guardrailing remains highly challenging: even the best-performing model, GPT-5.5, exactly identifies the full set of violated rules in only 54.0%, 35.3%, and 12.9% cases on L0, L1, and L2, respectively. These results highlight the limitations of current guardrails and call for stronger in-context policy guardrails that can reliably execute policies, resolve rule dependencies, and adapt to novel policy frameworks.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Un nuevo benchmark, SafePyramid, revela que los modelos de lenguaje actuales luchan para aplicar políticas de seguridad complejas y específicas de la aplicación, destacando sus limitaciones.",
+        "problema": "Las aplicaciones del mundo real necesitan guardarraíles de IA que identifiquen interacciones inseguras basándose en políticas de seguridad específicas de la aplicación, en lugar de taxonomías de riesgo predefinidas. Evaluar sistemáticamente esta capacidad de aplicación de políticas 'in-context' es un desafío.",
+        "propuesta": "Se introduce SafePyramid, un benchmark jerárquico para evaluar la capacidad de los guardarraíles de IA para aplicar políticas de seguridad definidas 'in-context'. Incluye 1.000 conversaciones multi-turno, 10 dominios, 3.000 políticas y 61.699 reglas. Organiza la evaluación en tres niveles de dificultad: L0 (comprensión de reglas individuales), L1 (razonamiento sobre dependencias de reglas) y L2 (adaptación a nuevos marcos de políticas).",
+        "resultados": "Se evaluaron 10 LLMs de vanguardia y 5 guardarraíles configurables. El mejor modelo, GPT-5.5, identificó correctamente el conjunto completo de reglas violadas solo en el 54.0% de los casos en L0, 35.3% en L1 y 12.9% en L2. Esto demuestra que la aplicación de políticas 'in-context' sigue siendo altamente desafiante.",
+        "por_que_importa": "Los resultados de SafePyramid demuestran las limitaciones actuales de los guardarraíles de IA para ejecutar políticas complejas. Es crucial desarrollar guardarraíles más robustos que puedan ejecutar políticas de forma fiable, resolver dependencias de reglas y adaptarse a nuevos marcos de políticas para una seguridad efectiva en aplicaciones reales.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Guardarraíles",
+          "Benchmarking",
+          "Políticas de seguridad",
+          "LLMs"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-06-30T15:18:20Z"
+      }
+    },
+    {
+      "id": "arxiv:2606.29225",
+      "rank": 5,
+      "title": "PolicyGuard: A Dialogue-Grounded Sub-Agent Verifier for Policy Adherence in LLM Agents",
+      "authors": [
+        "Seongjae Kang",
+        "Taehyung Yu",
+        "Sung Ju Hwang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-06-28",
+      "url": "https://arxiv.org/abs/2606.29225",
+      "pdf_url": "https://arxiv.org/pdf/2606.29225",
+      "score": 55,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "LLM agents handle user requests on behalf of organizations through tool calls and must follow the company policies stated in their system prompts. Prior work approaches this as a safeguarding problem -- external checks that block non-compliant agent actions. We argue that policy adherence is a broader problem: real workflows unfold across many turns, require explicit user confirmation and prerequisite reads, and hinge on the content of the dialogue rather than on any single argument value. Meeting this bar requires (i) full conversation context, (ii) self-reasoning over the policy and the current dialogue, and (iii) conversation-specific remediation that guides the agent's next turn -- three capabilities that prior safeguard work has often underestimated. We introduce POLICYGUARD, a sub-agent verifier that shares the agent's view of the dialogue, reasons over the policy in context, and provides actionable feedback for the agent's next turn. On tau^2-BENCH airline across three vendors (GPT-5.4, Claude Sonnet 4.6, Gemini 2.5 Pro) with four trials per setting, POLICYGUARD improves PASS4 by +12.0 / +6.0 / +12.0 pp. Per-call analyses show POLICYGUARD achieves higher policy-violation recall while blocking roughly half as often as argument-level guards.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "POLICYGUARD mejora la adherencia de agentes LLM a políticas corporativas, razonando sobre el diálogo completo para ofrecer feedback contextual y más efectivo.",
+        "problema": "Los métodos actuales de salvaguarda para agentes LLM fallan en asegurar la adherencia a políticas complejas, ya que solo verifican acciones individuales y no consideran el contexto completo del diálogo, la confirmación del usuario o la necesidad de auto-razonamiento y remediación contextual.",
+        "propuesta": "Se introduce POLICYGUARD, un verificador sub-agente que comparte la vista del diálogo del agente, razona sobre la política en contexto y proporciona retroalimentación accionable para la siguiente acción del agente, abordando la necesidad de contexto conversacional completo, auto-razonamiento y remediación específica del diálogo.",
+        "resultados": "En el benchmark tau^2-BENCH (aerolíneas), POLICYGUARD mejoró PASS4 en +12.0, +6.0 y +12.0 puntos porcentuales para GPT-5.4, Claude Sonnet 4.6 y Gemini 2.5 Pro, respectivamente. Además, logró una mayor detección de violaciones de políticas (recall) mientras bloqueaba acciones aproximadamente la mitad de las veces que los sistemas de salvaguarda tradicionales.",
+        "por_que_importa": "Es crucial para que los agentes LLM puedan operar de forma fiable y segura en entornos empresariales, asegurando que cumplan con las políticas corporativas en interacciones complejas y multifase, lo que mejora la confianza, reduce riesgos y permite una automatización de tareas más responsable.",
+        "tags": [
+          "Agentes LLM",
+          "Adherencia Políticas",
+          "Ciberseguridad",
+          "Verificación IA",
+          "Diálogo Contextual"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-06-30T15:18:35Z"
+      }
+    },
+    {
+      "id": "arxiv:2606.28733",
+      "rank": 6,
+      "title": "Agentic Abstention: Do Agents Know When to Stop Instead of Act?",
+      "authors": [
+        "Han Luo",
+        "Bingbing Wen",
+        "Lucy Lu Wang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-06-27",
+      "url": "https://arxiv.org/abs/2606.28733",
+      "pdf_url": "https://arxiv.org/pdf/2606.28733",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "LLM agents are expected to act over multiple turns, using search, browsing interfaces, and terminal tools to complete user goals. Yet not every goal is well specified or achievable in the available environment. In such cases, a reliable agent should recognize that further interaction is unlikely to help and abstain from additional tool calls. We define Agentic Abstention, the problem of deciding when an agent should stop acting under uncertainty. Unlike standard LLM abstention, which is usually evaluated as a single-turn answer-or-abstain decision, agentic abstention is a sequential decision problem: an agent can answer, abstain, or gather more information at each turn, and the need to abstain may only become clear after interacting with the environment. We study this problem across web shopping, terminal environments, and question answering, evaluating 13 LLM-as-agent systems and 2 agent scaffolds on more than 28,000 tasks. Our results show that the main challenge is not only whether agents can abstain, but also when they abstain. Some agents never abstain when they should, while others do so only after many unnecessary interactions. This gap is especially large on tasks where the instruction appears feasible until the environment reveals otherwise (e.g., no valid result matches the instruction). We further find that model scale, reasoning, and agent scaffolding affect abstention in different ways, where larger or more capable models sometimes perform worse at timely abstention. Finally, we introduce CONVOLVE, a context engineering method for improving agentic abstention that distills full interaction trajectories into reusable stopping rules. On WebShop, CONVOLVE substantially improves timely abstention without updating model parameters, raising Llama-3.3-70B's timely recall rate from 26.7 to 57.4. Our dataset and code are available at https://lhannnn.github.io/agentic-abstention",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los agentes de IA deben saber cuándo detenerse y abstenerse de actuar si una tarea es inviable o está mal especificada, evitando interacciones inútiles.",
+        "problema": "Los agentes de IA a menudo continúan interactuando y usando herramientas incluso cuando una tarea es inviable o está mal especificada, desperdiciando recursos. Este estudio aborda la \"abstención agéntica\", el problema de decidir cuándo un agente debe dejar de actuar bajo incertidumbre en un proceso de decisión secuencial.",
+        "propuesta": "El estudio define y explora la \"abstención agéntica\" en entornos de compra web, terminales y respuesta a preguntas. Evalúa 13 sistemas de agentes LLM y 2 estructuras de agentes en más de 28,000 tareas. Además, introduce CONVOLVE, un método de ingeniería de contexto que destila trayectorias de interacción completas en reglas de detención reutilizables para mejorar la abstención.",
+        "resultados": "El principal desafío es el *momento* de la abstención, no solo si los agentes pueden abstenerse. Algunos agentes nunca se abstienen cuando deberían, mientras que otros lo hacen tras muchas interacciones innecesarias. Esta brecha es mayor en tareas que parecen factibles inicialmente. El tamaño del modelo y la capacidad de razonamiento pueden afectar negativamente la abstención oportuna. CONVOLVE mejoró sustancialmente la abstención oportuna en WebShop, elevando la tasa de *recall* de Llama-3.3-70B del 26.7% al 57.4% sin actualizar parámetros del modelo.",
+        "por_que_importa": "Es crucial para desarrollar agentes de IA más fiables y eficientes que no malgasten recursos en tareas inviables. Mejorar la capacidad de abstención agéntica reduce interacciones innecesarias, optimiza el rendimiento y permite a los agentes reconocer limitaciones, lo cual es vital en entornos dinámicos. CONVOLVE ofrece una solución práctica sin necesidad de reentrenar modelos.",
+        "tags": [
+          "Agentes LLM",
+          "Abstención",
+          "Toma de decisiones",
+          "Eficiencia IA",
+          "Ingeniería de contexto",
+          "Fiabilidad de agentes"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-06-30T15:18:52Z"
+      }
+    },
+    {
+      "id": "arxiv:2606.29445",
+      "rank": 7,
+      "title": "Bridging VideoQA and Video-Guided Agentic Tasks via Generalized Keyframe Extraction",
+      "authors": [
+        "Sunqi Fan",
+        "Qingle Liu",
+        "Runqi Yin",
+        "Meng-Hao Guo"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-06-28",
+      "url": "https://arxiv.org/abs/2606.29445",
+      "pdf_url": "https://arxiv.org/pdf/2606.29445",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+1)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Video understanding is a fundamental capability for multimodal intelligence, and recent Multimodal Large Language Models (MLLMs) have achieved remarkable performance on Video Question Answering (VideoQA) benchmarks. However, existing benchmarks primarily evaluate whether models can perceive shallow visual cues, while rarely examining whether MLLMs can learn deeper knowledge or procedural skills from video tutorials and generalize them to downstream long-horizon agentic tasks. To address this gap, we introduce VG-GUIBench (Video-Guided GUI Benchmark), a new benchmark designed to evaluate whether MLLM-based GUI agents can follow video tutorials to complete corresponding GUI interactive tasks. Furthermore, we observe that the performance of models on both VideoQA and video-guided agentic tasks critically depends on effective keyframe extraction. Based on this observation, we propose TASKER (Task-driven And Scene-aware Keyframe searchER), a keyframe extraction algorithm that jointly considers task relevance and scene dynamics to identify informative frames. Experimental results demonstrate that TASKER achieves significant performance improvements on both VideoQA and video-guided agentic task benchmarks, outperforming the best baseline by 2.0% on the EgoSchema fullset and 1.8% on the NExT-QA dataset, respectively. These results further highlight the potential of generalized keyframe extraction methods for video understanding tasks. Our code and data are available at https://github.com/VG-GUI-TASKER/VG-GUI-TASKER.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Un nuevo algoritmo mejora la extracción de fotogramas clave para que los modelos de IA entiendan mejor los videos y realicen tareas guiadas por tutoriales interactivos.",
+        "problema": "Los benchmarks actuales para Modelos de Lenguaje Grandes Multimodales (MLLMs) en comprensión de video (VideoQA) solo evalúan pistas visuales superficiales. No miden la capacidad de los MLLMs para aprender conocimientos profundos o habilidades procedimentales de tutoriales en video y aplicarlos a tareas interactivas de interfaz gráfica de usuario (GUI) de largo plazo.",
+        "propuesta": "El estudio introduce VG-GUIBench, un nuevo benchmark para evaluar agentes GUI basados en MLLMs que siguen tutoriales en video. Además, propone TASKER, un algoritmo de extracción de fotogramas clave que considera la relevancia de la tarea y la dinámica de la escena para identificar los fotogramas más informativos, mejorando así la comprensión de video y la ejecución de tareas.",
+        "resultados": "TASKER logra mejoras significativas en el rendimiento en benchmarks de VideoQA y tareas agenticas guiadas por video. Supera la mejor línea base en un 2.0% en el conjunto de datos EgoSchema fullset y en un 1.8% en el conjunto de datos NExT-QA.",
+        "por_que_importa": "Este trabajo es crucial porque permite a los MLLMs ir más allá de la comprensión visual superficial, capacitándolos para aprender habilidades procedimentales complejas de videos. Esto es fundamental para desarrollar agentes de IA más autónomos y capaces de interactuar con interfaces gráficas de usuario siguiendo instrucciones en video, abriendo puertas a automatizaciones más sofisticadas y asistencia inteligente.",
+        "tags": [
+          "Comprensión de Video",
+          "MLLMs",
+          "Extracción de Fotogramas Clave",
+          "Agentes GUI",
+          "Benchmarks de IA",
+          "Inteligencia Multimodal"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-06-30T15:19:08Z"
+      }
+    }
+  ],
+  "generated_at": "2026-06-30T15:19:08Z"
+}

@@ -283,5 +283,155 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-06-29T16:22:49Z"
+  },
+  "arxiv:2606.30555v1": {
+    "tldr": "Un cortafuegos lingüístico usa geometría para proteger sistemas multiagente de ataques maliciosos, evaluando capacidades reales en lugar de descripciones.",
+    "problema": "Los sistemas multiagente actuales usan descripciones no verificadas de los agentes para enrutarlos, lo que crea vulnerabilidades de seguridad que permiten ataques de suplantación o puertas traseras ocultas.",
+    "propuesta": "Se introduce ANTAP, una arquitectura de enrutamiento basada en la evaluación activa de las capacidades de los agentes. En lugar de usar descripciones, ANTAP consulta dinámicamente a los agentes, destila su rendimiento en operadores algebraicos y realiza el enrutamiento mediante proyecciones no textuales, creando un 'cortafuegos lingüístico'.",
+    "resultados": "ANTAP logra una Tasa de Éxito de Ataque (ASR) cercana a cero contra ataques de inyección basados en descripciones (comparado con 67.3% o más para el router base). Contra ataques de incrustación adaptativa, reduce la ASR en un 20% respecto a la base, y es inherentemente resistente a la manipulación de descripciones.",
+    "por_que_importa": "Mejora drásticamente la seguridad de los sistemas multiagente al hacerlos resistentes a ataques que explotan la confianza en metadatos o descripciones, permitiendo una colaboración más segura y fiable entre agentes.",
+    "tags": [
+      "ciberseguridad",
+      "sistemas multiagente",
+      "enrutamiento",
+      "IA",
+      "defensa"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-06-30T15:08:46Z"
+  },
+  "arxiv:2606.30219v1": {
+    "tldr": "Este estudio aborda la brecha entre las métricas de evaluación de LLM y la seguridad real, proponiendo un marco para una medición más robusta y auditable.",
+    "problema": "Los modelos de lenguaje grandes (LLM) y la seguridad de la IA enfrentan un problema de medición: las puntuaciones de los benchmarks y las métricas de seguridad pueden mejorar, pero las propiedades subyacentes que representan son difíciles de verificar, creando una brecha entre la evaluación y la seguridad real.",
+    "propuesta": "El estudio propone un marco conceptual llamado 'EvalSafetyGap' y realiza una auditoría estructurada de diez modelos, combinando una revisión sistemática de ocho áreas (validez de benchmarks, evaluación dinámica, fiabilidad de LLM como juez, evaluación de seguridad, robustez ante jailbreaks, reward hacking, interpretabilidad, gobernanza/auditabilidad). Utiliza la Ley de Goodhart, una 'Descomposición de Inestabilidad' y un 'Trilema de Alineación' para comparar fallos de proxy bajo presión de optimización.",
+    "resultados": "La auditoría de 10 modelos muestra que las conclusiones cambian al medir la capacidad, la seguridad conductual y la gobernanza por separado. La asociación entre capacidad y robustez adversaria sostenida es estadísticamente indeterminada (Pearson r = +0.232, p = 0.520). La brecha de seguridad aparente entre modelos abiertos y cerrados es modesta, impulsada principalmente por la gobernanza y la divulgación, no por la robustez conductual, y es sensible a la clasificación de un modelo límite. Los resultados de intentos múltiples dependen del protocolo, y la auditoría es diagnóstica, no generadora de rankings, debido a protocolos heterogéneos.",
+    "por_que_importa": "Este trabajo proporciona un vocabulario compartido y un mapa de evidencia crucial para desarrollar una evaluación dinámica, informes de fuentes transparentes, medición de seguridad con múltiples intentos y prácticas de alineación auditables. Esto es fundamental para asegurar que las mejoras reportadas en la seguridad de la IA reflejen una seguridad real y verificable.",
+    "tags": [
+      "Evaluación LLM",
+      "Seguridad IA",
+      "Métricas",
+      "Goodhart's Law",
+      "Alineación IA",
+      "Auditoría de Modelos"
+    ],
+    "model": "gemini-2.5-flash",
+    "generated_at": "2026-06-30T15:17:20Z"
+  },
+  "arxiv:2606.29705": {
+    "tldr": "GUICrafter crea agentes de interfaz gráfica (GUI) más potentes y generalizables usando muchísimos menos datos anotados que los métodos actuales.",
+    "problema": "La recolección de datos para entrenar agentes de interfaz gráfica (GUI) es costosa y difícil a gran escala, lo que lleva a una pobre generalización entre dispositivos y una limitada capacidad de comprensión visual de elementos finos de la GUI en los agentes actuales.",
+    "propuesta": "Proponen GUICrafter, un agente GUI con supervisión débil que utiliza una gran cantidad de capturas de pantalla sin anotar para reducir drásticamente la dependencia de anotaciones humanas costosas. Emplea un marco de aprendizaje curricular en dos etapas: primero, aprende la comprensión visual de datos no anotados; luego, se calibra con una pequeña cantidad de datos de alta calidad mediante aprendizaje por refuerzo.",
+    "resultados": "GUICrafter logra un rendimiento competitivo, e incluso superior, a sistemas avanzados como UI-TARS, utilizando solo el 0.1% de sus datos. Además, con la misma cantidad de datos anotados, supera a todos los métodos anteriores como GUI-R1.",
+    "por_que_importa": "Este avance es crucial porque permite desarrollar agentes GUI más robustos y con mejor generalización entre dispositivos sin incurrir en los altos costos y la dificultad de la recolección masiva de datos anotados, democratizando el acceso a esta tecnología.",
+    "tags": [
+      "Agentes GUI",
+      "Supervisión Débil",
+      "Eficiencia de Datos",
+      "Automatización",
+      "Aprendizaje por Refuerzo"
+    ],
+    "model": "gemini-2.5-flash",
+    "generated_at": "2026-06-30T15:17:34Z"
+  },
+  "arxiv:2606.30410": {
+    "tldr": "Los modelos fundacionales para datos tabulares no son tan generales como se cree; un nuevo benchmark revela sus límites y dónde los modelos tradicionales aún dominan.",
+    "problema": "La evaluación de los modelos fundacionales para datos tabulares está fragmentada, y los benchmarks actuales se centran en escenarios donde ya sobresalen (datos IID), ignorando desafíos más complejos y limitando el progreso significativo en el campo.",
+    "propuesta": "Introducen BeyondArena, el primer benchmark unificado y holístico para datos tabulares, que soporta diversos tipos de tareas (IID, temporales, agrupadas), escalas de tamaño de muestra y dimensionalidad de características, y tipos de características variados. También presentan Data Foundry, un framework Python para curar datasets tabulares.",
+    "resultados": "Evaluaron 11 modelos en 142 datasets curados. Los modelos fundacionales existentes sobresalen en datos IID de tamaño pequeño a mediano. Sin embargo, los modelos tradicionales basados en árboles y de aprendizaje profundo aún dominan en datasets no-IID, grandes y de alta dimensionalidad.",
+    "por_que_importa": "BeyondArena es crucial porque redirige la investigación de modelos hacia los desafíos más exigentes en datos tabulares, permitiendo el desarrollo de modelos verdaderamente fundacionales y superando la limitación de centrarse solo en mejoras marginales en datos IID.",
+    "tags": [
+      "Modelos Fundacionales",
+      "Datos Tabulares",
+      "Benchmarks",
+      "Evaluación IA",
+      "Aprendizaje Automático",
+      "No-IID"
+    ],
+    "model": "gemini-2.5-flash",
+    "generated_at": "2026-06-30T15:17:48Z"
+  },
+  "arxiv:2606.30251": {
+    "tldr": "TACO mejora el uso de herramientas en agentes de IA para tareas visuales, premiando las llamadas útiles y penalizando las engañosas sin necesidad de un juez externo.",
+    "problema": "Los modelos multimodales que usan herramientas para tareas visuales tienen problemas para distinguir si las operaciones de código son útiles, redundantes o engañosas. Las recompensas basadas solo en el resultado final no son precisas, y las recompensas de proceso existentes no atribuyen correctamente el crédito a llamadas de herramientas individuales o requieren un modelo juez externo.",
+    "propuesta": "TACO (Tool-Augmented Credit Optimization) es una variante de GRPO para agentes que usan herramientas de código, construida sobre dos canales de ventaja acoplados. El primero, DAPR (Differential Answer-Probe Reward), es una ventaja de contribución de herramienta auto-supervisada y sin juez que acredita cada llamada a la herramienta por su propio efecto en la respuesta correcta. Inserta tokens de sondeo en el razonamiento del modelo para elicitar sus predicciones con y sin la herramienta, tomando la diferencia como el valor de la llamada. El segundo es OGAR (Outcome-Gated Advantage Routing), una regla sin parámetros que distribuye la ventaja de la respuesta final solo a los segmentos responsables, suprimiendo llamadas de herramientas inútiles sin costo. TACO se entrena mediante un pipeline de dos etapas (SFT+RL).",
+    "resultados": "Experimentos exhaustivos en benchmarks de percepción, razonamiento y multimodales generales demuestran que TACO produce mejoras consistentes en la precisión y que el modelo aprende a invocar sus herramientas solo cuando son útiles. El resumen no especifica números concretos.",
+    "por_que_importa": "TACO mejora significativamente la fiabilidad y eficiencia de los agentes de IA que utilizan herramientas para tareas visuales complejas, como la respuesta a preguntas visuales detalladas. Al no requerir un modelo juez externo, simplifica el entrenamiento y despliegue, y asegura que los agentes usen sus herramientas de manera más inteligente y precisa, evitando llamadas inútiles o engañosas.",
+    "tags": [
+      "Agentes IA",
+      "Uso de Herramientas",
+      "Aprendizaje por Refuerzo",
+      "Modelos Multimodales",
+      "VQA",
+      "Asignación de Crédito"
+    ],
+    "model": "gemini-2.5-flash",
+    "generated_at": "2026-06-30T15:18:04Z"
+  },
+  "arxiv:2606.29887": {
+    "tldr": "Un nuevo benchmark, SafePyramid, revela que los modelos de lenguaje actuales luchan para aplicar políticas de seguridad complejas y específicas de la aplicación, destacando sus limitaciones.",
+    "problema": "Las aplicaciones del mundo real necesitan guardarraíles de IA que identifiquen interacciones inseguras basándose en políticas de seguridad específicas de la aplicación, en lugar de taxonomías de riesgo predefinidas. Evaluar sistemáticamente esta capacidad de aplicación de políticas 'in-context' es un desafío.",
+    "propuesta": "Se introduce SafePyramid, un benchmark jerárquico para evaluar la capacidad de los guardarraíles de IA para aplicar políticas de seguridad definidas 'in-context'. Incluye 1.000 conversaciones multi-turno, 10 dominios, 3.000 políticas y 61.699 reglas. Organiza la evaluación en tres niveles de dificultad: L0 (comprensión de reglas individuales), L1 (razonamiento sobre dependencias de reglas) y L2 (adaptación a nuevos marcos de políticas).",
+    "resultados": "Se evaluaron 10 LLMs de vanguardia y 5 guardarraíles configurables. El mejor modelo, GPT-5.5, identificó correctamente el conjunto completo de reglas violadas solo en el 54.0% de los casos en L0, 35.3% en L1 y 12.9% en L2. Esto demuestra que la aplicación de políticas 'in-context' sigue siendo altamente desafiante.",
+    "por_que_importa": "Los resultados de SafePyramid demuestran las limitaciones actuales de los guardarraíles de IA para ejecutar políticas complejas. Es crucial desarrollar guardarraíles más robustos que puedan ejecutar políticas de forma fiable, resolver dependencias de reglas y adaptarse a nuevos marcos de políticas para una seguridad efectiva en aplicaciones reales.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Guardarraíles",
+      "Benchmarking",
+      "Políticas de seguridad",
+      "LLMs"
+    ],
+    "model": "gemini-2.5-flash",
+    "generated_at": "2026-06-30T15:18:20Z"
+  },
+  "arxiv:2606.29225": {
+    "tldr": "POLICYGUARD mejora la adherencia de agentes LLM a políticas corporativas, razonando sobre el diálogo completo para ofrecer feedback contextual y más efectivo.",
+    "problema": "Los métodos actuales de salvaguarda para agentes LLM fallan en asegurar la adherencia a políticas complejas, ya que solo verifican acciones individuales y no consideran el contexto completo del diálogo, la confirmación del usuario o la necesidad de auto-razonamiento y remediación contextual.",
+    "propuesta": "Se introduce POLICYGUARD, un verificador sub-agente que comparte la vista del diálogo del agente, razona sobre la política en contexto y proporciona retroalimentación accionable para la siguiente acción del agente, abordando la necesidad de contexto conversacional completo, auto-razonamiento y remediación específica del diálogo.",
+    "resultados": "En el benchmark tau^2-BENCH (aerolíneas), POLICYGUARD mejoró PASS4 en +12.0, +6.0 y +12.0 puntos porcentuales para GPT-5.4, Claude Sonnet 4.6 y Gemini 2.5 Pro, respectivamente. Además, logró una mayor detección de violaciones de políticas (recall) mientras bloqueaba acciones aproximadamente la mitad de las veces que los sistemas de salvaguarda tradicionales.",
+    "por_que_importa": "Es crucial para que los agentes LLM puedan operar de forma fiable y segura en entornos empresariales, asegurando que cumplan con las políticas corporativas en interacciones complejas y multifase, lo que mejora la confianza, reduce riesgos y permite una automatización de tareas más responsable.",
+    "tags": [
+      "Agentes LLM",
+      "Adherencia Políticas",
+      "Ciberseguridad",
+      "Verificación IA",
+      "Diálogo Contextual"
+    ],
+    "model": "gemini-2.5-flash",
+    "generated_at": "2026-06-30T15:18:35Z"
+  },
+  "arxiv:2606.28733": {
+    "tldr": "Los agentes de IA deben saber cuándo detenerse y abstenerse de actuar si una tarea es inviable o está mal especificada, evitando interacciones inútiles.",
+    "problema": "Los agentes de IA a menudo continúan interactuando y usando herramientas incluso cuando una tarea es inviable o está mal especificada, desperdiciando recursos. Este estudio aborda la \"abstención agéntica\", el problema de decidir cuándo un agente debe dejar de actuar bajo incertidumbre en un proceso de decisión secuencial.",
+    "propuesta": "El estudio define y explora la \"abstención agéntica\" en entornos de compra web, terminales y respuesta a preguntas. Evalúa 13 sistemas de agentes LLM y 2 estructuras de agentes en más de 28,000 tareas. Además, introduce CONVOLVE, un método de ingeniería de contexto que destila trayectorias de interacción completas en reglas de detención reutilizables para mejorar la abstención.",
+    "resultados": "El principal desafío es el *momento* de la abstención, no solo si los agentes pueden abstenerse. Algunos agentes nunca se abstienen cuando deberían, mientras que otros lo hacen tras muchas interacciones innecesarias. Esta brecha es mayor en tareas que parecen factibles inicialmente. El tamaño del modelo y la capacidad de razonamiento pueden afectar negativamente la abstención oportuna. CONVOLVE mejoró sustancialmente la abstención oportuna en WebShop, elevando la tasa de *recall* de Llama-3.3-70B del 26.7% al 57.4% sin actualizar parámetros del modelo.",
+    "por_que_importa": "Es crucial para desarrollar agentes de IA más fiables y eficientes que no malgasten recursos en tareas inviables. Mejorar la capacidad de abstención agéntica reduce interacciones innecesarias, optimiza el rendimiento y permite a los agentes reconocer limitaciones, lo cual es vital en entornos dinámicos. CONVOLVE ofrece una solución práctica sin necesidad de reentrenar modelos.",
+    "tags": [
+      "Agentes LLM",
+      "Abstención",
+      "Toma de decisiones",
+      "Eficiencia IA",
+      "Ingeniería de contexto",
+      "Fiabilidad de agentes"
+    ],
+    "model": "gemini-2.5-flash",
+    "generated_at": "2026-06-30T15:18:52Z"
+  },
+  "arxiv:2606.29445": {
+    "tldr": "Un nuevo algoritmo mejora la extracción de fotogramas clave para que los modelos de IA entiendan mejor los videos y realicen tareas guiadas por tutoriales interactivos.",
+    "problema": "Los benchmarks actuales para Modelos de Lenguaje Grandes Multimodales (MLLMs) en comprensión de video (VideoQA) solo evalúan pistas visuales superficiales. No miden la capacidad de los MLLMs para aprender conocimientos profundos o habilidades procedimentales de tutoriales en video y aplicarlos a tareas interactivas de interfaz gráfica de usuario (GUI) de largo plazo.",
+    "propuesta": "El estudio introduce VG-GUIBench, un nuevo benchmark para evaluar agentes GUI basados en MLLMs que siguen tutoriales en video. Además, propone TASKER, un algoritmo de extracción de fotogramas clave que considera la relevancia de la tarea y la dinámica de la escena para identificar los fotogramas más informativos, mejorando así la comprensión de video y la ejecución de tareas.",
+    "resultados": "TASKER logra mejoras significativas en el rendimiento en benchmarks de VideoQA y tareas agenticas guiadas por video. Supera la mejor línea base en un 2.0% en el conjunto de datos EgoSchema fullset y en un 1.8% en el conjunto de datos NExT-QA.",
+    "por_que_importa": "Este trabajo es crucial porque permite a los MLLMs ir más allá de la comprensión visual superficial, capacitándolos para aprender habilidades procedimentales complejas de videos. Esto es fundamental para desarrollar agentes de IA más autónomos y capaces de interactuar con interfaces gráficas de usuario siguiendo instrucciones en video, abriendo puertas a automatizaciones más sofisticadas y asistencia inteligente.",
+    "tags": [
+      "Comprensión de Video",
+      "MLLMs",
+      "Extracción de Fotogramas Clave",
+      "Agentes GUI",
+      "Benchmarks de IA",
+      "Inteligencia Multimodal"
+    ],
+    "model": "gemini-2.5-flash",
+    "generated_at": "2026-06-30T15:19:08Z"
   }
 }
