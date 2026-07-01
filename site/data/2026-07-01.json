@@ -1,0 +1,632 @@
+{
+  "date": "2026-07-01",
+  "report_type": "filtrado",
+  "evaluated": 184,
+  "selected": 18,
+  "papers": [
+    {
+      "id": "arxiv:2606.31639v1",
+      "rank": 1,
+      "title": "A Lifecycle and Application-Stack Survey of Large Language Model Vulnerabilities: Attacks, Risks, Defenses, and Open Problems",
+      "authors": [
+        "Seyed Bagher Hashemi Natanzi",
+        "Bo Tang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-06-30",
+      "url": "https://arxiv.org/abs/2606.31639v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.31639v1",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Large language models are no longer only text generators. They are increasingly embedded in retrieval pipelines, enterprise assistants, coding environments, robotic systems, security-operation workflows, and autonomous agents that can read private data, call tools, write files, execute code, and act across organizational boundaries. This shift changes the security problem: risks do not arise from the model weights alone, but from the full lifecycle and application stack through which data, prompts, model outputs, tools, memories, and user authority interact. This paper systematizes the literature on vulnerabilities in large language model systems through a lifecycle and application-stack lens. We organize attacks across eight stages: data collection, pretraining, post-training alignment, model packaging and supply chain, retrieval and memory, prompting and inference, tool/agent execution, and deployment/maintenance. For each stage, we analyze attacker capabilities, affected security objectives, representative attacks, practical risks, evaluation practices, and defenses. We further map LLM-specific vulnerabilities to confidentiality, integrity, availability, safety, privacy, fairness, accountability, and agency-control objectives. Unlike taxonomies that list isolated attack names, the proposed systematization emphasizes where trust boundaries fail, how untrusted data becomes executable instruction, how delegated authority amplifies model errors, and why point defenses rarely compose. We close with a research agenda for secure LLM systems, including compositional security, provenance-aware retrieval, tool-call containment, long-horizon agent evaluation, privacy-preserving adaptation, realistic red teaming, and deployment-grade incident response.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2606.31227v1",
+      "rank": 2,
+      "title": "Securing the AI Agent: A Unified Framework for Multi-Layer Agent Red Teaming",
+      "authors": [
+        "Yong Yang",
+        "Xing Zheng",
+        "Huiyu Wu",
+        "Huangsheng Cheng"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-06-30",
+      "url": "https://arxiv.org/abs/2606.31227v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.31227v1",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "The fast growth of open-source AI infrastructure, from model serving engines and agent platforms to the Model Context Protocol (MCP) ecosystem and the language models themselves, has outpaced the security tooling available to defend it. We present AI-Infra-Guard, an open-source framework that organizes AI red teaming around a single observation: the attack surface of an AI agent is stratified across layers (infrastructure, protocol/tool, agent behavior, and model), and no single detection paradigm fits all of them. The framework therefore matches a paradigm to each layer, from deterministic rule matching over 75+ AI components and 1{,}400+ vulnerability rules, through LLM-driven agentic auditing of MCP servers and agent-skill packages and multi-turn black-box agent red teaming, to a jailbreak harness with 26+ attack operators over sixteen datasets. To our knowledge it is the only open-source framework to span all of these, including supply-chain auditing of the agent skills that increasingly extend AI agents. We release AI-Infra-Guard as open source so that \\emph{layer-paradigm matching} can serve as a practical foundation for agent security and a shared base for the community to build on.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Protege la infraestructura de IA con un marco unificado que aborda la seguridad en múltiples capas, desde el código hasta el comportamiento del agente.",
+        "problema": "La rápida expansión de la infraestructura de IA de código abierto ha superado las herramientas de seguridad disponibles, dejando vulnerabilidades en capas como la infraestructura, el protocolo, el comportamiento del agente y el propio modelo.",
+        "propuesta": "Se presenta AI-Infra-Guard, un marco de código abierto que organiza el 'red teaming' de IA por capas (infraestructura, protocolo/herramienta, comportamiento del agente, modelo), aplicando un paradigma de detección específico para cada una, incluyendo auditoría de la cadena de suministro de habilidades de agente.",
+        "resultados": "El marco cubre más de 75 componentes de IA y más de 1400 reglas de vulnerabilidad, utiliza auditoría impulsada por LLM para servidores MCP y paquetes de habilidades de agente, y emplea 'red teaming' de agentes en caja negra y un 'harness' de 'jailbreak' con más de 26 operadores de ataque sobre dieciséis conjuntos de datos.",
+        "por_que_importa": "Proporciona la primera solución de código abierto que unifica la seguridad de la IA a través de múltiples capas y paradigmas de detección, sirviendo como base práctica para la seguridad de los agentes y fomentando la colaboración comunitaria.",
+        "tags": [
+          "seguridad IA",
+          "red teaming",
+          "infraestructura IA",
+          "código abierto",
+          "ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-01T15:19:57Z"
+      }
+    },
+    {
+      "id": "arxiv:2606.31876v1",
+      "rank": 3,
+      "title": "Harnessing Textual Refusal Directions for Multimodal Safety",
+      "authors": [
+        "Moreno D'Incà",
+        "Massimiliano Mancini",
+        "Nicu Sebe"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-06-30",
+      "url": "https://arxiv.org/abs/2606.31876v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.31876v1",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "To improve safety in Large Language Models (LLMs) we can either perform post-training alignment or exploit refusal directions in the activation space. Both strategies are less feasible in Multimodal LLMs (MLLMs) as they require unsafe multimodal data, harder to collect than their unimodal counterpart. In this work, we relax this constraint and investigate whether textual refusal directions, extracted directly from the LLM backbone, generalize across modalities (i.e., image, video). Preliminary findings confirm this ability, though effectiveness is conditioned by layer selection, steering strength, and cross-modal alignment, with the latter causing safe multimodal inputs to be spuriously steered toward refusal. Building on this, we introduce Modality-Agnostic Refusal Steering (MARS), a light-weight training-free approach that injects multimodal safety without the need for multimodal safety data. MARS corrects modality misalignment via activation re-centering, adaptively scales steering strength within a geometrically defined trust region, and selects the optimal intervention layer, operating at the first generated token. Evaluated on five SOTA MLLMs across safety, utility, and video jailbreak benchmarks, MARS achieves consistent safety gains while preserving utility. These results reveal that safety-relevant structure is shared across modalities and that textual refusal directions are a powerful and underexplored foundation for multimodal alignment.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Alineamos modelos multimodales para mayor seguridad usando solo texto, sin datos de seguridad específicos.",
+        "problema": "Alinear modelos multimodales (MLLMs) para que sean seguros es difícil porque requiere datos de seguridad multimodales, que son escasos y costosos de obtener. Las técnicas actuales no son fácilmente aplicables.",
+        "propuesta": "Proponemos Modality-Agnostic Refusal Steering (MARS), un método ligero y sin entrenamiento que utiliza 'direcciones de rechazo' textuales para mejorar la seguridad multimodal. MARS re-centra activaciones para corregir desalineación, ajusta la fuerza de la intervención y selecciona la capa óptima, todo sin necesidad de datos de seguridad multimodales.",
+        "resultados": "MARS logra mejoras consistentes en seguridad en cinco MLLMs de vanguardia, preservando la utilidad. Los resultados demuestran que la estructura relevante para la seguridad se comparte entre modalidades.",
+        "por_que_importa": "Permite mejorar la seguridad de modelos multimodales (que manejan texto, imágenes, video, etc.) de forma eficiente y sin datos específicos, abriendo la puerta a sistemas de IA más seguros y confiables en diversas aplicaciones.",
+        "tags": [
+          "IA multimodal",
+          "Seguridad en IA",
+          "Alineación de modelos",
+          "LLMs",
+          "Ciberseguridad",
+          "Procesamiento de lenguaje natural"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-01T15:21:02Z"
+      }
+    },
+    {
+      "id": "arxiv:2606.31023v1",
+      "rank": 4,
+      "title": "Certified Speculative Execution for Untrusted AI Agents",
+      "authors": [
+        "Chenyu Zhou",
+        "Qiliang Jiang",
+        "Shuning Wu",
+        "Xu Zhou"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-06-30",
+      "url": "https://arxiv.org/abs/2606.31023v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.31023v1",
+      "score": 56,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "Hard-constrained sequential decision systems have no certified way to spend the test-time compute of modern AI: executing the multi-step drafts of a learned policy or a frozen LLM forfeits the feasibility guarantee a trusted solver provides, while invoking the solver at every step forfeits the speed the AI offers. Certificate-Gated Prefix Acceptance (CGPA) closes this gap with a certified speculative-execution contract for untrusted AI agents: a trusted verifier rejects constraint-violating transitions exactly, a conformally calibrated value boundary gates the longest low-cost prefix within a per-segment regret budget, and the rest defers to the solver, so safety, regret, and speed decouple by construction. The contract drives every untrusted proposal source - adversarial drafters and six heterogeneous frozen LLMs (including a 12B model that violates constraints in 98% of direct rollouts) - to zero applied violations; a certificate-aware learned boundary, conformally calibrated, drives mean regret three orders of magnitude below unguarded acceptance, to within sampling noise of the stepwise oracle (95% CI spanning zero), and under calendar shift a learned proposal source overtakes it on 15 of 18 held-out days. On a deployment-scale unit-commitment instance it turns a frozen 8B LLM into a 2.96x per-episode wall-clock speedup at 2.1% regret, outpacing the domain heuristic (1.79x) and a safe receding-horizon baseline (1.07x): the more capable the untrusted source, the faster the certified system, at guarantees that never change.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Ejecución especulativa certificada para agentes de IA no confiables: seguridad y velocidad garantizadas.",
+        "problema": "Los sistemas de decisión secuencial modernos con restricciones estrictas no pueden aprovechar la potencia de cálculo de la IA avanzada sin sacrificar garantías de seguridad o velocidad.",
+        "propuesta": "Se propone Certificate-Gated Prefix Acceptance (CGPA), un contrato de ejecución especulativa certificada. Un verificador confiable rechaza transiciones que violan restricciones, un límite de valor calibrado gestiona el prefijo de menor coste dentro de un presupuesto de arrepentimiento, y el resto se delega a un solucionador.",
+        "resultados": "CGPA logra cero violaciones aplicadas con diversas fuentes de IA, incluyendo un modelo de 12B que viola restricciones en el 98% de los casos. Reduce el arrepentimiento medio en tres órdenes de magnitud. En una instancia de compromiso de unidades a escala de despliegue, acelera un LLM de 8B en 2.96x con un 2.1% de arrepentimiento, superando a la heurística del dominio y a una línea base segura.",
+        "por_que_importa": "Permite utilizar agentes de IA no confiables en sistemas críticos de toma de decisiones secuenciales, garantizando la seguridad y mejorando significativamente la velocidad y la eficiencia, con beneficios que aumentan con la capacidad de la IA.",
+        "tags": [
+          "IA certificada",
+          "ejecución especulativa",
+          "ciberseguridad",
+          "toma de decisiones",
+          "agentes no confiables",
+          "garantías de seguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-01T15:21:34Z"
+      }
+    },
+    {
+      "id": "arxiv:2606.31916v1",
+      "rank": 5,
+      "title": "Theory of Mind and Persuasion Beyond Conversation: Assessing the Capacity of LLMs to Induce Belief States via Planning and Action",
+      "authors": [
+        "Ben Slater",
+        "Matteo G. Mecattaf",
+        "Lucy G. Cheke",
+        "John Burden"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CL]",
+      "category": "cs.CL",
+      "date": "2026-06-30",
+      "url": "https://arxiv.org/abs/2606.31916v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.31916v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Theory of Mind (ToM) benchmarks for Large Language Models (LLMs) typically rely on passive question-answering formats, but the deployment of LLMs in increasingly agentic and autonomous forms demands new evaluations. In this paper we evaluate an agent's ability to induce specific belief states in other agents by taking actions rather than using conversational persuasion, a capability we call Non-Conversational Planning ToM (NCP-ToM). NCP-ToM is likely to be essential for many agent use-cases, including within user-assistant interactions and pedagogical contexts, but may also present manipulation or misinformation risks. Using a novel framework, NCP-ExploreToM, we subvert the conventional task structure by providing models with a set of belief state goals and requiring them to move objects or direct characters into rooms to achieve their goals. We evaluated six frontier models, including GPT-5, Gemini 2.5 Pro and the Claude 4 series, and a cohort of human participants, across 600 task instances. GPT-5 was successful on approximately 80% of tasks in the agentic setting, and was the only model to outperform human participants on our task, but was still less robust than humans across contexts. We additionally found that all models, like humans, performed better on tasks inducing true belief states than false belief states, which is a positive signal for alignment efforts. These findings highlight emerging social-reasoning capabilities in LLMs for non-conversational task completion and underscore the necessity of agentic evaluations for understanding the safety and alignment of autonomous social agents.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2606.31619v1",
+      "rank": 6,
+      "title": "Hybrid Topological Data Analysis and LSTM Networks for Enhanced Network Intrusion Detection Using CIC-IDS2017 Dataset",
+      "authors": [
+        "Amar Jeet",
+        "Bhaskar Ranjan Karn",
+        "Dinesh Kumar"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-06-30",
+      "url": "https://arxiv.org/abs/2606.31619v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.31619v1",
+      "score": 53,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "anomaly detection"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: cybersecurity, vuln & threats, anomaly detection"
+      ],
+      "abstract_en": "Network intrusion detection systems (NIDS) are crucial in cybersecurity infrastructure, needing advanced techniques to detect hostile activity in network traffic. This research introduces a hybrid approach that combines Topological Data Analysis (TDA) with Long Short-Term Memory (LSTM) networks to improve anomaly detection in network security. Our multi-layered design combines TDA's persistent homology with LSTM networks to capture topological characteristics of network traffic patterns and simulate temporal sequences. We assessed our methodology using the CIC-IDS2017 dataset, which includes over 2.8 million labelled flows, 77 network variables, and 14 attack categories that reflect modern threat landscapes such as DDoS, brute force, web attacks, penetration, and botnet activities. Integrating Betti curves and persistence diagrams with deep learning architectures enhances feature extraction performance. Our hybrid TDA+LSTM model has an AUC of 1.000 and F1-score of 1.000, with 5-fold cross-validation producing a mean AUC of 1.000 $\\pm$ 0.000 and mean F1 of 0.999 $\\pm$ 0.001. An ablation research demonstrates the complimentary contributions of topological (F1=0.990) and temporal characteristics (F1=1.000). Comparative research shows that the suggested strategy beats TDA+Random Forest (F1=0.994) and Isolation Forest (F1=0.835) baselines in several attack categories.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2606.31159v1",
+      "rank": 7,
+      "title": "An Empirical Study of Security Calibration in Large Language Models for Code",
+      "authors": [
+        "Mohammed Latif Siddiq",
+        "Md. Nafiu Rahman",
+        "Joanna C. S. Santos"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-06-30",
+      "url": "https://arxiv.org/abs/2606.31159v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.31159v1",
+      "score": 53,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Large Language Models (LLMs) are rapidly transforming software development, yet their use in security-critical contexts raises a key question: do models know when their generated code is insecure? This property, known as calibration, measures whether a model's confidence aligns with the true correctness of its outputs. We present the first large-scale empirical study of security calibration in LLM-generated code. We evaluate GPT-4o-mini, Gemini-2.0-Flash, and Qwen3-Coder-Next across multiple temperature settings on two complementary benchmarks: self-contained security tasks and multi-language repository-level contexts. Our results suggest that overconfidence is prevalent across the evaluated LLMs. Functional calibration is consistently worse than security calibration, suggesting that models estimate security outcomes more reliably than functional correctness, potentially because functional correctness depends on complex execution behavior. We also examine whether calibration-guided automated repair can help remediate vulnerabilities in LLM-generated code, finding only limited improvements while frequently introducing functional regressions. Moreover, we study different mitigation strategies for reducing False Trust, where models assign high confidence to vulnerable code. The results show that although architectural gating improves calibration on controlled benchmarks, calibration deteriorates in realistic repository-level settings, increasing the risk of high-confidence vulnerable outputs.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2606.31066v1",
+      "rank": 8,
+      "title": "Secure-CHG: A Comprehensive Framework for Robust and Fair Federated Learning via Hybrid Defense and Contribution-Aware Trust",
+      "authors": [
+        "Guanming Che",
+        "Qiang Wang",
+        "Jian Xu",
+        "Fucai Zhou"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-06-30",
+      "url": "https://arxiv.org/abs/2606.31066v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.31066v1",
+      "score": 53,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Federated Learning (FL) is highly susceptible to stealthy backdoor attacks, which aim to force a model into predicting an attacker-chosen target class for inputs containing a specific trigger. However, existing statistical defenses primarily focus on the early stages of model convergence. In this paper, we identify a fundamental vulnerability termed ``Late-stage Failure.'' We demonstrate that as the global model converges, decaying gradient norms render malicious and benign updates morphologically indistinguishable. This vanishing statistical variance effectively blinds traditional defenses, enabling adaptive adversaries to remain dormant and subsequently hijack the training process. To overcome these constraints, we propose Secure-CHG, a hybrid framework that pivots the defense paradigm from superficial morphological detection toward intrinsic semantic contribution verification. Secure-CHG employs an adaptive defense pipeline: a cascaded statistical filter stabilizes optimization during the early oscillatory phase, while a novel CHG-Shapley mechanism takes over during late-stage convergence. By leveraging sample hardness (i.e., local training loss) to project updates into a composite Hardness-Gradient space, it effectively amplifies adversarial semantic traces, enabling the isolation of stealthy attackers even as gradient norms vanish. Furthermore, we derive a closed-form solution for CHG-Shapley, facilitating low-complexity, retraining-free node valuation and trust-modulated aggregation. Extensive evaluations on CIFAR-10, MedMNIST, and NEU-SDDB demonstrate that Secure-CHG effectively mitigates Late-stage Failure. Specifically, it significantly suppresses advanced backdoor attacks, reducing their attack success rate by 2.3$\\times$ and 2.0$\\times$ relative to the mainstream Krum and Trimmed Mean baselines, respectively.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Secure-CHG defiende el Aprendizaje Federado contra ataques de puerta trasera sigilosos, especialmente en etapas avanzadas, superando las limitaciones de las defensas tradicionales.",
+        "problema": "El Aprendizaje Federado (FL) es vulnerable a ataques de puerta trasera sigilosos que manipulan el modelo. Las defensas existentes fallan en las etapas avanzadas de convergencia del modelo (\"Late-stage Failure\"), ya que las actualizaciones maliciosas se vuelven indistinguibles de las benignas debido a la disminución de las normas de gradiente.",
+        "propuesta": "Secure-CHG es un marco híbrido que cambia el paradigma de defensa de la detección morfológica superficial a la verificación de la contribución semántica intrínseca. Utiliza una defensa adaptativa: un filtro estadístico en fases tempranas y un mecanismo CHG-Shapley en fases avanzadas. CHG-Shapley proyecta las actualizaciones en un espacio de Dureza-Gradiente (Hardness-Gradient) usando la pérdida de entrenamiento local, amplificando las huellas adversarias. También ofrece una solución de forma cerrada para la valoración de nodos y agregación modulada por confianza.",
+        "resultados": "Secure-CHG mitiga eficazmente el \"Late-stage Failure\". Las evaluaciones en CIFAR-10, MedMNIST y NEU-SDDB demuestran que suprime significativamente los ataques de puerta trasera avanzados, reduciendo la tasa de éxito de ataque en 2.3 veces y 2.0 veces en comparación con las líneas base Krum y Trimmed Mean, respectivamente.",
+        "por_que_importa": "Este trabajo es crucial porque mejora drásticamente la robustez del Aprendizaje Federado contra ataques sofisticados que las defensas actuales no pueden detectar en etapas críticas. Permite un FL más seguro y confiable, fundamental para aplicaciones sensibles donde la integridad del modelo es vital, como en salud o finanzas.",
+        "tags": [
+          "Aprendizaje Federado",
+          "Ciberseguridad",
+          "Ataques de Puerta Trasera",
+          "Defensa IA",
+          "Confianza de Modelo",
+          "Seguridad FL"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-07-01T15:26:48Z"
+      }
+    },
+    {
+      "id": "arxiv:2606.31410",
+      "rank": 1,
+      "title": "Xiaomi-GUI-0 Technical Report",
+      "authors": [
+        "Wanxia Cao",
+        "Chengzhen Duan",
+        "Pei Fu",
+        "Pengzhi Gao"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-06-30",
+      "url": "https://arxiv.org/abs/2606.31410",
+      "pdf_url": "https://arxiv.org/pdf/2606.31410",
+      "score": 72,
+      "topics": [
+        "AI agents",
+        "fintech & payments"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: AI agents, fintech & payments"
+      ],
+      "abstract_en": "Graphical user interface (GUI) agents build on vision-language models to complete user tasks end-to-end in real applications through interface actions such as tapping, swiping, text entry, and navigation. However, existing GUI agents are trained and evaluated largely on offline trajectories, simulated environments, and standardized benchmarks. These differ substantially from real applications in interface layout, interaction logic, and abnormal-state distribution, and cannot faithfully characterize execution stability in real-world use, where account states, permission dialogs, payment authentication, and risk control continually reshape the state distribution and open a persistent gap between benchmark scores and real usability. To close this gap, we propose Xiaomi-GUI-0, a native multimodal GUI agent for real mobile environments, trained and evaluated within a real-device closed loop. At its core is a real-device-dominant hybrid infrastructure, where physical devices are the primary execution environment and sandboxes provide auxiliary support, so that data collection, training, rollout, and evaluation share an execution distribution close to real deployment. We construct multi-source training data spanning high-frequency head tasks, high-generalization data for long-tail intents, and capability-enhancement data for reflection and memory, and introduce an error-driven data flywheel that turns failure trajectories into corrected actions, reflective explanations, and recovery demonstrations. The model is trained through a progressive three-stage pipeline of supervised fine-tuning, step-level reinforcement learning, and agentic reinforcement learning. Evaluated on public benchmarks and our in-house RealMobile, Xiaomi-GUI-0 achieves 72.0% success on RealMobile and 78.9% on AndroidWorld, while substantially improving execution stability and abnormal-state recognition in real-world tasks.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Xiaomi-GUI-0 es un agente de IA que cierra la brecha entre el rendimiento de los agentes GUI en benchmarks y su usabilidad real en móviles, usando un entrenamiento en dispositivos físicos.",
+        "problema": "Los agentes de interfaz gráfica (GUI) actuales se entrenan y evalúan principalmente en simulaciones o benchmarks, lo que no refleja la complejidad de las aplicaciones móviles reales. Esto crea una brecha significativa entre las puntuaciones de referencia y la usabilidad práctica, especialmente con estados de cuenta, permisos y autenticaciones que reconfiguran continuamente el estado del sistema.",
+        "propuesta": "Proponen Xiaomi-GUI-0, un agente GUI multimodal nativo para entornos móviles reales, entrenado y evaluado en un ciclo cerrado con dispositivos físicos. Utiliza una infraestructura híbrida donde los dispositivos físicos son el entorno principal de ejecución. Recopila datos de múltiples fuentes (tareas de alta frecuencia, generalización para intenciones de cola larga, mejora de capacidades) y emplea un 'volante de datos' impulsado por errores para corregir fallos. El entrenamiento es un proceso progresivo de tres etapas: ajuste supervisado, aprendizaje por refuerzo a nivel de paso y aprendizaje por refuerzo agéntico.",
+        "resultados": "Xiaomi-GUI-0 logró un 72.0% de éxito en su benchmark interno RealMobile y un 78.9% en AndroidWorld. Además, mejoró sustancialmente la estabilidad de ejecución y el reconocimiento de estados anómalos en tareas del mundo real.",
+        "por_que_importa": "Este trabajo es crucial porque aborda la disparidad entre el rendimiento de los agentes GUI en entornos controlados y su funcionalidad en el mundo real. Al entrenar y evaluar en dispositivos físicos, Xiaomi-GUI-0 promete agentes de IA más robustos y fiables para automatizar tareas en aplicaciones móviles, mejorando la experiencia del usuario y la eficiencia operativa.",
+        "tags": [
+          "Agentes GUI",
+          "IA móvil",
+          "Automatización",
+          "Aprendizaje por refuerzo",
+          "Usabilidad",
+          "Dispositivos reales"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-07-01T15:27:04Z"
+      }
+    },
+    {
+      "id": "arxiv:2606.31247",
+      "rank": 2,
+      "title": "FlexiSLM: A Dynamic and Controllable Frame Rate Spoken Language Model",
+      "authors": [
+        "Jiaqi Li",
+        "Chaoren Wang",
+        "Xiaohai Tian",
+        "Mingjie Chen"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-06-30",
+      "url": "https://arxiv.org/abs/2606.31247",
+      "pdf_url": "https://arxiv.org/pdf/2606.31247",
+      "score": 71,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Spoken language models (SLMs) extend LLMs to speech input and output. Existing SLMs represent speech at fixed frame rates (e.g., 25 or 12.5 Hz), ignoring the time-varying information density of speech and offering no flexibility to trade off quality for speed at inference time. Recent audio tokenizer research has proposed dynamic frame rate speech coding, which exploits this non-uniformity and enables two new capabilities: very low average frame rates and frame rate controllability. However, this technique has not yet been applied to SLMs. We introduce Flexible Spoken Language Model (FlexiSLM), the first SLM that supports dynamic and controllable frame rates on both speech input and output. Using dynamic frame rate representations, FlexiSLM outperforms fixed-frame-rate 7B models including Qwen2.5-Omni and Kimi-Audio at its high-quality operating points. We further verify that FlexiSLM can be accurately steered down to 4.0 Hz; at 6.25 Hz, it roughly halves inference time relative to 12.5 Hz while retaining strong speech-to-speech quality. Audio samples are available at https://flexislm.github.io .",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "FlexiSLM es un nuevo modelo de lenguaje hablado que adapta dinámicamente su velocidad de procesamiento para optimizar calidad y velocidad, superando a modelos fijos.",
+        "problema": "Los modelos de lenguaje hablado (SLM) existentes usan tasas de fotogramas fijas, lo que ignora la densidad de información variable del habla y no permite ajustar la calidad o velocidad en tiempo real. La codificación de voz con tasa de fotogramas dinámica no se había aplicado a los SLM.",
+        "propuesta": "Se introduce FlexiSLM, el primer modelo de lenguaje hablado que soporta tasas de fotogramas dinámicas y controlables tanto para la entrada como para la salida de voz. Utiliza representaciones de tasa de fotogramas dinámicas.",
+        "resultados": "FlexiSLM supera a modelos de 7B de tasa de fotogramas fija (como Qwen2.5-Omni y Kimi-Audio) en sus puntos de operación de alta calidad. Puede ser ajustado hasta 4.0 Hz. A 6.25 Hz, reduce aproximadamente a la mitad el tiempo de inferencia en comparación con 12.5 Hz, manteniendo una alta calidad de voz a voz.",
+        "por_que_importa": "Permite una mayor flexibilidad y eficiencia en los modelos de lenguaje hablado, ofreciendo la capacidad de equilibrar dinámicamente la calidad y la velocidad de inferencia. Esto es crucial para aplicaciones en tiempo real y entornos con recursos limitados, mejorando la experiencia del usuario y la viabilidad práctica de los SLM.",
+        "tags": [
+          "Modelos de Lenguaje Hablado",
+          "SLM",
+          "Tasa de Fotogramas Dinámica",
+          "Eficiencia IA",
+          "Procesamiento de Voz"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-07-01T15:27:20Z"
+      }
+    },
+    {
+      "id": "arxiv:2606.31811",
+      "rank": 3,
+      "title": "MuSViT: A Foundation Vision Model for Sheet Music Representation",
+      "authors": [
+        "Carlos Penarrubia",
+        "Antonio Rios-Vila",
+        "Eliseo Fuentes-Martinez",
+        "Juan C. Martinez-Sevilla"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-06-30",
+      "url": "https://arxiv.org/abs/2606.31811",
+      "pdf_url": "https://arxiv.org/pdf/2606.31811",
+      "score": 67,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Foundation models have transformed vision and language processing by providing rich, reusable representations that transfer across diverse tasks. Sheet music, as a visual encoding of musical language, lacks such a strong domain-specific backbone. We introduce MuSViT (Music Score Vision Transformer): the first foundation vision model for sheet music representation -- a ViT encoder pre-trained via Masked Autoencoders on 9.7 million pages from the IMSLP. To handle the complexity of real-world scores, we adopt a two-stage curriculum: a synthetic warm-up on typeset scores followed by large-scale training on the full IMSLP corpus. We evaluate MuSViT on four downstream tasks -- full-page and staff-level music score recognition, music symbol detection, and score difficulty classification -- under two scenarios: linear probing (frozen encoder) and fine-tuning. Under linear probing, MuSViT consistently outperforms modern vision encoders, revealing that general-purpose representations, regardless of scale, fall systematically short on the structured symbolic properties of musical notation. Under fine-tuning, MuSViT generally improves upon task-specific state-of-the-art methods. An additional embedding-transcription consistency analysis reveals that MuSViT encodes symbolic musical structure directly in its representation space -- unlike other encoders, whose embeddings do not correlate with music notation content. These results establish MuSViT as a foundation backbone for sheet music understanding.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "MuSViT es el primer modelo fundacional de visión que revoluciona el procesamiento automático de partituras, superando a modelos generales en tareas musicales.",
+        "problema": "Las partituras musicales, como lenguaje visual estructurado, carecían de un modelo fundacional de visión específico. Los modelos de visión generales no logran capturar adecuadamente las propiedades simbólicas y estructuradas de la notación musical, resultando en un rendimiento inferior en tareas de comprensión de partituras.",
+        "propuesta": "Se introduce MuSViT (Music Score Vision Transformer), el primer modelo fundacional de visión para la representación de partituras. Es un codificador ViT pre-entrenado mediante Masked Autoencoders en 9.7 millones de páginas del corpus IMSLP. Utiliza un currículo de entrenamiento de dos etapas: un calentamiento con partituras sintéticas seguido de un entrenamiento a gran escala con el corpus completo de IMSLP para manejar la complejidad de las partituras reales.",
+        "resultados": "Evaluado en cuatro tareas (reconocimiento de partituras a página completa y a nivel de pentagrama, detección de símbolos musicales y clasificación de dificultad) y dos escenarios (linear probing y fine-tuning). En \"linear probing\" (codificador congelado), MuSViT superó consistentemente a los codificadores de visión modernos, demostrando que las representaciones de propósito general fallan sistemáticamente en las propiedades simbólicas estructuradas de la notación musical. En \"fine-tuning\", MuSViT generalmente mejoró los métodos de vanguardia específicos de cada tarea. Un análisis adicional reveló que MuSViT codifica la estructura musical simbólica directamente en su espacio de representación, a diferencia de otros codificadores.",
+        "por_que_importa": "MuSViT establece un nuevo estándar como columna vertebral fundacional para la comprensión automática de partituras. Esto permite un rendimiento superior en una variedad de tareas de visión relacionadas con la música, facilitando el desarrollo de aplicaciones más precisas y robustas para el análisis, la búsqueda y la interacción con partituras digitales.",
+        "tags": [
+          "Modelos Fundacionales",
+          "Visión por Computadora",
+          "Partituras Musicales",
+          "Procesamiento de Música",
+          "Transformers",
+          "IA en Música"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-07-01T15:27:37Z"
+      }
+    },
+    {
+      "id": "arxiv:2606.31734",
+      "rank": 4,
+      "title": "MemLearner: Learning to Query Context memory for Video World Models",
+      "authors": [
+        "Jiwen Yu",
+        "Jianxiong Gao",
+        "Jianhong Bai",
+        "Yiran Qin"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-06-30",
+      "url": "https://arxiv.org/abs/2606.31734",
+      "pdf_url": "https://arxiv.org/pdf/2606.31734",
+      "score": 59,
+      "topics": [
+        "vuln & threats"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: vuln & threats"
+      ],
+      "abstract_en": "Video World Models are interactive video generation models that predict future world states based on user actions and history video frames. A critical challenge in video world models is the lack of memory, causing inconsistent generated scenes over extended durations. Previous methods explored rule-based context frame retrieval as memory, but they fail to generalize in scenarios with scene occlusions and dynamic objects. We propose MemLearner, a learning-based adaptive context query method using query tokens to bridge context and predicted tokens. By leveraging the video generation model itself for context querying, MemLearner exploits pre-trained visual priors without training additional modules from scratch, and incorporates efficient strategies for training and inference. We collect a dataset of long videos with scene occlusions and dynamic objects, paired with camera pose annotations, and propose a multi-dataset training strategy leveraging both annotated rendered and unannotated real-world videos. Extensive experiments demonstrate that MemLearner significantly outperforms prior video world models in terms of scene consistency and memory, particularly under challenging occlusion and dynamic scenarios.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "MemLearner es un nuevo modelo de IA que mejora la memoria y consistencia de los modelos de mundos de video, superando desafíos de oclusiones y objetos dinámicos.",
+        "problema": "Los modelos de mundos de video actuales carecen de memoria a largo plazo, lo que genera escenas inconsistentes en duraciones extendidas. Los métodos previos basados en reglas fallan en escenarios con oclusiones de escena y objetos dinámicos.",
+        "propuesta": "MemLearner propone un método de consulta de contexto adaptativo basado en aprendizaje, utilizando tokens de consulta para vincular el contexto con los tokens predichos. Aprovecha el propio modelo de generación de video para explotar conocimientos visuales pre-entrenados sin módulos adicionales, e incorpora estrategias eficientes de entrenamiento e inferencia. También recolecta un nuevo conjunto de datos de videos largos con oclusiones y objetos dinámicos, y propone una estrategia de entrenamiento multi-dataset.",
+        "resultados": "Experimentos extensivos demuestran que MemLearner supera significativamente a los modelos de mundos de video anteriores en términos de consistencia de escena y memoria, particularmente bajo escenarios desafiantes de oclusión y dinámicos. El resumen no especifica resultados numéricos.",
+        "por_que_importa": "Es crucial para desarrollar modelos de mundos de video más realistas y fiables, permitiendo simulaciones interactivas más consistentes y útiles en aplicaciones como robótica, realidad virtual y entrenamiento de IA, especialmente en entornos complejos y dinámicos.",
+        "tags": [
+          "Modelos de Mundos de Video",
+          "Generación de Video",
+          "Memoria de IA",
+          "Consistencia de Escena",
+          "Aprendizaje Automático",
+          "Oclusiones"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-07-01T15:27:52Z"
+      }
+    },
+    {
+      "id": "arxiv:2606.31537",
+      "rank": 5,
+      "title": "DataEvolver: Self-Evolving Multi-Agent Data Construction for Text-Rich Image Generation",
+      "authors": [
+        "Siyu Yan",
+        "Yizhen Gao",
+        "Yilin Wang",
+        "Dongxing Mao"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-06-30",
+      "url": "https://arxiv.org/abs/2606.31537",
+      "pdf_url": "https://arxiv.org/pdf/2606.31537",
+      "score": 57,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "Text-rich image generation is one of the most challenging settings in image generation, since models must simultaneously produce visually realistic images and render legible, semantically aligned, and layout-consistent text. Existing data pipelines usually follow a static crawl-filter-freeze paradigm. They collect candidate samples, filter them once, and freeze the accepted data for training. However, rejected samples are usually discarded, although they often contain useful failure signals such as OCR errors and semantic mismatches. As a result, later construction rounds may repeat the same failure modes. To address these limitations, we propose DataEvolver, a self-evolving multi-agent framework for text-rich image data construction. DataEvolver treats data construction as feedback-driven construction policy evolution. A Retriever collects candidate samples, a Verifier assigns quality scores and rejection causes, a Critic summarizes round-level feedback into semantic feedback, and a Generator completes under-covered regions through targeted synthesis. The updated feedback memory then guides the next construction round. Experiments on text-rich image generation benchmarks show that DataEvolver produces more useful training data than fixed-dataset baselines under matched data budgets. At the 0.75M scale on PixArt-alpha, DataEvolver improves OCR-F1 over the strongest baseline by 85.3 percent on TextScenesHQ and 35.3 percent on LongTextBench. The improvements are consistent across both evaluated benchmarks and also transfer to Show-o2, indicating that the benefit of DataEvolver is not tied to a single downstream generator. These results suggest that rejected samples can provide actionable feedback for improving text-rich image data construction.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "DataEvolver revoluciona la generación de imágenes con texto al aprender de los errores de datos rechazados, creando conjuntos de entrenamiento más útiles y mejorando drásticamente la legibilidad del texto.",
+        "problema": "La generación de imágenes con texto es un desafío complejo, ya que los modelos deben producir imágenes visualmente realistas y texto legible, semánticamente alineado y con un diseño coherente. Las metodologías actuales descartan muestras rechazadas que contienen señales de fallo útiles (ej. errores de OCR), lo que lleva a la repetición de los mismos modos de fallo en futuras rondas de construcción de datos.",
+        "propuesta": "DataEvolver propone un marco multi-agente auto-evolutivo para la construcción de datos de imágenes con texto. Trata la construcción de datos como una evolución de políticas impulsada por retroalimentación. Un Retriever recolecta muestras, un Verifier asigna puntuaciones de calidad y causas de rechazo, un Critic resume la retroalimentación a nivel de ronda, y un Generator completa regiones insuficientemente cubiertas mediante síntesis dirigida. La memoria de retroalimentación actualizada guía la siguiente ronda de construcción.",
+        "resultados": "DataEvolver produce datos de entrenamiento más útiles que las líneas base de conjuntos de datos fijos bajo presupuestos de datos equivalentes. A una escala de 0.75M en PixArt-alpha, DataEvolver mejoró el OCR-F1 sobre la línea base más fuerte en un 85.3% en TextScenesHQ y un 35.3% en LongTextBench. Las mejoras son consistentes en ambos benchmarks evaluados y se transfieren a Show-o2, indicando que el beneficio no está ligado a un solo generador posterior.",
+        "por_que_importa": "Este trabajo demuestra que las muestras de datos rechazadas no deben descartarse, sino que pueden proporcionar retroalimentación accionable para mejorar la construcción de datos de imágenes con texto. Esto es crucial para desarrollar modelos de IA más robustos y eficientes en la generación de contenido visual que incorpore texto de manera legible y coherente, lo que tiene aplicaciones directas en diseño gráfico, publicidad y creación de contenido digital.",
+        "tags": [
+          "Generación de imágenes",
+          "Texto en imágenes",
+          "Aprendizaje por retroalimentación",
+          "Construcción de datos",
+          "Multi-agente",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-07-01T15:28:08Z"
+      }
+    },
+    {
+      "id": "arxiv:2606.30534",
+      "rank": 6,
+      "title": "Orca: The World is in Your Mind",
+      "authors": [
+        "Yihao Wang",
+        "Yuheng Ji",
+        "Mingyu Cao",
+        "Yanqing Shen"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-06-29",
+      "url": "https://arxiv.org/abs/2606.30534",
+      "pdf_url": "https://arxiv.org/pdf/2606.30534",
+      "score": 52,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "We introduce Orca, an initial instantiation of a general world foundation model. Orca learns a unified world latent space from multimodal world signals and exposes it through multimodal readout interfaces. Rather than optimizing isolated next-token, next-frame, or next-action prediction, we are centered on Next-State-Prediction modeling, offering a unified state-transition modeling route toward understanding, predicting, and acting upon the world. Orca learns through two complementary paradigms: unconscious learning captures dense natural state transitions from continuous videos, and conscious learning models sparse meaningful state transitions by language-described events and VQA supervision. For pre-training, we construct a large-scale world-learning inventory data, including 125K hours of video data and 160M event annotations. After pre-training, Orca learns a unified world latent space. To examine whether the learned latent supports downstream, we evaluate it by three representative downstream readouts: text generation, image prediction, and embodied action generation. Orca's backbone is frozen, and only the lightweight modality-specific decoders are trainable. Experiments show the scalability of the proposed paradigm and verify that stronger world latent enables stronger downstream readouts. Orca outperforms similar-sized specialized baselines. These results show that Orca, as a general world foundation model, presents a promising approach to understanding, predicting, and acting upon the world. Finally, we discuss the current limitations, aiming to provide useful insights and inspiration for the community.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Orca es un modelo fundacional que aprende a predecir el siguiente estado del mundo a partir de datos multimodales, superando a modelos especializados en diversas tareas.",
+        "problema": "Los modelos de IA actuales se enfocan en predicciones aisladas (siguiente token, siguiente fotograma, siguiente acción), careciendo de un enfoque unificado para comprender, predecir y actuar sobre el mundo de manera integral.",
+        "propuesta": "Orca propone un modelo fundacional general que aprende un espacio latente unificado del mundo mediante la modelización de la 'Predicción del Siguiente Estado'. Utiliza dos paradigmas de aprendizaje complementarios: 'inconsciente' (de transiciones de estado densas en videos continuos) y 'consciente' (de transiciones de estado significativas descritas por lenguaje y supervisión VQA). Se preentrena con 125.000 horas de video y 160 millones de anotaciones de eventos, manteniendo su núcleo congelado y solo entrenando decodificadores ligeros específicos para cada modalidad.",
+        "resultados": "Orca demuestra escalabilidad y que un espacio latente del mundo más robusto mejora las tareas posteriores. Supera a modelos especializados de tamaño similar en tres tareas representativas: generación de texto, predicción de imágenes y generación de acciones corporales. El preentrenamiento se realizó con 125.000 horas de video y 160 millones de anotaciones de eventos.",
+        "por_que_importa": "Orca representa un avance prometedor hacia la creación de IA más generales y unificadas, capaces de comprender, predecir y actuar en el mundo de manera más coherente, superando las limitaciones de los modelos especializados actuales y abriendo nuevas vías para la IA multimodal.",
+        "tags": [
+          "IA",
+          "Modelos Fundacionales",
+          "Aprendizaje Multimodal",
+          "Predicción de Estado",
+          "Visión Artificial",
+          "Generación de Texto"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-07-01T15:28:24Z"
+      }
+    },
+    {
+      "id": "arxiv:2606.23127",
+      "rank": 7,
+      "title": "Managing Procedural Memory in LLM Agents: Control, Adaptation, and Evaluation",
+      "authors": [
+        "Julia Belikova",
+        "Rauf Parchiev",
+        "Evgeny Egorov",
+        "Grigorii Davydenko"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-06-22",
+      "url": "https://arxiv.org/abs/2606.23127",
+      "pdf_url": "https://arxiv.org/pdf/2606.23127",
+      "score": 51,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Procedural memory is increasingly used to improve LLM agents on recurring workplace tasks, yet its ability to produce reusable skills remains poorly understood. We introduce AFTER, a benchmark of 382 realistic enterprise tasks spanning six professional roles and 22 procedural skills, designed to evaluate how skills transfer across tasks, roles, and model backbones. The benchmark includes controlled evaluation settings for local improvement, cross-task transfer, cross-role transfer, and cross-model generalization. Experiments show that procedural memory delivers consistent gains in industrial workflows: a single refinement round improves aggregate performance by 3.7-6.7 points, while skills evolved from diverse multi-model execution traces achieve 73.1% cross-model test accuracy, outperforming all single-model trace sources. We further find that some skills generalize broadly across tasks and models, whereas others become specialized to role-specific workflows and lose effectiveness under transfer. These results provide practical guidance for building, evaluating, and deploying procedural memory systems in production agent platforms.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Este estudio evalúa cómo la memoria procedimental mejora los agentes LLM en tareas empresariales recurrentes y su capacidad para generar habilidades reutilizables y transferibles.",
+        "problema": "Aunque la memoria procedimental se usa para mejorar agentes LLM en tareas laborales repetitivas, su capacidad para producir habilidades reutilizables y transferibles sigue siendo poco comprendida.",
+        "propuesta": "Introducen AFTER, un benchmark con 382 tareas empresariales realistas de seis roles y 22 habilidades procedimentales. Este benchmark evalúa la transferencia de habilidades entre tareas, roles y modelos, incluyendo configuraciones controladas para mejora local, transferencia entre tareas, entre roles y generalización entre modelos.",
+        "resultados": "La memoria procedimental ofrece mejoras consistentes en flujos de trabajo industriales: una ronda de refinamiento mejora el rendimiento agregado entre 3.7 y 6.7 puntos. Habilidades evolucionadas de trazas de ejecución diversas de múltiples modelos logran una precisión de prueba entre modelos del 73.1%, superando a las fuentes de trazas de un solo modelo. Algunas habilidades se generalizan ampliamente, mientras que otras se especializan y pierden efectividad al transferirse.",
+        "por_que_importa": "Los resultados proporcionan una guía práctica para construir, evaluar y desplegar sistemas de memoria procedimental en plataformas de agentes de IA en producción.",
+        "tags": [
+          "Memoria Procedimental",
+          "Agentes LLM",
+          "Benchmarking IA",
+          "Transferencia de Habilidades",
+          "Aplicaciones Empresariales"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-07-01T15:28:38Z"
+      }
+    }
+  ],
+  "generated_at": "2026-07-01T15:28:38Z"
+}

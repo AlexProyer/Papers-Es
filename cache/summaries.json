@@ -433,5 +433,189 @@
     ],
     "model": "gemini-2.5-flash",
     "generated_at": "2026-06-30T15:19:08Z"
+  },
+  "arxiv:2606.31227v1": {
+    "tldr": "Protege la infraestructura de IA con un marco unificado que aborda la seguridad en múltiples capas, desde el código hasta el comportamiento del agente.",
+    "problema": "La rápida expansión de la infraestructura de IA de código abierto ha superado las herramientas de seguridad disponibles, dejando vulnerabilidades en capas como la infraestructura, el protocolo, el comportamiento del agente y el propio modelo.",
+    "propuesta": "Se presenta AI-Infra-Guard, un marco de código abierto que organiza el 'red teaming' de IA por capas (infraestructura, protocolo/herramienta, comportamiento del agente, modelo), aplicando un paradigma de detección específico para cada una, incluyendo auditoría de la cadena de suministro de habilidades de agente.",
+    "resultados": "El marco cubre más de 75 componentes de IA y más de 1400 reglas de vulnerabilidad, utiliza auditoría impulsada por LLM para servidores MCP y paquetes de habilidades de agente, y emplea 'red teaming' de agentes en caja negra y un 'harness' de 'jailbreak' con más de 26 operadores de ataque sobre dieciséis conjuntos de datos.",
+    "por_que_importa": "Proporciona la primera solución de código abierto que unifica la seguridad de la IA a través de múltiples capas y paradigmas de detección, sirviendo como base práctica para la seguridad de los agentes y fomentando la colaboración comunitaria.",
+    "tags": [
+      "seguridad IA",
+      "red teaming",
+      "infraestructura IA",
+      "código abierto",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-01T15:19:57Z"
+  },
+  "arxiv:2606.31876v1": {
+    "tldr": "Alineamos modelos multimodales para mayor seguridad usando solo texto, sin datos de seguridad específicos.",
+    "problema": "Alinear modelos multimodales (MLLMs) para que sean seguros es difícil porque requiere datos de seguridad multimodales, que son escasos y costosos de obtener. Las técnicas actuales no son fácilmente aplicables.",
+    "propuesta": "Proponemos Modality-Agnostic Refusal Steering (MARS), un método ligero y sin entrenamiento que utiliza 'direcciones de rechazo' textuales para mejorar la seguridad multimodal. MARS re-centra activaciones para corregir desalineación, ajusta la fuerza de la intervención y selecciona la capa óptima, todo sin necesidad de datos de seguridad multimodales.",
+    "resultados": "MARS logra mejoras consistentes en seguridad en cinco MLLMs de vanguardia, preservando la utilidad. Los resultados demuestran que la estructura relevante para la seguridad se comparte entre modalidades.",
+    "por_que_importa": "Permite mejorar la seguridad de modelos multimodales (que manejan texto, imágenes, video, etc.) de forma eficiente y sin datos específicos, abriendo la puerta a sistemas de IA más seguros y confiables en diversas aplicaciones.",
+    "tags": [
+      "IA multimodal",
+      "Seguridad en IA",
+      "Alineación de modelos",
+      "LLMs",
+      "Ciberseguridad",
+      "Procesamiento de lenguaje natural"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-01T15:21:02Z"
+  },
+  "arxiv:2606.31023v1": {
+    "tldr": "Ejecución especulativa certificada para agentes de IA no confiables: seguridad y velocidad garantizadas.",
+    "problema": "Los sistemas de decisión secuencial modernos con restricciones estrictas no pueden aprovechar la potencia de cálculo de la IA avanzada sin sacrificar garantías de seguridad o velocidad.",
+    "propuesta": "Se propone Certificate-Gated Prefix Acceptance (CGPA), un contrato de ejecución especulativa certificada. Un verificador confiable rechaza transiciones que violan restricciones, un límite de valor calibrado gestiona el prefijo de menor coste dentro de un presupuesto de arrepentimiento, y el resto se delega a un solucionador.",
+    "resultados": "CGPA logra cero violaciones aplicadas con diversas fuentes de IA, incluyendo un modelo de 12B que viola restricciones en el 98% de los casos. Reduce el arrepentimiento medio en tres órdenes de magnitud. En una instancia de compromiso de unidades a escala de despliegue, acelera un LLM de 8B en 2.96x con un 2.1% de arrepentimiento, superando a la heurística del dominio y a una línea base segura.",
+    "por_que_importa": "Permite utilizar agentes de IA no confiables en sistemas críticos de toma de decisiones secuenciales, garantizando la seguridad y mejorando significativamente la velocidad y la eficiencia, con beneficios que aumentan con la capacidad de la IA.",
+    "tags": [
+      "IA certificada",
+      "ejecución especulativa",
+      "ciberseguridad",
+      "toma de decisiones",
+      "agentes no confiables",
+      "garantías de seguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-01T15:21:34Z"
+  },
+  "arxiv:2606.31066v1": {
+    "tldr": "Secure-CHG defiende el Aprendizaje Federado contra ataques de puerta trasera sigilosos, especialmente en etapas avanzadas, superando las limitaciones de las defensas tradicionales.",
+    "problema": "El Aprendizaje Federado (FL) es vulnerable a ataques de puerta trasera sigilosos que manipulan el modelo. Las defensas existentes fallan en las etapas avanzadas de convergencia del modelo (\"Late-stage Failure\"), ya que las actualizaciones maliciosas se vuelven indistinguibles de las benignas debido a la disminución de las normas de gradiente.",
+    "propuesta": "Secure-CHG es un marco híbrido que cambia el paradigma de defensa de la detección morfológica superficial a la verificación de la contribución semántica intrínseca. Utiliza una defensa adaptativa: un filtro estadístico en fases tempranas y un mecanismo CHG-Shapley en fases avanzadas. CHG-Shapley proyecta las actualizaciones en un espacio de Dureza-Gradiente (Hardness-Gradient) usando la pérdida de entrenamiento local, amplificando las huellas adversarias. También ofrece una solución de forma cerrada para la valoración de nodos y agregación modulada por confianza.",
+    "resultados": "Secure-CHG mitiga eficazmente el \"Late-stage Failure\". Las evaluaciones en CIFAR-10, MedMNIST y NEU-SDDB demuestran que suprime significativamente los ataques de puerta trasera avanzados, reduciendo la tasa de éxito de ataque en 2.3 veces y 2.0 veces en comparación con las líneas base Krum y Trimmed Mean, respectivamente.",
+    "por_que_importa": "Este trabajo es crucial porque mejora drásticamente la robustez del Aprendizaje Federado contra ataques sofisticados que las defensas actuales no pueden detectar en etapas críticas. Permite un FL más seguro y confiable, fundamental para aplicaciones sensibles donde la integridad del modelo es vital, como en salud o finanzas.",
+    "tags": [
+      "Aprendizaje Federado",
+      "Ciberseguridad",
+      "Ataques de Puerta Trasera",
+      "Defensa IA",
+      "Confianza de Modelo",
+      "Seguridad FL"
+    ],
+    "model": "gemini-2.5-flash",
+    "generated_at": "2026-07-01T15:26:48Z"
+  },
+  "arxiv:2606.31410": {
+    "tldr": "Xiaomi-GUI-0 es un agente de IA que cierra la brecha entre el rendimiento de los agentes GUI en benchmarks y su usabilidad real en móviles, usando un entrenamiento en dispositivos físicos.",
+    "problema": "Los agentes de interfaz gráfica (GUI) actuales se entrenan y evalúan principalmente en simulaciones o benchmarks, lo que no refleja la complejidad de las aplicaciones móviles reales. Esto crea una brecha significativa entre las puntuaciones de referencia y la usabilidad práctica, especialmente con estados de cuenta, permisos y autenticaciones que reconfiguran continuamente el estado del sistema.",
+    "propuesta": "Proponen Xiaomi-GUI-0, un agente GUI multimodal nativo para entornos móviles reales, entrenado y evaluado en un ciclo cerrado con dispositivos físicos. Utiliza una infraestructura híbrida donde los dispositivos físicos son el entorno principal de ejecución. Recopila datos de múltiples fuentes (tareas de alta frecuencia, generalización para intenciones de cola larga, mejora de capacidades) y emplea un 'volante de datos' impulsado por errores para corregir fallos. El entrenamiento es un proceso progresivo de tres etapas: ajuste supervisado, aprendizaje por refuerzo a nivel de paso y aprendizaje por refuerzo agéntico.",
+    "resultados": "Xiaomi-GUI-0 logró un 72.0% de éxito en su benchmark interno RealMobile y un 78.9% en AndroidWorld. Además, mejoró sustancialmente la estabilidad de ejecución y el reconocimiento de estados anómalos en tareas del mundo real.",
+    "por_que_importa": "Este trabajo es crucial porque aborda la disparidad entre el rendimiento de los agentes GUI en entornos controlados y su funcionalidad en el mundo real. Al entrenar y evaluar en dispositivos físicos, Xiaomi-GUI-0 promete agentes de IA más robustos y fiables para automatizar tareas en aplicaciones móviles, mejorando la experiencia del usuario y la eficiencia operativa.",
+    "tags": [
+      "Agentes GUI",
+      "IA móvil",
+      "Automatización",
+      "Aprendizaje por refuerzo",
+      "Usabilidad",
+      "Dispositivos reales"
+    ],
+    "model": "gemini-2.5-flash",
+    "generated_at": "2026-07-01T15:27:04Z"
+  },
+  "arxiv:2606.31247": {
+    "tldr": "FlexiSLM es un nuevo modelo de lenguaje hablado que adapta dinámicamente su velocidad de procesamiento para optimizar calidad y velocidad, superando a modelos fijos.",
+    "problema": "Los modelos de lenguaje hablado (SLM) existentes usan tasas de fotogramas fijas, lo que ignora la densidad de información variable del habla y no permite ajustar la calidad o velocidad en tiempo real. La codificación de voz con tasa de fotogramas dinámica no se había aplicado a los SLM.",
+    "propuesta": "Se introduce FlexiSLM, el primer modelo de lenguaje hablado que soporta tasas de fotogramas dinámicas y controlables tanto para la entrada como para la salida de voz. Utiliza representaciones de tasa de fotogramas dinámicas.",
+    "resultados": "FlexiSLM supera a modelos de 7B de tasa de fotogramas fija (como Qwen2.5-Omni y Kimi-Audio) en sus puntos de operación de alta calidad. Puede ser ajustado hasta 4.0 Hz. A 6.25 Hz, reduce aproximadamente a la mitad el tiempo de inferencia en comparación con 12.5 Hz, manteniendo una alta calidad de voz a voz.",
+    "por_que_importa": "Permite una mayor flexibilidad y eficiencia en los modelos de lenguaje hablado, ofreciendo la capacidad de equilibrar dinámicamente la calidad y la velocidad de inferencia. Esto es crucial para aplicaciones en tiempo real y entornos con recursos limitados, mejorando la experiencia del usuario y la viabilidad práctica de los SLM.",
+    "tags": [
+      "Modelos de Lenguaje Hablado",
+      "SLM",
+      "Tasa de Fotogramas Dinámica",
+      "Eficiencia IA",
+      "Procesamiento de Voz"
+    ],
+    "model": "gemini-2.5-flash",
+    "generated_at": "2026-07-01T15:27:20Z"
+  },
+  "arxiv:2606.31811": {
+    "tldr": "MuSViT es el primer modelo fundacional de visión que revoluciona el procesamiento automático de partituras, superando a modelos generales en tareas musicales.",
+    "problema": "Las partituras musicales, como lenguaje visual estructurado, carecían de un modelo fundacional de visión específico. Los modelos de visión generales no logran capturar adecuadamente las propiedades simbólicas y estructuradas de la notación musical, resultando en un rendimiento inferior en tareas de comprensión de partituras.",
+    "propuesta": "Se introduce MuSViT (Music Score Vision Transformer), el primer modelo fundacional de visión para la representación de partituras. Es un codificador ViT pre-entrenado mediante Masked Autoencoders en 9.7 millones de páginas del corpus IMSLP. Utiliza un currículo de entrenamiento de dos etapas: un calentamiento con partituras sintéticas seguido de un entrenamiento a gran escala con el corpus completo de IMSLP para manejar la complejidad de las partituras reales.",
+    "resultados": "Evaluado en cuatro tareas (reconocimiento de partituras a página completa y a nivel de pentagrama, detección de símbolos musicales y clasificación de dificultad) y dos escenarios (linear probing y fine-tuning). En \"linear probing\" (codificador congelado), MuSViT superó consistentemente a los codificadores de visión modernos, demostrando que las representaciones de propósito general fallan sistemáticamente en las propiedades simbólicas estructuradas de la notación musical. En \"fine-tuning\", MuSViT generalmente mejoró los métodos de vanguardia específicos de cada tarea. Un análisis adicional reveló que MuSViT codifica la estructura musical simbólica directamente en su espacio de representación, a diferencia de otros codificadores.",
+    "por_que_importa": "MuSViT establece un nuevo estándar como columna vertebral fundacional para la comprensión automática de partituras. Esto permite un rendimiento superior en una variedad de tareas de visión relacionadas con la música, facilitando el desarrollo de aplicaciones más precisas y robustas para el análisis, la búsqueda y la interacción con partituras digitales.",
+    "tags": [
+      "Modelos Fundacionales",
+      "Visión por Computadora",
+      "Partituras Musicales",
+      "Procesamiento de Música",
+      "Transformers",
+      "IA en Música"
+    ],
+    "model": "gemini-2.5-flash",
+    "generated_at": "2026-07-01T15:27:37Z"
+  },
+  "arxiv:2606.31734": {
+    "tldr": "MemLearner es un nuevo modelo de IA que mejora la memoria y consistencia de los modelos de mundos de video, superando desafíos de oclusiones y objetos dinámicos.",
+    "problema": "Los modelos de mundos de video actuales carecen de memoria a largo plazo, lo que genera escenas inconsistentes en duraciones extendidas. Los métodos previos basados en reglas fallan en escenarios con oclusiones de escena y objetos dinámicos.",
+    "propuesta": "MemLearner propone un método de consulta de contexto adaptativo basado en aprendizaje, utilizando tokens de consulta para vincular el contexto con los tokens predichos. Aprovecha el propio modelo de generación de video para explotar conocimientos visuales pre-entrenados sin módulos adicionales, e incorpora estrategias eficientes de entrenamiento e inferencia. También recolecta un nuevo conjunto de datos de videos largos con oclusiones y objetos dinámicos, y propone una estrategia de entrenamiento multi-dataset.",
+    "resultados": "Experimentos extensivos demuestran que MemLearner supera significativamente a los modelos de mundos de video anteriores en términos de consistencia de escena y memoria, particularmente bajo escenarios desafiantes de oclusión y dinámicos. El resumen no especifica resultados numéricos.",
+    "por_que_importa": "Es crucial para desarrollar modelos de mundos de video más realistas y fiables, permitiendo simulaciones interactivas más consistentes y útiles en aplicaciones como robótica, realidad virtual y entrenamiento de IA, especialmente en entornos complejos y dinámicos.",
+    "tags": [
+      "Modelos de Mundos de Video",
+      "Generación de Video",
+      "Memoria de IA",
+      "Consistencia de Escena",
+      "Aprendizaje Automático",
+      "Oclusiones"
+    ],
+    "model": "gemini-2.5-flash",
+    "generated_at": "2026-07-01T15:27:52Z"
+  },
+  "arxiv:2606.31537": {
+    "tldr": "DataEvolver revoluciona la generación de imágenes con texto al aprender de los errores de datos rechazados, creando conjuntos de entrenamiento más útiles y mejorando drásticamente la legibilidad del texto.",
+    "problema": "La generación de imágenes con texto es un desafío complejo, ya que los modelos deben producir imágenes visualmente realistas y texto legible, semánticamente alineado y con un diseño coherente. Las metodologías actuales descartan muestras rechazadas que contienen señales de fallo útiles (ej. errores de OCR), lo que lleva a la repetición de los mismos modos de fallo en futuras rondas de construcción de datos.",
+    "propuesta": "DataEvolver propone un marco multi-agente auto-evolutivo para la construcción de datos de imágenes con texto. Trata la construcción de datos como una evolución de políticas impulsada por retroalimentación. Un Retriever recolecta muestras, un Verifier asigna puntuaciones de calidad y causas de rechazo, un Critic resume la retroalimentación a nivel de ronda, y un Generator completa regiones insuficientemente cubiertas mediante síntesis dirigida. La memoria de retroalimentación actualizada guía la siguiente ronda de construcción.",
+    "resultados": "DataEvolver produce datos de entrenamiento más útiles que las líneas base de conjuntos de datos fijos bajo presupuestos de datos equivalentes. A una escala de 0.75M en PixArt-alpha, DataEvolver mejoró el OCR-F1 sobre la línea base más fuerte en un 85.3% en TextScenesHQ y un 35.3% en LongTextBench. Las mejoras son consistentes en ambos benchmarks evaluados y se transfieren a Show-o2, indicando que el beneficio no está ligado a un solo generador posterior.",
+    "por_que_importa": "Este trabajo demuestra que las muestras de datos rechazadas no deben descartarse, sino que pueden proporcionar retroalimentación accionable para mejorar la construcción de datos de imágenes con texto. Esto es crucial para desarrollar modelos de IA más robustos y eficientes en la generación de contenido visual que incorpore texto de manera legible y coherente, lo que tiene aplicaciones directas en diseño gráfico, publicidad y creación de contenido digital.",
+    "tags": [
+      "Generación de imágenes",
+      "Texto en imágenes",
+      "Aprendizaje por retroalimentación",
+      "Construcción de datos",
+      "Multi-agente",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash",
+    "generated_at": "2026-07-01T15:28:08Z"
+  },
+  "arxiv:2606.30534": {
+    "tldr": "Orca es un modelo fundacional que aprende a predecir el siguiente estado del mundo a partir de datos multimodales, superando a modelos especializados en diversas tareas.",
+    "problema": "Los modelos de IA actuales se enfocan en predicciones aisladas (siguiente token, siguiente fotograma, siguiente acción), careciendo de un enfoque unificado para comprender, predecir y actuar sobre el mundo de manera integral.",
+    "propuesta": "Orca propone un modelo fundacional general que aprende un espacio latente unificado del mundo mediante la modelización de la 'Predicción del Siguiente Estado'. Utiliza dos paradigmas de aprendizaje complementarios: 'inconsciente' (de transiciones de estado densas en videos continuos) y 'consciente' (de transiciones de estado significativas descritas por lenguaje y supervisión VQA). Se preentrena con 125.000 horas de video y 160 millones de anotaciones de eventos, manteniendo su núcleo congelado y solo entrenando decodificadores ligeros específicos para cada modalidad.",
+    "resultados": "Orca demuestra escalabilidad y que un espacio latente del mundo más robusto mejora las tareas posteriores. Supera a modelos especializados de tamaño similar en tres tareas representativas: generación de texto, predicción de imágenes y generación de acciones corporales. El preentrenamiento se realizó con 125.000 horas de video y 160 millones de anotaciones de eventos.",
+    "por_que_importa": "Orca representa un avance prometedor hacia la creación de IA más generales y unificadas, capaces de comprender, predecir y actuar en el mundo de manera más coherente, superando las limitaciones de los modelos especializados actuales y abriendo nuevas vías para la IA multimodal.",
+    "tags": [
+      "IA",
+      "Modelos Fundacionales",
+      "Aprendizaje Multimodal",
+      "Predicción de Estado",
+      "Visión Artificial",
+      "Generación de Texto"
+    ],
+    "model": "gemini-2.5-flash",
+    "generated_at": "2026-07-01T15:28:24Z"
+  },
+  "arxiv:2606.23127": {
+    "tldr": "Este estudio evalúa cómo la memoria procedimental mejora los agentes LLM en tareas empresariales recurrentes y su capacidad para generar habilidades reutilizables y transferibles.",
+    "problema": "Aunque la memoria procedimental se usa para mejorar agentes LLM en tareas laborales repetitivas, su capacidad para producir habilidades reutilizables y transferibles sigue siendo poco comprendida.",
+    "propuesta": "Introducen AFTER, un benchmark con 382 tareas empresariales realistas de seis roles y 22 habilidades procedimentales. Este benchmark evalúa la transferencia de habilidades entre tareas, roles y modelos, incluyendo configuraciones controladas para mejora local, transferencia entre tareas, entre roles y generalización entre modelos.",
+    "resultados": "La memoria procedimental ofrece mejoras consistentes en flujos de trabajo industriales: una ronda de refinamiento mejora el rendimiento agregado entre 3.7 y 6.7 puntos. Habilidades evolucionadas de trazas de ejecución diversas de múltiples modelos logran una precisión de prueba entre modelos del 73.1%, superando a las fuentes de trazas de un solo modelo. Algunas habilidades se generalizan ampliamente, mientras que otras se especializan y pierden efectividad al transferirse.",
+    "por_que_importa": "Los resultados proporcionan una guía práctica para construir, evaluar y desplegar sistemas de memoria procedimental en plataformas de agentes de IA en producción.",
+    "tags": [
+      "Memoria Procedimental",
+      "Agentes LLM",
+      "Benchmarking IA",
+      "Transferencia de Habilidades",
+      "Aplicaciones Empresariales"
+    ],
+    "model": "gemini-2.5-flash",
+    "generated_at": "2026-07-01T15:28:38Z"
   }
 }
