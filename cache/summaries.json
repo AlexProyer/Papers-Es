@@ -617,5 +617,172 @@
     ],
     "model": "gemini-2.5-flash",
     "generated_at": "2026-07-01T15:28:38Z"
+  },
+  "arxiv:2607.00572v1": {
+    "tldr": "HARC alinea modelos de lenguaje emparejando la 'peligrosidad' y el 'rechazo' para una seguridad robusta sin sacrificar capacidad.",
+    "problema": "Los modelos de lenguaje alineados (LLMs) tienen vulnerabilidades de seguridad que permiten ataques 'jailbreak'. Se necesita entender cómo representan internamente la seguridad para diagnosticar y corregir estas fallas.",
+    "propuesta": "Se introduce HARC (Harmfulness-And-Refusal Coupling), un método de ajuste fino que acopla las 'direcciones' de peligrosidad y rechazo en el espacio latente del modelo, tanto en las posiciones de prompt como de respuesta. Esto se hace sin afectar otras capacidades del modelo.",
+    "resultados": "HARC demuestra la mejor robustez, capacidad y usabilidad entre seis métodos de seguridad comparados. Las direcciones de peligrosidad y rechazo son transferibles entre diferentes familias y escalas de modelos.",
+    "por_que_importa": "Permite crear LLMs más seguros y resistentes a ataques, manteniendo su utilidad y capacidad general, lo cual es crucial para su adopción práctica y confiable.",
+    "tags": [
+      "alineación de LLMs",
+      "seguridad en IA",
+      "ciberseguridad",
+      "jailbreak",
+      "modelos de lenguaje"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-02T14:37:26Z"
+  },
+  "arxiv:2607.00481v1": {
+    "tldr": "Atacan LLMs que usan funciones simulando auditorías, eludiendo defensas de prompts y logrando generar contenido dañino.",
+    "problema": "Los ataques de 'jailbreak' a LLMs son una amenaza, y las defensas actuales centradas en el prompt son insuficientes para entornos que usan funciones y tienen estado.",
+    "propuesta": "Se propone SMT (Simulated Moderation Traces), un ataque que simula un flujo de auditoría de moderación a lo largo de múltiples turnos para engañar al LLM y eludir sus restricciones de seguridad.",
+    "resultados": "SMT logra altas tasas de éxito y HarmScore en LLMs comerciales, superando a las bases existentes con un número mínimo de consultas. El resumen no especifica porcentajes exactos.",
+    "por_que_importa": "Demuestra que las defensas solo a nivel de prompt son insuficientes para LLMs que interactúan con herramientas, exigiendo validación consciente del contexto y el estado de la conversación.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Jailbreak",
+      "Auditoría",
+      "Funciones",
+      "Vulnerabilidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-02T14:38:24Z"
+  },
+  "arxiv:2607.00440v1": {
+    "tldr": "Minos usa agentes colaborativos y LLMs para rastrear ataques cibernéticos complejos, mejorando la precisión forense.",
+    "problema": "Los métodos actuales de rastreo forense post-intrusión para ataques avanzados (APTs) se basan en características estadísticas de bajo nivel y estrategias rígidas, lo que limita la captura de la intención del atacante y sufre de explosión de dependencias.",
+    "propuesta": "Minos es un framework multi-agente que utiliza un proceso de razonamiento impulsado por LLMs. Emplea gestión de contexto jerárquico, razonamiento aumentado por recuperación con verificación de citas, y deliberación adversarial para el análisis a nivel de evento. Para la exploración del grafo, coordina cuatro agentes especializados para guiar el razonamiento y podar eficientemente el espacio de búsqueda.",
+    "resultados": "Minos logra un recall promedio de 0.92 y una precisión de 0.64 en 14 escenarios de ataque, superando a los métodos de vanguardia. Produce subgrafos de ataque un 49% más compactos y genera razonamiento interpretable.",
+    "por_que_importa": "Mejora significativamente la efectividad y eficiencia del análisis forense post-intrusión para detectar y comprender ataques cibernéticos avanzados, facilitando la auditoría y la mejora de sistemas de seguridad.",
+    "tags": [
+      "ciberseguridad",
+      "forense",
+      "IA",
+      "LLM",
+      "APT",
+      "rastreo"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-02T14:39:33Z"
+  },
+  "arxiv:2607.01138v1": {
+    "tldr": "Antaeus caza vulnerabilidades lógicas en repositorios de código usando LLMs con razonamiento contextual.",
+    "problema": "Detectar vulnerabilidades lógicas en software es difícil porque requieren entender el comportamiento implícito de la aplicación, algo que los modelos de lenguaje actuales (LLMs) no manejan bien al analizar fragmentos de código aislados.",
+    "propuesta": "Antaeus es un framework que utiliza LLMs para detectar vulnerabilidades lógicas. Prioriza funciones relevantes usando señales de seguridad a nivel de repositorio, luego usa el contexto local y global del código para razonar sobre el comportamiento de la función y sus condiciones de seguridad, validando hallazgos comparativamente.",
+    "resultados": "Antaeus detectó y explicó 15 vulnerabilidades lógicas en 28 repositorios, superando a otros modelos con un uso de tokens y coste comparables.",
+    "por_que_importa": "Permite identificar vulnerabilidades lógicas complejas de forma más eficiente y precisa, reduciendo el esfuerzo de análisis y haciendo los hallazgos más accionables para los desarrolladores.",
+    "tags": [
+      "vulnerabilidades lógicas",
+      "LLMs",
+      "ciberseguridad",
+      "análisis de código",
+      "ingeniería de software"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-02T14:42:57Z"
+  },
+  "arxiv:2607.01194v1": {
+    "tldr": "Detecta ataques de evasión que engañan a sistemas de detección de intrusos basados en autoencoders, protegiendo redes contra tráfico malicioso oculto.",
+    "problema": "Los sistemas de detección de intrusos (NIDS) basados en autoencoders son vulnerables a ataques de evasión que manipulan el tráfico malicioso para parecer benigno, dificultando su detección.",
+    "propuesta": "Se proponen dos detectores complementarios: el Residual Localisation Detector (RLD) que analiza errores de reconstrucción en imágenes de tráfico, y el Feature-Space Perturbation Consistency (FPC) Detector que opera directamente sobre características del tráfico a nivel de paquete.",
+    "resultados": "Ambos detectores logran un rendimiento de detección cercano al perfecto (TNR, TPR, precisión, recall, F1-score >= 0.99) contra ejemplos adversariales en tráfico IoT, demostrando su efectividad.",
+    "por_que_importa": "Ofrece una defensa práctica contra ataques adversariales emergentes en NIDS, mejorando la seguridad de las redes al distinguir tráfico benigno de tráfico malicioso manipulado.",
+    "tags": [
+      "ciberseguridad",
+      "detección de intrusos",
+      "inteligencia artificial",
+      "ataques adversariales",
+      "autoencoders",
+      "redes"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-02T14:43:11Z"
+  },
+  "arxiv:2607.00461": {
+    "tldr": "Un nuevo método mejora el razonamiento visual continuo en MLLMs al resolver un desajuste clave entre entrenamiento e inferencia, logrando grandes avances en tareas complejas.",
+    "problema": "Los Modelos de Lenguaje Grandes Multimodales (MLLMs) están limitados por un \"cuello de botella\" en el espacio del lenguaje, forzando el razonamiento visual complejo a tokens discretos y perdiendo matices. El razonamiento latente continuo, una alternativa prometedora, introduce un grave desajuste entre entrenamiento e inferencia: el modelo puede explotar atajos dependientes de la respuesta durante el entrenamiento, información no disponible en el momento de la inferencia, lo que lleva a un bajo rendimiento.",
+    "propuesta": "Proponen Asymmetric Mutual Variational Learning (AMVL), un marco que resuelve el desajuste entre entrenamiento e inferencia mediante un objetivo de calibración bidireccional. Utiliza una divergencia KL directa para entrenar un \"prior\" agnóstico al objetivo para que coincida con el \"posterior\", y una novedosa divergencia KL inversa que regulariza simultáneamente el \"posterior\", evitando que colapse en regiones incompatibles con la inferencia y mitigando la \"fuga de respuesta\" (answer leakage).",
+    "resultados": "AMVL supera consistentemente a las líneas base de razonamiento discreto y latente. Mejora la puntuación promedio en el complejo benchmark BLINK en +10.83 y logra ganancias de hasta +32.00 en tareas de razonamiento individuales. Los análisis confirman una mayor estabilidad en el espacio latente.",
+    "por_que_importa": "Este método es crucial para desarrollar MLLMs más robustos y precisos, capaces de un razonamiento visual complejo sin depender de información privilegiada durante la inferencia. Permite a los modelos comprender y procesar información multimodal de manera más fiable, abriendo puertas a aplicaciones de IA más avanzadas y estables en escenarios del mundo real.",
+    "tags": [
+      "MLLM",
+      "Razonamiento Multimodal",
+      "Aprendizaje Variacional",
+      "Visión por Computadora",
+      "Inteligencia Artificial"
+    ],
+    "model": "gemini-2.5-flash",
+    "generated_at": "2026-07-02T14:45:33Z"
+  },
+  "arxiv:2607.00924": {
+    "tldr": "Un nuevo modelo de IA basado en grafos mejora la generación de hipótesis científicas trazables para el descubrimiento de materiales, superando a los modelos tradicionales.",
+    "problema": "Los sistemas de IA actuales, especialmente los grandes modelos de lenguaje, generan hipótesis para el diseño de materiales que son fluidas pero carecen de trazabilidad, dificultando la verificación de la coherencia del razonamiento intermedio y la validez científica.",
+    "propuesta": "Se desarrolla Graph-PRefLexOR, una familia de modelos de razonamiento nativos de grafos, afinados con Group Relative Policy Optimization (GRPO). Este diseño organiza el razonamiento en fases explícitas (exploración de mecanismos, construcción de grafos, extracción de patrones y síntesis de hipótesis), vinculando la generación de lenguaje neuronal con estructuras relacionales simbólicas para crear conexiones causales inspeccionables y reutilizables.",
+    "resultados": "En 100 preguntas abiertas de ciencia de materiales, Graph-PRefLexOR logró mejoras del 40-65% sobre los modelos base, con las mayores ganancias en la trazabilidad del razonamiento. Los análisis de embeddings mostraron una exploración semántica más amplia y aproximadamente 2-3 veces mayor diversidad semántica. Además, se demostró una fuerte alineación entre el razonamiento estructurado y las respuestas finales.",
+    "por_que_importa": "Este trabajo establece el aprendizaje por refuerzo nativo de grafos como un camino hacia sistemas de IA más interpretables para la generación de hipótesis científicas, lo cual es crucial para acelerar el descubrimiento y diseño de materiales, así como otras aplicaciones científicas.",
+    "tags": [
+      "IA interpretable",
+      "Descubrimiento de materiales",
+      "Aprendizaje por refuerzo",
+      "Generación de hipótesis",
+      "Grafos",
+      "Razonamiento estructurado"
+    ],
+    "model": "gemini-2.5-flash",
+    "generated_at": "2026-07-02T14:45:48Z"
+  },
+  "arxiv:2607.01071": {
+    "tldr": "La memoria en agentes de IA puede causar adulación, afectando la precisión; MemSyco-Bench evalúa este riesgo para construir sistemas más fiables.",
+    "problema": "La memoria en agentes de IA puede inducir adulación (sycophancy), haciendo que los agentes se alineen excesivamente con el usuario a expensas de la precisión factual o el razonamiento objetivo. Los benchmarks existentes no evalúan cómo la memoria recuperada influye en el razonamiento y la toma de decisiones.",
+    "propuesta": "Se propone MemSyco-Bench, un benchmark integral para evaluar la adulación inducida por la memoria en sistemas de agentes. Mide cuándo la memoria debe influir en una decisión y cómo usar la memoria válida, a través de cinco tareas: rechazar memoria como evidencia factual, respetar su alcance, resolver conflictos con evidencia objetiva, rastrear actualizaciones de memoria y usar memoria válida para personalización.",
+    "resultados": "El resumen no especifica resultados numéricos o hallazgos concretos de la aplicación del benchmark, ya que el paper se centra en la propuesta de la herramienta de evaluación.",
+    "por_que_importa": "La memoria es fundamental para la evolución de los agentes de IA basados en LLM hacia colaboradores a largo plazo. Sin embargo, si esta memoria induce adulación, los agentes pueden perder fiabilidad y precisión, lo cual es crítico en aplicaciones donde la objetividad y la veracidad son esenciales. Este benchmark es crucial para desarrollar agentes de IA más robustos, confiables y menos sesgados.",
+    "tags": [
+      "IA",
+      "Agentes LLM",
+      "Memoria",
+      "Adulación",
+      "Benchmarks",
+      "Fiabilidad de IA"
+    ],
+    "model": "gemini-2.5-flash",
+    "generated_at": "2026-07-02T14:46:02Z"
+  },
+  "arxiv:2607.00466": {
+    "tldr": "Un nuevo enrutador para modelos MoE acelera la generación de texto hasta un 13.9% al enviar peticiones a servidores que ya tienen los expertos necesarios cargados.",
+    "problema": "En la distribución de carga de modelos de lenguaje grandes (LLMs) con arquitectura MoE, los enrutadores actuales solo equilibran la carga de trabajo. Esto ignora que diferentes servidores pueden tener latencias muy distintas al tener que cargar los pesos de los \"expertos\" que cada lote de peticiones activa, ralentizando la generación.",
+    "propuesta": "ELDR (Expert-Locality-Aware Decode Router) propone un enrutamiento inteligente. Utiliza las activaciones de expertos durante la fase de \"prefill\" para crear una \"firma\" que predice qué expertos se necesitarán. Luego, asigna las peticiones al servidor menos cargado que mejor coincida con esa firma, optimizando el uso de expertos ya cargados. Incluye una caché de firmas para precisión.",
+    "resultados": "Implementado en vLLM y probado en despliegues de hasta 40 GPUs, ELDR redujo la latencia media por token de salida (TPOT) entre un 5.9% y un 13.9% en comparación con las mejores soluciones de balanceo de carga existentes. Esto se observó en tres modelos MoE y dos tipos de carga de trabajo, sin alterar la calidad de las salidas del modelo.",
+    "por_que_importa": "Es crucial para mejorar la eficiencia y reducir los costos de servir modelos MoE en producción. Al optimizar el uso de los expertos ya cargados en memoria, ELDR permite una generación de texto más rápida y con menor latencia, lo que se traduce en una mejor experiencia de usuario y una infraestructura más rentable para LLMs avanzados.",
+    "tags": [
+      "LLM",
+      "MoE",
+      "Enrutamiento",
+      "Latencia",
+      "Optimización",
+      "vLLM"
+    ],
+    "model": "gemini-2.5-flash",
+    "generated_at": "2026-07-02T14:46:18Z"
+  },
+  "arxiv:2607.00407": {
+    "tldr": "Un nuevo enfoque de IA usa \"planificación inversa\" y \"denoising estructural\" para generar diapositivas personalizadas a nivel de página, superando las limitaciones de los métodos actuales.",
+    "problema": "Los métodos actuales de IA para el diseño de diapositivas no logran una personalización fina a nivel de página, ya que dependen de plantillas o instrucciones detalladas y no capturan las intenciones de diseño subyacentes del usuario.",
+    "propuesta": "El trabajo formula la personalización de diapositivas a nivel de página (PSP) como un problema de planificación inversa. Propone SPIRE, un framework que aprende la intención de diseño sin asumir conocimiento de herramientas específicas. SPIRE corrompe intencionalmente estructuras visuales de diapositivas y entrena a dos agentes mediante aprendizaje por refuerzo (RL) para \"denoising\" y refinar diseños ejecutables.",
+    "resultados": "Se demuestra que el denoising estructural es un sustituto consistente para PSP y que la formulación multiagente reduce estrictamente la varianza del gradiente de política en RL. Experimentos extensos demuestran la superioridad de SPIRE.",
+    "por_que_importa": "Permite una generación de diapositivas por IA mucho más personalizada y a medida, resolviendo una limitación clave de los sistemas actuales. Esto podría mejorar significativamente la eficiencia y calidad del diseño de presentaciones.",
+    "tags": [
+      "Generación de diapositivas",
+      "Personalización IA",
+      "Aprendizaje por refuerzo",
+      "Diseño asistido por IA",
+      "Planificación inversa",
+      "Denoising estructural"
+    ],
+    "model": "gemini-2.5-flash",
+    "generated_at": "2026-07-02T14:46:32Z"
   }
 }
