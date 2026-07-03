@@ -171,7 +171,22 @@
       ],
       "abstract_en": "Frontier foundation models have changed the math on vulnerability discovery, but the bigger challenge is how the remediation side keeps up. Despite recent progresses in Automated Vulnerability Repair (AVR), current solutions struggle to reliably identify the root causes of vulnerabilities, and insufficiently utilize the prior fix knowledge to guide the patch generation process, thus undermining their effectiveness in practice. To address this gap, we propose KeaRepair, a novel agentic AVR approach that grounds patch generation in verified program facts and high-level vulnerability knowledge. Specifically, KeaRepair first extracts multi-dimensional vulnerability knowledge from historical vulnerability-patch pairs from dual complementary views, and constructs dedicated retrieval knowledge bases. It then employs a tool-augmented agent that performs ReAct-style reasoning to collect verified program facts for vulnerability diagnosis. Finally, based on the diagnostic results, KeaRepair performs knowledge-level retrieval-augmented patch generation and iteratively refines patches through a closed-loop validation process involving compilation, PoC replay, and test-suite execution. Experimental results show that KeaRepair significantly outperforms existing AVR approaches on 55 reproducible C/C++ vulnerabilities. When paired with Gemini-3.1-Pro, KeaRepair successfully repairs 46 vulnerabilities, achieving a repair rate of 83.64%. Moreover, KeaRepair fixes six unique vulnerabilities that none of the baselines can address, and further demonstrates strong cross-language generalizability.",
       "abstract_full": true,
-      "summary_es": null
+      "summary_es": {
+        "tldr": "KeaRepair usa IA y conocimiento previo para reparar automáticamente vulnerabilidades de software de forma más fiable y eficiente.",
+        "problema": "Las herramientas actuales de reparación automática de vulnerabilidades (AVR) fallan al identificar causas raíz y no aprovechan el conocimiento de reparaciones previas, limitando su efectividad.",
+        "propuesta": "KeaRepair es un enfoque AVR basado en agentes que extrae conocimiento de vulnerabilidades históricas, utiliza razonamiento asistido por herramientas para diagnosticar el problema y genera parches mejorados con conocimiento recuperado, refinándolos iterativamente.",
+        "resultados": "KeaRepair supera a los enfoques AVR existentes en 55 vulnerabilidades C/C++, logrando una tasa de reparación del 83.64% (46 de 55) con Gemini-3.1-Pro. También arregla vulnerabilidades únicas no resueltas por otros métodos y muestra generalización entre lenguajes.",
+        "por_que_importa": "Mejora significativamente la capacidad de reparar automáticamente vulnerabilidades de software, reduciendo el riesgo y el esfuerzo manual, lo cual es crucial dada la velocidad de descubrimiento de nuevas fallas.",
+        "tags": [
+          "ciberseguridad",
+          "IA",
+          "reparación automática de software",
+          "vulnerabilidades",
+          "ingeniería de software"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-03T14:38:23Z"
+      }
     },
     {
       "id": "arxiv:2607.01153v1",
@@ -199,7 +214,22 @@
       ],
       "abstract_en": "Safety evaluations for language models increasingly depend on judgments about ambiguous natural-language behaviour: whether a model has followed an instruction, refused appropriately, complied with a policy, resisted an embedded command, or misreported progress in an agentic task. Existing benchmarks often compress these distinctions into pass/fail labels, obscuring whether failures arise from capability limits, policy ambiguity, instruction conflict, scaffold failure, or unstable evaluator judgments. This paper introduces adversarial pragmatics as a benchmark and annotation protocol for evaluating model behaviour under instruction conflict, embedded commands, quotation, scope ambiguity, deixis, indirect speech acts, and multi-turn agent transcripts. The contribution is empirical and methodological: a linguistically controlled taxonomy, an 18-item seed benchmark with validator-enforced metadata, a 54-row local seed pilot, an expert-evaluation protocol distinguishing task success, policy compliance, safety risk, refusal outcome, and evaluator confidence, and metrics for judge validity, diagnostic ambiguity, and taxonomy drift. The framework turns linguistic judgment methodology into a practical tool for validating safety evals, LLM judges, gold-set construction, prompt-injection tests, and safety documentation.",
       "abstract_full": true,
-      "summary_es": null
+      "summary_es": {
+        "tldr": "Evalúa la seguridad de la IA con un nuevo benchmark que detecta conflictos de instrucciones y comandos ocultos.",
+        "problema": "Las evaluaciones de seguridad de modelos de lenguaje actuales simplifican comportamientos ambiguos a 'pasa/falla', ocultando las causas reales de los errores (capacidades, ambigüedad, conflictos).",
+        "propuesta": "Introduce 'pragmática adversarial' como un benchmark y protocolo de anotación para evaluar el comportamiento del modelo ante conflictos de instrucciones, comandos incrustados, ambigüedades y otros desafíos lingüísticos.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero describe la creación de un benchmark de 18 ítems, un piloto de 54 filas y métricas para evaluar la validez de los jueces y la ambigüedad diagnóstica.",
+        "por_que_importa": "Proporciona una metodología práctica y lingüísticamente controlada para validar las evaluaciones de seguridad de la IA, mejorar la construcción de conjuntos de datos de referencia y documentar la seguridad de los modelos.",
+        "tags": [
+          "IA",
+          "Seguridad de IA",
+          "Evaluación",
+          "Procesamiento del Lenguaje Natural",
+          "Benchmark"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-03T14:38:33Z"
+      }
     },
     {
       "id": "arxiv:2607.01138v1",
@@ -316,7 +346,23 @@
       ],
       "abstract_en": "Enterprise AI agents are useful for internal analysis, audit, compliance review, and operational investigation, but they create a difficult authorization problem. A manager or data owner may approve a business task, while the agent later generates open-ended SQL below the application layer. Existing systems help identify agents, delegate authority, govern data products, or enforce database policy, but they do not directly turn an approved enterprise task into a bounded database execution context. SessionBound fills this gap. It turns approved enterprise tasks into short-lived, budgeted, and auditable database sessions for AI agents. A control plane defines task templates, accepts task applications, records approvals, assigns budgets, and issues signed task tokens. A database runtime, SessionBoundDB, binds a token to a session and enforces safe views, row scope, denied fields, operation limits, query budgets, disclosure budgets, and receipts. The database does not rely on an LLM to decide whether a query is safe. The agent may generate SQL freely, but each attempt must stay inside the approved boundary. A PostgreSQL prototype passed a 24-scenario validation suite. Microbenchmarks show p50 SessionBound execution around 1.4--1.5 ms versus raw PostgreSQL p50 around 0.052--0.074 ms on small synthetic queries: high relative overhead, but low absolute latency.",
       "abstract_full": true,
-      "summary_es": null
+      "summary_es": {
+        "tldr": "SessionBound transforma tareas aprobadas en sesiones de base de datos seguras y con presupuesto para agentes de IA empresariales.",
+        "problema": "Los agentes de IA empresariales, al ejecutar tareas aprobadas, pueden generar consultas SQL de alcance abierto que dificultan la autorización y el control de acceso a los datos.",
+        "propuesta": "SessionBound crea sesiones de base de datos de corta duración, presupuestadas y auditables para agentes de IA. Un plano de control gestiona las plantillas de tareas y las aprobaciones, mientras que SessionBoundDB, un runtime de base de datos, aplica límites de seguridad (vistas, alcance de filas, campos denegados, límites de operaciones y consultas) basándose en tokens firmados, sin depender de LLMs para la seguridad de las consultas.",
+        "resultados": "Un prototipo de PostgreSQL validó 24 escenarios. Los microbenchmarks muestran una latencia p50 de 1.4-1.5 ms para SessionBound frente a 0.052-0.074 ms para PostgreSQL en consultas sintéticas pequeñas, indicando una sobrecarga relativa alta pero una latencia absoluta baja.",
+        "por_que_importa": "Permite a las empresas utilizar agentes de IA de forma segura para análisis y auditorías, garantizando que las acciones de la IA queden estrictamente dentro de los límites de las tareas aprobadas y los presupuestos de datos, mejorando la gobernanza y la auditabilidad.",
+        "tags": [
+          "IA empresarial",
+          "ciberseguridad",
+          "control de acceso",
+          "bases de datos",
+          "gobernanza de datos",
+          "auditoría"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-03T14:38:43Z"
+      }
     },
     {
       "id": "arxiv:2607.00461",
@@ -546,5 +592,5 @@
       }
     }
   ],
-  "generated_at": "2026-07-02T14:46:32Z"
+  "generated_at": "2026-07-03T14:38:51Z"
 }
