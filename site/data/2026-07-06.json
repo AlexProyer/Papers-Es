@@ -1,0 +1,40 @@
+{
+  "date": "2026-07-06",
+  "report_type": "filtrado",
+  "evaluated": 10,
+  "selected": 1,
+  "papers": [
+    {
+      "id": "arxiv:2606.31227",
+      "rank": 1,
+      "title": "Securing the AI Agent: A Unified Framework for Multi-Layer Agent Red Teaming",
+      "authors": [
+        "Yong Yang",
+        "Xing Zheng",
+        "Huiyu Wu",
+        "Huangsheng Cheng"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-06-30",
+      "url": "https://arxiv.org/abs/2606.31227",
+      "pdf_url": "https://arxiv.org/pdf/2606.31227",
+      "score": 65,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "The fast growth of open-source AI infrastructure, from model serving engines and agent platforms to the Model Context Protocol (MCP) ecosystem and the language models themselves, has outpaced the security tooling available to defend it. We present AI-Infra-Guard, an open-source framework that organizes AI red teaming around a single observation: the attack surface of an AI agent is stratified across layers (infrastructure, protocol/tool, agent behavior, and model), and no single detection paradigm fits all of them. The framework therefore matches a paradigm to each layer, from deterministic rule matching over 75+ AI components and 1{,}400+ vulnerability rules, through LLM-driven agentic auditing of MCP servers and agent-skill packages and multi-turn black-box agent red teaming, to a jailbreak harness with 26+ attack operators over sixteen datasets. To our knowledge it is the only open-source framework to span all of these, including supply-chain auditing of the agent skills that increasingly extend AI agents. We release AI-Infra-Guard as open source so that \\emph{layer-paradigm matching} can serve as a practical foundation for agent security and a shared base for the community to build on.",
+      "abstract_full": true,
+      "summary_es": null
+    }
+  ],
+  "generated_at": "2026-07-06T16:00:07Z"
+}
