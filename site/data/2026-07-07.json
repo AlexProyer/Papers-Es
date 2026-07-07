@@ -1,0 +1,496 @@
+{
+  "date": "2026-07-07",
+  "report_type": "filtrado",
+  "evaluated": 183,
+  "selected": 14,
+  "papers": [
+    {
+      "id": "arxiv:2607.05120v1",
+      "rank": 1,
+      "title": "Agent Data Injection Attacks are Realistic Threats to AI Agents",
+      "authors": [
+        "Woohyuk Choi",
+        "Juhee Kim",
+        "Taehyun Kang",
+        "Jihyeon Jeong"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-06",
+      "url": "https://arxiv.org/abs/2607.05120v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05120v1",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "AI agents act on behalf of user prompts, consuming external data and taking actions based on the agent context. Prior research on AI agent security has primarily focused on indirect prompt injection (IPI). Its most well-studied category is instruction injection, where attacker-controlled untrusted data is interpreted as an instruction. In response, many mitigations have been proposed to prevent instruction injection attacks. In this paper, we introduce a new category of IPI, agent data injection attacks (ADI). ADI injects malicious data disguised as trusted data, such as security-critical metadata (e.g., resource identifiers or data origins) or agent context data (e.g., tool call and response formats). As a result, agents unknowingly execute unintended actions based on attacker-controlled data. ADI has similar attack impacts as instruction injection attacks, because it causes agents to misbehave and execute unintended actions. Despite the similar impact, ADI remains underexplored and easily bypasses existing IPI defenses. We found several critical vulnerabilities in real-world agents that allow an attacker to launch various attacks: arbitrary click attacks on web agents (Claude in Chrome, Antigravity, and Nanobrowser), and remote code execution and supply-chain attacks on coding agents (Claude Code, Codex, and Gemini CLI). We evaluate ADI vulnerabilities across off-the-shelf models and AI agents, and find that ADI is effective in both standalone LLMs and AI agent settings. ADI exposes a critical gap in agent security, signifying that current AI agents do not employ a fundamental security principle: current agents do not isolate trusted data from untrusted data.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2607.05277v1",
+      "rank": 2,
+      "title": "Untrusted Content Masking for Web Agents with Security Guarantees",
+      "authors": [
+        "Kristina Nikolić",
+        "Egor Zverev",
+        "Javier Rando",
+        "Matthew Jagielski"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-06",
+      "url": "https://arxiv.org/abs/2607.05277v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05277v1",
+      "score": 59,
+      "topics": [
+        "vuln & threats",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: vuln & threats, AI agents, adversarial ML"
+      ],
+      "abstract_en": "Defenses that provide security guarantees against prompt injection attacks rely on strict isolation between trusted instructions and untrusted data. In text-based environments such as tool-use APIs, this separation arises naturally: agents can reason from interface definitions without ever processing untrusted content. Extending these guarantees to web agents faces a fundamental challenge: to perceive and interact with their environment, web agents must first observe the rendered page, which intermingles trusted content with untrusted content. This structural entanglement removes the trust boundary on which security guarantees depend, undermining provable defenses for web agents. In this paper, we present Untrusted Content Masking (UCM), a simple and effective approach that restores this boundary in web environments. We leverage a key structural insight: a webpage's Document Object Model (DOM) encodes sufficient information to distinguish trusted from untrusted regions without reading their content. Our framework exploits this by redacting untrusted regions before they reach the agent and routing interaction through a sandboxed interface with strict privilege separation, thereby enabling agents to observe and interact with their environment while remaining isolated from adversarial content. The code is publicly available.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2607.05001v1",
+      "rank": 3,
+      "title": "TACTIC-KG: Toward Small Agent Teams for Cyber Threat Intelligence Knowledge Graph Construction",
+      "authors": [
+        "Mouhamed Amine Bouchiha",
+        "Gregory Blanc"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-06",
+      "url": "https://arxiv.org/abs/2607.05001v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05001v1",
+      "score": 57,
+      "topics": [
+        "cybersecurity",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+7)",
+        "🎯 temas: cybersecurity, LLM, AI agents"
+      ],
+      "abstract_en": "Cyber Threat Intelligence (CTI) reports are predominantly unstructured, heterogeneous, and noisy, which limits their direct usability for automated analysis and reasoning. Cybersecurity Knowledge Graphs (CSKGs) provide a structured representation of adversarial entities, actions, and relations, but constructing such graphs from free-text CTI remains a challenge. Recent approaches rely on monolithic Large Language Models (LLMs) to perform end-to-end extraction and completion, leading to high cost, limited controllability, and unstable performance. This paper introduces TACTIC-KG, an agentic framework for CSKG construction that decomposes the task into modular, specialized LLM agents responsible for extraction, typing, verification, and curation. Using lightweight models (3B--8B), TACTIC-KG improves stability, recall, and graph consistency while reducing deployment cost. We implement and evaluate TACTIC-KG against recent state-of-the-art systems. Experiments on human-annotated CTI reports show that agent specialization consistently outperforms larger monolithic in-context-learning (ICL) baselines in extraction F1-score, typing accuracy, and structural graph similarity.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2607.05132v1",
+      "rank": 4,
+      "title": "When Agents Lie: Premeditation, Persistence, and Exploitation in Repeated Games",
+      "authors": [
+        "Jerick Shi",
+        "Terry Jingcheng Zhang",
+        "Bernhard Schölkopf",
+        "Vincent Conitzer"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CL]",
+      "category": "cs.CL",
+      "date": "2026-07-06",
+      "url": "https://arxiv.org/abs/2607.05132v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05132v1",
+      "score": 56,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "As large language models are deployed as autonomous agents that communicate intentions before acting, a critical safety question is whether agents that publicly commit to actions will honor those commitments. We place LLM agents in repeated $n$-player games with a three-stage protocol that separates private intent, public announcement, and final action, allowing us to identify whether each deviation from a stated announcement was already planned during private deliberation. Evaluating three frontier models across six games in homogeneous and heterogeneous groups over 10 rounds, we report two findings. First, when agents deviate from their announcements, the deviation is predominantly already stated in their private plan (exceeding 90% in the highest-deception conditions), yet this is not a fixed model property: the same model ranges from perfect honesty to near-total deviation across games. Second, different models interpret announcements incompatibly, some as binding commitments and others as cheap talk, producing payoff gaps that emerge in Round~0 and persist across all 10 rounds. Systems that combine models from different providers therefore cannot assume shared announcement semantics and require empirical testing of model interactions before deployment.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los agentes IA pueden mentir sobre sus intenciones en juegos repetidos, con desviaciones premeditadas y semánticas de anuncios incompatibles entre modelos.",
+        "problema": "Evaluar si los agentes IA, al comunicar intenciones antes de actuar, cumplen sus compromisos públicos, especialmente cuando pueden planificar desviaciones en privado.",
+        "propuesta": "Se colocaron agentes IA en juegos repetidos de N jugadores con un protocolo de tres etapas (intención privada, anuncio público, acción final) para identificar la premeditación de las desviaciones. Se evaluaron tres modelos de IA en seis juegos.",
+        "resultados": "Las desviaciones de los anuncios ya estaban en el plan privado en más del 90% de los casos en condiciones de alta deshonestia. La misma IA varió de honestidad perfecta a deshonestia casi total según el juego. Diferentes modelos interpretaron los anuncios de forma incompatible (compromisos vinculantes vs. 'cheap talk'), creando brechas de pago persistentes desde la Ronda 0.",
+        "por_que_importa": "Los sistemas que combinan modelos de IA de diferentes proveedores no pueden asumir que todos interpretan los anuncios de la misma manera. Es crucial probar empíricamente las interacciones de los modelos antes de su despliegue para garantizar la fiabilidad y seguridad.",
+        "tags": [
+          "IA",
+          "Agentes Autónomos",
+          "Ciberseguridad",
+          "Juegos Repetidos",
+          "Compromisos",
+          "Fiabilidad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-07T15:29:18Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.04645v1",
+      "rank": 5,
+      "title": "Retroactive Chain-of-Thought (RetroCoT): Forensic Reconstruction Prompts as a Safety Diagnostic Across Model Generations",
+      "authors": [
+        "Samira Hajizadeh"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-06",
+      "url": "https://arxiv.org/abs/2607.04645v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.04645v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Safety alignment in large language models is typically evaluated against direct, imperative harmful requests. We show that this alignment is highly conditioned on pragmatic register: models that refuse a direct request frequently comply when the same underlying objective is expressed through a different communicative stance. This suggests that current alignment policies are not invariant to semantic equivalence, but remain sensitive to how a request is pragmatically framed. We introduce Retroactive Chain-of-Thought (RetroCoT), a single-turn attack that reframes harmful requests as forensic reconstruction tasks. Rather than requesting harmful instructions directly, RetroCoT presupposes that the harmful outcome has already occurred and asks the model, acting as a forensic analyst, to reconstruct in reverse the causal chain that produced it. On AdvBench (n=50), RetroCoT achieves attach success rate of 58% on gpt-4o and 52% on gpt-4o-mini, compared with direct-request baselines of 0% and 4%, respectively. We further identify a pronounced generation gap: GPT-5-family models refuse RetroCoT entirely, explicitly identifying the reconstruction premise in their refusal rationales, consistent with explicit coverage of this reconstruction register. However, this robustness does not generalize across pragmatic forms. A single adversarial feedback turn presenting an existing forensic reconstruction response alongside evaluator critique raises ASR from 0% to 48% on GPT-5.4-mini and from 58% to 94% on GPT-4o; a control condition omitting the fabricated low score achieves 85% on GPT-5.4-mini, indicating that the operative element is pragmatic continuation within the established forensic frame rather than score manipulation. These results suggest that frontier-model alignment remains conditioned on pragmatic framing rather than semantic intent, and that new pragmatic registers can continue to expose a...",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Nuevos ataques de IA exponen que los modelos seguros aún fallan si se les pide reconstruir el pasado en lugar de actuar directamente.",
+        "problema": "Los modelos de lenguaje grandes (LLMs) son difíciles de alinear para la seguridad, ya que rechazan peticiones dañinas directas pero las cumplen si se enmarcan de forma diferente, como tareas de reconstrucción forense.",
+        "propuesta": "Se introduce Retroactive Chain-of-Thought (RetroCoT), un método que plantea peticiones dañinas como si fueran tareas de reconstrucción forense para evaluar la seguridad de los LLMs.",
+        "resultados": "RetroCoT logra un 58% de éxito en GPT-4o y un 52% en GPT-4o-mini, frente a un 0% y 4% de las peticiones directas. Los modelos GPT-5 rechazan RetroCoT, pero una sola retroalimentación adversarial puede aumentar drásticamente su tasa de éxito.",
+        "por_que_importa": "Demuestra que la seguridad de los LLMs aún depende del encuadre pragmático y no de la intención semántica, lo que requiere nuevas estrategias de alineación para evitar que los modelos generen contenido dañino.",
+        "tags": [
+          "IA",
+          "Seguridad",
+          "LLMs",
+          "Ataques Adversariales",
+          "Alineación"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-07T15:30:25Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.04729v1",
+      "rank": 6,
+      "title": "RustMizan: A Compilable, Contamination-Aware Benchmarking Framework for Rust Vulnerabilities",
+      "authors": [
+        "Tarek Elsayed",
+        "Shiping Yang",
+        "Eunsong Koh",
+        "Sanika Goyal"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-06",
+      "url": "https://arxiv.org/abs/2607.04729v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.04729v1",
+      "score": 53,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "LLM agents are increasingly applied to vulnerability analysis, but existing benchmarks have not kept pace. They typically rely on small non-compilable snippets, focus on binary classification (vulnerable or not), and do not account for the risk that publicly-released datasets are part of model training corpora. We introduce RustMizan, a benchmarking framework for Rust vulnerability analysis that addresses these gaps. RustMizan contains compilable code variants at the crate, file, and function levels, with annotations for binary vulnerability detection, CWE classification, and function- and line-level localization. A paired mutation framework produces semantics-preserving code mutants for contamination testing and robustness probing. Across four frontier models in an agentic setup with command-line access, binary classification sits in the 56-65% range, but line localization F1 stays near 20%, and adversarial cues drop line F1 by about 27%.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "RustMizan: un nuevo marco de evaluación para vulnerabilidades en Rust, más realista y robusto contra la contaminación de datos.",
+        "problema": "Los benchmarks actuales para análisis de vulnerabilidades con LLMs son limitados: usan fragmentos de código no compilables, se centran en clasificación binaria y no consideran la contaminación de datos de entrenamiento.",
+        "propuesta": "RustMizan, un marco de evaluación para Rust que incluye código compilable a varios niveles (crate, archivo, función), anotaciones detalladas (clasificación CWE, localización a nivel de línea) y un sistema de mutación para probar la robustez y la contaminación.",
+        "resultados": "En pruebas con cuatro modelos de vanguardia, la clasificación binaria se situó entre el 56-65%, pero la localización a nivel de línea alcanzó un F1 cercano al 20%. Las señales adversarias redujeron el F1 de localización de línea en aproximadamente un 27%.",
+        "por_que_importa": "Permite una evaluación más precisa y realista de las capacidades de los LLMs para detectar y localizar vulnerabilidades en código Rust, crucial para mejorar la seguridad del software.",
+        "tags": [
+          "Rust",
+          "Ciberseguridad",
+          "LLMs",
+          "Benchmarking",
+          "Vulnerabilidades",
+          "Análisis de código"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-07T15:31:05Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.04686v1",
+      "rank": 7,
+      "title": "ToolFailBench: Diagnosing Tool-Use Failures in LLM Agents",
+      "authors": [
+        "Harsh Soni"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-07-06",
+      "url": "https://arxiv.org/abs/2607.04686v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.04686v1",
+      "score": 53,
+      "topics": [
+        "cybersecurity",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: cybersecurity, LLM, AI agents"
+      ],
+      "abstract_en": "Tool calling is central to modern language model agents, but aggregate benchmark scores often hide where tool use fails. A model that never calls a needed tool and a model that calls the tool but ignores the result can look similar under final task accuracy. We introduce ToolFailBench, a diagnostic benchmark for measuring tool-use failures across 1,000 tasks in finance, medicine, law, cybersecurity, and real estate. Tool-required tasks return values the model wouldn't guess, forcing it to trust the tool while control tasks attach the same tools but should be answered directly. We label each trace with Tool-Skip, Result-Ignore, Output-Fabrication, and Unnecessary-Tool-Use, using a rule classifier and two LLM judges aggregated by majority vote. Across 19 headline models, the best reaches 86.33% Clean Tool-Use Rate, showing that faithful tool use is not saturated. More importantly, models with similar aggregate scores fail in different ways: most stay disciplined on no-tool controls, while Llama-3.1 models show an Always-Call pattern, and at the same parameter scale Llama-3.1-70B and Qwen2.5-72B differ by 89 percentage points on control-task accuracy. Tool-use evaluation should measure not only whether agents call tools, but whether they use tool outputs correctly and avoid tools when none is needed.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2607.05318v1",
+      "rank": 8,
+      "title": "PiSAs: Benchmarking Contextual Integrity in Multi-User Agentic Systems",
+      "authors": [
+        "Shubham Gupta",
+        "Nazanin Mohammadi Sepahvand",
+        "Abhinav Kumar",
+        "Cem Subakan"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-06",
+      "url": "https://arxiv.org/abs/2607.05318v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05318v1",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM, AI agents, compliance & audit"
+      ],
+      "abstract_en": "As LLM agents evolve from single-user assistants into shared organizational infrastructure, new privacy risks emerge: inappropriate information may not only be exposed through outputs for external recipients, but also internally across users through inter-agent messages, shared memory and agents. These data spillage risks are not captured by existing privacy benchmarks grounded in contextual integrity (CI) as they focus primarily on either single-user settings or interactions between independently owned agents. We introducePiSAs (Privacy in Shared Agentic systems), a benchmark for assessing unintentional leaks with dual CI annotations: whether an information is appropriate for the task, and which users may legitimately access it. This enables direct measurement of cross-user spillage across agentic system components and interfaces, such as outputs, inter-agent communication, and memory. PiSAsis system-agnostic and supports evaluation across different agent topologies and memory regimes. We find that, although system design improves CI compliance, results are bottlenecked by incorrect LLM judgment calls: even state-of-the-art models fail to reliably filter inappropriate content or restrict transmission to authorized users. Our findings underscore the need for privacy-preserving strategies, beyond those studied in this work.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los sistemas de agentes LLM multiusuario enfrentan riesgos de privacidad por fugas de información entre usuarios; un nuevo benchmark revela que los modelos actuales fallan en protegerla.",
+        "problema": "Los sistemas de agentes LLM compartidos en organizaciones introducen riesgos de privacidad por fugas internas de información entre usuarios (spillage) a través de mensajes, memoria y agentes. Los benchmarks existentes no evalúan adecuadamente estos riesgos en entornos multiusuario.",
+        "propuesta": "Introducen PiSAs (Privacy in Shared Agentic systems), un benchmark agnóstico al sistema para evaluar fugas involuntarias. Utiliza anotaciones de integridad contextual duales: si la información es apropiada para la tarea y qué usuarios pueden acceder a ella legítimamente, midiendo la fuga entre componentes del sistema.",
+        "resultados": "Aunque el diseño del sistema mejora el cumplimiento de la integridad contextual (CI), los resultados se ven limitados por errores de juicio de los LLM. Incluso los modelos de última generación fallan en filtrar contenido inapropiado o restringir la transmisión a usuarios autorizados de manera fiable. El resumen no especifica números concretos.",
+        "por_que_importa": "Subraya la necesidad crítica de desarrollar estrategias avanzadas de preservación de la privacidad para sistemas de agentes LLM multiusuario, ya que las soluciones de diseño actuales y los modelos de IA más avanzados son insuficientes.",
+        "tags": [
+          "Agentes LLM",
+          "Privacidad IA",
+          "Ciberseguridad",
+          "Fuga de Datos",
+          "Benchmark",
+          "Sistemas Multi-usuario"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-07-07T15:33:08Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.05247",
+      "rank": 1,
+      "title": "Vision Pretraining for Dense Spatial Perception",
+      "authors": [
+        "Zelin Fu",
+        "Bin Tan",
+        "Changjiang Sun",
+        "Shaohui Liu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-06",
+      "url": "https://arxiv.org/abs/2607.05247",
+      "pdf_url": "https://arxiv.org/pdf/2607.05247",
+      "score": 60,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Dense spatial perception is essential for physical intelligence, where visual systems are expected to recover structured, metric, and actionable representations from pixel observations. Modern visual foundation models tend to prioritize semantic invariance, often at the expense of detailed spatial understanding. In this work, we study vision pretraining through a boundary-centric lens, motivated by the premise that boundaries and shape discontinuities offer essential cues for perceiving geometric properties. Concretely, we propose masked boundary modeling, a self-supervised paradigm that dynamically learns sub-pixel boundary representations and subsequently leverages the discovered boundary-bearing tokens as masked targets to facilitate dense visual token learning. By scaling this framework, we develop LingBot-Vision and demonstrate its efficacy across a diverse set of downstream vision tasks with DINOv3 as a strong baseline. Remarkably, LingBot-Vision drives the progression from LingBot-Depth 1.0 to LingBot-Depth 2.0 for depth completion, and thereby yields enhanced depth estimation, a key pillar for embodied artificial intelligence. Our findings reveal that boundary modeling goes beyond simple line segments and instead serves as a scalable pretraining principle for learning spatially structured visual representations.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "LingBot-Vision mejora la percepción espacial densa en IA al enfocarse en el modelado de límites, logrando una estimación de profundidad superior para la inteligencia física.",
+        "problema": "Los modelos de visión actuales priorizan la invariancia semántica, pero a menudo carecen de una comprensión espacial detallada, lo que dificulta la recuperación de representaciones estructuradas y métricas a partir de observaciones de píxeles, esenciales para la inteligencia física.",
+        "propuesta": "Proponen el 'modelado de límites enmascarado' (masked boundary modeling), una técnica de auto-supervisión que aprende dinámicamente representaciones de límites a nivel de subpíxeles. Luego, utiliza estos tokens de límites como objetivos enmascarados para facilitar el aprendizaje de tokens visuales densos, culminando en el desarrollo de LingBot-Vision.",
+        "resultados": "LingBot-Vision demuestra su eficacia en diversas tareas de visión, superando a DINOv3 como línea base. Impulsa la mejora de LingBot-Depth 1.0 a LingBot-Depth 2.0 para la finalización de profundidad, logrando una estimación de profundidad mejorada. Los hallazgos indican que el modelado de límites es un principio de preentrenamiento escalable para aprender representaciones visuales espacialmente estructuradas.",
+        "por_que_importa": "Esta investigación es crucial porque la percepción espacial densa y la estimación de profundidad mejorada son pilares fundamentales para el desarrollo de la inteligencia artificial encarnada (embodied AI), permitiendo a los sistemas visuales comprender mejor el entorno físico y actuar en consecuencia.",
+        "tags": [
+          "Percepción espacial",
+          "Preentrenamiento de visión",
+          "Modelado de límites",
+          "Estimación de profundidad",
+          "Inteligencia artificial encarnada",
+          "Visión por computador"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-07-07T15:33:23Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.05061",
+      "rank": 2,
+      "title": "KVpop -- Key-Value Cache Compression with Predictive Online Pruning",
+      "authors": [
+        "Lukas Hauzenberger",
+        "Niklas Schmidinger",
+        "Anamaria-Roberta Hartl",
+        "David Stap"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-06",
+      "url": "https://arxiv.org/abs/2607.05061",
+      "pdf_url": "https://arxiv.org/pdf/2607.05061",
+      "score": 59,
+      "topics": [
+        "vuln & threats"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: vuln & threats"
+      ],
+      "abstract_en": "Key-value (KV) cache growth is a major bottleneck in autoregressive decoding, as memory and bandwidth scale linearly with context length. Existing KV eviction methods often rely on static heuristics or proxy scores, which poorly track future token utility and cause brittle eviction as relevance shifts. To address this, we introduce KVpop, which learns a fixed-budget KV eviction policy by directly supervising the keep-or-drop decision. The scorer is trained against a novel future-attention target, computed efficiently without materializing dense attention maps. We further introduce a delayed memory-based scorer that, uniquely among learned eviction methods, defers scoring for a fixed number of steps to exploit near-future context. On AIME and HMMT mathematical reasoning, KVpop retains 98% of full-attention performance on Qwen3-4B at 75% KV cache compression and 97% at 88% compression, consistently outperforming established eviction baselines. Qwen3-8B shows even stronger results, reaching near-full teacher performance. These results show that supervising eviction with future-attention signals cuts memory costs while maintaining quality.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "KVpop reduce drásticamente el tamaño de la caché de memoria en modelos de lenguaje grandes hasta un 88% manteniendo casi el mismo rendimiento gracias a una poda predictiva inteligente.",
+        "problema": "El crecimiento de la caché de clave-valor (KV) es un cuello de botella crítico en la decodificación autorregresiva de modelos de lenguaje, ya que la memoria y el ancho de banda aumentan linealmente con la longitud del contexto. Los métodos de desalojo existentes son ineficientes al predecir la utilidad futura de los tokens.",
+        "propuesta": "Se introduce KVpop, un método que aprende una política de desalojo de caché KV con un presupuesto fijo, supervisando directamente la decisión de mantener o descartar tokens. Entrena un 'scorer' con un objetivo de 'atención futura' novedoso y eficiente, y utiliza un 'scorer' basado en memoria con retraso para explotar el contexto cercano futuro.",
+        "resultados": "En tareas de razonamiento matemático (AIME y HMMT), KVpop en Qwen3-4B retuvo el 98% del rendimiento de atención completa con una compresión del 75% de la caché KV, y el 97% con una compresión del 88%. Superó consistentemente a las líneas base de desalojo establecidas. En Qwen3-8B, logró un rendimiento casi idéntico al modelo completo.",
+        "por_que_importa": "Este avance es crucial porque permite reducir significativamente los costos de memoria y ancho de banda en modelos de lenguaje grandes sin sacrificar la calidad. Esto facilita el despliegue de modelos más eficientes y escalables, especialmente con contextos largos, optimizando recursos computacionales.",
+        "tags": [
+          "Caché KV",
+          "Compresión de memoria",
+          "Modelos de lenguaje",
+          "Decodificación autorregresiva",
+          "IA eficiente",
+          "Poda predictiva"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-07-07T15:33:39Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.01793",
+      "rank": 3,
+      "title": "Safety Testing LLM Agents at Scale: From Risk Discovery to Evidence-Grounded Verification",
+      "authors": [
+        "Yunhao Feng",
+        "Ruixiao Lin",
+        "Ming Wen",
+        "Qinqin He"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-04",
+      "url": "https://arxiv.org/abs/2607.01793",
+      "pdf_url": "https://arxiv.org/pdf/2607.01793",
+      "score": 59,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "LLM agents increasingly perform autonomous actions through external tools, leading to complex and evolving safety risks. However, existing safety testing targets expert-designed safety violations, and the corresponding outcomes are evaluated by hard-coded rules, making them costly to extend as agents evolve. To this end, we present Vera, an end-to-end automated safety testing framework that instantiates software engineering testing principles for non-deterministic agents through a three-stage, self-reinforcing pipeline. First, a literature-driven exploration continuously discovers and structures emerging risks into taxonomies of safety risks, attack methods, and tool execution environments. Second, combinatorial composition across taxonomy dimensions produces executable safety cases, each specifying a concrete safety goal, a programmatically constructed initial state, and a deterministic verification predicate grounded in observable artifacts. Third, adaptive execution runs heterogeneous agents in isolated sandboxes where a control agent steers multi-turn interaction based on runtime observations, while evidence-grounded verifiers judge outcomes from environment state and tool-call evidence rather than model self-report. We evaluate Vera on four production agent frameworks (OpenClaw, Hermes, Codex, Claude Code), revealing substantial safety weaknesses, with average attack success rates reaching 93.9\\% under multi-channel attacks; we also release Vera-Bench, comprising 1600 executable safety cases spanning 124 risk categories across three execution settings. These results indicate that modular, executable testing infrastructure is essential for rigorous and maintainable safety evaluation of rapidly evolving agentic systems at scale. The code is publicly available at https://github.com/Yunhao-Feng/Vera.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Un nuevo marco automatizado, Vera, prueba rigurosamente la seguridad de agentes LLM, revelando vulnerabilidades críticas con una tasa de éxito de ataque promedio del 93.9%.",
+        "problema": "Los agentes LLM que realizan acciones autónomas mediante herramientas externas introducen riesgos de seguridad complejos y cambiantes. Los métodos de prueba existentes se basan en violaciones diseñadas por expertos y reglas codificadas, lo que los hace costosos de extender y poco escalables a medida que los agentes evolucionan.",
+        "propuesta": "Presentan Vera, un marco de prueba de seguridad automatizado de extremo a extremo que aplica principios de ingeniería de software a agentes no deterministas a través de una tubería de tres etapas: 1) Descubrimiento de riesgos basado en la literatura para estructurar riesgos emergentes en taxonomías. 2) Composición combinatoria para producir casos de seguridad ejecutables con objetivos, estados iniciales y predicados de verificación deterministas. 3) Ejecución adaptativa de agentes en sandboxes aislados, donde un agente de control dirige la interacción y verificadores basados en evidencia juzgan los resultados a partir del estado del entorno y las llamadas a herramientas, no del auto-informe del modelo.",
+        "resultados": "Vera se evaluó en cuatro marcos de agentes de producción (OpenClaw, Hermes, Codex, Claude Code), revelando debilidades de seguridad sustanciales. Se observaron tasas de éxito de ataque promedio del 93.9% bajo ataques multicanal. También se lanzó Vera-Bench, que comprende 1600 casos de seguridad ejecutables que abarcan 124 categorías de riesgo en tres configuraciones de ejecución.",
+        "por_que_importa": "Una infraestructura de prueba modular y ejecutable es esencial para una evaluación de seguridad rigurosa y mantenible de sistemas de agentes en rápida evolución y a escala. Permite identificar y mitigar vulnerabilidades críticas de manera eficiente, mejorando la robustez y confiabilidad de los agentes LLM en entornos de producción.",
+        "tags": [
+          "Seguridad IA",
+          "Agentes LLM",
+          "Pruebas Automatizadas",
+          "Ciberseguridad",
+          "Evaluación de Riesgos",
+          "Vulnerabilidades"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-07-07T15:33:55Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.01764",
+      "rank": 4,
+      "title": "Mastermind: Strategy-grounded Learning for Repository-Scale Vulnerability Reproduction",
+      "authors": [
+        "Mingzhe Du",
+        "Luu Anh Tuan",
+        "Tianyi Wu",
+        "Renyang Liu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-02",
+      "url": "https://arxiv.org/abs/2607.01764",
+      "pdf_url": "https://arxiv.org/pdf/2607.01764",
+      "score": 57,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Repository-level vulnerability reproduction is a demanding software engineering (SE) task: an agent must inspect a codebase, infer the input grammar that reaches a vulnerable path, construct a proof-of-conceptv(PoC), and verify that the crash disappears on the patched build. Recent LLM agents can often execute these steps when the approach is correct, yet they still fail by choosing the wrong strategy. This paper argues that strategy, rather than the full action trajectory, is the right learning unit for such SE agents: it is compact enough to optimize, concrete enough to guide execution, and stable enough to store and reuse across attempts. We present Mastermind, a dual-loop framework that separates transferable strategy learning from task-specific experience. A trainable planner learns reusable vulnerability-reproduction strategies through SFT and milestone-based GRPO, while an experience loop maintains task-local strategy records that guide subsequent attempts. The planner is trained independently of the executor, allowing strategy learning to improve multiple frozen executors without modifying their action-generation capability. We evaluate Mastermind on CyberGym using 260 training tasks and 200 held-out evaluation tasks. With GPT-5.5 as the frozen executor, Mastermind achieves an 84.5% pass rate, outperforming open-book PoC context (60.0%), Best-of-8 sampling (63.0%), and iterative improvement (77.0%). The same planner also improves GPT-5.4 mini and GLM~5.1 from 45.0% and 58.5% to 60.0% and 71.0%. These results demonstrate that learning high-level strategies is an effective and transferable mechanism for improving repository-scale SE agents.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Mastermind mejora la reproducción de vulnerabilidades en código al enseñar a los agentes de IA estrategias de alto nivel, logrando un 84.5% de éxito con GPT-5.5.",
+        "problema": "Los agentes de IA actuales fallan al reproducir vulnerabilidades de software a gran escala porque eligen estrategias incorrectas, a pesar de poder ejecutar los pasos individuales si la estrategia es la adecuada.",
+        "propuesta": "Se presenta Mastermind, un framework de doble bucle que separa el aprendizaje de estrategias generales y reutilizables (mediante un 'planner' entrenable) de la experiencia específica de cada tarea. Este 'planner' se entrena de forma independiente para mejorar la capacidad de varios ejecutores de IA sin modificar su código de generación de acciones.",
+        "resultados": "Evaluado en CyberGym con 200 tareas, Mastermind alcanzó un 84.5% de éxito con GPT-5.5 como ejecutor, superando a métodos como el contexto PoC de libro abierto (60.0%), muestreo Best-of-8 (63.0%) y mejora iterativa (77.0%). El mismo 'planner' también mejoró GPT-5.4 mini del 45.0% al 60.0% y GLM~5.1 del 58.5% al 71.0%.",
+        "por_que_importa": "Este enfoque demuestra que enseñar estrategias de alto nivel es una forma efectiva y transferible de mejorar los agentes de IA para tareas complejas de ingeniería de software, como la reproducción de vulnerabilidades a escala de repositorio, haciendo que la detección y corrección sea más eficiente.",
+        "tags": [
+          "Ciberseguridad",
+          "IA",
+          "LLM",
+          "Ingeniería de Software",
+          "Vulnerabilidades",
+          "Aprendizaje Estratégico"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-07-07T15:34:10Z"
+      }
+    }
+  ],
+  "generated_at": "2026-07-07T15:34:10Z"
+}
