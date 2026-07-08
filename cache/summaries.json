@@ -968,5 +968,139 @@
     ],
     "model": "gemini-2.5-flash",
     "generated_at": "2026-07-07T15:34:10Z"
+  },
+  "arxiv:2607.06485v1": {
+    "tldr": "Atacan modelos de visión e lenguaje en imágenes infrarrojas usando perturbaciones térmicas de flujo de aire, exponiendo vulnerabilidades críticas.",
+    "problema": "Los modelos de visión y lenguaje (VLMs) usados en imágenes infrarrojas (IR) para seguridad carecen de análisis de robustez adversarial, dejándolos vulnerables.",
+    "propuesta": "Se introduce AirflowAttack, el primer ataque adversarial para VLMs de detección remota IR, que usa perturbaciones de turbulencia de flujo de aire, regularizadas para ser físicamente plausibles.",
+    "resultados": "AirflowAttack logra una tasa de éxito del 48.5% en clasificación de escenas, superando a las líneas base físicas (27.7-37.0%). Reduce la precisión hasta un 38.2% en modelos de última generación y engaña a algunos haciéndolos más confiados.",
+    "por_que_importa": "Expone vulnerabilidades críticas en el creciente ecosistema de VLMs IR, crucial para la seguridad, y demuestra que las perturbaciones físicas plausibles son efectivas.",
+    "tags": [
+      "ciberseguridad",
+      "inteligencia artificial",
+      "imágenes infrarrojas",
+      "ataques adversariales",
+      "modelos de visión y lenguaje"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-08T14:53:58Z"
+  },
+  "arxiv:2607.06420v1": {
+    "tldr": "HoloCount evalúa la precisión numérica de modelos de lenguaje multimodales, revelando su debilidad en conteo complejo y escenarios adversos.",
+    "problema": "Los modelos de lenguaje multimodales (MLLMs) fallan en la precisión numérica (alucinaciones numéricas) al realizar tareas de conteo visual, especialmente en contextos complejos o adversos, a diferencia de su éxito en la comprensión cualitativa.",
+    "propuesta": "Se introduce HoloCount, un benchmark holístico y diagnóstico para evaluar MLLMs en conteo visual. Se estructura en tres niveles: Conteo Semántico (enumeración atómica/basada en propiedades), Conteo Analítico (razonamiento espacial y de conjuntos) y Pruebas de Robustez (escenarios adversos y sesgos lingüísticos).",
+    "resultados": "La evaluación de más de 20 MLLMs de vanguardia muestra una brecha de rendimiento crítica: los modelos de alto nivel se degradan significativamente al pasar de la percepción al razonamiento analítico complejo y escenarios adversos.",
+    "por_que_importa": "Este benchmark revela las limitaciones actuales de los MLLMs en tareas cuantitativas cruciales y proporciona una hoja de ruta para desarrollar sistemas multimodales más fiables y precisos en el mundo real.",
+    "tags": [
+      "conteo visual",
+      "modelos multimodales",
+      "evaluación",
+      "IA",
+      "ciberseguridad",
+      "razonamiento"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-08T14:54:37Z"
+  },
+  "arxiv:2607.06195v1": {
+    "tldr": "LogicHunter revoluciona el testing de frameworks de agentes LLM, descubriendo fallos ocultos mediante un oráculo inteligente.",
+    "problema": "Los frameworks de agentes LLM son difíciles de probar automáticamente porque los fallos no son obvios (excepciones normales o fallos semánticos silenciosos), y las herramientas actuales generan demasiados casos inválidos o triviales.",
+    "propuesta": "LogicHunter utiliza fuzzing consciente de especificaciones para generar entradas válidas pero extremas, combinando restricciones de tipo con patrones de uso reales. Introduce un 'Agentic Oracle' que usa ReAct para consultar documentación, código y estados, superando la ambigüedad del oráculo.",
+    "resultados": "LogicHunter descubrió 40 bugs desconocidos, 30 confirmados y 26 corregidos en tres frameworks populares. El Agentic Oracle alcanzó un 91.17% de precisión, superando al mejor método pasivo (29.27%) en 61 puntos porcentuales. Los métodos de vanguardia no encontraron bugs.",
+    "por_que_importa": "Mejora drásticamente la fiabilidad y seguridad de los sistemas de IA de producción que dependen de estos frameworks, reduciendo fallos inesperados y garantizando un comportamiento más robusto.",
+    "tags": [
+      "testing",
+      "LLM",
+      "agentes",
+      "ciberseguridad",
+      "fuzzing",
+      "oráculo"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-08T14:55:10Z"
+  },
+  "arxiv:2607.05916v1": {
+    "tldr": "Expertos en ciberseguridad dudan de la fiabilidad de los LLMs para crear reglas de NIDS, a pesar de su potencial de automatización.",
+    "problema": "La creación manual de reglas para Sistemas de Detección de Intrusiones (NIDS) es un cuello de botella operativo debido a la rápida evolución de las amenazas. Los Modelos de Lenguaje Grandes (LLMs) podrían automatizarlo, pero su fiabilidad para generar reglas listas para producción no ha sido validada.",
+    "propuesta": "Se investiga el uso de LLMs para la ingeniería de reglas NIDS mediante un marco de generación y un estudio con 10 expertos. Se evalúa la calidad de las reglas generadas y la confianza de los expertos en los LLMs.",
+    "resultados": "Los LLMs generan reglas sintácticamente correctas, pero los expertos las consideran solo parcialmente desplegables (12% de casos con baja especificidad o alucinaciones lógicas). El sistema obtuvo una puntuación SUS de 67. Los expertos ven los LLMs como herramientas de apoyo, no generadores autónomos. Modelos grandes (>=70B) son más consistentes que los pequeños (<=4B).",
+    "por_que_importa": "A pesar del potencial de automatización, los LLMs no son aún confiables para generar reglas NIDS de forma autónoma. Se necesitan más avances para superar la brecha entre la sintaxis y la lógica semántica, y para ganar la confianza de los expertos en ciberseguridad.",
+    "tags": [
+      "NIDS",
+      "LLMs",
+      "Ciberseguridad",
+      "Inteligencia Artificial",
+      "Reglas de Detección",
+      "Confianza Experto"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-08T14:55:25Z"
+  },
+  "arxiv:2607.06413v1": {
+    "tldr": "Evaluamos sistemáticamente cómo los agentes de IA descubren modelos de datos de forma autónoma, cuantificando su variabilidad y factores clave.",
+    "problema": "El comportamiento de descubrimiento autónomo de modelos de los agentes de IA de lenguaje grande es estocástico y adaptativo, lo que dificulta su caracterización con una sola ejecución de benchmark.",
+    "propuesta": "Proponemos un marco de diseño y análisis experimental para evaluar sistemáticamente este proceso de descubrimiento, cuantificar su variabilidad e identificar factores importantes. Los agentes se tratan como operadores estocásticos de descubrimiento de modelos, investigando Codex y Claude Code bajo factores controlados como el esfuerzo de razonamiento, la tarea, la métrica de optimización y la composición de los datos de entrenamiento.",
+    "resultados": "Se realizaron modelos de regresión e inferencia para múltiples respuestas (calidad de salida, costo, tiempo, complejidad del proceso) para cada combinación agente-tarea-métrica. Se desarrolló una descomposición canónica alineada con la utilidad para caracterizar el efecto del esfuerzo de razonamiento y evaluar si se alinea con la utilidad rendimiento-costo. El marco se demostró en juegos de palabras en red con hallazgos sobre el esfuerzo de razonamiento en relación con el costo y la complejidad del proceso.",
+    "por_que_importa": "Permite una evaluación rigurosa y sistemática de los agentes de IA en tareas de modelado de datos, ayudando a comprender y optimizar su rendimiento, costo y complejidad en aplicaciones del mundo real.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Agentes Autónomos",
+      "Descubrimiento de Modelos",
+      "Evaluación Experimental",
+      "LLM"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-08T14:55:39Z"
+  },
+  "arxiv:2607.05842v1": {
+    "tldr": "Los LLMs sin filtros de seguridad (abliterados) son mejores en análisis de vulnerabilidades que los seguros (alineados), según un estudio comparativo.",
+    "problema": "Las evaluaciones de seguridad de LLMs para análisis de vulnerabilidades son difíciles de interpretar porque comparan modelos no relacionados, mezclando seguridad con diferencias de arquitectura. Es necesario aislar el efecto del estado de seguridad (si el rechazo se mantiene o se elimina) en la utilidad defensiva.",
+    "propuesta": "Estudiar el 'estado de seguridad' de los LLMs comparando modelos de la misma familia: unos con comportamiento de rechazo intacto (Alineados) y otros con el rechazo eliminado (Abliterados). Se evalúa su rendimiento en detección de vulnerabilidades, atribución CWE, localización de líneas vulnerables, localización de causa raíz y validación de parches ejecutables, variando el contexto y la densidad de terminología de ciberseguridad en los prompts.",
+    "resultados": "En un estudio de reparación/validación de Java/Vul4J basado en Gemma, los modelos Abliterados lograron tasas de validación temprana más altas: 67.8% de parches utilizables (vs 29.9% Alineados), 65.0% aplicados (vs 24.9%) y 32.8% compilados (vs 9.0%). En el par Qwen, Abliterados mejoró la localización a nivel de línea, aumentando el F1 de 2.08% a 3.91% y la precisión Top-1 de 4.10% a 6.95%.",
+    "por_que_importa": "Sugiere que las evaluaciones de asistentes de seguridad basados en LLMs deben medir conjuntamente la capacidad de respuesta, la corrección de las respuestas útiles y la accionabilidad de los resultados a lo largo del flujo de ingeniería, indicando que eliminar filtros de seguridad puede mejorar la utilidad práctica en tareas de ciberseguridad.",
+    "tags": [
+      "LLMs",
+      "Ciberseguridad",
+      "Análisis de Vulnerabilidades",
+      "Seguridad de Software",
+      "IA Responsable"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-08T14:56:44Z"
+  },
+  "arxiv:2606.30026": {
+    "tldr": "MuseBench evalúa la comprensión artística de modelos multimodales, revelando una brecha significativa en su razonamiento sobre la intención creativa.",
+    "problema": "Los modelos de lenguaje multimodales actuales (MLLMs) son buenos reconociendo lo que se muestra, pero fallan al razonar sobre las elecciones creativas y la intención artística en las artes audiovisuales.",
+    "propuesta": "Se introduce Musebench, un benchmark con 4,016 preguntas sobre artes cinematográficas, visuales, escénicas y de videojuegos, diseñado para evaluar la comprensión de la intención artística en MLLMs.",
+    "resultados": "Los mejores MLLMs alcanzan solo un 48.29% de precisión, muy por debajo del 87.18% de los expertos humanos, evidenciando una debilidad en el razonamiento sobre dominios creativos.",
+    "por_que_importa": "Es crucial para desarrollar MLLMs capaces de comprender y generar contenido artístico de manera más profunda, yendo más allá del reconocimiento superficial.",
+    "tags": [
+      "IA",
+      "Comprensión artística",
+      "Modelos multimodales",
+      "Benchmarking",
+      "Artes audiovisuales",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-08T14:58:46Z"
+  },
+  "arxiv:2607.05804": {
+    "tldr": "TurnOPD optimiza el entrenamiento de agentes de IA para tareas complejas y de largo alcance, mejorando la eficiencia y la precisión.",
+    "problema": "El entrenamiento de agentes de IA para tareas de largo alcance con 'on-policy distillation' (OPD) es ineficiente. Los 'rollouts' completos desperdician recursos en turnos finales poco informativos y la supervisión KL se concentra en tokens iniciales, descuidando los giros de decisión más profundos.",
+    "propuesta": "Se propone TurnOPD, una estrategia de presupuesto a nivel de turno. Utiliza un presupuesto adaptativo de profundidad de 'rollout' basado en estadísticas de turnos y un presupuesto de pérdida progresivo normalizado por turno para equilibrar la supervisión KL.",
+    "resultados": "TurnOPD logra una precisión de validación superior en ALFWorld, WebShop y Multi-Hop Search bajo presupuestos de entrenamiento de tiempo iguales, superando la frontera de precisión-tiempo del OPD estándar.",
+    "por_que_importa": "Mejora significativamente la eficiencia y la efectividad del entrenamiento de agentes de IA para tareas complejas, permitiendo un desarrollo más rápido y mejores rendimientos en aplicaciones del mundo real.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Aprendizaje por Refuerzo",
+      "Eficiencia",
+      "Agentes de IA",
+      "Entrenamiento"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-08T14:58:57Z"
   }
 }

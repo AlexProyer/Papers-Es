@@ -1,0 +1,402 @@
+{
+  "date": "2026-07-08",
+  "report_type": "filtrado",
+  "evaluated": 184,
+  "selected": 9,
+  "papers": [
+    {
+      "id": "arxiv:2607.06485v1",
+      "rank": 1,
+      "title": "AirflowAttack: Thermal-Airflow Adversarial Perturbations against Infrared Remote-Sensing Vision-Language Models",
+      "authors": [
+        "Cong Su",
+        "Jiaju Han",
+        "Xuemeng Sun",
+        "Chengyin Hu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-07-07",
+      "url": "https://arxiv.org/abs/2607.06485v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.06485v1",
+      "score": 54,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Vision-language models (VLMs) are increasingly deployed on infrared (IR) remote sensing imagery in security-critical settings, yet their adversarial robustness remains unexamined. We present AirflowAttack, to our knowledge the first adversarial attack for IR remote-sensing VLMs and the first to weaponize thermal-airflow turbulence as the perturbation prior. A lightweight generator synthesizes a single input-agnostic perturbation regularized toward physically plausible airflow patterns. Optimized on one surrogate CLIP model, it attains a mean zero-shot scene-classification attack success rate (ASR, the fraction of samples whose top-1 class changes) of 48.5% across five diverse CLIP backbones, far exceeding four IR-specific physical baselines (27.7--37.0%). Applied to six state-of-the-art VLMs, it cuts scene-classification accuracy by up to 38.2% relative, yet paradoxically makes some models more confident in their IR analysis, confabulating the perturbation as genuine thermal evidence such as temperature gradients and convection. Ablations show the airflow prior raises physical plausibility at no measurable cost to attack success. Together with a benchmark spanning eleven models and four tasks, these findings expose critical vulnerabilities in the rapidly expanding IR VLM ecosystem.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Atacan modelos de visión e lenguaje en imágenes infrarrojas usando perturbaciones térmicas de flujo de aire, exponiendo vulnerabilidades críticas.",
+        "problema": "Los modelos de visión y lenguaje (VLMs) usados en imágenes infrarrojas (IR) para seguridad carecen de análisis de robustez adversarial, dejándolos vulnerables.",
+        "propuesta": "Se introduce AirflowAttack, el primer ataque adversarial para VLMs de detección remota IR, que usa perturbaciones de turbulencia de flujo de aire, regularizadas para ser físicamente plausibles.",
+        "resultados": "AirflowAttack logra una tasa de éxito del 48.5% en clasificación de escenas, superando a las líneas base físicas (27.7-37.0%). Reduce la precisión hasta un 38.2% en modelos de última generación y engaña a algunos haciéndolos más confiados.",
+        "por_que_importa": "Expone vulnerabilidades críticas en el creciente ecosistema de VLMs IR, crucial para la seguridad, y demuestra que las perturbaciones físicas plausibles son efectivas.",
+        "tags": [
+          "ciberseguridad",
+          "inteligencia artificial",
+          "imágenes infrarrojas",
+          "ataques adversariales",
+          "modelos de visión y lenguaje"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-08T14:53:58Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.06420v1",
+      "rank": 2,
+      "title": "HoloCount: A Holistic Visual Counting Benchmark for MLLMs",
+      "authors": [
+        "Jinhong Deng",
+        "Limeng Qiao",
+        "Guanglu Wan"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CV]",
+      "category": "cs.CV",
+      "date": "2026-07-07",
+      "url": "https://arxiv.org/abs/2607.06420v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.06420v1",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Visual counting is a fundamental pillar of multimodal intelligence, requiring a seamless integration of fine-grained grounding and spatial reasoning. While Multimodal Large Language Models (MLLMs) have achieved remarkable success in qualitative scene understanding, their quantitative precision remains a significant bottleneck, often characterized by persistent numerical hallucinations. Existing counting benchmarks primarily focus on basic perception in simplified contexts, failing to capture the complex failure modes that emerge under logical constraints or adversarial conditions. To address these limitations, we introduce HoloCount, a holistic and diagnostically rich benchmark structured around a three-level hierarchical taxonomy. HoloCount evaluates MLLMs across: (1) Semantic Counting, focusing on atomic and property-based enumeration; (2) Analytical Counting, assessing logical composition through spatial and set-based reasoning; and (3) Robustness Testing, probing model integrity against adverse scenarios and grounded counter-priors, such as high-density scenes and linguistic biases. Through an exhaustive evaluation of over 20 state-of-the-art MLLMs, we reveal a critical performance gap: even top-tier models degrade significantly as tasks transition from perception to complex analytical reasoning and adverse scenarios. Our findings provide a systematic landscape of current MLLM counting capabilities and offer a roadmap for developing more grounded and reliable multimodal systems. The dataset is available at https://mm-mvr.github.io/HoloCount/.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "HoloCount evalúa la precisión numérica de modelos de lenguaje multimodales, revelando su debilidad en conteo complejo y escenarios adversos.",
+        "problema": "Los modelos de lenguaje multimodales (MLLMs) fallan en la precisión numérica (alucinaciones numéricas) al realizar tareas de conteo visual, especialmente en contextos complejos o adversos, a diferencia de su éxito en la comprensión cualitativa.",
+        "propuesta": "Se introduce HoloCount, un benchmark holístico y diagnóstico para evaluar MLLMs en conteo visual. Se estructura en tres niveles: Conteo Semántico (enumeración atómica/basada en propiedades), Conteo Analítico (razonamiento espacial y de conjuntos) y Pruebas de Robustez (escenarios adversos y sesgos lingüísticos).",
+        "resultados": "La evaluación de más de 20 MLLMs de vanguardia muestra una brecha de rendimiento crítica: los modelos de alto nivel se degradan significativamente al pasar de la percepción al razonamiento analítico complejo y escenarios adversos.",
+        "por_que_importa": "Este benchmark revela las limitaciones actuales de los MLLMs en tareas cuantitativas cruciales y proporciona una hoja de ruta para desarrollar sistemas multimodales más fiables y precisos en el mundo real.",
+        "tags": [
+          "conteo visual",
+          "modelos multimodales",
+          "evaluación",
+          "IA",
+          "ciberseguridad",
+          "razonamiento"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-08T14:54:37Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.06195v1",
+      "rank": 3,
+      "title": "LogicHunter: Testing LLM Agent Frameworks with an Agentic Oracle",
+      "authors": [
+        "Minghui Long",
+        "Yanjie Zhao",
+        "Haoyu Wang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-07-07",
+      "url": "https://arxiv.org/abs/2607.06195v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.06195v1",
+      "score": 51,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+7)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Large Language Model (LLM) agent frameworks such as LangChain, LlamaIndex, and CrewAI have become critical infrastructure powering production AI systems, yet they remain severely under-tested due to fundamental challenges in automated testing. Unlike traditional software, where crashes serve as reliable oracles, defects in these pure Python frameworks manifest as ordinary exceptions or silent semantic failures, creating profound oracle ambiguity. This problem is exacerbated by strict type governance through Pydantic schemas and complex protocol requirements that cause existing fuzzers to generate overwhelming invalid inputs, while traditional test generators produce only trivial cases with weak regression assertions. We present LogicHunter, a fuzzing framework that addresses both the generation and oracle challenges through active specification-aware testing. LogicHunter employs specification-driven generation that systematically fuses formal type constraints with authentic usage patterns from real-world repositories, synthesizing inputs that are valid by construction yet semantically extreme, equipped with behavioral probes to expose silent failures. To resolve oracle ambiguity, we introduce the Agentic Oracle, which transcends passive classification by actively retrieving documentation, navigating source code, and inspecting runtime states through a ReAct-based architecture with Dual-Layer State Management and Dual-Stream Memory. Evaluated on three widely deployed frameworks, LogicHunter discovered 40 previously unknown bugs with 30 confirmed and 26 fixed by developers, while state-of-the-art baselines reported no bugs as final findings. The Agentic Oracle achieves 91.17% precision, surpassing the best passive approach at 29.27% by 61 percentage points.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "LogicHunter revoluciona el testing de frameworks de agentes LLM, descubriendo fallos ocultos mediante un oráculo inteligente.",
+        "problema": "Los frameworks de agentes LLM son difíciles de probar automáticamente porque los fallos no son obvios (excepciones normales o fallos semánticos silenciosos), y las herramientas actuales generan demasiados casos inválidos o triviales.",
+        "propuesta": "LogicHunter utiliza fuzzing consciente de especificaciones para generar entradas válidas pero extremas, combinando restricciones de tipo con patrones de uso reales. Introduce un 'Agentic Oracle' que usa ReAct para consultar documentación, código y estados, superando la ambigüedad del oráculo.",
+        "resultados": "LogicHunter descubrió 40 bugs desconocidos, 30 confirmados y 26 corregidos en tres frameworks populares. El Agentic Oracle alcanzó un 91.17% de precisión, superando al mejor método pasivo (29.27%) en 61 puntos porcentuales. Los métodos de vanguardia no encontraron bugs.",
+        "por_que_importa": "Mejora drásticamente la fiabilidad y seguridad de los sistemas de IA de producción que dependen de estos frameworks, reduciendo fallos inesperados y garantizando un comportamiento más robusto.",
+        "tags": [
+          "testing",
+          "LLM",
+          "agentes",
+          "ciberseguridad",
+          "fuzzing",
+          "oráculo"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-08T14:55:10Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.05916v1",
+      "rank": 4,
+      "title": "Beyond the Syntax: Do Security Experts Trust LLMs for NIDS Rule Engineering?",
+      "authors": [
+        "Lorenzo di Filippo",
+        "Enkeleda Bardhi",
+        "Andrea Agiollo",
+        "Alessandro Palma"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-07",
+      "url": "https://arxiv.org/abs/2607.05916v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05916v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "As network threats evolve, manual NIDS rule engineering has become a critical operational bottleneck. While Large Language Models (LLMs) show promise for automating this process, their ability to produce production-ready rules remains unvalidated. This paper presents a human-centered investigation into LLM-based NIDS rule engineering, formalizing a grounded generation framework and evaluating it through a user study with 10 domain experts. Our evaluation reveals a syntax-semantics paradox: although LLMs generate syntactically correct rules, experts find them only partially deployable due to low specificity and logic hallucinations in 12% of cases. While the system received a favorable SUS score of 67, practitioners remain skeptical of its autonomous capabilities, viewing LLMs as support tools for drafting and verification rather than independent generators. Finally, our statistical analysis indicates that while large-scale models ($\\geq 70B$) consistently produce syntactically valid rules, small models ($\\leq 4B$) are largely ineffective for IDS rule generation.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Expertos en ciberseguridad dudan de la fiabilidad de los LLMs para crear reglas de NIDS, a pesar de su potencial de automatización.",
+        "problema": "La creación manual de reglas para Sistemas de Detección de Intrusiones (NIDS) es un cuello de botella operativo debido a la rápida evolución de las amenazas. Los Modelos de Lenguaje Grandes (LLMs) podrían automatizarlo, pero su fiabilidad para generar reglas listas para producción no ha sido validada.",
+        "propuesta": "Se investiga el uso de LLMs para la ingeniería de reglas NIDS mediante un marco de generación y un estudio con 10 expertos. Se evalúa la calidad de las reglas generadas y la confianza de los expertos en los LLMs.",
+        "resultados": "Los LLMs generan reglas sintácticamente correctas, pero los expertos las consideran solo parcialmente desplegables (12% de casos con baja especificidad o alucinaciones lógicas). El sistema obtuvo una puntuación SUS de 67. Los expertos ven los LLMs como herramientas de apoyo, no generadores autónomos. Modelos grandes (>=70B) son más consistentes que los pequeños (<=4B).",
+        "por_que_importa": "A pesar del potencial de automatización, los LLMs no son aún confiables para generar reglas NIDS de forma autónoma. Se necesitan más avances para superar la brecha entre la sintaxis y la lógica semántica, y para ganar la confianza de los expertos en ciberseguridad.",
+        "tags": [
+          "NIDS",
+          "LLMs",
+          "Ciberseguridad",
+          "Inteligencia Artificial",
+          "Reglas de Detección",
+          "Confianza Experto"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-08T14:55:25Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.06413v1",
+      "rank": 5,
+      "title": "An Experimental Design Approach to Evaluating Agentic AI's Autonomous Model Discovery",
+      "authors": [
+        "Hao He",
+        "Xueying Liu",
+        "Chris J. Kuhlman",
+        "Xinwei Deng"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-07-07",
+      "url": "https://arxiv.org/abs/2607.06413v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.06413v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Large language model coding agents increasingly perform open-ended data modeling and analysis. These agents are stochastic and adaptive, and therefore their autonomous model discovery behavior cannot be adequately characterized by a single benchmark run. In this work, we propose an experimental design and analysis framework for systematically evaluating this discovery process, quantifying its variability, and identifying important factors. The proposed framework treats these agents as stochastic model-discovery operators, which map task-specific discovery data and an optimization target to a fitted model. Specifically, we investigate two such operators, Codex and Claude Code, under controlled experimental factors including agent's reasoning effort, task, optimization metric, and composition of training data. For each agent-task-metric combination, regression models and inference are conducted for multiple responses such as output quality, dollar cost, wall-clock time, and process complexity. Furthermore, we develop a utility-aligned canonical decomposition to characterize the dominant direction of the reasoning-effort effect and to assess whether that direction aligns with a performance-cost utility direction. The proposed framework is demonstrated on a testbed of networked word-forming games with insightful findings on reasoning effort with respect to cost and process complexity.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evaluamos sistemáticamente cómo los agentes de IA descubren modelos de datos de forma autónoma, cuantificando su variabilidad y factores clave.",
+        "problema": "El comportamiento de descubrimiento autónomo de modelos de los agentes de IA de lenguaje grande es estocástico y adaptativo, lo que dificulta su caracterización con una sola ejecución de benchmark.",
+        "propuesta": "Proponemos un marco de diseño y análisis experimental para evaluar sistemáticamente este proceso de descubrimiento, cuantificar su variabilidad e identificar factores importantes. Los agentes se tratan como operadores estocásticos de descubrimiento de modelos, investigando Codex y Claude Code bajo factores controlados como el esfuerzo de razonamiento, la tarea, la métrica de optimización y la composición de los datos de entrenamiento.",
+        "resultados": "Se realizaron modelos de regresión e inferencia para múltiples respuestas (calidad de salida, costo, tiempo, complejidad del proceso) para cada combinación agente-tarea-métrica. Se desarrolló una descomposición canónica alineada con la utilidad para caracterizar el efecto del esfuerzo de razonamiento y evaluar si se alinea con la utilidad rendimiento-costo. El marco se demostró en juegos de palabras en red con hallazgos sobre el esfuerzo de razonamiento en relación con el costo y la complejidad del proceso.",
+        "por_que_importa": "Permite una evaluación rigurosa y sistemática de los agentes de IA en tareas de modelado de datos, ayudando a comprender y optimizar su rendimiento, costo y complejidad en aplicaciones del mundo real.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Agentes Autónomos",
+          "Descubrimiento de Modelos",
+          "Evaluación Experimental",
+          "LLM"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-08T14:55:39Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.05842v1",
+      "rank": 6,
+      "title": "Beyond Refusal: A Same-Lineage Study of Aligned and Abliterated LLMs for Vulnerability Analysis",
+      "authors": [
+        "Mingchen Li",
+        "Meikang Qiu",
+        "Zifan Peng",
+        "Heng Fan"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-07-07",
+      "url": "https://arxiv.org/abs/2607.05842v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.05842v1",
+      "score": 50,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🎯 temas: cybersecurity, vuln & threats, LLM"
+      ],
+      "abstract_en": "Large language model (LLM)-assisted software security operates at a difficult boundary: the vulnerability-analysis terminology needed for legitimate code review, triage, and repair can closely resemble terminology associated with misuse. Existing safety and cybersecurity evaluations are difficult to interpret in this setting because they often compare unrelated model families, thereby conflating safety behavior with differences in architecture, scale, training data, and deployment. To isolate this factor, we study safety state: whether refusal behavior remains intact (Aligned) or has been refusal-ablated (Abliterated) within same-lineage models. We ask how this safety state affects defensive utility across software-security workflows. We compare aligned instruction-tuned models with publicly released refusal-ablated descendants from two model families, Gemma and Qwen. We evaluate Aligned and Abliterated states on vulnerability detection, CWE attribution, vulnerable-line localization, root-cause localization, and executable patch validation. We further treat prompt wording as a controlled framing dimension: prompts begin with neutral code-review language, add authorization context, and vary the density of cybersecurity terminology. In a Gemma-based Java/Vul4J repair-validation study, Abliterated achieves higher early-stage validation rates, with 67.8%, 65.0%, and 32.8% of patches judged usable, successfully applied, and successfully compiled, respectively, compared with 29.9%, 24.9%, and 9.0% for Aligned. In the Qwen pair, Abliterated improves localization performance, increasing line-level F1 from 2.08% to 3.91% and Top-1 accuracy from 4.10% to 6.95%. These findings suggest that evaluations of LLM-based security assistants should jointly measure whether models respond, whether their usable responses are correct, and whether their outputs remain actionable across the engineering workflow.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los LLMs sin filtros de seguridad (abliterados) son mejores en análisis de vulnerabilidades que los seguros (alineados), según un estudio comparativo.",
+        "problema": "Las evaluaciones de seguridad de LLMs para análisis de vulnerabilidades son difíciles de interpretar porque comparan modelos no relacionados, mezclando seguridad con diferencias de arquitectura. Es necesario aislar el efecto del estado de seguridad (si el rechazo se mantiene o se elimina) en la utilidad defensiva.",
+        "propuesta": "Estudiar el 'estado de seguridad' de los LLMs comparando modelos de la misma familia: unos con comportamiento de rechazo intacto (Alineados) y otros con el rechazo eliminado (Abliterados). Se evalúa su rendimiento en detección de vulnerabilidades, atribución CWE, localización de líneas vulnerables, localización de causa raíz y validación de parches ejecutables, variando el contexto y la densidad de terminología de ciberseguridad en los prompts.",
+        "resultados": "En un estudio de reparación/validación de Java/Vul4J basado en Gemma, los modelos Abliterados lograron tasas de validación temprana más altas: 67.8% de parches utilizables (vs 29.9% Alineados), 65.0% aplicados (vs 24.9%) y 32.8% compilados (vs 9.0%). En el par Qwen, Abliterados mejoró la localización a nivel de línea, aumentando el F1 de 2.08% a 3.91% y la precisión Top-1 de 4.10% a 6.95%.",
+        "por_que_importa": "Sugiere que las evaluaciones de asistentes de seguridad basados en LLMs deben medir conjuntamente la capacidad de respuesta, la corrección de las respuestas útiles y la accionabilidad de los resultados a lo largo del flujo de ingeniería, indicando que eliminar filtros de seguridad puede mejorar la utilidad práctica en tareas de ciberseguridad.",
+        "tags": [
+          "LLMs",
+          "Ciberseguridad",
+          "Análisis de Vulnerabilidades",
+          "Seguridad de Software",
+          "IA Responsable"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-08T14:56:44Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.05992",
+      "rank": 1,
+      "title": "PluraMath: Extending Mathematical Reasoning Evaluation Beyond High-Resource Languages",
+      "authors": [
+        "Daryna Dementieva",
+        "Nikolay Babakov",
+        "Kathy Hämmerl",
+        "Ilseyar Alimova"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-07",
+      "url": "https://arxiv.org/abs/2607.05992",
+      "pdf_url": "https://arxiv.org/pdf/2607.05992",
+      "score": 61,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+4)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Mathematical reasoning has become a central task for evaluating and tuning reasoning Large Language Models (LLMs), yet existing benchmarks remain heavily biased toward high-resource languages, with English and Chinese dominating both pre-training corpora and evaluation suites. The recently released PolyMath (Wang et al., 2025) dataset represents a significant step forward, yet its coverage is still limited to 18 only high-resource languages. To address this gap, we introduce PluraMath, an extension of PolyMath to 18 additional {underrepresented languages spanning 6 language families -- ranging from mid-resource to extreme low-resource settings. We constructed the dataset through a human-curated pipeline, where native speakers thoroughly validated pre-computed translations. Using PluraMath, we then benchmark 27 reasoning LLMs across four model scales -- small, mid-size, large, and closed-source ensembles -- probing the multilingual mathematical reasoning capabilities of state-of-the-art models under diverse linguistic conditions. Our fine-grained analysis confirms a persistent gap in mathematical reasoning performance between high-resource and underrepresented languages, with stronger results largely associated with better instruction-following ability. We fully open-source our dataset, data acquisition pipeline, and evaluation framework, with the goal of lowering the barrier to multilingual benchmark development for underrepresented communities.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2606.30026",
+      "rank": 2,
+      "title": "MuseBench: Benchmarking Intent-Level Audiovisual Arts Understanding in MLLMs",
+      "authors": [
+        "Yuxuan Fan",
+        "Gyusik Seo",
+        "Jing Hao",
+        "Jaemin Cho"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-06-29",
+      "url": "https://arxiv.org/abs/2606.30026",
+      "pdf_url": "https://arxiv.org/pdf/2606.30026",
+      "score": 59,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Audiovisual arts encompass diverse creative disciplines, including cinema, visual arts, stage performance, and game design, where artistic meaning arises from deliberate combinations of visual, auditory, and narrative elements (e.g., fear amplified through claustrophobic framing, or grief conveyed through silence and lingering close-ups). True artistic understanding extends beyond recognizing what is depicted to reasoning about why it is expressed through particular creative choices. Despite the strong progress of multimodal large language models (MLLMs), this critical aspect of artistic understanding remains underexplored, as existing benchmarks largely measure perceptual recognition while overlooking reasoning about creative intent. To address this gap, we introduce Musebench, a comprehensive benchmark designed to evaluate MLLMs on nuanced artistic understanding. It comprises 4,016 questions spanning cinematic arts, static visual arts, stage performing arts, and game arts, distilled from over 10K candidate video essays that pair professional commentary with visual demonstration. To capture the open-ended nature of artistic analysis at scale, the benchmark combines single-select and variable-option multi-select questions. All questions are generated and refined through a four-phase iterative pipeline combining shortcut filtering, adversarial distractors, and expert validation. Comprehensive zero-shot evaluation of 28 state-of-the-art MLLMs reveals that even the best-performing model achieves only 48.29% accuracy, substantially below human expert performance of 87.18%, exposing a significant gap in current models' creative domain expertise.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "MuseBench evalúa la comprensión artística de modelos multimodales, revelando una brecha significativa en su razonamiento sobre la intención creativa.",
+        "problema": "Los modelos de lenguaje multimodales actuales (MLLMs) son buenos reconociendo lo que se muestra, pero fallan al razonar sobre las elecciones creativas y la intención artística en las artes audiovisuales.",
+        "propuesta": "Se introduce Musebench, un benchmark con 4,016 preguntas sobre artes cinematográficas, visuales, escénicas y de videojuegos, diseñado para evaluar la comprensión de la intención artística en MLLMs.",
+        "resultados": "Los mejores MLLMs alcanzan solo un 48.29% de precisión, muy por debajo del 87.18% de los expertos humanos, evidenciando una debilidad en el razonamiento sobre dominios creativos.",
+        "por_que_importa": "Es crucial para desarrollar MLLMs capaces de comprender y generar contenido artístico de manera más profunda, yendo más allá del reconocimiento superficial.",
+        "tags": [
+          "IA",
+          "Comprensión artística",
+          "Modelos multimodales",
+          "Benchmarking",
+          "Artes audiovisuales",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-08T14:58:46Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.05804",
+      "rank": 3,
+      "title": "TurnOPD: Making On-Policy Distillation Turn-Aware for Efficient Long-Horizon Agent Training",
+      "authors": [
+        "Yuhang Zhou",
+        "Kai Zheng",
+        "Haoling Li",
+        "Dengyun Peng"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-07",
+      "url": "https://arxiv.org/abs/2607.05804",
+      "pdf_url": "https://arxiv.org/pdf/2607.05804",
+      "score": 57,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "On-policy distillation (OPD) trains a student policy by matching a stronger teacher on the student's own trajectories, offering a promising framework for language agent training. However, its application to long-horizon agentic tasks remains insufficiently explored. We identify two key inefficiencies in vanilla agent OPD: (1) full-horizon rollouts often waste wall-clock resources on tail turns that provide weak and noisy KL supervision, and (2) trajectory-level KL objectives concentrate most of the loss on shallow tokens, leaving deeper decision turns under-trained once initial behaviors are aligned. To address these challenges, we propose TurnOPD, a turn-level budgeting strategy for efficient on-policy distillation of long-horizon agents. TurnOPD consists of two budget controllers: adaptive rollout-depth budgeting, which uses probe-based turn statistics to determine rollout length, and progressive turn-normalized loss budgeting, which gradually shifts KL weighting from token-level to turn-balanced supervision. Experiments on ALFWorld, WebShop, and Multi-Hop Search with task-specialized teacher models show that TurnOPD achieves superior validation accuracy under equal wall-clock training budgets and advances the accuracy--time frontier beyond vanilla OPD.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "TurnOPD optimiza el entrenamiento de agentes de IA para tareas complejas y de largo alcance, mejorando la eficiencia y la precisión.",
+        "problema": "El entrenamiento de agentes de IA para tareas de largo alcance con 'on-policy distillation' (OPD) es ineficiente. Los 'rollouts' completos desperdician recursos en turnos finales poco informativos y la supervisión KL se concentra en tokens iniciales, descuidando los giros de decisión más profundos.",
+        "propuesta": "Se propone TurnOPD, una estrategia de presupuesto a nivel de turno. Utiliza un presupuesto adaptativo de profundidad de 'rollout' basado en estadísticas de turnos y un presupuesto de pérdida progresivo normalizado por turno para equilibrar la supervisión KL.",
+        "resultados": "TurnOPD logra una precisión de validación superior en ALFWorld, WebShop y Multi-Hop Search bajo presupuestos de entrenamiento de tiempo iguales, superando la frontera de precisión-tiempo del OPD estándar.",
+        "por_que_importa": "Mejora significativamente la eficiencia y la efectividad del entrenamiento de agentes de IA para tareas complejas, permitiendo un desarrollo más rápido y mejores rendimientos en aplicaciones del mundo real.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Aprendizaje por Refuerzo",
+          "Eficiencia",
+          "Agentes de IA",
+          "Entrenamiento"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-08T14:58:57Z"
+      }
+    }
+  ],
+  "generated_at": "2026-07-08T14:58:57Z"
+}
