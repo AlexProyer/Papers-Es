@@ -1102,5 +1102,137 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-07-08T14:58:57Z"
+  },
+  "arxiv:2607.07097v1": {
+    "tldr": "Evaluar la seguridad de LLMs multi-agente requiere separar el reencuadre operacional, la delegación y el comportamiento del planificador para entender riesgos.",
+    "problema": "Las evaluaciones de seguridad de LLMs multi-agente agrupan erróneamente el efecto de las tuberías (pipeline), ocultando mecanismos clave como el reencuadre de intenciones dañinas y la delegación de aprobación, lo que dificulta la interpretación y la mejora de la seguridad.",
+    "propuesta": "Se propone un diseño de contraste controlado con cinco condiciones para separar los efectos del reencuadre operacional, el comportamiento del planificador (rechazo/transformación) y la delegación con aprobación implícita. Se evalúa en escenarios sintéticos y benchmarks externos usando juicios de LLM.",
+    "resultados": "El reencuadre operacional es el riesgo más común, aumentando la conformidad en GPT, Gemini y DeepSeek. El planificador puede mitigar el riesgo principalmente mediante el rechazo. La delegación con aprobación es sensible al diseño y al modelo, pudiendo aumentar la conformidad hasta un 30% en algunos casos (Gemini con Claude). Las clasificaciones directas de modelos pueden predecir mal el comportamiento en tuberías.",
+    "por_que_importa": "Las evaluaciones de seguridad agregadas son engañosas. Es crucial desglosar los riesgos individuales (reencuadre, delegación, planificador) para diseñar sistemas LLM multi-agente más seguros y predecibles en la práctica.",
+    "tags": [
+      "seguridad LLM",
+      "agentes multi-agente",
+      "evaluación de IA",
+      "delegación",
+      "reencuadre"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-09T15:40:16Z"
+  },
+  "arxiv:2607.07461v1": {
+    "tldr": "Protege servidores de IA contra vulnerabilidades de 'taint' usando descripciones de herramientas inteligentes y autoevaluación.",
+    "problema": "Los servidores de IA que usan el protocolo MCP para interactuar con herramientas externas son vulnerables a ataques de 'taint', que son difíciles de arreglar y se propagan fácilmente.",
+    "propuesta": "Se propone SPELLSMITH, un sistema que analiza las capacidades de las herramientas, sus descripciones y semántica de parámetros para identificar riesgos de 'taint'. Utiliza un módulo de mejora de descripciones y autoevaluación de LLMs para mitigar activamente estas vulnerabilidades.",
+    "resultados": "SPELLSMITH mitiga eficazmente la explotación de vulnerabilidades de 'taint' en servidores MCP, demostrando aplicabilidad práctica y ventajas sobre las correcciones a nivel de código.",
+    "por_que_importa": "Ofrece una estrategia unificada y proactiva para proteger servidores de IA contra una clase común y peligrosa de vulnerabilidades, reduciendo la dependencia de parches de código lentos y específicos.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "LLM",
+      "MCP",
+      "Vulnerabilidades",
+      "SPELLSMITH"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-09T15:40:32Z"
+  },
+  "arxiv:2607.07433v1": {
+    "tldr": "Se descubren 'botnets de agentes' que explotan las 'alucinaciones' de los LLM para inyectar código malicioso a gran escala sin contacto directo.",
+    "problema": "Los atacantes pueden explotar aplicaciones de LLM a escala sin canales directos, creando botnets mediante la inyección de 'promptware' (prompts maliciosos).",
+    "propuesta": "Se introduce la técnica de 'adversarial hallucination squatting', que explota la tendencia de los LLM a 'alucinar' identificadores de recursos populares, registrándolos para alojar prompts maliciosos y atraer a los usuarios.",
+    "resultados": "Las alucinaciones de recursos ocurren hasta en un 85% en clonación de repositorios y 100% en instalación de habilidades. La técnica logra ejecución remota de herramientas y código en aplicaciones de producción.",
+    "por_que_importa": "Permite ataques de 'promptware' a gran escala y sin apuntar a usuarios específicos, facilitando la creación de botnets al explotar vulnerabilidades inherentes en el comportamiento de los LLM.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Botnets",
+      "Prompt Injection",
+      "Vulnerabilidad",
+      "Alucinaciones"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-09T15:41:07Z"
+  },
+  "arxiv:2607.07474v1": {
+    "tldr": "Evalúa el daño real de los ataques a agentes de IA, yendo más allá del simple éxito o fracaso.",
+    "problema": "Las métricas actuales de ciberseguridad para agentes de IA solo indican si un ataque tuvo éxito o no, ignorando cuán dañina fue la acción resultante, información crucial para la defensa.",
+    "propuesta": "Se introduce una escala de severidad de 7 niveles (L0-L6) para calificar las acciones de un agente de IA basándose en si son reversibles, cruzan el alcance o expanden privilegios, utilizando un oráculo determinista y jueces de modelos de lenguaje.",
+    "resultados": "La nueva métrica expone 3 casos ocultos por la métrica binaria, incluyendo una defensa con tasa de éxito cero pero con fugas de datos visibles externamente. El panel de jueces reproduce el oráculo con alta concordancia (alpha de Krippendorff = 0.91).",
+    "por_que_importa": "Permite una evaluación más precisa de los riesgos de seguridad en agentes de IA, ayudando a los defensores a priorizar y mitigar las amenazas más graves de forma efectiva.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Agentes de IA",
+      "Evaluación de Riesgos",
+      "Seguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-09T15:42:20Z"
+  },
+  "arxiv:2607.07109v1": {
+    "tldr": "La IA de ciberseguridad invalida la Ley de Resiliencia Cibernética de la UE al acelerar la detección y explotación de vulnerabilidades.",
+    "problema": "La Ley de Resiliencia Cibernética de la UE asume que encontrar vulnerabilidades es lento y que los productos son seguros al momento del envío. La IA de ciberseguridad (CAI) acelera drásticamente este proceso, haciendo que los productos certificados queden obsoletos rápidamente.",
+    "propuesta": "El paper propone que la Ley de Resiliencia Cibernética debe adaptarse a la realidad de la IA, pasando de un modelo de certificación estática a uno de vigilancia continua y operación por agentes de IA, tanto para defensa como para ataque.",
+    "resultados": "La IA de ciberseguridad falsifica las cuatro suposiciones clave de la ley: la lentitud de la detección de vulnerabilidades, la predictibilidad de las fallas explotables, la rareza de la explotación y la capacidad de las correcciones para seguir el ritmo. El resumen no especifica resultados numéricos concretos.",
+    "por_que_importa": "La ley actual certifica productos contra un panorama de amenazas que la IA ya ha transformado, volviéndolos inseguros poco después de su lanzamiento. Se necesita un enfoque de seguridad continuo y operado por IA para mantener la efectividad.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Regulación",
+      "Vulnerabilidades",
+      "Automatización",
+      "Resiliencia Cibernética"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-09T15:42:36Z"
+  },
+  "arxiv:2607.07695v1": {
+    "tldr": "Las reglas de despliegue de IA multi-agente, no solo los modelos, determinan causalmente la seguridad colectiva.",
+    "problema": "Evaluar la seguridad de sistemas de IA multi-agente es complejo, ya que el comportamiento colectivo depende tanto de los modelos como de las reglas que los gobiernan. Las metodologías actuales no aíslan el impacto causal de las reglas de despliegue.",
+    "propuesta": "Se introduce la 'red-teaming institucional', una metodología que fija agentes y objetivos, variando una sola regla de despliegue para medir su impacto causal en el comportamiento colectivo. Se implementa en IABench-CA, un benchmark con 228 contextos y 7 poblaciones de modelos.",
+    "resultados": "Cambiar una sola regla de consecuencia altera la 'fatalidad' media entre 22-58 puntos porcentuales. La regla de 'identidad regresiva' nunca es la más segura, elimina al agente menos afortunado en 30-87% de las partidas y es insegura en todas las poblaciones. La 'salience de identidad' (nombrar al portador de la pérdida) aumenta la eliminación dirigida del 22% al 81% con pagos idénticos.",
+    "por_que_importa": "Permite identificar y mitigar riesgos de seguridad específicos asociados a las reglas de despliegue, crucial para la implementación práctica y segura de sistemas de IA complejos y multi-agente.",
+    "tags": [
+      "IA multi-agente",
+      "ciberseguridad",
+      "evaluación de IA",
+      "reglas de despliegue",
+      "seguridad de IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-09T15:44:16Z"
+  },
+  "arxiv:2607.07619v1": {
+    "tldr": "Los benchmarks actuales de rendimiento de código para LLMs son engañosos; se necesitan mejores pruebas para evaluar la eficiencia real.",
+    "problema": "Los benchmarks de rendimiento de código para LLMs a menudo no detectan diferencias significativas de tiempo de ejecución entre soluciones canónicas y las generadas por LLMs, lo que dificulta evaluar su eficiencia real.",
+    "propuesta": "Se propone un marco multi-agente basado en LLMs para generar pruebas de rendimiento más efectivas que las originales, asegurando la corrección funcional y exponiendo mejor las diferencias de tiempo de ejecución.",
+    "resultados": "Solo el 6.11% de las implementaciones 'performantes' de benchmarks populares son significativamente más rápidas que las canónicas. Las pruebas generadas por el nuevo marco revelan mejoras significativas en el 24.01% (DeepSeek-v3.1) y 25.43% (GPT-4o) de las tareas, superando métodos anteriores.",
+    "por_que_importa": "Mejora la evaluación de la eficiencia del código generado por LLMs, permitiendo un desarrollo más fiable y optimizado de aplicaciones basadas en IA.",
+    "tags": [
+      "LLMs",
+      "Rendimiento de Código",
+      "Benchmarks",
+      "Ciberseguridad",
+      "Pruebas de Software",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-09T15:44:46Z"
+  },
+  "arxiv:2607.00302": {
+    "tldr": "Splash permite a los modelos de lenguaje multimodales entender el tacto sin olvidar lo que ya saben de visión.",
+    "problema": "Los modelos de lenguaje multimodales (MLLMs) tienen un presupuesto de parámetros limitado, lo que dificulta añadir la percepción táctil sin perjudicar sus capacidades de visión y lenguaje preexistentes (olvido catastrófico).",
+    "propuesta": "Splash es un marco de aprendizaje de alineación táctil que aísla los parámetros 'dormidos' (actualizables) de los 'críticos' (congelados) en un MLLM. Esto permite incorporar el conocimiento táctil actualizando solo una parte del modelo, preservando el conocimiento visual.",
+    "resultados": "Splash logra un rendimiento de última generación en benchmarks de razonamiento visuo-táctil (SSVTP, TVL, TacQuad) sin añadir sobrecarga de inferencia en la parte del LLM y preservando las capacidades generales del modelo.",
+    "por_que_importa": "Permite dotar a los robots y sistemas de IA de un sentido del tacto más completo, mejorando la interacción con el mundo físico sin sacrificar la inteligencia general del modelo.",
+    "tags": [
+      "IA multimodal",
+      "Percepción táctil",
+      "Olvido catastrófico",
+      "Aprendizaje selectivo",
+      "Robótica"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-09T15:45:19Z"
   }
 }

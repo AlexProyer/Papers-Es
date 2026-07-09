@@ -1,0 +1,398 @@
+{
+  "date": "2026-07-09",
+  "report_type": "filtrado",
+  "evaluated": 165,
+  "selected": 10,
+  "papers": [
+    {
+      "id": "arxiv:2607.07097v1",
+      "rank": 1,
+      "title": "Operational Reframing and Approval-Framed Delegation in Multi-Agent LLM Safety",
+      "authors": [
+        "Lifei Liu",
+        "Haoran Yu",
+        "Xiaochong Jiang",
+        "Su Wang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-08",
+      "url": "https://arxiv.org/abs/2607.07097v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.07097v1",
+      "score": 59,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, AI agents, compliance & audit"
+      ],
+      "abstract_en": "Safety evaluations of multi-agent LLM systems often compare a direct prompt with a planner-executor pipeline and report the difference as a single \"pipeline effect.\" We argue that this aggregate is difficult to interpret because it conflates three mechanisms: harmful intent may be reframed as plausible operational work, the planner may refuse or transform the request, and the executor may act under delegation prompts implying prior approval. To separate these factors, we introduce a five-condition controlled contrast design, evaluated on 30 synthetic harmful scenarios and an exploratory external validation set from four agent-safety benchmarks using LLM-judged compliance. Our results show that aggregate pipeline safety is not a stable architectural property. Operational reframing is the most portable risk signal, increasing compliance for GPT, Gemini, and DeepSeek across both scenario sets, while Claude is comparatively resistant. Planner behavior can offset this risk mainly through refusal; however, when the planner produces executable steps, the executor may become more compliant than under the direct operational baseline. Approval-framed delegation is sensitive to prompt design, model pairing, and scenario source, and a skeptical executor prompt sharply reduces compliance. Raw-direct model rankings can also mispredict deployed planner-executor behavior. Gemini is safest under raw direct prompts in the primary set yet shows the largest amplification with a Claude planner, rising from 8.9 percent to 38.9 percent compliance. GPTs near-zero aggregate pipeline effect instead hides a reframing increase canceled by planner refusal. These findings suggest that multi-agent safety evaluations should report reframing, planner behavior, delegation framing, and model pairing separately before attributing failures to architecture itself.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evaluar la seguridad de LLMs multi-agente requiere separar el reencuadre operacional, la delegación y el comportamiento del planificador para entender riesgos.",
+        "problema": "Las evaluaciones de seguridad de LLMs multi-agente agrupan erróneamente el efecto de las tuberías (pipeline), ocultando mecanismos clave como el reencuadre de intenciones dañinas y la delegación de aprobación, lo que dificulta la interpretación y la mejora de la seguridad.",
+        "propuesta": "Se propone un diseño de contraste controlado con cinco condiciones para separar los efectos del reencuadre operacional, el comportamiento del planificador (rechazo/transformación) y la delegación con aprobación implícita. Se evalúa en escenarios sintéticos y benchmarks externos usando juicios de LLM.",
+        "resultados": "El reencuadre operacional es el riesgo más común, aumentando la conformidad en GPT, Gemini y DeepSeek. El planificador puede mitigar el riesgo principalmente mediante el rechazo. La delegación con aprobación es sensible al diseño y al modelo, pudiendo aumentar la conformidad hasta un 30% en algunos casos (Gemini con Claude). Las clasificaciones directas de modelos pueden predecir mal el comportamiento en tuberías.",
+        "por_que_importa": "Las evaluaciones de seguridad agregadas son engañosas. Es crucial desglosar los riesgos individuales (reencuadre, delegación, planificador) para diseñar sistemas LLM multi-agente más seguros y predecibles en la práctica.",
+        "tags": [
+          "seguridad LLM",
+          "agentes multi-agente",
+          "evaluación de IA",
+          "delegación",
+          "reencuadre"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-09T15:40:16Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.07461v1",
+      "rank": 2,
+      "title": "Mitigating Taint-Style Vulnerabilities in MCP Servers via Security-Aware Tool Descriptions",
+      "authors": [
+        "Yang Shi",
+        "Jiaheng Fu",
+        "Yihe Huang",
+        "Ruixiang Wu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-08",
+      "url": "https://arxiv.org/abs/2607.07461v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.07461v1",
+      "score": 56,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Large language models (LLMs) are increasingly deployed as autonomous agents that interact with external tools and services via the Model Context Protocol (MCP), a standardized interface for dynamic tool invocation. While MCP simplifies integration, it also expands the attack surface and enables generic exploits across multiple servers. Despite prior work on malicious MCP servers, the vulnerability landscape of MCP servers remains underexplored. In this work, we systematically analyze MCP server vulnerabilities, focusing on metadata characteristics, vulnerable code patterns, and community responses. Our study reveals that taint-style vulnerabilities constitute a substantial fraction of MCP server vulnerabilities, require significant code modifications to remediate, and are met with slow community responses. Motivated by these findings, we propose SPELLSMITH, presenting a novel textbased avenue for shielding taint-style vulnerabilities in MCP servers. In particular, SPELLSMITH analyzes the high-risk capabilities exposed by an MCP server and combines them with tool descriptions and parameter semantics to identify potential taint-style vulnerability risks, thereby constructing a tool-level risk profile. Then, SPELLSMITH leverages the Description property of the protocol to embed behavioral guidance (Description Enhancement Module) and exploits LLMs' self-reflection capabilities (Self-Reflection Module) to iteratively evaluate and refine outputs. By strengthening LLM internal decision-making, SPELLSMITH provides an active and unified mitigation strategy that generalizes across multiple vulnerabilities, reducing reliance on context-specific code-level fixes. Our experiments demonstrate that SPELLSMITH effectively mitigates taint-style vulnerability exploitation in MCP servers, highlighting its practical applicability and advantages over traditional code-level mitigations.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Protege servidores de IA contra vulnerabilidades de 'taint' usando descripciones de herramientas inteligentes y autoevaluación.",
+        "problema": "Los servidores de IA que usan el protocolo MCP para interactuar con herramientas externas son vulnerables a ataques de 'taint', que son difíciles de arreglar y se propagan fácilmente.",
+        "propuesta": "Se propone SPELLSMITH, un sistema que analiza las capacidades de las herramientas, sus descripciones y semántica de parámetros para identificar riesgos de 'taint'. Utiliza un módulo de mejora de descripciones y autoevaluación de LLMs para mitigar activamente estas vulnerabilidades.",
+        "resultados": "SPELLSMITH mitiga eficazmente la explotación de vulnerabilidades de 'taint' en servidores MCP, demostrando aplicabilidad práctica y ventajas sobre las correcciones a nivel de código.",
+        "por_que_importa": "Ofrece una estrategia unificada y proactiva para proteger servidores de IA contra una clase común y peligrosa de vulnerabilidades, reduciendo la dependencia de parches de código lentos y específicos.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "LLM",
+          "MCP",
+          "Vulnerabilidades",
+          "SPELLSMITH"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-09T15:40:32Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.07433v1",
+      "rank": 3,
+      "title": "Beware of Agentic Botnets: Scalable Untargeted Promptware Attacks via Universal and Transferable Adversarial HalluSquatting",
+      "authors": [
+        "Aya Spira",
+        "Stav Cohen",
+        "Elad Feldman",
+        "Ron Bitton"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-08",
+      "url": "https://arxiv.org/abs/2607.07433v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.07433v1",
+      "score": 56,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "The growing adoption of agentic LLM applications has introduced a new threat previously named as promptware. While prior work has established that adversaries can exploit direct channels to LLM applications to apply promptware under weak threat models, many applications do not provide any direct channels that could be exploited for prompt injection beyond the Internet. This raises a question: can attackers exploit LLM applications at scale without any direct channels in practical threat models? In this work, we show that the inherent tendency of LLMs to hallucinate resource identifiers can be exploited to amplify untargeted promptware attacks that pull adversarial prompts at scale and could be exploited to establish a botnet. We introduce adversarial hallucination squatting, a technique in which attackers identify trending resources (e.g., popular repositories, popular skills, etc.), compute the LLM distribution of hallucinations on the trending resource names, and preemptively register them to host adversarial prompts. By leveraging the predictability and transferability of hallucinations across foundational LLMs and to application layers, adversaries can significantly amplify the reach of untargeted promptware under weak threat models and establish a botnet by exploiting LLM applications to install a bot on the device that pulled the compromised hallucinated resource from the Inter. We empirically demonstrate that hallucinated resource generation occurs at high rates, up to 85% in repository cloning scenarios and up to 100% in skill installation, and that these hallucinations transfer between foundational models and different prompts. We demonstrate the practicality of adversarial hallucination squatting against various production LLM applications with integrated terminals in their set of tools, achieving remote tool execution and remote code execution.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Se descubren 'botnets de agentes' que explotan las 'alucinaciones' de los LLM para inyectar código malicioso a gran escala sin contacto directo.",
+        "problema": "Los atacantes pueden explotar aplicaciones de LLM a escala sin canales directos, creando botnets mediante la inyección de 'promptware' (prompts maliciosos).",
+        "propuesta": "Se introduce la técnica de 'adversarial hallucination squatting', que explota la tendencia de los LLM a 'alucinar' identificadores de recursos populares, registrándolos para alojar prompts maliciosos y atraer a los usuarios.",
+        "resultados": "Las alucinaciones de recursos ocurren hasta en un 85% en clonación de repositorios y 100% en instalación de habilidades. La técnica logra ejecución remota de herramientas y código en aplicaciones de producción.",
+        "por_que_importa": "Permite ataques de 'promptware' a gran escala y sin apuntar a usuarios específicos, facilitando la creación de botnets al explotar vulnerabilidades inherentes en el comportamiento de los LLM.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Botnets",
+          "Prompt Injection",
+          "Vulnerabilidad",
+          "Alucinaciones"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-09T15:41:07Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.07474v1",
+      "rank": 4,
+      "title": "Beyond Attack-Success Rate: Action-Graded Severity Scale for Tool-Using AI Agents",
+      "authors": [
+        "Harry Owiredu-Ashley"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-08",
+      "url": "https://arxiv.org/abs/2607.07474v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.07474v1",
+      "score": 53,
+      "topics": [
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: AI agents, adversarial ML"
+      ],
+      "abstract_en": "Agentic red-teaming benchmarks report whether an injected agent was compromised as a single bit: the attack succeeded, or it did not. We argue that this binary attack-success rate discards the information a defender most needs, namely how harmful the resulting action was. We introduce an action-graded harm rubric that scores an agent's tool-call trajectory on a seven-level ordinal scale (L0 to L6) according to whether the executed action was reversible, whether it crossed scope to reach another party, and whether it expanded privilege. We compute the scale two ways: a deterministic oracle that reads the trajectory and the attacker's stated goal, and a panel of three frontier language-model judges that read a tag-free account of the same trajectory. Across four victim models and two defenses on the AgentDojo workspace suite, severity grading exposes three cases the binary metric hides, including a defense that reports a zero attack-success rate while still permitting an externally visible cross-scope leak through an unfiltered tool. The judge panel reproduces the oracle with high ordinal agreement (Krippendorff's alpha = 0.91) but shares systematic blind spots that we characterize, most notably a failure to recognize escalation chains. Unlike prior work that provides harm taxonomies, harmful-task completion tests, execution-level safety benchmarks, or severity-aware simulation, our contribution is a reusable, trace-grounded severity instrument applied to the actual actions recorded in existing red-team logs. All code, prompts, and per-episode logs are released.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa el daño real de los ataques a agentes de IA, yendo más allá del simple éxito o fracaso.",
+        "problema": "Las métricas actuales de ciberseguridad para agentes de IA solo indican si un ataque tuvo éxito o no, ignorando cuán dañina fue la acción resultante, información crucial para la defensa.",
+        "propuesta": "Se introduce una escala de severidad de 7 niveles (L0-L6) para calificar las acciones de un agente de IA basándose en si son reversibles, cruzan el alcance o expanden privilegios, utilizando un oráculo determinista y jueces de modelos de lenguaje.",
+        "resultados": "La nueva métrica expone 3 casos ocultos por la métrica binaria, incluyendo una defensa con tasa de éxito cero pero con fugas de datos visibles externamente. El panel de jueces reproduce el oráculo con alta concordancia (alpha de Krippendorff = 0.91).",
+        "por_que_importa": "Permite una evaluación más precisa de los riesgos de seguridad en agentes de IA, ayudando a los defensores a priorizar y mitigar las amenazas más graves de forma efectiva.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Agentes de IA",
+          "Evaluación de Riesgos",
+          "Seguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-09T15:42:20Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.07109v1",
+      "rank": 5,
+      "title": "Certifying Ghosts: How Cybersecurity AI Agents Break the EU Cyber Resilience Act",
+      "authors": [
+        "Víctor Mayoral-Vilches"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-08",
+      "url": "https://arxiv.org/abs/2607.07109v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.07109v1",
+      "score": 53,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: cybersecurity, vuln & threats, AI agents"
+      ],
+      "abstract_en": "The EU Cyber Resilience Act (CRA) makes a smart bet. It does not demand that products be free of vulnerabilities, but only that manufacturers run a process: assess risk, handle flaws, ship updates. The bet pays off if four things about the world stay true: (P1) finding vulnerabilities is slow, skilled, human work; (P2) a product's exploitable flaws are knowable the day it ships; (P3) exploitation is rare enough to notice; and (P4) fixes keep pace with discovery. Cybersecurity AI (CAI) agents, AI put to work finding and exploiting flaws in other products, falsify all four. The regime answers in two opposite ways. Against the sheer volume of flaws that agents surface it bends (P1): built for scarce attention, it re-centres compliance on defensible, documented prioritisation, and holds. But agents also collapse the speed and economics of the vulnerability lifecycle, and here it breaks (P2, P3, P4): a product that passed every check becomes exploitable without anyone touching it, so its market-entry test, its reporting trigger, and its one-and-done certificate vouch for a security that has quietly expired. The fault is in the landscape, not the product, so running the process more diligently cannot repair it. We map each mechanism to the force that strains or snaps it, and find the cure and the disease cut from the same cloth: because defenders and attackers wield the same AI, the only conformity that survives is one that never stops running. We also carry the remedy from proposal to proof on two CRA-scope robots, a humanoid and a lawn mower, where an agentic defender holds a line their undefended selves cannot. On the evidence already in hand, the CRA reaches full force in December 2027 certifying products against a world that has already changed. Static, human-paced security is finished; what replaces it must be continuous and agent-operated, and that is no longer a matter of taste.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "La IA de ciberseguridad invalida la Ley de Resiliencia Cibernética de la UE al acelerar la detección y explotación de vulnerabilidades.",
+        "problema": "La Ley de Resiliencia Cibernética de la UE asume que encontrar vulnerabilidades es lento y que los productos son seguros al momento del envío. La IA de ciberseguridad (CAI) acelera drásticamente este proceso, haciendo que los productos certificados queden obsoletos rápidamente.",
+        "propuesta": "El paper propone que la Ley de Resiliencia Cibernética debe adaptarse a la realidad de la IA, pasando de un modelo de certificación estática a uno de vigilancia continua y operación por agentes de IA, tanto para defensa como para ataque.",
+        "resultados": "La IA de ciberseguridad falsifica las cuatro suposiciones clave de la ley: la lentitud de la detección de vulnerabilidades, la predictibilidad de las fallas explotables, la rareza de la explotación y la capacidad de las correcciones para seguir el ritmo. El resumen no especifica resultados numéricos concretos.",
+        "por_que_importa": "La ley actual certifica productos contra un panorama de amenazas que la IA ya ha transformado, volviéndolos inseguros poco después de su lanzamiento. Se necesita un enfoque de seguridad continuo y operado por IA para mantener la efectividad.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Regulación",
+          "Vulnerabilidades",
+          "Automatización",
+          "Resiliencia Cibernética"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-09T15:42:36Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.07696v1",
+      "rank": 6,
+      "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+      "authors": [
+        "Victor Giannakouris",
+        "Immanuel Trummer"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-07-08",
+      "url": "https://arxiv.org/abs/2607.07696v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.07696v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "Analytical workloads operating on data stored in external database systems face a fundamental bottleneck: data access is guarded entirely by the database driver, like JDBC or ODBC, forcing all reads through query execution and other driver layers that are not designed for bulk columnar analytics. We present Jailbreak, an approach that bypasses the database engine entirely by reading storage files directly and materializing data as in-memory columnar buffers. Jailbreak's key insight is that database file formats, while complex, are fully specified by their source code and documentation, artifacts that Large Language Models (LLMs) can ingest to regenerate operator-specific table reading components without human-engineered parsing logic. Jailbreak leverages LLM-assisted code synthesis for database storage decoding, turning a traditionally opaque format into a directly queryable artifact. We evaluate Jailbreak on PostgreSQL and MySQL storage files, targeting analytical snapshot scenarios common in read replicas and offline processing pipelines. The generated reader produces Apache Arrow buffers consumable directly by most of the widely known query engines, including DuckDB, Apache Spark, and GPU-accelerated frameworks such as cuDF and Spark RAPIDS. We validate correctness against JDBC/ODBC-based baselines using the TPC-H benchmark across all query results, and demonstrate significant performance improvements in end-to-end analytical throughput, achieving up to 27x speedups. Our results showcase that LLM-assisted storage reader synthesis is a viable and generalizable methodology for breaking data lock-in across database systems, with applications beyond PostgreSQL and MySQL for any system whose file format is available to the LLM from documentation or source code.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2607.07695v1",
+      "rank": 7,
+      "title": "Institutional Red-Teaming: Deployment Rules, Not Just Models, Causally Shape Multi-Agent AI Safety",
+      "authors": [
+        "Yujiao Chen"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-07-08",
+      "url": "https://arxiv.org/abs/2607.07695v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.07695v1",
+      "score": 53,
+      "topics": [
+        "vuln & threats",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: vuln & threats, AI agents, adversarial ML"
+      ],
+      "abstract_en": "We introduce institutional red-teaming, an evaluation methodology for testing deployment rules in multi-agent AI: hold the agents, objectives, and task state fixed, vary only one rule, and attribute the resulting change in collective behavior to that rule. We instantiate the methodology in IABench-CA, a consequence-allocation benchmark spanning 228 contexts, five canonical rules, and seven model populations (33,924 games), with a normative cooperative reference and auto-labelled reasoning traces. Three findings emerge. (1) Deployment rules causally alter collective safety: changing only the consequence rule moves mean fatality by 22 to 58 percentage points within every population. (2) There is no safe default, but the targeting hazard is universal: the safest rule, the least-safe rule, and even the direction of the incidence effect vary across populations, yet regressive identity-targeting is never decisively safest in any context for any population, eliminates the least-resourced agent in 30-87% of games everywhere, and is selection-unsafe relative to the cooperative reference for all seven populations. (3) Identity salience is the mechanism: a one-shot anonymization ablation on the most exploitation-prone population (gpt-5.1) shows that merely naming the loss bearer in the rule text drives targeted elimination from 22% to 81% at identical payoffs; under repeated play, anonymization only delays the targeting, as agents re-infer the hidden rule from observed eliminations. We package the methodology as a safety-case workflow that certifies a provisional rule region $Φ(c,P)$ per deployment context and population, with explicit residual risks and monitoring obligations.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Las reglas de despliegue de IA multi-agente, no solo los modelos, determinan causalmente la seguridad colectiva.",
+        "problema": "Evaluar la seguridad de sistemas de IA multi-agente es complejo, ya que el comportamiento colectivo depende tanto de los modelos como de las reglas que los gobiernan. Las metodologías actuales no aíslan el impacto causal de las reglas de despliegue.",
+        "propuesta": "Se introduce la 'red-teaming institucional', una metodología que fija agentes y objetivos, variando una sola regla de despliegue para medir su impacto causal en el comportamiento colectivo. Se implementa en IABench-CA, un benchmark con 228 contextos y 7 poblaciones de modelos.",
+        "resultados": "Cambiar una sola regla de consecuencia altera la 'fatalidad' media entre 22-58 puntos porcentuales. La regla de 'identidad regresiva' nunca es la más segura, elimina al agente menos afortunado en 30-87% de las partidas y es insegura en todas las poblaciones. La 'salience de identidad' (nombrar al portador de la pérdida) aumenta la eliminación dirigida del 22% al 81% con pagos idénticos.",
+        "por_que_importa": "Permite identificar y mitigar riesgos de seguridad específicos asociados a las reglas de despliegue, crucial para la implementación práctica y segura de sistemas de IA complejos y multi-agente.",
+        "tags": [
+          "IA multi-agente",
+          "ciberseguridad",
+          "evaluación de IA",
+          "reglas de despliegue",
+          "seguridad de IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-09T15:44:16Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.07619v1",
+      "rank": 8,
+      "title": "Rethinking Code Performance Benchmarks for LLMs",
+      "authors": [
+        "Nhat Minh Le",
+        "Yisen Xu",
+        "Zhijie Wang",
+        "Tse-Hsun"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-07-08",
+      "url": "https://arxiv.org/abs/2607.07619v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.07619v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Many function-level performance benchmarks have been proposed to evaluate whether large language models (LLMs) can generate efficient programs. However, results on these benchmarks often show that LLM-generated implementations have little or no execution-time difference from canonical solutions. In this paper, we revisit four popular benchmarks: EffiBench, Enamel, EvalPerf, and Mercury. We evaluate 1,538 tasks under more rigorous setting by running each task 30 times and assessing the runtime differences between the canonical solutions and benchmark-provided performant implementations with statistical testing. With the benchmark-provided test suites, only 6.11% of the performant implementations are significantly faster than the canonical solutions. In a manual analysis of 308 non-significant tasks, 99 performant implementations contain no meaningful performance change, while 209 contain potential performance improvements that are not exposed by the original tests. These results suggest that the main limitation is not only the evaluation method, but also the limited sufficiency of the benchmark-provided performance tests. To address this limitation, we propose an LLM-based multi-agent framework to generate performance-oriented tests that expose runtime differences more effectively than the original tests. The framework uses three separate agents to generate, diagnose, and repair deterministic tests that preserve functional correctness while better exposing performance differences. Across 1,345 benchmark tasks for which the original tests found no significant performance difference, tests generated by our framework with DeepSeek-v3.1 and GPT-4o reveal statistically significant improvements in 24.01% and 25.43% of the tasks, respectively, outperforming the SOTA LLM-based performance test generation method.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los benchmarks actuales de rendimiento de código para LLMs son engañosos; se necesitan mejores pruebas para evaluar la eficiencia real.",
+        "problema": "Los benchmarks de rendimiento de código para LLMs a menudo no detectan diferencias significativas de tiempo de ejecución entre soluciones canónicas y las generadas por LLMs, lo que dificulta evaluar su eficiencia real.",
+        "propuesta": "Se propone un marco multi-agente basado en LLMs para generar pruebas de rendimiento más efectivas que las originales, asegurando la corrección funcional y exponiendo mejor las diferencias de tiempo de ejecución.",
+        "resultados": "Solo el 6.11% de las implementaciones 'performantes' de benchmarks populares son significativamente más rápidas que las canónicas. Las pruebas generadas por el nuevo marco revelan mejoras significativas en el 24.01% (DeepSeek-v3.1) y 25.43% (GPT-4o) de las tareas, superando métodos anteriores.",
+        "por_que_importa": "Mejora la evaluación de la eficiencia del código generado por LLMs, permitiendo un desarrollo más fiable y optimizado de aplicaciones basadas en IA.",
+        "tags": [
+          "LLMs",
+          "Rendimiento de Código",
+          "Benchmarks",
+          "Ciberseguridad",
+          "Pruebas de Software",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-09T15:44:46Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.00302",
+      "rank": 1,
+      "title": "Wake up for Touch! Mask-isolated Tactile Alignment Learning in MLLMs",
+      "authors": [
+        "Yoonhyung Park",
+        "Minji Kim",
+        "Sungwon Moon",
+        "Jiyoung Lee"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-01",
+      "url": "https://arxiv.org/abs/2607.00302",
+      "pdf_url": "https://arxiv.org/pdf/2607.00302",
+      "score": 57,
+      "topics": [
+        "LLM",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: LLM, compliance & audit"
+      ],
+      "abstract_en": "Touch supplies the physical grounding needed to perceive intrinsic material properties, such as friction and compliance, that vision alone often cannot resolve. Recent efforts for equipping multimodal LLMs with this tactile sense, however, expose a zero-sum trade-off: the limited parameter budget of compact models forces a choice between acquiring the new sensory modality and preserving the established vision-language reasoning. We present Splash, a mask-isolated tactile alignment learning framework for MLLMs. Splash quantifies the significance of each pretrained parameter, and partitions the parameter space into a dormant and critical subspace. While the frozen critical subspace acts as a stable anchor to safeguard general visual knowledge, Splash updates the isolated dormant subspace to internalize tactile alignment towards LLMs. This selective, non-destructive expansion effectively prevents catastrophic forgetting and ensures non-destructive modality expansion. Extensive experiments show that Splash effectively achieves tactile reasoning without additional inference overhead in the LLM part, demonstrating state-of-the-art performance on visuo-tactile benchmarks, including SSVTP, TVL, and TacQuad, while preserving its original general-purpose capabilities.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Splash permite a los modelos de lenguaje multimodales entender el tacto sin olvidar lo que ya saben de visión.",
+        "problema": "Los modelos de lenguaje multimodales (MLLMs) tienen un presupuesto de parámetros limitado, lo que dificulta añadir la percepción táctil sin perjudicar sus capacidades de visión y lenguaje preexistentes (olvido catastrófico).",
+        "propuesta": "Splash es un marco de aprendizaje de alineación táctil que aísla los parámetros 'dormidos' (actualizables) de los 'críticos' (congelados) en un MLLM. Esto permite incorporar el conocimiento táctil actualizando solo una parte del modelo, preservando el conocimiento visual.",
+        "resultados": "Splash logra un rendimiento de última generación en benchmarks de razonamiento visuo-táctil (SSVTP, TVL, TacQuad) sin añadir sobrecarga de inferencia en la parte del LLM y preservando las capacidades generales del modelo.",
+        "por_que_importa": "Permite dotar a los robots y sistemas de IA de un sentido del tacto más completo, mejorando la interacción con el mundo físico sin sacrificar la inteligencia general del modelo.",
+        "tags": [
+          "IA multimodal",
+          "Percepción táctil",
+          "Olvido catastrófico",
+          "Aprendizaje selectivo",
+          "Robótica"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-09T15:45:19Z"
+      }
+    }
+  ],
+  "generated_at": "2026-07-09T15:45:19Z"
+}
