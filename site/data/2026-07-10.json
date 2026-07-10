@@ -1,0 +1,402 @@
+{
+  "date": "2026-07-10",
+  "report_type": "filtrado",
+  "evaluated": 156,
+  "selected": 9,
+  "papers": [
+    {
+      "id": "arxiv:2607.08652v1",
+      "rank": 1,
+      "title": "Formal Mechanisms for Market Stability in Self-Interested Agent Societies: A Marketplace Simulation Study",
+      "authors": [
+        "Eugene Ng Yi Sheng",
+        "Bingquan Shen"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-07-09",
+      "url": "https://arxiv.org/abs/2607.08652v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08652v1",
+      "score": 56,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "Self-interested agents, left unconstrained, tend toward defection in repeated social dilemmas, causing cooperative gains from trade to collapse. This paper investigates what formal mechanisms, layered on top of unrestricted communication, are sufficient for a society of such agents to maintain market stability, and how resilient those mechanisms are to adversarial attack. We instantiate the research question as a multi-agent marketplace simulation where 18 LLM agents (DeepSeek-V3) with complementary production specialties must trade within a constrained social network to obtain utility. We conduct two experimental phases: (1) a mechanism comparison across eight conditions under progressive troll injection over 200 rounds, identifying Mediation as the top-performing mechanism; and (2) adversarial red-teaming of Mediation using iteratively prompt-optimised LLM-driven trolls, finding that the best attack (v6) reduces honest-agent utility by 13.3% but cannot collapse the market. Mediation enables recovery even under sustained adversarial pressure. We define adversarial robustness as a mechanism's ability to sustain positive honest-agent utility under optimised attack, and find that Mediation is robust: it can be bent but not broken.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Mecanismos formales como la Mediación pueden asegurar la estabilidad del mercado entre agentes IA egoístas, incluso ante ataques.",
+        "problema": "Los agentes de IA egoístas tienden a la no cooperación en interacciones repetidas, lo que puede colapsar las ganancias del comercio y la estabilidad del mercado.",
+        "propuesta": "Se investigan mecanismos formales, aplicados sobre comunicación libre, para mantener la estabilidad en sociedades de agentes egoístas, simulando un mercado con agentes LLM y analizando la resiliencia ante ataques.",
+        "resultados": "La 'Mediación' fue el mecanismo más efectivo. Incluso bajo ataques optimizados (v6), la utilidad de los agentes honestos se redujo un 13.3%, pero el mercado no colapsó, demostrando la robustez de la Mediación.",
+        "por_que_importa": "Demuestra que es posible diseñar sistemas con agentes IA egoístas que mantengan la estabilidad y el comercio, incluso frente a intentos de sabotaje, lo cual es crucial para la adopción de IA en mercados y sistemas complejos.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Estabilidad de Mercado",
+          "Agentes Autónomos",
+          "Mecanismos de Coordinación",
+          "Robustez"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-10T15:10:06Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.08137v1",
+      "rank": 2,
+      "title": "Securing Autonomous Vehicle Systems via Twin-Aware Federated Reinforcement Learning",
+      "authors": [
+        "Zifan Zhang",
+        "Minghong Fang",
+        "Dianwei Chen",
+        "Zhuqing Liu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-09",
+      "url": "https://arxiv.org/abs/2607.08137v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08137v1",
+      "score": 54,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Federated reinforcement learning (FRL) is crucial for enabling collaborative learning across multiple agents without sharing raw data, thereby enhancing privacy and scalability in the decision-making process within dynamic vehicular environments. However, poisoning attacks pose a significant threat to the security and reliability of FRL-based systems, particularly in safety-critical autonomous driving, where this vulnerability remains largely unexplored. These attacks can compromise the global control model by subtly injecting malicious system parameters, leading to potential hazards. To counter these challenges, we present \\alg (\\underline{Sec}ure \\underline{A}ggregation with \\underline{p}oisoning-\\underline{p}revention and historical reinforcement) as a defensive framework aimed at enhancing the robustness of FRL systems designed for safety-critical driving scenarios. \\alg strategically integrates digital twins for rehearsal-based learning and leverages historical aggregated model parameters along with a selected central gradient to ensure that only benign data is aggregated, effectively mitigating the influence of malicious agents. Theoretical guarantees are provided for the convergence performance of \\alg in the presence of poisoning attacks. We also validate the effectiveness of \\alg using developed digital twins that model realistic highway environments to evaluate the control of autonomous vehicles under adversarial conditions.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Protege vehículos autónomos contra ataques de envenenamiento en el aprendizaje federado con un nuevo marco defensivo.",
+        "problema": "Los sistemas de aprendizaje federado en vehículos autónomos son vulnerables a ataques de envenenamiento que comprometen el modelo de control global, lo cual es crítico para la seguridad vial.",
+        "propuesta": "Se propone el marco \\'alg (Secure Aggregation with poisoning-prevention and historical reinforcement), que utiliza 'gemelos digitales' para simular escenarios y datos históricos para filtrar información maliciosa antes de la agregación.",
+        "resultados": "El resumen no especifica resultados numéricos, pero afirma que \\'alg mitiga eficazmente la influencia de agentes maliciosos y proporciona garantías teóricas de convergencia.",
+        "por_que_importa": "Asegura la fiabilidad y seguridad de los vehículos autónomos en entornos dinámicos y potencialmente hostiles, protegiendo a los pasajeros y otros usuarios de la vía.",
+        "tags": [
+          "vehículos autónomos",
+          "ciberseguridad",
+          "aprendizaje federado",
+          "ataques de envenenamiento",
+          "gemelos digitales",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-10T15:11:10Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.08011v1",
+      "rank": 3,
+      "title": "Beware What You Autocomplete: Forensic Attribution of Backdoored Code Completions",
+      "authors": [
+        "Anjun Gao",
+        "Yueyang Quan",
+        "Zhuqing Liu",
+        "Minghong Fang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-09",
+      "url": "https://arxiv.org/abs/2607.08011v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08011v1",
+      "score": 53,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "Large language models have enabled powerful code completion systems that assist developers by predicting subsequent lines of code. However, these models remain vulnerable to backdoor attacks, where malicious fine-tuning data covertly implants unsafe behaviors. Despite advances in defensive techniques, adaptive and sophisticated backdoor attacks still evade detection and mitigation. We present CodeTracer, a forensic framework that traces malicious code completions back to the backdoor fine-tuning data responsible for them. Operating under realistic post-deployment constraints, CodeTracer relies solely on the fine-tuning corpus and the reported miscompletion event. It extracts a structured behavioral fingerprint from the compromised output, narrows the search to semantically relevant code samples, and employs LLM-based reasoning to attribute unsafe logic to specific backdoor data. Extensive evaluations across three representative vulnerability cases and ten backdoor attacks, along with sixteen competitive baselines, demonstrate that CodeTracer consistently achieves high forensic accuracy, low false identification rates, and strong robustness against adaptive attacks.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Detecta y rastrea el código malicioso insertado por ataques de 'backdoor' en sistemas de autocompletado de código.",
+        "problema": "Los sistemas de autocompletado de código basados en LLMs son vulnerables a ataques de 'backdoor' que insertan comportamientos inseguros, y las defensas actuales no siempre los detectan.",
+        "propuesta": "Presentamos CodeTracer, un framework forense que rastrea las autocompletaciones maliciosas hasta los datos de entrenamiento que las causaron, extrayendo huellas conductuales y usando razonamiento LLM para la atribución.",
+        "resultados": "CodeTracer demuestra alta precisión forense, bajas tasas de falsas identificaciones y robustez contra ataques adaptativos en tres casos de vulnerabilidad y diez ataques de 'backdoor', superando a dieciséis 'baselines'.",
+        "por_que_importa": "Permite identificar la fuente de código inseguro introducido por 'backdoors', mejorando la seguridad y fiabilidad de las herramientas de desarrollo asistido por IA.",
+        "tags": [
+          "ciberseguridad",
+          "IA",
+          "backdoor",
+          "autocompletado de código",
+          "forense",
+          "LLM"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-10T15:11:44Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.08282v1",
+      "rank": 4,
+      "title": "Multi-Agent Firewall Architecture for Privacy Protection of Sensitive Data in Interactions with Language Models",
+      "authors": [
+        "Hugo García Cuesta",
+        "Pablo Mateo Torrejón",
+        "Alfonso Sánchez-Macián"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-09",
+      "url": "https://arxiv.org/abs/2607.08282v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08282v1",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "While Large Language Models (LLMs) have become essential productivity tools, their integration into workflows without adequate safeguards creates significant risks. This paper proposes an open-source, privacy-focused, user-facing firewall designed to secure both web-based and programmatic LLM interactions. The architecture combines a browser extension and a proxy for total traffic interception across both HTTP(S) and WebSocket communications. At its core, a flexible multi-agent pipeline delivers data leakage prevention through a hybrid approach combining deterministic detectors with LLM-driven semantic analysis, proprietary code leakage prevention, and extensible components designed for future security enhancements such as prompt injection evasion. The framework's layered architecture enables deployment across heterogeneous environments, allowing organizations to balance computational cost, detection depth and latency. Evaluation results demonstrate it achieves F1 scores of up to 94.93% on optimal configurations.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Protege tus datos sensibles al interactuar con modelos de lenguaje con un firewall de IA multiagente.",
+        "problema": "La integración de modelos de lenguaje grandes (LLMs) en flujos de trabajo sin salvaguardas adecuadas presenta riesgos significativos de fuga de datos sensibles.",
+        "propuesta": "Se propone una arquitectura de firewall de código abierto y centrada en la privacidad, implementada como una extensión de navegador y un proxy, que intercepta todo el tráfico (HTTP(S) y WebSocket) y utiliza un pipeline multiagente con detección determinista y análisis semántico basado en LLM para prevenir fugas de datos y código.",
+        "resultados": "La evaluación demuestra que la arquitectura logra puntuaciones F1 de hasta el 94.93% en configuraciones óptimas.",
+        "por_que_importa": "Permite a las organizaciones proteger la información confidencial al usar LLMs, equilibrando seguridad, coste computacional y latencia, y es extensible para futuras amenazas.",
+        "tags": [
+          "ciberseguridad",
+          "privacidad",
+          "modelos de lenguaje",
+          "firewall",
+          "IA",
+          "protección de datos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-10T15:11:57Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.08681v1",
+      "rank": 5,
+      "title": "SolarChain-Eval: A Physics-Constrained Benchmark for Trustworthy Economic Agents in Decentralized Energy Markets",
+      "authors": [
+        "Shilin Ou",
+        "Yifan Xu",
+        "Luyao Zhang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-07-09",
+      "url": "https://arxiv.org/abs/2607.08681v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08681v1",
+      "score": 52,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "As agentic AI systems are increasingly applied to cyber-physical environments, their evaluation requires assessment of both task performance and trustworthiness. In decentralized energy markets, autonomous agents may improve market utility, but may also exploit invalid physical data, create artificial liquidity, and produce unstable governance decisions. Therefore, we propose SolarChain-Eval, a physics-constrained benchmark for evaluating trustworthy economic agents. It formulates market governance as a Gymnasium-compatible Markov Decision Process, where agents make hourly decisions. SolarChain-Eval evaluates each policy across multiple dimensions, including market utility, physical safety, slippage, action smoothness, spatial fairness, and auditability. To support agentic evaluation, SolarChain-Eval incorporates an LLM-based Planner/Auditor layer. The Planner defines episode-level action bounds and audit rules, while the Auditor reviews and revises high-risk actions. All interventions are recorded through structured logs, including trigger signals, proposed actions, revised actions, and audit rationales. Experiments with static, random, myopic, RL, and RL+LLM policies reveal a clear utility-safety trade-off. RL agents improve market utility but can still produce unsafe behavior. When the physics penalty is removed, reward-maximizing agents exploit invalid generation and increase artificial liquidity. The LLM Planner/Auditor improves auditability and mitigates selected risks, but it cannot fully compensate for a misspecified reward function. These results indicate that trustworthy agentic AI evaluation requires both physical constraints and transparent intervention traces. We release data and code as open access on GitHub for replicability.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa agentes de IA en mercados de energía descentralizados, garantizando seguridad física y utilidad económica.",
+        "problema": "Los agentes de IA en mercados de energía pueden mejorar la utilidad pero también explotar datos físicos inválidos, crear liquidez artificial y tomar decisiones de gobernanza inestables.",
+        "propuesta": "SolarChain-Eval, un benchmark con restricciones físicas que formula la gobernanza del mercado como un Proceso de Decisión de Markov compatible con Gymnasium. Incluye una capa LLM (Planner/Auditor) para definir límites de acción y revisar acciones de alto riesgo.",
+        "resultados": "Los agentes RL mejoran la utilidad del mercado pero pueden ser inseguros. Al eliminar la penalización física, los agentes explotan la generación inválida y aumentan la liquidez artificial. El LLM Planner/Auditor mejora la auditabilidad y mitiga riesgos, pero no compensa completamente una función de recompensa mal especificada.",
+        "por_que_importa": "Demuestra que la evaluación de agentes de IA confiables requiere tanto restricciones físicas como rastros de intervención transparentes para garantizar un comportamiento seguro y predecible en sistemas ciberfísicos.",
+        "tags": [
+          "IA Confiable",
+          "Mercados de Energía",
+          "Agentes Autónomos",
+          "Ciberseguridad",
+          "Evaluación de Modelos",
+          "Energías Renovables"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-10T15:12:35Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.08395v1",
+      "rank": 6,
+      "title": "Token-Flow Firewall: Semantic Runtime Auditing for Persistent AI Agents",
+      "authors": [
+        "Puji Wang",
+        "Yingchen Zhang",
+        "Ruqing Zhang",
+        "Jiafeng Guo"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-09",
+      "url": "https://arxiv.org/abs/2607.08395v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08395v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Persistent AI agents extend large language models (LLMs) beyond single-turn interaction into long-lived software systems. Unlike traditional chat assistants, unsafe content in these agents can propagate through persistent state, reusable skills, and tool-mediated interactions, creating a substantially larger semantic attack surface. We observe that most security-critical interactions in such agents are transmitted through natural-language token flows, including memory updates, tool arguments, retrieved files, and inter-component communications. This observation enables a new security formulation: unsafe behavior can be intercepted as risky semantic flows before reaching privileged runtime sinks. Based on this insight, we propose TokenWall, a runtime defense framework that acts as a semantic firewall over agent token flows. TokenWall performs boundary-aware semantic auditing over these flows, constructing structured source-sink audit records, applying lightweight local inspection before execution, and selectively escalating ambiguous high-risk cases to stronger arbitration modules. Unlike prior approaches that rely on sparse auditing or remote large-model oversight, TokenWall enables full-coverage pre-execution mediation while reducing remote arbitration and latency. Experiments on CIK-Bench show that TokenWall reduces attack success rate to 12.5% while maintaining a 97.4% benign executable pass rate without human confirmation. TokenWall further introduces only 0.69 seconds of additional latency on benign cases, demonstrating that semantic runtime containment can achieve a practical security-utility trade-off for persistent AI agents.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "TokenWall audita flujos de tokens semánticos para proteger agentes de IA persistentes contra ataques de seguridad.",
+        "problema": "Los agentes de IA persistentes, que van más allá de las interacciones de un solo turno, presentan una superficie de ataque semántica ampliada debido a la propagación de contenido inseguro a través de estados persistentes, habilidades reutilizables e interacciones con herramientas.",
+        "propuesta": "TokenWall es un marco de defensa en tiempo de ejecución que actúa como un firewall semántico para los flujos de tokens de los agentes. Realiza auditorías semánticas conscientes de los límites, construye registros de auditoría estructurados de origen a destino, realiza inspecciones locales ligeras antes de la ejecución y escala selectivamente casos ambiguos de alto riesgo a módulos de arbitraje más potentes.",
+        "resultados": "TokenWall reduce la tasa de éxito de los ataques al 12.5% y mantiene una tasa de aprobación de ejecutables benignos del 97.4% sin confirmación humana. Introduce solo 0.69 segundos de latencia adicional en casos benignos.",
+        "por_que_importa": "Permite una mediación de cobertura total previa a la ejecución para agentes de IA persistentes, logrando un equilibrio práctico entre seguridad y utilidad al reducir el arbitraje remoto y la latencia.",
+        "tags": [
+          "IA persistente",
+          "Ciberseguridad",
+          "Firewall semántico",
+          "Auditoría en tiempo de ejecución",
+          "LLMs"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-10T15:13:38Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.08288v1",
+      "rank": 7,
+      "title": "From Legacy Documentation to OSCAL: An MCP-Based Agent Pipeline for Threat-Informed Continuous Compliance in Critical Infrastructure",
+      "authors": [
+        "Lea Roxanne Muth",
+        "Marian Margraf"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-09",
+      "url": "https://arxiv.org/abs/2607.08288v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.08288v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "In critical infrastructure, operational technology environments often cannot be actively scanned, and yet active system feedback is needed for risk assessment and compliance. This paper presents a non-invasive, MCP-grounded multi-agent pipeline that converts natural-language system descriptions into source-verified knowledge graph and audit-ready artifacts in the NIST OSCAL format for continuous automated compliance management. The architecture decouples LLM-based reasoning from deterministic knowledge retrieval against authoritative threat-intelligence sources, reducing the risk of fabricated vulnerabilities and hallucinated attack paths. In an evidence-based synthetic scenario of a water utility, the pipeline achieves 0.90 CVE recall and perfect D3FEND recall. It generates a schema-valid OSCAL System Security Plan and an OSCAL Security Assessment Report. Nevertheless, the core insight is not that grounding via MCP eliminates errors (e.g., hallucinations) entirely from the pipeline, but that it shifts errors into the first phase of asset extraction from the natural language description. Here, a single incorrectly extracted entity can lead to genuine but irrelevant CVEs in subsequent stages of the pipeline, which consumes time and resources. However, it makes the remaining risk visible, verifiable, and suitable for a time-efficient manual review, since the infrastructure (e.g., version numbers, OS, etc.) is typically known.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2607.08093",
+      "rank": 1,
+      "title": "CausalDS: Benchmarking Causal Reasoning in Data-Science Agents",
+      "authors": [
+        "Andrej Leban",
+        "Yuekai Sun"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-09",
+      "url": "https://arxiv.org/abs/2607.08093",
+      "pdf_url": "https://arxiv.org/pdf/2607.08093",
+      "score": 69,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Large language models (LLMs) increasingly act as integrated data-science agents, combining abstract reasoning with advanced tool use. Yet the relevant benchmark landscape largely divides into symbolic causal reasoning benchmarks without realistic data analysis or data analysis benchmarks without a principled causal data-generating structure. Furthermore, existing causal evaluation datasets are often restricted to curated examples from existing sources, with diversity coming from limited templatized variations rather than from systematic generation of novel synthetic causal structures. We introduce CausalDS, a benchmark for evaluating causal reasoning in agentic data-science workflows. Each benchmark instance is a scene consisting of a sampled structural causal model (SCM) with generated observational data and an accompanying synthetic natural-language story grounded in a realistic domain. We optionally ground the composition of the benchmark components in empirical distributions obtained from real-world datasets, thus retaining empirical structure while reducing the \"causal parrot\" risk through completely synthetic generation. From each scene, we then derive tasks spanning all three of Pearl's rungs, with typical data-science prediction tasks appearing as Rung 1. Most tasks include a data science coding component, where the model typically needs to use several tools to arrive at the final answer due to the frequent presence of imperfect observations, which are generated by an observation model. Additionally, recognizing when a question admits no warranted answer and abstaining is treated as a first-class scored outcome. The benchmark thus jointly evaluates symbolic causal reasoning, data science, uncertainty quantification, abstention, and tool use/coding.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "CausalDS evalúa la capacidad de los agentes de ciencia de datos para razonar causalmente con datos sintéticos realistas y herramientas.",
+        "problema": "Los benchmarks actuales para agentes de ciencia de datos con LLMs dividen el razonamiento causal simbólico de la ciencia de datos real, o usan datos curados con poca diversidad estructural causal.",
+        "propuesta": "Presentamos CausalDS, un benchmark con modelos causales estructurales (SCMs) sintéticos y datos generados, junto con historias en lenguaje natural. Incluye tareas en los tres peldaños de Pearl, con un componente de codificación de ciencia de datos y evaluación de la abstención.",
+        "resultados": "El resumen no especifica resultados numéricos, pero el benchmark evalúa conjuntamente razonamiento causal, ciencia de datos, cuantificación de incertidumbre, abstención y uso de herramientas.",
+        "por_que_importa": "Permite evaluar de forma más completa y realista la fiabilidad de los agentes de IA en tareas complejas de análisis de datos y toma de decisiones causales.",
+        "tags": [
+          "razonamiento causal",
+          "agentes IA",
+          "ciencia de datos",
+          "benchmarking",
+          "LLMs",
+          "ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-10T15:16:10Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.07740",
+      "rank": 2,
+      "title": "Jet-Long: Efficient Long-Context Extension with Dynamic Bifocal RoPE",
+      "authors": [
+        "Haozhan Tang",
+        "Zerui Wang",
+        "Yuxian Gu",
+        "Song Han"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-08",
+      "url": "https://arxiv.org/abs/2607.07740",
+      "pdf_url": "https://arxiv.org/pdf/2607.07740",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Modern LLMs are increasingly deployed in long-context applications such as retrieval-augmented generation, repository-level coding, and agentic workflows whose accumulated reasoning and tool traces routinely push the input an order of magnitude past the pretraining window, making zero-shot context extension the dominant deployment path for open-weight checkpoints. Most existing zero-shot methods fix a single rescaling factor up front, so an aggressive factor sacrifices short-context fidelity while a conservative one breaks down at long contexts. We propose Jet-Long, a tuning-free zero-shot method that pairs a local RoPE-faithful window with a long-range window whose rescaling factor adapts dynamically to the current sequence length, recovering the base model exactly at short inputs while extrapolating cleanly at long ones. An inclusion-exclusion attention merge and an on-the-fly RoPE correction rotation make the bifocal construction essentially free at inference; fused into a single CuTe kernel, long-context prefill reaches up to $1.39\\times$ FA2 throughput on H100 (approaching the Hopper-only FA4), and single-batch generation incurs $\\le 4\\%$ overhead at every length. On Qwen3-1.7B/4B/8B up to 128K context, Jet-Long leads RULER by $+4.79$/$+2.18$/$+2.03$~pp over the strongest baseline at 1.7B/4B/8B, achieves the best overall accuracy on HELMET-RAG (a benchmark identified by HELMET as the most efficient predictor of downstream long-context performance) and attains the lowest PG-19 perplexity. Jet-Long also generalizes to hybrid attention architectures such as Jet-Nemotron for further long-context improvement without retraining, and remains hyperparameter-resilient for ease of deployment.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Jet-Long extiende eficientemente el contexto de LLMs sin ajuste, adaptando dinámicamente la atención a la longitud de la secuencia.",
+        "problema": "Los LLMs actuales fallan al procesar contextos muy largos, perdiendo precisión en secuencias cortas o rompiéndose en las largas, debido a factores de reescalado fijos.",
+        "propuesta": "Jet-Long introduce un método de extensión de contexto 'zero-shot' que combina una ventana local fiel a RoPE con una ventana de largo alcance cuyo factor de reescalado se adapta dinámicamente a la longitud de la secuencia.",
+        "resultados": "Mejora la precisión en Qwen3 hasta 128K de contexto (hasta +4.79pp), logra la mejor precisión en HELMET-RAG y la menor perplejidad en PG-19. El prellenado de contexto largo alcanza hasta 1.39x el throughput de FA2 en H100, con un overhead de generación de solo <=4%.",
+        "por_que_importa": "Permite a los LLMs manejar aplicaciones de contexto extendido (como RAG o codificación de repositorios) de manera eficiente y precisa sin necesidad de reentrenamiento, mejorando su aplicabilidad práctica.",
+        "tags": [
+          "LLMs",
+          "Contexto Largo",
+          "RoPE",
+          "Eficiencia",
+          "Ciberseguridad",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-10T15:17:19Z"
+      }
+    }
+  ],
+  "generated_at": "2026-07-10T15:17:19Z"
+}

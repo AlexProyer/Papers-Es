@@ -1234,5 +1234,140 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-07-09T15:45:19Z"
+  },
+  "arxiv:2607.08652v1": {
+    "tldr": "Mecanismos formales como la Mediación pueden asegurar la estabilidad del mercado entre agentes IA egoístas, incluso ante ataques.",
+    "problema": "Los agentes de IA egoístas tienden a la no cooperación en interacciones repetidas, lo que puede colapsar las ganancias del comercio y la estabilidad del mercado.",
+    "propuesta": "Se investigan mecanismos formales, aplicados sobre comunicación libre, para mantener la estabilidad en sociedades de agentes egoístas, simulando un mercado con agentes LLM y analizando la resiliencia ante ataques.",
+    "resultados": "La 'Mediación' fue el mecanismo más efectivo. Incluso bajo ataques optimizados (v6), la utilidad de los agentes honestos se redujo un 13.3%, pero el mercado no colapsó, demostrando la robustez de la Mediación.",
+    "por_que_importa": "Demuestra que es posible diseñar sistemas con agentes IA egoístas que mantengan la estabilidad y el comercio, incluso frente a intentos de sabotaje, lo cual es crucial para la adopción de IA en mercados y sistemas complejos.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Estabilidad de Mercado",
+      "Agentes Autónomos",
+      "Mecanismos de Coordinación",
+      "Robustez"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-10T15:10:06Z"
+  },
+  "arxiv:2607.08137v1": {
+    "tldr": "Protege vehículos autónomos contra ataques de envenenamiento en el aprendizaje federado con un nuevo marco defensivo.",
+    "problema": "Los sistemas de aprendizaje federado en vehículos autónomos son vulnerables a ataques de envenenamiento que comprometen el modelo de control global, lo cual es crítico para la seguridad vial.",
+    "propuesta": "Se propone el marco \\'alg (Secure Aggregation with poisoning-prevention and historical reinforcement), que utiliza 'gemelos digitales' para simular escenarios y datos históricos para filtrar información maliciosa antes de la agregación.",
+    "resultados": "El resumen no especifica resultados numéricos, pero afirma que \\'alg mitiga eficazmente la influencia de agentes maliciosos y proporciona garantías teóricas de convergencia.",
+    "por_que_importa": "Asegura la fiabilidad y seguridad de los vehículos autónomos en entornos dinámicos y potencialmente hostiles, protegiendo a los pasajeros y otros usuarios de la vía.",
+    "tags": [
+      "vehículos autónomos",
+      "ciberseguridad",
+      "aprendizaje federado",
+      "ataques de envenenamiento",
+      "gemelos digitales",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-10T15:11:10Z"
+  },
+  "arxiv:2607.08011v1": {
+    "tldr": "Detecta y rastrea el código malicioso insertado por ataques de 'backdoor' en sistemas de autocompletado de código.",
+    "problema": "Los sistemas de autocompletado de código basados en LLMs son vulnerables a ataques de 'backdoor' que insertan comportamientos inseguros, y las defensas actuales no siempre los detectan.",
+    "propuesta": "Presentamos CodeTracer, un framework forense que rastrea las autocompletaciones maliciosas hasta los datos de entrenamiento que las causaron, extrayendo huellas conductuales y usando razonamiento LLM para la atribución.",
+    "resultados": "CodeTracer demuestra alta precisión forense, bajas tasas de falsas identificaciones y robustez contra ataques adaptativos en tres casos de vulnerabilidad y diez ataques de 'backdoor', superando a dieciséis 'baselines'.",
+    "por_que_importa": "Permite identificar la fuente de código inseguro introducido por 'backdoors', mejorando la seguridad y fiabilidad de las herramientas de desarrollo asistido por IA.",
+    "tags": [
+      "ciberseguridad",
+      "IA",
+      "backdoor",
+      "autocompletado de código",
+      "forense",
+      "LLM"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-10T15:11:44Z"
+  },
+  "arxiv:2607.08282v1": {
+    "tldr": "Protege tus datos sensibles al interactuar con modelos de lenguaje con un firewall de IA multiagente.",
+    "problema": "La integración de modelos de lenguaje grandes (LLMs) en flujos de trabajo sin salvaguardas adecuadas presenta riesgos significativos de fuga de datos sensibles.",
+    "propuesta": "Se propone una arquitectura de firewall de código abierto y centrada en la privacidad, implementada como una extensión de navegador y un proxy, que intercepta todo el tráfico (HTTP(S) y WebSocket) y utiliza un pipeline multiagente con detección determinista y análisis semántico basado en LLM para prevenir fugas de datos y código.",
+    "resultados": "La evaluación demuestra que la arquitectura logra puntuaciones F1 de hasta el 94.93% en configuraciones óptimas.",
+    "por_que_importa": "Permite a las organizaciones proteger la información confidencial al usar LLMs, equilibrando seguridad, coste computacional y latencia, y es extensible para futuras amenazas.",
+    "tags": [
+      "ciberseguridad",
+      "privacidad",
+      "modelos de lenguaje",
+      "firewall",
+      "IA",
+      "protección de datos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-10T15:11:57Z"
+  },
+  "arxiv:2607.08681v1": {
+    "tldr": "Evalúa agentes de IA en mercados de energía descentralizados, garantizando seguridad física y utilidad económica.",
+    "problema": "Los agentes de IA en mercados de energía pueden mejorar la utilidad pero también explotar datos físicos inválidos, crear liquidez artificial y tomar decisiones de gobernanza inestables.",
+    "propuesta": "SolarChain-Eval, un benchmark con restricciones físicas que formula la gobernanza del mercado como un Proceso de Decisión de Markov compatible con Gymnasium. Incluye una capa LLM (Planner/Auditor) para definir límites de acción y revisar acciones de alto riesgo.",
+    "resultados": "Los agentes RL mejoran la utilidad del mercado pero pueden ser inseguros. Al eliminar la penalización física, los agentes explotan la generación inválida y aumentan la liquidez artificial. El LLM Planner/Auditor mejora la auditabilidad y mitiga riesgos, pero no compensa completamente una función de recompensa mal especificada.",
+    "por_que_importa": "Demuestra que la evaluación de agentes de IA confiables requiere tanto restricciones físicas como rastros de intervención transparentes para garantizar un comportamiento seguro y predecible en sistemas ciberfísicos.",
+    "tags": [
+      "IA Confiable",
+      "Mercados de Energía",
+      "Agentes Autónomos",
+      "Ciberseguridad",
+      "Evaluación de Modelos",
+      "Energías Renovables"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-10T15:12:35Z"
+  },
+  "arxiv:2607.08395v1": {
+    "tldr": "TokenWall audita flujos de tokens semánticos para proteger agentes de IA persistentes contra ataques de seguridad.",
+    "problema": "Los agentes de IA persistentes, que van más allá de las interacciones de un solo turno, presentan una superficie de ataque semántica ampliada debido a la propagación de contenido inseguro a través de estados persistentes, habilidades reutilizables e interacciones con herramientas.",
+    "propuesta": "TokenWall es un marco de defensa en tiempo de ejecución que actúa como un firewall semántico para los flujos de tokens de los agentes. Realiza auditorías semánticas conscientes de los límites, construye registros de auditoría estructurados de origen a destino, realiza inspecciones locales ligeras antes de la ejecución y escala selectivamente casos ambiguos de alto riesgo a módulos de arbitraje más potentes.",
+    "resultados": "TokenWall reduce la tasa de éxito de los ataques al 12.5% y mantiene una tasa de aprobación de ejecutables benignos del 97.4% sin confirmación humana. Introduce solo 0.69 segundos de latencia adicional en casos benignos.",
+    "por_que_importa": "Permite una mediación de cobertura total previa a la ejecución para agentes de IA persistentes, logrando un equilibrio práctico entre seguridad y utilidad al reducir el arbitraje remoto y la latencia.",
+    "tags": [
+      "IA persistente",
+      "Ciberseguridad",
+      "Firewall semántico",
+      "Auditoría en tiempo de ejecución",
+      "LLMs"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-10T15:13:38Z"
+  },
+  "arxiv:2607.08093": {
+    "tldr": "CausalDS evalúa la capacidad de los agentes de ciencia de datos para razonar causalmente con datos sintéticos realistas y herramientas.",
+    "problema": "Los benchmarks actuales para agentes de ciencia de datos con LLMs dividen el razonamiento causal simbólico de la ciencia de datos real, o usan datos curados con poca diversidad estructural causal.",
+    "propuesta": "Presentamos CausalDS, un benchmark con modelos causales estructurales (SCMs) sintéticos y datos generados, junto con historias en lenguaje natural. Incluye tareas en los tres peldaños de Pearl, con un componente de codificación de ciencia de datos y evaluación de la abstención.",
+    "resultados": "El resumen no especifica resultados numéricos, pero el benchmark evalúa conjuntamente razonamiento causal, ciencia de datos, cuantificación de incertidumbre, abstención y uso de herramientas.",
+    "por_que_importa": "Permite evaluar de forma más completa y realista la fiabilidad de los agentes de IA en tareas complejas de análisis de datos y toma de decisiones causales.",
+    "tags": [
+      "razonamiento causal",
+      "agentes IA",
+      "ciencia de datos",
+      "benchmarking",
+      "LLMs",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-10T15:16:10Z"
+  },
+  "arxiv:2607.07740": {
+    "tldr": "Jet-Long extiende eficientemente el contexto de LLMs sin ajuste, adaptando dinámicamente la atención a la longitud de la secuencia.",
+    "problema": "Los LLMs actuales fallan al procesar contextos muy largos, perdiendo precisión en secuencias cortas o rompiéndose en las largas, debido a factores de reescalado fijos.",
+    "propuesta": "Jet-Long introduce un método de extensión de contexto 'zero-shot' que combina una ventana local fiel a RoPE con una ventana de largo alcance cuyo factor de reescalado se adapta dinámicamente a la longitud de la secuencia.",
+    "resultados": "Mejora la precisión en Qwen3 hasta 128K de contexto (hasta +4.79pp), logra la mejor precisión en HELMET-RAG y la menor perplejidad en PG-19. El prellenado de contexto largo alcanza hasta 1.39x el throughput de FA2 en H100, con un overhead de generación de solo <=4%.",
+    "por_que_importa": "Permite a los LLMs manejar aplicaciones de contexto extendido (como RAG o codificación de repositorios) de manera eficiente y precisa sin necesidad de reentrenamiento, mejorando su aplicabilidad práctica.",
+    "tags": [
+      "LLMs",
+      "Contexto Largo",
+      "RoPE",
+      "Eficiencia",
+      "Ciberseguridad",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-10T15:17:19Z"
   }
 }
