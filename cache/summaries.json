@@ -1369,5 +1369,22 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-07-10T15:17:19Z"
+  },
+  "arxiv:2607.07964": {
+    "tldr": "KronQ mejora la cuantización de LLMs sin reentrenamiento, logrando una precisión sin precedentes en modelos masivos.",
+    "problema": "Las técnicas actuales de cuantización post-entrenamiento (PTQ) para LLMs asumen que todos los canales de salida contribuyen por igual a la reconstrucción, lo que limita su eficacia.",
+    "propuesta": "KronQ introduce la covarianza del gradiente en el proceso de cuantización, utilizando una aproximación de Hessiana factorizada de Kronecker. Esto permite procesar la incoherencia bidireccionalmente y deriva una nueva métrica de sensibilidad para la asignación de precisión mixta entre capas.",
+    "resultados": "En cuantización de 2 bits en LLaMA-3-70B, KronQ logra una perplejidad de 7.93, mientras que métodos como GPTQ y GPTAQ divergen o producen resultados degenerados (>2000 perplejidad).",
+    "por_que_importa": "Permite comprimir LLMs de manera mucho más eficiente y precisa, haciendo que modelos muy grandes sean más accesibles y desplegables en entornos con recursos limitados, sin sacrificar rendimiento.",
+    "tags": [
+      "cuantización",
+      "LLMs",
+      "compresión de modelos",
+      "Hessiana",
+      "ciberseguridad",
+      "rendimiento"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-13T15:19:23Z"
   }
 }
