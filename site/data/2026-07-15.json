@@ -1,0 +1,386 @@
+{
+  "date": "2026-07-15",
+  "report_type": "filtrado",
+  "evaluated": 160,
+  "selected": 9,
+  "papers": [
+    {
+      "id": "arxiv:2607.12624v1",
+      "rank": 1,
+      "title": "PVDetector: Detecting Prompt Injection Attacks on Purpose-Specific LLM Agents through Policy-Violation Concept Analysis",
+      "authors": [
+        "Junhui Wang",
+        "Hangtao Zhang",
+        "Zhirun Zheng",
+        "Li Zeng"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-14",
+      "url": "https://arxiv.org/abs/2607.12624v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.12624v1",
+      "score": 60,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "Large language models (LLMs) are increasingly deployed as purpose-specific agents to handle domain-specific tasks such as customer service and code generation. These agents are expected to comply with not only generic safety guardrails but also purpose-specific restrictions tailored to their designated roles. Such additional restrictions enlarge the attack surface, particularly to prompt injection (PI) attacks. To defend against such attacks, existing detection methods primarily rely on analyzing input-output patterns, yet yield limited effectiveness. To address this limitation, we turn to analyzing the hidden activation space and discover that LLMs inherently retain latent policy-violation (PV) concepts when prompted with requests beyond their designated purpose. Particularly, PV concepts capture the semantics of conflicts between user queries and predefined restrictions, implicitly reflecting LLMs' intrinsic awareness of recognizing policy violations. Building on this insight, we propose PVDetector, a training-free framework that detects PI attacks during LLM inference by measuring hidden-state alignment with PV concepts, which are derived offline from the contrastive pairs of policy-violating and policy-compliant prompts. Experiments across multiple LLMs and datasets show that PVDetector achieves <1\\% false negative rate with minimal auxiliary overhead, consistently outperforming state-of-the-art methods. Our code is available at https://github.com/Claresigle/PVDetector .",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Detecta ataques de inyección de prompts en agentes LLM analizando conceptos de violación de políticas latentes en su activación.",
+        "problema": "Los agentes LLM específicos para tareas son vulnerables a ataques de inyección de prompts que explotan restricciones adicionales, y los métodos de detección actuales basados en patrones de entrada-salida son ineficaces.",
+        "propuesta": "PVDetector, un framework sin entrenamiento, mide la alineación del estado oculto del LLM con conceptos de violación de políticas (PV), derivados de prompts contrastivos, para detectar ataques durante la inferencia.",
+        "resultados": "PVDetector logra una tasa de falsos negativos inferior al 1% con una sobrecarga mínima, superando consistentemente a los métodos de última generación en múltiples LLMs y datasets.",
+        "por_que_importa": "Mejora significativamente la seguridad de los agentes LLM especializados, protegiéndolos contra ataques de inyección de prompts de manera más efectiva que las soluciones actuales.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Inyección de Prompts",
+          "Detección de Ataques",
+          "Agentes IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-15T14:18:18Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.12340v1",
+      "rank": 2,
+      "title": "Skills That Don't Exist: A Large-Scale Study of Hallucinated Skill Recommendation in LLM Agents",
+      "authors": [
+        "Weifeng Yuan",
+        "Wenbo Guo",
+        "Feng Dong",
+        "Haoyu Wang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-14",
+      "url": "https://arxiv.org/abs/2607.12340v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.12340v1",
+      "score": 59,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "LLM agents acquire new capabilities by downloading skills from open registries. Instead of browsing these catalogs manually, developers typically ask the agent to recommend and install a skill. This convenience hides a risk: agents frequently invent names for skills that exist in no registry. We term this flaw skill name hallucination. A fake name may seem harmless, but it opens the door to supply-chain attacks. Because registries rarely verify publishers, an adversary can prompt the agent, collect the fake names it returns, pre-register malicious skills under them, and wait for a victim to install the payload. We conducted the first large-scale measurement of skill name hallucination, evaluating 15,000 prompts across 12 configurations (4 standalone LLMs and 8 agents). We conservatively counted a name as hallucinated only if it was missing from all live registries and GitHub. The results reveal a systemic vulnerability: every configuration hallucinates. Rates average 36.0% for standalone LLMs and 36.9% for agents, rising to 43.1% on real-world developer questions. In total, the systems generated 5,669 distinct hallucinated names. Crucially, these names are not random noise. Agents repeat the same fake names across prompts and models, giving attackers highly reliable targets to hijack. Finally, we tested four model-level defenses and found a severe conflict between security and usability. The strongest, retrieval grounding, cut the hallucination rate from 40.8% to 3.2% but crippled usefulness: even the best-defended system recommended the correct skill only about one in six times. Skill name hallucination is thus a highly exploitable vulnerability requiring minimal attacker effort. Fixing it cannot rely on prompt engineering or model tuning alone. It demands ecosystem-wide structural changes: registry-level name reservations and verified recommendation pipelines.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los agentes de IA inventan nombres de 'skills' inexistentes, creando una vulnerabilidad de seguridad explotable.",
+        "problema": "Los agentes de IA a menudo recomiendan e instalan 'skills' (capacidades) inexistentes, un fenómeno llamado 'skill name hallucination'. Esto crea una vulnerabilidad de seguridad, ya que los atacantes pueden registrar 'skills' maliciosas con esos nombres falsos y esperar que las víctimas las instalen.",
+        "propuesta": "El estudio realiza la primera medición a gran escala de la alucinación de nombres de 'skills' en LLMs y agentes, evaluando 15,000 prompts. También se prueban defensas a nivel de modelo.",
+        "resultados": "Todas las configuraciones evaluadas (12 en total) mostraron alucinaciones. Las tasas promedio fueron del 36.0% para LLMs independientes y 36.9% para agentes, llegando al 43.1% en preguntas reales de desarrolladores. Se generaron 5,669 nombres de 'skills' distintos y alucinados. Las defensas probadas redujeron drásticamente las alucinaciones (del 40.8% al 3.2% con 'retrieval grounding'), pero también la utilidad, recomendando la 'skill' correcta solo 1 de cada 6 veces.",
+        "por_que_importa": "La alucinación de nombres de 'skills' es una vulnerabilidad sistémica y fácilmente explotable que requiere cambios estructurales en el ecosistema (reservas de nombres en registros, pipelines de recomendación verificados) en lugar de solo ajustes en los modelos o prompts.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "LLM",
+          "Vulnerabilidad",
+          "Agentes Autónomos",
+          "Alucinación"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-15T14:18:33Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.12792v1",
+      "rank": 3,
+      "title": "Silent Alarm: A J-Space Protocol for Comparing Danger Recognition Across Models and Quantization Levels",
+      "authors": [
+        "Roman Prosvirnin",
+        "Victor Minchenkov",
+        "Alexey Soldatov",
+        "Vladimir Bashun"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-14",
+      "url": "https://arxiv.org/abs/2607.12792v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.12792v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Jailbreak-robustness research typically evaluates safety through generated responses using an LLM-as-judge approach. Such evaluations, however, are sensitive to the benchmark's grading procedure and capture only observed behavior on a given set of attacks, without directly revealing the hidden fragility of the underlying safety mechanisms. This work proposes JADR (Jacobian Assessment of Danger Recognition), a protocol that measures a model's internal representation through Jacobian space (J-space, a recently proposed workspace of verbalizable concepts) before the first response token is generated. For every prompt and layer we record the top-k J-space tokens; these are grouped into six behavioral scenario axes and compared between a danger sample based on StrongREJECT and a safe control drawn from XSTest and OKTest. The method does not call on an external judge model: the computation runs entirely locally, on the activations of the model under evaluation, which lets us compare both different models against each other and modifications of a single model -- quantization and fine-tuning in particular -- on the same terms. The final comparison rests on the proposed SafetyAUC metric, complemented with bootstrap confidence intervals. The protocol is applied to six models (Qwen3-1.7B, Qwen3-4B, Qwen3-8B, Qwen3-Uncensored-4B, Qwen3-SafeRL-4B, Gemma 2 9B) across three weight-representation regimes -- BF16, INT8, and INT4 -- and checked against an independent behavioral evaluation with the StrongREJECT grader. The metric separates models with a strong versus a weak internal safety mechanism with statistical significance and captures substantively different effects across quantization regimes.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Nuevo protocolo JADR mide la seguridad interna de los LLMs analizando sus representaciones antes de generar respuestas, revelando fragilidades ocultas.",
+        "problema": "Las evaluaciones de seguridad de LLMs actuales se basan en respuestas generadas y son sensibles al método de calificación, sin revelar la fragilidad interna de los mecanismos de seguridad.",
+        "propuesta": "Se propone JADR (Jacobian Assessment of Danger Recognition), un protocolo que mide la representación interna de un modelo a través del espacio Jacobiano (J-space) antes de generar la primera respuesta, comparando escenarios de peligro y control.",
+        "resultados": "JADR separa modelos con mecanismos de seguridad internos fuertes versus débiles con significancia estadística y captura efectos diferentes entre regímenes de cuantización. Se aplicó a seis modelos en tres regímenes de pesos (BF16, INT8, INT4).",
+        "por_que_importa": "Permite comparar la seguridad interna de diferentes modelos y modificaciones (cuantización, fine-tuning) de forma local y directa, sin depender de modelos jueces externos, revelando vulnerabilidades no evidentes en las respuestas.",
+        "tags": [
+          "LLMs",
+          "Seguridad",
+          "J-space",
+          "Evaluación",
+          "Ciberseguridad",
+          "Representaciones Internas"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-15T14:18:44Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.12463v1",
+      "rank": 4,
+      "title": "Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models",
+      "authors": [
+        "Yubo Wang",
+        "Jiarong Liang",
+        "Yuxuan Zhang",
+        "Xuye Liu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CL]",
+      "category": "cs.CL",
+      "date": "2026-07-14",
+      "url": "https://arxiv.org/abs/2607.12463v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.12463v1",
+      "score": 53,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Coding agents must integrate external tool returns into ongoing reasoning - a capability that standard left-to-right pretraining on code exposes only in its forward direction. We observe that the action-observation-continuation loop of a coding agent is structurally isomorphic to a function call site, where a caller binds arguments, a callee returns a value computed elsewhere, and downstream code consumes that value. This conditioning structure exists at internet scale in ordinary code. We exploit it through function-aware fill-in-the-middle (FIM) mid-training: a self-supervised objective that masks functions selected via program dependency graph analysis and a complexity-inferability double criterion. We mid-train Qwen2.5-Coder-Instruct (7B/14B) and Qwen3-8B on a 2.6B-token decontaminated corpus drawn from 968 GitHub repositories, then apply existing agentic post-training pipelines. Mid-training improves SWE-Bench-Verified by +2.8/+3.0 at 7B/14B and by +3.2 on Qwen3-8B; SWE-Bench-Lite gains are +3.7/+4.0/+5.4 on the same models. The improvement holds across two post-training pipelines (R2E-Gym, SWE-Smith) and on a non-Qwen2.5 base (Qwen3-8B with SWE-Lego). Beyond in-domain gains, mid-training also mitigates the capability erosion that agentic post-training otherwise inflicts on non-agent coding (e.g., LiveCodeBench) and non-coding tool-use benchmarks (tau-bench, BFCL): although the mid-training corpus contains Python code only, the function-call inductive bias survives post-training and yields consistent gains.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2607.12894v1",
+      "rank": 5,
+      "title": "Hy-Embodied-VLM-1.0: Efficient Physical-World Agents",
+      "authors": [
+        "Ziyi Wang",
+        "Xumin Yu",
+        "Yongming Rao",
+        "Yonggen Ling"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CV]",
+      "category": "cs.CV",
+      "date": "2026-07-14",
+      "url": "https://arxiv.org/abs/2607.12894v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.12894v1",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Building capable embodied agents requires not only multimodal perception and understanding, but also agentic capabilities for reasoning about actions, adapting to evolving situations, and interacting with the physical world. In this report, we introduce Hy-Embodied-VLM-1.0, an efficient and powerful embodied foundation model specifically designed for embodied agents operating in the physical world. To cultivate such capabilities from the pre-training stage onward, we define an action-centric capability taxonomy comprising three progressive dimensions: Action-Relevant State Understanding, Action-Transition Reasoning, and Sequential and Adaptive Reasoning. Guided by this taxonomy, we develop a systematic data pipeline and curate data mixtures spanning both pre-training and post-training. To deliver strong physical-world understanding and interaction capabilities while supporting latency-sensitive deployment, we build our model on the Hy3-A3B language backbone and the Hy-ViT2 vision encoder. Its efficient Mixture-of-Experts architecture combines strong model capacity with high inference efficiency. We evaluate Hy-Embodied-VLM-1.0 on a comprehensive suite of 38 benchmarks covering embodied perception, physical-world understanding, and embodied reasoning. The model achieves the best performance among similarly sized models on 19 of the 38 benchmarks and substantially outperforms strong competitors, including Qwen3.6-A3B and Cosmos 3. Compared with the previous-generation Hy-Embodied-0.5 MoT-2B, Hy-Embodied-VLM-1.0 improves average performance by 8.4%. Despite activating only 3B parameters, it achieves performance close to that of the previous-generation model with 32B activated parameters. Beyond static benchmark evaluation, Hy-Embodied-VLM-1.0 also demonstrates strong performance on embodied agentic tasks requiring multi-turn interaction and long-horizon reasoning.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Presentamos Hy-Embodied-VLM-1.0, un modelo eficiente para agentes físicos con capacidades de razonamiento y adaptación mejoradas.",
+        "problema": "Los agentes físicos capaces requieren percepción multimodal, razonamiento sobre acciones, adaptación y interacción con el mundo real, desafíos que los modelos actuales no abordan eficientemente.",
+        "propuesta": "Se introduce Hy-Embodied-VLM-1.0, un modelo fundacional de agentes físicos que utiliza una arquitectura Mixture-of-Experts y una taxonomía de capacidades centrada en la acción para el pre-entrenamiento y post-entrenamiento.",
+        "resultados": "Hy-Embodied-VLM-1.0 lidera en 19 de 38 benchmarks, supera a competidores como Qwen3.6-A3B y Cosmos 3, y mejora el rendimiento promedio en un 8.4% respecto a su predecesor (Hy-Embodied-0.5 MoT-2B), logrando resultados similares con solo 3B parámetros activados frente a 32B.",
+        "por_que_importa": "Este modelo ofrece una solución eficiente y potente para construir agentes físicos más capaces, cruciales para robótica, asistentes virtuales y otras aplicaciones del mundo real, con un despliegue más rápido y menor coste computacional.",
+        "tags": [
+          "agentes físicos",
+          "modelos fundacionales",
+          "IA multimodal",
+          "robótica",
+          "eficiencia computacional",
+          "razonamiento de acciones"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-15T14:20:19Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.12524v1",
+      "rank": 6,
+      "title": "Open-Source Intelligence for Code Provenance and the Security Patterns that Separate Human and Large-Language-Model Implementations of Common Programming Tasks",
+      "authors": [
+        "Mohammadreza Rashidi"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-14",
+      "url": "https://arxiv.org/abs/2607.12524v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.12524v1",
+      "score": 51,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+7)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Developers now draw code from two very different sources, the accumulated human answers on sites such as Stack Overflow and the output of large language models. We ask two questions about that split. First, can the provenance of a code snippet be recovered from the code itself, and second, do the two sources differ in the security patterns they adopt for the same task. Using only open sources, a public gateway of open-weight language models and the public Stack Overflow API, we build a fully reproducible pipeline that collects real implementations of 31 security-sensitive programming tasks, among them OAuth with PKCE, JWT verification, password hashing, and SQL access, from 9 language models and from human answers, and scores every sample with deterministic security and style detectors. On 528 real samples we train a cross-validated classifier that recovers human versus model provenance with 93 percent accuracy against a 78 percent baseline, and a 7-way classifier that attributes a sample to the specific model that wrote it at 48 percent. We then report where the sources diverge on security, which patterns models adopt more often than the human corpus and which they inherit from it. Running the same tasks in Python, JavaScript, Go, and Java, we find the security divergence holds in every language while the provenance boundary is partly language-specific and does not transfer symmetrically between them. A vulnerability repair case study, in which models are handed insecure code and asked to fix it, finds a 77 percent repair rate across 21 seeds and 12 weakness classes, but a recurring partial-fix failure in which the model removes the insecure pattern without adding the correct defense. The pipeline is data driven, so any new task or language is added as a single specification entry, and a fail-closed checker re-derives every number in this paper from the stored data.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2607.12723v1",
+      "rank": 7,
+      "title": "Bulkhead: Automated Semantic Detection and Remediation of Container Escape Vulnerabilities",
+      "authors": [
+        "Qiyuan Fan",
+        "Zhi Li",
+        "Junjie Li",
+        "XiaoFeng Wang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-14",
+      "url": "https://arxiv.org/abs/2607.12723v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.12723v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Filesystem isolation in container ecosystems is often weakened by cross-boundary path misresolution, causing path traversal (PaTra) vulnerabilities. These vulnerabilities stem from insecure host-container interactions and have become increasingly pervasive as cloud systems mount shared resources, such as GPUs and agent workspaces, into containers to support AI workloads. Existing defenses remain inadequate. Kernel-level protections are intrusive, can destabilize system calls, and have therefore not been accepted into the Linux mainline. Detection methods rely on static rule matching or manual code auditing. Static rules can flag path-related functions but fail to capture the semantics needed to determine whether a host-container interaction exists, causing many false positives. Manual review requires domain expertise, making it costly, inefficient, and difficult to scale. To address this threat, we present Bulkhead, an automated framework that integrates large language models (LLMs) with formal methods for semantic vulnerability discovery and remediation. Bulkhead uses a multi-agent system to identify and repair PaTra vulnerabilities through multi-dimensional knowledge patterns generalized from known cases. It first applies high-risk functional patterns to locate entry points for cross-boundary interactions in containerized code, then uses call-chain patterns to recover the corresponding execution paths at suitable depth. The Detection pipeline analyzes these call chains against the application scenarios and threat model, identifying vulnerabilities such as missing security checks and TOCTOU flaws in cross-boundary interactions, and generating proof-of-concept (PoC) exploits for validation. These PoCs then guide patch generation. To ensure remediation correctness, the Patch pipeline performs assertion-driven verification using predefined model-checking templates.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Bulkhead detecta y repara automáticamente vulnerabilidades de escape de contenedores usando LLMs y métodos formales.",
+        "problema": "Las vulnerabilidades de escape de contenedores (path traversal) son un problema creciente, especialmente con cargas de trabajo de IA, y las defensas actuales son intrusivas, ineficientes o propensas a falsos positivos.",
+        "propuesta": "Bulkhead es un framework automatizado que usa un sistema multi-agente con LLMs y métodos formales para detectar y reparar vulnerabilidades de path traversal, identificando puntos de entrada, recuperando cadenas de llamadas y generando parches verificados.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero describe un pipeline de detección que genera exploits PoC y un pipeline de parcheo con verificación basada en aserciones.",
+        "por_que_importa": "Ofrece una solución automatizada, escalable y semántica para proteger contenedores contra vulnerabilidades críticas, mejorando la seguridad en entornos cloud y de IA.",
+        "tags": [
+          "contenedores",
+          "ciberseguridad",
+          "IA",
+          "LLM",
+          "detección de vulnerabilidades",
+          "remediación"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-15T14:22:39Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.12507v1",
+      "rank": 8,
+      "title": "When Binaries Talk Back: Representation-Confusion Attacks on LLM-Assisted Reverse Engineering",
+      "authors": [
+        "Igor Santos-Grueiro"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-14",
+      "url": "https://arxiv.org/abs/2607.12507v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.12507v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "LLM-assisted reverse-engineering (RE) systems analyze strings, decompiler output, and tool reports derived from ttacker-controlled binaries. A binary can make data look like instructions or records from one origin look like independent evidence. We call such failures Representation-Confusion Attacks in Reverse Engineering (RARE): the pipeline promotes a correctly extracted observation to instruction authority, claim-validating evidence, or trusted analysis state without the authority or support that role requires. RARE-Bench measures these failures with behavior-checked clean and adversarial binaries. After an exploratory 11,520-call study, we test RARE-Guard's authorization and evidence controls on 20 new programs and two models. Without runtime controls, the models propose a planted unsafe action in 35/40 adversarial cases and 0/40 clean cases. When binary-derived content is shown only as data (Data-Only rendering), they still make 15 unsafe proposals. Tool Authorization denies all 15 and authorizes all 40 matched analyst requests. On identical report drafts, Support Gate validates 23/40 false claims by counting records from one origin separately. Provenance Gate groups those records before counting support, validates 0/40 false claims, and retains all 40 supported claims. We then instrument Ghidra, r2pipe, and angr on 16 further programs. In a preselected eight-program subset, no single-tool draft reaches Support Gate's validation threshold for the false claim. In fused drafts across all 16 programs, Support Gate validates 32/32 false claims. Provenance Gate prevents validation of all 32 and retains all 32 supported claims. A deterministic renderer prevents downgraded claims from reappearing in the final report. Binary-derived content may therefore guide analysis without gaining authority over tools, and views from several tools do not necessarily provide independent evidence.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los binarios maliciosos pueden engañar a las herramientas de ingeniería inversa asistidas por LLM, pero existen defensas para prevenirlo.",
+        "problema": "Las herramientas de ingeniería inversa asistidas por LLM pueden ser engañadas por binarios maliciosos que confunden la representación de datos, llevando a falsas conclusiones o acciones inseguras.",
+        "propuesta": "Se introduce RARE-Bench para medir estas fallas y RARE-Guard, un sistema con controles de autorización y evidencia (Renderizado Solo Datos, Puerta de Soporte, Puerta de Procedencia) para mitigar estos ataques.",
+        "resultados": "Sin controles, los LLM proponen acciones inseguras en 35/40 casos adversos. Con Renderizado Solo Datos, aún proponen 15. RARE-Guard previene todas las propuestas inseguras y valida correctamente las afirmaciones. RARE-Guard previene la validación de todas las afirmaciones falsas en borradores combinados de múltiples herramientas.",
+        "por_que_importa": "Es crucial para asegurar la fiabilidad de la ingeniería inversa asistida por IA, previniendo que binarios maliciosos comprometan la seguridad del software y las decisiones de los analistas.",
+        "tags": [
+          "ingeniería inversa",
+          "LLM",
+          "ciberseguridad",
+          "ataques de representación",
+          "RARE-Guard"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-15T14:23:06Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.10522",
+      "rank": 1,
+      "title": "Towards Autonomous and Auditable Medical Imaging Model Development",
+      "authors": [
+        "Shengyuan Liu",
+        "Jia-Xuan Jiang",
+        "Boyun Zheng",
+        "Cheng Wang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-12",
+      "url": "https://arxiv.org/abs/2607.10522",
+      "pdf_url": "https://arxiv.org/pdf/2607.10522",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Large language model (LLM) agents are beginning to automate machine learning engineering (MLE) by coupling planning, code execution, debugging, and empirical feedback. Translating this capability to medical imaging remains difficult because each task imposes modality-specific experimentation and strict requirements for validation protocols and prediction artifacts. Here we introduce AMID, an autonomous multi-agent framework for medical imaging model development. AMID first proposes Data-Conditioned Method Planning, which refines coarse task-level search spaces into executable, parallelizable method lanes grounded in task-specific data analysis and runnable medical-imaging resources. It then develops Verification-Guided Two-Stage Optimization, moving from broad early exploration of diverse method lanes to selective exploitation of promising candidates while enforcing strict verification of validation protocols, metric computation, and prediction artifacts throughout the optimization. Across 20 medical imaging challenge tasks spanning diverse modalities and prediction types, AMID outperformed evaluated general-purpose MLE systems and, on several tasks, approached or matched strong human-designed challenge solutions. These results suggest that AMID can turn task-specific medical imaging model development from bespoke manual engineering into an agentic workflow for producing high-performing and auditable model artifacts across heterogeneous tasks.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Desarrollamos AMID, un marco autónomo para crear modelos de imágenes médicas, logrando resultados competitivos con soluciones humanas.",
+        "problema": "El desarrollo de modelos de aprendizaje automático para imágenes médicas es complejo, requiere experimentación específica de la modalidad y protocolos de validación estrictos, lo que dificulta la automatización.",
+        "propuesta": "AMID utiliza 'Data-Conditioned Method Planning' para refinar la búsqueda de métodos basándose en el análisis de datos y recursos específicos, y 'Verification-Guided Two-Stage Optimization' para explorar y explotar métodos prometedores de forma rigurosa.",
+        "resultados": "AMID superó a otros sistemas de MLE generales en 20 tareas de desafíos de imágenes médicas y se acercó o igualó a soluciones diseñadas por humanos en varias de ellas.",
+        "por_que_importa": "Permite automatizar el desarrollo de modelos de imágenes médicas, haciéndolo más eficiente, produciendo artefactos de alto rendimiento y auditables en diversas tareas.",
+        "tags": [
+          "IA médica",
+          "imágenes médicas",
+          "aprendizaje automático",
+          "automatización",
+          "ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-15T14:23:16Z"
+      }
+    }
+  ],
+  "generated_at": "2026-07-15T14:23:16Z"
+}
