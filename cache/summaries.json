@@ -1502,5 +1502,186 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-07-15T14:23:16Z"
+  },
+  "arxiv:2607.13411v1": {
+    "tldr": "Agentes de IA de vanguardia demuestran capacidad para auditar la seguridad de modelos de IA clínica de forma autónoma.",
+    "problema": "Auditar la seguridad de modelos de IA clínica es complejo, requiere experiencia y tiempo, lo que dificulta la detección de vulnerabilidades que podrían dañar a los pacientes.",
+    "propuesta": "Se propone una tarea de evaluación abierta donde agentes de IA de vanguardia deben implementar ataques, calcular una puntuación de seguridad y generar un informe JSON de forma autónoma, utilizando solo una interfaz bash.",
+    "resultados": "Claude Sonnet 4.6 y GPT-4.1 completaron todas las evaluaciones con puntuaciones perfectas. GPT-4o completó el 61% de las ejecuciones, usando más tokens y incurriendo en mayores costos. Los costos de API fueron de 8-27 USD.",
+    "por_que_importa": "Permite automatizar y democratizar la auditoría de seguridad de IA clínica, reduciendo costos y tiempo, y mejorando la protección del paciente ante vulnerabilidades.",
+    "tags": [
+      "IA Clínica",
+      "Ciberseguridad",
+      "Auditoría Autónoma",
+      "Modelos de Lenguaje Grandes",
+      "Evaluación de IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-16T14:31:08Z"
+  },
+  "arxiv:2607.14006v1": {
+    "tldr": "Replantear las pruebas de penetración para sistemas IA: evaluar la violación de objetivos de comportamiento, no solo el compromiso de recursos.",
+    "problema": "Las pruebas de penetración tradicionales no son suficientes para sistemas habilitados por IA, ya que los adversarios pueden alterar el comportamiento del sistema a través de la influencia en la IA (prompts, datos, etc.) sin comprometer la infraestructura subyacente.",
+    "propuesta": "Replantear las pruebas de penetración como una evaluación de comportamiento impulsada por objetivos. Se propone un flujo de trabajo que identifica objetivos operativos, mapea el comportamiento gobernado por IA, analiza superficies de influencia adversaria y define criterios de fallo de comportamiento.",
+    "resultados": "El resumen no especifica resultados numéricos, pero propone un marco técnico y un flujo de trabajo para evaluar el éxito adversario en sistemas IA desplegados, ilustrado con un ejemplo de asistente de operaciones de seguridad.",
+    "por_que_importa": "Permite una evaluación de seguridad más completa y adaptada a los sistemas IA, abordando nuevas vías de ataque que van más allá del compromiso tradicional de la infraestructura.",
+    "tags": [
+      "pruebas de penetración",
+      "IA",
+      "ciberseguridad",
+      "evaluación de comportamiento",
+      "sistemas habilitados por IA",
+      "seguridad de IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-16T14:32:00Z"
+  },
+  "arxiv:2607.13987v1": {
+    "tldr": "La seguridad de las 'skills' de IA es crucial en todo su ciclo de vida, no solo en la ejecución.",
+    "problema": "La seguridad de las 'skills' reutilizables para agentes LLM se ha centrado solo en la inyección de prompts y la ejecución, ignorando riesgos en otras etapas del ciclo de vida como el repositorio, la selección o la evolución.",
+    "propuesta": "Se presenta SkillSec-Eval, un marco de evaluación consciente del ciclo de vida de las 'skills' de agentes LLM, junto con una taxonomía de amenazas que cubre todas las etapas, desde la admisión en el repositorio hasta la evolución.",
+    "resultados": "La evaluación empírica con 327 'skills' reales demuestra que las vulnerabilidades existen en múltiples etapas del ciclo de vida, no solo durante la ejecución.",
+    "por_que_importa": "Es fundamental adoptar un enfoque de seguridad integral para las 'skills' de agentes LLM que abarque todo su ciclo de vida para prevenir ataques y garantizar su fiabilidad en diversas aplicaciones.",
+    "tags": [
+      "IA",
+      "ciberseguridad",
+      "LLM",
+      "agentes",
+      "seguridad de ciclo de vida",
+      "vulnerabilidades"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-16T14:32:10Z"
+  },
+  "arxiv:2607.13801v1": {
+    "tldr": "Defensa certificada para IDS basados en LLM que protege contra manipulaciones de tráfico inyectando ruido solo en características controlables por el atacante.",
+    "problema": "Los sistemas de detección de intrusiones (IDS) basados en LLM son vulnerables a manipulaciones de tráfico por parte de atacantes remotos, lo que reduce su robustez y fiabilidad.",
+    "propuesta": "Se introduce Traffic-Aware Randomized Smoothing (TA-RS), una defensa que aplica ruido Gaussiano de forma selectiva al subespacio de características directamente controlables por el atacante (DC) durante el entrenamiento y la certificación, alineando la distribución del ruido con las capacidades del atacante.",
+    "resultados": "TA-RS logra una precisión certificada del 55-100% en datasets como CIC-IDS-2018 y HIKARI-2021, superando los umbrales de ataque R_inf hasta 5 veces. La mejora frente a baselines varía (4-19 pp) y el entrenamiento con ruido es crucial para recuperar la precisión (68-100%).",
+    "por_que_importa": "Asegura la fiabilidad de los IDS basados en LLM frente a ataques de manipulación de tráfico realistas, permitiendo su despliegue seguro en entornos de ciberseguridad críticos.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Detección de Intrusiones",
+      "Robustez",
+      "Defensa Certificada",
+      "TA-RS"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-16T14:32:21Z"
+  },
+  "arxiv:2607.13453v1": {
+    "tldr": "Evalúa la seguridad de la IA contra ataques de prompts maliciosos, identificando vulnerabilidades clave.",
+    "problema": "Los modelos de IA generativa (GenAI) son vulnerables a ataques de prompts maliciosos (APA), exponiendo los sistemas a ciberataques.",
+    "propuesta": "Implementa un Marco de Prompts Adversarios (APF) para evaluar sistemáticamente la resiliencia de la IA mediante la generación de prompts estructurados de múltiples niveles de sofisticación.",
+    "resultados": "Los prompts codificados mostraron las tasas de éxito más altas para eludir los mecanismos de seguridad, indicando variaciones significativas en las vulnerabilidades del modelo según el vector de ataque.",
+    "por_que_importa": "Permite la evaluación automatizada y métricas cuantitativas de seguridad en entornos empresariales, mejorando la resiliencia de la IA frente a amenazas emergentes.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Seguridad de IA",
+      "Prompts Adversarios",
+      "GenAI"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-16T14:32:48Z"
+  },
+  "arxiv:2607.13565v1": {
+    "tldr": "Nuevos ataques de escritura IA eluden detectores de vanguardia al salirse de su distribución de entrenamiento, superando las defensas actuales.",
+    "problema": "Los detectores de texto generado por IA, incluso los afinados con técnicas adversarias, son vulnerables a ataques que manipulan la escritura para evadir la detección.",
+    "propuesta": "Se proponen dos nuevas familias de ataques: 'cross-decade register attacks' y 'modernist stream-of-consciousness form'. Estos ataques fuerzan al texto generado a salir de la distribución de entrenamiento del detector, en lugar de intentar imitarla.",
+    "resultados": "Los nuevos ataques logran tasas de evasión hasta 50 veces mayores que los métodos anteriores, manteniendo la naturalidad del texto. La contramedida de aumentar los datos de entrenamiento con textos de época no logra cerrar esta vulnerabilidad.",
+    "por_que_importa": "Demuestra que los detectores actuales de IA, incluso los robustecidos, tienen vulnerabilidades persistentes ante cambios estructurales en la distribución de los datos, lo que tiene implicaciones directas para la seguridad y confiabilidad de la detección de contenido generado por IA.",
+    "tags": [
+      "IA generativa",
+      "ciberseguridad",
+      "detección de texto",
+      "ataques adversarios",
+      "evasión de modelos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-16T14:32:58Z"
+  },
+  "arxiv:2607.13602v1": {
+    "tldr": "Investigamos cómo los LLM pueden usar analogías históricas para predecir el futuro, superando la superficialidad y enfocándose en causas subyacentes.",
+    "problema": "Los modelos de lenguaje actuales (LLM) fallan al encontrar analogías históricas relevantes para el análisis de prospectiva porque se centran en características superficiales en lugar de los mecanismos causales subyacentes.",
+    "propuesta": "Proponemos el marco 'Causal Analogical Researcher' (CANA), que guía a los LLM para identificar y utilizar analogías históricas basándose en la alineación de mecanismos y la confirmación entre analogías, utilizando una representación estructural descompuesta y retroalimentación reflexiva.",
+    "resultados": "CANA mejora la generación de analogías históricas hasta en un 10% y supera a los agentes de investigación profunda de vanguardia en el benchmark ADR-bench. Estudios de caso confirman su efectividad.",
+    "por_que_importa": "Permite a los LLM realizar análisis de prospectiva más precisos y fiables al comprender y aplicar lecciones del pasado basadas en causas, no solo en similitudes superficiales.",
+    "tags": [
+      "LLM",
+      "Analogías Históricas",
+      "Análisis de Prospectiva",
+      "IA Causal",
+      "Investigación Profunda"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-16T14:34:50Z"
+  },
+  "arxiv:2607.13285": {
+    "tldr": "El Harness Handbook facilita la modificación de sistemas de IA complejos al mapear comportamientos a su código fuente.",
+    "problema": "Los 'harnesses' de IA modernos son grandes y complejos, dificultando la localización del código responsable de comportamientos específicos para su modificación, lo que ralentiza su evolución.",
+    "propuesta": "Se introduce el Harness Handbook, una representación centrada en el comportamiento generada automáticamente a partir del código, y Behavior-Guided Progressive Disclosure (BGPD) para guiar a los agentes en la localización y verificación de código.",
+    "resultados": "La planificación asistida por Handbook mejora la localización de comportamientos y la calidad del plan de edición, utilizando menos tokens del planificador, especialmente en sitios dispersos e interacciones entre módulos. El resumen no especifica mejoras numéricas concretas.",
+    "por_que_importa": "Permite a los desarrolladores y agentes de IA evolucionar y mantener sistemas de IA complejos de manera más eficiente, reduciendo el tiempo y esfuerzo necesarios para implementar cambios.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Ingeniería de Software",
+      "Harnesses",
+      "Evolución de Código",
+      "LLM"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-16T14:35:41Z"
+  },
+  "arxiv:2605.10834": {
+    "tldr": "Evaluamos agentes de pentesting IA en escenarios reales, no solo en entornos controlados, para descubrir vulnerabilidades prácticas.",
+    "problema": "Las evaluaciones actuales de agentes de pentesting IA se centran en objetivos predefinidos y entornos simplificados, sin reflejar la complejidad y la toma de decisiones estratégicas del pentesting en el mundo real.",
+    "propuesta": "Se propone un protocolo de evaluación práctico que mide el descubrimiento de vulnerabilidades validadas en objetivos complejos y multiespacio de ataque, utilizando emparejamiento semántico basado en LLM y métricas de eficiencia.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero afirma que el protocolo permite una comparación más realista e informativa de los agentes de pentesting IA y habilita la reproducibilidad mediante la liberación de código y datos anotados.",
+    "por_que_importa": "Permite comparar de forma más fiable y práctica los agentes de pentesting IA, guiando su desarrollo y adopción para mejorar la ciberseguridad real.",
+    "tags": [
+      "pentesting IA",
+      "ciberseguridad",
+      "evaluación",
+      "vulnerabilidades",
+      "LLM"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-16T14:36:37Z"
+  },
+  "arxiv:2607.12747": {
+    "tldr": "OAT diagnostica fallos en agentes LLM de forma rápida y precisa, aprendiendo de trayectorias exitosas para identificar errores sin supervisión costosa.",
+    "problema": "Identificar qué pasos específicos causan el fallo en sistemas de agentes basados en LLM es crucial para depurarlos. Los métodos actuales son caros computacionalmente (basados en prompts) o requieren anotaciones de errores a nivel de paso, que son difíciles y costosas de obtener.",
+    "propuesta": "Se propone OAT, un modelo de atribución de fallos no supervisado que se entrena exclusivamente con trayectorias exitosas. Utiliza aprendizaje de una sola clase con ecuaciones diferenciales controladas neuronales (NCDEs) para modelar patrones dinámicos de éxito en un espacio latente. Durante la inferencia, cada paso de una trayectoria fallida recibe una puntuación de anomalía basada en su desviación de la dinámica aprendida.",
+    "resultados": "Entrenado con solo 100 trayectorias exitosas, OAT es entre 200 y 5000 veces más rápido que los métodos basados en prompts. Además, supera consistentemente a las líneas base con una mejora del +20% en puntuación F1 en conjuntos de datos en-dominio y un +7% en conjuntos fuera de distribución.",
+    "por_que_importa": "Este método ofrece una dirección prometedora y eficiente para diagnosticar fallos en sistemas de agentes de IA. Al no requerir anotaciones de errores costosas ni ser computacionalmente intensivo, facilita la depuración y mejora de estos sistemas en la práctica, acelerando su desarrollo y fiabilidad.",
+    "tags": [
+      "Agentes LLM",
+      "Atribución de fallos",
+      "Aprendizaje no supervisado",
+      "Ecuaciones diferenciales neuronales",
+      "Diagnóstico IA"
+    ],
+    "model": "gemini-2.5-flash",
+    "generated_at": "2026-07-16T14:36:52Z"
+  },
+  "arxiv:2607.13027": {
+    "tldr": "PalmClaw es un nuevo framework que permite a los agentes de IA ejecutar tareas complejas directamente en tu móvil, mejorando la eficiencia y el éxito de las tareas.",
+    "problema": "Los agentes de IA actuales para móviles dependen de interacciones de interfaz gráfica (tocar, deslizar), lo que resulta en secuencias largas, dependientes de la interfaz, sin acceso directo a las capacidades del dispositivo y con límites de ejecución poco claros.",
+    "propuesta": "PalmClaw es un framework de agente de código abierto que se ejecuta nativamente en teléfonos móviles. Gestiona sesiones, memoria, habilidades, herramientas y el ciclo del agente directamente en el dispositivo. Expone las capacidades del dispositivo como \"herramientas de dispositivo\" con argumentos explícitos, resultados estructurados y límites de ejecución claros, permitiendo a los agentes usar las capacidades móviles de forma directa y controlada.",
+    "resultados": "PalmClaw logra una mejora relativa del 11.5% en el éxito de las tareas y una reducción del 94.9% en el tiempo de finalización en comparación con la mejor línea base. También presenta una menor carga de configuración.",
+    "por_que_importa": "Los dispositivos móviles son ampliamente accesibles y contienen datos de usuario, sensores y aplicaciones de uso diario. Este framework permite que los agentes de IA aprovechen directamente estas capacidades de forma eficiente y controlada, abriendo nuevas posibilidades para la automatización inteligente y la asistencia personalizada en la plataforma más utilizada.",
+    "tags": [
+      "Agentes de IA",
+      "Móviles",
+      "On-device",
+      "Framework",
+      "Automatización",
+      "Eficiencia"
+    ],
+    "model": "gemini-2.5-flash",
+    "generated_at": "2026-07-16T14:37:07Z"
   }
 }

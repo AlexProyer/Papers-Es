@@ -1,0 +1,530 @@
+{
+  "date": "2026-07-16",
+  "report_type": "filtrado",
+  "evaluated": 169,
+  "selected": 13,
+  "papers": [
+    {
+      "id": "arxiv:2607.13411v1",
+      "rank": 1,
+      "title": "Evaluating Frontier AI Agents as Autonomous Clinical Security Auditors",
+      "authors": [
+        "Michael O. Eniolade"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-15",
+      "url": "https://arxiv.org/abs/2607.13411v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.13411v1",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "AI agents",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, AI agents, compliance & audit"
+      ],
+      "abstract_en": "Clinical AI models can expose patients to harm when adversarial vulnerabilities go undetected, yet formal security auditing requires statistical expertise, specialized tools, and significant time. We present an open evaluation task, built on METR Task Standard v0.3.0, that tests whether frontier AI agents can autonomously implement a structured clinical AI security audit. Given a pre-trained clinical prediction model, a patient dataset, and written instructions, each agent must implement four attacks from pseudocode, compute a Security Posture Score covering FGSM robustness, membership inference resistance, expected calibration error, and boundary attack resistance, and write a structured JSON report in a Docker container using only a bash interface and no scaffolding code. Six variants span the Wisconsin Diagnostic Breast Cancer and MIMIC-IV ICU mortality datasets across three model architectures with increasing defense strength, with reference scores from 55.60 to 90.41. We ran 54 evaluations across three frontier models, with three runs per variant. Claude Sonnet 4.6 and GPT-4.1 completed all 18 runs and received perfect evaluator scores. GPT-4o completed 61 percent of runs and used about five times the per-run token count of Claude, although provider tokenization differs. Total API costs were 8 US dollars for GPT-4.1, 12 US dollars for Claude Sonnet 4.6, and 27 US dollars for GPT-4o. GPT-4o failures involved premature session termination, an aggregation error, and an empty submission file. The task, scoring infrastructure, and Wisconsin Breast Cancer assets are publicly released; MIMIC-IV variants require separate PhysioNet access.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Agentes de IA de vanguardia demuestran capacidad para auditar la seguridad de modelos de IA clínica de forma autónoma.",
+        "problema": "Auditar la seguridad de modelos de IA clínica es complejo, requiere experiencia y tiempo, lo que dificulta la detección de vulnerabilidades que podrían dañar a los pacientes.",
+        "propuesta": "Se propone una tarea de evaluación abierta donde agentes de IA de vanguardia deben implementar ataques, calcular una puntuación de seguridad y generar un informe JSON de forma autónoma, utilizando solo una interfaz bash.",
+        "resultados": "Claude Sonnet 4.6 y GPT-4.1 completaron todas las evaluaciones con puntuaciones perfectas. GPT-4o completó el 61% de las ejecuciones, usando más tokens y incurriendo en mayores costos. Los costos de API fueron de 8-27 USD.",
+        "por_que_importa": "Permite automatizar y democratizar la auditoría de seguridad de IA clínica, reduciendo costos y tiempo, y mejorando la protección del paciente ante vulnerabilidades.",
+        "tags": [
+          "IA Clínica",
+          "Ciberseguridad",
+          "Auditoría Autónoma",
+          "Modelos de Lenguaje Grandes",
+          "Evaluación de IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-16T14:31:08Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.14006v1",
+      "rank": 2,
+      "title": "Rethinking Penetration Testing for AI-Enabled Systems: From Resource Compromise to Behavioral Objective Violation",
+      "authors": [
+        "Mohammad Allahbakhsh",
+        "Mohammad Hassan Bahari",
+        "Moslem Attar-Raouf"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-15",
+      "url": "https://arxiv.org/abs/2607.14006v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.14006v1",
+      "score": 56,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: cybersecurity, vuln & threats, AI agents"
+      ],
+      "abstract_en": "Penetration testing traditionally evaluates whether adversaries can exploit weaknesses in software, infrastructure, configurations, or operational controls to achieve security-relevant compromise. This paradigm remains necessary for AI-enabled systems, but it is no longer sufficient. In such systems, adversaries may influence prompts, retrieved content, sensor inputs, training data, memory, tools, or human-AI interaction loops to alter system behavior without directly compromising the underlying infrastructure. This paper reframes penetration testing for AI-enabled systems as objective-driven behavioral evaluation. We define an AI-enabled system as one in which learned models materially influence behavior affecting operational outcomes, and we define AI-enabled penetration as the feasible induction of AI-governed behavior that violates one or more operational objectives under an explicit threat model. This definition preserves conventional penetration testing while extending it to adversarial pathways such as prompt injection, indirect prompt injection, data poisoning, sensor manipulation, retrieval poisoning, tool misuse, and agentic misalignment. We further propose a testing workflow that identifies operational objectives, maps AI-governed behavior, analyzes adversarial influence surfaces, defines behavioral failure criteria, executes scenario-based tests, and reports evidence linking adversarial action to objective violation. A running example involving an AI-enabled security operations center assistant illustrates how penetration may occur through behavioral influence rather than infrastructure compromise. Together, the definitions, workflow, and example provide a technical framework for evaluating adversarial success in deployed AI-enabled systems.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Replantear las pruebas de penetración para sistemas IA: evaluar la violación de objetivos de comportamiento, no solo el compromiso de recursos.",
+        "problema": "Las pruebas de penetración tradicionales no son suficientes para sistemas habilitados por IA, ya que los adversarios pueden alterar el comportamiento del sistema a través de la influencia en la IA (prompts, datos, etc.) sin comprometer la infraestructura subyacente.",
+        "propuesta": "Replantear las pruebas de penetración como una evaluación de comportamiento impulsada por objetivos. Se propone un flujo de trabajo que identifica objetivos operativos, mapea el comportamiento gobernado por IA, analiza superficies de influencia adversaria y define criterios de fallo de comportamiento.",
+        "resultados": "El resumen no especifica resultados numéricos, pero propone un marco técnico y un flujo de trabajo para evaluar el éxito adversario en sistemas IA desplegados, ilustrado con un ejemplo de asistente de operaciones de seguridad.",
+        "por_que_importa": "Permite una evaluación de seguridad más completa y adaptada a los sistemas IA, abordando nuevas vías de ataque que van más allá del compromiso tradicional de la infraestructura.",
+        "tags": [
+          "pruebas de penetración",
+          "IA",
+          "ciberseguridad",
+          "evaluación de comportamiento",
+          "sistemas habilitados por IA",
+          "seguridad de IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-16T14:32:00Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.13987v1",
+      "rank": 3,
+      "title": "Agent Skill Security: Threat Models, Attacks, Defenses, and Evaluation",
+      "authors": [
+        "Sanket Badhe",
+        "Priyanka Tiwari"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-15",
+      "url": "https://arxiv.org/abs/2607.13987v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.13987v1",
+      "score": 56,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "Reusable skills are becoming a fundamental building block of Large Language Model (LLM) agents, enabling capabilities to be packaged, shared, and reused across diverse applications. However, existing security research primarily focuses on prompt injection and runtime execution, leaving security risks throughout the broader skill lifecycle largely unexplored. In this paper, we present SkillSec-Eval, a lifecycle-aware framework for systematically evaluating the security of reusable agent skills. We first characterize the skill lifecycle and develop a threat taxonomy spanning repository admission, semantic retrieval, planner selection, execution, and skill evolution. We then instantiate this taxonomy in SkillSec-Eval and conduct a comprehensive empirical evaluation using a repository of 327 real-world skills. Our study demonstrates that vulnerabilities arise at multiple lifecycle stages beyond execution, highlighting the need for lifecycle-aware security analysis of reusable agent skills.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "La seguridad de las 'skills' de IA es crucial en todo su ciclo de vida, no solo en la ejecución.",
+        "problema": "La seguridad de las 'skills' reutilizables para agentes LLM se ha centrado solo en la inyección de prompts y la ejecución, ignorando riesgos en otras etapas del ciclo de vida como el repositorio, la selección o la evolución.",
+        "propuesta": "Se presenta SkillSec-Eval, un marco de evaluación consciente del ciclo de vida de las 'skills' de agentes LLM, junto con una taxonomía de amenazas que cubre todas las etapas, desde la admisión en el repositorio hasta la evolución.",
+        "resultados": "La evaluación empírica con 327 'skills' reales demuestra que las vulnerabilidades existen en múltiples etapas del ciclo de vida, no solo durante la ejecución.",
+        "por_que_importa": "Es fundamental adoptar un enfoque de seguridad integral para las 'skills' de agentes LLM que abarque todo su ciclo de vida para prevenir ataques y garantizar su fiabilidad en diversas aplicaciones.",
+        "tags": [
+          "IA",
+          "ciberseguridad",
+          "LLM",
+          "agentes",
+          "seguridad de ciclo de vida",
+          "vulnerabilidades"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-16T14:32:10Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.13801v1",
+      "rank": 4,
+      "title": "Traffic-Aware Randomized Smoothing for LLM-Based Network Intrusion Detection",
+      "authors": [
+        "Zhenpeng Li"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-15",
+      "url": "https://arxiv.org/abs/2607.13801v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.13801v1",
+      "score": 54,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Large language model (LLM)-based intrusion detection systems (IDS) are increasingly studied for security monitoring, yet their robustness against feasible traffic manipulation remains largely empirical. We present Traffic-Aware Randomized Smoothing (TA-RS), a classifier-agnostic certified defense that injects Gaussian noise exclusively into the directly controllable (DC) subspace -- features a remote attacker can modify -- during both fine-tuning and certification, aligning the smoothing distribution with the attacker-controllable subspace. We identify a critical prerequisite: applying standard randomized smoothing to clean-trained LLM-IDS yields weak certified accuracy in three of four (model, dataset) pairs tested (14-33%, at or below random) and only 57% in the fourth (43 pp below the noise-augmented result); noise-augmented fine-tuning recovers to 68-100% on two of three benchmark datasets (at sigma=0.25). At the L_inf-equivalent threshold R_inf = epsilon*sqrt(|DC|) (epsilon=0.05), TA-RS achieves 55-100% certified accuracy on CIC-IDS-2018 and HIKARI-2021, with median certified radii (R approx 0.45-0.96) exceeding R_inf by 1.8-5x (across sigma=0.25-1.00). Against a fairly trained iso-trained RS baseline the residual advantage is dataset-dependent (4-19 pp on CIC-IDS-2018). The larger gap -- up to 72 pp against an isotropic RS baseline that shares the DC-noise-augmented training recipe -- primarily reflects the training-certification mismatch rather than DC alignment alone: isotropic test-time noise perturbs uncontrollable features the attacker cannot exploit, triggering abstention rates up to 68%. RT-IoT2022 probes the limits of the method: it fails under the default fine-tuning recipe but recovers to 76%/69% certified accuracy (LLaMA3-8B/Qwen3-8B) when noise augmentation is increased.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Defensa certificada para IDS basados en LLM que protege contra manipulaciones de tráfico inyectando ruido solo en características controlables por el atacante.",
+        "problema": "Los sistemas de detección de intrusiones (IDS) basados en LLM son vulnerables a manipulaciones de tráfico por parte de atacantes remotos, lo que reduce su robustez y fiabilidad.",
+        "propuesta": "Se introduce Traffic-Aware Randomized Smoothing (TA-RS), una defensa que aplica ruido Gaussiano de forma selectiva al subespacio de características directamente controlables por el atacante (DC) durante el entrenamiento y la certificación, alineando la distribución del ruido con las capacidades del atacante.",
+        "resultados": "TA-RS logra una precisión certificada del 55-100% en datasets como CIC-IDS-2018 y HIKARI-2021, superando los umbrales de ataque R_inf hasta 5 veces. La mejora frente a baselines varía (4-19 pp) y el entrenamiento con ruido es crucial para recuperar la precisión (68-100%).",
+        "por_que_importa": "Asegura la fiabilidad de los IDS basados en LLM frente a ataques de manipulación de tráfico realistas, permitiendo su despliegue seguro en entornos de ciberseguridad críticos.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Detección de Intrusiones",
+          "Robustez",
+          "Defensa Certificada",
+          "TA-RS"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-16T14:32:21Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.13453v1",
+      "rank": 5,
+      "title": "Adversarial Prompting Framework for AI Safety Assessment",
+      "authors": [
+        "Yash Bhatnagar",
+        "Kunal Banerjee",
+        "Anirban Chatterjee"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-15",
+      "url": "https://arxiv.org/abs/2607.13453v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.13453v1",
+      "score": 53,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Artificial Intelligence (AI), especially Generative AI (GenAI), adoption has increased in industries significantly in recent years. However, the use of these models may also expose systems to new forms of cyberattacks by different malicious actors -- adversarial prompt attack (APA) being one of the most prominent examples of such threats. This paper presents the implementation of an Adversarial Prompting Framework (APF) for a comprehensive assessment of AI safety. The framework systematically evaluates the resilience of the AI model through the generation of structured adversarial prompts at multiple sophistication levels, from direct harmful requests to advanced encoding-based attacks. Our implementation demonstrates the practical application of this methodology in enterprise environments, providing automated testing capabilities with quantitative security assessment metrics. The results indicate significant variations in the model vulnerabilities across different attack vectors, with encoded prompts presenting the highest success rates in bypassing safety mechanisms.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa la seguridad de la IA contra ataques de prompts maliciosos, identificando vulnerabilidades clave.",
+        "problema": "Los modelos de IA generativa (GenAI) son vulnerables a ataques de prompts maliciosos (APA), exponiendo los sistemas a ciberataques.",
+        "propuesta": "Implementa un Marco de Prompts Adversarios (APF) para evaluar sistemáticamente la resiliencia de la IA mediante la generación de prompts estructurados de múltiples niveles de sofisticación.",
+        "resultados": "Los prompts codificados mostraron las tasas de éxito más altas para eludir los mecanismos de seguridad, indicando variaciones significativas en las vulnerabilidades del modelo según el vector de ataque.",
+        "por_que_importa": "Permite la evaluación automatizada y métricas cuantitativas de seguridad en entornos empresariales, mejorando la resiliencia de la IA frente a amenazas emergentes.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Seguridad de IA",
+          "Prompts Adversarios",
+          "GenAI"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-16T14:32:48Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.13565v1",
+      "rank": 6,
+      "title": "UTS at ELOQUENT 2026 Voight-Kampff: structural shifts in AI writing bypass state-of-the-art detectors",
+      "authors": [
+        "Dima Galat",
+        "Marian-Andrei Rizoiu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-15",
+      "url": "https://arxiv.org/abs/2607.13565v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.13565v1",
+      "score": 52,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "We investigate which language model evasion attacks survive state-of-the-art adversarial fine-tuning, developing strategies that sweep the top 5 positions on the ELOQUENT 2026 Voight-Kampff leaderboard. While adversarial fine-tuning trivially closes the 2025 winning evasion recipes, we uncover a fundamental asymmetry in detector vulnerability: pushing generated text out of the detector's training distribution reliably defeats adversarial detection, whereas pulling it into the distribution (e.g., mimicking human training data) fails completely. Exploiting this, we introduce two novel out-of-distribution attack families - cross-decade register attacks and modernist stream-of-consciousness form. Both strategies easily bypass adversarial closure, achieving up to approximately 50x higher fool rates than previous methods while preserving naturalness. Furthermore, experiments show that the obvious deployer countermeasure (augmenting training data with period prose) fails to close the vulnerability. Our findings show that the tested detector families, including adversarially fine-tuned ones, exhibit persistent vulnerabilities under structural out-of-distribution shifts, a mechanism that directly powers our leading competition performance.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Nuevos ataques de escritura IA eluden detectores de vanguardia al salirse de su distribución de entrenamiento, superando las defensas actuales.",
+        "problema": "Los detectores de texto generado por IA, incluso los afinados con técnicas adversarias, son vulnerables a ataques que manipulan la escritura para evadir la detección.",
+        "propuesta": "Se proponen dos nuevas familias de ataques: 'cross-decade register attacks' y 'modernist stream-of-consciousness form'. Estos ataques fuerzan al texto generado a salir de la distribución de entrenamiento del detector, en lugar de intentar imitarla.",
+        "resultados": "Los nuevos ataques logran tasas de evasión hasta 50 veces mayores que los métodos anteriores, manteniendo la naturalidad del texto. La contramedida de aumentar los datos de entrenamiento con textos de época no logra cerrar esta vulnerabilidad.",
+        "por_que_importa": "Demuestra que los detectores actuales de IA, incluso los robustecidos, tienen vulnerabilidades persistentes ante cambios estructurales en la distribución de los datos, lo que tiene implicaciones directas para la seguridad y confiabilidad de la detección de contenido generado por IA.",
+        "tags": [
+          "IA generativa",
+          "ciberseguridad",
+          "detección de texto",
+          "ataques adversarios",
+          "evasión de modelos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-16T14:32:58Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.13881v1",
+      "rank": 7,
+      "title": "Unleashing Multimodal Large Language Models for Training-free HOI Detection in the Wild",
+      "authors": [
+        "Ting Lei",
+        "Jialin Liu",
+        "Zhu Xu",
+        "Yuxin Peng"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-07-15",
+      "url": "https://arxiv.org/abs/2607.13881v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.13881v1",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Human-object interaction detection (HOID) has traditionally been formulated as a supervised detection problem over predefined interaction categories. While such paradigms achieve strong performance on closed-set benchmarks, they fundamentally entangle interaction understanding with dataset-specific supervision, limiting their ability to generalize to open-world and compositional scenarios. Recent HOI detectors attempt to leverage MLLMs through prompting strategies to transfer interaction-specific knowledge. However, such prompt-based approaches primarily focus on extracting discriminative representations from pretrained models, while underexploring their inherent multimodal reasoning capabilities. As a result, they struggle to provide informative contextual reasoning for ambiguous and open-world interaction scenarios. In this work, we present AgentHOI, a training-free, agentic framework that transfers the generalist multimodal reasoning capabilities of foundation models to HOI detection in the wild. Instead of learning interaction classifiers, AgentHOI modularly orchestrates complementary vision foundation modules to perform open-ended semantic reasoning and spatial grounding in a coordinated manner. To address the challenges of incomplete interaction discovery and ambiguous localization in complex scenes, we introduce two key mechanisms: (1) Context-aware Multi-round Reasoning, which progressively refines interaction hypotheses to ensure exhaustive and compositional HOI discovery, and (2) Multifaceted Interaction Localization, which enhances grounding precision by generating instance-specific descriptions that integrate semantic, spatial, and appearance cues. Extensive experiments demonstrate that AgentHOI achieves superior performance over state-of-the-art supervised and weakly supervised methods in real-world settings, despite requiring no HOID data for training.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2607.13602v1",
+      "rank": 8,
+      "title": "Analogical Deep Research: Retrieving and Integrating Historical Analogies for Foresight Analysis",
+      "authors": [
+        "Yongqiang Chen",
+        "Guangyi Chen",
+        "Yuewen Sun",
+        "Kun Zhang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [stat.ML]",
+      "category": "stat.ML",
+      "date": "2026-07-15",
+      "url": "https://arxiv.org/abs/2607.13602v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.13602v1",
+      "score": 51,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+7)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Systematic comparisons between current situations and structurally similar past events in the historical, i.e., historical analogies, is among the most powerful tools for foresight analysis. In this work, we present a new task called Analogical Deep Research (ADR) to Large Language Model (LLM) agents and construct the first ADR benchmark ADR-bench to study whether LLM agents are able to find and leverage historical analogies when doing foresight analysis. Our investigation reveals a key obstacle: LLM agents are poor at finding analogies because they match on surface features rather than underlying mechanisms. We argue that ADR is inherently a causal question as it requires understanding why the event occurred. Based on our theoretical analysis, we propose two principles required for ADR, including the mechanism alignment and cross-analogy confirmation. Built upon our theoretical results, we propose a new agentic framework called Causal Analogical Researcher (CANA) that guides LLMs to find and integrate historical analogies. CANA incorporates a simple yet effective structural decomposition representation, and integrates structural feedback for reflective improvements of historical analogy identification and integration. We show that CANA brings up to 10% improvements in historical analogy generation, and surpasses the state-of-the-art deep research agents in the ADR-bench. Case studies with the ongoing events confirm the effectiveness of CANA in leveraging historical analogies.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Investigamos cómo los LLM pueden usar analogías históricas para predecir el futuro, superando la superficialidad y enfocándose en causas subyacentes.",
+        "problema": "Los modelos de lenguaje actuales (LLM) fallan al encontrar analogías históricas relevantes para el análisis de prospectiva porque se centran en características superficiales en lugar de los mecanismos causales subyacentes.",
+        "propuesta": "Proponemos el marco 'Causal Analogical Researcher' (CANA), que guía a los LLM para identificar y utilizar analogías históricas basándose en la alineación de mecanismos y la confirmación entre analogías, utilizando una representación estructural descompuesta y retroalimentación reflexiva.",
+        "resultados": "CANA mejora la generación de analogías históricas hasta en un 10% y supera a los agentes de investigación profunda de vanguardia en el benchmark ADR-bench. Estudios de caso confirman su efectividad.",
+        "por_que_importa": "Permite a los LLM realizar análisis de prospectiva más precisos y fiables al comprender y aplicar lecciones del pasado basadas en causas, no solo en similitudes superficiales.",
+        "tags": [
+          "LLM",
+          "Analogías Históricas",
+          "Análisis de Prospectiva",
+          "IA Causal",
+          "Investigación Profunda"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-16T14:34:50Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.13285",
+      "rank": 1,
+      "title": "Harness Handbook: Making Evolving Agent Harnesses Readable,Navigable, and Editable",
+      "authors": [
+        "Ruhan Wang",
+        "Yucheng Shi",
+        "Zongxia Li",
+        "Zhongzhi Li"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-14",
+      "url": "https://arxiv.org/abs/2607.13285",
+      "pdf_url": "https://arxiv.org/pdf/2607.13285",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "The capability of a modern AI agent depends not only on its foundation model but also on its harness, which constructs prompts, manages state, invokes tools, and coordinates execution. As models, APIs, environments, and requirements evolve, the harness must be continually modified. Before such a change can be made, a developer or coding agent must identify all code locations that implement the target behavior. This is difficult because production harnesses are large, tightly coupled, and behaviorally distributed, while modification requests describe what the system should do and repositories are organized by files and modules. Code search, repository indexing, and long-context processing ease inspection, but still leave this behavior-to-code mapping to be recovered by hand. Behavior localization is therefore a central bottleneck in harness evolution. We introduce the Harness Handbook, a behavior-centric representation synthesized automatically from a harness codebase via static analysis and LLM-assisted structuring, linking each behavior to its corresponding source. We also introduce Behavior-Guided Progressive Disclosure (BGPD), which guides agents from high-level behaviors to relevant implementation details and verifies candidate locations against the current source. On diverse modification requests from two open-source harnesses, Handbook-Assisted planning improves behavior localization and edit-plan quality while using fewer planner tokens, with the largest gains on scattered sites, rarely executed paths, and cross-module interactions. Evolving complex agentic systems thus depends not only on generating edits, but also on determining where those edits should be made.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "El Harness Handbook facilita la modificación de sistemas de IA complejos al mapear comportamientos a su código fuente.",
+        "problema": "Los 'harnesses' de IA modernos son grandes y complejos, dificultando la localización del código responsable de comportamientos específicos para su modificación, lo que ralentiza su evolución.",
+        "propuesta": "Se introduce el Harness Handbook, una representación centrada en el comportamiento generada automáticamente a partir del código, y Behavior-Guided Progressive Disclosure (BGPD) para guiar a los agentes en la localización y verificación de código.",
+        "resultados": "La planificación asistida por Handbook mejora la localización de comportamientos y la calidad del plan de edición, utilizando menos tokens del planificador, especialmente en sitios dispersos e interacciones entre módulos. El resumen no especifica mejoras numéricas concretas.",
+        "por_que_importa": "Permite a los desarrolladores y agentes de IA evolucionar y mantener sistemas de IA complejos de manera más eficiente, reduciendo el tiempo y esfuerzo necesarios para implementar cambios.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Ingeniería de Software",
+          "Harnesses",
+          "Evolución de Código",
+          "LLM"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-16T14:35:41Z"
+      }
+    },
+    {
+      "id": "arxiv:2605.10834",
+      "rank": 2,
+      "title": "From Controlled to the Wild: Evaluation of Pentesting Agents for the Real-World",
+      "authors": [
+        "Pedro Conde",
+        "Henrique Branquinho",
+        "Valerio Mazzone",
+        "Bruno Mendes"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-14",
+      "url": "https://arxiv.org/abs/2605.10834",
+      "pdf_url": "https://arxiv.org/pdf/2605.10834",
+      "score": 52,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "AI pentesting agents are increasingly credible as offensive security systems, but current benchmarks still provide limited guidance on which will perform best in real-world targets. Existing evaluation protocols assess and optimize for predefined goals such as capture-the-flag, remote code execution, exploit reproduction, or trajectory similarity, in simplified or narrow settings. These tools are valuable for measuring bounded capabilities, yet they do not adequately capture the complexity, open-ended exploration, and strategic decision-making required in realistic pentesting. In this paper, we present a practical evaluation protocol that shifts assessment from task completion to validated vulnerability discovery, allowing evaluation in sufficiently complex targets spanning multiple attack surfaces and vulnerability classes. The protocol combines structured ground-truth with LLM-based semantic matching to identify vulnerabilities, bipartite resolution to score findings under realistic ambiguity, continuous ground-truth maintenance, repeated and cumulative evaluation of stochastic agents, efficiency metrics, and reduced-suite selection for sustainable experimentation. This protocol extends the state of the art by enabling a more realistic, operationally informative comparison of AI pentesting agents. To enable reproducibility, we also release expert-annotated ground truth and code for the proposed evaluation protocol: https://github.com/ethiack/ethibench.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evaluamos agentes de pentesting IA en escenarios reales, no solo en entornos controlados, para descubrir vulnerabilidades prácticas.",
+        "problema": "Las evaluaciones actuales de agentes de pentesting IA se centran en objetivos predefinidos y entornos simplificados, sin reflejar la complejidad y la toma de decisiones estratégicas del pentesting en el mundo real.",
+        "propuesta": "Se propone un protocolo de evaluación práctico que mide el descubrimiento de vulnerabilidades validadas en objetivos complejos y multiespacio de ataque, utilizando emparejamiento semántico basado en LLM y métricas de eficiencia.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero afirma que el protocolo permite una comparación más realista e informativa de los agentes de pentesting IA y habilita la reproducibilidad mediante la liberación de código y datos anotados.",
+        "por_que_importa": "Permite comparar de forma más fiable y práctica los agentes de pentesting IA, guiando su desarrollo y adopción para mejorar la ciberseguridad real.",
+        "tags": [
+          "pentesting IA",
+          "ciberseguridad",
+          "evaluación",
+          "vulnerabilidades",
+          "LLM"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-16T14:36:37Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.12747",
+      "rank": 3,
+      "title": "Tracing Agentic Failure from the Flow of Success",
+      "authors": [
+        "Samuel Yeh",
+        "Yiwen Zhu",
+        "Shaleen Deep",
+        "Sharon Li"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-14",
+      "url": "https://arxiv.org/abs/2607.12747",
+      "pdf_url": "https://arxiv.org/pdf/2607.12747",
+      "score": 51,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Failure attribution for LLM-based agentic systems, i.e., identifying which steps in a failure trajectory caused the task to fail, is critical for debugging and improving these systems. Existing approaches either rely on prompting-based pipelines, which are computationally expensive, or require post-training on failure trajectories with step-level error annotations, which are costly to collect and difficult to scale. We argue that a practical failure attribution model should be lightweight and trainable without step-level supervision on failure data. To this end, we address unsupervised failure attribution, i.e., training exclusively on successful trajectories and identifying error steps at inference time given a failure trajectory. We propose OAT, which casts this problem as one-class learning with neural controlled differential equations, modeling the dynamical pattern of successful trajectories in latent space. At inference time, each step in a failure trajectory is assigned an anomaly score based on its deviation from the dynamics learned on successful trajectories, which is then used to form a set of error steps. With training on only 100 successful trajectories, experiments show that OAT is 200--5000 $\\times$ faster than prompting-based baselines, and, at the same time, consistently outperforms them in both in-domain and out-of-distribution datasets with +20% and +7% F1 scores, respectively, demonstrating that OAT is a promising and efficient direction for diagnosing agentic system failures.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "OAT diagnostica fallos en agentes LLM de forma rápida y precisa, aprendiendo de trayectorias exitosas para identificar errores sin supervisión costosa.",
+        "problema": "Identificar qué pasos específicos causan el fallo en sistemas de agentes basados en LLM es crucial para depurarlos. Los métodos actuales son caros computacionalmente (basados en prompts) o requieren anotaciones de errores a nivel de paso, que son difíciles y costosas de obtener.",
+        "propuesta": "Se propone OAT, un modelo de atribución de fallos no supervisado que se entrena exclusivamente con trayectorias exitosas. Utiliza aprendizaje de una sola clase con ecuaciones diferenciales controladas neuronales (NCDEs) para modelar patrones dinámicos de éxito en un espacio latente. Durante la inferencia, cada paso de una trayectoria fallida recibe una puntuación de anomalía basada en su desviación de la dinámica aprendida.",
+        "resultados": "Entrenado con solo 100 trayectorias exitosas, OAT es entre 200 y 5000 veces más rápido que los métodos basados en prompts. Además, supera consistentemente a las líneas base con una mejora del +20% en puntuación F1 en conjuntos de datos en-dominio y un +7% en conjuntos fuera de distribución.",
+        "por_que_importa": "Este método ofrece una dirección prometedora y eficiente para diagnosticar fallos en sistemas de agentes de IA. Al no requerir anotaciones de errores costosas ni ser computacionalmente intensivo, facilita la depuración y mejora de estos sistemas en la práctica, acelerando su desarrollo y fiabilidad.",
+        "tags": [
+          "Agentes LLM",
+          "Atribución de fallos",
+          "Aprendizaje no supervisado",
+          "Ecuaciones diferenciales neuronales",
+          "Diagnóstico IA"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-07-16T14:36:52Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.13027",
+      "rank": 4,
+      "title": "PalmClaw: A Native On-Device Agent Framework for Mobile Phones",
+      "authors": [
+        "Hongru Cai",
+        "Yongqi Li",
+        "Ran Wei",
+        "Wenjie Li"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-14",
+      "url": "https://arxiv.org/abs/2607.13027",
+      "pdf_url": "https://arxiv.org/pdf/2607.13027",
+      "score": 51,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Large Language Model (LLM) agents have moved beyond generating responses to executing multi-step tasks by calling tools, observing the results, and iteratively deciding the next action. Most agent systems run on desktops or servers, which support tool use and task automation. Mobile devices are also important agent environments because they are widely accessible and contain users' data, sensors, and daily-use applications. Existing mobile agents mainly operate smartphones through graphical user interface (GUI) actions such as tapping, swiping, and typing, which often form long, interface-dependent sequences, cannot directly access device capabilities, and make execution boundaries difficult to define. We present \\textbf{PalmClaw}, an open-source agent framework that runs natively on mobile phones and manages the sessions, memory, skills, tools, and agent loop directly on the device. PalmClaw exposes device capabilities as device tools with explicit arguments, structured results, and clearly defined execution boundaries. This design enables agents to use mobile capabilities directly while keeping each action explicit and controlled. Experiments show an 11.5\\% relative improvement in task success and a 94.9\\% reduction in completion time over the strongest baseline, with lower setup burden and traces illustrating how execution boundaries are applied. Code is available at https://github.com/ModalityDance/PalmClaw.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "PalmClaw es un nuevo framework que permite a los agentes de IA ejecutar tareas complejas directamente en tu móvil, mejorando la eficiencia y el éxito de las tareas.",
+        "problema": "Los agentes de IA actuales para móviles dependen de interacciones de interfaz gráfica (tocar, deslizar), lo que resulta en secuencias largas, dependientes de la interfaz, sin acceso directo a las capacidades del dispositivo y con límites de ejecución poco claros.",
+        "propuesta": "PalmClaw es un framework de agente de código abierto que se ejecuta nativamente en teléfonos móviles. Gestiona sesiones, memoria, habilidades, herramientas y el ciclo del agente directamente en el dispositivo. Expone las capacidades del dispositivo como \"herramientas de dispositivo\" con argumentos explícitos, resultados estructurados y límites de ejecución claros, permitiendo a los agentes usar las capacidades móviles de forma directa y controlada.",
+        "resultados": "PalmClaw logra una mejora relativa del 11.5% en el éxito de las tareas y una reducción del 94.9% en el tiempo de finalización en comparación con la mejor línea base. También presenta una menor carga de configuración.",
+        "por_que_importa": "Los dispositivos móviles son ampliamente accesibles y contienen datos de usuario, sensores y aplicaciones de uso diario. Este framework permite que los agentes de IA aprovechen directamente estas capacidades de forma eficiente y controlada, abriendo nuevas posibilidades para la automatización inteligente y la asistencia personalizada en la plataforma más utilizada.",
+        "tags": [
+          "Agentes de IA",
+          "Móviles",
+          "On-device",
+          "Framework",
+          "Automatización",
+          "Eficiencia"
+        ],
+        "model": "gemini-2.5-flash",
+        "generated_at": "2026-07-16T14:37:07Z"
+      }
+    }
+  ],
+  "generated_at": "2026-07-16T14:37:07Z"
+}
