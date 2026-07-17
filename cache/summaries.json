@@ -1683,5 +1683,203 @@
     ],
     "model": "gemini-2.5-flash",
     "generated_at": "2026-07-16T14:37:07Z"
+  },
+  "arxiv:2607.14651v1": {
+    "tldr": "MemPoison expone vulnerabilidades de seguridad persistentes en la memoria externa de agentes LLM, revelando puntos ciegos en las defensas actuales.",
+    "problema": "La memoria externa persistente en agentes LLM, aunque mejora la continuidad, introduce vulnerabilidades de seguridad donde el contenido malicioso inyectado puede retenerse y distorsionar el comportamiento futuro.",
+    "propuesta": "Se propone MemPoison, un marco de referencia y análisis con 1227 casos validados que categoriza ataques en tres niveles (L1, L2, L3) y evalúa la efectividad de las defensas en diversos modelos.",
+    "resultados": "Las defensas de escritura actuales suprimen ataques directos (L1) pero fallan contra ataques L2 (composición multi-registro) y L3 (latentes activados por contexto). El análisis de influencia mecánica (MID) revela puntos ciegos estructurales en estas defensas.",
+    "por_que_importa": "Es crucial pasar de filtros estáticos a estrategias de defensa de memoria adaptativas y sensibles al contexto para proteger a los agentes LLM de ataques persistentes y complejos.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Memoria Persistente",
+      "Vulnerabilidades",
+      "Defensas Adaptativas"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-17T14:12:35Z"
+  },
+  "arxiv:2607.14493v1": {
+    "tldr": "Los LLMs en ciberseguridad son vulnerables a inyecciones pasivas de prompts a través de logs, requiriendo defensas robustas.",
+    "problema": "Los LLMs usados en centros de operaciones de seguridad para analizar logs son vulnerables a 'inyecciones pasivas de prompts'. Los atacantes pueden ocultar código malicioso en los propios logs, que se ejecuta cuando el LLM los procesa, engañando al sistema.",
+    "propuesta": "Se introduce LogInject, un framework para evaluar estas amenazas, y Context Stitching, una técnica que fragmenta los ataques en múltiples logs para evadir filtros. También se evalúan defensas en capas (filtrado, hardening, validación).",
+    "resultados": "Los ataques tienen una tasa de éxito de hasta el 88.2% (83.4% promedio). Context Stitching logra un 76.4% de éxito. Las defensas en capas reducen los ataques en un 90.4%, pero queda un 8.4% de vulnerabilidad residual.",
+    "por_que_importa": "Demuestra una vulnerabilidad crítica en el uso de LLMs para análisis de logs de seguridad, exigiendo arquitecturas de defensa en profundidad y supervisión humana continua para evitar decisiones erróneas.",
+    "tags": [
+      "LLMs",
+      "Ciberseguridad",
+      "Inyección de Prompts",
+      "Análisis de Logs",
+      "Vulnerabilidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-17T14:12:47Z"
+  },
+  "arxiv:2607.14601v1": {
+    "tldr": "SYNAPSE, un tutor IA multi-LLM, revoluciona la enseñanza de desarrollo seguro priorizando la accesibilidad para neurodivergentes.",
+    "problema": "La enseñanza tradicional de desarrollo de software seguro llega tarde y no considera las necesidades de aprendices neurodivergentes (ej. TDAH), dificultando la adquisición de habilidades críticas para el mantenimiento de sistemas.",
+    "propuesta": "SYNAPSE es una plataforma adaptativa que coordina múltiples LLMs (Claude, GPT-4o, Gemini) y utiliza una política de pistas socráticas. Incorpora 18 funciones de accesibilidad y se practica sobre una aplicación vulnerable (ShopSecure) mapeada a OWASP Top 10, enfocándose en el ciclo detectar-entender-remediar.",
+    "resultados": "Un piloto de factibilidad con 19 participantes mostró una puntuación de Usabilidad del Sistema (SUS) de 76.4 y un nivel de compromiso de 4.2/5, con cargas cognitivas similares entre cohortes neurodivergentes y neurotípicas.",
+    "por_que_importa": "Mejora la accesibilidad y efectividad de la educación en ciberseguridad, permitiendo a una gama más amplia de desarrolladores adquirir habilidades esenciales para la seguridad del software en la práctica profesional.",
+    "tags": [
+      "IA educativa",
+      "ciberseguridad",
+      "desarrollo seguro",
+      "accesibilidad",
+      "neurodiversidad",
+      "LLMs"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-17T14:13:38Z"
+  },
+  "arxiv:2607.14642v1": {
+    "tldr": "Evalúa la adaptabilidad de agentes LLM a entornos de herramientas en constante cambio con MCPEvol-Bench.",
+    "problema": "Los benchmarks actuales para evaluar la capacidad de los LLM para usar herramientas no consideran la evolución constante de las interfaces y funcionalidades de estas herramientas, llevando a evaluaciones imprecisas de su adaptabilidad.",
+    "propuesta": "Se introduce MCPEvol-Bench, un nuevo benchmark que simula la evolución dinámica de las herramientas en servidores MCP (Model Context Protocol) utilizando 11 operadores de mutación sobre 123 servidores.",
+    "resultados": "Los LLM de vanguardia, como GPT-5.4 y Claude-Sonnet-4-6, muestran caídas de rendimiento del 13.7% y 14.4% respectivamente en servidores con herramientas evolucionadas, con un aumento significativo de errores de planificación y razonamiento.",
+    "por_que_importa": "Demuestra la vulnerabilidad de los flujos de trabajo impulsados por LLM ante cambios en las herramientas y establece un estándar para evaluar la adaptabilidad de los agentes en entornos dinámicos.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Benchmarking",
+      "Adaptabilidad",
+      "Herramientas"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-17T14:13:48Z"
+  },
+  "arxiv:2607.14921v1": {
+    "tldr": "Escalado Aleatorio de Logits: una defensa simple y efectiva contra ataques de ejemplos adversarios en modelos de IA.",
+    "problema": "Los modelos de aprendizaje automático son vulnerables a ataques de ejemplos adversarios, especialmente en escenarios de caja negra donde los atacantes pueden generar ejemplos maliciosos de manera eficiente, amenazando su despliegue confiable.",
+    "propuesta": "Se propone Random Logit Scaling (RLS), una defensa de post-procesamiento basada en aleatorización que escala aleatoriamente los logits de salida del modelo. Esto confunde al atacante al generar puntuaciones falsificadas, manteniendo la precisión del modelo.",
+    "resultados": "RLS reduce significativamente la tasa de éxito de los ataques de caja negra más avanzados, preservando la precisión del modelo y minimizando la distorsión de la puntuación de confianza en comparación con otras defensas de aleatorización.",
+    "por_que_importa": "Proporciona una defensa escalable y de bajo costo contra ataques adversarios de caja negra, crucial para la implementación segura de modelos de IA en aplicaciones del mundo real sin sacrificar el rendimiento.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Defensa Adversaria",
+      "Redes Neuronales",
+      "Caja Negra"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-17T14:13:58Z"
+  },
+  "arxiv:2607.14611v1": {
+    "tldr": "Los sistemas de IA con memoria persistente son vulnerables a inyecciones de código malicioso a través de sus archivos de memoria.",
+    "problema": "Los sistemas de IA que utilizan memoria persistente para mejorar su utilidad y auto-aprendizaje presentan una nueva superficie de ataque para inyecciones de código (prompt injection). Instrucciones maliciosas incrustadas en archivos de memoria pueden influir en el comportamiento futuro del agente.",
+    "propuesta": "Se evalúan ataques de prompt injection en sistemas de IA con memoria, utilizando un entorno de trabajo sintético y aislado (sandbox). Se analizan dos sistemas (Anthropic Claude Code y OpenAI Codex) y cuatro modelos (Claude Haiku 4.5, Claude Opus 4.7, GPT-5.2, GPT-5.5).",
+    "resultados": "Aunque es difícil que un agente sobrescriba sus propios archivos de memoria con contenido externo no confiable, las cargas útiles ya presentes en esos archivos pueden atacar con éxito sesiones actuales y futuras. El éxito del ataque y la persistencia de la carga útil varían significativamente entre sistemas, modelos, objetivos adversarios y secuencias de ataque multisesión.",
+    "por_que_importa": "La memoria persistente altera el modelo de amenaza de las inyecciones de código en sistemas de IA. Es crucial desarrollar defensas que protejan las actualizaciones de memoria sin eliminar la capacidad de adaptación útil del agente.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Prompt Injection",
+      "Memoria Persistente",
+      "Sistemas Agentes"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-17T14:14:10Z"
+  },
+  "arxiv:2607.14566v1": {
+    "tldr": "Automatiza la emulación de ciberataques usando LLMs, generando, ejecutando y recuperándose de fallos en playbooks.",
+    "problema": "La emulación de adversarios para pruebas de ciberseguridad es compleja y a menudo requiere intervención manual, limitando su eficiencia y escalabilidad.",
+    "propuesta": "Un framework que utiliza Modelos de Lenguaje Grandes (LLMs) para generar automáticamente playbooks de ataque desde inteligencia de amenazas (CTI), ejecutarlos y recuperarse de fallos de forma autónoma.",
+    "resultados": "Con Claude Sonnet 4.5, se generaron 27.3 Habilidades por playbook, logrando un 84.22% de éxito de ejecución tras la revisión. El mecanismo de recuperación de fallos mejoró el éxito de ejecución entre un 14.59% y 17.23% y superó al sistema AURORA.",
+    "por_que_importa": "Permite una emulación de adversarios más rápida, completa y autónoma, mejorando la capacidad de las organizaciones para probar y fortalecer sus defensas contra ciberataques reales.",
+    "tags": [
+      "ciberseguridad",
+      "IA",
+      "LLMs",
+      "emulación de adversarios",
+      "automatización",
+      "MITRE ATT&CK"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-17T14:14:22Z"
+  },
+  "arxiv:2607.14777": {
+    "tldr": "SEED: un marco de IA que aprende de sus propios éxitos y fracasos para mejorar la toma de decisiones en tareas complejas.",
+    "problema": "Los modelos de IA que actúan como agentes en tareas de largo plazo reciben poca guía sobre decisiones intermedias debido a recompensas escasas al final del episodio, creando una brecha de supervisión.",
+    "propuesta": "SEED (Self-Evolving On-Policy Distillation) es un marco que analiza trayectorias completadas para generar 'habilidades' (flujos de trabajo, observaciones clave, reglas de evitación de fallos) y luego destila el efecto de estas habilidades de vuelta a la política del agente, mejorando tanto la toma de decisiones como el análisis de habilidades.",
+    "resultados": "SEED mejora consistentemente el rendimiento y la eficiencia de muestreo en tareas basadas en texto y visión, mostrando una generalización robusta a escenarios no vistos. El resumen no especifica métricas numéricas concretas.",
+    "por_que_importa": "Permite que los agentes de IA aprendan de manera más eficiente y efectiva en entornos complejos y dinámicos, generalizando mejor a nuevas situaciones sin necesidad de una gran cantidad de datos de entrenamiento etiquetados.",
+    "tags": [
+      "Aprendizaje por Refuerzo",
+      "Destilación de Conocimiento",
+      "Agentes de IA",
+      "Modelos de Lenguaje Grandes",
+      "Ciberseguridad",
+      "Eficiencia de Muestreo"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-17T14:14:35Z"
+  },
+  "arxiv:2607.14749": {
+    "tldr": "WanSong: un modelo de difusión puro para generar canciones completas y de alta fidelidad de forma eficiente y controlable.",
+    "problema": "La generación de música de larga duración, de alta fidelidad y controlable es un desafío, especialmente para modelos autorregresivos o pipelines complejos.",
+    "propuesta": "WanSong es un modelo basado puramente en difusión que genera canciones multilingües de hasta 5 minutos, produciendo voces y música de fondo en una sola pasada, y permite una inferencia rápida mediante destilación de pasos.",
+    "resultados": "Genera canciones de alta fidelidad de hasta 5 minutos con voces y música de fondo en una sola ejecución. La inferencia es más rápida gracias a la destilación de pasos.",
+    "por_que_importa": "Ofrece una solución eficiente y de alta calidad para la generación de música comercial, facilitando la personalización y edición posterior para aplicaciones prácticas.",
+    "tags": [
+      "generación de música",
+      "difusión",
+      "IA",
+      "audio de larga duración",
+      "WanSong",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-17T14:14:45Z"
+  },
+  "arxiv:2607.14660": {
+    "tldr": "Presentamos VIABench, un benchmark de video para evaluar modelos de IA en la asistencia a personas con discapacidad visual.",
+    "problema": "Los modelos multimodales de lenguaje (MLLMs) actuales, a pesar de sus avances, no han sido evaluados exhaustivamente para su utilidad práctica en la asistencia a personas con discapacidad visual en escenarios del mundo real.",
+    "propuesta": "Se introduce VIABench, un benchmark de video basado en grabaciones de primera persona de personas con discapacidad visual, que define tres tareas clave: Recordatorio Proactivo, Respuesta a Preguntas Visuales (VQA) e Interacción Guiada por Visión, junto con un pipeline de evaluación riguroso.",
+    "resultados": "Los experimentos muestran que los MLLMs actuales aún tienen dificultades para ofrecer un soporte completo, especialmente en la tarea de Recordatorio Proactivo, que requiere anticipación y respuesta en tiempo real.",
+    "por_que_importa": "Este benchmark impulsará la investigación para desarrollar MLLMs personalizados que mejoren significativamente la navegación y la experiencia de interacción para personas con discapacidad visual.",
+    "tags": [
+      "IA",
+      "accesibilidad",
+      "discapacidad visual",
+      "benchmarking",
+      "modelos multimodales"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-17T14:14:57Z"
+  },
+  "arxiv:2607.14952": {
+    "tldr": "LongStraw permite entrenar modelos de IA con contextos de más de 2 millones de tokens, superando las limitaciones actuales de GPU.",
+    "problema": "Existe una brecha entre la longitud de contexto que pueden manejar los sistemas de inferencia (millones de tokens) y la que se usa en el post-entrenamiento de RL (256K tokens o menos), especialmente para agentes de IA cuyas interacciones se acumulan con el tiempo.",
+    "propuesta": "LongStraw es un stack de ejecución consciente de la arquitectura que permite el post-entrenamiento de RL con contextos de millones de tokens bajo un presupuesto fijo de GPU. Utiliza Group Relative Policy Optimization (GRPO), evalúa prompts compartidos sin autograd, retiene solo el estado necesario y reproduce ramas de respuesta cortas, reduciendo el grafo de entrenamiento.",
+    "resultados": "LongStraw completa el scoring y backward de Qwen en 2.1M de posiciones con grupos de 2 y 8 en 8 GPUs H20, con un aumento mínimo de memoria. Una prueba de estrés alcanzó 4.46M de posiciones. Se validó la ejecución end-to-end para un prompt de 2.1M de tokens en GLM-5.2 en 32 GPUs H20.",
+    "por_que_importa": "Permite entrenar modelos de IA más capaces de manejar información extensa y compleja, crucial para agentes de IA que interactúan en entornos dinámicos y prolongados, democratizando el acceso a entrenamiento de largo contexto.",
+    "tags": [
+      "IA",
+      "RL",
+      "Largo Contexto",
+      "GPU",
+      "Eficiencia",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-17T14:15:25Z"
+  },
+  "arxiv:2607.13399": {
+    "tldr": "La destilación on-policy (OPD) en LLMs, aunque poderosa, sufre de desajustes y atajos de longitud; proponemos regulaciones para mejorar la exploración.",
+    "problema": "La destilación on-policy (OPD) en el post-entrenamiento de LLMs tiene dinámicas de entrenamiento poco entendidas, sufriendo de desajustes entre el estudiante y el profesor (Student-Teacher Mismatch) y atajos basados en la longitud de la respuesta (Length Exploitation), lo que lleva a una exploración contraproducente.",
+    "propuesta": "Se propone un estudio sistemático para entender el rol de OPD como catalizador de exploración, identificando sus patologías y proponiendo regulaciones de señal como el recorte de ventajas (advantage clipping) y la compresión en escala logarítmica (log-scale compression) para guiar la exploración de forma fiel.",
+    "resultados": "Las regulaciones propuestas alivian la explotación de longitud y permiten una destilación efectiva, superando consistentemente a variantes de OPD y líneas base de RLVR en siete benchmarks. La calidad de la señal, no la escala del profesor, gobierna la exploración exitosa en OPD.",
+    "por_que_importa": "Permite entrenar LLMs de manera más eficiente y robusta, evitando que el modelo aprenda atajos perjudiciales y asegurando que la guía del profesor sea útil y confiable para mejorar el razonamiento del estudiante.",
+    "tags": [
+      "LLMs",
+      "Destilación",
+      "Ciberseguridad",
+      "Inteligencia Artificial",
+      "Aprendizaje por Refuerzo",
+      "Post-entrenamiento"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-17T14:17:04Z"
   }
 }

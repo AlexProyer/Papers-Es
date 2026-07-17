@@ -1,0 +1,616 @@
+{
+  "date": "2026-07-17",
+  "report_type": "filtrado",
+  "evaluated": 172,
+  "selected": 20,
+  "papers": [
+    {
+      "id": "arxiv:2607.15246v1",
+      "rank": 1,
+      "title": "ARMOR++: Agentic Orchestration of a Multi-Domain Primitive Set for Transferable Attacks on Deepfake Detectors",
+      "authors": [
+        "Christos Korgialas",
+        "Gabriel Lee Jun Rong",
+        "Dion Jia Xu Ho",
+        "Pai Chet Ng"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CV]",
+      "category": "cs.CV",
+      "date": "2026-07-16",
+      "url": "https://arxiv.org/abs/2607.15246v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.15246v1",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "The reliability of deepfake detectors frequently degrades under black-box adversarial transfer, as these models often rely on fragile, architecture-dependent forensic cues. Existing transfer attacks often lack semantic awareness and struggle to maintain effectiveness under strict no-query constraints, particularly when perturbations are transferred from convolutional surrogates to transformer-based targets. To address these limitations, this paper introduces ARMOR++, a robust multi-agent framework designed for high-transferability deepfake evasion. The framework leverages the Qwen2.5-VL Vision-Language Model (VLM) to supply spatial semantic priors, while the Qwen3 Large Language Model (LLM) orchestrates primitive selection, adaptive hyperparameter reparameterization, and entropy-regularized perturbation mixing. By integrating five complementary primitives, spanning dense optimization, saliency-based methods, spatial transformations, frequency-domain perturbations, and block-structured modifications, ARMOR++ effectively targets heterogeneous inductive biases. Rigorous evaluation on the AADD-2025 benchmark demonstrates that ARMOR++ significantly outperforms existing agentic and non-agentic baselines across both low- and high-quality image regimes. Statistical analysis confirms a substantial gain in blind-target Attack Success Rate (ASR) over the state-of-the-art agentic baseline, with further performance advantages evidenced against non-agentic benchmarks and under robust defensive configurations. These findings highlight a significant residual reliability gap in current deepfake detector deployments and demonstrate the efficacy of agentic orchestration in identifying latent vulnerabilities.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2607.14651v1",
+      "rank": 2,
+      "title": "MemPoison: Uncovering Persistent Memory Threats and Structural Blind Spots in LLM Agents",
+      "authors": [
+        "Jifeng Gao",
+        "Kang Xia",
+        "Yi Zhang",
+        "Xiaobin Hong"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-16",
+      "url": "https://arxiv.org/abs/2607.14651v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.14651v1",
+      "score": 59,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Persistent external memory enhances agent continuity but introduces persistent security vulnerabilities: adversarial content can be injected via standard interaction channels, retained across turns, and later distort downstream behavior. To address this challenge, we propose MemPoison, a comprehensive benchmark and analysis framework featuring 1227 hand-validated cases across four attack types, three injection channels, and three representative memory substrates, evaluated on seven open-weight and three closed-weight model families. We introduce a three-tier taxonomy: (L1) direct single-record corruption, (L2) compositional multi-record corruption and (L3) context-triggered dormant corruption. Our evaluations reveal a distinct defense frontier: while baseline write-time defenses, such as consistency checks, substantially suppress direct L1 attacks, they fail to reliably suppress L2 and L3 attacks. Through mechanistic influence decomposition (MID), we demonstrate structural blind spots in write-time defenses, which admit seemingly benign records that later become harmful through joint retrieval composition or trigger-conditioned activation. Our findings advocate for shifting from static filtering to adaptive, context-sensitive memory defense strategies.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "MemPoison expone vulnerabilidades de seguridad persistentes en la memoria externa de agentes LLM, revelando puntos ciegos en las defensas actuales.",
+        "problema": "La memoria externa persistente en agentes LLM, aunque mejora la continuidad, introduce vulnerabilidades de seguridad donde el contenido malicioso inyectado puede retenerse y distorsionar el comportamiento futuro.",
+        "propuesta": "Se propone MemPoison, un marco de referencia y análisis con 1227 casos validados que categoriza ataques en tres niveles (L1, L2, L3) y evalúa la efectividad de las defensas en diversos modelos.",
+        "resultados": "Las defensas de escritura actuales suprimen ataques directos (L1) pero fallan contra ataques L2 (composición multi-registro) y L3 (latentes activados por contexto). El análisis de influencia mecánica (MID) revela puntos ciegos estructurales en estas defensas.",
+        "por_que_importa": "Es crucial pasar de filtros estáticos a estrategias de defensa de memoria adaptativas y sensibles al contexto para proteger a los agentes LLM de ataques persistentes y complejos.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Memoria Persistente",
+          "Vulnerabilidades",
+          "Defensas Adaptativas"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-17T14:12:35Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.14493v1",
+      "rank": 3,
+      "title": "Context Contamination in LLM Analysis of Network Security Logs: Poison with Passive Prompt Injection and Mitigation Evaluation",
+      "authors": [
+        "Rabimba Karanjai",
+        "Yang Lu",
+        "Hemanth Hegadehalli Madhavarao",
+        "Lei Xu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-16",
+      "url": "https://arxiv.org/abs/2607.14493v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.14493v1",
+      "score": 59,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: cybersecurity, vuln & threats, LLM"
+      ],
+      "abstract_en": "Large Language Models are increasingly deployed in Security Operations Centers for log analysis tasks including summarization, alert triage, and threat investigation. These systems ingest logs from external-facing services and process network logs as natural language contexts to generate security insights. We demonstrate that this architectural pattern introduces a critical vulnerability: adversaries can embed prompt injection payloads in log-generating fields that persist in storage and are executed when analysts query the LLM, achieving what we term passive prompt injection. We present LogInject, a systematic framework for evaluating these threats. Using LogInject-1.0, a benchmark of 12,847 log entries including 2,569 adversarial samples, we evaluate three production LLMs across four attack objectives: activity concealment, false positive generation, information exfiltration, and output hijacking. Our findings reveal an up to 88.2% attack success rate (83.4% average across models) under the baseline conditions. We introduce Context Stitching, a novel technique that fragments payloads across multiple log entries to evade stateless filters while exploiting LLM long-context reasoning, achieving a 76.4% success rate. As mitigation, we evaluate layered defenses by combining input filtering, prompt hardening, and output validation, demonstrating a 90.4% attack reduction, although 8.4% residual vulnerability persists. Our results establish that LLM-based log analysis creates an inherent confused deputy vulnerability where untrusted data and trusted instructions compete indistinguishably for model attention, requiring defense in-depth architectures and continued human oversight for security-critical decisions.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los LLMs en ciberseguridad son vulnerables a inyecciones pasivas de prompts a través de logs, requiriendo defensas robustas.",
+        "problema": "Los LLMs usados en centros de operaciones de seguridad para analizar logs son vulnerables a 'inyecciones pasivas de prompts'. Los atacantes pueden ocultar código malicioso en los propios logs, que se ejecuta cuando el LLM los procesa, engañando al sistema.",
+        "propuesta": "Se introduce LogInject, un framework para evaluar estas amenazas, y Context Stitching, una técnica que fragmenta los ataques en múltiples logs para evadir filtros. También se evalúan defensas en capas (filtrado, hardening, validación).",
+        "resultados": "Los ataques tienen una tasa de éxito de hasta el 88.2% (83.4% promedio). Context Stitching logra un 76.4% de éxito. Las defensas en capas reducen los ataques en un 90.4%, pero queda un 8.4% de vulnerabilidad residual.",
+        "por_que_importa": "Demuestra una vulnerabilidad crítica en el uso de LLMs para análisis de logs de seguridad, exigiendo arquitecturas de defensa en profundidad y supervisión humana continua para evitar decisiones erróneas.",
+        "tags": [
+          "LLMs",
+          "Ciberseguridad",
+          "Inyección de Prompts",
+          "Análisis de Logs",
+          "Vulnerabilidad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-17T14:12:47Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.14601v1",
+      "rank": 4,
+      "title": "SYNAPSE: A Multi-LLM Orchestrated AI Tutor for Secure Software Development Education with Neurodivergent-First Design",
+      "authors": [
+        "Giusy Ferrara",
+        "Ashkan Sami"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-07-16",
+      "url": "https://arxiv.org/abs/2607.14601v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.14601v1",
+      "score": 59,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: cybersecurity, vuln & threats, LLM"
+      ],
+      "abstract_en": "Developers who maintain real systems must continually recognise and remediate vulnerabilities in existing code, yet this skill is rarely trained directly: secure software development is commonly taught only after programming fluency is acquired, and accessibility support is treated as a secondary concern, disadvantaging learners with ADHD and related executive-function differences. This paper presents SYNAPSE, a publicly deployed adaptive tutoring platform for Java, Python for cybersecurity, and secure software development. SYNAPSE coordinates Claude, GPT-4o, and Gemini through the Model Context Protocol, routing interactions by pedagogical intent under a three-stage Socratic hint policy. It exposes eighteen always-visible accessibility features and anchors practice in ShopSecure, a deliberately vulnerable web application mapped to six OWASP Top 10 (2021) categories, on which learners practise the detect-understand-remediate loop characteristic of software maintenance. A feasibility pilot with nineteen participants across neurodivergent and neurotypical cohorts returned a System Usability Scale score of 76.4 and engagement of 4.2/5, with comparable cognitive-load levels across cohorts. SYNAPSE is available at https://synapse-course.com; a screencast is available at https://youtu.be/9R17KC47qQI.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "SYNAPSE, un tutor IA multi-LLM, revoluciona la enseñanza de desarrollo seguro priorizando la accesibilidad para neurodivergentes.",
+        "problema": "La enseñanza tradicional de desarrollo de software seguro llega tarde y no considera las necesidades de aprendices neurodivergentes (ej. TDAH), dificultando la adquisición de habilidades críticas para el mantenimiento de sistemas.",
+        "propuesta": "SYNAPSE es una plataforma adaptativa que coordina múltiples LLMs (Claude, GPT-4o, Gemini) y utiliza una política de pistas socráticas. Incorpora 18 funciones de accesibilidad y se practica sobre una aplicación vulnerable (ShopSecure) mapeada a OWASP Top 10, enfocándose en el ciclo detectar-entender-remediar.",
+        "resultados": "Un piloto de factibilidad con 19 participantes mostró una puntuación de Usabilidad del Sistema (SUS) de 76.4 y un nivel de compromiso de 4.2/5, con cargas cognitivas similares entre cohortes neurodivergentes y neurotípicas.",
+        "por_que_importa": "Mejora la accesibilidad y efectividad de la educación en ciberseguridad, permitiendo a una gama más amplia de desarrolladores adquirir habilidades esenciales para la seguridad del software en la práctica profesional.",
+        "tags": [
+          "IA educativa",
+          "ciberseguridad",
+          "desarrollo seguro",
+          "accesibilidad",
+          "neurodiversidad",
+          "LLMs"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-17T14:13:38Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.14642v1",
+      "rank": 5,
+      "title": "MCPEvol-Bench: Benchmarking LLM Agent Performance Across Dynamic Evolutions of MCP Servers",
+      "authors": [
+        "Huanxi Liu",
+        "Kun Hu",
+        "Jiaqi Liao",
+        "Qiang Wang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-07-16",
+      "url": "https://arxiv.org/abs/2607.14642v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.14642v1",
+      "score": 58,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "As Model Context Protocol (MCP) servers emerge as the core infrastructure for connecting LLMs with external tools, existing benchmarks leverage real-world MCP servers to evaluate LLM agents' tool-using capabilities. However, these benchmarks overlook the continuous evolution of tool interfaces and functionalities within MCP servers, resulting in flawed assessments that fail to capture the agent's adaptability in changing tool landscapes. To bridge this gap, we introduce \\textbf{MCPEvol-Bench}, a novel benchmark for evaluating the task-solving capabilities of LLM agents under dynamic toolset evolution. Inspired by large-scale empirical study, we propose 11 mutation operators to simulate realistic tool evolution within 123 MCP servers. We benchmark 12 state-of-the-art LLMs on multiple versions of MCP servers, revealing that even frontier models struggle to adapt to evolving tools. For instance, GPT-5.4 and Claude-Sonnet-4-6 exhibit performance declines of 13.7\\% and 14.4\\% in evolved MCP servers, respectively, accompanied by substantial increases in planning and reasoning errors. These findings highlight the vulnerability of LLM-driven workflows, establishing MCPEvol-Bench as a standard for evaluating agent adaptability in dynamic tool environments.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa la adaptabilidad de agentes LLM a entornos de herramientas en constante cambio con MCPEvol-Bench.",
+        "problema": "Los benchmarks actuales para evaluar la capacidad de los LLM para usar herramientas no consideran la evolución constante de las interfaces y funcionalidades de estas herramientas, llevando a evaluaciones imprecisas de su adaptabilidad.",
+        "propuesta": "Se introduce MCPEvol-Bench, un nuevo benchmark que simula la evolución dinámica de las herramientas en servidores MCP (Model Context Protocol) utilizando 11 operadores de mutación sobre 123 servidores.",
+        "resultados": "Los LLM de vanguardia, como GPT-5.4 y Claude-Sonnet-4-6, muestran caídas de rendimiento del 13.7% y 14.4% respectivamente en servidores con herramientas evolucionadas, con un aumento significativo de errores de planificación y razonamiento.",
+        "por_que_importa": "Demuestra la vulnerabilidad de los flujos de trabajo impulsados por LLM ante cambios en las herramientas y establece un estándar para evaluar la adaptabilidad de los agentes en entornos dinámicos.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Benchmarking",
+          "Adaptabilidad",
+          "Herramientas"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-17T14:13:48Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.14921v1",
+      "rank": 6,
+      "title": "Random Logit Scaling: Defending Deep Neural Networks Against Black-Box Score-Based Adversarial Example Attacks",
+      "authors": [
+        "Hamid Dashtbani",
+        "Mehdi Dousti Gandomani",
+        "AmirMahdi Sadeghzadeh"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-16",
+      "url": "https://arxiv.org/abs/2607.14921v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.14921v1",
+      "score": 54,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Machine learning models are increasingly adapted in various domains. However, adversarial examples pose a significant threat to the reliable deployment of these models. In recent years, some powerful adversarial example attacks have been proposed for the fast and query-efficient generation of adversarial examples, even in black-box scenarios, highlighting the need for scalable, low-cost, and powerful defenses. In this work, we present two contributions to the domain of black-box adversarial example attacks and defenses. First, we propose Random Logit Scaling (RLS), a randomization-based defense against black-box score-based adversarial example attacks. RLS is a plug-and-play, post-processing defense that can be implemented on top of any existing ML model with minimal effort. The idea behind RLS is to confuse an attacker by outputting falsified scores resulting from randomly scaled logits while maintaining the model accuracy. We show that RLS significantly reduces the success rate of state-of-the-art black-box score-based attacks while preserving the accuracy and minimizing confidence score distortion compared to state-of-the-art randomization-based defenses. Second, we introduce a novel adaptive attack against AAA, a SOTA non-randomized black-box defense against black-box score-based attacks that also modifies output logits to confuse attackers, demonstrating its vulnerability against adaptive attacks.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Escalado Aleatorio de Logits: una defensa simple y efectiva contra ataques de ejemplos adversarios en modelos de IA.",
+        "problema": "Los modelos de aprendizaje automático son vulnerables a ataques de ejemplos adversarios, especialmente en escenarios de caja negra donde los atacantes pueden generar ejemplos maliciosos de manera eficiente, amenazando su despliegue confiable.",
+        "propuesta": "Se propone Random Logit Scaling (RLS), una defensa de post-procesamiento basada en aleatorización que escala aleatoriamente los logits de salida del modelo. Esto confunde al atacante al generar puntuaciones falsificadas, manteniendo la precisión del modelo.",
+        "resultados": "RLS reduce significativamente la tasa de éxito de los ataques de caja negra más avanzados, preservando la precisión del modelo y minimizando la distorsión de la puntuación de confianza en comparación con otras defensas de aleatorización.",
+        "por_que_importa": "Proporciona una defensa escalable y de bajo costo contra ataques adversarios de caja negra, crucial para la implementación segura de modelos de IA en aplicaciones del mundo real sin sacrificar el rendimiento.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Defensa Adversaria",
+          "Redes Neuronales",
+          "Caja Negra"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-17T14:13:58Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.14611v1",
+      "rank": 7,
+      "title": "Bad Memory: Evaluating Prompt Injection Risks from Memory in Agentic Systems",
+      "authors": [
+        "Soham Gadgil",
+        "David Alexander",
+        "Sai Sunku",
+        "Franziska Roesner"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-16",
+      "url": "https://arxiv.org/abs/2607.14611v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.14611v1",
+      "score": 54,
+      "topics": [
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: AI agents, adversarial ML"
+      ],
+      "abstract_en": "A growing class of agentic systems maintain persistent state across sessions through memory files, behavioral preferences, and knowledge bases. While this makes agents more useful and self-improving, it also creates a new attack surface for prompt injections in which malicious instructions can be embedded within persistent files and influence future behavior. In this work, we study prompt injection attacks in memory-based agentic systems using a sandboxed synthetic workspace. We evaluate two agentic systems, Anthropic Claude Code and OpenAI Codex, across four models: Claude Haiku 4.5, Claude Opus 4.7, GPT-5.2, and GPT-5.5. Our results show that although it is difficult to make an agent overwrite its own memory files using untrusted external content, payloads already planted in those files can successfully attack current and future sessions. Attack success and payload persistence vary substantially across systems, models, adversarial goals, and multi-session attack sequences. These findings show that persistent memory changes the threat model for prompt injection and motivate defenses that protect memory updates without removing useful agent adaptation.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los sistemas de IA con memoria persistente son vulnerables a inyecciones de código malicioso a través de sus archivos de memoria.",
+        "problema": "Los sistemas de IA que utilizan memoria persistente para mejorar su utilidad y auto-aprendizaje presentan una nueva superficie de ataque para inyecciones de código (prompt injection). Instrucciones maliciosas incrustadas en archivos de memoria pueden influir en el comportamiento futuro del agente.",
+        "propuesta": "Se evalúan ataques de prompt injection en sistemas de IA con memoria, utilizando un entorno de trabajo sintético y aislado (sandbox). Se analizan dos sistemas (Anthropic Claude Code y OpenAI Codex) y cuatro modelos (Claude Haiku 4.5, Claude Opus 4.7, GPT-5.2, GPT-5.5).",
+        "resultados": "Aunque es difícil que un agente sobrescriba sus propios archivos de memoria con contenido externo no confiable, las cargas útiles ya presentes en esos archivos pueden atacar con éxito sesiones actuales y futuras. El éxito del ataque y la persistencia de la carga útil varían significativamente entre sistemas, modelos, objetivos adversarios y secuencias de ataque multisesión.",
+        "por_que_importa": "La memoria persistente altera el modelo de amenaza de las inyecciones de código en sistemas de IA. Es crucial desarrollar defensas que protejan las actualizaciones de memoria sin eliminar la capacidad de adaptación útil del agente.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Prompt Injection",
+          "Memoria Persistente",
+          "Sistemas Agentes"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-17T14:14:10Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.14566v1",
+      "rank": 8,
+      "title": "Fully Automated End-to-End Adversary Emulation from MITRE ATT\\&CK Based Cyber Threat Intelligence Using LLMs",
+      "authors": [
+        "Jueon Choi",
+        "Seojun Lee",
+        "Sanggwon Yun",
+        "Kwanghoon Choi"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-16",
+      "url": "https://arxiv.org/abs/2607.14566v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.14566v1",
+      "score": 54,
+      "topics": [
+        "cybersecurity",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: cybersecurity, LLM"
+      ],
+      "abstract_en": "This paper presents a fully automated end-to-end framework for adversary emulation from MITRE ATT&CK-aligned CTI reports using LLMs. Unlike prior work, which either executes prewritten playbooks or partially automates playbook generation, our framework unifies playbook generation, execution, and failure recovery in a single workflow. In particular, although AURORA, the most recent prior study, generates playbooks from CTI reports, it still requires partial manual intervention and does not revise playbooks based on execution failures. Our framework generates Caldera playbooks from CTI reports, executes them automatically, and revises failed Abilities through a failure-type-aware recovery mechanism. Evaluated on 11 CTI reports with Claude Sonnet 4.5, GPT-4o, Gemini 2.5 Pro, and Grok 4 Fast, the framework achieved its best results with Claude Sonnet 4.5: 27.3 Abilities per playbook, 84.22% execution success after revision, and CTI Precision, Recall, and F1 of 73.95%, 52.48%, and 60.50%, respectively. The failure recovery mechanism consistently improved execution success across all evaluated LLM models by 14.59%p to 17.23%p. On the 10 CTI reports selected from AURORA's dataset, this mechanism further increased the final execution success rate, surpassing that of AURORA, which represents the state-of-the-art adversary emulation system.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Automatiza la emulación de ciberataques usando LLMs, generando, ejecutando y recuperándose de fallos en playbooks.",
+        "problema": "La emulación de adversarios para pruebas de ciberseguridad es compleja y a menudo requiere intervención manual, limitando su eficiencia y escalabilidad.",
+        "propuesta": "Un framework que utiliza Modelos de Lenguaje Grandes (LLMs) para generar automáticamente playbooks de ataque desde inteligencia de amenazas (CTI), ejecutarlos y recuperarse de fallos de forma autónoma.",
+        "resultados": "Con Claude Sonnet 4.5, se generaron 27.3 Habilidades por playbook, logrando un 84.22% de éxito de ejecución tras la revisión. El mecanismo de recuperación de fallos mejoró el éxito de ejecución entre un 14.59% y 17.23% y superó al sistema AURORA.",
+        "por_que_importa": "Permite una emulación de adversarios más rápida, completa y autónoma, mejorando la capacidad de las organizaciones para probar y fortalecer sus defensas contra ciberataques reales.",
+        "tags": [
+          "ciberseguridad",
+          "IA",
+          "LLMs",
+          "emulación de adversarios",
+          "automatización",
+          "MITRE ATT&CK"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-17T14:14:22Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.14777",
+      "rank": 1,
+      "title": "SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning",
+      "authors": [
+        "Jinyang Wu",
+        "Shuo Yang",
+        "Zhengxi Lu",
+        "Fan Zhang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-16",
+      "url": "https://arxiv.org/abs/2607.14777",
+      "pdf_url": "https://arxiv.org/pdf/2607.14777",
+      "score": 69,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Large language models are increasingly trained as interactive agents for long-horizon tasks involving multi-turn interaction, tool use, and environment feedback. Outcome-based reinforcement learning (RL) provides a practical optimization paradigm, but its sparse trajectory-level rewards offer limited guidance on intermediate decisions, leaving a supervision gap between episode-level outcomes and token-level policy learning. We propose SEED (SElf-Evolving On-Policy Distillation), a self-evolving framework that converts completed on-policy trajectories into training-time hindsight skills and distills their behavioral effect back into the policy model. SEED first fine-tunes the policy to analyze completed trajectories and generate natural-language skills that capture reusable workflows, decisive observations, or failure-avoidance rules. During RL, the current policy both collects trajectories and serves as the analyzer that extracts hindsight skills from them. Policy updates therefore improve subsequent decision making and skill analysis together, allowing hindsight supervision to evolve with the policy. SEED then re-scores the sampled actions under ordinary and skill-augmented contexts, converting the skill-induced probability shift into a dense token-level on-policy distillation signal. This signal is jointly optimized with outcome-based RL, keeping the auxiliary supervision aligned with the current trajectory distribution. Extensive experiments on text-based and vision-based agentic tasks show that SEED consistently improves performance and sample efficiency, exhibiting robust generalization to unseen scenarios. Our code is available at https://github.com/jinyangwu/SEED.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "SEED: un marco de IA que aprende de sus propios éxitos y fracasos para mejorar la toma de decisiones en tareas complejas.",
+        "problema": "Los modelos de IA que actúan como agentes en tareas de largo plazo reciben poca guía sobre decisiones intermedias debido a recompensas escasas al final del episodio, creando una brecha de supervisión.",
+        "propuesta": "SEED (Self-Evolving On-Policy Distillation) es un marco que analiza trayectorias completadas para generar 'habilidades' (flujos de trabajo, observaciones clave, reglas de evitación de fallos) y luego destila el efecto de estas habilidades de vuelta a la política del agente, mejorando tanto la toma de decisiones como el análisis de habilidades.",
+        "resultados": "SEED mejora consistentemente el rendimiento y la eficiencia de muestreo en tareas basadas en texto y visión, mostrando una generalización robusta a escenarios no vistos. El resumen no especifica métricas numéricas concretas.",
+        "por_que_importa": "Permite que los agentes de IA aprendan de manera más eficiente y efectiva en entornos complejos y dinámicos, generalizando mejor a nuevas situaciones sin necesidad de una gran cantidad de datos de entrenamiento etiquetados.",
+        "tags": [
+          "Aprendizaje por Refuerzo",
+          "Destilación de Conocimiento",
+          "Agentes de IA",
+          "Modelos de Lenguaje Grandes",
+          "Ciberseguridad",
+          "Eficiencia de Muestreo"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-17T14:14:35Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.14749",
+      "rank": 2,
+      "title": "WanSong v1.0 Technical Report",
+      "authors": [
+        "Binghui Chen",
+        "Pandeng Li",
+        "Yu Liu",
+        "Jingren Zhou"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-16",
+      "url": "https://arxiv.org/abs/2607.14749",
+      "pdf_url": "https://arxiv.org/pdf/2607.14749",
+      "score": 60,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Music generation foundation models have recently attracted significant industry attention. However, achieving efficient generation and high-fidelity long-form audio while supporting controllability remains challenging. To address these needs, we present \\textbf{WanSong}, a simple yet powerful approach for long-form, commercial-grade song generation. Unlike autoregressive (AR) and cascaded multi-stage pipelines (\\eg, AR followed by diffusion), \\textbf{WanSong} is a pure diffusion-based model that directly generates high-fidelity, multilingual songs up to 5 minutes and outputs dual stems (vocals and background music) in a single run. In addition, our diffusion framework enables faster inference through step-distillation, and offers an efficient pathway for fine-tuning and customization to support downstream editing tasks.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "WanSong: un modelo de difusión puro para generar canciones completas y de alta fidelidad de forma eficiente y controlable.",
+        "problema": "La generación de música de larga duración, de alta fidelidad y controlable es un desafío, especialmente para modelos autorregresivos o pipelines complejos.",
+        "propuesta": "WanSong es un modelo basado puramente en difusión que genera canciones multilingües de hasta 5 minutos, produciendo voces y música de fondo en una sola pasada, y permite una inferencia rápida mediante destilación de pasos.",
+        "resultados": "Genera canciones de alta fidelidad de hasta 5 minutos con voces y música de fondo en una sola ejecución. La inferencia es más rápida gracias a la destilación de pasos.",
+        "por_que_importa": "Ofrece una solución eficiente y de alta calidad para la generación de música comercial, facilitando la personalización y edición posterior para aplicaciones prácticas.",
+        "tags": [
+          "generación de música",
+          "difusión",
+          "IA",
+          "audio de larga duración",
+          "WanSong",
+          "ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-17T14:14:45Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.14660",
+      "rank": 3,
+      "title": "VIABench: A Comprehensive Video Benchmark Collected from Blind Individuals for Visual Impairment Assistance",
+      "authors": [
+        "Yunfeng Liu",
+        "Yuandong Yang",
+        "Jiarui Han",
+        "Zhenpeng Huang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-16",
+      "url": "https://arxiv.org/abs/2607.14660",
+      "pdf_url": "https://arxiv.org/pdf/2607.14660",
+      "score": 60,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Visually impaired individuals (VIIs) encounter significant daily challenges due to limited access to visual information. Although Multimodal Large Language Models (MLLMs) have achieved impressive results on general vision and language tasks, their practical utility in real-world blind assistance still remains largely underexplored. To fill this gap, we introduce VIABench, a comprehensive video benchmark specifically designed to evaluate MLLMs in Visually Impaired Assistance scenarios using first-person videos recorded or shared by VIIs themselves. VIABench defines three core tasks, each targeting a distinct requirement in visual assistance. Proactive Reminder: Assesses the model's ability to interpret ongoing video content while proactively anticipating and verbally describing upcoming navigation-critical events; Visual Question Answering (VQA): Evaluates the model's capacity to answer user-posed questions about the environment or objects within the video; Vision-Guided Interaction: Tests context-aware reasoning to accomplish intentional interactions between user and environment. To ensure a robust and fair evaluation, we propose a rigorous benchmarking pipeline that supports both online (real-time) and offline settings. Our experiments demonstrate that current MLLMs still struggle to deliver comprehensive support for VIIs, especially in the Proactive Reminder task, which demands accurate anticipation and real-time responsiveness. We hope VIABench will drive future research toward developing customized MLLMs for real-world assistance, ultimately improving navigation and interaction experiences for visually impaired individuals. Code and data will be released at https://github.com/MCG-NJU/VIABench.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Presentamos VIABench, un benchmark de video para evaluar modelos de IA en la asistencia a personas con discapacidad visual.",
+        "problema": "Los modelos multimodales de lenguaje (MLLMs) actuales, a pesar de sus avances, no han sido evaluados exhaustivamente para su utilidad práctica en la asistencia a personas con discapacidad visual en escenarios del mundo real.",
+        "propuesta": "Se introduce VIABench, un benchmark de video basado en grabaciones de primera persona de personas con discapacidad visual, que define tres tareas clave: Recordatorio Proactivo, Respuesta a Preguntas Visuales (VQA) e Interacción Guiada por Visión, junto con un pipeline de evaluación riguroso.",
+        "resultados": "Los experimentos muestran que los MLLMs actuales aún tienen dificultades para ofrecer un soporte completo, especialmente en la tarea de Recordatorio Proactivo, que requiere anticipación y respuesta en tiempo real.",
+        "por_que_importa": "Este benchmark impulsará la investigación para desarrollar MLLMs personalizados que mejoren significativamente la navegación y la experiencia de interacción para personas con discapacidad visual.",
+        "tags": [
+          "IA",
+          "accesibilidad",
+          "discapacidad visual",
+          "benchmarking",
+          "modelos multimodales"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-17T14:14:57Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.14952",
+      "rank": 4,
+      "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+      "authors": [
+        "Changhai Zhou",
+        "Kieran Liu",
+        "Yuhua Zhou",
+        "Qian Qiao"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-16",
+      "url": "https://arxiv.org/abs/2607.14952",
+      "pdf_url": "https://arxiv.org/pdf/2607.14952",
+      "score": 57,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "A growing gap separates inference context lengths from RL post-training: inference systems are approaching million-token contexts, while post-training workloads often remain at 256K tokens or below and rely on length generalization at deployment. The gap is especially important for AI agents, whose observations, tool outputs, documents, and prior decisions accumulate over long trajectories. LongStraw is an architecture-aware execution stack for million-token RL post-training under a fixed GPU budget, instantiated with Group Relative Policy Optimization (GRPO). It evaluates the shared prompt without autograd, retains only model-specific state needed by later tokens, and replays short response branches one at a time, reducing the live training graph at the cost of additional replay time. We implement it for the hybrid recurrent and full-attention Qwen3.6-27B and the compressed-attention mixture-of-experts GLM-5.2. On eight H20 GPUs, LongStraw completes grouped Qwen scoring and response backward at 2.1M positions for groups of 2 and 8; increasing the group size adds only 0.21 GB of peak allocated memory, while a separate stress test reaches 4.46M positions. On 32 H20 GPUs, we validate the end-to-end LongStraw execution path for a 2.1M-token prompt across all 78 layers of GLM-5.2. These experiments establish execution capacity rather than complete training correctness because the captured prompt state is detached and some distributed forward and gradient composition paths remain incomplete.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "LongStraw permite entrenar modelos de IA con contextos de más de 2 millones de tokens, superando las limitaciones actuales de GPU.",
+        "problema": "Existe una brecha entre la longitud de contexto que pueden manejar los sistemas de inferencia (millones de tokens) y la que se usa en el post-entrenamiento de RL (256K tokens o menos), especialmente para agentes de IA cuyas interacciones se acumulan con el tiempo.",
+        "propuesta": "LongStraw es un stack de ejecución consciente de la arquitectura que permite el post-entrenamiento de RL con contextos de millones de tokens bajo un presupuesto fijo de GPU. Utiliza Group Relative Policy Optimization (GRPO), evalúa prompts compartidos sin autograd, retiene solo el estado necesario y reproduce ramas de respuesta cortas, reduciendo el grafo de entrenamiento.",
+        "resultados": "LongStraw completa el scoring y backward de Qwen en 2.1M de posiciones con grupos de 2 y 8 en 8 GPUs H20, con un aumento mínimo de memoria. Una prueba de estrés alcanzó 4.46M de posiciones. Se validó la ejecución end-to-end para un prompt de 2.1M de tokens en GLM-5.2 en 32 GPUs H20.",
+        "por_que_importa": "Permite entrenar modelos de IA más capaces de manejar información extensa y compleja, crucial para agentes de IA que interactúan en entornos dinámicos y prolongados, democratizando el acceso a entrenamiento de largo contexto.",
+        "tags": [
+          "IA",
+          "RL",
+          "Largo Contexto",
+          "GPU",
+          "Eficiencia",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-17T14:15:25Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.03065",
+      "rank": 5,
+      "title": "Spectral Rewiring for Exploration, Purification, and Model Merging",
+      "authors": [
+        "Zhilong Zhang",
+        "Hongli Yu",
+        "Huan-ang Gao",
+        "Hanlin Wu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-03",
+      "url": "https://arxiv.org/abs/2607.03065",
+      "pdf_url": "https://arxiv.org/pdf/2607.03065",
+      "score": 51,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Reinforcement learning has become a standard post-training recipe for large language models, but dense full-parameter updates create two deployment-relevant bottlenecks: suppressed reasoning performance, often reflected by premature saturation of test-time scaling, and interference when consolidating multiple capabilities through multi-domain training or model merging. We show that the reasoning-effective component of these updates is largely concentrated in the base model's spectral space, motivating Subspace-Aligned Rewiring (SAR), a post-hoc editing method that retains this spectral core while removing orthogonal components. SAR therefore preserves reasoning gains and filters residual update directions that suppress performance or amplify cross-domain interference. Across several model families and scales, SAR extracts compact reasoning cores using as little as approximately 0.58% of total parameters: it preserves over 99% of post-training performance and improves high-k exploration in mathematical reasoning, and generalizes to agentic coding by improving six of seven open benchmarks on an in-house model. SAR also purifies mixed-domain training updates by releasing suppressed coding capability while maintaining math reasoning and instruction following. It further enables model merging across experts, yielding cross-domain generalization that surpasses previous merging baselines and even the best single-domain experts. Overall, SAR shows that extracting reasoning-effective updates from parameter geometry can serve as a training-free mechanism to improve reasoning and multi-domain performance.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2607.13399",
+      "rank": 6,
+      "title": "Demystifying On-Policy Distillation: Roles, Pathologies, and Regulations",
+      "authors": [
+        "Rui Wang",
+        "Hongru Wang",
+        "Yi Chen",
+        "Boyang Xue"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-15",
+      "url": "https://arxiv.org/abs/2607.13399",
+      "pdf_url": "https://arxiv.org/pdf/2607.13399",
+      "score": 51,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "On-policy distillation (OPD) has become a key paradigm in LLM post-training, yet its training dynamics remain poorly understood. We present a systematic study examining the role, pathologies, and regulations of OPD. We first clarify the role of OPD as an exploration catalyst: it steers the student toward correct reasoning paths via dense token-level guidance, without expanding capability ceiling. We confirm this by showing that prompt diversity matters more than per-problem sampling numbers, and critically, that the effectiveness of OPD hinges entirely on the quality of its guiding signal. This dependency exposes two pathologies that derail exploration. The Student-Teacher Mismatch occurs when a large teacher-student distributional gap causes the guiding signal to misalign with task correctness, steering exploration in counterproductive directions. Length Exploitation arises when the aggregated token-level objective creates length-dependent shortcuts, allowing the student to game the reward landscape through response truncation or redundant padding, exploring degenerate length modes rather than reasoning strategies. To tame these pathologies, we investigate lightweight signal regulations: advantage clipping and log-scale compression, ensuring exploration is guided by faithful signals. Experiments across seven benchmarks demonstrate that these regulations alleviate length exploitation and enable effective distillation, stably surpassing OPD variants and RLVR baselines, thereby confirming that well-regulated signal quality, rather than mere teacher scale, governs successful exploration in OPD.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "La destilación on-policy (OPD) en LLMs, aunque poderosa, sufre de desajustes y atajos de longitud; proponemos regulaciones para mejorar la exploración.",
+        "problema": "La destilación on-policy (OPD) en el post-entrenamiento de LLMs tiene dinámicas de entrenamiento poco entendidas, sufriendo de desajustes entre el estudiante y el profesor (Student-Teacher Mismatch) y atajos basados en la longitud de la respuesta (Length Exploitation), lo que lleva a una exploración contraproducente.",
+        "propuesta": "Se propone un estudio sistemático para entender el rol de OPD como catalizador de exploración, identificando sus patologías y proponiendo regulaciones de señal como el recorte de ventajas (advantage clipping) y la compresión en escala logarítmica (log-scale compression) para guiar la exploración de forma fiel.",
+        "resultados": "Las regulaciones propuestas alivian la explotación de longitud y permiten una destilación efectiva, superando consistentemente a variantes de OPD y líneas base de RLVR en siete benchmarks. La calidad de la señal, no la escala del profesor, gobierna la exploración exitosa en OPD.",
+        "por_que_importa": "Permite entrenar LLMs de manera más eficiente y robusta, evitando que el modelo aprenda atajos perjudiciales y asegurando que la guía del profesor sea útil y confiable para mejorar el razonamiento del estudiante.",
+        "tags": [
+          "LLMs",
+          "Destilación",
+          "Ciberseguridad",
+          "Inteligencia Artificial",
+          "Aprendizaje por Refuerzo",
+          "Post-entrenamiento"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-17T14:17:04Z"
+      }
+    }
+  ],
+  "generated_at": "2026-07-17T14:17:04Z"
+}
