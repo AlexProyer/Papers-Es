@@ -1881,5 +1881,38 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-07-17T14:17:04Z"
+  },
+  "arxiv:2607.15591": {
+    "tldr": "RecGPT-V3 revoluciona las recomendaciones con IA, siendo más eficiente y preciso al recordar interacciones pasadas.",
+    "problema": "Los sistemas de recomendación basados en LLMs anteriores sufrían de modelado de comportamiento sin estado, un cuello de botella de información entre etiquetas y artículos, y un razonamiento explícito ineficiente que generaba alta latencia y consumo de cómputo.",
+    "propuesta": "RecGPT-V3 introduce un modelo de recomendación híbrido y con estado. Utiliza un 'Memory Hub' para mantener una memoria de usuario estructurada y en evolución, y un 'Hybrid-modal Foundation Model' que razona conjuntamente sobre etiquetas de texto e IDs Semánticos (SIDs). Además, el 'Latent Intent Reasoning' comprime los razonamientos largos en tokens compactos.",
+    "resultados": "RecGPT-V3 reduce el cómputo del modelado de usuario en un 55.8%, el costo de tokens de salida en 200x, y el consumo de recursos de servicio en un 52.4%. En pruebas A/B, mejoró IPV en +1.28%, CTR en +1.00%, TC en +1.97% y GMV en +3.97%.",
+    "por_que_importa": "Mejora significativamente la experiencia del usuario y los resultados comerciales en sistemas de recomendación a gran escala, al tiempo que reduce drásticamente los costos computacionales y la latencia.",
+    "tags": [
+      "sistemas de recomendación",
+      "IA",
+      "LLMs",
+      "eficiencia",
+      "personalización",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-20T14:37:36Z"
+  },
+  "arxiv:2607.15901": {
+    "tldr": "DSWorld predice el resultado de operaciones de ciencia de datos, acelerando drásticamente el entrenamiento de agentes autónomos.",
+    "problema": "Los agentes de ciencia de datos autónomos son lentos debido a flujos de trabajo de prueba y error que requieren mucha computación.",
+    "propuesta": "DSWorld es un modelo del entorno de ejecución de ciencia de datos que predice las transiciones de estado y combina enrutamiento consciente de costos, ejecución ligera y un simulador basado en LLM.",
+    "resultados": "DSWorld acelera el entrenamiento de agentes basado en RL ~14x y la inferencia basada en búsqueda 3-6x, superando a los LLM en predicción de transiciones en un 35.6%.",
+    "por_que_importa": "Reduce significativamente el tiempo y el costo computacional para desarrollar y desplegar agentes de ciencia de datos autónomos, haciéndolos más prácticos.",
+    "tags": [
+      "agentes autónomos",
+      "ciencia de datos",
+      "aprendizaje por refuerzo",
+      "modelos de mundo",
+      "optimización"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-20T14:37:46Z"
   }
 }

@@ -1,0 +1,100 @@
+{
+  "date": "2026-07-20",
+  "report_type": "filtrado",
+  "evaluated": 20,
+  "selected": 2,
+  "papers": [
+    {
+      "id": "arxiv:2607.15591",
+      "rank": 1,
+      "title": "RecGPT-V3 Technical Report",
+      "authors": [
+        "Bowen Zheng",
+        "Chao Yi",
+        "Dian Chen",
+        "Gaoyang Guo"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-17",
+      "url": "https://arxiv.org/abs/2607.15591",
+      "pdf_url": "https://arxiv.org/pdf/2607.15591",
+      "score": 61,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Large language models (LLMs) are transforming recommender systems from matching co-occurrence patterns in historical behavior toward reasoning about the intent that drives it. RecGPT-V1 pioneered this paradigm on Taobao by centering user understanding, and RecGPT-V2 scaled it via coordinated multi-agent reasoning; both are deployed in production with consistent gains in user experience and commercial outcomes. However, operating RecGPT at scale reveals three challenges: (1) stateless behavior modeling, where each request reprocesses full user history, wasting computation and discarding prior analysis; (2) a tag-to-item information bottleneck, where natural-language tags form a lossy channel between user understanding and item grounding; and (3) inefficient explicit reasoning, whose lengthy chain-of-thought incurs untenable latency and compute overhead. We present RecGPT-V3, a stateful, hybrid-modal recommender that reasons over natural language for open-world knowledge and Semantic IDs (SIDs) for concrete item grounding. A Memory Hub maintains structured, continually evolving user memory that distills long-horizon behavior into condensed units, cutting user-modeling computation by 55.8%. A Hybrid-modal Foundation Model allows the LLM jointly reason over text tags and SIDs, opening a high-bandwidth channel into the item space. Latent Intent Reasoning internalizes verbose rationales into compact learnable latent tokens that remain decodable into readable explanations, lowering output token cost by 200x. Deployed in Taobao's \"Guess What You Like\" feed, RecGPT-V3 achieves consistent gains in large-scale online A/B tests: IPV +1.28%, CTR +1.00%, TC +1.97%, GMV +3.97%, while cutting end-to-end serving resource consumption by 52.4%.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "RecGPT-V3 revoluciona las recomendaciones con IA, siendo más eficiente y preciso al recordar interacciones pasadas.",
+        "problema": "Los sistemas de recomendación basados en LLMs anteriores sufrían de modelado de comportamiento sin estado, un cuello de botella de información entre etiquetas y artículos, y un razonamiento explícito ineficiente que generaba alta latencia y consumo de cómputo.",
+        "propuesta": "RecGPT-V3 introduce un modelo de recomendación híbrido y con estado. Utiliza un 'Memory Hub' para mantener una memoria de usuario estructurada y en evolución, y un 'Hybrid-modal Foundation Model' que razona conjuntamente sobre etiquetas de texto e IDs Semánticos (SIDs). Además, el 'Latent Intent Reasoning' comprime los razonamientos largos en tokens compactos.",
+        "resultados": "RecGPT-V3 reduce el cómputo del modelado de usuario en un 55.8%, el costo de tokens de salida en 200x, y el consumo de recursos de servicio en un 52.4%. En pruebas A/B, mejoró IPV en +1.28%, CTR en +1.00%, TC en +1.97% y GMV en +3.97%.",
+        "por_que_importa": "Mejora significativamente la experiencia del usuario y los resultados comerciales en sistemas de recomendación a gran escala, al tiempo que reduce drásticamente los costos computacionales y la latencia.",
+        "tags": [
+          "sistemas de recomendación",
+          "IA",
+          "LLMs",
+          "eficiencia",
+          "personalización",
+          "ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-20T14:37:36Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.15901",
+      "rank": 2,
+      "title": "DSWorld: A Data Science World Model for Efficient Autonomous Agents",
+      "authors": [
+        "Zherui Yang",
+        "Fan Liu",
+        "Hao Liu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-17",
+      "url": "https://arxiv.org/abs/2607.15901",
+      "pdf_url": "https://arxiv.org/pdf/2607.15901",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Despite strong capabilities in data understanding and decision-making, autonomous data science agents still heavily rely on trial-and-error workflows that involve expensive computation. This bottleneck motivates models that can anticipate the effects of data science operations before real execution. In this paper, we introduce the concept of Data Science World Model, which model the data science execution environment by predicting environment state transitions conditioned on current workflow states and candidate operations. We further propose DSWorld, a practical framework that combines structured state construction, cost-aware routing, lightweight real execution, and an LLM-based simulator for expensive operations. To support training, we construct an 8K-scale transition trajectory dataset and introduce Reflective World Model Optimization, an error-aware reinforcement learning strategy for improving transition prediction. Experiments show that DSWorld accelerates RL-based agent training by approximately $14\\times$ and search-based inference by approximately $3$-$6\\times$ while maintaining competitive performance, and outperforms the strongest LLM baseline by 35.6% on transition prediction tasks. The code is available at https://anonymous.4open.science/r/DSWorld.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "DSWorld predice el resultado de operaciones de ciencia de datos, acelerando drásticamente el entrenamiento de agentes autónomos.",
+        "problema": "Los agentes de ciencia de datos autónomos son lentos debido a flujos de trabajo de prueba y error que requieren mucha computación.",
+        "propuesta": "DSWorld es un modelo del entorno de ejecución de ciencia de datos que predice las transiciones de estado y combina enrutamiento consciente de costos, ejecución ligera y un simulador basado en LLM.",
+        "resultados": "DSWorld acelera el entrenamiento de agentes basado en RL ~14x y la inferencia basada en búsqueda 3-6x, superando a los LLM en predicción de transiciones en un 35.6%.",
+        "por_que_importa": "Reduce significativamente el tiempo y el costo computacional para desarrollar y desplegar agentes de ciencia de datos autónomos, haciéndolos más prácticos.",
+        "tags": [
+          "agentes autónomos",
+          "ciencia de datos",
+          "aprendizaje por refuerzo",
+          "modelos de mundo",
+          "optimización"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-20T14:37:46Z"
+      }
+    }
+  ],
+  "generated_at": "2026-07-20T14:37:46Z"
+}
