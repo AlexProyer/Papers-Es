@@ -1965,5 +1965,54 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-07-21T14:42:04Z"
+  },
+  "arxiv:2607.18063v1": {
+    "tldr": "Nuevos ataques adaptativos de múltiples turnos ponen a prueba la seguridad de los agentes LLM contra manipulaciones complejas.",
+    "problema": "Los agentes LLM son vulnerables a ataques de inyección de prompts y manipulación en múltiples turnos, pero las pruebas de seguridad actuales usan ataques fijos y no se adaptan a las respuestas del defensor.",
+    "propuesta": "Se presenta un benchmark con 21 escenarios de ataques adaptativos multi-ronda contra defensores LLM sin memoria. Un atacante LLM autónomo observa las respuestas previas del defensor y pivota sus ataques en cada ronda.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero introduce un nuevo método de evaluación para ataques más realistas y adaptativos.",
+    "por_que_importa": "Permite evaluar la robustez de los agentes LLM frente a adversarios que aprenden y se adaptan dinámicamente, mejorando su seguridad en interacciones complejas.",
+    "tags": [
+      "seguridad LLM",
+      "ataques adaptativos",
+      "multi-turno",
+      "benchmark",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-22T14:32:22Z"
+  },
+  "arxiv:2607.17535v1": {
+    "tldr": "Inducir la saliencia en agentes RAG multi-salto es una nueva amenaza que puede desviar su razonamiento, incluso con información veraz.",
+    "problema": "Los agentes de IA que utilizan RAG multi-salto para responder preguntas complejas son vulnerables a ataques que manipulan la \"saliencia\" de la información recuperada (posición, énfasis, etc.), desviando su razonamiento sin inyectar información falsa ni instrucciones directas.",
+    "propuesta": "Se introduce y formaliza el concepto de 'Inducción de Saliencia' como una nueva superficie de ataque en agentes RAG. Se proponen métodos para detectar y mitigar estos ataques, enfocándose en la manipulación de la presentación de la información.",
+    "resultados": "El resumen no especifica resultados numéricos, pero identifica la 'Inducción de Saliencia' como una amenaza viable y propone un marco para su estudio y defensa.",
+    "por_que_importa": "Es crucial para desarrollar defensas más robustas en sistemas de IA que dependen de la recuperación de información, protegiendo contra ataques sutiles que manipulan la percepción de la verdad sin alterarla directamente.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "RAG",
+      "Ataques de IA",
+      "Defensa",
+      "Saliencia"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-22T14:34:08Z"
+  },
+  "arxiv:2607.17619v1": {
+    "tldr": "Las preferencias de codificación inseguras en la memoria a largo plazo de los LLM introducen riesgos de seguridad silenciosos en la generación de código.",
+    "problema": "Los sistemas LLM con memoria a largo plazo pueden almacenar preferencias de codificación inseguras que luego influyen negativamente en la seguridad del código generado, sin advertencia.",
+    "propuesta": "Se realiza un estudio empírico sistemático para evaluar el impacto de las preferencias de codificación inseguras almacenadas en la memoria a largo plazo en la seguridad de la generación de código por LLM.",
+    "resultados": "Los resultados muestran que las memorias inseguras influyen significativamente en la seguridad del código generado por cuatro LLMs (ChatGPT, Gemini, Qwen, Grok) en cinco lenguajes de programación (Python, C, C++, Go, JavaScript). El resumen no especifica métricas numéricas exactas.",
+    "por_que_importa": "Es crucial para los desarrolladores y las organizaciones comprender y mitigar estos riesgos para garantizar la seguridad del software desarrollado con ayuda de LLMs, especialmente a medida que la memoria a largo plazo se vuelve más común.",
+    "tags": [
+      "LLM",
+      "Seguridad de Código",
+      "Memoria a Largo Plazo",
+      "Generación de Código",
+      "Vulnerabilidades"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-22T14:34:18Z"
   }
 }
