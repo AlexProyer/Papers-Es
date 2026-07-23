@@ -2014,5 +2014,21 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-07-22T14:34:18Z"
+  },
+  "arxiv:2607.17675": {
+    "tldr": "ShotPlan genera videos cinematográficos coherentes y con transiciones fluidas mediante planificación explícita de tomas.",
+    "problema": "Los modelos actuales de generación de video tienen dificultades para crear videos cinematográficos con narrativas coherentes y composición de múltiples tomas, ya que carecen de planificación explícita de las tomas.",
+    "propuesta": "ShotPlan introduce 'tokens de planificación' aprendibles en un modelo de difusión de video. Estos tokens capturan las señales de transición entre tomas y controlan las marcas de tiempo de transición, integrándose con los tokens de generación de video existentes.",
+    "resultados": "El resumen no especifica resultados numéricos, pero indica que ShotPlan permite la generación explícita de video multiescena cinematográfica.",
+    "por_que_importa": "Permite crear videos más complejos y narrativamente ricos, abriendo puertas a aplicaciones cinematográficas y de storytelling más avanzadas en la generación de contenido de video.",
+    "tags": [
+      "generación de video",
+      "cinematografía",
+      "IA",
+      "planificación de tomas",
+      "difusión"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-23T14:41:51Z"
   }
 }
