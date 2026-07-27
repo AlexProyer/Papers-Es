@@ -2047,5 +2047,22 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-07-24T14:19:36Z"
+  },
+  "arxiv:2607.22375": {
+    "tldr": "IDEAgent usa búsqueda de Calidad-Diversidad para generar ideas de investigación innovadoras y valiosas con LLMs.",
+    "problema": "Los LLMs actuales generan ideas de investigación optimizando solo Calidad o Diversidad, resultando en ideas repetitivas o triviales.",
+    "propuesta": "IDEAgent introduce la búsqueda agentic de Calidad-Diversidad para optimizar simultáneamente la calidad y la diversidad de las ideas de investigación generadas por LLMs.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero sugiere que IDEAgent genera ideas más diversas y de mayor calidad que los métodos existentes.",
+    "por_que_importa": "Permite a los investigadores usar LLMs para generar un abanico más amplio de ideas de investigación verdaderamente novedosas y prometedoras, acelerando el descubrimiento científico.",
+    "tags": [
+      "IA",
+      "LLMs",
+      "Generación de Ideas",
+      "Investigación",
+      "Ciberseguridad",
+      "Calidad-Diversidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-27T15:21:49Z"
   }
 }
