@@ -1,0 +1,484 @@
+{
+  "date": "2026-07-28",
+  "report_type": "filtrado",
+  "evaluated": 158,
+  "selected": 15,
+  "papers": [
+    {
+      "id": "arxiv:2607.24339v1",
+      "rank": 1,
+      "title": "Gubernaut: A Deterministic Homeostatic Controller for Affect-Regulated LLM Agents, Validated Across Independent Model Families",
+      "authors": [
+        "Dushyant Sharma"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CL]",
+      "category": "cs.CL",
+      "date": "2026-07-27",
+      "url": "https://arxiv.org/abs/2607.24339v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.24339v1",
+      "score": 60,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents, compliance & audit"
+      ],
+      "abstract_en": "Large language model (LLM) agents inherit reactive failure modes: escalation under provocation, sycophantic drift under flattery, perseveration when stuck. These are failures of propensity, not capability; they concern what a model does under sustained pressure, which training-time alignment reduces but does not eliminate at runtime. This research led to the Gubernaut Cognitive Controller (GCC), a model-agnostic runtime control layer in a Nelson--Narens monitoring--control loop: an object level reads and writes text, while a deterministic meta level reads only the numeric telemetry {intensity, valence, repetition} and returns a regulating posture. Because the meta level ingests zero tokens, no injection channel to the controller exists by construction (an architectural property, not yet adversarially tested); the text-exposed arbiter's compliance is measured, not assumed. We evaluate the GCC with a pre-registered, generate-once/judge-many protocol across a 4x4 matrix of four frontier models (GPT-5.5, Claude Opus 4.8, Gemini 3.5 Flash, Grok 4.3), each serving as both a generator and a judge. The regulated arm is calmer in 13 of 16 cells at p<.05 and 15 of 16 by sign; the three sub-threshold cells, including a -0.04 null, all fall on the single near-saturated host. The effect survives a lineage-independent fourth judge family (xAI), strong evidence that it is no artifact of shared judge style. The clearest mechanism is the recovery signature: arousal that integrates under attack and then decays, valence-gated, on de-escalation, replicating across all four families. Transcripts and panels ship with SHA-256 provenance and are re-judgeable; five failure modes are pre-registered. No consciousness claims are made.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Controla LLMs para evitar fallos de comportamiento como la escalada o la deriva, garantizando respuestas más estables y predecibles.",
+        "problema": "Los LLMs exhiben fallos de comportamiento reactivos bajo presión (escalada, deriva, perseveración) que el alineamiento en tiempo de entrenamiento no elimina completamente en tiempo de ejecución.",
+        "propuesta": "Se propone el Gubernaut Cognitive Controller (GCC), una capa de control de tiempo de ejecución agnóstica al modelo que opera en un bucle de monitorización-control. Utiliza métricas numéricas (intensidad, valencia, repetición) para regular la 'postura' del LLM sin procesar texto directamente, previniendo canales de inyección.",
+        "resultados": "El GCC reduce la 'calma' en 13 de 16 escenarios evaluados (p<.05) y 15 de 16 por signo, replicando el efecto en cuatro familias de modelos independientes. Se observa una 'firma de recuperación' consistente en todos los modelos.",
+        "por_que_importa": "Asegura que los agentes LLM sean más robustos y predecibles en interacciones complejas o adversas, mejorando su fiabilidad en aplicaciones críticas.",
+        "tags": [
+          "LLM",
+          "Control de Agentes",
+          "Ciberseguridad",
+          "Estabilidad",
+          "IA Responsable",
+          "Runtime Control"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-28T14:57:57Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.24174v1",
+      "rank": 2,
+      "title": "Just Testing, Move Along: Evasion of LLM-based System Log Interpretation by Prompt Injection",
+      "authors": [
+        "Max Landauer",
+        "Florian Skopik",
+        "Markus Wurzenberger",
+        "Franciszek Górski"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-27",
+      "url": "https://arxiv.org/abs/2607.24174v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.24174v1",
+      "score": 58,
+      "topics": [
+        "cybersecurity",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: cybersecurity, LLM, adversarial ML"
+      ],
+      "abstract_en": "Large Language Models (LLMs) are increasingly integrated into Security Operations Center (SOC) workflows, where they support analysts in tasks such as the interpretation of system logs. However, the ability of LLMs to directly process untrusted textual input also introduces new attack surfaces. In particular, attackers can inject contextual information or explicit instructions into log entries in order to influence how malicious activity is interpreted by the model. Despite the growing adoption of LLMs for log analytics, the robustness of such systems against adversarial log injection remains largely unexplored. To address this gap, this paper presents a framework for evaluating prompt injection attacks against LLM-based log interpretation. Using log traces generated during real cyber attacks, our approach creates adversarial examples through generic injection generation, refinement, and attack-specific optimization. Our evaluation across multiple state-of-the-art LLMs shows that these injections can cause malicious log traces to be classified as benign despite containing clear indicators of compromise. As a potential remedy, we show that the explanations generated by the LLMs alongside their classifications frequently contain indicators of adversarial manipulation that can be leveraged to detect such attacks.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2607.24625v1",
+      "rank": 3,
+      "title": "Agentic Permissions Policy Algebra for Taint Confinement in LLM Agents",
+      "authors": [
+        "Arseny Kravchenko",
+        "Vadim Liventsev",
+        "Innokentii Konstantinov",
+        "Ildar Iskhakov"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-27",
+      "url": "https://arxiv.org/abs/2607.24625v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.24625v1",
+      "score": 56,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "Autonomous LLM agents processing mixed-confidentiality data face severe security risks from prompt injection attacks and reasoning errors. While dynamic Information Flow Control (IFC) provides structural security guarantees, traditional taint tracking permanently taints an agent's context upon reading unvetted data, severely restricting downstream utility. We present APPA (Agentic Permissions Policy Algebra), an IFC framework that resolves this usability bottleneck through engine-managed context branching and prospective acquisition enforcement. Before data acquisition occurs, APPA prospectively evaluates label descents and missing prerequisites, generating actionable remedy plans (Authorize, Accept). To inspect unvetted data without polluting the primary context, a label-seeded child trajectory is spawned, absorbing label descent locally and allowing a trusted sanitizer to return a bounded derivative to the unchanged parent. Governed by a two-monoid model over security labels and shared event logs, we formally prove parent label preservation and merge confinement. Finally, we evaluate APPA on a multi-turn tool-chaining benchmark across four models: it suppresses exfiltration (31%-50% down to 0%-7% attack success), and on three of the four, branching recovers a substantial share of the utility that taint tracking alone forfeits.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "APPA mejora la seguridad de agentes LLM que manejan datos sensibles, evitando la contaminación del contexto y preservando la utilidad.",
+        "problema": "Los agentes LLM que procesan datos de confidencialidad mixta son vulnerables a ataques de inyección de prompts y errores de razonamiento. Los métodos actuales de control de flujo de información (IFC) contaminan permanentemente el contexto del agente al leer datos no verificados, limitando su utilidad.",
+        "propuesta": "Se propone APPA (Agentic Permissions Policy Algebra), un framework IFC que utiliza ramificación del contexto gestionada por el motor y aplicación prospectiva de adquisición. APPA evalúa descensos de etiquetas y prerrequisitos antes de la adquisición, genera planes de acción y utiliza trayectorias secundarias para inspeccionar datos sin contaminar el contexto principal.",
+        "resultados": "APPA reduce el éxito de los ataques de exfiltración del 31%-50% a 0%-7%. La ramificación recupera una parte sustancial de la utilidad perdida por el seguimiento de contaminación en tres de los cuatro modelos evaluados.",
+        "por_que_importa": "APPA permite a los agentes LLM manejar datos de alta confidencialidad de manera segura sin sacrificar significativamente su capacidad para realizar tareas útiles, mejorando la seguridad y la practicidad en aplicaciones del mundo real.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Control de Flujo de Información",
+          "Seguridad de Agentes",
+          "Privacidad de Datos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-28T15:00:29Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.24392v1",
+      "rank": 4,
+      "title": "When LLM Defenses Backfire: Characterizing Safety, Performance, and Cost Trade-offs",
+      "authors": [
+        "Tong Zhang",
+        "Zexin Li",
+        "Simin Chen",
+        "Yun Peng"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-27",
+      "url": "https://arxiv.org/abs/2607.24392v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.24392v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Jailbreak defenses are essential for protecting large language models (LLMs), but they can also introduce secondary costs that weaken model utility. We present a systematic study of these defense trade-offs along three dimensions: performance impact, over-refusal on benign inputs, and inference cost. Rather than treating defenses as a single class, we organize them by operational strategy and examine how different strategies correlate with different side-effect profiles. Across state-of-the-art defense methods, widely used benchmark datasets, and representative open-source LLMs, we find that defenses rarely improve downstream capability, but instead vary in how they trade safety gains against usability and efficiency. In particular, rule-based defenses best preserve task performance, highly conservative self-reflective defenses often increase over-refusal, and multi-round defenses incur the largest runtime overhead. These results provide both a benchmark for evaluating defense side effects and practical guidance for selecting defenses under deployment constraints.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Las defensas de LLM contra jailbreaks pueden perjudicar su rendimiento, aumentar rechazos erróneos y elevar costos, requiriendo un equilibrio cuidadoso.",
+        "problema": "Las defensas contra jailbreaks en Modelos de Lenguaje Grandes (LLMs) son necesarias, pero pueden degradar la utilidad del modelo al afectar su rendimiento, causar rechazos indebidos de entradas legítimas y aumentar los costos de inferencia.",
+        "propuesta": "Se realiza un estudio sistemático de las compensaciones de las defensas, organizándolas por estrategia operativa (basadas en reglas, auto-reflexivas conservadoras, multi-ronda) para examinar cómo cada una se correlaciona con perfiles de efectos secundarios específicos.",
+        "resultados": "Las defensas rara vez mejoran la capacidad del LLM. Las defensas basadas en reglas preservan mejor el rendimiento de la tarea. Las defensas auto-reflexivas conservadoras aumentan los rechazos erróneos. Las defensas multi-ronda incurren en el mayor sobrecosto de tiempo de ejecución.",
+        "por_que_importa": "Proporciona una evaluación comparativa de los efectos secundarios de las defensas y orienta la selección de defensas adecuadas según las restricciones de implementación, equilibrando seguridad, usabilidad y eficiencia.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Defensas",
+          "Rendimiento",
+          "Compensaciones",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-28T15:00:42Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.24743v1",
+      "rank": 5,
+      "title": "ClinFusion: A Vision-Centric Multimodal LLM System for Holistic Medical Understanding",
+      "authors": [
+        "Hangjie Yuan",
+        "Yichen Qian",
+        "Zhiwei Tang",
+        "Xianzhe Xu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-07-27",
+      "url": "https://arxiv.org/abs/2607.24743v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.24743v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Multimodal large language models (MLLMs) hold immense potential to revolutionize clinical practice, yet deploying them in the medical domain is fundamentally a vision-centric challenge: models must absorb knowledge from heterogeneous 2D and 3D medical images, and evaluation protocols must align with radiologists' clinical practice and provide an accurate, fine-grained and factualness-driven assessment. In this paper, we introduce ClinFusion, a vision-centric MLLM designed for holistic medical understanding that systematically addresses these limitations. We propose a compositional and cascaded vision encoder architecture featuring a Cascade Spatial-Aware Locality Fusion operator that unifies diverse 2D and native 3D medical image understanding within a fused encoder. We further introduce a vision-grounded evaluation framework, including MedIF-Bench for instruction-following assessment and a region-of-interest-grounded method for clinically aligned and factualness-driven report generation evaluation. We show that ClinFusion sets a new state-of-the-art across a comprehensive suite of 2D and 3D multimodal medical benchmarks---spanning visual question answering, report generation, and instruction following---as well as textual medical tasks, outperforming leading open-source medical MLLMs (\\textit{e.g.}, Hulu-Med, Lingshu) on 20 out of 24 benchmarks and demonstrating multimodal capabilities better than powerful proprietary models such as GPT-5.2 and Gemini-3-Flash on 13 out of 16 benchmarks, and can be further augmented with agentic tool use for retrieval-augmented and tool-assisted clinical workflows. A blinded evaluation by board-certified radiologists confirms that ClinFusion produces the highest-ranked reports, and validates our RoI-grounded metric as achieving the strongest correlation with expert judgment among all automatic evaluation metrics examined.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "ClinFusion, un LLM multimodal centrado en la visión, revoluciona la comprensión médica integrando imágenes 2D/3D y superando a modelos líderes.",
+        "problema": "Los modelos de lenguaje grandes multimodales (MLLMs) tienen potencial en medicina, pero enfrentan desafíos en la comprensión de imágenes médicas 2D y 3D y en la evaluación alineada con la práctica radiológica.",
+        "propuesta": "ClinFusion utiliza una arquitectura de codificador visual composicional y en cascada con un operador de fusión de localidad espacial para integrar imágenes 2D y 3D. También introduce un marco de evaluación basado en la visión (MedIF-Bench y métrica RoI-grounded) para una evaluación clínica y factual.",
+        "resultados": "ClinFusion establece un nuevo estado del arte en benchmarks médicos 2D y 3D, superando a modelos de código abierto en 20 de 24 benchmarks y a modelos propietarios en 13 de 16. Radiólogos certificados confirmaron la alta calidad de sus informes y la correlación de la métrica RoI-grounded con el juicio experto.",
+        "por_que_importa": "Mejora significativamente la capacidad de los sistemas de IA para comprender y generar informes médicos a partir de diversas imágenes, alineándose mejor con las necesidades clínicas y la evaluación de expertos.",
+        "tags": [
+          "IA médica",
+          "LLM multimodal",
+          "Visión por computadora",
+          "Procesamiento de imágenes médicas",
+          "Evaluación de IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-28T15:01:39Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.23999v1",
+      "rank": 6,
+      "title": "ContainmentBench: Trace-Based Evaluation of Post-Injection Containment in Tool-Using LLM Agents",
+      "authors": [
+        "Wenhao Lan",
+        "Shan Li",
+        "Xinhua Lai",
+        "Meiqi Wu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-27",
+      "url": "https://arxiv.org/abs/2607.23999v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.23999v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents, compliance & audit"
+      ],
+      "abstract_en": "Tool-using LLM agents process untrusted content, maintain memory, delegate across agents, and invoke side-effecting tools. Existing prompt-injection evaluations typically summarize security with terminal attack or policy outcomes, but equal endpoints can conceal different post-exposure traces and different losses of authorized utility. We introduce ContainmentBench, a sandboxed, trace-based benchmark that separately measures benchmark-defined endpoint policy compliance, instrumented logged propagation, recovery instrumentation, and authorized structured-action completion. In a pre-specified 17,640-rollout study with Qwen2.5-7B-Instruct, all 600 matched active-tainted pairs comparing taint-only and intent-aware enforcement have the same zero committed-harm outcome, yet 73.5% differ in logged trajectory or utility. Taint-only enforcement completes only 0.1642 of authorized tainted workflows; a trusted-ledger policy raises completion to 0.8567, while a strong tool-boundary baseline reaches 0.9233 under the same observed endpoint-policy outcomes. We also find that aggregate logged-spread rankings change with evidence-stage composition and denominator choice. These results show that a terminal policy label is not a sufficient statistic for operational post-exposure containment; evaluations should report endpoint, stage-stratified trajectory, and utility evidence separately, and should promote recovery evidence to comparative claims only where the corresponding controls are valid. The full-scale study is synthetic and single-model; the policy case additionally assumes a correct structured authorization ledger.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa la contención post-inyección en agentes LLM, revelando que las métricas terminales ocultan diferencias críticas en la seguridad y utilidad.",
+        "problema": "Las evaluaciones de seguridad de agentes LLM que usan herramientas a menudo se centran solo en el resultado final (ataque exitoso o no), ignorando cómo se propagan las amenazas internamente y cuánto se degrada la funcionalidad legítima después de una inyección.",
+        "propuesta": "Introducen ContainmentBench, un benchmark basado en trazas que evalúa de forma granular la conformidad de políticas, la propagación de datos maliciosos (taint), la recuperación y la finalización de tareas autorizadas, separando estas métricas del resultado final.",
+        "resultados": "En un estudio con Qwen2.5-7B-Instruct (17,640 ejecuciones), todas las inyecciones resultaron en cero daño final. Sin embargo, el 73.5% de los casos mostraron diferencias en la propagación o la utilidad. La aplicación solo de 'taint' completó solo el 16.42% de las tareas autorizadas, mientras que una política de 'trusted-ledger' alcanzó el 85.67% y un baseline de 'tool-boundary' el 92.33%.",
+        "por_que_importa": "Demuestra que las métricas de seguridad tradicionales son insuficientes. Es crucial evaluar la propagación interna y la pérdida de utilidad para comprender el riesgo real y diseñar defensas más efectivas en agentes LLM que interactúan con herramientas y contenido no confiable.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Evaluación",
+          "Inyección de Prompts",
+          "Agentes Autónomos",
+          "Benchmarking"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-28T15:02:11Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.24588v1",
+      "rank": 7,
+      "title": "SIREN: Towards End-to-End Extreme-Weather Early Warning with Experience-Grounded LLM Agents",
+      "authors": [
+        "Hang Ni",
+        "Weijia Zhang",
+        "Fan Liu",
+        "Mengqian Lu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-07-27",
+      "url": "https://arxiv.org/abs/2607.24588v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.24588v1",
+      "score": 52,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Early warning of extreme weather is essential for mitigating the societal, economic, and environmental risks posed by hazardous weather events. However, expert-centered warning workflows are costly, labor-intensive, and difficult to scale throughout the warning-to-action process. Although recent advances in Large Language Model (LLM) agents have enabled the automation of weather-related tasks, existing studies remain centered on isolated scientific tasks and overlook the chain of interdependent processes required for operational extreme-weather early warning. To bridge this gap, this study investigates automated end-to-end extreme-weather early warning through LLM agents. We first develop SIREN-Bench, a comprehensive benchmark comprising 600 question-answer instances across 19 tasks, and covering four individual warning procedures and an end-to-end warning chain. Evaluation on SIREN-Bench reveals substantial capability gaps in existing weather agent frameworks. This motivates us to develop SIREN, an experience-grounded agent framework inspired by experts' use of historical cases, which combines an agentic execution environment integrating heterogeneous weather evidence and tools with a family of agent harnesses that exploit historical cases through retrieval, skill distillation, and predictive modeling. Extensive experiments demonstrate that SIREN outperforms weather-agent baselines on both individual warning procedures and end-to-end warning chains.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "SIREN automatiza la alerta temprana de eventos climáticos extremos usando LLMs y casos históricos, mejorando la eficiencia y escalabilidad.",
+        "problema": "Los flujos de trabajo actuales para la alerta temprana de eventos climáticos extremos son costosos, intensivos en mano de obra y difíciles de escalar, a pesar de los avances en LLMs para tareas aisladas.",
+        "propuesta": "Se propone SIREN, un framework de agentes LLM que integra evidencia y herramientas meteorológicas heterogéneas, y utiliza casos históricos para mejorar la toma de decisiones en alertas de extremo a extremo.",
+        "resultados": "SIREN-Bench, un benchmark con 600 instancias en 19 tareas, revela brechas en agentes existentes. SIREN supera a los baselines en procedimientos individuales y cadenas de alerta completas.",
+        "por_que_importa": "Permite automatizar y escalar el proceso de alerta temprana de eventos climáticos extremos, reduciendo costos y mejorando la respuesta a desastres.",
+        "tags": [
+          "IA",
+          "LLM",
+          "Alerta Temprana",
+          "Clima Extremo",
+          "Ciberseguridad",
+          "Automatización"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-28T15:02:42Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.24552v1",
+      "rank": 8,
+      "title": "VulnGym: Evaluating Vulnerability Management Strategies against Advanced Persistent Threats",
+      "authors": [
+        "Sofia Della Penna",
+        "Lorenzo Parracino",
+        "Luciano Pianese",
+        "Vittorio Orbinato"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-27",
+      "url": "https://arxiv.org/abs/2607.24552v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.24552v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Enterprise networks are continuously targeted by Advanced Persistent Threats (APTs), attack campaigns exploiting software vulnerabilities to compromise critical assets over time. As disclosed vulnerabilities grow, resource-constrained organizations must prioritize which ones to patch. Existing prioritization standards score vulnerabilities individually and cannot capture how a patching policy performs against an adversary that progresses through the network over time. Previous tools have simulated attack campaigns through Reinforcement Learning (RL), but either omit vulnerability management, leaving the attacker unopposed, or rely on synthetic networks disconnected from real threat data, and so cannot assess how a policy would fare against a realistic adversary. To fill this gap, we propose VulnGym, a simulation tool to evaluate vulnerability management policies. VulnGym simulates an RL-trained attacker, calibrated on real APT profiles, against a defender executing a configurable patching policy over a network with real Common Vulnerabilities and Exposures (CVEs). Both agents act on a shared, evolving network representation, so the attacker's progress is directly shaped by the defender's patching activity, allowing a given policy to be stress-tested against a realistic attack campaign. Experiments based on real-world vulnerabilities and two APTs show that vulnerability management must be tailored to organizational context, adversarial behavior, network topology, and asset criticality.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa estrategias de gestión de vulnerabilidades contra ciberataques persistentes avanzados en redes empresariales.",
+        "problema": "Las organizaciones con recursos limitados deben priorizar qué vulnerabilidades parchear ante un número creciente de ellas, pero los métodos actuales no consideran cómo una política de parcheo afecta a un atacante que progresa en la red con el tiempo.",
+        "propuesta": "Se propone VulnGym, una herramienta de simulación que enfrenta a un atacante entrenado con Aprendizaje por Refuerzo (RL) y calibrado con perfiles de APT reales, contra un defensor que aplica una política de parcheo configurable en una red con vulnerabilidades reales (CVEs).",
+        "resultados": "Los experimentos con vulnerabilidades del mundo real y dos APTs demuestran que la gestión de vulnerabilidades debe adaptarse al contexto organizacional, al comportamiento del adversario, a la topología de la red y a la criticidad de los activos.",
+        "por_que_importa": "Permite probar rigurosamente las políticas de gestión de vulnerabilidades contra campañas de ataque realistas, ayudando a las organizaciones a tomar decisiones de parcheo más efectivas y adaptadas a su entorno específico.",
+        "tags": [
+          "ciberseguridad",
+          "gestión de vulnerabilidades",
+          "APT",
+          "simulación",
+          "IA",
+          "defensa"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-28T15:02:59Z"
+      }
+    },
+    {
+      "id": "sha1:fafbe3e488bd90d9",
+      "rank": 1,
+      "title": "Beyond encryption: quantum-enhanced behavioral security for the post-quantum era",
+      "authors": [
+        "Soha Rawas",
+        "Mohammed Al Saleh",
+        "Agariadne Dwinggo Samala",
+        "Aprilla Fortuna"
+      ],
+      "source": "Semantic Scholar",
+      "venue": "Applied Computing and Informatics",
+      "category": null,
+      "date": "2026-07-27",
+      "url": "https://www.semanticscholar.org/paper/405e7ad18093fea3bc7c89e60441bb1055de12f7",
+      "pdf_url": "https://doi.org/10.1108/aci-03-2026-0142",
+      "score": 56,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: cybersecurity, vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "This study aims to develop and validate a quantum-enhanced behavioral security framework that integrates a lightweight quantum obfuscation layer into classical intrusion detection systems (IDSs). The primary objective is to harden these models against post-quantum threats, specifically model extraction and feature inversion attacks, while maintaining high detection accuracy across both traditional machine learning and deep learning architectures. A quantum feature obfuscation layer was designed using 6-qubit parameterized circuits with angle encoding and variational ansatz to nonlinearly transform behavioral features. This...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Protege sistemas de detección de intrusiones contra amenazas cuánticas post-cuánticas con ofuscación cuántica de características.",
+        "problema": "Los sistemas de detección de intrusiones (IDS) son vulnerables a ataques que explotan modelos y características, especialmente con la llegada de la computación cuántica que podría romper la criptografía actual.",
+        "propuesta": "Integrar una capa de ofuscación cuántica ligera, utilizando circuitos cuánticos parametrizados de 6 qubits, en los IDS clásicos para transformar de forma no lineal las características de comportamiento.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero la propuesta busca mantener una alta precisión de detección frente a ataques post-cuánticos.",
+        "por_que_importa": "Asegura la resiliencia de los sistemas de ciberseguridad frente a futuras amenazas cuánticas, protegiendo la integridad de los modelos de detección de intrusiones.",
+        "tags": [
+          "ciberseguridad",
+          "computación cuántica",
+          "detección de intrusiones",
+          "post-cuántico",
+          "ofuscación"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-28T15:03:32Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.24280",
+      "rank": 1,
+      "title": "From Proprietary to Open-Source: Bridging the Distribution Gap via Multi-Agent Protocol Distillation in Agentic Search",
+      "authors": [
+        "Junlin Liu",
+        "Jiangwang Chen",
+        "Zixin Song",
+        "Shuaiyu Zhou"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-27",
+      "url": "https://arxiv.org/abs/2607.24280",
+      "pdf_url": "https://arxiv.org/pdf/2607.24280",
+      "score": 73,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+4)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Agentic search enables large language models to solve knowledge-intensive tasks by interleaving multi-step reasoning with retrieval, yet optimizing this with outcome-based reinforcement learning (RL) provides only sparse supervision. Knowledge distillation can supply denser guidance, and advanced proprietary models with their strong reasoning capabilities are promising teachers. While distilling from proprietary models can densify this supervisory signal, conventional logit-matching is precluded by hidden logits and mismatched tokenizers, whereas raw natural language trajectory imitation transfers superficial stylistic artifacts rather than core reasoning competence. To address the heterogeneous distillation problem and bridge the distribution gap, we propose Multi-Agent Protocol Distillation (MAPD), a joint distillation and RL framework uses a structured, style-normalized protocol as an intermediate representation. An offline multi-agent system (MAS) decomposes each query, retrieves supporting evidence, repairs failed searches, and converts the resulting exploration trace into a JSON protocol containing the task type, reasoning plan, and extractive grounding facts. During training, the protocol is provided only to a privileged branch of the student policy, whose token distributions furnish a dense distillation signal alongside the sparse RL objective. Extensive evaluations across seven QA benchmarks demonstrate that MAPD consistently outperforms competitive distillation and RL, achieving average success rates of 39.4\\% on Qwen3-1.7B and 44.4\\% on Qwen3-4B. Crucially, the framework generalizes robustly across diverse proprietary teachers while effectively mitigating the student policy from style drift and verbosity degeneration.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2607.24241",
+      "rank": 2,
+      "title": "FilmBench: A Film-Grade Benchmark for Cinematic Video Generation",
+      "authors": [
+        "Shengyi Wang",
+        "Niantong Li",
+        "Guangzheng Hu",
+        "Hong Qi"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-27",
+      "url": "https://arxiv.org/abs/2607.24241",
+      "pdf_url": "https://arxiv.org/pdf/2607.24241",
+      "score": 65,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Progress in video generation keeps narrowing the visual gap between AI-generated and professionally produced footage, yet most benchmarks still draw prompts from web sources or LLM templates and score them with untrained, generic multimodal models. More fundamentally, their evaluation taxonomies remain rudimentary (overall visual quality, coarse text alignment and temporal smoothness) rather than the professional Cinematic Language criteria by which films are actually made and judged, so they assess basic video plausibility rather than film-grade craft. We introduce FilmBench, a text-to-video (T2V) and reference-to-video (R2V) benchmark grounded in the professional Cinematic Language of the film- academy tradition and co-developed with directors and faculty from the Beijing Film Academy and the Hujing Digital Media & Entertainment Group film studio. It rests on three choices. First, prompts are reverse-engineered from clips of award-winning films spanning 20 cinematic genres and chosen by professional directors, so every prompt is anchored to a verified live-action reference; the prompts follow real shot lists, and most script multiple shots (1,056 of the 1,169 prompts are multi-shot), unlike prior single-clip benchmarks. Second, evaluation follows a three-level Cinematic taxonomy of 3 axes, 12 components and 35 (T2V) +3 (R2V-only) sub-metrics. Third, we develop an in-house expert-grade automatic evaluation agent and open-source its core suite of Cinematic Language operators (FilmOps). Benchmarking leading video generation models (9 for T2V, 7 for R2V), the evaluator reproduces the human model ranking at model-level Spearman \\r{ho} = 0.95 (T2V) and 0.96 (R2V). Scores fall well below prior web-style benchmarks, with two consistent gaps in dynamic aesthetics and a marked single- to multi-shot performance drop that widens for weaker models.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "FilmBench revoluciona la evaluación de videos generados por IA, usando criterios cinematográficos profesionales para medir la calidad real.",
+        "problema": "Los benchmarks actuales para generación de video por IA usan prompts genéricos y métricas rudimentarias, sin evaluar la calidad cinematográfica profesional.",
+        "propuesta": "Se introduce FilmBench, un benchmark T2V y R2V basado en el Lenguaje Cinematográfico profesional, con prompts reverse-engineered de películas premiadas y una taxonomía de evaluación de 3 niveles.",
+        "resultados": "Los modelos evaluados en FilmBench obtienen puntuaciones inferiores a benchmarks web. El evaluador automático reproduce el ranking humano con Spearman \r{ho} = 0.95 (T2V) y 0.96 (R2V). Se observan brechas en estética dinámica y una caída de rendimiento al pasar de un clip a múltiples clips.",
+        "por_que_importa": "Permite evaluar de forma más precisa y realista la capacidad de los modelos de IA para generar videos con calidad cinematográfica, guiando el desarrollo hacia aplicaciones profesionales.",
+        "tags": [
+          "generación de video",
+          "inteligencia artificial",
+          "benchmarking",
+          "cine",
+          "evaluación",
+          "ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-28T15:06:01Z"
+      }
+    }
+  ],
+  "generated_at": "2026-07-28T15:06:01Z"
+}

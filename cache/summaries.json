@@ -2064,5 +2064,155 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-07-27T15:21:49Z"
+  },
+  "arxiv:2607.24339v1": {
+    "tldr": "Controla LLMs para evitar fallos de comportamiento como la escalada o la deriva, garantizando respuestas más estables y predecibles.",
+    "problema": "Los LLMs exhiben fallos de comportamiento reactivos bajo presión (escalada, deriva, perseveración) que el alineamiento en tiempo de entrenamiento no elimina completamente en tiempo de ejecución.",
+    "propuesta": "Se propone el Gubernaut Cognitive Controller (GCC), una capa de control de tiempo de ejecución agnóstica al modelo que opera en un bucle de monitorización-control. Utiliza métricas numéricas (intensidad, valencia, repetición) para regular la 'postura' del LLM sin procesar texto directamente, previniendo canales de inyección.",
+    "resultados": "El GCC reduce la 'calma' en 13 de 16 escenarios evaluados (p<.05) y 15 de 16 por signo, replicando el efecto en cuatro familias de modelos independientes. Se observa una 'firma de recuperación' consistente en todos los modelos.",
+    "por_que_importa": "Asegura que los agentes LLM sean más robustos y predecibles en interacciones complejas o adversas, mejorando su fiabilidad en aplicaciones críticas.",
+    "tags": [
+      "LLM",
+      "Control de Agentes",
+      "Ciberseguridad",
+      "Estabilidad",
+      "IA Responsable",
+      "Runtime Control"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-28T14:57:57Z"
+  },
+  "arxiv:2607.24625v1": {
+    "tldr": "APPA mejora la seguridad de agentes LLM que manejan datos sensibles, evitando la contaminación del contexto y preservando la utilidad.",
+    "problema": "Los agentes LLM que procesan datos de confidencialidad mixta son vulnerables a ataques de inyección de prompts y errores de razonamiento. Los métodos actuales de control de flujo de información (IFC) contaminan permanentemente el contexto del agente al leer datos no verificados, limitando su utilidad.",
+    "propuesta": "Se propone APPA (Agentic Permissions Policy Algebra), un framework IFC que utiliza ramificación del contexto gestionada por el motor y aplicación prospectiva de adquisición. APPA evalúa descensos de etiquetas y prerrequisitos antes de la adquisición, genera planes de acción y utiliza trayectorias secundarias para inspeccionar datos sin contaminar el contexto principal.",
+    "resultados": "APPA reduce el éxito de los ataques de exfiltración del 31%-50% a 0%-7%. La ramificación recupera una parte sustancial de la utilidad perdida por el seguimiento de contaminación en tres de los cuatro modelos evaluados.",
+    "por_que_importa": "APPA permite a los agentes LLM manejar datos de alta confidencialidad de manera segura sin sacrificar significativamente su capacidad para realizar tareas útiles, mejorando la seguridad y la practicidad en aplicaciones del mundo real.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Control de Flujo de Información",
+      "Seguridad de Agentes",
+      "Privacidad de Datos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-28T15:00:29Z"
+  },
+  "arxiv:2607.24392v1": {
+    "tldr": "Las defensas de LLM contra jailbreaks pueden perjudicar su rendimiento, aumentar rechazos erróneos y elevar costos, requiriendo un equilibrio cuidadoso.",
+    "problema": "Las defensas contra jailbreaks en Modelos de Lenguaje Grandes (LLMs) son necesarias, pero pueden degradar la utilidad del modelo al afectar su rendimiento, causar rechazos indebidos de entradas legítimas y aumentar los costos de inferencia.",
+    "propuesta": "Se realiza un estudio sistemático de las compensaciones de las defensas, organizándolas por estrategia operativa (basadas en reglas, auto-reflexivas conservadoras, multi-ronda) para examinar cómo cada una se correlaciona con perfiles de efectos secundarios específicos.",
+    "resultados": "Las defensas rara vez mejoran la capacidad del LLM. Las defensas basadas en reglas preservan mejor el rendimiento de la tarea. Las defensas auto-reflexivas conservadoras aumentan los rechazos erróneos. Las defensas multi-ronda incurren en el mayor sobrecosto de tiempo de ejecución.",
+    "por_que_importa": "Proporciona una evaluación comparativa de los efectos secundarios de las defensas y orienta la selección de defensas adecuadas según las restricciones de implementación, equilibrando seguridad, usabilidad y eficiencia.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Defensas",
+      "Rendimiento",
+      "Compensaciones",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-28T15:00:42Z"
+  },
+  "arxiv:2607.24743v1": {
+    "tldr": "ClinFusion, un LLM multimodal centrado en la visión, revoluciona la comprensión médica integrando imágenes 2D/3D y superando a modelos líderes.",
+    "problema": "Los modelos de lenguaje grandes multimodales (MLLMs) tienen potencial en medicina, pero enfrentan desafíos en la comprensión de imágenes médicas 2D y 3D y en la evaluación alineada con la práctica radiológica.",
+    "propuesta": "ClinFusion utiliza una arquitectura de codificador visual composicional y en cascada con un operador de fusión de localidad espacial para integrar imágenes 2D y 3D. También introduce un marco de evaluación basado en la visión (MedIF-Bench y métrica RoI-grounded) para una evaluación clínica y factual.",
+    "resultados": "ClinFusion establece un nuevo estado del arte en benchmarks médicos 2D y 3D, superando a modelos de código abierto en 20 de 24 benchmarks y a modelos propietarios en 13 de 16. Radiólogos certificados confirmaron la alta calidad de sus informes y la correlación de la métrica RoI-grounded con el juicio experto.",
+    "por_que_importa": "Mejora significativamente la capacidad de los sistemas de IA para comprender y generar informes médicos a partir de diversas imágenes, alineándose mejor con las necesidades clínicas y la evaluación de expertos.",
+    "tags": [
+      "IA médica",
+      "LLM multimodal",
+      "Visión por computadora",
+      "Procesamiento de imágenes médicas",
+      "Evaluación de IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-28T15:01:39Z"
+  },
+  "arxiv:2607.23999v1": {
+    "tldr": "Evalúa la contención post-inyección en agentes LLM, revelando que las métricas terminales ocultan diferencias críticas en la seguridad y utilidad.",
+    "problema": "Las evaluaciones de seguridad de agentes LLM que usan herramientas a menudo se centran solo en el resultado final (ataque exitoso o no), ignorando cómo se propagan las amenazas internamente y cuánto se degrada la funcionalidad legítima después de una inyección.",
+    "propuesta": "Introducen ContainmentBench, un benchmark basado en trazas que evalúa de forma granular la conformidad de políticas, la propagación de datos maliciosos (taint), la recuperación y la finalización de tareas autorizadas, separando estas métricas del resultado final.",
+    "resultados": "En un estudio con Qwen2.5-7B-Instruct (17,640 ejecuciones), todas las inyecciones resultaron en cero daño final. Sin embargo, el 73.5% de los casos mostraron diferencias en la propagación o la utilidad. La aplicación solo de 'taint' completó solo el 16.42% de las tareas autorizadas, mientras que una política de 'trusted-ledger' alcanzó el 85.67% y un baseline de 'tool-boundary' el 92.33%.",
+    "por_que_importa": "Demuestra que las métricas de seguridad tradicionales son insuficientes. Es crucial evaluar la propagación interna y la pérdida de utilidad para comprender el riesgo real y diseñar defensas más efectivas en agentes LLM que interactúan con herramientas y contenido no confiable.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Evaluación",
+      "Inyección de Prompts",
+      "Agentes Autónomos",
+      "Benchmarking"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-28T15:02:11Z"
+  },
+  "arxiv:2607.24588v1": {
+    "tldr": "SIREN automatiza la alerta temprana de eventos climáticos extremos usando LLMs y casos históricos, mejorando la eficiencia y escalabilidad.",
+    "problema": "Los flujos de trabajo actuales para la alerta temprana de eventos climáticos extremos son costosos, intensivos en mano de obra y difíciles de escalar, a pesar de los avances en LLMs para tareas aisladas.",
+    "propuesta": "Se propone SIREN, un framework de agentes LLM que integra evidencia y herramientas meteorológicas heterogéneas, y utiliza casos históricos para mejorar la toma de decisiones en alertas de extremo a extremo.",
+    "resultados": "SIREN-Bench, un benchmark con 600 instancias en 19 tareas, revela brechas en agentes existentes. SIREN supera a los baselines en procedimientos individuales y cadenas de alerta completas.",
+    "por_que_importa": "Permite automatizar y escalar el proceso de alerta temprana de eventos climáticos extremos, reduciendo costos y mejorando la respuesta a desastres.",
+    "tags": [
+      "IA",
+      "LLM",
+      "Alerta Temprana",
+      "Clima Extremo",
+      "Ciberseguridad",
+      "Automatización"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-28T15:02:42Z"
+  },
+  "arxiv:2607.24552v1": {
+    "tldr": "Evalúa estrategias de gestión de vulnerabilidades contra ciberataques persistentes avanzados en redes empresariales.",
+    "problema": "Las organizaciones con recursos limitados deben priorizar qué vulnerabilidades parchear ante un número creciente de ellas, pero los métodos actuales no consideran cómo una política de parcheo afecta a un atacante que progresa en la red con el tiempo.",
+    "propuesta": "Se propone VulnGym, una herramienta de simulación que enfrenta a un atacante entrenado con Aprendizaje por Refuerzo (RL) y calibrado con perfiles de APT reales, contra un defensor que aplica una política de parcheo configurable en una red con vulnerabilidades reales (CVEs).",
+    "resultados": "Los experimentos con vulnerabilidades del mundo real y dos APTs demuestran que la gestión de vulnerabilidades debe adaptarse al contexto organizacional, al comportamiento del adversario, a la topología de la red y a la criticidad de los activos.",
+    "por_que_importa": "Permite probar rigurosamente las políticas de gestión de vulnerabilidades contra campañas de ataque realistas, ayudando a las organizaciones a tomar decisiones de parcheo más efectivas y adaptadas a su entorno específico.",
+    "tags": [
+      "ciberseguridad",
+      "gestión de vulnerabilidades",
+      "APT",
+      "simulación",
+      "IA",
+      "defensa"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-28T15:02:59Z"
+  },
+  "sha1:fafbe3e488bd90d9": {
+    "tldr": "Protege sistemas de detección de intrusiones contra amenazas cuánticas post-cuánticas con ofuscación cuántica de características.",
+    "problema": "Los sistemas de detección de intrusiones (IDS) son vulnerables a ataques que explotan modelos y características, especialmente con la llegada de la computación cuántica que podría romper la criptografía actual.",
+    "propuesta": "Integrar una capa de ofuscación cuántica ligera, utilizando circuitos cuánticos parametrizados de 6 qubits, en los IDS clásicos para transformar de forma no lineal las características de comportamiento.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero la propuesta busca mantener una alta precisión de detección frente a ataques post-cuánticos.",
+    "por_que_importa": "Asegura la resiliencia de los sistemas de ciberseguridad frente a futuras amenazas cuánticas, protegiendo la integridad de los modelos de detección de intrusiones.",
+    "tags": [
+      "ciberseguridad",
+      "computación cuántica",
+      "detección de intrusiones",
+      "post-cuántico",
+      "ofuscación"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-28T15:03:32Z"
+  },
+  "arxiv:2607.24241": {
+    "tldr": "FilmBench revoluciona la evaluación de videos generados por IA, usando criterios cinematográficos profesionales para medir la calidad real.",
+    "problema": "Los benchmarks actuales para generación de video por IA usan prompts genéricos y métricas rudimentarias, sin evaluar la calidad cinematográfica profesional.",
+    "propuesta": "Se introduce FilmBench, un benchmark T2V y R2V basado en el Lenguaje Cinematográfico profesional, con prompts reverse-engineered de películas premiadas y una taxonomía de evaluación de 3 niveles.",
+    "resultados": "Los modelos evaluados en FilmBench obtienen puntuaciones inferiores a benchmarks web. El evaluador automático reproduce el ranking humano con Spearman \r{ho} = 0.95 (T2V) y 0.96 (R2V). Se observan brechas en estética dinámica y una caída de rendimiento al pasar de un clip a múltiples clips.",
+    "por_que_importa": "Permite evaluar de forma más precisa y realista la capacidad de los modelos de IA para generar videos con calidad cinematográfica, guiando el desarrollo hacia aplicaciones profesionales.",
+    "tags": [
+      "generación de video",
+      "inteligencia artificial",
+      "benchmarking",
+      "cine",
+      "evaluación",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-28T15:06:01Z"
   }
 }
