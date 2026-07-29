@@ -2214,5 +2214,170 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-07-28T15:06:01Z"
+  },
+  "arxiv:2607.25936v1": {
+    "tldr": "Un nuevo ataque explota la 'personalidad' de los LLMs para hacerlos generar tokens innecesariamente, aumentando costes y amenazando servicios.",
+    "problema": "Los LLMs consumen muchos recursos computacionales, y los ataques actuales para inducir generación excesiva de tokens son detectables y limitados.",
+    "propuesta": "Se propone RolePlay, un framework que alinea dinámicamente las 'personalidades' asignadas a los LLMs para inducir comportamientos ineficientes de forma natural y coherente con la tarea.",
+    "resultados": "RolePlay logra una amplificación promedio de tokens de hasta 7.64x y un máximo de 207.64x en diversos LLMs y tareas, superando métodos existentes.",
+    "por_que_importa": "Identifica la 'personalidad' como una nueva vía de ataque contra la eficiencia de inferencia de los LLMs, crucial para la fiabilidad y coste de los servicios.",
+    "tags": [
+      "LLMs",
+      "Ciberseguridad",
+      "Ataques",
+      "Eficiencia",
+      "Costes Computacionales",
+      "Personalidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-29T14:38:44Z"
+  },
+  "arxiv:2607.25814v1": {
+    "tldr": "Los modelos de lenguaje en árabe son vulnerables a ataques adversariales que degradan su rendimiento hasta un 92%.",
+    "problema": "Los modelos de lenguaje avanzados en árabe son susceptibles a ataques adversariales que pueden engañarlos y generar predicciones incorrectas, comprometiendo su seguridad y fiabilidad.",
+    "propuesta": "Se evalúa la robustez de cinco modelos de lenguaje en árabe frente a ataques adversariales específicos para el árabe (inserción de diacríticos, manipulación de conjunciones, parafraseo) y se explora una técnica de defensa basada en entrenamiento adversarial.",
+    "resultados": "La inserción de diacríticos reduce la precisión hasta un 92%. La manipulación de conjunciones degrada la precisión hasta un 58% manteniendo similitud semántica. El parafraseo reduce el rendimiento en un 76%. El entrenamiento adversarial mejora la resiliencia, siendo MARBERT el más robusto y AraBERT el que muestra mayores mejoras relativas, aunque persisten desafíos contra el ruido a nivel de carácter.",
+    "por_que_importa": "Comprender y mitigar las vulnerabilidades de los modelos de lenguaje en árabe es crucial para garantizar su seguridad y fiabilidad en aplicaciones prácticas, especialmente en un idioma morfológicamente rico.",
+    "tags": [
+      "IA",
+      "ciberseguridad",
+      "modelos de lenguaje",
+      "ataques adversariales",
+      "árabe",
+      "robustez"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-29T14:38:55Z"
+  },
+  "arxiv:2607.25255v1": {
+    "tldr": "SafeFlow protege sistemas multiagente de la propagación maliciosa al rastrear la información sensible a través de las delegaciones.",
+    "problema": "Los sistemas multiagente pueden fragmentar intenciones maliciosas en sub-tareas plausibles, evadiendo la detección y permitiendo la divulgación no autorizada de información o acciones inseguras.",
+    "propuesta": "SafeFlow formaliza la propagación maliciosa como un problema de flujo de información semántica, adjuntando 'taints' semánticos a las solicitudes y validando el flujo de trabajo completo antes de acciones irreversibles.",
+    "resultados": "SafeFlow reduce las tasas de éxito de ataques en benchmarks de inyección de prompts, uso inseguro de herramientas, ejecución de código arriesgada y comportamiento de agentes web, superando a las defensas existentes.",
+    "por_que_importa": "Cierra la brecha en la preservación de la semántica del riesgo a través de los límites de delegación en sistemas multiagente, previniendo daños a personas y organizaciones.",
+    "tags": [
+      "sistemas multiagente",
+      "ciberseguridad",
+      "flujo de información",
+      "IA segura",
+      "delegación segura"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-29T14:39:32Z"
+  },
+  "arxiv:2607.25921v1": {
+    "tldr": "Modelos de lenguaje visual (VLMs) pueden detectar fallos gráficos en videojuegos, pero aún generan falsos positivos.",
+    "problema": "Detectar automáticamente fallos de 'geometry clipping' (elementos gráficos que se atraviesan) en videojuegos durante el control de calidad (QA) es un desafío que requiere anotación manual costosa.",
+    "propuesta": "Evaluar el uso de Modelos de Lenguaje Visual (VLMs) en un entorno de QA automatizado para detectar 'geometry clipping' sin anotación manual, usando un agente explorador y probando seis VLMs bajo diferentes prompts.",
+    "resultados": "Los VLMs detectan indicios de clipping, pero todos generan falsos positivos en casos ambiguos (geometría cercana, oclusiones parciales). Gemini-3.1-Flash tuvo la mejor precisión general y robustez. Los modelos open-source mostraron gran variabilidad.",
+    "por_que_importa": "Los VLMs actuales son útiles como filtros de alta sensibilidad para reducir el trabajo manual en QA, pero no como detectores autónomos de errores.",
+    "tags": [
+      "IA",
+      "Control de Calidad",
+      "Videojuegos",
+      "Detección de Anomalías",
+      "VLMs"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-29T14:39:51Z"
+  },
+  "arxiv:2607.25987v1": {
+    "tldr": "Evalúa la robustez de los LLMs ante instrucciones contradictorias de distinta prioridad, revelando debilidades inesperadas.",
+    "problema": "Los modelos de lenguaje (LLMs) a menudo reciben instrucciones contradictorias de diferentes niveles de prioridad (sistema-usuario, usuario-herramienta). Es crucial saber cuál seguirán para un despliegue fiable, pero los benchmarks actuales son incompletos.",
+    "propuesta": "Se presenta IH-Benchmark, un benchmark centrado en conflictos de jerarquía de instrucciones. Cubre conflictos directos (Sistema>Usuario) y mediados por herramientas (Usuario>Herramienta), usando una taxonomía de 44 familias de restricciones en diversos dominios y un protocolo de evaluación binario.",
+    "resultados": "En 37 modelos evaluados, la conformidad con la jerarquía varía del 98.2% al 20.5%. La robustez Sistema>Usuario no predice la robustez Usuario>Herramienta. Algunos fallos se corrigen con advertencias más fuertes, otros persisten. Los fallos más sutiles (disclaimers, distorsiones fácticas) son más comunes que los peligrosos (compras no autorizadas).",
+    "por_que_importa": "Demuestra que la robustez a la jerarquía de instrucciones no es una capacidad única. Es vital evaluar esta robustez en diferentes tipos de conflictos, restricciones y presentaciones de ataques para asegurar la fiabilidad de los LLMs en aplicaciones reales.",
+    "tags": [
+      "LLMs",
+      "Ciberseguridad",
+      "Robustez",
+      "Benchmarks",
+      "Instrucciones",
+      "Jerarquía"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-29T14:40:03Z"
+  },
+  "arxiv:2607.25479v1": {
+    "tldr": "Se descubren 'puertas traseras' arquitectónicas en modelos de visión y lenguaje que se propagan a través de la cadena de suministro de modelos.",
+    "problema": "Los modelos de visión y lenguaje (VLMs) se distribuyen a través de una cadena de suministro, heredando comportamientos de artefactos de terceros. Esto crea una vulnerabilidad donde se pueden insertar puertas traseras arquitectónicas sin alterar los datos de entrenamiento o los prompts.",
+    "propuesta": "Se introduce una puerta trasera mediante una modificación aditiva de una representación intermedia, controlada por un disparador. Sin el disparador, el modelo funciona normalmente; con él, la representación se desvía hacia un objetivo malicioso, sin afectar la utilidad limpia.",
+    "resultados": "El ataque compromete la integridad, la seguridad y la equidad en tareas como respuesta a preguntas visuales y generación de texto a imagen. La puerta trasera permanece inactiva sin el disparador y no afecta el comportamiento normal.",
+    "por_que_importa": "Esta investigación revela una nueva superficie de ataque en la cadena de suministro de VLMs, exigiendo defensas que auditen la lógica ejecutable de los artefactos del modelo, no solo sus pesos aprendidos.",
+    "tags": [
+      "ciberseguridad",
+      "IA",
+      "modelos de lenguaje",
+      "vulnerabilidades",
+      "cadena de suministro"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-29T14:40:16Z"
+  },
+  "arxiv:2607.25993v1": {
+    "tldr": "Nuevos métodos de IA aprenden a usar múltiples herramientas visuales para razonar sobre imágenes satelitales de ultra alta resolución.",
+    "problema": "Los modelos de lenguaje multimodales tienen dificultades para encontrar información relevante en imágenes satelitales de ultra alta resolución, ya que la evidencia suele estar dispersa y requiere inspección local detallada o comparación global.",
+    "propuesta": "Se introduce GeoMTVR, un dataset a gran escala con trayectorias de razonamiento y uso de herramientas, y GeoLens, un modelo MLLM que aprende a descomponer preguntas, seleccionar y usar herramientas visuales (como zoom, inspección regional, etc.) y integrar la evidencia obtenida.",
+    "resultados": "GeoLens supera a los métodos de razonamiento directo y de zoom simple, logrando mayor precisión, mejor localización de evidencia y trayectorias de uso de herramientas más eficientes.",
+    "por_que_importa": "Permite a la IA analizar de manera más efectiva imágenes satelitales de alta resolución para aplicaciones como monitoreo ambiental, planificación urbana y respuesta a desastres, superando las limitaciones de las herramientas de inspección únicas.",
+    "tags": [
+      "IA",
+      "Visión por Computadora",
+      "Imágenes Satelitales",
+      "Razonamiento Multimodal",
+      "Ciberseguridad",
+      "Geospatial"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-29T14:40:30Z"
+  },
+  "arxiv:2607.25572v1": {
+    "tldr": "Clasificador de vulnerabilidades CVE a técnicas ATT&CK supera a LLMs, destacando la importancia de datos de alta calidad.",
+    "problema": "Mapear automáticamente vulnerabilidades (CVEs) a técnicas de ataque (MITRE ATT&CK) usando descripciones de texto es difícil. Las cadenas de derivación existentes tienen artefactos y los LLMs no mejoran consistentemente el rendimiento.",
+    "propuesta": "Se entrenó un clasificador multi-etiqueta sobre un conjunto de datos curado ('gold set') de 1207 CVEs mapeados por expertos. Se investigó si la expansión de este conjunto con datos generados por LLMs mejoraba el modelo.",
+    "resultados": "El clasificador superó a un baseline de similitud de embeddings, duplicando recall@5. La expansión con LLMs no mejoró el rendimiento de forma fiable; de hecho, redujo la cobertura de técnicas raras y el macro-F1 en ~1000 CVEs adicionales (disminución de 0.04). El modelo solo con datos de expertos alcanzó recall@5 de (0.673 ± 0.019).",
+    "por_que_importa": "La calidad de los datos de entrenamiento es crucial. Los datos curados por expertos son más valiosos que los generados por LLMs, incluso en grandes cantidades, para el mapeo preciso de vulnerabilidades a tácticas de ataque.",
+    "tags": [
+      "ciberseguridad",
+      "vulnerabilidades",
+      "MITRE ATT&CK",
+      "inteligencia artificial",
+      "clasificación",
+      "calidad de datos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-29T14:41:02Z"
+  },
+  "arxiv:2607.25537": {
+    "tldr": "Ingeniería de prompts visuales (VIPE) mejora el razonamiento de modelos de video, superando a los métodos de texto.",
+    "problema": "Los modelos de video, al ser cada vez más fundamentales para tareas visuales, podrían beneficiarse de una ingeniería de prompts que mejore su rendimiento, similar a como ocurre con los modelos de lenguaje.",
+    "propuesta": "Se propone la ingeniería de prompts visuales (VIPE), que consiste en modificar automáticamente las imágenes de la tarea para mejorar el rendimiento del modelo de video. Esto se ejemplifica transformando una escena abstracta en una versión fotorrealista.",
+    "resultados": "VIPE mejora el rendimiento en tareas de razonamiento de video. En modelos de video, puede ser más efectivo que la ingeniería de prompts basada en texto o el escalado en tiempo de prueba.",
+    "por_que_importa": "Ofrece un método sencillo y eficiente en cómputo para mejorar el razonamiento visual de los modelos de video, haciéndolos más fiables y potentes para diversas aplicaciones.",
+    "tags": [
+      "IA",
+      "Modelos de Video",
+      "Ingeniería de Prompts",
+      "Razonamiento Visual",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-29T14:41:16Z"
+  },
+  "arxiv:2607.25669": {
+    "tldr": "OmniDelta optimiza la asignación de presupuesto para comprimir secuencias largas en modelos OmniLLM, mejorando eficiencia y precisión.",
+    "problema": "Los modelos OmniLLM que procesan audio y video generan secuencias de tokens muy largas, incrementando costos de memoria e inferencia. Los métodos actuales de compresión no abordan adecuadamente cómo asignar el presupuesto de tokens entre las diferentes modalidades (audio/video) y dentro de ellas.",
+    "propuesta": "Se propone OmniDelta, un framework que no requiere entrenamiento, para asignar el presupuesto de tokens de forma inteligente. Primero, asigna el presupuesto entre audio y video basándose en la demanda de la consulta (skill-driven). Luego, dentro de cada modalidad, reasigna el presupuesto localmente considerando la complejidad del contenido y la redundancia temporal.",
+    "resultados": "En benchmarks de audio-video con modelos Qwen2.5-Omni, OmniDelta establece una nueva frontera de Pareto en precisión-eficiencia. Con un 25% de retención de tokens en Qwen2.5-Omni-7B, reduce la memoria GPU en un 22.0% y acelera la inferencia 1.64x respecto al modelo completo.",
+    "por_que_importa": "Permite que los modelos multimodales manejen eficientemente secuencias de datos más largas, reduciendo costos computacionales y mejorando la velocidad sin sacrificar precisión, lo que es crucial para aplicaciones prácticas de IA multimodal.",
+    "tags": [
+      "OmniLLM",
+      "Compresión de Tokens",
+      "Eficiencia de IA",
+      "Modelos Multimodales",
+      "Optimización de Presupuesto"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-29T14:42:55Z"
   }
 }
