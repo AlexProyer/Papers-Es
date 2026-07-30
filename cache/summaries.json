@@ -2379,5 +2379,206 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-07-29T14:42:55Z"
+  },
+  "arxiv:2607.27081v1": {
+    "tldr": "Una nueva técnica de alineación de LLMs protege contra ataques maliciosos sin sacrificar sus habilidades profesionales.",
+    "problema": "Los LLMs especializados son vulnerables a la manipulación de datos, perdiendo valores humanos sin perder habilidades. Las defensas actuales fallan ante plantillas de ataque desconocidas, olvidan habilidades o son fácilmente re-engañadas.",
+    "propuesta": "Proponemos Routing-based On-Policy Distillation (ROPD), un marco de alineación que modela la divergencia entre distribuciones de probabilidad de salida alineadas y comprometidas, en lugar de ajustarse a plantillas específicas.",
+    "resultados": "ROPD mitiga sustancialmente los riesgos de desajuste de plantillas, manteniendo una robustez superior en efectividad de defensa y preservación de capacidades, con una degradación de rendimiento casi nula frente a métodos existentes.",
+    "por_que_importa": "Establece un nuevo estándar para la alineación robusta de LLMs, crucial para desplegar modelos seguros y confiables en aplicaciones prácticas sin comprometer su utilidad.",
+    "tags": [
+      "LLM",
+      "Seguridad IA",
+      "Alineación",
+      "Ciberseguridad",
+      "Robustez"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-30T14:39:57Z"
+  },
+  "arxiv:2607.26591v1": {
+    "tldr": "MultiFixer, un marco de agentes múltiples, repara errores complejos que afectan a múltiples partes del código, superando a los métodos actuales.",
+    "problema": "Los errores de software que requieren cambios coordinados en múltiples ubicaciones (multi-hunk bugs) son difíciles de automatizar con las herramientas actuales de reparación de programas (APR), incluso con modelos de lenguaje grandes (LLMs). Estos errores necesitan entender el contexto del repositorio, planificar el orden de las reparaciones y generar parches efectivos para cada parte modificada.",
+    "propuesta": "Se propone MultiFixer, un marco de agentes múltiples basado en un modelo Coordinador-Proponente. Este sistema analiza el error con herramientas, construye un contexto detallado, genera parches de forma iterativa mediante la arquitectura Coordinador-Proponente y refina los parches en dos etapas para asegurar su corrección sintáctica y semántica.",
+    "resultados": "En Defects4J, MultiFixer repara 326 bugs (62 multi-método, 27 multi-archivo) y 46 bugs multi-hunk. Supera a los métodos anteriores con el mismo modelo base. Combinado con Claude-3.5-Sonnet, alcanza 420 reparaciones, estableciendo un nuevo estado del arte en Defects4J. En VUL4J, repara 24 vulnerabilidades (5 multi-hunk). En subconjuntos multi-hunk de SEC-bench y PatchEval, repara 11 y 19 vulnerabilidades respectivamente, superando a los baselines con GPT-3.5.",
+    "por_que_importa": "Demuestra una mejora significativa en la reparación automática de errores complejos y de múltiples partes, un desafío clave en el desarrollo de software, lo que podría reducir drásticamente el esfuerzo manual en la corrección de bugs y vulnerabilidades.",
+    "tags": [
+      "reparación automática de programas",
+      "agentes múltiples",
+      "errores multi-hunk",
+      "ciberseguridad",
+      "ingeniería de software",
+      "LLMs"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-30T14:40:09Z"
+  },
+  "arxiv:2607.26998v1": {
+    "tldr": "AgentSnare engaña a agentes de ciberseguridad autónomos para que fallen, desviándolos con entornos señuelo dinámicos.",
+    "problema": "Los agentes de prueba de penetración basados en LLM son difíciles de defender porque pueden adaptarse y superar las defensas estáticas, volviendo a centrarse en el objetivo real.",
+    "propuesta": "AgentSnare utiliza un sistema de engaño adaptativo que construye dinámicamente un entorno señuelo. Utiliza un modelo de política para crear artefactos engañosos basados en el historial del agente, incorporándolos a un entorno señuelo factualmente coherente para retrasar, desviar y neutralizar al agente.",
+    "resultados": "AgentSnare absorbe el 46.8% de las llamadas a herramientas del agente en el señuelo, retiene el 55.9% de las acciones posteriores a la entrada allí, y el 90.0% de los intentos de finalización se basan en pruebas del señuelo. Ningún objetivo real fue explotado con éxito en 45 pares atacante-CVE probados.",
+    "por_que_importa": "Proporciona una defensa dinámica y adaptable contra las crecientes amenazas de los agentes de ciberseguridad autónomos, mejorando significativamente la seguridad de los sistemas.",
+    "tags": [
+      "ciberseguridad",
+      "IA",
+      "agentes autónomos",
+      "defensa",
+      "LLM",
+      "pruebas de penetración"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-30T14:40:19Z"
+  },
+  "arxiv:2607.26791v1": {
+    "tldr": "Evalúa agentes de IA en respuesta a incidentes de ciberseguridad post-compromiso, revelando sus limitaciones actuales.",
+    "problema": "Los benchmarks actuales de ciberseguridad para agentes de IA se centran en escenarios pre-compromiso, dejando sin explorar el entorno post-compromiso, donde los agentes interactúan con sistemas ya vulnerados.",
+    "propuesta": "Se introduce SecRespond, el primer benchmark para evaluar agentes de IA en flujos de trabajo de respuesta a incidentes post-compromiso. Los agentes reciben un snapshot de disco, alertas y escaneos de un host comprometido para generar reportes forenses y planes de remediación.",
+    "resultados": "Se evaluaron 23 LLMs en 10 entornos de ciberataque. Los agentes identifican problemas de alertas, pero fallan en investigar intrusiones silenciosas y en crear planes de remediación completos y verificados. Ningún modelo logró una detección y remediación completa en un solo entorno.",
+    "por_que_importa": "Es crucial para desarrollar agentes de IA capaces de realizar una respuesta a incidentes de ciberseguridad efectiva y completa en entornos del mundo real, identificando y mitigando amenazas de manera proactiva.",
+    "tags": [
+      "ciberseguridad",
+      "inteligencia artificial",
+      "respuesta a incidentes",
+      "LLMs",
+      "benchmarking",
+      "post-compromiso"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-30T14:40:29Z"
+  },
+  "arxiv:2607.26910v1": {
+    "tldr": "Genera trayectorias de cámara cinematográficas y seguras en 3D a partir de descripciones de lenguaje natural usando agentes LLM.",
+    "problema": "Generar automáticamente trayectorias de cámara expresivas y cinemáticas en escenas 3D a partir de descripciones en lenguaje natural es difícil, ya que los métodos actuales carecen de conciencia espacial 3D o separan la planificación de la semántica cinematográfica.",
+    "propuesta": "CinemaTraj, un marco que trata la planificación de trayectorias de cámara como un problema de razonamiento espacial anclado en el lenguaje. Utiliza un agente LLM con un grafo de escena 3D estructurado para descomponer las indicaciones en movimientos cinematográficos atómicos, representados paramétricamente para expresividad y optimización de colisiones. También genera narración y subtítulos sincronizados.",
+    "resultados": "CinemaTraj produce trayectorias fieles a las indicaciones, sin colisiones y de alta calidad cinematográfica, superando a los enfoques existentes en alineación con las indicaciones, calidad de la trayectoria y métricas de seguridad en entornos ScanNet++.",
+    "por_que_importa": "Permite la creación automatizada de videos cinemáticos y narrados para aplicaciones como publicidad inmobiliaria o tours virtuales, mejorando la eficiencia y la calidad de la producción.",
+    "tags": [
+      "IA generativa",
+      "Visión por Computadora",
+      "Planificación de trayectorias",
+      "LLM",
+      "Generación de video",
+      "Cinematografía"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-30T14:40:39Z"
+  },
+  "arxiv:2607.26849v1": {
+    "tldr": "Detecta y recupera 'backdoors' ocultas en modelos de lenguaje grandes (LLMs) para protegerlos de ataques adversarios.",
+    "problema": "Los adversarios pueden 'envenenar' los datos de entrenamiento de los LLMs para implantar 'backdoors' (puertas traseras) que manipulan su comportamiento de forma encubierta, y los defensores necesitan una forma de detectar y recuperar estas vulnerabilidades sin acceso a los datos de entrenamiento o conocimiento previo del ataque.",
+    "propuesta": "Se presenta ToxScreen, un benchmark con ~800 modelos con 'backdoors' para evaluar métodos de recuperación. Se propone un método de 'token look-up' que clasifica candidatos por tasa de éxito de ataque, superando a la optimización basada en gradientes.",
+    "resultados": "El método de 'token look-up' recupera los 'backdoors' donde son efectivos. Se observa que los 'backdoors' operan con estrategias distintas a los 'jailbreaks', permitiendo filtrarlos. Un modelo ampliamente 'jailbreakable' es una señal anómala útil, incluso si el 'trigger' exacto no se recupera.",
+    "por_que_importa": "Permite a los profesionales de ciberseguridad y IA defender de manera más efectiva los LLMs desplegados en aplicaciones críticas contra ataques de manipulación de datos, garantizando su fiabilidad y seguridad.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Backdoors",
+      "Detección de Ataques",
+      "IA Segura",
+      "ToxScreen"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-30T14:40:49Z"
+  },
+  "arxiv:2607.26820v1": {
+    "tldr": "Predice fallos de seguridad en LLMs antes de que ocurran, analizando la trayectoria completa de la interacción.",
+    "problema": "Los modelos de lenguaje (LLMs) pueden ser manipulados gradualmente a lo largo de interacciones de múltiples turnos, acumulando intenciones maliciosas que llevan a fallos de seguridad. Las salvaguardas actuales solo detectan violaciones una vez que ocurren, sin predecir la evolución del riesgo.",
+    "propuesta": "Recast es un marco que predice riesgos de seguridad a nivel de trayectoria. Utiliza una vista dual de la trayectoria (contexto corto y largo) para modelar la evolución del riesgo y un codificador temporal causal para aprender patrones y predecir cuándo surgirán los riesgos futuros.",
+    "resultados": "Recast predice el 88.3% de los fallos de seguridad futuros con un tiempo de antelación promedio de 2.41 turnos, manteniendo una tasa de falsas alarmas del 12.3%.",
+    "por_que_importa": "Permite la prevención proactiva de fallos de seguridad en LLMs, pasando de una detección reactiva a una predicción y mitigación de riesgos antes de que se manifiesten.",
+    "tags": [
+      "LLMs",
+      "Seguridad",
+      "Predicción de Riesgos",
+      "Interacciones Multi-Turno",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-30T14:41:00Z"
+  },
+  "arxiv:2607.26379v1": {
+    "tldr": "QUIC-TRIP protege las comunicaciones críticas de subestaciones eléctricas contra ataques, garantizando seguridad y disponibilidad con mínima latencia.",
+    "problema": "Los protocolos de comunicación de subestaciones eléctricas modernos carecen de seguridad inherente, siendo vulnerables a ataques de inyección de datos falsos y denegación de servicio, especialmente en redes extensas o públicas.",
+    "propuesta": "Se propone QUIC-TRIP, una metodología de seguridad transparente que opera en la Capa de Transporte (Capa 4) para proteger flujos de datos IP de baja latencia, encapsulándolos sin modificar los puntos finales existentes. Utiliza triple redundancia y reenvía el primer paquete recibido, descartando duplicados.",
+    "resultados": "QUIC-TRIP tiene una latencia promedio solo un 2.88% mayor que DTLS 1.2 con reutilización de sesión, y un overhead de comunicación del 32.18% por ruta proxificada. Demuestra resiliencia ante ataques de denegación de servicio en comunicaciones R-GOOSE.",
+    "por_que_importa": "Asegura la continuidad y la integridad de las operaciones críticas en redes eléctricas, cumpliendo normativas de ciberseguridad y permitiendo la modernización de la infraestructura de comunicación sin reemplazar equipos existentes.",
+    "tags": [
+      "ciberseguridad",
+      "redes electricas",
+      "QUIC",
+      "protocolos",
+      "resiliencia",
+      "baja latencia"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-30T14:41:27Z"
+  },
+  "arxiv:2607.26784": {
+    "tldr": "SkillRise revoluciona el aprendizaje de IA permitiendo a los agentes reutilizar habilidades entre tareas distintas para mejorar el rendimiento.",
+    "problema": "Los agentes de IA actuales tratan las tareas como independientes, desperdiciando patrones de solución reutilizables y perdiendo eficiencia en el aprendizaje de habilidades transferibles.",
+    "propuesta": "SkillRise es un marco de aprendizaje por refuerzo unificado que organiza tareas relacionadas en secuencias progresivas y utiliza una única política para resolver tareas y curar un documento de habilidades evolutivo que se pasa a la siguiente tarea.",
+    "resultados": "SkillRise logra el mayor rendimiento Pass@1 en ALFWorld, WebShop y ScienceWorld, con mejoras de 2.3 a 8.5 puntos porcentuales sobre la línea base más fuerte. Mantiene un buen rendimiento en tareas repetidas y mejora con secuencias de tareas más largas.",
+    "por_que_importa": "Permite a los agentes de IA aprender, refinar y reutilizar habilidades de manera eficiente y escalable en diversas tareas, reduciendo la sobrecarga de tiempo de ejecución y mejorando el rendimiento general.",
+    "tags": [
+      "aprendizaje por refuerzo",
+      "agentes de IA",
+      "habilidades transferibles",
+      "modelos de lenguaje grandes",
+      "ciberseguridad",
+      "eficiencia"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-30T14:41:38Z"
+  },
+  "arxiv:2607.26115": {
+    "tldr": "GPT-Red usa auto-juego a gran escala para descubrir ataques de inyección de prompts contra modelos de lenguaje avanzados.",
+    "problema": "Evaluar y mejorar la robustez de los Modelos de Lenguaje Grandes (LLMs) frente a ataques de inyección de prompts, un tipo de vulnerabilidad de ciberseguridad.",
+    "propuesta": "Se propone GPT-Red, un agente de 'red teaming' automatizado entrenado mediante un algoritmo de auto-juego escalable. Este agente ataca a una población diversa de modelos defensores entrenados simultáneamente.",
+    "resultados": "GPT-Red rompe modelos anteriores hasta GPT-5.5, encuentra más ataques exitosos que los humanos y generaliza a entornos y modelos no vistos. Se documenta como la mayor ejecución de entrenamiento de seguridad para LLMs hasta la fecha.",
+    "por_que_importa": "Permite mejorar la seguridad y robustez de los LLMs de producción de forma automatizada y a escala, creando un ciclo de auto-mejora para la seguridad.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "LLMs",
+      "Red Teaming",
+      "Prompt Injection",
+      "Seguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-30T14:41:47Z"
+  },
+  "arxiv:2607.26314": {
+    "tldr": "Evalúa qué tan sigilosos son los agentes de ciberseguridad autónomos al realizar ataques, revelando fallos sistemáticos.",
+    "problema": "Los agentes de ciberseguridad autónomos a menudo fallan en mantener el sigilo operativo (OPSEC) al realizar tareas ofensivas, cometiendo errores que revelan su presencia o acciones.",
+    "propuesta": "Se introduce StealthBench, un benchmark con 14 escenarios de tareas dockerizadas basados en incidentes reales, para medir el sigilo de agentes autónomos en seis dimensiones OPSEC.",
+    "resultados": "Ningún modelo supera el 54% de tasa de éxito seguro (completar la tarea y ser sigiloso). Los fallos de OPSEC son sistemáticos en todas las familias de modelos evaluadas.",
+    "por_que_importa": "Es crucial para desarrollar agentes de ciberseguridad autónomos más sofisticados y seguros, y para monitorear automáticamente las operaciones de seguridad ofensiva.",
+    "tags": [
+      "ciberseguridad",
+      "inteligencia artificial",
+      "agentes autónomos",
+      "sigilo",
+      "OPSEC",
+      "benchmark"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-30T14:41:57Z"
+  },
+  "arxiv:2607.25308": {
+    "tldr": "CAST enseña a agentes LLM a jugar juegos complejos usando señales de valor de solucionadores de juegos como guías.",
+    "problema": "El entrenamiento de agentes LLM para juegos de largo alcance con recompensas dispersas es ineficiente, ya que las recompensas finales no indican qué acciones específicas conducen al éxito.",
+    "propuesta": "CAST utiliza los cambios en el valor del estado de un solucionador de juegos para generar señales de crédito a nivel de turno, que se inyectan en el entrenamiento de RLVR para guiar al agente LLM.",
+    "resultados": "CAST supera a todos los métodos de referencia en Sokoban, Minesweeper y Rush Hour, logrando el mejor rendimiento promedio en cero disparos en ALFWorld y WebShop.",
+    "por_que_importa": "Proporciona una forma más eficiente y efectiva de entrenar agentes LLM para tareas de toma de decisiones complejas, mejorando su capacidad para aprender de señales de retroalimentación más ricas.",
+    "tags": [
+      "LLM",
+      "Agentes",
+      "Aprendizaje por Refuerzo",
+      "Ciberseguridad",
+      "Juegos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-30T14:42:08Z"
   }
 }
