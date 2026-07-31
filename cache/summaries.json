@@ -2580,5 +2580,253 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-07-30T14:42:08Z"
+  },
+  "arxiv:2607.28165v1": {
+    "tldr": "Nuevos ataques de inyección de audio sigilosos secuestran agentes multimodales de IA, pero una defensa basada en separación acústica los mitiga eficazmente.",
+    "problema": "Los agentes de IA multimodales que interactúan por voz son vulnerables a ataques de inyección de audio sigilosos que secuestran su funcionamiento sin que el usuario lo perciba.",
+    "propuesta": "Se proponen técnicas para inyectar instrucciones maliciosas de forma imperceptible en el habla del usuario y se introduce un benchmark (AudioAgentSecurity) para evaluar estas amenazas. Se presenta una defensa (CADV) que usa separación de fuentes acústicas y análisis de consistencia intermodal.",
+    "resultados": "Los ataques logran una tasa de éxito promedio del 69.10% contra Gemini 3 Pro. La defensa CADV alcanza más del 90% de éxito en la detección de ataques.",
+    "por_que_importa": "Estos ataques representan una amenaza real para la seguridad y privacidad de los usuarios de agentes de IA multimodales, pero las defensas propuestas ofrecen una solución robusta.",
+    "tags": [
+      "IA multimodal",
+      "ciberseguridad",
+      "ataques de inyección",
+      "LLM",
+      "defensa",
+      "audio"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-31T14:55:10Z"
+  },
+  "arxiv:2607.28147v1": {
+    "tldr": "Extraemos y explotamos 'arneses' de IA multiagente para robar propiedad intelectual y proponemos defensas.",
+    "problema": "Los sistemas autónomos multiagente (AMAS) usan 'arneses' de inferencia, que son difíciles de construir y valiosa propiedad intelectual. Se desconoce si estos 'arneses' dinámicos presentan riesgos de fuga de propiedad intelectual.",
+    "propuesta": "Introducimos Agent Harness Distillation (AHD), un marco para extraer y explotar capacidades de 'arneses' de inferencia de agentes objetivo mediante interacciones de caja negra, en dos etapas: inferencia inicial y refinamiento iterativo.",
+    "resultados": "Experimentos demuestran la efectividad de AHD y revelan riesgos sustanciales de fuga de propiedad intelectual en AMAS reales. Una defensa basada en el engaño reduce la extracción sin afectar la utilidad.",
+    "por_que_importa": "Descubre una nueva amenaza de seguridad en AMAS, revelando la vulnerabilidad de la propiedad intelectual en estos sistemas y ofreciendo un método de defensa.",
+    "tags": [
+      "IA",
+      "ciberseguridad",
+      "sistemas multiagente",
+      "propiedad intelectual",
+      "extracción de modelos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-31T14:55:19Z"
+  },
+  "arxiv:2607.28187v1": {
+    "tldr": "Las transformaciones simples de imágenes pueden eludir los sistemas modernos de moderación de contenido basados en IA, incluso los de grandes modelos.",
+    "problema": "Los sistemas de moderación de contenido basados en IA, incluidos los que utilizan grandes modelos fundacionales comerciales, son vulnerables a ataques de elusión mediante transformaciones de imágenes sencillas y de bajo coste.",
+    "propuesta": "Se realiza una evaluación a gran escala de tres servicios comerciales de moderación de imágenes utilizando siete transformaciones de imágenes simples y agnósticas al modelo para analizar su robustez.",
+    "resultados": "Los tres servicios comerciales evaluados pueden ser eludidos por transformaciones de bajo coste. Transformaciones fijas como la inversión de color y la conversión a escala de grises cambian decisiones de 'inseguro' a 'seguro'. La robustez varía significativamente entre conjuntos de datos y categorías de daño, con vulnerabilidades pronunciadas en contenido multimodal y autolesiones.",
+    "por_que_importa": "El uso de grandes modelos fundacionales en la moderación de contenido no garantiza automáticamente la seguridad. Estos sistemas deben ser evaluados rigurosamente con transformaciones realistas y formar parte de una estrategia de moderación en capas.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Moderación de Contenido",
+      "Modelos Fundacionales",
+      "Robustez"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-31T14:55:30Z"
+  },
+  "arxiv:2607.27893v1": {
+    "tldr": "Identificar automáticamente reportes de bugs de seguridad es crucial; este estudio compara métodos para encontrar el más efectivo.",
+    "problema": "La identificación manual de reportes de bugs de seguridad es lenta, propensa a errores y no escalable, y la literatura actual no ofrece una comparación clara de las técnicas automáticas existentes.",
+    "propuesta": "Se realizó un análisis comparativo de técnicas automáticas (regresión logística, SVM, Random Forest, GPT-5.2, BERT-base, RoBERTa, SetFit) para identificar reportes de bugs de seguridad en datasets de referencia.",
+    "resultados": "SetFit obtuvo el mejor rendimiento general (F1-score de 0.80), superando a otras técnicas en tres de cuatro datasets. RoBERTa también fue competitivo. GPT-5.2 tuvo un rendimiento pobre. El aprendizaje por transferencia mejoró el rendimiento en proyectos con pocos datos, pero pudo degradarlo en proyectos con características muy específicas.",
+    "por_que_importa": "Proporciona una guía clara para profesionales y investigadores sobre qué técnicas automáticas son más efectivas para identificar reportes de bugs de seguridad, mejorando la eficiencia y la seguridad del software.",
+    "tags": [
+      "ciberseguridad",
+      "ingenieria de software",
+      "machine learning",
+      "identificacion de bugs",
+      "analisis comparativo",
+      "nlp"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-31T14:55:39Z"
+  },
+  "arxiv:2607.28496v1": {
+    "tldr": "Extraer información estructurada de noticias financieras predice mejor el mercado que solo el sentimiento.",
+    "problema": "El análisis de sentimiento tradicional en noticias financieras reduce la información a una sola métrica (polaridad), perdiendo dimensiones clave con valor predictivo independiente.",
+    "propuesta": "Se propone un marco de extracción de información estructurada que utiliza LLaMA-3.1-70B para extraer seis dimensiones semánticas (tipo de evento, alcance del impacto, horizonte temporal, confianza semántica, etc.) de noticias financieras.",
+    "resultados": "La combinación de características de sentimiento y las dimensiones estructuradas extraídas por LLM mejora la predicción (F1=0.600) frente a usar solo sentimiento (F1=0.230 en modelos lineales, F1=0.576 en no lineales). Las dimensiones no relacionadas con el sentimiento aportan un ΔF1 = +0.019. Se observó un 53.5% de desacuerdo sistemático entre sentimiento y las dimensiones extraídas.",
+    "por_que_importa": "Capturar múltiples dimensiones de información en noticias financieras, más allá del sentimiento, mejora significativamente la predicción del mercado, abriendo nuevas vías para el Procesamiento del Lenguaje Natural financiero.",
+    "tags": [
+      "finanzas",
+      "procesamiento de lenguaje natural",
+      "inteligencia artificial",
+      "análisis de sentimiento",
+      "extracción de información",
+      "mercados financieros"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-31T14:55:50Z"
+  },
+  "arxiv:2607.28478v1": {
+    "tldr": "Los modelos de lenguaje grandes priorizan información explícita, ignorando el sentido común y cayendo en trampas de razonamiento.",
+    "problema": "Los modelos de lenguaje grandes (LLMs) fallan en el razonamiento de sentido común porque se centran demasiado en información explícita y distractora (sesgo de saliencia), ignorando requisitos implícitos.",
+    "propuesta": "Se introduce el benchmark SaliTrap para evaluar el sesgo de saliencia en LLMs y se demuestra que el problema es de supresión de conocimiento, no de ausencia, mediante sondas de conocimiento sin contexto y prompting ligero en tiempo de inferencia.",
+    "resultados": "Los 12 LLMs evaluados sufren significativamente de sesgo de saliencia. Al eliminar el contexto distractor, se recupera más del 90% de los fallos de cumplimiento, demostrando que el conocimiento está presente pero suprimido. El prompting ligero reduce sustancialmente el problema sin reentrenamiento.",
+    "por_que_importa": "Este hallazgo cambia el enfoque de la falta de competencia de los modelos a la forma en que se les interroga, sugiriendo que mejoras en la elicitation pueden desbloquear el razonamiento de sentido común, crucial para aplicaciones prácticas y seguras.",
+    "tags": [
+      "LLMs",
+      "sentido común",
+      "sesgo de saliencia",
+      "razonamiento",
+      "elicitation",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-31T14:56:00Z"
+  },
+  "arxiv:2607.27776v1": {
+    "tldr": "CHARGE automatiza la generación de propiedades de seguridad para hardware usando LLMs y jerarquías CWE, mejorando la detección de bugs.",
+    "problema": "La verificación de seguridad en módulos RTL (hardware) es compleja y requiere especificaciones de diseño confiables, lo que consume mucho tiempo y esfuerzo manual.",
+    "propuesta": "Se propone CHARGE, un framework que utiliza la jerarquía de Common Weakness Enumerations (CWEs) y modelos de lenguaje grandes (LLMs) para inferir comportamientos de seguridad esperados y generar propiedades de seguridad (SystemVerilog Assertions - SVAs) automáticamente a partir de módulos RTL no verificados.",
+    "resultados": "CHARGE detectó 27 de 42 bugs conocidos en diseños de SoC. Para el SoC OpenPiton (Hack@DAC21), el 89% de las SVAs generadas fueron exitosas en Cadence JasperGold FPV y el 92.2% no fueron vacuas. Identificó un nuevo bug no detectado previamente.",
+    "por_que_importa": "Reduce drásticamente el esfuerzo manual en la verificación de seguridad de hardware, mejora la precisión respecto a propiedades escritas manualmente y puede descubrir vulnerabilidades de seguridad previamente desconocidas.",
+    "tags": [
+      "seguridad de hardware",
+      "verificación formal",
+      "inteligencia artificial",
+      "LLMs",
+      "CWE",
+      "RTL"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-31T14:56:10Z"
+  },
+  "arxiv:2607.26497": {
+    "tldr": "BM25 supera a otros métodos de RAG en grandes volúmenes de datos, ofreciendo un rendimiento escalable y rentable.",
+    "problema": "La efectividad y el costo de los diferentes paradigmas de Generación Aumentada por Recuperación (RAG) no se comprenden bien a medida que aumenta el tamaño del corpus, lo que dificulta la elección del método óptimo.",
+    "propuesta": "Se realizó un estudio controlado variando el tamaño del corpus en 28 niveles, manteniendo constantes las preguntas y los documentos de referencia, para comparar la precisión, el costo (tokens) y la latencia de diferentes enfoques de RAG (incluyendo File-System Agent, BM25, recuperación densa y RAG basada en grafos).",
+    "resultados": "BM25 supera a otros métodos a partir de ~10 millones de tokens, logrando una ventaja de hasta 20 puntos de precisión a escala completa. File-System Agent lidera en corpus pequeños pero es 39 veces más costoso en tokens de consulta. La recuperación densa es eficiente pero menos precisa. El RAG basado en grafos enfrenta limitaciones de construcción y escalabilidad.",
+    "por_que_importa": "Para aplicaciones prácticas con grandes volúmenes de datos, BM25 emerge como la opción predeterminada más escalable y rentable para la recuperación, mientras que los agentes son más efectivos cuando se usan después de una recuperación inicial.",
+    "tags": [
+      "RAG",
+      "Escalabilidad",
+      "BM25",
+      "Recuperación de Información",
+      "Procesamiento de Lenguaje Natural",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-31T14:56:21Z"
+  },
+  "arxiv:2607.28272": {
+    "tldr": "MemHarness permite a los agentes de IA reconstruir recuerdos pasados para adaptarlos al contexto actual, mejorando su toma de decisiones.",
+    "problema": "Los agentes de IA actuales repiten experiencias pasadas sin adaptarlas al contexto actual, lo que a menudo causa errores (transferencia negativa) porque las memorias almacenadas son generales y la situación actual es concreta.",
+    "propuesta": "MemHarness propone un marco donde los agentes de IA critican y reconstruyen activamente las experiencias recuperadas, basándose en el estado actual, antes de actuar. Esto se logra mediante un modelo de política unificado entrenado de extremo a extremo.",
+    "resultados": "MemHarness supera significativamente a los agentes de RL puros y a los agentes con memoria estática en los entornos ALFWorld y WebShop, mostrando robustez en escenarios fuera de distribución (OOD).",
+    "por_que_importa": "Permite a los agentes de IA tomar decisiones más inteligentes y adaptables, similar a como los humanos usan sus recuerdos, evitando errores comunes y mejorando su razonamiento intrínseco.",
+    "tags": [
+      "IA",
+      "Agentes Inteligentes",
+      "Memoria",
+      "Aprendizaje por Refuerzo",
+      "Adaptación Contextual"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-31T14:56:30Z"
+  },
+  "arxiv:2607.27958": {
+    "tldr": "Presentamos Σ-Mem, una memoria de fiabilidad online para sistemas multi-agente de LLM que mejora la confianza y la coordinación.",
+    "problema": "Los sistemas multi-agente de LLM carecen de mecanismos para evaluar la fiabilidad de los agentes individuales y sus relaciones, lo que dificulta la toma de decisiones de confianza en tareas complejas.",
+    "propuesta": "Se introduce Σ-Mem, una memoria que registra la evidencia histórica de competencia de agentes individuales y las relaciones entre ellos. Utiliza retroalimentación de corrección post-decisión para actualizaciones estables y adaptativas sin reentrenamiento.",
+    "resultados": "Σ-Mem se adapta a cambios contrafactuales de fiabilidad y generaliza a agentes y dominios no vistos. Las lecturas directas de memoria superan al voto mayoritario y al mejor agente fijo. El rendimiento mejora con más retroalimentación de corrección.",
+    "por_que_importa": "Establece una base reutilizable para la coordinación adaptativa en sistemas multi-agente de LLM, permitiendo una mayor fiabilidad y eficiencia en la toma de decisiones conjuntas.",
+    "tags": [
+      "LLM",
+      "Sistemas Multi-Agente",
+      "Fiabilidad",
+      "Memoria",
+      "Ciberseguridad",
+      "Coordinación"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-31T14:56:40Z"
+  },
+  "arxiv:2607.28374": {
+    "tldr": "LedgerMind asegura que los agentes de IA multimodales basen sus respuestas en evidencia verificable, mejorando la fiabilidad y precisión.",
+    "problema": "Los agentes de IA multimodales a menudo llegan a respuestas correctas por razones equivocadas (evidencia no fundamentada, errores accidentales), y las métricas actuales no detectan esto.",
+    "propuesta": "Tratar las trayectorias de los agentes como máquinas de estados con procedencia controlada, usando un 'Structured Evidence Ledger' para rastrear y validar la evidencia utilizada en cada paso.",
+    "resultados": "Mejora la precisión de las respuestas y la fidelidad de la trayectoria a nivel de evidencia en varios benchmarks multimodales y MLLMs.",
+    "por_que_importa": "Permite evaluar y mejorar la fiabilidad de los agentes de IA, asegurando que sus decisiones y respuestas estén sólidamente fundamentadas en hechos verificables, crucial para aplicaciones críticas.",
+    "tags": [
+      "IA multimodal",
+      "Ciberseguridad",
+      "Procedencia",
+      "Fiabilidad",
+      "Razonamiento"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-31T14:56:50Z"
+  },
+  "arxiv:2607.26760": {
+    "tldr": "Metis integra memoria nativa en modelos de IA, permitiendo un aprendizaje y uso de información más eficiente y autónomo.",
+    "problema": "La memoria en los agentes de IA se implementa principalmente con módulos externos, sin explorar el potencial de la memoria nativa dentro de los propios modelos fundacionales.",
+    "propuesta": "Presenta Metis, un modelo fundacional con memoria nativa. Su arquitectura comprime información histórica en un estado de memoria interno, accesible mediante 'memory attention', y aprende procedimientos para almacenar y utilizar información de forma autónoma durante el entrenamiento.",
+    "resultados": "Metis demuestra capacidades de memoria nativa. El mantenimiento de memoria es 'gradient-free' y la actualización requiere solo un pase hacia adelante. Los pesos del modelo se mantienen congelados en inferencia, transformando los estados de memoria mediante cómputo estándar.",
+    "por_que_importa": "Permite a los agentes de IA gestionar y utilizar información de manera más eficiente, abriendo la puerta a sistemas más capaces y autónomos con una arquitectura y optimización mejoradas.",
+    "tags": [
+      "IA",
+      "Modelos Fundacionales",
+      "Memoria Nativa",
+      "Agentes de IA",
+      "Optimización"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-31T14:57:00Z"
+  },
+  "arxiv:2607.28022": {
+    "tldr": "Entrenamos modelos de lenguaje para tareas abiertas y complejas usando un método que adapta la supervisión a medida que el modelo aprende.",
+    "problema": "El entrenamiento de modelos de lenguaje en dominios abiertos carece de recompensas verificables, dificultando la formalización de preferencias de tarea como supervisión efectiva. Los contextos pueden expresar estas preferencias, pero ofrecen poca supervisión adicional una vez destilados al modelo estudiante.",
+    "propuesta": "Proponemos Flux-OPD, un paradigma de destilación on-policy (OPD) que utiliza contextos que evolucionan con el rendimiento del estudiante. Se analizó el efecto de los contextos, descomponiendo el objetivo KL inverso para revelar que el estudiante se destila hacia la media geométrica de los profesores condicionados al contexto y que existe un término de conflicto. Flux-OPD trata las diferencias entre profesores condicionados y no condicionados como señales de diferencia contextual, las inyecta como correcciones contextuales al ancla del profesor no condicionado, y pondera su fuerza de corrección usando el término de conflicto.",
+    "resultados": "Los experimentos en tareas abiertas muestran que Flux-OPD supera a los paradigmas OPD existentes.",
+    "por_que_importa": "Permite capturar preferencias de tarea en dominios abiertos de manera más efectiva, mejorando el rendimiento de los modelos de lenguaje en aplicaciones complejas y no estructuradas.",
+    "tags": [
+      "destilación de conocimiento",
+      "modelos de lenguaje",
+      "aprendizaje por refuerzo",
+      "supervisión adaptativa",
+      "ciberseguridad",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-31T14:57:11Z"
+  },
+  "arxiv:2607.27703": {
+    "tldr": "SpatialCLI entrena modelos de lenguaje visual para razonar con y sin herramientas espaciales, mejorando drásticamente la comprensión de detalles visuales.",
+    "problema": "Los modelos de lenguaje visual (VLMs) actuales fallan al integrar la comprensión general de tareas con los detalles visuales finos necesarios para el éxito, y los modelos especializados no pueden tomar decisiones a nivel de tarea.",
+    "propuesta": "SpatialCLI es un framework que enseña a los VLMs a usar modelos de visión especializados como 'herramientas' para mejorar la percepción, y luego a internalizar esas capacidades para operar de forma autónoma.",
+    "resultados": "En MindCube, SpatialCLI mejoró Qwen3-VL-8B-Instruct del 29.3% al 84.6% con herramientas, superando a GPT-5.6 Sol (72.1%). Después de la internalización, el modelo retuvo un 73.8% de rendimiento sin herramientas.",
+    "por_que_importa": "Permite a los agentes basados en IA comprender y actuar sobre detalles visuales críticos, superando las limitaciones actuales y abriendo la puerta a aplicaciones más robustas y autónomas en el mundo real.",
+    "tags": [
+      "IA",
+      "Visión por Computadora",
+      "Agentes Autónomos",
+      "Modelos de Lenguaje Visual",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-31T14:57:38Z"
+  },
+  "arxiv:2607.27816": {
+    "tldr": "Simuladores de usuarios personalizados evalúan agentes de rol de IA, superando las limitaciones de los métodos de evaluación fijos.",
+    "problema": "La evaluación de agentes de rol de IA (RPAs) es crucial pero los métodos actuales usan historias de diálogo fijas y rúbricas genéricas, sin considerar la variabilidad individual del usuario ni la capacidad real del RPA en conversaciones multi-turno.",
+    "propuesta": "Se introduce PALATE, un benchmark para RPAs que utiliza simuladores de usuarios adaptados a perfiles de personajes (300 disponibles). Estos simuladores interactúan en conversaciones libres con los RPAs y se evalúan con rúbricas personalizadas que miden la satisfacción del usuario, además de una rúbrica general.",
+    "resultados": "Las rúbricas personalizadas mostraron mayor acuerdo con juicios humanos que las rúbricas generales en datos anotados. La evaluación principal con 16 candidatos caracterizó la calidad genérica, la capacidad a largo plazo y la experiencia por usuario.",
+    "por_que_importa": "Permite una evaluación más precisa y útil de los RPAs, alineada con la experiencia real del usuario y guiando mejor su desarrollo, al considerar la individualidad y la dinámica conversacional.",
+    "tags": [
+      "IA conversacional",
+      "Evaluación de modelos",
+      "Agentes de rol",
+      "Simulación de usuarios",
+      "Personalización"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-07-31T14:57:48Z"
   }
 }

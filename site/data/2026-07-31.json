@@ -1,0 +1,692 @@
+{
+  "date": "2026-07-31",
+  "report_type": "filtrado",
+  "evaluated": 183,
+  "selected": 16,
+  "papers": [
+    {
+      "id": "arxiv:2607.28165v1",
+      "rank": 1,
+      "title": "Piggybacking on Perception: Stealthy Concurrent Audio Prompt Injections against Multimodal LLM Agents",
+      "authors": [
+        "Mingxiao Liu",
+        "Yitong Li",
+        "Haoren Zhao",
+        "Yaoxiang Bian"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-30",
+      "url": "https://arxiv.org/abs/2607.28165v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.28165v1",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Large Language Model (LLM)-driven multimodal agents are increasingly deployed to execute autonomous tasks via continuous audio interaction. While this paradigm enhances interaction naturalness, it introduces a critical yet under-explored attack surface, as audio inputs inevitably contain environmental noise beyond user control. In this paper, we investigate concurrent audio prompt injection attacks targeting multimodal agents. Distinct from traditional acoustic attacks on voice devices, we propose novel techniques for instruction augmentation and scenario concealment. These methods allow malicious audio instructions to imperceptibly \"piggyback\" onto user speech, thereby hijacking agents to execute malicious actions. To systematically quantify this threat, we construct AudioAgentSecurity, the first comprehensive benchmark for audio instruction injection attacks, encompassing 8 real-world task scenarios and 10 distinct attack patterns. We evaluate 11 state-of-the-art agents, including Gemini 3 Pro and GPT-4o-audio. Notably, our methods achieve an average Attack Success Rate (ASR) of 69.10\\% against the advanced Gemini 3 Pro. To counter this threat, we further introduce Cascaded Audio Decoupling and Verification (CADV), a defense mechanism based on source separation and consistency analysis. Compared with existing prompt-level defenses, CADV leverages acoustic source separation and cross-modal consistency analysis to detect audio instruction injections more robustly, achieving over 90\\% detection success across diverse attack vectors. Finally, real-world experiments with human volunteers on Doubao AI Smartphone in diverse dynamic real-world scenarios confirm the attacks' high stealth and efficacy, while demonstrating that our defense reliably mitigates these vulnerabilities.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Nuevos ataques de inyección de audio sigilosos secuestran agentes multimodales de IA, pero una defensa basada en separación acústica los mitiga eficazmente.",
+        "problema": "Los agentes de IA multimodales que interactúan por voz son vulnerables a ataques de inyección de audio sigilosos que secuestran su funcionamiento sin que el usuario lo perciba.",
+        "propuesta": "Se proponen técnicas para inyectar instrucciones maliciosas de forma imperceptible en el habla del usuario y se introduce un benchmark (AudioAgentSecurity) para evaluar estas amenazas. Se presenta una defensa (CADV) que usa separación de fuentes acústicas y análisis de consistencia intermodal.",
+        "resultados": "Los ataques logran una tasa de éxito promedio del 69.10% contra Gemini 3 Pro. La defensa CADV alcanza más del 90% de éxito en la detección de ataques.",
+        "por_que_importa": "Estos ataques representan una amenaza real para la seguridad y privacidad de los usuarios de agentes de IA multimodales, pero las defensas propuestas ofrecen una solución robusta.",
+        "tags": [
+          "IA multimodal",
+          "ciberseguridad",
+          "ataques de inyección",
+          "LLM",
+          "defensa",
+          "audio"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-31T14:55:10Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.28147v1",
+      "rank": 2,
+      "title": "Agent Harness Distillation: Inference-Time Harness Extraction and Exploitation in Autonomous Multi-Agent Systems",
+      "authors": [
+        "Yu Cui",
+        "Wuli Yang",
+        "Yirui Shi",
+        "Junhao Xia"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-30",
+      "url": "https://arxiv.org/abs/2607.28147v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.28147v1",
+      "score": 56,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Autonomous multi-agent systems (AMAS) built on large language models (LLMs), such as Hermes, increasingly rely on inference-time harnesses to coordinate reasoning and action. Constructing these harnesses requires substantial engineering effort and computational resources, as they are iteratively optimized over a combinatorial search space while co-evolving with the underlying LLM. Inference-time harnesses therefore constitute valuable intellectual property (IP). Although prior work has investigated IP leakage in static multi-agent systems with pre-configured architectures, it remains unclear whether similar risks arise in AMAS, where harness behavior emerges dynamically during inference. To address this gap, we introduce Agent Harness Distillation (AHD), a framework for studying the security risks arising from inference-time harness extraction in AMAS. We formalize harness extraction as a new security problem and develop an evaluation framework for quantifying such risks. AHD extracts inference-time harness capabilities from a target agent through black-box interactions and consists of two stages. In the pre-distillation stage, AHD infers inference-time harness behaviors from the responses of the target agent and constructs an initial harness. In the post-distillation stage, AHD iteratively refines the initial harness to align with the behavioral patterns of the target agent. Experiments on real-world AMAS across multiple backbone LLMs demonstrate the effectiveness of AHD and reveal substantial IP leakage risks. We further propose a deception-based defense that reduces harness extraction effectiveness while preserving the utility of the protected agent. Our findings uncover a previously underexplored security threat to AMAS.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Extraemos y explotamos 'arneses' de IA multiagente para robar propiedad intelectual y proponemos defensas.",
+        "problema": "Los sistemas autónomos multiagente (AMAS) usan 'arneses' de inferencia, que son difíciles de construir y valiosa propiedad intelectual. Se desconoce si estos 'arneses' dinámicos presentan riesgos de fuga de propiedad intelectual.",
+        "propuesta": "Introducimos Agent Harness Distillation (AHD), un marco para extraer y explotar capacidades de 'arneses' de inferencia de agentes objetivo mediante interacciones de caja negra, en dos etapas: inferencia inicial y refinamiento iterativo.",
+        "resultados": "Experimentos demuestran la efectividad de AHD y revelan riesgos sustanciales de fuga de propiedad intelectual en AMAS reales. Una defensa basada en el engaño reduce la extracción sin afectar la utilidad.",
+        "por_que_importa": "Descubre una nueva amenaza de seguridad en AMAS, revelando la vulnerabilidad de la propiedad intelectual en estos sistemas y ofreciendo un método de defensa.",
+        "tags": [
+          "IA",
+          "ciberseguridad",
+          "sistemas multiagente",
+          "propiedad intelectual",
+          "extracción de modelos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-31T14:55:19Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.28187v1",
+      "rank": 3,
+      "title": "Old Tricks, New Models: How Simple Image Transformations Break Modern AI-based Content Moderation",
+      "authors": [
+        "Marco Alecci",
+        "Francesco Marchiori",
+        "Iyiola Emmanuel Olatunji",
+        "Tegawendé F. Bissyandé"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-30",
+      "url": "https://arxiv.org/abs/2607.28187v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.28187v1",
+      "score": 54,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "While automated content-moderation systems have become essential for screening harmful content at scale, conventional task-specific classifiers often provide limited policy cov- erage and contextual understanding. Recently, commercial multimodal moderation APIs built on large foundation models have been introduced with the promise of providing broader and more capable safety filters. In this work, we analyze whether this shift also yields more robust image moderation. We conduct a large-scale black-box evaluation on three established commercial image-moderation services and compare their robustness. By evaluating seven simple, model-agnostic image transformations across multiple providers, datasets, harm categories, perceptual-similarity constraints, and transformation intensities, we find that: (1) all three commercial services can be bypassed using inexpensive image transformations that require no gradients, surrogate models, or knowledge of the target system; (2) even fixed transformations such as color inversion and grayscale conversion induce unsafe-to-safe decision changes while preserving content that remains recognizable to humans; (3) their robustness varies substantially across datasets and harm categories, with multimodal content and self-harm exhibiting pronounced vulnerabilities. This yields the conclusion that replacing conventional moderation classifiers with foundation-model-based APIs does not, by itself, provide a reliable security boundary. Such systems must be evaluated under realistic transformations and deployed as one component of a layered moderation pipeline rather than as standalone safety filters.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Las transformaciones simples de imágenes pueden eludir los sistemas modernos de moderación de contenido basados en IA, incluso los de grandes modelos.",
+        "problema": "Los sistemas de moderación de contenido basados en IA, incluidos los que utilizan grandes modelos fundacionales comerciales, son vulnerables a ataques de elusión mediante transformaciones de imágenes sencillas y de bajo coste.",
+        "propuesta": "Se realiza una evaluación a gran escala de tres servicios comerciales de moderación de imágenes utilizando siete transformaciones de imágenes simples y agnósticas al modelo para analizar su robustez.",
+        "resultados": "Los tres servicios comerciales evaluados pueden ser eludidos por transformaciones de bajo coste. Transformaciones fijas como la inversión de color y la conversión a escala de grises cambian decisiones de 'inseguro' a 'seguro'. La robustez varía significativamente entre conjuntos de datos y categorías de daño, con vulnerabilidades pronunciadas en contenido multimodal y autolesiones.",
+        "por_que_importa": "El uso de grandes modelos fundacionales en la moderación de contenido no garantiza automáticamente la seguridad. Estos sistemas deben ser evaluados rigurosamente con transformaciones realistas y formar parte de una estrategia de moderación en capas.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Moderación de Contenido",
+          "Modelos Fundacionales",
+          "Robustez"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-31T14:55:30Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.27893v1",
+      "rank": 4,
+      "title": "A comparative analysis of automated techniques for security bug report identification",
+      "authors": [
+        "Muhammad Laiq"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-07-30",
+      "url": "https://arxiv.org/abs/2607.27893v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.27893v1",
+      "score": 54,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Timely identification of security-related bug reports is essential to minimize the window of vulnerabilities in software systems. Manually screening incoming bug reports to identify security-related issues is time-consuming, error-prone, and non-scalable for large-scale software systems. Thus, a variety of automatic techniques, including traditional machine learning (ML) techniques and large language models, have been proposed to facilitate this task. However, the literature remains fragmented. Most studies introduce or optimize a particular technique and evaluate it against a limited set of baselines, often under different experimental setups. As a result, it is difficult to compare their results and draw reliable conclusions about the effectiveness of existing approaches, leaving researchers and practitioners without clear guidance on which techniques are most suitable for the task. To address this gap, we conducted a comparative analysis of several promising automated techniques to identify security-related bug reports using benchmark datasets. We evaluated Logistic Regression, Support Vector Machines, Random Forest, OpenAI's GPT-5.2, BERT-base, RoBERTa, and SetFit (a state-of-the-art few-shot learning framework). Our results indicate that SetFit achieves the best overall performance, achieving an F1-score of 0.80 and outperforming other techniques on three of the four datasets. RoBERTa performs competitively and approaches SetFit in some projects, while traditional ML techniques, particularly Logistic Regression, remain a strong baseline in certain contexts. In contrast, GPT-5.2 performs poorly in both zero-shot and few-shot settings. In addition, cross-project experiments demonstrate that transfer learning can improve performance for projects with limited data, but may degrade results for projects with strong project-specific characteristics.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Identificar automáticamente reportes de bugs de seguridad es crucial; este estudio compara métodos para encontrar el más efectivo.",
+        "problema": "La identificación manual de reportes de bugs de seguridad es lenta, propensa a errores y no escalable, y la literatura actual no ofrece una comparación clara de las técnicas automáticas existentes.",
+        "propuesta": "Se realizó un análisis comparativo de técnicas automáticas (regresión logística, SVM, Random Forest, GPT-5.2, BERT-base, RoBERTa, SetFit) para identificar reportes de bugs de seguridad en datasets de referencia.",
+        "resultados": "SetFit obtuvo el mejor rendimiento general (F1-score de 0.80), superando a otras técnicas en tres de cuatro datasets. RoBERTa también fue competitivo. GPT-5.2 tuvo un rendimiento pobre. El aprendizaje por transferencia mejoró el rendimiento en proyectos con pocos datos, pero pudo degradarlo en proyectos con características muy específicas.",
+        "por_que_importa": "Proporciona una guía clara para profesionales y investigadores sobre qué técnicas automáticas son más efectivas para identificar reportes de bugs de seguridad, mejorando la eficiencia y la seguridad del software.",
+        "tags": [
+          "ciberseguridad",
+          "ingenieria de software",
+          "machine learning",
+          "identificacion de bugs",
+          "analisis comparativo",
+          "nlp"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-31T14:55:39Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.28496v1",
+      "rank": 5,
+      "title": "Beyond Sentiment: Structured Information Extraction from Financial News",
+      "authors": [
+        "Daohan Zhu",
+        "Sitong Ge",
+        "Ruofei Wang",
+        "Honggu Chen"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CL]",
+      "category": "cs.CL",
+      "date": "2026-07-30",
+      "url": "https://arxiv.org/abs/2607.28496v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.28496v1",
+      "score": 52,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Financial sentiment analysis has become a standard component in news-driven stock prediction, yet it reduces rich, multi-dimensional news articles to a single polarity score. We hypothesize that financial news encodes multiple orthogonal information dimensions---event type, impact scope, temporal horizon, and semantic confidence---that sentiment alone cannot capture, and that these dimensions carry independent predictive value. To test this hypothesis, we propose a structured information extraction framework that leverages LLaMA-3.1-70B to extract six semantic dimensions from financial news. Through large-scale experiments on 41,618 news--stock pairs from the FNSPID dataset, we find that (i) FinBERT sentiment features exhibit strong predictive power under nonlinear models (F1=0.576) but substantially weaker performance under linear models (F1=0.230), revealing a highly nonlinear sentiment--return relationship; (ii) LLM-extracted structured features, while individually weaker, capture information orthogonal to sentiment, as evidenced by a 53.5% systematic disagreement rate between the two approaches; and (iii) combining both signal sources yields F1=0.600, significantly outperforming either alone ($p < 0.0001$), with consistent improvements across all seven event types. Ablation experiments confirm that non-sentiment structural dimensions (event type, impact subject, time horizon, confidence) independently contribute $Δ\\text{F1} = +0.019$ beyond FinBERT alone. Feature importance analysis reveals balanced contributions from all six extracted dimensions (14--21%), demonstrating that compressing news into a single sentiment score incurs substantial information loss. Our results suggest that the sentiment--semantics decoupling in financial text is systematic and exploitable, opening a new direction for multi-dimensional financial NLP.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Extraer información estructurada de noticias financieras predice mejor el mercado que solo el sentimiento.",
+        "problema": "El análisis de sentimiento tradicional en noticias financieras reduce la información a una sola métrica (polaridad), perdiendo dimensiones clave con valor predictivo independiente.",
+        "propuesta": "Se propone un marco de extracción de información estructurada que utiliza LLaMA-3.1-70B para extraer seis dimensiones semánticas (tipo de evento, alcance del impacto, horizonte temporal, confianza semántica, etc.) de noticias financieras.",
+        "resultados": "La combinación de características de sentimiento y las dimensiones estructuradas extraídas por LLM mejora la predicción (F1=0.600) frente a usar solo sentimiento (F1=0.230 en modelos lineales, F1=0.576 en no lineales). Las dimensiones no relacionadas con el sentimiento aportan un ΔF1 = +0.019. Se observó un 53.5% de desacuerdo sistemático entre sentimiento y las dimensiones extraídas.",
+        "por_que_importa": "Capturar múltiples dimensiones de información en noticias financieras, más allá del sentimiento, mejora significativamente la predicción del mercado, abriendo nuevas vías para el Procesamiento del Lenguaje Natural financiero.",
+        "tags": [
+          "finanzas",
+          "procesamiento de lenguaje natural",
+          "inteligencia artificial",
+          "análisis de sentimiento",
+          "extracción de información",
+          "mercados financieros"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-31T14:55:50Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.28478v1",
+      "rank": 6,
+      "title": "Would You Walk to the Car Wash? Revealing the Salience Bias of Large Language Models in Commonsense Reasoning",
+      "authors": [
+        "Zheng Wu",
+        "Chenhao Xue",
+        "Shijie Zheng",
+        "Yijie Lu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CL]",
+      "category": "cs.CL",
+      "date": "2026-07-30",
+      "url": "https://arxiv.org/abs/2607.28478v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.28478v1",
+      "score": 52,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: vuln & threats, LLM, compliance & audit"
+      ],
+      "abstract_en": "As large language models (LLMs) continue to advance in complex reasoning tasks, they have learned to heavily prioritize explicit conditions provided in the input. However, in everyday commonsense reasoning, this mechanism exposes a critical vulnerability which we term Salience Bias: models become easily hijacked by useless explicit distractors (e.g., numerical values), leading them to ignore the implicit physical or commonsense prerequisites of a task. A critical open question is whether this failure reflects a genuine gap in commonsense knowledge or merely its suppression under misleading task framing. To investigate this, we construct the SaliTrap Benchmark, a high-quality dataset across four trap dimensions. Evaluating 12 state-of-the-art LLMs, we find that all mainstream models suffer significantly from salience bias, with severity scaling with distractor density and detecting the trap often decoupled from actually avoiding it. Crucially, by re-eliciting the same models with the task framing stripped away, we show that this is overwhelmingly a failure of \\textbf{knowledge suppression rather than knowledge absence}: a context-free knowledge probe alone recovers over 90\\% of sycophantic-compliance failures, revealing that the requisite commonsense is intrinsically present but actively crowded out by salient distractors that lure the model into over-compliant, unnecessary computation. Building on this diagnosis, we further show that lightweight, inference-time prompting alone substantially closes the gap without any retraining. Our findings relocate the bottleneck of commonsense reasoning failures from model competence to elicitation, and we release SaliTrap as a testbed for this blind spot. The codes are available at https://github.com/Wuzheng02/SaliTrap.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los modelos de lenguaje grandes priorizan información explícita, ignorando el sentido común y cayendo en trampas de razonamiento.",
+        "problema": "Los modelos de lenguaje grandes (LLMs) fallan en el razonamiento de sentido común porque se centran demasiado en información explícita y distractora (sesgo de saliencia), ignorando requisitos implícitos.",
+        "propuesta": "Se introduce el benchmark SaliTrap para evaluar el sesgo de saliencia en LLMs y se demuestra que el problema es de supresión de conocimiento, no de ausencia, mediante sondas de conocimiento sin contexto y prompting ligero en tiempo de inferencia.",
+        "resultados": "Los 12 LLMs evaluados sufren significativamente de sesgo de saliencia. Al eliminar el contexto distractor, se recupera más del 90% de los fallos de cumplimiento, demostrando que el conocimiento está presente pero suprimido. El prompting ligero reduce sustancialmente el problema sin reentrenamiento.",
+        "por_que_importa": "Este hallazgo cambia el enfoque de la falta de competencia de los modelos a la forma en que se les interroga, sugiriendo que mejoras en la elicitation pueden desbloquear el razonamiento de sentido común, crucial para aplicaciones prácticas y seguras.",
+        "tags": [
+          "LLMs",
+          "sentido común",
+          "sesgo de saliencia",
+          "razonamiento",
+          "elicitation",
+          "ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-31T14:56:00Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.27776v1",
+      "rank": 7,
+      "title": "CHARGE: Leveraging CWE Hierarchies for Hardware Security SystemVerilog Assertion Generation",
+      "authors": [
+        "Xiao Tan",
+        "Cynthia Sturton"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-07-30",
+      "url": "https://arxiv.org/abs/2607.27776v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.27776v1",
+      "score": 51,
+      "topics": [
+        "cybersecurity",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+7)",
+        "🎯 temas: cybersecurity, LLM"
+      ],
+      "abstract_en": "This paper presents CHARGE, an automated framework for generating security properties for unverified RTL modules using CWEs and large language models (LLMs). The hallmark is a reasoning process that leverages the hierarchical nature of CWE entries to improve accuracy when identifying security-critical assets in unverified RTL modules. As a result, the approach can infer expected security behaviors and generate properties from identified assets and CWE semantics, avoiding the need for trusted design specifications and reducing manual engineering effort. We evaluate the framework on the Hack@DAC18, 19, and 21 open source SoC designs using OpenAI's GPT-4.1. CHARGE detects 27 of 42 known bugs in these designs. For Hack@DAC21 OpenPiton SoC, 89% of the generated SVAs run in Cadence JasperGold FPV, and 92.2% are non-vacuous. We compare to an open-source, manually written set of properties for these designs and find that CHARGE correctly writes properties for three bugs in which the manually written properties were incorrect. In addition, CHARGE-generated properties identify a new bug in the Hack@DAC21 OpenPiton SoC that was not previously identified.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "CHARGE automatiza la generación de propiedades de seguridad para hardware usando LLMs y jerarquías CWE, mejorando la detección de bugs.",
+        "problema": "La verificación de seguridad en módulos RTL (hardware) es compleja y requiere especificaciones de diseño confiables, lo que consume mucho tiempo y esfuerzo manual.",
+        "propuesta": "Se propone CHARGE, un framework que utiliza la jerarquía de Common Weakness Enumerations (CWEs) y modelos de lenguaje grandes (LLMs) para inferir comportamientos de seguridad esperados y generar propiedades de seguridad (SystemVerilog Assertions - SVAs) automáticamente a partir de módulos RTL no verificados.",
+        "resultados": "CHARGE detectó 27 de 42 bugs conocidos en diseños de SoC. Para el SoC OpenPiton (Hack@DAC21), el 89% de las SVAs generadas fueron exitosas en Cadence JasperGold FPV y el 92.2% no fueron vacuas. Identificó un nuevo bug no detectado previamente.",
+        "por_que_importa": "Reduce drásticamente el esfuerzo manual en la verificación de seguridad de hardware, mejora la precisión respecto a propiedades escritas manualmente y puede descubrir vulnerabilidades de seguridad previamente desconocidas.",
+        "tags": [
+          "seguridad de hardware",
+          "verificación formal",
+          "inteligencia artificial",
+          "LLMs",
+          "CWE",
+          "RTL"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-31T14:56:10Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.26497",
+      "rank": 1,
+      "title": "BM25 Wins at Scale: A Scaling Study of Retrieval-Augmented Generation Paradigms",
+      "authors": [
+        "Pengyu Wang",
+        "Benfeng Xu",
+        "Shaohan Wang",
+        "Xin Zeng"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-30",
+      "url": "https://arxiv.org/abs/2607.26497",
+      "pdf_url": "https://arxiv.org/pdf/2607.26497",
+      "score": 78,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "Retrieval-augmented generation (RAG) spans lexical and dense retrieval, graph-based indexing, and agentic search, but these paradigms are usually evaluated on different benchmarks at one corpus size, leaving their accuracy-cost scaling unclear. To bridge this gap, we present a controlled study that varies corpus size along 28 strictly nested tiers spanning roughly 450-fold, while holding questions and a fixed bedrock of relevant and adversarial documents unchanged. Under one reader model and one judging protocol, we measure official accuracy, construction and query tokens, and latency. The results reveal a scale-dependent crossover rather than an unconditional winner. File-System Agent leads at the smallest shared tiers, but its sequential exploration costs 39 times more query tokens at the bedrock and becomes less effective as the search space grows. Around 10 million corpus tokens, BM25 overtakes it and leads at every larger shared tier, with a margin approaching 20 points at full scale. BM25 also anchors the low-cost end of the Pareto frontier without LLM-based construction. Dense retrieval remains efficient but less accurate, whereas graph-based RAG encounters construction walls before deployment scale and its scalable variants remain below BM25 at shared tiers. Overall, corpus growth increasingly favors global candidate ranking: lexical retrieval is the strongest scalable default, while agentic reasoning works best after ranked discovery rather than in place of it.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "BM25 supera a otros métodos de RAG en grandes volúmenes de datos, ofreciendo un rendimiento escalable y rentable.",
+        "problema": "La efectividad y el costo de los diferentes paradigmas de Generación Aumentada por Recuperación (RAG) no se comprenden bien a medida que aumenta el tamaño del corpus, lo que dificulta la elección del método óptimo.",
+        "propuesta": "Se realizó un estudio controlado variando el tamaño del corpus en 28 niveles, manteniendo constantes las preguntas y los documentos de referencia, para comparar la precisión, el costo (tokens) y la latencia de diferentes enfoques de RAG (incluyendo File-System Agent, BM25, recuperación densa y RAG basada en grafos).",
+        "resultados": "BM25 supera a otros métodos a partir de ~10 millones de tokens, logrando una ventaja de hasta 20 puntos de precisión a escala completa. File-System Agent lidera en corpus pequeños pero es 39 veces más costoso en tokens de consulta. La recuperación densa es eficiente pero menos precisa. El RAG basado en grafos enfrenta limitaciones de construcción y escalabilidad.",
+        "por_que_importa": "Para aplicaciones prácticas con grandes volúmenes de datos, BM25 emerge como la opción predeterminada más escalable y rentable para la recuperación, mientras que los agentes son más efectivos cuando se usan después de una recuperación inicial.",
+        "tags": [
+          "RAG",
+          "Escalabilidad",
+          "BM25",
+          "Recuperación de Información",
+          "Procesamiento de Lenguaje Natural",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-31T14:56:21Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.28272",
+      "rank": 2,
+      "title": "MemHarness: Memory Is Reconstructed, Not Replayed",
+      "authors": [
+        "Rong Wu",
+        "Daocheng Fu",
+        "Licheng Wen",
+        "Xuemeng Yang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-30",
+      "url": "https://arxiv.org/abs/2607.28272",
+      "pdf_url": "https://arxiv.org/pdf/2607.28272",
+      "score": 71,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Retrieving past experiences has become a common strategy to enhance large language model agents. However, most existing memory-augmented agents treat retrieved experiences as static records to be replayed verbatim, injecting them into the context regardless of whether they align with the agent's current situation. This ``replay'' paradigm ignores the gap between the abstract, general nature of stored experience and the concrete, ever-changing states encountered at decision time, frequently causing negative transfer. In contrast, humans rarely recall past experiences verbatim; instead, they reorganize and adapt retrieved memories to fit the present context. Inspired by this, we propose MemHarness, a framework that equips LLM agents to actively harness and reconstruct past experiences based on the present context. At each decision step, a unified policy model critiques and reconstructs the retrieved experience conditioned on the current state, producing context-grounded guidance before acting. This reconstructive ability emerges naturally through end-to-end training with GRPO. Experiments on ALFWorld and WebShop show that MemHarness substantially outperforms pure RL and static memory-augmented baselines, demonstrating strong robustness in out-of-distribution (OOD) scenarios. Furthermore, our analyses reveal that this reconstruction objective not only prevents negative transfer but also serves as latent guidance during training, fundamentally improving the agent's intrinsic reasoning capabilities.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "MemHarness permite a los agentes de IA reconstruir recuerdos pasados para adaptarlos al contexto actual, mejorando su toma de decisiones.",
+        "problema": "Los agentes de IA actuales repiten experiencias pasadas sin adaptarlas al contexto actual, lo que a menudo causa errores (transferencia negativa) porque las memorias almacenadas son generales y la situación actual es concreta.",
+        "propuesta": "MemHarness propone un marco donde los agentes de IA critican y reconstruyen activamente las experiencias recuperadas, basándose en el estado actual, antes de actuar. Esto se logra mediante un modelo de política unificado entrenado de extremo a extremo.",
+        "resultados": "MemHarness supera significativamente a los agentes de RL puros y a los agentes con memoria estática en los entornos ALFWorld y WebShop, mostrando robustez en escenarios fuera de distribución (OOD).",
+        "por_que_importa": "Permite a los agentes de IA tomar decisiones más inteligentes y adaptables, similar a como los humanos usan sus recuerdos, evitando errores comunes y mejorando su razonamiento intrínseco.",
+        "tags": [
+          "IA",
+          "Agentes Inteligentes",
+          "Memoria",
+          "Aprendizaje por Refuerzo",
+          "Adaptación Contextual"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-31T14:56:30Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.27958",
+      "rank": 3,
+      "title": "Σ-Mem: An Online Reliability Memory for LLM-based Multi-Agent Systems",
+      "authors": [
+        "Peilin Feng",
+        "Suorong Yang",
+        "Soujanya Poria"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-30",
+      "url": "https://arxiv.org/abs/2607.27958",
+      "pdf_url": "https://arxiv.org/pdf/2607.27958",
+      "score": 71,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Memory is central to long-horizon LLM agents, yet existing memory systems primarily preserve interaction content rather than modeling which agents can be trusted and under what conditions. This limitation is particularly important in multi-agent systems, where a central model may be unable to directly verify plausible or correlated peer responses. We introduce $Σ$-Mem, an online reliability memory that records historical competence evidence for individual peers and peer relationship evidence across the peer set. Both forms of evidence are maintained as real symmetric states and updated from post-decision correctness feedback. By Weyl's inequality, the spectral change caused by each event-level update is bounded, enabling stable online adaptation without retraining the underlying models. $Σ$-Mem provides a general write-and-read interface: the same memory can be used for residual steering of a central model, response-free peer routing, or reliability-weighted voting. Across five Qwen-family models, $Σ$-Mem adapts to counterfactual reliability shifts and generalizes to unseen peers and task domains. Direct memory readouts also outperform majority voting and the best fixed peer over the full OOD evaluation set. Moreover, performance improves consistently as more correctness feedback becomes available, indicating that $Σ$-Mem progressively accumulates actionable reliability information. These results establish reliability memory as a reusable foundation for adaptive coordination in LLM-based multi-agent systems.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Presentamos Σ-Mem, una memoria de fiabilidad online para sistemas multi-agente de LLM que mejora la confianza y la coordinación.",
+        "problema": "Los sistemas multi-agente de LLM carecen de mecanismos para evaluar la fiabilidad de los agentes individuales y sus relaciones, lo que dificulta la toma de decisiones de confianza en tareas complejas.",
+        "propuesta": "Se introduce Σ-Mem, una memoria que registra la evidencia histórica de competencia de agentes individuales y las relaciones entre ellos. Utiliza retroalimentación de corrección post-decisión para actualizaciones estables y adaptativas sin reentrenamiento.",
+        "resultados": "Σ-Mem se adapta a cambios contrafactuales de fiabilidad y generaliza a agentes y dominios no vistos. Las lecturas directas de memoria superan al voto mayoritario y al mejor agente fijo. El rendimiento mejora con más retroalimentación de corrección.",
+        "por_que_importa": "Establece una base reutilizable para la coordinación adaptativa en sistemas multi-agente de LLM, permitiendo una mayor fiabilidad y eficiencia en la toma de decisiones conjuntas.",
+        "tags": [
+          "LLM",
+          "Sistemas Multi-Agente",
+          "Fiabilidad",
+          "Memoria",
+          "Ciberseguridad",
+          "Coordinación"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-31T14:56:40Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.28374",
+      "rank": 4,
+      "title": "LEDGERMIND: Provenance-Constrained Multimodal Agentic Reasoning with a Structured Evidence Ledger",
+      "authors": [
+        "Enjun Du",
+        "Hange Zhou",
+        "Chenxu Du",
+        "Siyi Liu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-30",
+      "url": "https://arxiv.org/abs/2607.28374",
+      "pdf_url": "https://arxiv.org/pdf/2607.28374",
+      "score": 60,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "Multimodal agents for visual question answering increasingly operate as multi-step trajectories that interleave perception, retrieval, and reasoning, yet evaluation still largely reduces to final-answer accuracy. This aggregate signal cannot tell whether a correct answer was reached through grounded evidence, language priors, or accidental error cancellation. We propose to treat a multimodal agent trajectory as a provenance-constrained state machine: tool outputs are normalized into a Structured Evidence Ledger that serves as the trajectory state, downstream reasoning and decision claims may cite only active ledger entries, grounding is checked at the entity and numeric level, and repair is realized as typed state transitions that cannot introduce content without tool-produced provenance. We instantiate this design as LedgerMind (Provenance-Constrained Multimodal Agentic Reasoning with a Structured Evidence Ledger), augmented by a Three-Layer Grounding Protocol, an Adaptive Dual-Path Dispatcher that matches reasoning depth to question complexity, and an Event-Triggered Verification-and-Repair engine with a formal provenance non-amplification guarantee. We use LedgerMind to target four recurring failure patterns that final-answer accuracy tends to obscure: unsupported intermediate reasoning, citation-backed entity hallucination (Phantom Grounding), over-reasoning on simple queries, and repair-time amplification. Experiments across multiple multimodal reasoning benchmarks and backbone MLLMs show that LedgerMind improves both answer accuracy and trajectory-level faithfulness.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "LedgerMind asegura que los agentes de IA multimodales basen sus respuestas en evidencia verificable, mejorando la fiabilidad y precisión.",
+        "problema": "Los agentes de IA multimodales a menudo llegan a respuestas correctas por razones equivocadas (evidencia no fundamentada, errores accidentales), y las métricas actuales no detectan esto.",
+        "propuesta": "Tratar las trayectorias de los agentes como máquinas de estados con procedencia controlada, usando un 'Structured Evidence Ledger' para rastrear y validar la evidencia utilizada en cada paso.",
+        "resultados": "Mejora la precisión de las respuestas y la fidelidad de la trayectoria a nivel de evidencia en varios benchmarks multimodales y MLLMs.",
+        "por_que_importa": "Permite evaluar y mejorar la fiabilidad de los agentes de IA, asegurando que sus decisiones y respuestas estén sólidamente fundamentadas en hechos verificables, crucial para aplicaciones críticas.",
+        "tags": [
+          "IA multimodal",
+          "Ciberseguridad",
+          "Procedencia",
+          "Fiabilidad",
+          "Razonamiento"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-31T14:56:50Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.26760",
+      "rank": 5,
+      "title": "Metis: Memory Foundation Model",
+      "authors": [
+        "Zeyu Zhang",
+        "Ziliang Guo",
+        "Yihang Sun",
+        "Xichong Zhang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-29",
+      "url": "https://arxiv.org/abs/2607.26760",
+      "pdf_url": "https://arxiv.org/pdf/2607.26760",
+      "score": 59,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Recent advances in AI agents have increasingly internalized native capabilities into their underlying foundation models, giving rise to multimodal foundation models and large reasoning models. However, agent memory is still primarily implemented through external modules, leaving the native memory capability largely unexplored. In this paper, we take a first step toward this direction by introducing memory foundation models, which empower foundation models with native memory capabilities. We formalize native memory from two perspectives: a persistent and dynamically evolving memory state within the backbone, and native memory procedures that autonomously store and utilize information through model computation. We show that native memory offers advantages in architecture, end-to-end optimization, and efficiency. Based on this formulation, we propose Metis, the first prototype of memory foundation models. Metis introduces a new architecture that equips a foundation model with a native memory state, allowing historical information to be compressed into the model and accessed through memory attention. We construct large-scale memory-specific training data and introduce multiple optimization objectives to acquire these native memory procedures through mid-training. The online memory maintenance of Metis is gradient-free, and the memory update requires only a forward pass. At inference time, all learned model weights remain frozen, while the native memory states are autonomously transformed through standard forward computation. Through extensive experiments, we show that Metis exhibits native memory capabilities and further provide a detailed analysis of its strengths, limitations, and behaviors. To facilitate future research on memory foundation models, we release our project and model checkpoints.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Metis integra memoria nativa en modelos de IA, permitiendo un aprendizaje y uso de información más eficiente y autónomo.",
+        "problema": "La memoria en los agentes de IA se implementa principalmente con módulos externos, sin explorar el potencial de la memoria nativa dentro de los propios modelos fundacionales.",
+        "propuesta": "Presenta Metis, un modelo fundacional con memoria nativa. Su arquitectura comprime información histórica en un estado de memoria interno, accesible mediante 'memory attention', y aprende procedimientos para almacenar y utilizar información de forma autónoma durante el entrenamiento.",
+        "resultados": "Metis demuestra capacidades de memoria nativa. El mantenimiento de memoria es 'gradient-free' y la actualización requiere solo un pase hacia adelante. Los pesos del modelo se mantienen congelados en inferencia, transformando los estados de memoria mediante cómputo estándar.",
+        "por_que_importa": "Permite a los agentes de IA gestionar y utilizar información de manera más eficiente, abriendo la puerta a sistemas más capaces y autónomos con una arquitectura y optimización mejoradas.",
+        "tags": [
+          "IA",
+          "Modelos Fundacionales",
+          "Memoria Nativa",
+          "Agentes de IA",
+          "Optimización"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-31T14:57:00Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.28022",
+      "rank": 6,
+      "title": "Flux-OPD: On-Policy Distillation with Evolving Contexts",
+      "authors": [
+        "Yuran Wang",
+        "Zekun Wang",
+        "Bohan Zeng",
+        "Ruixu Zhang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-30",
+      "url": "https://arxiv.org/abs/2607.28022",
+      "pdf_url": "https://arxiv.org/pdf/2607.28022",
+      "score": 59,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Large language model training in open-ended domains lacks verifiable rewards, making task preferences difficult to formalize as effective supervision. Contexts can convey such preferences, yet provide little additional supervision once distilled into the student, motivating contexts that evolve with student performance. However, directly using evolving contexts as in-training supervision results in an unstable distillation target and conflicting distributions, requiring mechanisms to stabilize target and downweight conflicts. In this paper, we analyze the effect of contexts through a decomposition of the reverse KL objective, revealing two findings: the student is distilled toward the geometric mean of context-conditioned teachers, and the objective contains a conflict term that measures conflicts among these teachers. Based on this decomposition, we propose Flux-OPD, an OPD paradigm that uses evolving contexts as in-training supervision to capture task preferences in open-ended domains. Flux-OPD treats the differences between context-conditioned and context-free teachers as contextual difference signals, injects them as contextual corrections into the context-free teacher anchor, and weights their correction strength using the conflict term as an indicator. Experiments on open-ended tasks show that Flux-OPD outperforms existing OPD paradigms, highlighting the potential to combine teacher supervision with evolving contexts.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Entrenamos modelos de lenguaje para tareas abiertas y complejas usando un método que adapta la supervisión a medida que el modelo aprende.",
+        "problema": "El entrenamiento de modelos de lenguaje en dominios abiertos carece de recompensas verificables, dificultando la formalización de preferencias de tarea como supervisión efectiva. Los contextos pueden expresar estas preferencias, pero ofrecen poca supervisión adicional una vez destilados al modelo estudiante.",
+        "propuesta": "Proponemos Flux-OPD, un paradigma de destilación on-policy (OPD) que utiliza contextos que evolucionan con el rendimiento del estudiante. Se analizó el efecto de los contextos, descomponiendo el objetivo KL inverso para revelar que el estudiante se destila hacia la media geométrica de los profesores condicionados al contexto y que existe un término de conflicto. Flux-OPD trata las diferencias entre profesores condicionados y no condicionados como señales de diferencia contextual, las inyecta como correcciones contextuales al ancla del profesor no condicionado, y pondera su fuerza de corrección usando el término de conflicto.",
+        "resultados": "Los experimentos en tareas abiertas muestran que Flux-OPD supera a los paradigmas OPD existentes.",
+        "por_que_importa": "Permite capturar preferencias de tarea en dominios abiertos de manera más efectiva, mejorando el rendimiento de los modelos de lenguaje en aplicaciones complejas y no estructuradas.",
+        "tags": [
+          "destilación de conocimiento",
+          "modelos de lenguaje",
+          "aprendizaje por refuerzo",
+          "supervisión adaptativa",
+          "ciberseguridad",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-31T14:57:11Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.27703",
+      "rank": 7,
+      "title": "SpatialCLI: Learning to Reason With Spatial Tools, Then Without Them",
+      "authors": [
+        "Yang Zhou",
+        "Zixuan Huang",
+        "Sunzhu Li",
+        "Zhuo Yang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-30",
+      "url": "https://arxiv.org/abs/2607.27703",
+      "pdf_url": "https://arxiv.org/pdf/2607.27703",
+      "score": 59,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "Vision-language models (VLMs) are increasingly used in embodied agents to interpret visual inputs, reason about spatial relationships, and make task-level decisions based on that reasoning. However, a fundamental capability mismatch remains: general VLMs can reason about the overall task but often miss the visual details that determine success, while specialist vision models can capture those details but cannot translate them into task-level decisions. In this work, we propose SpatialCLI, a framework that teaches VLMs to reason with spatial tools and progressively internalize the specialist perceptual capabilities they provide. SpatialCLI proceeds in three stages: (1) Call exposes specialist vision models as spatial tools to augment the VLM's perception; (2) Learn uses Cold-Start SFT and agentic RL to improve tool use; and (3) Internalize verbalizes successful tool-use trajectories to internalize specialist perceptual capabilities. We further introduce SpatialCLI-Bench, a 516-example benchmark for compositional perception across localization, segmentation, depth, and pose. On MindCube, SpatialCLI raises Qwen3-VL-8B-Instruct from 29.3% to 84.6% with tools, surpassing GPT-5.6 Sol with tools (72.1%), while retaining 73.8% without tools after internalization.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "SpatialCLI entrena modelos de lenguaje visual para razonar con y sin herramientas espaciales, mejorando drásticamente la comprensión de detalles visuales.",
+        "problema": "Los modelos de lenguaje visual (VLMs) actuales fallan al integrar la comprensión general de tareas con los detalles visuales finos necesarios para el éxito, y los modelos especializados no pueden tomar decisiones a nivel de tarea.",
+        "propuesta": "SpatialCLI es un framework que enseña a los VLMs a usar modelos de visión especializados como 'herramientas' para mejorar la percepción, y luego a internalizar esas capacidades para operar de forma autónoma.",
+        "resultados": "En MindCube, SpatialCLI mejoró Qwen3-VL-8B-Instruct del 29.3% al 84.6% con herramientas, superando a GPT-5.6 Sol (72.1%). Después de la internalización, el modelo retuvo un 73.8% de rendimiento sin herramientas.",
+        "por_que_importa": "Permite a los agentes basados en IA comprender y actuar sobre detalles visuales críticos, superando las limitaciones actuales y abriendo la puerta a aplicaciones más robustas y autónomas en el mundo real.",
+        "tags": [
+          "IA",
+          "Visión por Computadora",
+          "Agentes Autónomos",
+          "Modelos de Lenguaje Visual",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-31T14:57:38Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.27816",
+      "rank": 8,
+      "title": "Beyond Borrowed Histories: Person-Aligned User Simulation for Interactive Role-Playing Evaluation",
+      "authors": [
+        "Yuhang Zhu",
+        "Mingxuan Du",
+        "Benfeng Xu",
+        "Jie Gao"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-30",
+      "url": "https://arxiv.org/abs/2607.27816",
+      "pdf_url": "https://arxiv.org/pdf/2607.27816",
+      "score": 57,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Role-playing agents (RPAs) have become one of the most important consumer applications of large language models. Users engage in multi-turn conversations with RPAs for experiences such as emotional comfort, making reliable evaluation essential for measuring capability, comparing systems, and guiding further improvement. Existing benchmarks, however, typically require an RPA to continue a fixed dialogue history and then evaluate the continuation using a fixed rubric detached from the user. We identify and empirically demonstrate two limitations of this design. First, an RPA's output is shaped by the preceding dialogue history, preventing a scientifically grounded assessment of its role-playing ability in real multi-turn settings. Second, user experience varies substantially across individuals, and conventional fixed rubrics need not align with user satisfaction. We therefore introduce PALATE (Person-Aligned LLM-Simulated-User Assessment with Tailored Evaluation), a scalable RPA benchmark built on user simulators. PALATE is accompanied by a pool of 300 character profiles. Its main evaluation trains five per-user simulators and lets them engage candidate RPAs in free-form, multi-turn conversations over a pre-frozen panel of character profiles. Alongside a general quality rubric, we construct personalized rubrics to measure user satisfaction; on held-out annotated data, the personalized rubrics show higher agreement with human judgments than the general rubric. In the main evaluation of 16 candidates, PALATE separately characterizes generic turn quality, long-horizon session capability, and per-user experience on multi-turn trajectories co-constructed by each candidate. It thereby produces interpretable evaluations of specific user-RPA pairs rather than compressing systems into a single user-independent ranking.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Simuladores de usuarios personalizados evalúan agentes de rol de IA, superando las limitaciones de los métodos de evaluación fijos.",
+        "problema": "La evaluación de agentes de rol de IA (RPAs) es crucial pero los métodos actuales usan historias de diálogo fijas y rúbricas genéricas, sin considerar la variabilidad individual del usuario ni la capacidad real del RPA en conversaciones multi-turno.",
+        "propuesta": "Se introduce PALATE, un benchmark para RPAs que utiliza simuladores de usuarios adaptados a perfiles de personajes (300 disponibles). Estos simuladores interactúan en conversaciones libres con los RPAs y se evalúan con rúbricas personalizadas que miden la satisfacción del usuario, además de una rúbrica general.",
+        "resultados": "Las rúbricas personalizadas mostraron mayor acuerdo con juicios humanos que las rúbricas generales en datos anotados. La evaluación principal con 16 candidatos caracterizó la calidad genérica, la capacidad a largo plazo y la experiencia por usuario.",
+        "por_que_importa": "Permite una evaluación más precisa y útil de los RPAs, alineada con la experiencia real del usuario y guiando mejor su desarrollo, al considerar la individualidad y la dinámica conversacional.",
+        "tags": [
+          "IA conversacional",
+          "Evaluación de modelos",
+          "Agentes de rol",
+          "Simulación de usuarios",
+          "Personalización"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-07-31T14:57:48Z"
+      }
+    }
+  ],
+  "generated_at": "2026-07-31T14:57:48Z"
+}
