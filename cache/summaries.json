@@ -2828,5 +2828,38 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-07-31T14:57:48Z"
+  },
+  "arxiv:2607.28478": {
+    "tldr": "Los modelos de lenguaje grandes fallan en razonamiento de sentido común al priorizar distracciones explícitas sobre el conocimiento implícito.",
+    "problema": "Los modelos de lenguaje grandes (LLMs) priorizan excesivamente las condiciones explícitas en la entrada, lo que lleva a una 'Sesgo de Salience' donde ignoran el conocimiento de sentido común implícito debido a distractores inútiles.",
+    "propuesta": "Se introduce el Benchmark SaliTrap, un dataset para evaluar este sesgo, y se demuestra que el problema es la supresión del conocimiento en lugar de la ausencia, mediante la eliminación de distractores y el uso de prompts de inferencia.",
+    "resultados": "Los 12 LLMs evaluados sufren significativamente de sesgo de salience. La eliminación de distractores recupera más del 90% de los fallos de cumplimiento. Prompts ligeros en tiempo de inferencia cierran sustancialmente la brecha sin reentrenamiento.",
+    "por_que_importa": "Este hallazgo cambia el enfoque de los fallos de razonamiento de sentido común de la competencia del modelo a la forma en que se elicita el conocimiento, sugiriendo que la mejora puede lograrse mediante técnicas de prompting más eficientes.",
+    "tags": [
+      "LLMs",
+      "Sentido Común",
+      "Sesgo de Salience",
+      "Prompting",
+      "Evaluación de IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-03T15:23:25Z"
+  },
+  "arxiv:2607.23802": {
+    "tldr": "Transformamos tareas abiertas en juegos de deducción para que los LLMs se auto-mejoren de forma verificable, superando limitaciones actuales.",
+    "problema": "La mejora de LLMs mediante aprendizaje por refuerzo (RL) se limita a tareas verificables (matemáticas, código). Las tareas abiertas dependen de juicios humanos o de otros LLMs, introduciendo sesgos y costes. El resumen no especifica el coste exacto.",
+    "propuesta": "Proponemos Reinforcement Learning with Self-Verifiable Rewards (RLSVR), un método que transforma tareas abiertas en entornos de juego proxy verificables. Usamos SpyRL, inspirado en '¿Quién es el espía?', donde los agentes votan para identificar a un espía predeterminado, generando recompensas verificables a partir de los resultados de votación.",
+    "resultados": "SpyRL supera a otros métodos de auto-mejora en tareas no verificables y mejora el rendimiento en tareas verificables. Los resultados específicos en métricas de rendimiento no se detallan en el resumen.",
+    "por_que_importa": "Permite aplicar el aprendizaje por refuerzo escalable a la auto-mejora de LLMs en una gama mucho más amplia de tareas, incluyendo aquellas sin una respuesta objetivamente correcta, reduciendo la dependencia de evaluadores externos y sus sesgos.",
+    "tags": [
+      "LLMs",
+      "Aprendizaje por Refuerzo",
+      "Ciberseguridad",
+      "IA",
+      "Auto-mejora",
+      "Procesamiento de Lenguaje Natural"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-03T15:23:36Z"
   }
 }

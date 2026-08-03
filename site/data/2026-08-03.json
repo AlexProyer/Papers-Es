@@ -1,0 +1,101 @@
+{
+  "date": "2026-08-03",
+  "report_type": "filtrado",
+  "evaluated": 25,
+  "selected": 2,
+  "papers": [
+    {
+      "id": "arxiv:2607.28478",
+      "rank": 1,
+      "title": "Would You Walk to the Car Wash? Revealing the Salience Bias of Large Language Models in Commonsense Reasoning",
+      "authors": [
+        "Zheng Wu",
+        "Chenhao Xue",
+        "Shijie Zheng",
+        "Yijie Lu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-30",
+      "url": "https://arxiv.org/abs/2607.28478",
+      "pdf_url": "https://arxiv.org/pdf/2607.28478",
+      "score": 57,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: vuln & threats, LLM, compliance & audit"
+      ],
+      "abstract_en": "As large language models (LLMs) continue to advance in complex reasoning tasks, they have learned to heavily prioritize explicit conditions provided in the input. However, in everyday commonsense reasoning, this mechanism exposes a critical vulnerability which we term Salience Bias: models become easily hijacked by useless explicit distractors (e.g., numerical values), leading them to ignore the implicit physical or commonsense prerequisites of a task. A critical open question is whether this failure reflects a genuine gap in commonsense knowledge or merely its suppression under misleading task framing. To investigate this, we construct the SaliTrap Benchmark, a high-quality dataset across four trap dimensions. Evaluating 12 state-of-the-art LLMs, we find that all mainstream models suffer significantly from salience bias, with severity scaling with distractor density and detecting the trap often decoupled from actually avoiding it. Crucially, by re-eliciting the same models with the task framing stripped away, we show that this is overwhelmingly a failure of \\textbf{knowledge suppression rather than knowledge absence}: a context-free knowledge probe alone recovers over 90\\% of sycophantic-compliance failures, revealing that the requisite commonsense is intrinsically present but actively crowded out by salient distractors that lure the model into over-compliant, unnecessary computation. Building on this diagnosis, we further show that lightweight, inference-time prompting alone substantially closes the gap without any retraining. Our findings relocate the bottleneck of commonsense reasoning failures from model competence to elicitation, and we release SaliTrap as a testbed for this blind spot. The codes are available at https://github.com/Wuzheng02/SaliTrap.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los modelos de lenguaje grandes fallan en razonamiento de sentido común al priorizar distracciones explícitas sobre el conocimiento implícito.",
+        "problema": "Los modelos de lenguaje grandes (LLMs) priorizan excesivamente las condiciones explícitas en la entrada, lo que lleva a una 'Sesgo de Salience' donde ignoran el conocimiento de sentido común implícito debido a distractores inútiles.",
+        "propuesta": "Se introduce el Benchmark SaliTrap, un dataset para evaluar este sesgo, y se demuestra que el problema es la supresión del conocimiento en lugar de la ausencia, mediante la eliminación de distractores y el uso de prompts de inferencia.",
+        "resultados": "Los 12 LLMs evaluados sufren significativamente de sesgo de salience. La eliminación de distractores recupera más del 90% de los fallos de cumplimiento. Prompts ligeros en tiempo de inferencia cierran sustancialmente la brecha sin reentrenamiento.",
+        "por_que_importa": "Este hallazgo cambia el enfoque de los fallos de razonamiento de sentido común de la competencia del modelo a la forma en que se elicita el conocimiento, sugiriendo que la mejora puede lograrse mediante técnicas de prompting más eficientes.",
+        "tags": [
+          "LLMs",
+          "Sentido Común",
+          "Sesgo de Salience",
+          "Prompting",
+          "Evaluación de IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-03T15:23:25Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.23802",
+      "rank": 2,
+      "title": "From RLVR to RLSVR: Task Transformation Induces Self-Verifiable Rewards for Open-Ended LLM Self-Improvement",
+      "authors": [
+        "Qinsi Wang",
+        "Jing Shi",
+        "Huazheng Wang",
+        "Kun Wan"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-26",
+      "url": "https://arxiv.org/abs/2607.23802",
+      "pdf_url": "https://arxiv.org/pdf/2607.23802",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Reinforcement Learning with Verifiable Rewards (RLVR) has driven recent progress in reasoning-oriented large language models (LLMs) by enabling large-scale optimization. However, its applicability remains largely limited to domains such as mathematics and coding, where correctness can be deterministically verifiable. Open-ended tasks instead often rely on human preferences, reward models, or LLM-based judges, introducing evaluation bias, judge capability bottlenecks, and additional inference costs. Drawing on the principle of self-supervised learning, which constructs pretext tasks to derive supervision from the data itself, we propose Reinforcement Learning with Self-Verifiable Rewards (RLSVR), a task-transformation-based training paradigm for extending RLVR to open-ended tasks. RLSVR transforms open-ended tasks into verifiable proxy environments whose internal rules and interaction outcomes automatically generate reward signals. We instantiate RLSVR with SpyRL, a Self-PlaY Reinforcement Learning method inspired by social deduction game Who Is the Spy?. Agents receive asymmetric information, complete the same target task, and vote to identify a designated spy. Because the spy identity is predetermined, voting outcomes provide fully verifiable rewards, while successful identification remains closely related to output quality. Experiments on text summarization, creative writing, and mathematical reasoning show that SpyRL outperforms existing self-improvement methods on non-verifiable tasks and yields consistent gains on verifiable reasoning tasks. These results demonstrate that task transformation can extend scalable RLVR-based self-improvement beyond inherently verifiable domains. Models and code have been released at https://github.com/wangqinsi1/RLSVR/tree/SpyRL.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Transformamos tareas abiertas en juegos de deducción para que los LLMs se auto-mejoren de forma verificable, superando limitaciones actuales.",
+        "problema": "La mejora de LLMs mediante aprendizaje por refuerzo (RL) se limita a tareas verificables (matemáticas, código). Las tareas abiertas dependen de juicios humanos o de otros LLMs, introduciendo sesgos y costes. El resumen no especifica el coste exacto.",
+        "propuesta": "Proponemos Reinforcement Learning with Self-Verifiable Rewards (RLSVR), un método que transforma tareas abiertas en entornos de juego proxy verificables. Usamos SpyRL, inspirado en '¿Quién es el espía?', donde los agentes votan para identificar a un espía predeterminado, generando recompensas verificables a partir de los resultados de votación.",
+        "resultados": "SpyRL supera a otros métodos de auto-mejora en tareas no verificables y mejora el rendimiento en tareas verificables. Los resultados específicos en métricas de rendimiento no se detallan en el resumen.",
+        "por_que_importa": "Permite aplicar el aprendizaje por refuerzo escalable a la auto-mejora de LLMs en una gama mucho más amplia de tareas, incluyendo aquellas sin una respuesta objetivamente correcta, reduciendo la dependencia de evaluadores externos y sus sesgos.",
+        "tags": [
+          "LLMs",
+          "Aprendizaje por Refuerzo",
+          "Ciberseguridad",
+          "IA",
+          "Auto-mejora",
+          "Procesamiento de Lenguaje Natural"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-03T15:23:36Z"
+      }
+    }
+  ],
+  "generated_at": "2026-08-03T15:23:36Z"
+}
