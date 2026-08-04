@@ -1,0 +1,603 @@
+{
+  "date": "2026-08-04",
+  "report_type": "filtrado",
+  "evaluated": 182,
+  "selected": 14,
+  "papers": [
+    {
+      "id": "arxiv:2608.01558v1",
+      "rank": 1,
+      "title": "Securing Agentic AI: From Per-Action Checks to Trajectory Assurance",
+      "authors": [
+        "Alireza Lotfi",
+        "Subangkar Karmaker Shanto",
+        "Imtiaz Karim",
+        "Elisa Bertino"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-03",
+      "url": "https://arxiv.org/abs/2608.01558v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.01558v1",
+      "score": 59,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, AI agents, compliance & audit"
+      ],
+      "abstract_en": "Autonomous agents are increasingly used to execute consequential tasks in environments governed by operational constraints, organizational policies, regulatory requirements, and technical standards. Their safety is therefore determined not by the correctness of individual actions, but by whether their overall behavior remains consistent with the rules and invariants of the systems in which they operate. As large language model (LLM)-based agents become more autonomous and increasingly delegate tasks across organizational boundaries, securing them evolves from a single challenge into a broad and interconnected landscape spanning the entire agentic stack. At the single-agent level, untrusted inputs through prompts, memory, retrieved knowledge, and tool interfaces create attack surfaces. In multi-agent settings, delegation and communication introduce challenges related to identity, trust, capability control, and decision transparency, while the underlying model routing and execution control plane remains vulnerable to manipulation and to unverified model provenance. Perhaps the most fundamental challenge is behavioral containment: sequences of individually permissible actions may collectively violate system-level constraints and safety invariants. At the broader level, supply-chain integrity, provenance, accountability, and end-to-end observability remain largely open problems. A common principle unifies these directions: security must become a verifiable property of the architectures, protocols, and runtimes that govern agent behavior, rather than an optional layer of guidance. Charting these challenges provides a roadmap toward trustworthy autonomous agent deployment.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Asegurar agentes de IA autónomos requiere ir más allá de la verificación de acciones individuales para garantizar la seguridad de toda su trayectoria.",
+        "problema": "Los agentes de IA autónomos, al ejecutar tareas complejas y delegar responsabilidades, presentan vulnerabilidades en cada punto de interacción (prompts, memoria, herramientas) y en la comunicación entre agentes, lo que puede llevar a secuencias de acciones individualmente permitidas que violan restricciones generales del sistema.",
+        "propuesta": "Abordar la seguridad de los agentes de IA de manera integral, considerando la verificación de acciones individuales y, crucialmente, la garantía de la seguridad de toda la trayectoria de comportamiento del agente. Se propone que la seguridad sea una propiedad verificable de la arquitectura, protocolos y entornos de ejecución.",
+        "resultados": "El resumen no especifica resultados numéricos, pero identifica la seguridad de la trayectoria como un desafío fundamental y propone un marco para la implementación confiable de agentes autónomos.",
+        "por_que_importa": "Garantizar la seguridad y confiabilidad de los agentes de IA es crucial para su adopción en tareas críticas, asegurando que su comportamiento general se alinee con las políticas y regulaciones, y previniendo fallos catastróficos.",
+        "tags": [
+          "IA autónoma",
+          "Ciberseguridad",
+          "Seguridad de agentes",
+          "LLM",
+          "Confiabilidad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-04T14:58:03Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.01759v1",
+      "rank": 2,
+      "title": "Benign Alone, Harmful Together: Exploiting Experience Composition in Self-Evolving LLM Agents",
+      "authors": [
+        "Bingyu Yan",
+        "Xiaoming Zhang",
+        "Chaozhuo Li",
+        "Ziyi Zhou"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-03",
+      "url": "https://arxiv.org/abs/2608.01759v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.01759v1",
+      "score": 58,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Self-evolving large language model agents improve their capabilities by distilling interaction trajectories into persistent experiences. Yet this mechanism introduces a new safety risk: experiences that are benign in isolation may jointly weaken an agent's safety boundary when accumulated and reused across sessions. Existing memory attacks typically require direct memory access or induce explicitly malicious records, limiting their stealthiness and applicability. We propose EvoBreak, an experience-conditioned sequential attack that operates through individually benign attack-stage tasks and induced experiences. EvoBreak repeatedly observes the experiences distilled by the victim, identifies uncovered target-relevant requirements, and adaptively acquires complementary experiences before reformulating the final query to activate them jointly. To support training, we introduce BreakGym, a structure-first synthesis pipeline that generates decomposable safety-sensitive targets with diverse dependency structures. EvoBreak is optimized using rejection-sampling supervised fine-tuning and Hint-guided GRPO. Experiments across self-evolving frameworks, victim backbones, pre-evolution domains, and safety benchmarks demonstrate that EvoBreak consistently outperforms existing attacks while maintaining high benignness. These results reveal benign experience composition as a persistent attack surface in self-evolving agents.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Atacamos agentes LLM de autoevolución explotando cómo experiencias benignas individuales se vuelven peligrosas juntas.",
+        "problema": "Los agentes LLM que aprenden de experiencias pasadas pueden volverse inseguros cuando experiencias inofensivas por sí solas se combinan y debilitan sus barreras de seguridad.",
+        "propuesta": "Proponemos EvoBreak, un ataque que identifica requisitos de seguridad no cubiertos, adquiere experiencias complementarias y las activa conjuntamente para explotar esta debilidad.",
+        "resultados": "EvoBreak supera consistentemente a los ataques existentes en diversos marcos y puntos de referencia de seguridad, manteniendo una alta benignidad.",
+        "por_que_importa": "Revela una nueva superficie de ataque en agentes de autoevolución, crucial para desarrollar defensas más robustas y seguras en sistemas de IA.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Agentes Autónomos",
+          "Seguridad IA",
+          "Ataques de Memoria"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-04T14:58:31Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.02407v1",
+      "rank": 3,
+      "title": "Antares: Foundation Models for Agentic Vulnerability Localization",
+      "authors": [
+        "Supriti Vijay",
+        "Aman Priyanshu",
+        "Didier Chapoteau",
+        "Arthur Goldblatt"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-03",
+      "url": "https://arxiv.org/abs/2608.02407v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.02407v1",
+      "score": 55,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: cybersecurity, vuln & threats, LLM"
+      ],
+      "abstract_en": "Vulnerability localization is a fundamental step in software security, requiring models to reason over large codebases and iteratively identify vulnerable implementations. We present Antares, a family of compact language models (350M, 1B, and 3B parameters) for agentic vulnerability localization. Based on IBM Granite base models, Antares is trained through a two-stage pipeline that combines supervised fine-tuning on cybersecurity reasoning and repository exploration data with reinforcement learning from verifiable rewards over vulnerable repositories. Across extensive evaluations, Antares-3B approaches GPT-5.5 while outperforming open-weight models over 200x larger in size. The Antares family further enables fast, low-cost local inference, completing a full 500-task evaluation sweep in approximately 15 minutes on a single H100 GPU, corresponding to an amortized evaluation time of under 2 seconds and less than $0.002 per task.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Antares: Modelos de lenguaje compactos y eficientes para localizar vulnerabilidades en código de forma automática.",
+        "problema": "La localización de vulnerabilidades en software es un proceso complejo que requiere el análisis de grandes bases de código y la identificación iterativa de implementaciones defectuosas.",
+        "propuesta": "Se presenta Antares, una familia de modelos de lenguaje (350M, 1B, 3B parámetros) entrenados con un enfoque de dos etapas: ajuste supervisado en razonamiento de ciberseguridad y exploración de repositorios, seguido de aprendizaje por refuerzo con recompensas verificables.",
+        "resultados": "Antares-3B se acerca al rendimiento de GPT-5.5 y supera a modelos de código abierto 200 veces más grandes. La familia Antares permite inferencia local rápida y de bajo costo, completando 500 tareas en ~15 minutos en una sola GPU H100 (menos de 2 segundos por tarea y <$0.002 por tarea).",
+        "por_que_importa": "Ofrece una solución eficiente y económica para la detección automática de fallos de seguridad en el código, democratizando el acceso a herramientas de ciberseguridad avanzadas mediante inferencia local y de bajo costo.",
+        "tags": [
+          "ciberseguridad",
+          "IA",
+          "modelos de lenguaje",
+          "localización de vulnerabilidades",
+          "software seguro"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-04T14:58:42Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.02569v1",
+      "rank": 4,
+      "title": "AtumAI: A Principled Framework for Agentic Generation of Datacenter Control-Plane Policies",
+      "authors": [
+        "Qiushi Lin",
+        "Chaojie Zhang",
+        "Íñigo Goiri",
+        "Aditya Akella"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-08-03",
+      "url": "https://arxiv.org/abs/2608.02569v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.02569v1",
+      "score": 55,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "The efficiency of a datacenter rests on its control plane policies. Designing these policies is increasingly hard: the hardware-software stack grows fast, the design space is vast and interdependent, and prototyping a single policy takes months. Agentic AI promises to automate this search. Off the shelf, however, it falls short on three fronts. It is not formal: with no structured, searchable statement of the problem, the search has little structure to exploit and hard constraints are not guaranteed. It is not transferable: each task is solved from scratch, so nothing learned on one task carries to the next. Finally, it is not systematic: relying on the LLM as the sole source of candidates, it explores a narrow slice of the design space and settles into local optima. We introduce AtumAI, a framework that generates datacenter control-plane policies with agentic AI, making the process formal, transferable, and systematic. From a goal stated in plain language, AtumAI autonomously proposes, tests, and refines candidate policies until one satisfies the request. It does so through two components. The Datacenter Task Compiler automates problem formulation: it compiles the request into a formal, machine-checkable, and searchable specification of the task's objectives, constraints, decision variables, and evaluation methodology. The Evolutionary Design Discovery Loop then searches this specification, expanding the search beyond the LLM itself via a diffusion model, an evolutionary algorithm, and a surrogate model. Together, they reduce onboarding a new task from months of engineering to writing its description. We evaluate AtumAI on three control-plane tasks with distinct problem scopes, design spaces, and trade-offs: workload placement, resource scaling, and power management. Across all tasks, the policies generated by AtumAI consistently outperform expert-engineered baselines.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "AtumAI automatiza la creación de políticas de red para centros de datos usando IA, haciéndola formal, transferible y sistemática.",
+        "problema": "Diseñar políticas de control para centros de datos es cada vez más complejo y lento (meses por política) debido al rápido crecimiento del hardware/software y a un vasto espacio de diseño interdependiente.",
+        "propuesta": "AtumAI, un framework que utiliza IA agentica para generar políticas de control. Combina un compilador para formalizar el problema y un bucle de descubrimiento evolutivo que usa modelos de difusión y algoritmos evolutivos para explorar sistemáticamente el espacio de diseño, yendo más allá de las capacidades de un LLM.",
+        "resultados": "AtumAI reduce el tiempo de desarrollo de políticas de meses a la simple descripción del objetivo. Las políticas generadas superan consistentemente a las diseñadas por expertos en tres tareas de control distintas (colocación de cargas de trabajo, escalado de recursos, gestión de energía).",
+        "por_que_importa": "Permite a los profesionales de centros de datos diseñar y desplegar políticas de control de manera mucho más rápida y eficiente, mejorando el rendimiento y reduciendo costos al automatizar un proceso actualmente muy laborioso.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Redes",
+          "Automatización",
+          "Centros de Datos",
+          "Políticas de Red"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-04T14:58:51Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.01639v1",
+      "rank": 5,
+      "title": "Mutate to Bypass: Autonomous Endpoint Evasion via Knowledge-Driven Multi-Agent Orchestration",
+      "authors": [
+        "Weifeng Yuan",
+        "Wenbo Guo",
+        "Qingyun Du",
+        "Jun Chen"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-03",
+      "url": "https://arxiv.org/abs/2608.01639v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.01639v1",
+      "score": 52,
+      "topics": [
+        "cybersecurity",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: cybersecurity, AI agents"
+      ],
+      "abstract_en": "Public reports and open-source resources expose many EDR evasion techniques, but it remains unclear whether commercial Endpoint Detection and Response (EDR) systems can withstand these documented attacks. Evaluating them requires turning fragmented security knowledge into working payloads and refining those payloads from opaque alerts, tasks that existing automation does not address. We present AutoBypass, a knowledge-grounded, closed-loop multi-agent framework for automated EDR resilience assessment. A Detection-Aware Knowledge Base structures threat intelligence, expert analyses, and open-source proofs of concept into evasion techniques and operational constraints. Agents use this knowledge to plan attacks, generate polymorphic code, and compile binaries, while a telemetry-driven reasoning engine diagnoses failures and feeds corrective evidence back into the strategy. Across seven commercial endpoint security platforms, AutoBypass bypassed every target, reaching 90% evasion against Windows Defender and 86.7% against Trend Micro AV. Ablations show that the knowledge base raises the success rates of 8B open-weight models from 27--53% to 43--83%, bringing them close to large proprietary models. These results demonstrate a systematic way to operationalize public security knowledge for continuous, automated assessment of EDR resilience.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "AutoBypass, un sistema autónomo multi-agente, evade defensas EDR existentes utilizando conocimiento de ciberseguridad para generar ataques.",
+        "problema": "Evaluar la resiliencia de los sistemas EDR contra técnicas de evasión conocidas es difícil porque requiere convertir conocimiento fragmentado en ataques funcionales y refinar estos ataques a partir de alertas, tareas no abordadas por la automatización actual.",
+        "propuesta": "Se propone AutoBypass, un marco multi-agente que utiliza una base de conocimiento sobre detección de amenazas para planificar ataques, generar código polimórfico y compilar binarios, corrigiendo fallos basándose en la telemetría y el razonamiento.",
+        "resultados": "AutoBypass evadió todas las plataformas EDR comerciales evaluadas, logrando un 90% de evasión contra Windows Defender y un 86.7% contra Trend Micro AV. La base de conocimiento mejoró las tasas de éxito de modelos de 8B de 27-53% a 43-83%.",
+        "por_que_importa": "Demuestra una forma sistemática y automatizada de usar conocimiento público de seguridad para evaluar y mejorar continuamente la resistencia de las defensas de punto final contra ataques avanzados.",
+        "tags": [
+          "ciberseguridad",
+          "EDR",
+          "evasión",
+          "automatización",
+          "inteligencia artificial",
+          "defensa"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-04T14:59:02Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.02472v1",
+      "rank": 6,
+      "title": "CTRAG: An In-Context Retrieval-based Framework for Automated Compliance Checking using LLMs",
+      "authors": [
+        "Muhammad Roman",
+        "Karen Rafferty",
+        "Barry Devereux"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CL]",
+      "category": "cs.CL",
+      "date": "2026-08-03",
+      "url": "https://arxiv.org/abs/2608.02472v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.02472v1",
+      "score": 51,
+      "topics": [
+        "cybersecurity",
+        "LLM",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+1)",
+        "🎯 temas: cybersecurity, LLM, compliance & audit"
+      ],
+      "abstract_en": "Trust is fundamental in modern regulatory ecosystems, and compliance checking plays a critical role in fostering that trust. Regulatory compliance verification is essential for businesses operating in highly controlled environments, as it ensures alignment with sector-specific guidelines across domains such as financial reporting, data privacy, and cybersecurity. Manual compliance testing, however, is often time-intensive and prone to inconsistencies, particularly when compliance depends indirectly on third-party services such as cloud providers, where vendors rely on external providers to meet regulatory standards. In this paper, we present CTRAG, a novel Retrieval-Augmented Generation (RAG) pipeline designed for automated compliance checking. CTRAG employs advanced strategies, including adaptive chunking, dynamic retrieval configurations, and in-context learning, to improve the precision and relevance of compliance assessments. By extracting control questions from regulatory texts and cross-referencing them with unstructured company documentation, CTRAG achieves highly accurate, document-informed compliance verification, even in cases of indirect compliance through third-party services. Empirical evaluations demonstrate significant improvements, with CTRAG achieving an F1-score of 78% and a recall of 85% in the final deployed configuration, ensuring minimal missed non-compliance cases while reducing manual reviewer effort in a real-world deployment. To validate CTRAG value, we developed and deployed a POC within a Big Four professional services firm, applying it to real-world cases and cross-checking results against manual compliance reports. These findings highlight CTRAG potential to streamline compliance workflows, mitigate risks, and enhance regulatory trust in complex, high-stakes environments.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Automatiza la verificación de cumplimiento normativo en empresas, incluso con servicios de terceros, usando LLMs y RAG.",
+        "problema": "La verificación manual de cumplimiento normativo es lenta, inconsistente y compleja, especialmente cuando depende de servicios de terceros.",
+        "propuesta": "CTRAG es un framework RAG que usa 'adaptive chunking', 'dynamic retrieval' y 'in-context learning' para extraer preguntas de control de normativas y cruzarlas con documentación de la empresa.",
+        "resultados": "CTRAG alcanza un F1-score del 78% y un recall del 85% en su configuración final, demostrando alta precisión y minimizando casos de incumplimiento omitidos.",
+        "por_que_importa": "Reduce drásticamente el esfuerzo manual en auditorías, mitiga riesgos de incumplimiento y aumenta la confianza regulatoria en entornos empresariales complejos.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Cumplimiento Normativo",
+          "LLMs",
+          "RAG",
+          "Automatización"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-04T14:59:11Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.02296v1",
+      "rank": 7,
+      "title": "TrainShield: Targeted Awareness for Cybersecurity Training",
+      "authors": [
+        "Giovanni Pizzenti",
+        "Alberto Verna",
+        "Nikhil Jha",
+        "Giuseppe Tipaldo"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-03",
+      "url": "https://arxiv.org/abs/2608.02296v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.02296v1",
+      "score": 50,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🎯 temas: cybersecurity, vuln & threats, LLM"
+      ],
+      "abstract_en": "In recent years, cybersecurity threats have increasingly exploited human behaviour rather than purely technical vulnerabilities, exposing the limits of traditional awareness programmes delivered outside real-world contexts. To bridge this gap, we introduce TrainShield, an interaction paradigm for contextual cybersecurity training that embeds adaptive learning interventions directly within user workflows. The system integrates real-time risk detection (e.g., phishing and data loss prevention) with event-triggered hypermedia overlays that dynamically connect users to context-specific learning nodes embedded within their browsing workflow to deliver personalised micro-learning content and structured feedback tailored to the user's knowledge level and current context. This approach operationalises behavioural theories by transforming security incidents into immediate learning opportunities, shifting users from automatic to reflective decision-making at critical moments. We further formalise a design model that maps detected events to adaptive training instances, combining user modelling, context extraction, and large language model (LLM)-based content generation. A preliminary study indicates that the approach is perceived as useful in increasing risk awareness and is preferred over lengthy and asynchronous traditional training formats, while also highlighting challenges in aligning generated content with user expectations. Overall, the results suggest that embedding contextual, event-driven training within everyday interactions is a promising direction for behaviour-oriented cybersecurity education.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "TrainShield integra formación de ciberseguridad en tu flujo de trabajo, adaptándose a tus necesidades en tiempo real.",
+        "problema": "Los programas de concienciación tradicionales sobre ciberseguridad son ineficaces porque no se aplican al contexto real de los usuarios y no abordan las vulnerabilidades humanas.",
+        "propuesta": "TrainShield es un paradigma de interacción que incrusta intervenciones de aprendizaje adaptativo directamente en los flujos de trabajo de los usuarios, detectando riesgos en tiempo real (phishing, fuga de datos) y ofreciendo micro-aprendizaje personalizado y retroalimentación mediante superposiciones de hipermedia.",
+        "resultados": "Un estudio preliminar indica que el enfoque aumenta la concienciación sobre el riesgo, es preferido a los formatos tradicionales y largos, pero existen desafíos para alinear el contenido generado con las expectativas del usuario.",
+        "por_que_importa": "Permite transformar incidentes de seguridad en oportunidades de aprendizaje inmediatas, mejorando la toma de decisiones de los usuarios y haciendo la formación en ciberseguridad más efectiva y menos intrusiva.",
+        "tags": [
+          "ciberseguridad",
+          "formación adaptativa",
+          "aprendizaje contextual",
+          "seguridad humana",
+          "LLM"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-04T14:59:21Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.02464v1",
+      "rank": 8,
+      "title": "Real-Time Detection and Repair of LLM Agent Failures",
+      "authors": [
+        "Sunny Dubey"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-08-03",
+      "url": "https://arxiv.org/abs/2608.02464v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.02464v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "LLM agents fail mid-episode -- they loop, cascade tool errors, drift off goal, fabricate results, or silently absorb corrupted content -- and the standard remedy, judging every step with a second LLM, costs more than the agent itself. We ask how much detection is achievable from observable step telemetry alone, using monitors costing microseconds per step and trained only on healthy runs. On 2,823 committed agent episodes across three frameworks, three local models (qwen2.5 7b/3b, llama3.1 8b) and a commercial API (gemini-2.5-flash), a one-class echo-state-network ensemble with CUSUM alarms detects 0.71 of failures at a 5% false-alarm budget (AUROC 0.872). Its advantage over a memoryless baseline is a monotone function of post-onset horizon (+0.09 at <=3 steps, +0.40 at >=9), predicting its own failure region out of sample on AFTraj-2K. Ranking transfers with no retraining to two corpora from other groups (AFTraj-2K 0.745, ATBench 0.779). Monitors carry two burdens: a per-deployment healthy null (they do not transfer -- AUROC 0.527 cold against 0.885 recalibrated) and a residual false-alarm rate. We add a layer carrying neither: deterministic verification, which recomputes a run's stated total from the tool results it actually received and confirms every required call was made. Head-to-head it catches 60% of failures (96% with the coverage check) at 0 of 63 false positives against the monitor's 54% at 17%, transfers unchanged to llama3.1:8b (110 of 110 at 0 of 10), and trips on 0 of 1825 healthy episodes. Detection is then closed into repair: each flagged run is rolled back and re-run live, recovering 45% of failures against a 16% resampling control (p=0.0005) and lifting task success from 52% to 73% for about one extra model call per run. The system runs at ~200 microseconds per step, three orders of magnitude below a judge call. Code, traces and results are released.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Detecta y repara fallos en agentes LLM en tiempo real con monitores eficientes, mejorando drásticamente el éxito de las tareas.",
+        "problema": "Los agentes LLM fallan frecuentemente durante su ejecución (bucles, errores en cascada, alucinaciones) y las soluciones actuales, como la supervisión paso a paso por otro LLM, son demasiado costosas.",
+        "propuesta": "Se propone un sistema de detección y reparación en tiempo real. Utiliza monitores eficientes (echo-state-network ensemble con CUSUM) entrenados solo con ejecuciones correctas para detectar fallos basándose en telemetría observable. Añade una capa de verificación determinista para confirmar la integridad de los cálculos y llamadas. Los fallos detectados se reparan mediante reejecución.",
+        "resultados": "El sistema detecta el 71% de los fallos con un 5% de falsas alarmas (AUROC 0.872). La verificación determinista atrapa el 60% de los fallos (96% con chequeo de cobertura) sin falsas alarmas. La reejecución recupera el 45% de los fallos, elevando el éxito de la tarea del 52% al 73% con un coste mínimo (~1 llamada extra por ejecución). El sistema opera a ~200 microsegundos por paso.",
+        "por_que_importa": "Reduce significativamente el coste y aumenta la fiabilidad de los agentes LLM en producción, haciéndolos más prácticos y efectivos para aplicaciones críticas al minimizar fallos y recuperarlos de forma eficiente.",
+        "tags": [
+          "agentes LLM",
+          "detección de fallos",
+          "reparación automática",
+          "ciberseguridad",
+          "eficiencia",
+          "IA en producción"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-04T14:59:31Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.01964",
+      "rank": 1,
+      "title": "LongHorizon-Harness: Advancing Long-Horizon Agents for Real-World Tasks",
+      "authors": [
+        "Ziyu Ma",
+        "Hailang Huang",
+        "Shun Zou",
+        "Yong Wang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-03",
+      "url": "https://arxiv.org/abs/2608.01964",
+      "pdf_url": "https://arxiv.org/pdf/2608.01964",
+      "score": 72,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Large language model (LLM) agents increasingly undertake long-horizon tasks that require sustained reasoning, tool use, and revision across many interdependent steps. However, existing agent harnesses maintain task execution, task state, and completion assessment within a growing context, making the state difficult to track and allowing incorrect self-assessments to propagate into later decisions. We reformulate long-horizon execution as a task-state management problem and propose LongHorizon-Harness, which maintains the task state explicitly outside execution and updates it only with facts independently verified from the environment. Its Manage-Execute-Audit(MEA) loop uses a manager to maintain the task state and determine the next subtask, a fresh-context executor to perform it, and a read-only auditor to verify the resulting environment state before the next round. A lightweight AgentAdapter supports interchangeable model and harness backends without modifying their native agent loops. LongHorizon-Harness improves Qwen~3.7-Plus from 51.8% to 80.7% on WeaveBench, from 69.7% to 77.2% on Terminal-Bench~2.1, and from 2.8% to 8.3% on OSWorld~2.0. It also raises Claude Opus~4.7 from 20.0% to 34.3% on an OSWorld2.0 subset, demonstrating consistent gains across models, harnesses, and interaction domains.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Mejora la ejecución de tareas complejas y de larga duración de los agentes LLM mediante una gestión de estado explícita y auditorías.",
+        "problema": "Los agentes LLM actuales fallan en tareas de larga duración porque la gestión del estado dentro de un contexto creciente dificulta el seguimiento y permite la propagación de autoevaluaciones incorrectas.",
+        "propuesta": "Se propone LongHorizon-Harness, que gestiona explícitamente el estado de la tarea fuera de la ejecución, actualizándolo solo con hechos verificados independientemente, mediante un bucle Manage-Execute-Audit (MEA).",
+        "resultados": "Mejora Qwen~3.7-Plus del 51.8% al 80.7% en WeaveBench, del 69.7% al 77.2% en Terminal-Bench~2.1, y del 2.8% al 8.3% en OSWorld~2.0. Mejora Claude Opus~4.7 del 20.0% al 34.3% en un subconjunto de OSWorld2.0.",
+        "por_que_importa": "Permite a los agentes LLM abordar tareas del mundo real más complejas y fiables, mejorando significativamente su rendimiento y reduciendo errores acumulativos.",
+        "tags": [
+          "agentes LLM",
+          "gestión de estado",
+          "razonamiento de larga duración",
+          "ciberseguridad",
+          "auditoría"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-04T14:59:41Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.02315",
+      "rank": 2,
+      "title": "GEOID-Flood: A Large-Scale Multi-Modal Benchmark Dataset for Flood Segmentation",
+      "authors": [
+        "Gaetano Chiriaco",
+        "Luca Barco",
+        "Andrea Bragagnolo",
+        "Claudio Rossi"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-03",
+      "url": "https://arxiv.org/abs/2608.02315",
+      "pdf_url": "https://arxiv.org/pdf/2608.02315",
+      "score": 63,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Geospatial foundation models aim to learn representations that transfer across regions and sensors, yet evaluating them on specific tasks requires large, high-quality, multi-modal benchmarks that measure how well such models extract value from data. Concerning flood mapping, existing datasets rarely combine bi-temporal SAR and co-registered optical imagery at scale, leaving the value of foundation models for this downstream task largely untested. We introduce GEOID-Flood, a large-scale multi-modal flood segmentation benchmark, derived from Copernicus Emergency Management Service activations, spanning 219 events across 65 countries over ten years. The dataset provides more than 14,000 tiles with co-registered pre- and post-event Sentinel-1, in GRD and RTC format, pre-event Sentinel-2 composite, and DEM, including manually validated labels that separate background from permanent water and flooded water. Using this benchmark, we evaluate foundation models against conventional encoders across single-image, multi-temporal, and multi-modal protocols. We report three main findings: foundation models offer a consistent but modest advantage; optical-SAR fusion with finetuning best resolves transient flooding; and models trained on GEOID-Flood transfer to unseen events better than those trained on existing datasets. Dataset and code available at https://github.com/links-ads/geoid-flood.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Presentamos GEOID-Flood, un conjunto de datos multimodales a gran escala para evaluar modelos de IA en la detección de inundaciones.",
+        "problema": "La evaluación de modelos de IA geoespaciales para mapeo de inundaciones se ve limitada por la falta de benchmarks multimodales a gran escala que combinen imágenes SAR y ópticas.",
+        "propuesta": "Se introduce GEOID-Flood, un dataset con más de 14,000 tiles que incluyen imágenes SAR y ópticas multitemporales, DEM y etiquetas validadas manualmente para la segmentación de inundaciones.",
+        "resultados": "Los modelos fundacionales muestran una ventaja modesta pero consistente. La fusión óptico-SAR con ajuste fino es la mejor para detectar inundaciones transitorias. Los modelos entrenados en GEOID-Flood generalizan mejor a eventos no vistos.",
+        "por_que_importa": "Proporciona un recurso crucial para desarrollar y evaluar modelos de IA más efectivos en la monitorización y respuesta a desastres por inundaciones a nivel global.",
+        "tags": [
+          "IA geoespacial",
+          "detección de inundaciones",
+          "big data",
+          "benchmarking",
+          "SAR",
+          "imágenes ópticas"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-04T14:59:51Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.01954",
+      "rank": 3,
+      "title": "StyleForge: Indoor Furniture Styling by Counterfactual Reasoning in a Hypergraph Field",
+      "authors": [
+        "Lingwei Dang",
+        "Shishuo Shang",
+        "Pan Liu",
+        "Jiajia Cheng"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-03",
+      "url": "https://arxiv.org/abs/2608.01954",
+      "pdf_url": "https://arxiv.org/pdf/2608.01954",
+      "score": 62,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Fixed-layout indoor furniture styling requires selecting assets that form a coherent room without changing the prescribed furniture categories, positions, orientations, or scales. Existing approaches typically retrieve each asset independently or rely on static local relations, making them prone to shape, material, and color conflicts after scene composition. We introduce StyleForge, a scene-level structured selection framework built on a dynamic hypergraph style field. A frozen multimodal large language model extracts structured style priors from an open-ended style request and the fixed layout, while StyleForge maintains a learnable candidate distribution for each furniture slot. Conditioned on the target style, the dynamic hypergraph style field adaptively activates and weights layout-induced hyperedges to capture higher-order dependencies among furniture. Counterfactual style preference learning then treats each candidate as a local substitution in the current style field and evaluates its contextual compatibility using Mahalanobis energies. Training alternates between optimizing the style field and the candidate logits. At inference, the model remains frozen and test-time training updates only room-specific candidate logits, progressively correcting cross-slot style conflicts as the global scene context evolves. Experiments on 3D-FRONT demonstrate state-of-the-art furniture retrieval and scene-level style coherence, producing more coherent fixed-layout furniture arrangements than object- and scene-level retrieval baselines.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "StyleForge revoluciona la decoración de interiores generando estilos de muebles coherentes mediante razonamiento contrafactual y campos de hipergrafo dinámicos.",
+        "problema": "Los enfoques actuales para la decoración de interiores con diseño fijo seleccionan muebles de forma independiente o con relaciones estáticas, lo que genera conflictos de forma, material y color en la escena final.",
+        "propuesta": "StyleForge utiliza un campo de estilo de hipergrafo dinámico para seleccionar muebles a nivel de escena. Extrae estilos de solicitudes de texto, mantiene distribuciones de candidatos aprendibles y utiliza el razonamiento contrafactual para evaluar la compatibilidad contextual de cada mueble.",
+        "resultados": "StyleForge logra resultados de vanguardia en la recuperación de muebles y la coherencia de estilo a nivel de escena en el conjunto de datos 3D-FRONT, superando a los métodos de referencia.",
+        "por_que_importa": "Mejora significativamente la creación de escenas de interiores coherentes y estilísticamente agradables en diseños fijos, resolviendo conflictos de estilo comunes y permitiendo una personalización más efectiva.",
+        "tags": [
+          "decoración de interiores",
+          "IA generativa",
+          "ciberseguridad",
+          "procesamiento de lenguaje natural",
+          "visión por computadora",
+          "aprendizaje automático"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-04T15:00:00Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.01827",
+      "rank": 4,
+      "title": "DeepVoyager-VL: Incentivizing Vision-in-the-Loop Search for Long-Horizon Multimodal Agents",
+      "authors": [
+        "Huanyao Zhang",
+        "Jiepeng Zhou",
+        "Runhao Zhao",
+        "Yanzhe Shan"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-03",
+      "url": "https://arxiv.org/abs/2608.01827",
+      "pdf_url": "https://arxiv.org/pdf/2608.01827",
+      "score": 60,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Multimodal large language models (MLLMs) have advanced visual understanding and reasoning, yet their static parametric knowledge limits their ability to address knowledge-intensive and dynamically evolving open-world problems. To move beyond this limitation, multimodal deep search has emerged as a key direction for open-world information access, evolving from single-turn factual retrieval toward long-horizon, multi-turn search guided by visual evidence. However, existing methods typically confine vision to the input or answer stage, overlooking its role in intermediate reasoning, and lack designs tailored to long-horizon interaction. Consequently, visual evidence rarely drives continued retrieval, constraining both interaction depth and reasoning span. To address these limitations, we propose DeepVoyager-VL, a long-horizon multimodal deep-search framework for vision-in-the-loop search. Specifically, we construct a multimodal event graph to drive data synthesis, yielding problems with intermediate visual dependencies and long reasoning chains. We then design an agent framework for active visual acquisition and on-demand image loading. Finally, we fine-tune models on the synthesized data without reinforcement learning. Extensive experiments across ten multimodal search benchmarks demonstrate the effectiveness of our method.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "DeepVoyager-VL revoluciona la búsqueda multimodal en IA integrando la visión en cada paso para resolver problemas complejos de largo alcance.",
+        "problema": "Los modelos de lenguaje multimodales actuales tienen conocimiento estático y limitado para resolver problemas del mundo real que requieren razonamiento dinámico y a largo plazo, además de que la información visual no se utiliza de forma efectiva durante el proceso de razonamiento intermedio.",
+        "propuesta": "Se propone DeepVoyager-VL, un marco de búsqueda profunda multimodal que integra la visión en el bucle de razonamiento ('vision-in-the-loop'). Utiliza un grafo de eventos multimodal para generar datos sintéticos con dependencias visuales intermedias y cadenas de razonamiento largas, y un agente que adquiere información visual activamente y carga imágenes bajo demanda. Se entrena el modelo con datos sintéticos sin usar aprendizaje por refuerzo.",
+        "resultados": "El resumen no especifica resultados numéricos, pero indica que los experimentos en diez benchmarks de búsqueda multimodal demuestran la efectividad del método.",
+        "por_que_importa": "Permite a los agentes de IA abordar problemas más complejos y dinámicos del mundo real, mejorando la capacidad de razonamiento y la profundidad de la interacción al integrar la información visual de manera proactiva en todo el proceso de búsqueda y toma de decisiones.",
+        "tags": [
+          "IA multimodal",
+          "Búsqueda profunda",
+          "Razonamiento visual",
+          "Agentes activos",
+          "Procesamiento de lenguaje natural"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-04T15:00:10Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.29241",
+      "rank": 5,
+      "title": "RecHarness: A Bandit-Routed Agentic Harness for Self-Evolving Recommender Systems",
+      "authors": [
+        "Haoran Ling",
+        "Yuecheng Li",
+        "Zeyu Song",
+        "Jing Yao"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-31",
+      "url": "https://arxiv.org/abs/2607.29241",
+      "pdf_url": "https://arxiv.org/pdf/2607.29241",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Optimizing modern recommender models still depends heavily on engineers manually iterating over architectural, objective, and training-strategy changes. While LLM-based agents can automate this trial-and-error process, allowing the LLM to both select modification directions and generate concrete hypotheses often leads to unstable search under limited experiment budgets. Inspired by the above challenge, we propose RecHarness, a Bandit-Routed Agentic Harness for automated recommender model optimization. RecHarness separates the optimization process into two steps: a bandit router selects the next modification direction according to historical validation feedback, while the LLM generates a concrete optimization hypothesis and executable code edit within the selected direction. To sustain long-horizon exploration, RecHarness uses a jump-basin mechanism to activate a structural-jump arm when local edits stagnate. Across multiple recommendation tasks, datasets, and model backbones, RecHarness achieves more stable performance improvements and uses limited trial budgets more effectively than LLM-reasoning search. During a 7-day online A/B test on a large-scale short-video advertising platform, the selected candidate improves ADVV by 2.084%, Revenue by 0.534%, and Exposure by 0.559%. Code is available at https://github.com/6lyc/RecHarness.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Automatiza la optimización de sistemas de recomendación usando agentes LLM guiados por un enfoque multi-brazo para una exploración más estable y eficiente.",
+        "problema": "La optimización manual de modelos de recomendación es lenta y costosa. Los agentes LLM actuales, al explorar libremente, pueden ser inestables y poco eficientes con presupuestos limitados de experimentación.",
+        "propuesta": "RecHarness, un sistema que separa la selección de la dirección de modificación (mediante un 'bandit router') de la generación de hipótesis concretas (por el LLM). Incluye un mecanismo de 'jump-basin' para evitar estancamientos.",
+        "resultados": "Mejoras de rendimiento más estables y uso más efectivo del presupuesto. En una prueba A/B online de 7 días en una plataforma de videos cortos, se mejoró ADVV en 2.084%, Ingresos en 0.534% y Exposición en 0.559%.",
+        "por_que_importa": "Permite a los ingenieros optimizar sistemas de recomendación de forma más eficiente y robusta, reduciendo costos y mejorando métricas clave de negocio en producción.",
+        "tags": [
+          "sistemas de recomendación",
+          "optimización automatizada",
+          "agentes LLM",
+          "aprendizaje por refuerzo",
+          "ciberseguridad",
+          "ingeniería de software"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-04T15:00:20Z"
+      }
+    }
+  ],
+  "generated_at": "2026-08-04T15:00:20Z"
+}
