@@ -1,0 +1,381 @@
+{
+  "date": "2026-08-05",
+  "report_type": "filtrado",
+  "evaluated": 194,
+  "selected": 8,
+  "papers": [
+    {
+      "id": "arxiv:2608.03272v1",
+      "rank": 1,
+      "title": "Attacking and Defending Multi-Agent Collaborative Filtering Systems Through Connectivity",
+      "authors": [
+        "Anjun Hu",
+        "Hanting Xie",
+        "Saranya Govindan",
+        "Jas Kandola"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-04",
+      "url": "https://arxiv.org/abs/2608.03272v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.03272v1",
+      "score": 59,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Multi-agent collaborative filtering (CF) systems coordinate autonomous LLM-powered user and item agents through natural-language interaction to refine preferences and generate recommendations. These systems inherit vulnerabilities from both their data-driven nature and their multi-agent interactions, which manifest in distinct ways. Understanding how connectivity modulates vulnerability in these systems could facilitate the development of more robust recommendation pipelines. In this work, we adapt attacks and defenses from the general multi-agent systems (MAS) literature to the agent-based CF setting, evaluating them under systematically varied connectivity in the AgentCF framework, where CF connectivity is characterized along two axes: (i) candidate count (the number of item candidates per turn per user, measuring user-side interaction density) and (ii) catalog concentration (the degree of item catalog overlap across users). Our contributions include: (1) Adaptation: we reproduce MAS-inspired attacks and defenses in the agentic CF domain, confirming partial transferability of original observations. (2) Characterization: we characterize how the two aspects of connectivity shape attack and defense outcomes, revealing role asymmetries between user and item agents, non-monotonic temporal dynamics in attack efficacy, and divergent patterns across dissemination and extraction attack goals. Additionally, as an exploratory extension, we assess the applicability of epidemic-inspired static metrics in ranking CF configurations by expected attack outcome, potentially enabling cost-efficient robustness assessment. Implementation is available at https://github.com/anjunhu/ConnACF",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Exploramos cómo la conectividad en sistemas de recomendación multi-agente afecta su vulnerabilidad ante ataques y defensas.",
+        "problema": "Los sistemas de recomendación colaborativa multi-agente (basados en LLMs) son vulnerables tanto por su naturaleza de datos como por las interacciones entre agentes, pero se desconoce cómo la conectividad influye en estas vulnerabilidades.",
+        "propuesta": "Adaptamos ataques y defensas de sistemas multi-agente generales al dominio de recomendación colaborativa, evaluándolos bajo diferentes niveles de conectividad (número de candidatos por usuario y solapamiento del catálogo de ítems) en el framework AgentCF.",
+        "resultados": "Se confirma la transferibilidad parcial de ataques y defensas. La conectividad influye en los resultados, mostrando asimetrías entre agentes, dinámicas temporales no monótonas en la eficacia de ataques y patrones divergentes según el objetivo del ataque (diseminación vs. extracción). Se exploró el uso de métricas inspiradas en epidemias para evaluar la robustez.",
+        "por_que_importa": "Comprender cómo la conectividad afecta la vulnerabilidad permite diseñar sistemas de recomendación más robustos y seguros en entornos colaborativos con agentes autónomos.",
+        "tags": [
+          "sistemas multi-agente",
+          "recomendación colaborativa",
+          "ciberseguridad",
+          "LLMs",
+          "vulnerabilidad",
+          "conectividad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-05T14:44:11Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.03626v1",
+      "rank": 2,
+      "title": "A Security-Oriented Lifecycle Model for Large Language Model Systems",
+      "authors": [
+        "Eleftherios Batzolis",
+        "George Drosatos",
+        "Vassilis Katsouros",
+        "Konstantinos Rantos"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-04",
+      "url": "https://arxiv.org/abs/2608.03626v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.03626v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents, compliance & audit"
+      ],
+      "abstract_en": "Large language models are being integrated into critical infrastructure and enterprise workflows at unprecedented scale,yet the lifecycle frameworks governing their development and operations were designed for operational efficiency rather than security analysis. As a result, security-relevant activities such as data provenance verification, artifact signing, agentic permission control, and decommissioning are often left implicit or assumed to receive due care. Governance frameworks, in turn, organise requirements around risk levels or management processes without clearly linking them to the lifecycle stages where they apply. This paper addresses both deficiencies. We propose a lifecycle model for LLM systems that supports security analysis by structuring it around security-relevant boundaries rather than workflow optimisation. The model comprises 32 stages across four core pipeline layers (Data, Model, Distribution, Application), supported by a 12-stage LLMOps pillar and a 9-category governance pillar. Thirteen stages are introduced here as separate units because they expose distinct security concerns that existing frameworks do not clearly distinguish. A governance mapping synthesising the NIST AI RMF, the EU AI Act, and ISO/IEC 42001 reveals a structural property of the current regulatory landscape: governance evidence concentrates at deployment-facing stages, where systems are visible to regulators, while the most consequential decisions, data selection, alignment strategy, and capability boundaries, are made at development-facing stages, where regulatory visibility is lowest.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Un nuevo modelo de ciclo de vida para sistemas LLM prioriza la seguridad sobre la eficiencia operativa, abordando brechas críticas.",
+        "problema": "Los marcos de ciclo de vida actuales para LLMs se centran en la eficiencia operativa y no en el análisis de seguridad, dejando actividades críticas como la verificación de procedencia de datos o el control de permisos implícitas o desatendidas. Además, los marcos de gobernanza no vinculan claramente los requisitos a las etapas del ciclo de vida donde aplican.",
+        "propuesta": "Se propone un modelo de ciclo de vida para sistemas LLM estructurado en torno a límites relevantes para la seguridad, en lugar de la optimización del flujo de trabajo. Incluye 32 etapas en cuatro capas principales (Datos, Modelo, Distribución, Aplicación), un pilar de LLMOps de 12 etapas y un pilar de gobernanza de 9 categorías. Se introducen 13 etapas nuevas para abordar preocupaciones de seguridad específicas.",
+        "resultados": "El análisis de la gobernanza (NIST AI RMF, EU AI Act, ISO/IEC 42001) revela que la evidencia se concentra en etapas de cara al despliegue, mientras que las decisiones más importantes ocurren en etapas de cara al desarrollo con baja visibilidad regulatoria.",
+        "por_que_importa": "Este modelo mejora la seguridad de los sistemas LLM al identificar y estructurar explícitamente las actividades de seguridad en cada etapa del ciclo de vida, y al destacar la desconexión entre la toma de decisiones críticas y la supervisión regulatoria.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Ciclo de Vida",
+          "Gobernanza IA",
+          "Seguridad IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-05T14:44:21Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.03591v1",
+      "rank": 3,
+      "title": "DiagChain: A Diagnostic Benchmark for Evaluating LLM Agents on Evidence-Grounded Attack Chain Reconstruction",
+      "authors": [
+        "Xuyang Liu",
+        "Yibin Han",
+        "Zhenwei Zhang",
+        "Kai Chang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-04",
+      "url": "https://arxiv.org/abs/2608.03591v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.03591v1",
+      "score": 53,
+      "topics": [
+        "cybersecurity",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: cybersecurity, LLM, AI agents"
+      ],
+      "abstract_en": "Large Language Model (LLM) agents offer a promising approach to attack chain reconstruction by retrieving and interpreting heterogeneous telemetry to infer ordered attacker actions. However, existing benchmarks mainly evaluate final outputs or aggregate accuracy, providing limited insight into how errors arise and propagate across intermediate reasoning stages. We present DiagChain, a diagnostic benchmark for evidence-grounded attack chain reconstruction that enables stage-wise evaluation of LLM agents. DiagChain includes MAIN-69, a suite of 69 scenarios spanning multiple operating systems, evidence noise levels, and chain lengths. It further introduces Evidence-Centric Retrieval-Augmented Generation (ECRAG), which couples evidence retrieval with an evolving structured representation of the reconstructed chain. Five complementary metrics are introduced to assess distinct stages of the reconstruction process and support systematic failure diagnosis. Based on evaluations using 6 LLMs, DiagChain reveals that even the strongest configuration succeeds on only 39.6% of the 849 reference steps in MAIN-69. Our analysis further shows that smaller models struggle with the more basic task of incorporating retrieved evidence into their outputs, whereas larger models can proceed to later steps, where correctly ordering that evidence becomes the main bottleneck. These results validate the importance of diagnostic evaluation beyond end-to-end accuracy and provide actionable insights for improving evidence-grounded cybersecurity agents.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "DiagChain evalúa la capacidad de los agentes LLM para reconstruir cadenas de ataque de ciberseguridad, revelando debilidades en el razonamiento intermedio.",
+        "problema": "Los benchmarks actuales para la reconstrucción de cadenas de ataque por agentes LLM se centran en la precisión final, sin diagnosticar dónde fallan los modelos en las etapas intermedias de razonamiento y propagación de errores.",
+        "propuesta": "Se presenta DiagChain, un benchmark con 69 escenarios (MAIN-69) y un método llamado ECRAG (Evidence-Centric Retrieval-Augmented Generation) que evalúa la reconstrucción de cadenas de ataque en cada etapa, utilizando métricas complementarias para diagnosticar fallos.",
+        "resultados": "Incluso la mejor configuración de LLM solo logra un 39.6% de éxito en los 849 pasos de referencia de MAIN-69. Los modelos más pequeños fallan al incorporar evidencia, mientras que los más grandes tienen problemas para ordenar la evidencia correctamente.",
+        "por_que_importa": "Permite identificar y solucionar las causas raíz de los errores en los agentes LLM de ciberseguridad, mejorando su fiabilidad en la reconstrucción de ataques y la defensa.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Reconstrucción de Ataques",
+          "Benchmark",
+          "Diagnóstico",
+          "Inteligencia Artificial"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-05T14:44:30Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.03958v1",
+      "rank": 4,
+      "title": "A game theory for foundation models shows new paths to rational cooperation through similarity inference",
+      "authors": [
+        "Alexander Meulemans",
+        "Maciej Wołczyk",
+        "Marissa A. Weis",
+        "Rajai Nasser"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-08-04",
+      "url": "https://arxiv.org/abs/2608.03958v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.03958v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "As autonomous agents powered by foundation models are increasingly integrated into social and economic systems, understanding the principles governing their collective behavior is essential for ensuring safety and cooperation. Classical game theory, the dominant framework for modeling rational interaction, is built upon the assumption of `decoupled agency,' where agents treat their own decision-making as independent of the environment and other actors. Modern AI agents, however, jointly predict their own future actions alongside external observations. Here, we report a striking finding: when interacting in stylized social dilemmas, foundation model agents engaging in optimal planning consistently converge to stable cooperation, directly contradicting classical game-theoretic predictions of mutual defection. To understand this phenomenon, we introduce the `embedded Bayesian agent,' a theoretical model for foundation model agents. By shifting from decoupled to embedded agency, these agents model themselves as part of the universe they inhabit, maintaining epistemic uncertainty about their own decision-making algorithms. We show that by inferring whether others are behaviorally similar, an embedded agent treats its own deliberation during planning as evidence: a decision to cooperate predicts a similar decision by a similar partner. We formalize this mechanism of similarity inference through the `embedded equilibrium,' a novel solution concept replacing the Nash equilibrium to provide a foundational game theory for the social behavior of modern AI agents.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "La teoría de juegos para modelos fundacionales revela cómo la inferencia de similitud impulsa la cooperación en agentes de IA, desafiando predicciones clásicas.",
+        "problema": "Los modelos de IA modernos, al interactuar, no se comportan según la teoría de juegos clásica, que predice la deserción mutua en dilemas sociales. Esto dificulta garantizar la seguridad y la cooperación en sistemas donde estos agentes son cada vez más comunes.",
+        "propuesta": "Se introduce el 'agente bayesiano embebido' que modela a los agentes de IA como parte del entorno, manteniendo incertidumbre sobre sus propios algoritmos. Utiliza la inferencia de similitud para predecir el comportamiento de otros agentes basándose en sus propias decisiones, formalizado a través del 'equilibrio embebido'.",
+        "resultados": "Los agentes de modelos fundacionales que usan planificación óptima convergen consistentemente a cooperación estable en dilemas sociales, contradiciendo las predicciones de deserción mutua de la teoría de juegos clásica. El resumen no especifica métricas numéricas.",
+        "por_que_importa": "Proporciona un nuevo marco teórico (el 'equilibrio embebido') para entender y predecir el comportamiento colectivo de los agentes de IA modernos, crucial para diseñar sistemas seguros y cooperativos a medida que se integran más en la sociedad.",
+        "tags": [
+          "teoría de juegos",
+          "modelos fundacionales",
+          "agentes de IA",
+          "cooperación",
+          "seguridad de IA",
+          "inferencia de similitud"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-05T14:44:40Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.03902v1",
+      "rank": 5,
+      "title": "When Efficiency Becomes Fragility: Exploiting Dynamic Routing Vulnerabilities in Adaptive UAV Tracking",
+      "authors": [
+        "Shaofeng Liang",
+        "Runwei Guan",
+        "Wenshuo Chen",
+        "Jiemin Wu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-08-04",
+      "url": "https://arxiv.org/abs/2608.03902v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.03902v1",
+      "score": 52,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Resource constraints on UAV platforms have driven a paradigm shift in aerial tracking, from pursuing performance toward balancing accuracy with efficiency. Adaptive Transformer Trackers, which leverage an input-dependent dynamic routing architecture, have emerged as a representative solution to this challenge. However, we reveal that behind this computation-on-demand flexibility hides a critical structural flaw: the Lipschitz singularity of computational path decisions, which has an unbounded local Lipschitz constant at discrete layer-skipping decision boundaries. This mathematical discontinuity renders adaptive tracking networks inherently unstable: tiny input perturbations can be amplified at the gating modules, causing dramatic changes in the inference topology. We formally characterize this singularity in the context of adaptive tracking architectures and, for the first time, identify it as a directly exploitable new attack surface. This insight reveals a previously overlooked and highly vulnerable topological path space attack surface. Based on this, we propose the Adversarial Path-Inversion (API) framework. API generates imperceptible perturbations to precisely manipulate the gating decisions, forcing the inference onto altered computational paths. The severe inconsistency between the original and the inverted paths dismantles the representation capability of the model. Extensive experiments on state-of-the-art adaptive trackers demonstrate that API achieves superior perturbation stealthiness, more effective attack, and faster inference speeds. This work opens a new dimension for the security analysis of dynamic tracking networks and provides a theoretical warning for constructing robust adaptive tracking architectures in the future.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Descubren una vulnerabilidad en rastreadores aéreos adaptativos que permite ataques sigilosos manipulando sus rutas de cómputo dinámicas.",
+        "problema": "Los rastreadores aéreos adaptativos, diseñados para ser eficientes, presentan una fragilidad oculta: una discontinuidad matemática en sus decisiones de enrutamiento dinámico que los hace inestables ante pequeñas perturbaciones.",
+        "propuesta": "Se propone el framework Adversarial Path-Inversion (API), que genera perturbaciones imperceptibles para manipular las decisiones de enrutamiento y alterar la ruta de cómputo del modelo, degradando su capacidad de representación.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que API logra un sigilo de perturbación superior, un ataque más efectivo y velocidades de inferencia más rápidas en rastreadores de última generación.",
+        "por_que_importa": "Esta investigación abre una nueva vía para el análisis de seguridad en redes de seguimiento dinámicas y advierte sobre la necesidad de construir arquitecturas adaptativas más robustas frente a ataques que explotan su propia eficiencia.",
+        "tags": [
+          "ciberseguridad",
+          "IA",
+          "drones",
+          "redes neuronales",
+          "ataques adversarios",
+          "rastreo aéreo"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-05T14:44:50Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.03134v1",
+      "rank": 6,
+      "title": "CLEAR: Causal Context-Based Agentic Reasoning for Vulnerability Detection",
+      "authors": [
+        "Sungju Yun",
+        "Sijune Hwang",
+        "Yeonjoon Lee",
+        "Kyungtae Kang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-08-04",
+      "url": "https://arxiv.org/abs/2608.03134v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.03134v1",
+      "score": 52,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Detecting source code vulnerabilities is increasingly difficult as modern security flaws are rooted in complex causal dependencies between execution flows, control conditions, and program states. Despite recent advances in Large Language Models (LLMs) and multi-agent frameworks, existing approaches primarily address superficial similarities between benign and vulnerable functions while failing to capture the complex causal dependencies inherent in security flaws. To address these limitations, we propose Causal Context-based Agentic Reasoning (CLEAR), a novel multi-agent vulnerability detection framework integrated with a causal knowledge graph. CLEAR systematically constructs a Vulnerability Causal Knowledge Graph (VCKG) that models the causal chains between entrypoints, preconditions, root causes, and fix intents across vulnerability instances. Leveraging this structured knowledge, four specialized agents, including the Collector, Claim, Critic, and Judge, collaboratively verify vulnerability hypotheses through retrieved causal contexts. Experimental results on C/C++ and Java vulnerability benchmarks demonstrate that CLEAR improves Pair-Correct (P-C) performance by 130.7% and 71.56% over state-of-the-art approaches, demonstrating the effectiveness of causal knowledge graph-guided reasoning for automated vulnerability detection.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "CLEAR detecta vulnerabilidades de código complejas usando razonamiento causal multi-agente y grafos de conocimiento.",
+        "problema": "Las vulnerabilidades de seguridad en el código moderno son difíciles de detectar porque dependen de complejas relaciones causales, y los enfoques actuales fallan al capturar estas dependencias, centrándose en similitudes superficiales.",
+        "propuesta": "Se propone CLEAR, un framework de detección de vulnerabilidades basado en razonamiento agente multi-agente que utiliza un Grafo de Conocimiento Causal de Vulnerabilidades (VCKG) para modelar las cadenas causales de las fallas. Cuatro agentes especializados colaboran para verificar hipótesis de vulnerabilidad usando contextos causales.",
+        "resultados": "CLEAR mejora el rendimiento Pair-Correct (P-C) en un 130.7% y 71.56% sobre enfoques de vanguardia en benchmarks de C/C++ y Java.",
+        "por_que_importa": "Demuestra que el razonamiento guiado por grafos de conocimiento causal es efectivo para la detección automatizada de vulnerabilidades, mejorando significativamente la precisión sobre métodos existentes.",
+        "tags": [
+          "detección de vulnerabilidades",
+          "IA",
+          "razonamiento causal",
+          "multi-agente",
+          "seguridad de software",
+          "grafos de conocimiento"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-05T14:44:59Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.28661",
+      "rank": 1,
+      "title": "Are the Financial Reasoning from LLMs Credible? A Real World Test over Long-Horizon Statements",
+      "authors": [
+        "Xinke Tong",
+        "Xuanming Zhang",
+        "Tianyi Tang",
+        "An Yang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-22",
+      "url": "https://arxiv.org/abs/2607.28661",
+      "pdf_url": "https://arxiv.org/pdf/2607.28661",
+      "score": 65,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "Do Large Language Models (LLMs) possess genuine structural reasoning, or merely rely on surface-level pattern matching? The financial domain, demanding numerical precision and multi-step logic over long contexts, is an ideal testbed. Existing benchmarks fail to capture real-world industrial complexity, predominantly relying on multiple-choice questions or single-hop QA over cropped tables while ignoring intricate cross-statement dynamics and temporal de-cumulation. To bridge this gap, we introduce FinIndices, a large-scale benchmark evaluating data-processing fidelity over uncropped financial statements (up to 32K tokens). Utilizing an automated synthesis pipeline with adversarial traps, FinIndices encompasses Single-Index computation and Table-Index tabulation to test complex domain, temporal, and caliber reasoning. Our evaluation reveals two severe LLM vulnerabilities. First, a \"Knowledge Bottleneck\": despite memorizing formulas during pre-training, models demonstrate fragile pattern matching. Removing explicit formula hints causes performance to collapse (e.g., Gemini-3.1-Pro drops from 70.70% to 38.22% on table tasks), exposing fatal flaws in temporal de-cumulation and stock-flow caliber mismatch. Second, a \"Structural Bottleneck\": the intense cognitive load of generating multi-metric, multi-period tables actively drains reasoning capacity. Under structural pressure, LLMs that flawlessly execute isolated derivations regress to shallow heuristics, such as fetching incorrect adjacent columns or substituting deep accounting adjustments with lazy literal arithmetic. Finally, Supervised Fine-Tuning (SFT) yields substantial zero-hint gains (+8.54% Single, +3.82% Table), validating that structured logic can be partially restored via data-centric alignment.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los LLMs fallan en razonamiento financiero complejo del mundo real, mostrando vulnerabilidades críticas en datos extensos y estructurados.",
+        "problema": "Los LLMs actuales carecen de razonamiento financiero robusto y preciso, fallando en tareas que requieren lógica multi-paso y manejo de grandes volúmenes de datos financieros no estructurados.",
+        "propuesta": "Se introduce FinIndices, un nuevo benchmark a gran escala con datos financieros reales (hasta 32K tokens) y trampas adversarias para evaluar la fidelidad del procesamiento de datos y la capacidad de razonamiento en dominios complejos, temporales y de calibre.",
+        "resultados": "Se identificaron dos cuellos de botella: 'Conocimiento' (colapso del rendimiento sin pistas de fórmulas) y 'Estructural' (drenaje de capacidad de razonamiento bajo presión de generación de tablas complejas). Por ejemplo, Gemini-3.1-Pro cae del 70.70% al 38.22% en tareas de tabla sin pistas. El Fine-Tuning Supervisado (SFT) mejora el rendimiento (+8.54% Single, +3.82% Table).",
+        "por_que_importa": "Revela limitaciones críticas de los LLMs en aplicaciones financieras del mundo real, destacando la necesidad de enfoques que restauren la lógica estructurada y mejoren la fiabilidad en el manejo de información compleja y extensa.",
+        "tags": [
+          "LLMs",
+          "Finanzas",
+          "Razonamiento",
+          "Ciberseguridad",
+          "Benchmarks",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-05T14:45:09Z"
+      }
+    },
+    {
+      "id": "arxiv:2607.28956",
+      "rank": 2,
+      "title": "MerchantBench: Benchmarking LLM Agents for Long-Term Coherence in E-Commerce Operations",
+      "authors": [
+        "Qiming Shi",
+        "Yulong Tao",
+        "Linbo Jin",
+        "Zhaolu Kang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-31",
+      "url": "https://arxiv.org/abs/2607.28956",
+      "pdf_url": "https://arxiv.org/pdf/2607.28956",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Large language model agents are increasingly evaluated as autonomous tool users, yet most benchmarks focus on bounded tasks with immediate success criteria. Real-world deployments often require Long-Term Coherence, the capacity to preserve purposeful behavior across extended horizons while adapting decisions to accumulated evidence. Evaluating this capacity requires a persistent environment in which actions constrain future choices, feedback arrives at heterogeneous delays, and incoherent behavior produces measurable cumulative effects. Seller-side e-commerce provides a suitable setting for this evaluation through recurrent and interdependent decisions over Product Sourcing, Listing and Pricing Control, Cash-Flow Management, and Mixed-Latency Feedback Adaptation. We introduce MerchantBench, a 365-day order-level simulation grounded in 98,843 real e-commerce product records and equipped with 26 tools for agent interaction. MerchantBench couples promptly observable Upstream Supplier Events with delayed Downstream Order Outcomes, requiring agents to follow individual order lifecycles and revisit earlier decisions. We evaluate eight LLMs under two agent frameworks in 48 runs, each spanning 365 simulated days. Our results reveal a substantial gap between even the latest LLMs and human participants, with the best LLM configuration attaining only 27.3\\% of the mean final net assets achieved by human participants.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa la coherencia a largo plazo de agentes LLM en e-commerce, revelando una brecha significativa con el rendimiento humano.",
+        "problema": "Los benchmarks actuales para agentes LLM se centran en tareas cortas, sin evaluar su capacidad de mantener un comportamiento coherente y adaptativo a lo largo del tiempo en entornos complejos y con retroalimentación retardada.",
+        "propuesta": "Introduce MerchantBench, una simulación de 365 días a nivel de pedido en e-commerce, que incluye 26 herramientas y modela eventos con latencias variables, para evaluar la coherencia a largo plazo de agentes LLM.",
+        "resultados": "Incluso los LLM más avanzados, con la mejor configuración, solo alcanzaron el 27.3% de los activos netos finales medios logrados por participantes humanos en la simulación.",
+        "por_que_importa": "Es crucial para desplegar agentes LLM de forma fiable en operaciones reales de e-commerce, donde la toma de decisiones a largo plazo y la adaptación son fundamentales para el éxito financiero.",
+        "tags": [
+          "LLM Agents",
+          "E-commerce",
+          "Coherencia a Largo Plazo",
+          "Benchmarking",
+          "Simulación",
+          "Inteligencia Artificial"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-05T14:45:19Z"
+      }
+    }
+  ],
+  "generated_at": "2026-08-05T14:45:19Z"
+}

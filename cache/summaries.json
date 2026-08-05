@@ -3076,5 +3076,140 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-08-04T15:00:20Z"
+  },
+  "arxiv:2608.03272v1": {
+    "tldr": "Exploramos cómo la conectividad en sistemas de recomendación multi-agente afecta su vulnerabilidad ante ataques y defensas.",
+    "problema": "Los sistemas de recomendación colaborativa multi-agente (basados en LLMs) son vulnerables tanto por su naturaleza de datos como por las interacciones entre agentes, pero se desconoce cómo la conectividad influye en estas vulnerabilidades.",
+    "propuesta": "Adaptamos ataques y defensas de sistemas multi-agente generales al dominio de recomendación colaborativa, evaluándolos bajo diferentes niveles de conectividad (número de candidatos por usuario y solapamiento del catálogo de ítems) en el framework AgentCF.",
+    "resultados": "Se confirma la transferibilidad parcial de ataques y defensas. La conectividad influye en los resultados, mostrando asimetrías entre agentes, dinámicas temporales no monótonas en la eficacia de ataques y patrones divergentes según el objetivo del ataque (diseminación vs. extracción). Se exploró el uso de métricas inspiradas en epidemias para evaluar la robustez.",
+    "por_que_importa": "Comprender cómo la conectividad afecta la vulnerabilidad permite diseñar sistemas de recomendación más robustos y seguros en entornos colaborativos con agentes autónomos.",
+    "tags": [
+      "sistemas multi-agente",
+      "recomendación colaborativa",
+      "ciberseguridad",
+      "LLMs",
+      "vulnerabilidad",
+      "conectividad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-05T14:44:11Z"
+  },
+  "arxiv:2608.03626v1": {
+    "tldr": "Un nuevo modelo de ciclo de vida para sistemas LLM prioriza la seguridad sobre la eficiencia operativa, abordando brechas críticas.",
+    "problema": "Los marcos de ciclo de vida actuales para LLMs se centran en la eficiencia operativa y no en el análisis de seguridad, dejando actividades críticas como la verificación de procedencia de datos o el control de permisos implícitas o desatendidas. Además, los marcos de gobernanza no vinculan claramente los requisitos a las etapas del ciclo de vida donde aplican.",
+    "propuesta": "Se propone un modelo de ciclo de vida para sistemas LLM estructurado en torno a límites relevantes para la seguridad, en lugar de la optimización del flujo de trabajo. Incluye 32 etapas en cuatro capas principales (Datos, Modelo, Distribución, Aplicación), un pilar de LLMOps de 12 etapas y un pilar de gobernanza de 9 categorías. Se introducen 13 etapas nuevas para abordar preocupaciones de seguridad específicas.",
+    "resultados": "El análisis de la gobernanza (NIST AI RMF, EU AI Act, ISO/IEC 42001) revela que la evidencia se concentra en etapas de cara al despliegue, mientras que las decisiones más importantes ocurren en etapas de cara al desarrollo con baja visibilidad regulatoria.",
+    "por_que_importa": "Este modelo mejora la seguridad de los sistemas LLM al identificar y estructurar explícitamente las actividades de seguridad en cada etapa del ciclo de vida, y al destacar la desconexión entre la toma de decisiones críticas y la supervisión regulatoria.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Ciclo de Vida",
+      "Gobernanza IA",
+      "Seguridad IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-05T14:44:21Z"
+  },
+  "arxiv:2608.03591v1": {
+    "tldr": "DiagChain evalúa la capacidad de los agentes LLM para reconstruir cadenas de ataque de ciberseguridad, revelando debilidades en el razonamiento intermedio.",
+    "problema": "Los benchmarks actuales para la reconstrucción de cadenas de ataque por agentes LLM se centran en la precisión final, sin diagnosticar dónde fallan los modelos en las etapas intermedias de razonamiento y propagación de errores.",
+    "propuesta": "Se presenta DiagChain, un benchmark con 69 escenarios (MAIN-69) y un método llamado ECRAG (Evidence-Centric Retrieval-Augmented Generation) que evalúa la reconstrucción de cadenas de ataque en cada etapa, utilizando métricas complementarias para diagnosticar fallos.",
+    "resultados": "Incluso la mejor configuración de LLM solo logra un 39.6% de éxito en los 849 pasos de referencia de MAIN-69. Los modelos más pequeños fallan al incorporar evidencia, mientras que los más grandes tienen problemas para ordenar la evidencia correctamente.",
+    "por_que_importa": "Permite identificar y solucionar las causas raíz de los errores en los agentes LLM de ciberseguridad, mejorando su fiabilidad en la reconstrucción de ataques y la defensa.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Reconstrucción de Ataques",
+      "Benchmark",
+      "Diagnóstico",
+      "Inteligencia Artificial"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-05T14:44:30Z"
+  },
+  "arxiv:2608.03958v1": {
+    "tldr": "La teoría de juegos para modelos fundacionales revela cómo la inferencia de similitud impulsa la cooperación en agentes de IA, desafiando predicciones clásicas.",
+    "problema": "Los modelos de IA modernos, al interactuar, no se comportan según la teoría de juegos clásica, que predice la deserción mutua en dilemas sociales. Esto dificulta garantizar la seguridad y la cooperación en sistemas donde estos agentes son cada vez más comunes.",
+    "propuesta": "Se introduce el 'agente bayesiano embebido' que modela a los agentes de IA como parte del entorno, manteniendo incertidumbre sobre sus propios algoritmos. Utiliza la inferencia de similitud para predecir el comportamiento de otros agentes basándose en sus propias decisiones, formalizado a través del 'equilibrio embebido'.",
+    "resultados": "Los agentes de modelos fundacionales que usan planificación óptima convergen consistentemente a cooperación estable en dilemas sociales, contradiciendo las predicciones de deserción mutua de la teoría de juegos clásica. El resumen no especifica métricas numéricas.",
+    "por_que_importa": "Proporciona un nuevo marco teórico (el 'equilibrio embebido') para entender y predecir el comportamiento colectivo de los agentes de IA modernos, crucial para diseñar sistemas seguros y cooperativos a medida que se integran más en la sociedad.",
+    "tags": [
+      "teoría de juegos",
+      "modelos fundacionales",
+      "agentes de IA",
+      "cooperación",
+      "seguridad de IA",
+      "inferencia de similitud"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-05T14:44:40Z"
+  },
+  "arxiv:2608.03902v1": {
+    "tldr": "Descubren una vulnerabilidad en rastreadores aéreos adaptativos que permite ataques sigilosos manipulando sus rutas de cómputo dinámicas.",
+    "problema": "Los rastreadores aéreos adaptativos, diseñados para ser eficientes, presentan una fragilidad oculta: una discontinuidad matemática en sus decisiones de enrutamiento dinámico que los hace inestables ante pequeñas perturbaciones.",
+    "propuesta": "Se propone el framework Adversarial Path-Inversion (API), que genera perturbaciones imperceptibles para manipular las decisiones de enrutamiento y alterar la ruta de cómputo del modelo, degradando su capacidad de representación.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que API logra un sigilo de perturbación superior, un ataque más efectivo y velocidades de inferencia más rápidas en rastreadores de última generación.",
+    "por_que_importa": "Esta investigación abre una nueva vía para el análisis de seguridad en redes de seguimiento dinámicas y advierte sobre la necesidad de construir arquitecturas adaptativas más robustas frente a ataques que explotan su propia eficiencia.",
+    "tags": [
+      "ciberseguridad",
+      "IA",
+      "drones",
+      "redes neuronales",
+      "ataques adversarios",
+      "rastreo aéreo"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-05T14:44:50Z"
+  },
+  "arxiv:2608.03134v1": {
+    "tldr": "CLEAR detecta vulnerabilidades de código complejas usando razonamiento causal multi-agente y grafos de conocimiento.",
+    "problema": "Las vulnerabilidades de seguridad en el código moderno son difíciles de detectar porque dependen de complejas relaciones causales, y los enfoques actuales fallan al capturar estas dependencias, centrándose en similitudes superficiales.",
+    "propuesta": "Se propone CLEAR, un framework de detección de vulnerabilidades basado en razonamiento agente multi-agente que utiliza un Grafo de Conocimiento Causal de Vulnerabilidades (VCKG) para modelar las cadenas causales de las fallas. Cuatro agentes especializados colaboran para verificar hipótesis de vulnerabilidad usando contextos causales.",
+    "resultados": "CLEAR mejora el rendimiento Pair-Correct (P-C) en un 130.7% y 71.56% sobre enfoques de vanguardia en benchmarks de C/C++ y Java.",
+    "por_que_importa": "Demuestra que el razonamiento guiado por grafos de conocimiento causal es efectivo para la detección automatizada de vulnerabilidades, mejorando significativamente la precisión sobre métodos existentes.",
+    "tags": [
+      "detección de vulnerabilidades",
+      "IA",
+      "razonamiento causal",
+      "multi-agente",
+      "seguridad de software",
+      "grafos de conocimiento"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-05T14:44:59Z"
+  },
+  "arxiv:2607.28661": {
+    "tldr": "Los LLMs fallan en razonamiento financiero complejo del mundo real, mostrando vulnerabilidades críticas en datos extensos y estructurados.",
+    "problema": "Los LLMs actuales carecen de razonamiento financiero robusto y preciso, fallando en tareas que requieren lógica multi-paso y manejo de grandes volúmenes de datos financieros no estructurados.",
+    "propuesta": "Se introduce FinIndices, un nuevo benchmark a gran escala con datos financieros reales (hasta 32K tokens) y trampas adversarias para evaluar la fidelidad del procesamiento de datos y la capacidad de razonamiento en dominios complejos, temporales y de calibre.",
+    "resultados": "Se identificaron dos cuellos de botella: 'Conocimiento' (colapso del rendimiento sin pistas de fórmulas) y 'Estructural' (drenaje de capacidad de razonamiento bajo presión de generación de tablas complejas). Por ejemplo, Gemini-3.1-Pro cae del 70.70% al 38.22% en tareas de tabla sin pistas. El Fine-Tuning Supervisado (SFT) mejora el rendimiento (+8.54% Single, +3.82% Table).",
+    "por_que_importa": "Revela limitaciones críticas de los LLMs en aplicaciones financieras del mundo real, destacando la necesidad de enfoques que restauren la lógica estructurada y mejoren la fiabilidad en el manejo de información compleja y extensa.",
+    "tags": [
+      "LLMs",
+      "Finanzas",
+      "Razonamiento",
+      "Ciberseguridad",
+      "Benchmarks",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-05T14:45:09Z"
+  },
+  "arxiv:2607.28956": {
+    "tldr": "Evalúa la coherencia a largo plazo de agentes LLM en e-commerce, revelando una brecha significativa con el rendimiento humano.",
+    "problema": "Los benchmarks actuales para agentes LLM se centran en tareas cortas, sin evaluar su capacidad de mantener un comportamiento coherente y adaptativo a lo largo del tiempo en entornos complejos y con retroalimentación retardada.",
+    "propuesta": "Introduce MerchantBench, una simulación de 365 días a nivel de pedido en e-commerce, que incluye 26 herramientas y modela eventos con latencias variables, para evaluar la coherencia a largo plazo de agentes LLM.",
+    "resultados": "Incluso los LLM más avanzados, con la mejor configuración, solo alcanzaron el 27.3% de los activos netos finales medios logrados por participantes humanos en la simulación.",
+    "por_que_importa": "Es crucial para desplegar agentes LLM de forma fiable en operaciones reales de e-commerce, donde la toma de decisiones a largo plazo y la adaptación son fundamentales para el éxito financiero.",
+    "tags": [
+      "LLM Agents",
+      "E-commerce",
+      "Coherencia a Largo Plazo",
+      "Benchmarking",
+      "Simulación",
+      "Inteligencia Artificial"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-05T14:45:19Z"
   }
 }
