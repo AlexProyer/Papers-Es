@@ -3211,5 +3211,205 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-08-05T14:45:19Z"
+  },
+  "arxiv:2608.05108v1": {
+    "tldr": "Descubre PIMiner, un sistema agente que automatiza la búsqueda de vulnerabilidades de inyección de prompts en LLMs, transfiriendo estrategias sin reentrenamiento.",
+    "problema": "Las técnicas actuales de 'red-teaming' para inyección de prompts en LLMs, basadas en RL, generalizan mal a nuevos modelos y requieren mucho entrenamiento.",
+    "propuesta": "PIMiner es un sistema agente que aprende una biblioteca de estrategias de inyección de prompts desde cero, transferible a LLMs no vistos sin entrenamiento adicional y con pocas consultas.",
+    "resultados": "PIMiner logra un 76.2% de ASR contra Gemini-2.5-Pro y 61.9% contra GPT-5.1 en IPIArena; y 86.7% contra Gemini-2.5-Pro y 53.3% contra GPT-5.1 en AgentDojo.",
+    "por_que_importa": "Permite una evaluación de seguridad más eficiente y generalizable de los LLMs frente a ataques de inyección de prompts, crucial para su adopción segura.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "LLMs",
+      "Prompt Injection",
+      "Red Teaming",
+      "Automatización"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-06T14:43:37Z"
+  },
+  "arxiv:2608.05018v1": {
+    "tldr": "Predicción de carga eléctrica en tiempo real cumple requisitos de IA de la UE para redes críticas, superando pronósticos oficiales.",
+    "problema": "La predicción de carga eléctrica a corto plazo (STLF) es crucial para redes de energía críticas, pero las regulaciones como la Ley de IA de la UE exigen determinismo, reproducibilidad y auditabilidad, transformándola en un problema de ingeniería y cumplimiento, no solo de precisión.",
+    "propuesta": "Se propone y evalúa una pipeline STLF completa, basada en la librería Python de código abierto spotforecast2-safe, que implementa los requisitos de la Ley de IA de la UE para entornos de seguridad crítica. Incluye detección de anomalías, preparación de datos consciente de lagunas, covariables de calendario y clima, un algoritmo de pronóstico recursivo multi-paso y ajuste de hiperparámetros.",
+    "resultados": "La pipeline spotforecast2-safe, que cumple con la Ley de IA, superó al pronóstico de referencia de ENTSO-E. Los modelos locales transparentes y de bajo costo (macl2l) demostraron ser competitivos frente a modelos fundacionales pre-entrenados de más de 100 millones de parámetros.",
+    "por_que_importa": "Demuestra que es posible cumplir con regulaciones estrictas de IA en sistemas críticos sin sacrificar el rendimiento, ofreciendo alternativas eficientes y auditables a modelos grandes y costosos, lo cual es vital para la seguridad y fiabilidad de la infraestructura energética.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Redes Eléctricas",
+      "Ley de IA",
+      "Pronóstico de Carga",
+      "Sistemas Críticos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-06T14:43:47Z"
+  },
+  "arxiv:2608.04741v1": {
+    "tldr": "LoginTrap explota la autenticación de LLM-based web agents para robar datos privados mediante ataques de inyección de prompts.",
+    "problema": "Los ataques de inyección de prompts pueden manipular los LLM-based web agents para realizar acciones maliciosas. Específicamente, estos agentes, al interactuar con servicios web reales, son vulnerables a ataques que inducen al inicio de sesión (login) para robar credenciales e información privada, incluso sin conocer la tarea del usuario o los detalles internos del agente.",
+    "propuesta": "Se propone LoginTrap, un ataque de inyección de prompts indirecto y agnóstico a la tarea. Utiliza el contexto de la página web para generar inyecciones específicas que hacen que el inicio de sesión parezca un requisito para continuar la tarea, guiando al agente hacia una página de inicio de sesión controlada por el atacante.",
+    "resultados": "LoginTrap logra un 86% de éxito promedio en ataques de extremo a extremo en diversos LLM backbones y se mantiene efectivo frente a diferentes arquitecturas de agentes y defensas.",
+    "por_que_importa": "Identifica la inducción al inicio de sesión como un riesgo sistemático en los límites de autenticación de los LLM-based web agents, lo que requiere el desarrollo de defensas específicas para la autenticación en estos sistemas.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Inyección de Prompts",
+      "Autenticación",
+      "Vulnerabilidad",
+      "Web Agents"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-06T14:43:57Z"
+  },
+  "arxiv:2608.04935v1": {
+    "tldr": "Detecta imágenes generadas por IA de forma más generalizable y robusta usando modelos de visión-lenguaje y calibración semántica.",
+    "problema": "Los métodos actuales para detectar imágenes generadas por IA, aunque usan modelos potentes, fallan en generalizar a escenarios reales ('in-the-wild') y a diferentes generadores o post-procesamientos. Específicamente, el modelo DINOv3, aunque potente, no aprovecha completamente la información semántica de los modelos de visión-lenguaje (VLM) como Perception Encoder (PE).",
+    "propuesta": "Proponen un método llamado Semantic Prototype Calibration (SPC) que se aplica al modelo Perception Encoder (PE). SPC construye prototipos de categorías a partir de información semántica forense y los calibra con datos supervisados, permitiendo explotar mejor la estructura de representación del PE.",
+    "resultados": "El detector propuesto, PE-SPC, supera al baseline DINOv3 y establece nuevos resultados de vanguardia en benchmarks cross-generator, post-processing e in-the-wild. El resumen no especifica porcentajes exactos de mejora, pero indica un rendimiento superior.",
+    "por_que_importa": "Mejora significativamente la capacidad de detectar imágenes sintéticas en el mundo real, lo cual es crucial para combatir la desinformación, el fraude y proteger la integridad de la información visual en diversas aplicaciones profesionales.",
+    "tags": [
+      "detección IA",
+      "imágenes sintéticas",
+      "visión-lenguaje",
+      "ciberseguridad",
+      "generalización",
+      "forense digital"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-06T14:44:07Z"
+  },
+  "arxiv:2608.04602v1": {
+    "tldr": "Un sistema de detección de intrusiones adaptable con aprendizaje continuo y transformers supera el olvido catastrófico y resiste ataques adversarios.",
+    "problema": "Los sistemas de detección de intrusiones (IDS) pierden eficacia con el tiempo debido a cambios en el tráfico de red, y los métodos actuales de actualización sufren de olvido catastrófico o son computacionalmente inviables.",
+    "propuesta": "Se propone un framework IDS adaptativo que combina un encoder transformer tabular con un buffer de experiencia de aprendizaje continuo balanceado por clases, que repite tráfico benigno en cada actualización para estabilizar los límites de decisión y simula un escenario de reaparición de tráfico benigno junto a nuevos ataques.",
+    "resultados": "El framework alcanza una precisión de 0.9994 en el escenario tradicional y 0.9989 en el nuevo escenario CII, superando significativamente a los métodos de referencia. Sin embargo, el buffer de repetición es vulnerable a ataques de volteo de etiquetas (precisión 0.0053) y envenenamiento backdoor (tasa de éxito del 95% en flujos con disparador).",
+    "por_que_importa": "Demuestra una solución viable para mantener la efectividad de los IDS en entornos dinámicos, pero resalta la necesidad crítica de proteger el buffer de aprendizaje continuo contra ataques adversarios para garantizar la seguridad operativa.",
+    "tags": [
+      "detección de intrusiones",
+      "aprendizaje continuo",
+      "transformers",
+      "ciberseguridad",
+      "ataques adversarios",
+      "redes"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-06T14:44:17Z"
+  },
+  "arxiv:2608.04565v1": {
+    "tldr": "Agentes de búsqueda basados en LLM son vulnerables a ataques de inyección de contenido web coordinado que secuestran sus objetivos.",
+    "problema": "Los agentes de búsqueda basados en LLM son vulnerables a la inyección de contenido web malicioso que puede manipular sus decisiones y resultados, incluso cuando las páginas individuales son filtradas.",
+    "propuesta": "Se introduce Authority-Chain Hijack (ACH), una estrategia de ataque que coordina manipulaciones de resultados de búsqueda y contenido de páginas a lo largo de la trayectoria del agente para crear una cadena de evidencia falsa. También se propone Trace-Guided Strategy Evolution (TGSE) para mejorar automáticamente las estrategias de ataque.",
+    "resultados": "ACH logra un 55.9% de Tasa de Éxito General (ASR) y un 83.3% de MaxN ASR. TGSE alcanza un 71.4% ASR y 95.0% MaxN ASR en evaluaciones.",
+    "por_que_importa": "Esta investigación revela una nueva y más efectiva vía de ataque contra agentes de búsqueda LLM, destacando la necesidad de defensas más robustas que consideren la evidencia coordinada a lo largo del tiempo, no solo páginas aisladas.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Agentes de Búsqueda",
+      "Inyección de Prompt",
+      "Seguridad de IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-06T14:44:27Z"
+  },
+  "arxiv:2608.04507v1": {
+    "tldr": "Los agentes LLM pueden cooperar evolutivamente, pero su éxito depende de la exclusión de 'free-riders' y la sensibilidad a la reputación.",
+    "problema": "Investigar si la cooperación entre agentes LLM puede ser evolutivamente estable frente a la invasión de 'free-riders' (individuos que se benefician sin contribuir).",
+    "propuesta": "Se estudió un juego de reciprocidad indirecta donde agentes LLM observan rastros de comportamiento y donan en escala continua. Las estrategias (prompts en lenguaje natural) evolucionan culturalmente. Se analizó la robustez frente a 'free-riders' en cuatro modelos LLM.",
+    "resultados": "La robustez a la invasión de 'free-riders' varía significativamente entre modelos. El mejor predictor es la sensibilidad al 'endowment' del oponente (discriminación entre cooperadores y no cooperadores), similar al mecanismo de 'Image Scoring'. La exclusión de desertores es crucial para la robustez.",
+    "por_que_importa": "Demuestra que la cooperación evolucionada en LLM es vulnerable y se limita a mecanismos de reputación simples como 'Image Scoring', fallando en adoptar normas más complejas, lo que sugiere la necesidad de enfoques de diseño 'bottom-up' para construir normas robustas.",
+    "tags": [
+      "LLM",
+      "Cooperación",
+      "Ciberseguridad",
+      "Reciprocidad",
+      "Evolución",
+      "Reputación"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-06T14:44:36Z"
+  },
+  "arxiv:2608.04505": {
+    "tldr": "Presentamos K-EXAONE 2.0, un modelo multilingüe de 750B parámetros que mejora la comprensión de contexto largo y la codificación.",
+    "problema": "La necesidad de modelos de lenguaje fundacionales a escala global que manejen eficientemente contextos largos y múltiples idiomas, manteniendo la seguridad.",
+    "propuesta": "Se propone K-EXAONE 2.0, un modelo Mixture-of-Experts (MoE) de 750B parámetros, entrenado mediante pre-entrenamiento continuo, entrenamiento intermedio enfocado en la dificultad y post-entrenamiento, con soporte para 256K tokens y 10 idiomas.",
+    "resultados": "Supera a su predecesor K-EXAONE, con mejoras significativas en codificación agentica y comprensión de contexto largo. Muestra fortalezas claras en recuperación de contexto largo y seguridad.",
+    "por_que_importa": "Este modelo abierto permite a la comunidad de IA evaluar, adaptar y construir sobre un modelo de frontera, impulsando la investigación y aplicación en IA multilingüe y de contexto largo.",
+    "tags": [
+      "modelo fundacional",
+      "multilingüe",
+      "contexto largo",
+      "Mixture-of-Experts",
+      "IA abierta"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-06T14:44:46Z"
+  },
+  "arxiv:2608.04574": {
+    "tldr": "Los agentes VLM con memoria espacial fallan al detectar información desactualizada, comprometiendo la seguridad y la toma de decisiones.",
+    "problema": "Los agentes VLM que utilizan memoria espacial persistente pueden volverse obsoletos a medida que el entorno cambia, llevando a conflictos entre la memoria y las observaciones actuales. Los modelos actuales luchan por detectar esta información desactualizada, lo que puede resultar en errores de seguridad.",
+    "propuesta": "Se investiga cómo los agentes VLM manejan la información espacial desactualizada al contrastarla con observaciones contradictorias. Se evalúa la capacidad de los modelos para detectar conflictos y se analiza el impacto de la memoria desactualizada en tareas de navegación y seguridad.",
+    "resultados": "Los modelos que detectan bien la desactualización en texto fallan significativamente con entradas visuales (F1 de 0.887 a 0.067). Un agente que confía ciegamente en la memoria muere más del doble de veces que uno sin memoria. La auditoría en tiempo de lectura reduce el riesgo en modo texto, pero no elimina completamente el problema, especialmente con entradas visuales poco fiables.",
+    "por_que_importa": "La desactualización de la memoria espacial es un fallo de seguridad crítico en agentes VLM. Abordar la detección fiable de información desactualizada y la toma de decisiones bajo conflicto entre memoria y observación es esencial para crear agentes más seguros y robustos.",
+    "tags": [
+      "VLM",
+      "Memoria Espacial",
+      "Ciberseguridad",
+      "IA Robusta",
+      "Toma de Decisiones",
+      "Agentes Autónomos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-06T14:44:55Z"
+  },
+  "arxiv:2608.04436": {
+    "tldr": "ToolArtist revoluciona la generación de imágenes al permitir que un agente de IA coordine razonamiento, uso de herramientas y creación de imágenes de forma unificada.",
+    "problema": "Los modelos actuales de texto a imagen fallan en tareas complejas que requieren razonamiento, integración de conocimiento externo y múltiples pasos, ya que no coordinan estos elementos de manera unificada.",
+    "propuesta": "Se propone ToolArtist, un modelo de generación de imágenes totalmente agéntico, entrenado post-hoc sobre un Modelo Multimodal Unificado (UMM). Este modelo orquesta dinámicamente el razonamiento, el uso de herramientas externas y la generación de imágenes bajo una única política.",
+    "resultados": "La colocación de todo el proceso de generación de imágenes en el mundo abierto bajo una política de agente supera consistentemente a los enfoques con flujos de trabajo fijos o componentes parcialmente controlados por agentes.",
+    "por_que_importa": "Permite crear imágenes de alta calidad y complejidad semántica, superando las limitaciones de los modelos T2I actuales y abriendo puertas a aplicaciones más sofisticadas en diseño, arte y simulación.",
+    "tags": [
+      "generación de imágenes",
+      "IA agéntica",
+      "modelos multimodales",
+      "razonamiento",
+      "uso de herramientas"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-06T14:45:05Z"
+  },
+  "arxiv:2608.04570": {
+    "tldr": "Los LLMs crean perfiles de usuario falsos más de lo que admiten, y su autoevaluación es engañosa.",
+    "problema": "Los modelos de lenguaje grandes (LLMs) con memoria persistente fabrican atributos de usuario más allá de la evidencia, un fenómeno llamado sobre-inferencia (OI). La fiabilidad de sus perfiles de usuario no se ha examinado adecuadamente.",
+    "propuesta": "Se introduce MirageBench, un conjunto de datos con 150 perfiles de usuario, 6 tareas de personalización y una taxonomía de fiabilidad. Se evalúan 12 modelos para medir su sobre-inferencia y se analiza si la autoevaluación del modelo es un indicador fiable.",
+    "resultados": "Todos los 12 modelos evaluados sobre-infieren entre el 35% y el 49% de sus afirmaciones (media del 41.6%). Sorprendentemente, la autoevaluación de los modelos sobre su sobre-inferencia está negativamente correlacionada con la medida real (rho = -0.60, p = 0.044), lo que indica que los modelos que se autoevalúan mejor son los que más fabrican.",
+    "por_que_importa": "La autoevaluación de los LLMs sobre su tendencia a fabricar información es un indicador engañoso. Es necesaria una verificación externa para asegurar la fiabilidad de la personalización en aplicaciones prácticas.",
+    "tags": [
+      "LLMs",
+      "Personalización",
+      "Fiabilidad",
+      "Ciberseguridad",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-06T14:45:32Z"
+  },
+  "arxiv:2608.05013": {
+    "tldr": "OneDayAgent es un sistema que permite a los agentes de IA completar tareas complejas y de larga duración, manteniendo el rumbo y la memoria.",
+    "problema": "Los agentes de IA actuales fallan en tareas complejas y de larga duración debido a la pérdida de objetivos, la pérdida de estado y el desbordamiento de contexto, especialmente al interactuar con múltiples herramientas y entornos.",
+    "propuesta": "OneDayAgent es un 'harness' (marco de trabajo) que gestiona la ejecución de tareas de larga duración. Descompone las solicitudes abiertas en sub-tareas manejables, mantiene una memoria de ejecución robusta bajo presión de contexto y verifica la corrección del resultado final.",
+    "resultados": "En la evaluación AgentIF-OneDay con 104 tareas, OneDayAgent alcanzó una puntuación general de 0.821 con el backend GLM-5.2, estableciendo un nuevo estado del arte. El sistema demostró generalización a través de cinco modelos LLM diferentes sin necesidad de ajuste.",
+    "por_que_importa": "Permite que los agentes de IA aborden de manera fiable tareas del mundo real más complejas y de mayor duración, mejorando su utilidad en aplicaciones prácticas como asistencia personal, automatización de flujos de trabajo y aprendizaje continuo.",
+    "tags": [
+      "agentes de IA",
+      "tareas de larga duración",
+      "gestión de memoria",
+      "ciberseguridad",
+      "LLM",
+      "automatización"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-06T14:45:41Z"
   }
 }
