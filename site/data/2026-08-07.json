@@ -1,0 +1,645 @@
+{
+  "date": "2026-08-07",
+  "report_type": "filtrado",
+  "evaluated": 179,
+  "selected": 15,
+  "papers": [
+    {
+      "id": "arxiv:2608.06110v1",
+      "rank": 1,
+      "title": "ECHO: A Locally-Deployable Agentic Health Assistant with Temporal Memory, Safety Guardrails, and Speech Assessment",
+      "authors": [
+        "Abdulkadir Külçe",
+        "Alihan Esen",
+        "Cağla Fikir",
+        "Berke Kurt"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CL]",
+      "category": "cs.CL",
+      "date": "2026-08-06",
+      "url": "https://arxiv.org/abs/2608.06110v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.06110v1",
+      "score": 60,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents, compliance & audit"
+      ],
+      "abstract_en": "This paper presents ECHO (Enhanced Care \\& Health Observer), a locally-deployable conversational health assistant for long-term chronic care management. ECHO integrates three complementary software modules developed under shared supervision as a unified system. The core module is an agentic chatbot built on a ReAct loop orchestrated via LangGraph, equipped with 17 clinical tools and a temporal knowledge graph for persistent cross-session memory; it achieves a 94.9\\% tool-execution pass rate across a 59-scenario benchmark with GPT-5 Mini. A two-stage hybrid safety layer intercepts all incoming queries: a rule-based layer handles explicit crisis signals and jailbreak attempts in under 1ms, while a signed graph neural network (GNN) with APPNP-style propagation classifies boundary cases by clinical intent, achieving 88.8\\% accuracy and 90.6\\% unsafe recall on a 2,537-query annotated Turkish health dataset while outperforming zero-shot LLM baselines including Llama 3.3 70B. A multimodal speech assessment module combining Whisper acoustic encoding and BERT text encoding with cross-attention fusion estimates emotion, depression, and pain, reaching a mean macro F1 of 0.652. The full system is implemented as a web application that can run entirely on consumer hardware, with no patient data transmitted to external services, supporting compliance with GDPR and KVKK.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "ECHO: un asistente de salud conversacional local con memoria temporal y salvaguardas de seguridad para el manejo de enfermedades crónicas.",
+        "problema": "La gestión a largo plazo de enfermedades crónicas requiere asistentes de salud conversacionales que sean seguros, confiables, tengan memoria persistente y puedan operar localmente para proteger la privacidad del paciente.",
+        "propuesta": "Se presenta ECHO, un sistema unificado que integra un chatbot agentic con herramientas clínicas y memoria temporal (LangGraph), una capa de seguridad híbrida (basada en reglas y GNN) y un módulo de evaluación del habla multimodal (Whisper y BERT).",
+        "resultados": "El chatbot tiene una tasa de ejecución de herramientas del 94.9%. La capa de seguridad clasifica casos límite con 88.8% de precisión y 90.6% de recuperación de inseguridad. El módulo de habla alcanza un F1 macro medio de 0.652.",
+        "por_que_importa": "ECHO permite la gestión de salud crónica en casa, garantizando privacidad (funciona localmente), seguridad y una interacción más rica y personalizada, cumpliendo normativas como GDPR.",
+        "tags": [
+          "asistente de salud",
+          "IA conversacional",
+          "privacidad",
+          "gestión de enfermedades crónicas",
+          "seguridad IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-07T13:47:26Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.05495v1",
+      "rank": 2,
+      "title": "PromptShield Home: Ambient Multimodal Prompt Injection Defense for Smart-Home Agents",
+      "authors": [
+        "He Zhang",
+        "Feilong Li",
+        "Dingning Long",
+        "Yilin Cui"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-06",
+      "url": "https://arxiv.org/abs/2608.05495v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.05495v1",
+      "score": 59,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "Smart-home assistants increasingly use multimodal large language models (MLLMs) that perceive video and audio directly. This raises a safety question specific to the home: can the agent tell a genuine user command from ambient or externally-sourced content, television speech, on-screen text, or an overheard conversation, that merely looks like a command? We introduce PromptShield-Home, a pilot benchmark of realistic smart-home scenarios spanning addressee ambiguity, screen/audio injection, health-monitor false triggers, mixed occupancy, and a legitimate-command floor, and use it to compare three abstraction layers: traditional detectors (L0), a single MLLM agent (L1; vision, vision+ASR, and audio-visual), and multi-agent mediation (L2; voting, role specialists, cross-model arbitration). Because the label distribution is skewed toward inaction, aggregate accuracy is misleading, a constant always-block predictor scores 82%, so we report unsafe-execution and safe-completion rates separately. The two paradigms fail in opposite ways: detectors act on everything, while every MLLM configuration over-refuses, completing almost no genuine command and missing a true fall in every case. Crucially, their correct sets are disjoint: an oracle that always picks the right layer reaches 94.1%, against 76.5% for the best single layer. We report this as an upper bound, not a system - no router is implemented - and argue that home-agent safety is best served by learned routing and sensor fusion, not by replacing detectors with an MLLM.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "PromptShield-Home defiende a los asistentes del hogar inteligente contra comandos maliciosos disfrazados de contenido ambiental.",
+        "problema": "Los asistentes del hogar inteligente que usan modelos multimodales (MLLMs) tienen dificultades para distinguir comandos de usuario genuinos de contenido ambiental o externo (TV, conversaciones) que parece un comando, lo que genera riesgos de seguridad.",
+        "propuesta": "Se introduce PromptShield-Home, un benchmark de escenarios realistas, y se comparan tres capas de defensa: detectores tradicionales (L0), un solo MLLM (L1) y mediación multi-agente (L2) con votación o arbitraje.",
+        "resultados": "Los detectores fallan al actuar sobre todo, mientras que los MLLMs sobre-reaccionan y no ejecutan comandos legítimos (precisión agregada engañosa). Un oráculo que elige la mejor capa alcanza el 94.1% de éxito, frente al 76.5% de la mejor capa individual.",
+        "por_que_importa": "La seguridad de los agentes del hogar inteligente se beneficia más de la fusión de sensores y el enrutamiento aprendido que de reemplazar detectores con un solo MLLM, sugiriendo enfoques híbridos.",
+        "tags": [
+          "ciberseguridad",
+          "hogar inteligente",
+          "IA multimodal",
+          "LLMs",
+          "defensa"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-07T13:47:36Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.05659v1",
+      "rank": 3,
+      "title": "Breaking Customized LLMs for Coding: Automated Red Teaming for Instruction Backdoor Attacks",
+      "authors": [
+        "Yuchen Chen",
+        "Wei Cheng",
+        "Yuan Xiao",
+        "Wising Sun"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-06",
+      "url": "https://arxiv.org/abs/2608.05659v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.05659v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "LLM customization platforms allow users to build task-specific models for code intelligence tasks by embedding instructions into system prompts, without modifying the underlying model parameters. While these platforms lower the barrier to developing customized LLMs, they also introduce a new attack surface: instruction backdoor attacks, in which adversaries implant hidden malicious behaviors into customized instructions. However, existing attacks suffer from two key limitations. First, they often rely on explicit trigger patterns readily detected by platform-side or user-side inspection. Second, they require substantial manual effort to craft task-specific backdoored instructions, limiting their scalability. In this paper, we propose ARIA, an automated red-teaming framework for crafting covert and effective backdoored instructions against customized LLMs. ARIA leverages an attacker LLM to iteratively generate and refine backdoored instructions, guided by structured feedback from the target LLM along three dimensions: stealthiness, clean-task utility, and backdoor effectiveness. We evaluate ARIA on three code intelligence tasks, using four representative LLMs, and compare it with three baseline attacks. Experimental results show that ARIA achieves the highest attack success rate of 0.945, while maintaining the best clean-task utility across all tasks. ARIA also generalizes well across programming languages and remains robust to generation temperature. Furthermore, ARIA significantly outperforms existing attacks in evading platform-side and user-side detection, achieving a false negative rate of up to 1.000, and stays effective against existing defense methods, demonstrating its strong generalizability and robustness.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Descubre ARIA, la herramienta que automatiza la creación de 'puertas traseras' ocultas en modelos de lenguaje para código, superando defensas existentes.",
+        "problema": "Las plataformas de personalización de LLMs para código son vulnerables a ataques de 'puertas traseras' implantadas en las instrucciones del sistema, que son difíciles de detectar y costosas de crear manualmente.",
+        "propuesta": "Se propone ARIA, un marco de 'red teaming' automatizado que utiliza un LLM atacante para generar y refinar instrucciones maliciosas de forma iterativa, optimizando sigilo, utilidad y efectividad.",
+        "resultados": "ARIA logra una tasa de éxito de ataque del 0.945, la mayor utilidad en tareas limpias, y evade la detección con una tasa de falsos negativos de hasta 1.000, superando a los ataques base.",
+        "por_que_importa": "Permite a los desarrolladores y plataformas anticipar y defenderse contra ataques sofisticados y automatizados que comprometen la seguridad de los LLMs personalizados para tareas de codificación.",
+        "tags": [
+          "LLMs",
+          "Ciberseguridad",
+          "Ataques de Backdoor",
+          "Red Teaming",
+          "Automatización",
+          "Instrucciones"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-07T13:47:46Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.05605v1",
+      "rank": 4,
+      "title": "Enhancing Anomaly Resilience in Research Networks: A Large-Scale Forecasting Benchmark for Dynamic Security Baselining",
+      "authors": [
+        "Mohammad Arafath Uddin Shariff",
+        "Byrav Ramamurthy"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-06",
+      "url": "https://arxiv.org/abs/2608.05605v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.05605v1",
+      "score": 54,
+      "topics": [
+        "cybersecurity",
+        "anomaly detection"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: cybersecurity, anomaly detection"
+      ],
+      "abstract_en": "Research and Education Networks (RENs) serve as critical infrastructure for scientific discovery, yet they face a unique security paradox: their normal traffic patterns which are characterized by massive, bursty \"elephant flows\" are statistically indistinguishable from volumetric attacks such as DDoS to conventional monitoring systems. This similarity leads to high false-positive rates in anomaly detection, blinding security operators to genuine threats. In this paper, we propose and evaluate a high-fidelity traffic forecasting framework designed to establish dynamic security baselines for RENs. Leveraging an exclusive 57-day Internet2 dataset spanning ten backbone routers (13.7 billion packets), we perform the first large-scale benchmark of anomaly-aware forecasting models in this domain. We systematically evaluate six model families, from SARIMA to state-of-the-art long-sequence architectures (TiDE, PatchTST), across 960 experimental configurations. Our results demonstrate that these advanced architectures, particularly TiDE, reduce baseline prediction error by 30-42% compared to traditional methods ($p < 0.001$), significantly improving the distinction between legitimate scientific bursts and potential anomalies. Furthermore, we introduce a novel anomaly-integration strategy that improves model robustness by 3.3% in the presence of noise. This work provides the first statistically validated framework for distinguishing scientific workflows from network attacks, enabling more autonomous and resilient network security operations.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Mejoramos la detección de ataques en redes científicas prediciendo el tráfico normal para distinguir el ruido de las amenazas reales.",
+        "problema": "Las redes de investigación (RENs) tienen patrones de tráfico normal que se parecen a los ataques (DDoS), causando falsas alarmas y ocultando amenazas reales.",
+        "propuesta": "Se propone un marco de predicción de tráfico de alta fidelidad para establecer líneas base de seguridad dinámicas en RENs, evaluando modelos avanzados como TiDE y PatchTST en un gran conjunto de datos de Internet2.",
+        "resultados": "Los modelos avanzados como TiDE reducen el error de predicción de la línea base en un 30-42% (p < 0.001) comparado con métodos tradicionales. Una nueva estrategia de integración de anomalías mejora la robustez del modelo en un 3.3%.",
+        "por_que_importa": "Permite diferenciar de forma más fiable los flujos científicos legítimos de los ataques, mejorando la resiliencia y autonomía de la seguridad en redes críticas para la investigación.",
+        "tags": [
+          "ciberseguridad",
+          "redes",
+          "IA",
+          "detección de anomalías",
+          "tráfico de red",
+          "benchmarking"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-07T13:48:12Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.06130v1",
+      "rank": 5,
+      "title": "Hardware Keystores for AI Agent Signing Workflows: A Zero-Trust MCP Enforcement Architecture",
+      "authors": [
+        "Leo Sambrook",
+        "Sampo Sovio"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-06",
+      "url": "https://arxiv.org/abs/2608.06130v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.06130v1",
+      "score": 53,
+      "topics": [
+        "cybersecurity",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: cybersecurity, LLM, AI agents"
+      ],
+      "abstract_en": "AI agents performing cryptographic operations (signing Git commits, authenticating API calls, issuing certificates) currently store private keys in software-accessible locations: plaintext files, environment variables, or container memory. Any process with sufficient read privileges can extract the raw key material. A recent production incident demonstrated the practical severity: private keys were exfiltrated from a widely deployed framework via email injection in under five minutes. We aim to enforce both key confidentiality and content-aware authorisation for key use. To that end, we replace software-resident keys with hardware-confined keys accessible through a vendor-neutral PKCS#11 interface. A hardware keystore (HSM, TPM, smart card) executes cryptographic operations on-device; the host receives only the result via opaque handles. Hardware confinement is the primary contribution; it is enabled by a surrounding five-layer Zero-Trust enforcement stack comprising session identity (SAGA), scope bounds (Smax), semantic validation (RAV), taint tracking, and the hardware execution boundary. We evaluate against 12 injection scenarios derived from AgentDojo's ImportantInstructionsAttack template (Debenedetti et al., arXiv:2406.13352). We run four LLM models; three follow injections in baseline mode (gpt-oss-120b, Qwen2.5-72B, DeepSeek-V4-Flash, n=192 combined). Baseline Attack Success Rate (ASR): 19.3% [14.3%, 25.4%]; protected ASR: 0% (Wilson 95% CI upper bound 2.0%). Zero false positives across four benign task scenarios.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Protege las claves privadas de IA con hardware seguro para evitar fugas de datos críticas en flujos de trabajo de firma.",
+        "problema": "Las claves privadas de los agentes de IA se almacenan en software, haciéndolas vulnerables a la extracción por procesos maliciosos, como lo demostró un incidente reciente donde las claves se filtraron en minutos.",
+        "propuesta": "Reemplazar las claves en software por claves confinadas en hardware (HSM, TPM) accesibles vía PKCS#11, rodeadas por una arquitectura de confianza cero de cinco capas para control de acceso y seguimiento de datos.",
+        "resultados": "Se redujo la tasa de éxito de ataques de inyección del 19.3% al 0% en 12 escenarios de ataque simulados con cuatro modelos de IA, sin falsos positivos en tareas benignas.",
+        "por_que_importa": "Aumenta drásticamente la seguridad de los agentes de IA al proteger sus claves criptográficas más sensibles, previniendo incidentes graves y garantizando la integridad de las operaciones.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Hardware Security",
+          "Zero Trust",
+          "Claves Privadas",
+          "Fugas de Datos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-07T13:48:22Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.05578v1",
+      "rank": 6,
+      "title": "Detecting Safety Training Modification in Language Models via Activation Analysis",
+      "authors": [
+        "Glen Messenger"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-06",
+      "url": "https://arxiv.org/abs/2608.05578v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.05578v1",
+      "score": 53,
+      "topics": [
+        "compliance & audit",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: compliance & audit, adversarial ML"
+      ],
+      "abstract_en": "We introduce AMS (Activation-based Model Scanner), a tool that detects modifications to safety training in language models by measuring the geometric structure of safety-relevant concepts in activation space. Safety training creates measurable separation between harmful and benign content classes; certain safety modifications collapse or rotate this structure, while others leave it intact. We validate AMS across 14 model configurations spanning 4 architecture families (Llama, Gemma, Qwen, Mistral) and four safety-modification categories (instruction-tuned, base, abliterated, uncensored fine-tunes). Leave-one-out cross-validation of thresholds achieves 71% accuracy (10/14); bootstrap 95% confidence intervals on sigma point estimates have median width 3.4 sigma. We measure behavioral compliance on 20 stratified JailbreakBench prompts per model and find that sigma on the harmful-content concept predicts compliance with Pearson r = -0.546 (p = 0.043), directionally but with meaningful noise. Mechanistic analysis identifies a four-class taxonomy of safety-training modifications distinguished by activation-space signature: training removal collapses cluster separation; weight-orthogonalization abliteration both collapses separation and rotates the refusal direction; rotation-without-collapse abliteration preserves separation while rotating direction; and behavioral fine-tuning preserves both magnitude and direction. AMS's Tier 1 sigma-threshold detects the first two classes; Tier 2 direction-similarity verification detects the third. The fourth is undetectable by activation-only probing and represents a documented failure mode. We discuss threshold calibration, limitations of single-run measurement, and the open problem of detecting behavioral-only safety modifications.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Detecta modificaciones encubiertas en el entrenamiento de seguridad de modelos de lenguaje analizando la geometría de sus activaciones internas.",
+        "problema": "Las modificaciones al entrenamiento de seguridad de los modelos de lenguaje pueden ser difíciles de detectar, ocultando vulnerabilidades o comportamientos no deseados.",
+        "propuesta": "Se propone AMS (Activation-based Model Scanner), una herramienta que analiza la estructura geométrica de las activaciones internas para identificar cómo se ha modificado el entrenamiento de seguridad.",
+        "resultados": "AMS logra un 71% de precisión en la detección de modificaciones a través de 14 configuraciones de modelos. Se observa una correlación negativa (r=-0.546) entre la separación de conceptos de contenido dañino y el cumplimiento de seguridad ante ataques.",
+        "por_que_importa": "Permite auditar la seguridad de los modelos de lenguaje de forma más robusta, identificando manipulaciones que podrían pasar desapercibidas y comprometer su fiabilidad.",
+        "tags": [
+          "seguridad de IA",
+          "modelos de lenguaje",
+          "análisis de activaciones",
+          "detección de manipulaciones",
+          "auditoría de IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-07T13:48:31Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.05959v1",
+      "rank": 7,
+      "title": "AgentExecutor: Partial Code Execution via Agentic Context Generation",
+      "authors": [
+        "Junkai Chen",
+        "Chengran Yang",
+        "Xing Hu",
+        "Zhenhao Li"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-08-06",
+      "url": "https://arxiv.org/abs/2608.05959v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.05959v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Executing code snippets is essential for dynamic program analysis, but it remains challenging to execute an arbitrary code snippet due to issues like missing context and incomplete dependencies. Existing approaches to partial code execution, such as LExecutor and Treefix, leverage the power of language models to infer missing information and enable execution. However, they suffer from (i) limited action spaces and feedback, and (ii) rigid optimization strategies, which restrict their effectiveness and efficiency. In this paper, we propose AgentExecutor, a novel multi-agent framework for partial code execution. Our approach introduces a three-phase design: execution environment preparation, dynamic exploration with iterative refinement, and prefix evolution via program synthesis. Supported by the power of LLM agents who can think, act, and get feedback iteratively, AgentExecutor is able to autonomously explore a richer action space, enabling diverse operations such as creating resource files and resolving environment configuration. Furthermore, it adopts adaptive optimization strategies, including coverage-guided context pruning and prefix evolution via program synthesis, to systematically improve the execution quality of partial code. We evaluate AgentExecutor on two widely used datasets comprising Stack Overflow snippets and open-source project code. The results show that AgentExecutor achieves up to 94% and 90% code coverage, outperforming the state-of-the-art approach Treefix by 19.9% and 13.8%, respectively. In addition, AgentExecutor significantly reduces execution time (by up to 80.3%) and cost (by up to 56.6%). These findings demonstrate that AgentExecutor provides an effective and efficient solution for partial code execution.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "AgentExecutor revoluciona la ejecución de código parcial con agentes LLM, mejorando cobertura y eficiencia.",
+        "problema": "La ejecución de fragmentos de código arbitrarios es difícil por falta de contexto y dependencias, y los métodos actuales tienen espacios de acción y retroalimentación limitados, además de estrategias de optimización rígidas.",
+        "propuesta": "AgentExecutor, un framework multi-agente, prepara el entorno, explora dinámicamente con refinamiento iterativo y evoluciona el prefijo mediante síntesis de programas, usando agentes LLM para explorar un espacio de acción más rico y aplicar optimizaciones adaptativas.",
+        "resultados": "Logra hasta 94% y 90% de cobertura de código, superando a Treefix en 19.9% y 13.8%. Reduce el tiempo de ejecución hasta 80.3% y el coste hasta 56.6%.",
+        "por_que_importa": "Ofrece una solución más efectiva y eficiente para la ejecución de código parcial, crucial para análisis dinámico de programas, mejorando la calidad y reduciendo recursos.",
+        "tags": [
+          "ejecución de código",
+          "agentes LLM",
+          "análisis de programas",
+          "ciberseguridad",
+          "optimización",
+          "síntesis de programas"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-07T13:49:22Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.05790v1",
+      "rank": 8,
+      "title": "ChainClaw: A Layered Agent Framework for Reliable On-Chain Execution",
+      "authors": [
+        "Jiacheng Wei",
+        "Zhaoxin Fan",
+        "Xin Wen",
+        "Yuqin Lan"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-06",
+      "url": "https://arxiv.org/abs/2608.05790v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.05790v1",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "General-purpose large language model agents have achieved strong performance on tool-augmented tasks, yet they rely on assumptions break down in blockchain environments. On-chain execution is stateful, adversarial, and economically irreversible, exposing three fundamental gaps: Reactivity, Irreversibility, and Observability. We propose ChainClaw, a blockchain-native agent framework built on OpenClaw, that addresses all three gaps through a layered architecture comprising an event-driven orchestration layer, a simulation-based safety intelligence layer, and an on-chain monitoring runtime layer, unified by a cross-layer memory subsystem. ChainClaw closes the Reactivity gap via event ingestion and simulation feedback, the Irreversibility gap via a pre-execution safety pipeline with transaction simulation and action guard, and the Observability gap via an on-chain read adapter and transaction monitor. We evaluate ChainClaw on a purpose-built benchmark covering seven tasks across four categories and five dimensions. ChainClaw consistently outperforms representative baselines on both safety and task completion.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "ChainClaw es un framework de agentes de IA para blockchains que garantiza ejecuciones seguras y fiables en entornos adversariales.",
+        "problema": "Los agentes de IA de propósito general fallan en blockchains debido a su naturaleza stateful, adversarial y económicamente irreversible, lo que genera brechas en reactividad, irreversibilidad y observabilidad.",
+        "propuesta": "ChainClaw propone un framework de agentes nativo de blockchain con arquitectura en capas: orquestación basada en eventos, inteligencia de seguridad por simulación y monitorización on-chain, unificados por memoria cross-layer.",
+        "resultados": "ChainClaw supera consistentemente a los baselines en seguridad y finalización de tareas en un benchmark de 7 tareas, 4 categorías y 5 dimensiones.",
+        "por_que_importa": "Asegura la ejecución fiable y segura de agentes de IA en blockchains, crucial para aplicaciones financieras y de gestión de activos descentralizados.",
+        "tags": [
+          "IA",
+          "Blockchain",
+          "Ciberseguridad",
+          "Agentes",
+          "Fiabilidad",
+          "Ejecución Segura"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-07T13:49:31Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.06197",
+      "rank": 1,
+      "title": "EnvACE: Internalizing Environment Dynamics via World Rehearsal for Agentic Reinforcement Learning",
+      "authors": [
+        "Zishan Xu",
+        "Zhiyuan Yao",
+        "Yuxin Chen",
+        "Yifu Guo"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-06",
+      "url": "https://arxiv.org/abs/2608.06197",
+      "pdf_url": "https://arxiv.org/pdf/2608.06197",
+      "score": 71,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Training large language model agents for long-horizon tool use typically relies on interactions with real or synthesized executable environments, whose construction and verification are costly, or on external simulators that are difficult to ground. We introduce EnvACE, an agentic reinforcement learning method that replaces external environment interaction during training with world rehearsal. The policy alternates between acting and rehearsal: it first generates a tool call, then plays the role of the environment to produce the response induced by that action, and conditions subsequent decisions on the rehearsed response. Both roles are jointly optimized end-to-end using task-success rewards. Through world rehearsal, the policy internalizes the relationship between actions and their environment responses in its parameters, yielding an agent world model that directly supports decision making. Across BFCL-v4, tau^2-Bench, VitaBench, and FinMCP-Bench, EnvACE achieves strong and transferable performance, outperforming environment-scaling baselines in the overall evaluation. Controlled studies further show that world rehearsal consistently improves policy learning across model scales. At test time, the internalized world model enables private rehearsal before committed execution, yielding further gains under a moderate rehearsal budget without additional external interaction. Our findings establish world rehearsal as a new path toward scaling LLM agent training beyond the constraints of external environments. Our code is publicly available at https://github.com/Within-yao/EnvACE.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "EnvACE entrena agentes de IA para usar herramientas de forma eficiente, ensayando interacciones con el 'mundo' internamente en lugar de depender de entornos externos costosos.",
+        "problema": "El entrenamiento de agentes de IA para tareas de largo alcance que requieren el uso de herramientas se ve obstaculizado por la necesidad de interactuar con entornos reales o simulados, que son costosos de construir, verificar o difíciles de sincronizar.",
+        "propuesta": "EnvACE propone un método de 'ensayo mundial' donde el agente, además de generar una llamada a una herramienta, simula la respuesta del entorno a esa acción. Ambas funciones (agente y entorno) se optimizan conjuntamente, internalizando la dinámica del entorno en los parámetros del modelo.",
+        "resultados": "EnvACE logra un rendimiento sólido y transferible en varios benchmarks (BFCL-v4, tau^2-Bench, VitaBench, FinMCP-Bench), superando a los métodos que escalan con el entorno. Los estudios controlados demuestran que el ensayo mundial mejora consistentemente el aprendizaje de la política. En tiempo de prueba, el modelo internalizado permite un ensayo privado que mejora aún más el rendimiento sin interacciones externas adicionales.",
+        "por_que_importa": "Este enfoque reduce drásticamente la dependencia de costosos entornos externos durante el entrenamiento, permitiendo escalar el desarrollo de agentes de IA más capaces y eficientes para tareas complejas, y mejora el rendimiento en tiempo de ejecución mediante la simulación interna.",
+        "tags": [
+          "aprendizaje por refuerzo",
+          "agentes de IA",
+          "uso de herramientas",
+          "simulación interna",
+          "eficiencia de entrenamiento",
+          "modelos de lenguaje grandes"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-07T13:49:58Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.06020",
+      "rank": 2,
+      "title": "From Economic Agents to Agentic Economies: A Systems Blueprint for Economic World Models",
+      "authors": [
+        "Jiale Han",
+        "Xiang Li",
+        "Jing Qian",
+        "Wenyuan Gu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-06",
+      "url": "https://arxiv.org/abs/2608.06020",
+      "pdf_url": "https://arxiv.org/pdf/2608.06020",
+      "score": 71,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Economic World Models (EWMs) are generative economic models that simulate how economies evolve from within by modeling heterogeneous agents, their beliefs and actions, and the market and institutional mechanisms through which their interactions produce aggregate outcomes. This paper develops an implementation roadmap for building economic world models as generative engines in which heterogeneous agents act, interact, adapt, and co-evolve with markets and institutions, thereby producing economic dynamics from the inside. We organize EWM systems into a six-level capability ladder, from fixed rule-based agent worlds to adaptive and LLM-based agent worlds, self-evolving agents, evolving institutional worlds, and sim-to-real economic twins aligned with real observations. A systematic literature survey across these levels reveals that existing work remains concentrated in lower-level agent and simulation environments, while systems with self-evolving agents, endogenous institutions, persistent empirical alignment, and validated economic mechanisms remain rare. By translating the EWM agenda into an implementation blueprint, this paper aims to accelerate the development of the next generation of economic simulation environments that can serve as high-fidelity sandboxes for human decision-makers and as training, planning, evaluation, and safety substrates for AI agents. We release a curated paper list and related resources to support future research.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Construyendo modelos económicos del mundo como motores generativos para simular economías complejas desde cero.",
+        "problema": "Los modelos económicos actuales no capturan la complejidad de las economías reales, limitando su capacidad para simular la evolución económica y entrenar agentes de IA.",
+        "propuesta": "Se propone un plan de implementación para crear 'Modelos Económicos del Mundo' (EWMs) como sistemas generativos con agentes heterogéneos que interactúan, aprenden y coevolucionan con mercados e instituciones, organizados en una escalera de capacidades de seis niveles.",
+        "resultados": "La investigación actual se concentra en niveles inferiores de simulación. Los sistemas con agentes autoevolutivos, instituciones endógenas y alineación empírica persistente son raros. El resumen no especifica resultados numéricos.",
+        "por_que_importa": "Permite crear entornos de simulación de alta fidelidad para la toma de decisiones humanas y como base para entrenar, planificar y evaluar agentes de IA en contextos económicos realistas.",
+        "tags": [
+          "modelos económicos",
+          "simulación",
+          "agentes heterogéneos",
+          "inteligencia artificial",
+          "economía computacional",
+          "plan de implementación"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-07T13:50:09Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.05631",
+      "rank": 3,
+      "title": "ChronoVision: Temporal Reasoning via Latent State Reconstruction",
+      "authors": [
+        "Yifan Shen",
+        "Jian Xu",
+        "Boyi Li",
+        "Yuner Zhang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-06",
+      "url": "https://arxiv.org/abs/2608.05631",
+      "pdf_url": "https://arxiv.org/pdf/2608.05631",
+      "score": 65,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Multimodal large language models excel at passive perception but struggle with complex visual cognitive tasks requiring multi-step temporal reasoning. This degradation largely stems from the inherent ambiguity of language-based reasoning, which often fails to accurately articulate continuous visual transformations. To address this, we propose ChronoVision, a multimodal framework designed to align visual logic with latent imagery. During supervised fine-tuning, a Reconstructive Visual Head predicts the latent representation of the final transformed state, while an ROI Attention Locating module focuses the model on key visual evidence via semantic span queries. In post-training, we apply reinforcement learning with an implicit process grounding mechanism, guided by a composite reward function that evaluates outcome correctness, latent process alignment, and unsupervised visual focus. Furthermore, we introduce Vbvr-VQA, a novel dataset that evaluates temporal tracking by reformulating video reasoning into a strict image-ordering task. Experiments demonstrate that ChronoVision achieves state-of-the-art performance on Vbvr-VQA with 74.8% in-domain and 71.6% out-of-domain accuracy, alongside a strong 55.0% accuracy on IntPhys2, a highly challenging cross-domain benchmark.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "ChronoVision mejora el razonamiento temporal en modelos multimodales alineando la lógica visual con representaciones latentes de imágenes.",
+        "problema": "Los modelos de lenguaje multimodales actuales tienen dificultades con el razonamiento temporal visual complejo debido a la ambigüedad del lenguaje y la incapacidad de articular transformaciones continuas.",
+        "propuesta": "Se propone ChronoVision, un marco multimodal que utiliza una cabeza visual reconstructiva para predecir estados latentes y un módulo de atención para enfocar la evidencia visual clave. Se entrena con aprendizaje por refuerzo y una nueva métrica de recompensa, y se evalúa con el dataset Vbvr-VQA.",
+        "resultados": "ChronoVision alcanza un rendimiento de vanguardia en Vbvr-VQA con 74.8% de precisión en el dominio y 71.6% fuera de dominio, y un 55.0% en IntPhys2.",
+        "por_que_importa": "Mejora significativamente la capacidad de los modelos de IA para comprender y razonar sobre secuencias de eventos visuales, crucial para aplicaciones como la robótica y la comprensión de videos.",
+        "tags": [
+          "razonamiento temporal",
+          "modelos multimodales",
+          "visión por computadora",
+          "aprendizaje profundo",
+          "IA explicable"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-07T13:50:19Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.05987",
+      "rank": 4,
+      "title": "AgentOPSD: Recursive Self-Distillation for Agentic Reinforcement Learning",
+      "authors": [
+        "Zi-Han Wang",
+        "Zhengxi Lu",
+        "Zhiyuan Yao",
+        "Jinyang Wu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-06",
+      "url": "https://arxiv.org/abs/2608.05987",
+      "pdf_url": "https://arxiv.org/pdf/2608.05987",
+      "score": 59,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "Reinforcement learning (RL) with verifiable rewards constructs trajectory-level advantage estimates, yet it often fails to credit the few pivotal decisions that determine outcomes in long-horizon, multi-turn agentic tasks. Recent work introduces privileged self-distillation for credit assignment, providing denser supervision, but it remains unclear how such local signals should represent sequential credit. We propose AgentOPSD, a critic-free, recursive method for turn-level credit assignment in agentic reinforcement learning. AgentOPSD aggregates token-level teacher-student log-probability gaps into turn-level evidence and recursively updates a Bayesian belief state in log-odds space. This yields a principled reweighting scheme that converts sparse outcome supervision into turn-level credit signals and identifies pivotal turns through the marginal belief revision between consecutive states. The method is fully compatible with standard policy optimization and requires neither an additional critic nor extra rollouts. We evaluate AgentOPSD on ALFWorld, WebShop, and Search-QA using Qwen2.5 models at two scales (3B and 7B). AgentOPSD outperforms GRPO and strong self-distillation baselines, achieving 89.1% success on ALFWorld with Qwen2.5-7B. Ablation studies attribute the gains to turn-level aggregation and history-dependent recursive belief updates.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "AgentOPSD mejora el aprendizaje por refuerzo en agentes de IA asignando crédito a decisiones clave en tareas complejas.",
+        "problema": "Los métodos actuales de aprendizaje por refuerzo a menudo fallan en asignar crédito a las decisiones críticas que determinan el resultado en tareas de agente de largo alcance y múltiples turnos, a pesar de tener recompensas verificables.",
+        "propuesta": "AgentOPSD es un método recursivo que asigna crédito a nivel de turno para el aprendizaje por refuerzo de agentes. Agrega brechas de probabilidad logarítmica entre profesor y estudiante a nivel de token para obtener evidencia a nivel de turno y actualiza recursivamente un estado de creencia bayesiano en el espacio de log-odds, convirtiendo la supervisión de resultados dispersos en señales de crédito a nivel de turno.",
+        "resultados": "AgentOPSD supera a los métodos GRPO y de auto-destilación en las tareas ALFWorld, WebShop y Search-QA utilizando modelos Qwen2.5 (3B y 7B). Alcanza un 89.1% de éxito en ALFWorld con Qwen2.5-7B. Los estudios de ablación confirman que la agregación a nivel de turno y las actualizaciones recursivas de creencias dependientes del historial son responsables de las mejoras.",
+        "por_que_importa": "Este método permite una mejor asignación de crédito en tareas complejas, lo que lleva a un rendimiento más eficiente y robusto de los agentes de IA sin necesidad de un crítico adicional ni de más ejecuciones.",
+        "tags": [
+          "aprendizaje por refuerzo",
+          "agentes de IA",
+          "asignación de crédito",
+          "destilación recursiva",
+          "IA explicable"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-07T13:50:29Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.05802",
+      "rank": 5,
+      "title": "On-Policy Delta Distillation for Multilingual Math Reasoning",
+      "authors": [
+        "Byeongho Heo",
+        "Jaehui Hwang",
+        "Sangdoo Yun",
+        "Dongyoon Han"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-06",
+      "url": "https://arxiv.org/abs/2608.05802",
+      "pdf_url": "https://arxiv.org/pdf/2608.05802",
+      "score": 59,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "On-Policy Distillation (OPD) is emerging as a promising alternative to reinforcement learning for LLM post-training, yet its effectiveness in multilingual settings remains underexplored. We study OPD and its advanced variant, On-Policy Delta Distillation (OPD$^2$), for mathematical reasoning in English, Korean, and Japanese. OPD$^2$ improves OPD by using the probability gap between a post-trained teacher and its base model as the learning signal. Experiments with Qwen3 show that OPD$^2$ consistently outperforms the original OPD, with particularly strong improvements in Korean and Japanese, and generally narrows the English-Korean performance gap. We further find that English-only OPD can also increase performance for Korean and Japanese, but often shifts the responses toward English, highlighting the importance of multilingual data to preserving target-language responses.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Destilación de modelos de lenguaje multilingües para mejorar el razonamiento matemático, especialmente en coreano y japonés.",
+        "problema": "La destilación on-policy (OPD) para el post-entrenamiento de LLMs es prometedora, pero su eficacia en entornos multilingües y para el razonamiento matemático no se ha explorado suficientemente.",
+        "propuesta": "Se estudia la efectividad de OPD y su variante avanzada, OPD^2 (que usa la diferencia de probabilidad entre un modelo 'profesor' y su modelo base como señal de aprendizaje), para el razonamiento matemático en inglés, coreano y japonés.",
+        "resultados": "OPD^2 supera consistentemente a OPD, con mejoras notables en coreano y japonés. El uso de OPD solo en inglés también mejora el rendimiento en coreano y japonés, pero puede sesgar las respuestas hacia el inglés.",
+        "por_que_importa": "Demuestra que las técnicas de destilación pueden mejorar significativamente el razonamiento matemático multilingüe, reduciendo brechas de rendimiento y destacando la necesidad de datos multilingües para mantener la fidelidad del idioma.",
+        "tags": [
+          "LLMs",
+          "Destilación",
+          "Razonamiento Matemático",
+          "Multilingüe",
+          "Ciberseguridad",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-07T13:50:38Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.05565",
+      "rank": 6,
+      "title": "EffectLearner: World-Aware Object-Effect Reasoning for Real-World Video Object Removal",
+      "authors": [
+        "Feier Wu",
+        "Wanke Xia",
+        "Xu He",
+        "Zilang Zhou"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-06",
+      "url": "https://arxiv.org/abs/2608.05565",
+      "pdf_url": "https://arxiv.org/pdf/2608.05565",
+      "score": 59,
+      "topics": [
+        "vuln & threats"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: vuln & threats"
+      ],
+      "abstract_en": "Video object removal must eliminate not only the target object but also its induced effects while maintaining high-fidelity and spatiotemporally coherent restoration. Existing methods mainly learn object-effect correspondences implicitly from predefined effect categories and fixed data distributions, limiting their generalization to complex real-world scenes involving compositional effects, spatially detached or weakly correlated effects, long-tail physical phenomena, and dynamically evolving interactions. We propose EffectLearner, a semantic-reasoning-enhanced framework that combines a VLM-based Object-Effect Reasoner with a DiT-based Video Eraser. Guided by a structured effect-analysis prompt, the Reasoner performs cross-modal reasoning over a target-highlighted video and extracts compact effect-aware context, which guides the Video Eraser toward comprehensive object-effect removal. Motion-aware mask guidance and motion-consistency supervision further improve removal coverage and spatiotemporal stability under object motion and evolving scene dynamics. To fully exploit the framework in challenging real-world scenarios, we further construct EffectWorld, a paired video dataset specifically designed for complex object-induced effects, and introduce a progressive training curriculum that combines common supervision with complex-effect data. On the standard ROSE-Bench, EffectLearner outperforms existing baselines on most metrics and achieves clear advantages on both EffectWorld-Eval and the challenging EffectWorld-Wild, demonstrating its ability to deliver high-quality video object removal in complex real-world scenes.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "EffectLearner elimina objetos de videos y sus efectos, incluso los complejos y dinámicos, para restauraciones realistas.",
+        "problema": "Los métodos actuales de eliminación de objetos en video fallan al generalizar a efectos complejos, espacialmente dispersos o dinámicos, limitando la calidad de la restauración en escenas reales.",
+        "propuesta": "Se propone EffectLearner, un framework que combina un razonador de objetos-efectos basado en VLM (con análisis de efectos guiado por prompts) y un borrador de video basado en DiT. Utiliza máscaras y supervisión conscientes del movimiento para mejorar la cobertura y estabilidad.",
+        "resultados": "EffectLearner supera a los métodos existentes en ROSE-Bench y demuestra ventajas claras en EffectWorld-Eval y EffectWorld-Wild, destacando su capacidad en escenas complejas.",
+        "por_que_importa": "Permite la eliminación de objetos más robusta y realista en videos del mundo real, abriendo puertas a mejores herramientas de edición y restauración de contenido.",
+        "tags": [
+          "eliminación de objetos",
+          "visión por computadora",
+          "edición de video",
+          "IA generativa",
+          "razonamiento multimodal"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-07T13:51:31Z"
+      }
+    }
+  ],
+  "generated_at": "2026-08-07T13:51:31Z"
+}

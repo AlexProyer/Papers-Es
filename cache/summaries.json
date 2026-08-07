@@ -3411,5 +3411,237 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-08-06T14:45:41Z"
+  },
+  "arxiv:2608.06110v1": {
+    "tldr": "ECHO: un asistente de salud conversacional local con memoria temporal y salvaguardas de seguridad para el manejo de enfermedades crónicas.",
+    "problema": "La gestión a largo plazo de enfermedades crónicas requiere asistentes de salud conversacionales que sean seguros, confiables, tengan memoria persistente y puedan operar localmente para proteger la privacidad del paciente.",
+    "propuesta": "Se presenta ECHO, un sistema unificado que integra un chatbot agentic con herramientas clínicas y memoria temporal (LangGraph), una capa de seguridad híbrida (basada en reglas y GNN) y un módulo de evaluación del habla multimodal (Whisper y BERT).",
+    "resultados": "El chatbot tiene una tasa de ejecución de herramientas del 94.9%. La capa de seguridad clasifica casos límite con 88.8% de precisión y 90.6% de recuperación de inseguridad. El módulo de habla alcanza un F1 macro medio de 0.652.",
+    "por_que_importa": "ECHO permite la gestión de salud crónica en casa, garantizando privacidad (funciona localmente), seguridad y una interacción más rica y personalizada, cumpliendo normativas como GDPR.",
+    "tags": [
+      "asistente de salud",
+      "IA conversacional",
+      "privacidad",
+      "gestión de enfermedades crónicas",
+      "seguridad IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-07T13:47:26Z"
+  },
+  "arxiv:2608.05495v1": {
+    "tldr": "PromptShield-Home defiende a los asistentes del hogar inteligente contra comandos maliciosos disfrazados de contenido ambiental.",
+    "problema": "Los asistentes del hogar inteligente que usan modelos multimodales (MLLMs) tienen dificultades para distinguir comandos de usuario genuinos de contenido ambiental o externo (TV, conversaciones) que parece un comando, lo que genera riesgos de seguridad.",
+    "propuesta": "Se introduce PromptShield-Home, un benchmark de escenarios realistas, y se comparan tres capas de defensa: detectores tradicionales (L0), un solo MLLM (L1) y mediación multi-agente (L2) con votación o arbitraje.",
+    "resultados": "Los detectores fallan al actuar sobre todo, mientras que los MLLMs sobre-reaccionan y no ejecutan comandos legítimos (precisión agregada engañosa). Un oráculo que elige la mejor capa alcanza el 94.1% de éxito, frente al 76.5% de la mejor capa individual.",
+    "por_que_importa": "La seguridad de los agentes del hogar inteligente se beneficia más de la fusión de sensores y el enrutamiento aprendido que de reemplazar detectores con un solo MLLM, sugiriendo enfoques híbridos.",
+    "tags": [
+      "ciberseguridad",
+      "hogar inteligente",
+      "IA multimodal",
+      "LLMs",
+      "defensa"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-07T13:47:36Z"
+  },
+  "arxiv:2608.05659v1": {
+    "tldr": "Descubre ARIA, la herramienta que automatiza la creación de 'puertas traseras' ocultas en modelos de lenguaje para código, superando defensas existentes.",
+    "problema": "Las plataformas de personalización de LLMs para código son vulnerables a ataques de 'puertas traseras' implantadas en las instrucciones del sistema, que son difíciles de detectar y costosas de crear manualmente.",
+    "propuesta": "Se propone ARIA, un marco de 'red teaming' automatizado que utiliza un LLM atacante para generar y refinar instrucciones maliciosas de forma iterativa, optimizando sigilo, utilidad y efectividad.",
+    "resultados": "ARIA logra una tasa de éxito de ataque del 0.945, la mayor utilidad en tareas limpias, y evade la detección con una tasa de falsos negativos de hasta 1.000, superando a los ataques base.",
+    "por_que_importa": "Permite a los desarrolladores y plataformas anticipar y defenderse contra ataques sofisticados y automatizados que comprometen la seguridad de los LLMs personalizados para tareas de codificación.",
+    "tags": [
+      "LLMs",
+      "Ciberseguridad",
+      "Ataques de Backdoor",
+      "Red Teaming",
+      "Automatización",
+      "Instrucciones"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-07T13:47:46Z"
+  },
+  "arxiv:2608.05605v1": {
+    "tldr": "Mejoramos la detección de ataques en redes científicas prediciendo el tráfico normal para distinguir el ruido de las amenazas reales.",
+    "problema": "Las redes de investigación (RENs) tienen patrones de tráfico normal que se parecen a los ataques (DDoS), causando falsas alarmas y ocultando amenazas reales.",
+    "propuesta": "Se propone un marco de predicción de tráfico de alta fidelidad para establecer líneas base de seguridad dinámicas en RENs, evaluando modelos avanzados como TiDE y PatchTST en un gran conjunto de datos de Internet2.",
+    "resultados": "Los modelos avanzados como TiDE reducen el error de predicción de la línea base en un 30-42% (p < 0.001) comparado con métodos tradicionales. Una nueva estrategia de integración de anomalías mejora la robustez del modelo en un 3.3%.",
+    "por_que_importa": "Permite diferenciar de forma más fiable los flujos científicos legítimos de los ataques, mejorando la resiliencia y autonomía de la seguridad en redes críticas para la investigación.",
+    "tags": [
+      "ciberseguridad",
+      "redes",
+      "IA",
+      "detección de anomalías",
+      "tráfico de red",
+      "benchmarking"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-07T13:48:12Z"
+  },
+  "arxiv:2608.06130v1": {
+    "tldr": "Protege las claves privadas de IA con hardware seguro para evitar fugas de datos críticas en flujos de trabajo de firma.",
+    "problema": "Las claves privadas de los agentes de IA se almacenan en software, haciéndolas vulnerables a la extracción por procesos maliciosos, como lo demostró un incidente reciente donde las claves se filtraron en minutos.",
+    "propuesta": "Reemplazar las claves en software por claves confinadas en hardware (HSM, TPM) accesibles vía PKCS#11, rodeadas por una arquitectura de confianza cero de cinco capas para control de acceso y seguimiento de datos.",
+    "resultados": "Se redujo la tasa de éxito de ataques de inyección del 19.3% al 0% en 12 escenarios de ataque simulados con cuatro modelos de IA, sin falsos positivos en tareas benignas.",
+    "por_que_importa": "Aumenta drásticamente la seguridad de los agentes de IA al proteger sus claves criptográficas más sensibles, previniendo incidentes graves y garantizando la integridad de las operaciones.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Hardware Security",
+      "Zero Trust",
+      "Claves Privadas",
+      "Fugas de Datos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-07T13:48:22Z"
+  },
+  "arxiv:2608.05578v1": {
+    "tldr": "Detecta modificaciones encubiertas en el entrenamiento de seguridad de modelos de lenguaje analizando la geometría de sus activaciones internas.",
+    "problema": "Las modificaciones al entrenamiento de seguridad de los modelos de lenguaje pueden ser difíciles de detectar, ocultando vulnerabilidades o comportamientos no deseados.",
+    "propuesta": "Se propone AMS (Activation-based Model Scanner), una herramienta que analiza la estructura geométrica de las activaciones internas para identificar cómo se ha modificado el entrenamiento de seguridad.",
+    "resultados": "AMS logra un 71% de precisión en la detección de modificaciones a través de 14 configuraciones de modelos. Se observa una correlación negativa (r=-0.546) entre la separación de conceptos de contenido dañino y el cumplimiento de seguridad ante ataques.",
+    "por_que_importa": "Permite auditar la seguridad de los modelos de lenguaje de forma más robusta, identificando manipulaciones que podrían pasar desapercibidas y comprometer su fiabilidad.",
+    "tags": [
+      "seguridad de IA",
+      "modelos de lenguaje",
+      "análisis de activaciones",
+      "detección de manipulaciones",
+      "auditoría de IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-07T13:48:31Z"
+  },
+  "arxiv:2608.05959v1": {
+    "tldr": "AgentExecutor revoluciona la ejecución de código parcial con agentes LLM, mejorando cobertura y eficiencia.",
+    "problema": "La ejecución de fragmentos de código arbitrarios es difícil por falta de contexto y dependencias, y los métodos actuales tienen espacios de acción y retroalimentación limitados, además de estrategias de optimización rígidas.",
+    "propuesta": "AgentExecutor, un framework multi-agente, prepara el entorno, explora dinámicamente con refinamiento iterativo y evoluciona el prefijo mediante síntesis de programas, usando agentes LLM para explorar un espacio de acción más rico y aplicar optimizaciones adaptativas.",
+    "resultados": "Logra hasta 94% y 90% de cobertura de código, superando a Treefix en 19.9% y 13.8%. Reduce el tiempo de ejecución hasta 80.3% y el coste hasta 56.6%.",
+    "por_que_importa": "Ofrece una solución más efectiva y eficiente para la ejecución de código parcial, crucial para análisis dinámico de programas, mejorando la calidad y reduciendo recursos.",
+    "tags": [
+      "ejecución de código",
+      "agentes LLM",
+      "análisis de programas",
+      "ciberseguridad",
+      "optimización",
+      "síntesis de programas"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-07T13:49:22Z"
+  },
+  "arxiv:2608.05790v1": {
+    "tldr": "ChainClaw es un framework de agentes de IA para blockchains que garantiza ejecuciones seguras y fiables en entornos adversariales.",
+    "problema": "Los agentes de IA de propósito general fallan en blockchains debido a su naturaleza stateful, adversarial y económicamente irreversible, lo que genera brechas en reactividad, irreversibilidad y observabilidad.",
+    "propuesta": "ChainClaw propone un framework de agentes nativo de blockchain con arquitectura en capas: orquestación basada en eventos, inteligencia de seguridad por simulación y monitorización on-chain, unificados por memoria cross-layer.",
+    "resultados": "ChainClaw supera consistentemente a los baselines en seguridad y finalización de tareas en un benchmark de 7 tareas, 4 categorías y 5 dimensiones.",
+    "por_que_importa": "Asegura la ejecución fiable y segura de agentes de IA en blockchains, crucial para aplicaciones financieras y de gestión de activos descentralizados.",
+    "tags": [
+      "IA",
+      "Blockchain",
+      "Ciberseguridad",
+      "Agentes",
+      "Fiabilidad",
+      "Ejecución Segura"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-07T13:49:31Z"
+  },
+  "arxiv:2608.06197": {
+    "tldr": "EnvACE entrena agentes de IA para usar herramientas de forma eficiente, ensayando interacciones con el 'mundo' internamente en lugar de depender de entornos externos costosos.",
+    "problema": "El entrenamiento de agentes de IA para tareas de largo alcance que requieren el uso de herramientas se ve obstaculizado por la necesidad de interactuar con entornos reales o simulados, que son costosos de construir, verificar o difíciles de sincronizar.",
+    "propuesta": "EnvACE propone un método de 'ensayo mundial' donde el agente, además de generar una llamada a una herramienta, simula la respuesta del entorno a esa acción. Ambas funciones (agente y entorno) se optimizan conjuntamente, internalizando la dinámica del entorno en los parámetros del modelo.",
+    "resultados": "EnvACE logra un rendimiento sólido y transferible en varios benchmarks (BFCL-v4, tau^2-Bench, VitaBench, FinMCP-Bench), superando a los métodos que escalan con el entorno. Los estudios controlados demuestran que el ensayo mundial mejora consistentemente el aprendizaje de la política. En tiempo de prueba, el modelo internalizado permite un ensayo privado que mejora aún más el rendimiento sin interacciones externas adicionales.",
+    "por_que_importa": "Este enfoque reduce drásticamente la dependencia de costosos entornos externos durante el entrenamiento, permitiendo escalar el desarrollo de agentes de IA más capaces y eficientes para tareas complejas, y mejora el rendimiento en tiempo de ejecución mediante la simulación interna.",
+    "tags": [
+      "aprendizaje por refuerzo",
+      "agentes de IA",
+      "uso de herramientas",
+      "simulación interna",
+      "eficiencia de entrenamiento",
+      "modelos de lenguaje grandes"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-07T13:49:58Z"
+  },
+  "arxiv:2608.06020": {
+    "tldr": "Construyendo modelos económicos del mundo como motores generativos para simular economías complejas desde cero.",
+    "problema": "Los modelos económicos actuales no capturan la complejidad de las economías reales, limitando su capacidad para simular la evolución económica y entrenar agentes de IA.",
+    "propuesta": "Se propone un plan de implementación para crear 'Modelos Económicos del Mundo' (EWMs) como sistemas generativos con agentes heterogéneos que interactúan, aprenden y coevolucionan con mercados e instituciones, organizados en una escalera de capacidades de seis niveles.",
+    "resultados": "La investigación actual se concentra en niveles inferiores de simulación. Los sistemas con agentes autoevolutivos, instituciones endógenas y alineación empírica persistente son raros. El resumen no especifica resultados numéricos.",
+    "por_que_importa": "Permite crear entornos de simulación de alta fidelidad para la toma de decisiones humanas y como base para entrenar, planificar y evaluar agentes de IA en contextos económicos realistas.",
+    "tags": [
+      "modelos económicos",
+      "simulación",
+      "agentes heterogéneos",
+      "inteligencia artificial",
+      "economía computacional",
+      "plan de implementación"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-07T13:50:09Z"
+  },
+  "arxiv:2608.05631": {
+    "tldr": "ChronoVision mejora el razonamiento temporal en modelos multimodales alineando la lógica visual con representaciones latentes de imágenes.",
+    "problema": "Los modelos de lenguaje multimodales actuales tienen dificultades con el razonamiento temporal visual complejo debido a la ambigüedad del lenguaje y la incapacidad de articular transformaciones continuas.",
+    "propuesta": "Se propone ChronoVision, un marco multimodal que utiliza una cabeza visual reconstructiva para predecir estados latentes y un módulo de atención para enfocar la evidencia visual clave. Se entrena con aprendizaje por refuerzo y una nueva métrica de recompensa, y se evalúa con el dataset Vbvr-VQA.",
+    "resultados": "ChronoVision alcanza un rendimiento de vanguardia en Vbvr-VQA con 74.8% de precisión en el dominio y 71.6% fuera de dominio, y un 55.0% en IntPhys2.",
+    "por_que_importa": "Mejora significativamente la capacidad de los modelos de IA para comprender y razonar sobre secuencias de eventos visuales, crucial para aplicaciones como la robótica y la comprensión de videos.",
+    "tags": [
+      "razonamiento temporal",
+      "modelos multimodales",
+      "visión por computadora",
+      "aprendizaje profundo",
+      "IA explicable"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-07T13:50:19Z"
+  },
+  "arxiv:2608.05987": {
+    "tldr": "AgentOPSD mejora el aprendizaje por refuerzo en agentes de IA asignando crédito a decisiones clave en tareas complejas.",
+    "problema": "Los métodos actuales de aprendizaje por refuerzo a menudo fallan en asignar crédito a las decisiones críticas que determinan el resultado en tareas de agente de largo alcance y múltiples turnos, a pesar de tener recompensas verificables.",
+    "propuesta": "AgentOPSD es un método recursivo que asigna crédito a nivel de turno para el aprendizaje por refuerzo de agentes. Agrega brechas de probabilidad logarítmica entre profesor y estudiante a nivel de token para obtener evidencia a nivel de turno y actualiza recursivamente un estado de creencia bayesiano en el espacio de log-odds, convirtiendo la supervisión de resultados dispersos en señales de crédito a nivel de turno.",
+    "resultados": "AgentOPSD supera a los métodos GRPO y de auto-destilación en las tareas ALFWorld, WebShop y Search-QA utilizando modelos Qwen2.5 (3B y 7B). Alcanza un 89.1% de éxito en ALFWorld con Qwen2.5-7B. Los estudios de ablación confirman que la agregación a nivel de turno y las actualizaciones recursivas de creencias dependientes del historial son responsables de las mejoras.",
+    "por_que_importa": "Este método permite una mejor asignación de crédito en tareas complejas, lo que lleva a un rendimiento más eficiente y robusto de los agentes de IA sin necesidad de un crítico adicional ni de más ejecuciones.",
+    "tags": [
+      "aprendizaje por refuerzo",
+      "agentes de IA",
+      "asignación de crédito",
+      "destilación recursiva",
+      "IA explicable"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-07T13:50:29Z"
+  },
+  "arxiv:2608.05802": {
+    "tldr": "Destilación de modelos de lenguaje multilingües para mejorar el razonamiento matemático, especialmente en coreano y japonés.",
+    "problema": "La destilación on-policy (OPD) para el post-entrenamiento de LLMs es prometedora, pero su eficacia en entornos multilingües y para el razonamiento matemático no se ha explorado suficientemente.",
+    "propuesta": "Se estudia la efectividad de OPD y su variante avanzada, OPD^2 (que usa la diferencia de probabilidad entre un modelo 'profesor' y su modelo base como señal de aprendizaje), para el razonamiento matemático en inglés, coreano y japonés.",
+    "resultados": "OPD^2 supera consistentemente a OPD, con mejoras notables en coreano y japonés. El uso de OPD solo en inglés también mejora el rendimiento en coreano y japonés, pero puede sesgar las respuestas hacia el inglés.",
+    "por_que_importa": "Demuestra que las técnicas de destilación pueden mejorar significativamente el razonamiento matemático multilingüe, reduciendo brechas de rendimiento y destacando la necesidad de datos multilingües para mantener la fidelidad del idioma.",
+    "tags": [
+      "LLMs",
+      "Destilación",
+      "Razonamiento Matemático",
+      "Multilingüe",
+      "Ciberseguridad",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-07T13:50:38Z"
+  },
+  "arxiv:2608.05565": {
+    "tldr": "EffectLearner elimina objetos de videos y sus efectos, incluso los complejos y dinámicos, para restauraciones realistas.",
+    "problema": "Los métodos actuales de eliminación de objetos en video fallan al generalizar a efectos complejos, espacialmente dispersos o dinámicos, limitando la calidad de la restauración en escenas reales.",
+    "propuesta": "Se propone EffectLearner, un framework que combina un razonador de objetos-efectos basado en VLM (con análisis de efectos guiado por prompts) y un borrador de video basado en DiT. Utiliza máscaras y supervisión conscientes del movimiento para mejorar la cobertura y estabilidad.",
+    "resultados": "EffectLearner supera a los métodos existentes en ROSE-Bench y demuestra ventajas claras en EffectWorld-Eval y EffectWorld-Wild, destacando su capacidad en escenas complejas.",
+    "por_que_importa": "Permite la eliminación de objetos más robusta y realista en videos del mundo real, abriendo puertas a mejores herramientas de edición y restauración de contenido.",
+    "tags": [
+      "eliminación de objetos",
+      "visión por computadora",
+      "edición de video",
+      "IA generativa",
+      "razonamiento multimodal"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-07T13:51:31Z"
   }
 }
