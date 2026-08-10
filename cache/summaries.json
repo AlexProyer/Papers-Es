@@ -3643,5 +3643,38 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-08-07T13:51:31Z"
+  },
+  "arxiv:2608.04314": {
+    "tldr": "Protege tu contenido visual de usos no autorizados aplicando 'ataques adversariales para el bien' en cada etapa de su ciclo de vida.",
+    "problema": "Los creadores de contenido visual tienen poco control técnico sobre cómo se usa su trabajo una vez que entra en un sistema de IA, lo que permite usos no autorizados, edición maliciosa o suplantación.",
+    "propuesta": "El paper surveyea el paradigma de 'ataques adversariales para el bien', que aplica perturbaciones y señales estructuradas (normalmente usadas en ataques) para proteger el contenido visual. Esto incluye filtros de privacidad, ejemplos no aprendibles, salvaguardas generativas, CAPTCHAs adversariales y mecanismos de procedencia.",
+    "resultados": "Las investigaciones en las cinco áreas (privacidad, entrenamiento no autorizado, edición, control de acceso, atribución) han abordado el problema de forma independiente. La mayoría de las protecciones se validan contra adversarios estáticos, y la evidencia más allá de benchmarks controlados es escasa.",
+    "por_que_importa": "Ofrece un marco unificado para proteger la propiedad intelectual y la privacidad en la era de la IA visual, permitiendo a los creadores mantener el control sobre su contenido a lo largo de su ciclo de vida.",
+    "tags": [
+      "IA",
+      "ciberseguridad",
+      "protección de datos",
+      "contenido visual",
+      "ataques adversariales"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-10T13:51:55Z"
+  },
+  "arxiv:2608.05224": {
+    "tldr": "Modelos pequeños de IA imitan la cognición humana mejor de lo esperado, pero la generalización a tareas nuevas requiere modelos más grandes.",
+    "problema": "Evaluar si los modelos de lenguaje grandes (LLMs) realmente imitan la cognición humana o solo explotan atajos estadísticos, y determinar la escala necesaria para ello.",
+    "propuesta": "Entrenar y evaluar 14 modelos de IA de diversos tamaños (135M a 14B parámetros) en un dataset de datos conductuales humanos (Psych-101) para comparar su rendimiento y capacidad de generalización.",
+    "resultados": "Modelos de 0.6B a 1B parámetros igualan a uno de 70B en datos conocidos. Sin embargo, para generalizar a tareas nuevas (out-of-distribution), los modelos más grandes son significativamente mejores. Eliminar instrucciones, estímulos o feedback reduce el rendimiento drásticamente (75.7% de información perdida).",
+    "por_que_importa": "Estos modelos pequeños pueden servir como estimadores del 'techo de ruido' en experimentos psicológicos, ofreciendo una forma eficiente de entender la cognición humana sin necesidad de modelos gigantescos para ciertas tareas.",
+    "tags": [
+      "IA",
+      "cognición",
+      "modelos pequeños",
+      "psicología",
+      "ciberseguridad",
+      "aprendizaje automático"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-10T13:52:04Z"
   }
 }
