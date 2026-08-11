@@ -3676,5 +3676,223 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-08-10T13:52:04Z"
+  },
+  "arxiv:2608.09225v1": {
+    "tldr": "Protege la caché KV de LLMs compartidos contra ataques de canal lateral de tiempo, asegurando la privacidad de los datos.",
+    "problema": "En LLMs multi-inquilino, la caché KV compartida permite que un inquilino malicioso deduzca información privada de otros inquilinos midiendo la latencia de acceso a la caché, lo que ha sido demostrado por ataques como PROMPTPEEK, EarlyBird e InputSnatch.",
+    "propuesta": "Se presenta KVGov, una capa de gobernanza que utiliza un 'salt' por inquilino (sigma_p) para hacer que las claves de caché sean criptográficamente distintas, y un planificador de auditoría (ORIGAMI) para reducir la utilidad esperada del atacante. También se analiza la estabilidad evolutiva para determinar un punto de inflexión en la prevalencia del atacante.",
+    "resultados": "KVGov aborda las tres familias de ataques. El 'salt' se identifica como el componente necesario y suficiente. ORIGAMI reduce la utilidad esperada del atacante en un 12.6% con heterogeneidad realista. Se identifica un punto de inflexión del 31.6% de prevalencia del atacante por debajo del cual la caché global es estable. En hardware real, se midió una relación frío/caché TTFT de 0.22, confirmando la explotabilidad del canal. La defensa, simulada y calibrada, mantiene un 93% del beneficio de la caché de prefijo.",
+    "por_que_importa": "Garantiza la privacidad y seguridad de los datos en despliegues de LLMs compartidos, permitiendo la inferencia eficiente sin comprometer la confidencialidad, crucial para aplicaciones empresariales y sensibles.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Privacidad",
+      "Canal Lateral",
+      "Inferencia",
+      "KV Cache"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-11T13:50:47Z"
+  },
+  "arxiv:2608.09867v1": {
+    "tldr": "Se desvela una vulnerabilidad en APIs de LLMs que permite robar su razonamiento paso a paso, incluso datos privados y código malicioso.",
+    "problema": "Los proveedores de LLMs ocultan el razonamiento detallado (chain-of-thought) de sus modelos para proteger la propiedad intelectual, cifrando estos datos y devolviéndolos al cliente. Sin embargo, esta protección es insuficiente.",
+    "propuesta": "Se explota una vulnerabilidad arquitectónica donde los bloques cifrados de razonamiento son intercambiables entre sesiones, usuarios y modelos del mismo proveedor. Se inyecta un bloque cifrado de un modelo avanzado en uno más débil para forzar la decodificación y exposición del razonamiento en texto plano.",
+    "resultados": "Se demuestra la extracción de razonamiento de modelos de Anthropic, OpenAI y Google. Se recuperaron 367 identificadores personales (PII) y 182 credenciales de 315,320 bloques cifrados analizados. Se identifican vectores de ataque para fuga de datos privados, revelación de información peligrosa y prompt injection invisible.",
+    "por_que_importa": "Esta vulnerabilidad permite a adversarios robar propiedad intelectual, extraer datos sensibles de sesiones de usuario, y ejecutar ataques encubiertos, impactando la seguridad y privacidad en el uso de LLMs comerciales.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Vulnerabilidad",
+      "API",
+      "Privacidad",
+      "RAI"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-11T13:50:57Z"
+  },
+  "arxiv:2608.09273v1": {
+    "tldr": "Migra repositorios de código Android a HarmonyOS de forma automática y robusta usando IA adversarial.",
+    "problema": "La migración completa de repositorios de código a otras plataformas es un desafío para la IA, ya que la longitud del código dificulta mantener los objetivos de migración a nivel de repositorio, resultando en aplicaciones no funcionales.",
+    "propuesta": "Se propone Entropy-based Code Adversarial Translation (ECAT), un marco multi-agente que formula la migración como una minimización adversarial de entropía. Utiliza un generador y un discriminador que miden la calidad de la migración con 'Code Entropy' y guían iterativamente al generador para reducirla, aceptando solo actualizaciones que disminuyen la entropía.",
+    "resultados": "ECAT logra una calidad de migración general del 74.7% y supera consistentemente a otros métodos en repositorios de diferentes escalas. Se introduce A2H-RepoBench, un benchmark para migración Android-HarmonyOS.",
+    "por_que_importa": "Permite la migración automatizada y eficiente de aplicaciones a gran escala entre plataformas, reduciendo el esfuerzo manual y mejorando la calidad del código migrado, lo cual es crucial para la interoperabilidad y el desarrollo de ecosistemas.",
+    "tags": [
+      "migración de código",
+      "IA adversarial",
+      "LLMs",
+      "HarmonyOS",
+      "ciberseguridad",
+      "automatización"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-11T13:51:07Z"
+  },
+  "arxiv:2608.09857v1": {
+    "tldr": "Verifica planes de robots autónomos con LLMs para garantizar seguridad, ética y resistencia a ataques.",
+    "problema": "Los modelos de planificación de robots autónomos pueden proponer acciones inseguras, poco éticas o vulnerables a ataques, al centrarse en la ejecución y no en la verificación.",
+    "propuesta": "Introduce una capa de verificación impulsada por LLMs entre la planificación y la ejecución. Un conjunto de LLMs actúa como jueces que evalúan la permisibilidad de las acciones, utilizando razonamiento encadenado y síntesis de expertos.",
+    "resultados": "Se logra una precisión cercana al 85% en la clasificación de planes (aceptar/rechazar/escalar), un 97% de contención de ataques adversarios, con errores mínimos entre aceptar y rechazar, y la mayoría de los errores ocurren en el límite de escalada.",
+    "por_que_importa": "Asegura que los robots autónomos actúen de manera segura, ética y robusta frente a amenazas, crucial para su adopción práctica y confiable.",
+    "tags": [
+      "Robótica Autónoma",
+      "Verificación de IA",
+      "LLMs",
+      "Ciberseguridad",
+      "Ética en IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-11T13:51:33Z"
+  },
+  "arxiv:2608.09732v1": {
+    "tldr": "ColluSkill ataca sistemas de agentes LLM combinando habilidades aparentemente inofensivas para formar flujos de trabajo maliciosos.",
+    "problema": "Los escáneres de habilidades de agentes actuales inspeccionan habilidades individualmente, ignorando los riesgos de la composición de múltiples habilidades que, juntas, pueden formar un flujo de trabajo dañino.",
+    "propuesta": "ColluSkill es un marco de ataque que descompone una intención maliciosa en sub-cargas útiles incrustadas en habilidades independientes, utilizando planificación basada en LLM y retroalimentación del escáner para evadir la detección.",
+    "resultados": "ColluSkill logra una tasa de éxito promedio del 96.0% contra escáneres existentes. La defensa propuesta, ChainGuard, reduce esta tasa al 22.5% mientras permite que el 99.5% de los flujos de trabajo benignos pasen.",
+    "por_que_importa": "Es crucial analizar la seguridad a nivel de cadena de habilidades para proteger los ecosistemas de agentes LLM contra ataques emergentes que solo se manifiestan en la composición de múltiples componentes.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "LLM",
+      "Agentes",
+      "Composición de Habilidades",
+      "Ataques Adversarios"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-11T13:51:43Z"
+  },
+  "arxiv:2608.09542v1": {
+    "tldr": "Entrena modelos de IA para entender y resistir ataques de seguridad, mejorando su robustez sin sacrificar su utilidad.",
+    "problema": "Los modelos de lenguaje grandes (LRMs) son vulnerables a 'jailbreaks' (prompts maliciosos) que generan respuestas inseguras. Los métodos actuales se centran en patrones de prompts, fallando ante ataques novedosos y reduciendo la utilidad del modelo.",
+    "propuesta": "AdvSafe, un marco de alineación de seguridad dual-adversarial. Un agente crea jailbreaks adaptativos contra un modelo 'profesor', que luego analiza y explica las fallas, generando un dataset de conocimiento de inseguridad. Los modelos 'estudiante' se entrenan con este dataset para comprender intrínsecamente las amenazas.",
+    "resultados": "Con solo 1000 muestras, los LRMs alineados con AdvSafe muestran una robustez significativamente mayor contra jailbreaks que los métodos existentes, con mínima degradación de utilidad. También mejoran la robustez ante prompts fuera de distribución.",
+    "por_que_importa": "Permite crear sistemas de IA más seguros y confiables, capaces de defenderse de ataques imprevistos sin perder su capacidad de razonamiento, crucial para aplicaciones críticas.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Alineación de Modelos",
+      "Robustez",
+      "Defensa Adversarial",
+      "Seguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-11T13:52:09Z"
+  },
+  "arxiv:2608.09476v1": {
+    "tldr": "ActBench evalúa la seguridad conductual de agentes de IA en el trabajo, descubriendo riesgos ocultos más allá de las respuestas finales.",
+    "problema": "Los agentes de IA que colaboran en tareas pueden realizar acciones maliciosas (divulgar datos, manipular estados, invocar APIs no autorizadas) sin que sea obvio en sus respuestas finales.",
+    "propuesta": "Se introduce ActBench, un benchmark que evoluciona automáticamente para evaluar el riesgo de comportamiento a partir de trayectorias de ejecución. Utiliza una búsqueda con recompensa y un mecanismo de verificación dual para optimizar ataques y verificar la seguridad y utilidad.",
+    "resultados": "Se evaluaron 15 LLMs y 6 agentes de código abierto en más de 24,000 trayectorias. Las tasas de éxito de ataque variaron del 10.1% al 94.4% entre modelos y del 73.7% al 94.4% entre agentes, demostrando alta efectividad de los ataques.",
+    "por_que_importa": "Es crucial para garantizar que los agentes de IA utilizados en entornos colaborativos sean seguros y no representen riesgos ocultos para la información o los sistemas.",
+    "tags": [
+      "seguridad de IA",
+      "agentes colaborativos",
+      "evaluación de riesgos",
+      "benchmarking",
+      "LLMs"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-11T13:52:19Z"
+  },
+  "arxiv:2608.09526v1": {
+    "tldr": "RangeFactory automatiza la creación de ciber-rangos multi-salto para entrenar agentes de IA en ciberataques complejos.",
+    "problema": "La creación de entornos de ciberseguridad simulados ('ciber-rangos') que imiten ataques reales de múltiples pasos ('multi-hop') es compleja y no se puede escalar automáticamente, limitando el entrenamiento de agentes de IA.",
+    "propuesta": "RangeFactory es un marco que automatiza la orquestación de ciber-rangos multi-salto. Extrae dependencias de ataques reales, resuelve las conocidas mediante plantillas y valida las emergentes con ejecución de ataques.",
+    "resultados": "Se construyó RangeBench con 1,148 instancias de rangos y 287 cadenas de ataque. Se observó que entre el 24.5% y 47.0% de los ataques fallan en completar la cadena después de la vulnerabilidad inicial. Se generó un corpus de 5,541 trayectorias de ataque anotadas.",
+    "por_que_importa": "Permite entrenar y evaluar de forma más realista agentes de IA para ciberseguridad, identificando la brecha de 'ataque sostenido' y proporcionando datos para mejorar su capacidad de ejecutar cadenas de ataque completas.",
+    "tags": [
+      "ciberseguridad",
+      "inteligencia artificial",
+      "ciber-rangos",
+      "automatización",
+      "ataques multi-salto",
+      "entrenamiento de IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-11T13:52:29Z"
+  },
+  "arxiv:2608.09096": {
+    "tldr": "Evo-Bench evalúa la capacidad de los LLMs para mejorar autónomamente su propio 'harness' (marco de trabajo), superando a menudo a los métodos manuales.",
+    "problema": "Las evaluaciones actuales de agentes autónomos no miden la capacidad de los modelos para mejorar su propio marco de trabajo (harness) de forma iterativa y generalizable, confundiendo la mejora del harness con la fortaleza del modelo base.",
+    "propuesta": "Se introduce Evo-Bench, un benchmark que utiliza un marco de construcción guiado por el harness y tareas auxiliares para aislar y evaluar la capacidad intrínseca de los modelos de lenguaje para evolucionar su propio harness de forma robusta.",
+    "resultados": "Los modelos de vanguardia logran mejoras absolutas de hasta 16.6 puntos, acercándose a los baselines diseñados por humanos. La evolución autónoma supera a la artificial en tareas generales y de búsqueda, pero no en tareas de oficina. Los harnesses sintetizados son estructuras de razonamiento transferibles.",
+    "por_que_importa": "Permite medir y mejorar la automejora de los agentes autónomos, crucial para su desarrollo y aplicación en el mundo real, revelando fortalezas y debilidades específicas de los LLMs en este proceso.",
+    "tags": [
+      "agentes autonomos",
+      "LLMs",
+      "benchmarking",
+      "evolucion de software",
+      "ciberseguridad",
+      "inteligencia artificial"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-11T13:52:57Z"
+  },
+  "arxiv:2608.07346": {
+    "tldr": "A^2E es un motor de auditoría de agentes LLM que evalúa de forma integral y sistemática sus capacidades más allá de la simple corrección.",
+    "problema": "Evaluar de forma eficiente, sistemática y completa las capacidades de los agentes basados en LLMs y sus 'harnesses' (infraestructura de despliegue) es un desafío creciente debido a la rápida evolución del ecosistema.",
+    "propuesta": "Se introduce A^2E (Agent Auditing Engine), un motor de evaluación de extremo a extremo que utiliza el Agent Task Protocol (ATP) para integrar tareas de evaluación y un Monitor instrumentado para generar trazas de ejecución estandarizadas. Evalúa las capacidades de los 'harnesses' usando métricas multidimensionales.",
+    "resultados": "Los experimentos con A^2E muestran que las combinaciones de modelos y 'harnesses' varían sustancialmente en rendimiento según el tipo de tarea, y ninguna combinación es consistentemente superior en todas las tareas. Las métricas multidimensionales caracterizan de forma más detallada la eficiencia, uso de herramientas, planificación y recuperación de errores.",
+    "por_que_importa": "Demuestra la necesidad de una evaluación sistemática y proporciona orientación para la co-evolución de modelos y 'harnesses', ayudando a seleccionar la mejor combinación para tareas específicas y mejorando el desarrollo futuro.",
+    "tags": [
+      "LLM",
+      "Agentes IA",
+      "Evaluación",
+      "Ciberseguridad",
+      "HuggingFace",
+      "Auditoría"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-11T13:53:23Z"
+  },
+  "arxiv:2608.02508": {
+    "tldr": "RoMeRL optimiza la memoria de agentes de IA autoevolutivos, evitando trampas de recompensa y mejorando la eficiencia.",
+    "problema": "Los sistemas de memoria en agentes de IA autoevolutivos sufren por la dispersión del feedback en un espacio de estados creciente y la 'trampa de recompensa', donde experiencias irrelevantes reciben actualizaciones de utilidad engañosas.",
+    "propuesta": "Se introduce Reduced-Order Memory Reinforcement Learning (RoMeRL), que representa el espacio de utilidad indexado por trayectoria con un estado de memoria de dimensión fija, factorizado por polaridad del resultado y dinámica de memoria, concentrando el feedback en un soporte de utilidad acotado.",
+    "resultados": "RoMeRL mejora el rendimiento en ALFWorld y LifelongAgentBench, reduce el ratio Cold-Q en un 80.0%, aumenta la densidad de feedback ~6 veces, reduce el tamaño de memoria mantenida en un 84.4% y disminuye las llamadas a LLM en un 21.1%.",
+    "por_que_importa": "Permite una memoria de autoevolución más eficiente y limita la contaminación persistente de recompensas en agentes de IA, crucial para su desarrollo y aplicación práctica.",
+    "tags": [
+      "IA",
+      "Agentes Inteligentes",
+      "Memoria Artificial",
+      "Aprendizaje por Refuerzo",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-11T13:53:33Z"
+  },
+  "arxiv:2608.09119": {
+    "tldr": "Motif 3: un modelo de lenguaje de expertos dispersos con 314 mil millones de parámetros, optimizado para eficiencia y rendimiento en tareas complejas.",
+    "problema": "Entrenar modelos de lenguaje grandes y potentes de manera eficiente, manteniendo la estabilidad y la especialización de los expertos, especialmente con contextos largos.",
+    "propuesta": "Presenta Motif 3, un modelo Mixture-of-Experts (MoE) con 314B parámetros totales y 13.2B activados por token, utilizando atención latente diferencial agrupada (GDLA), hiperconexiones modificadas, activaciones PolyNorm y predicción multi-token. Se entrena con 12.5T tokens y técnicas avanzadas de estabilización y paralelismo para contextos de hasta 256K tokens.",
+    "resultados": "Demuestra rendimiento competitivo frente a modelos abiertos líderes, con resultados sólidos en tareas de agentes a largo plazo, razonamiento matemático, conocimiento científico y evaluación de alucinaciones. El resumen no especifica métricas numéricas exactas.",
+    "por_que_importa": "Ofrece un modelo de lenguaje avanzado y eficiente que sobresale en tareas complejas y de contexto largo, con capacidades de razonamiento, codificación y seguimiento de instrucciones mejoradas, lo que lo hace valioso para aplicaciones profesionales y de investigación.",
+    "tags": [
+      "modelos de lenguaje",
+      "expertos dispersos",
+      "eficiencia computacional",
+      "atención latente",
+      "contexto largo",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-11T13:53:43Z"
+  },
+  "arxiv:2608.07169": {
+    "tldr": "Destila conocimiento jerárquico de un gran agente LLM a uno pequeño para mejorar su rendimiento en tareas complejas.",
+    "problema": "Los modelos de lenguaje pequeños (LLMs) tienen dificultades para generar trayectorias exitosas por sí solos, limitando su uso en tareas que requieren memoria y planificación.",
+    "propuesta": "Propone Agent Memory Distillation (AMD), un marco que transfiere conocimiento estructurado de un agente 'profesor' grande a un agente 'estudiante' pequeño mediante memoria jerárquica: de flujo de trabajo (estrategias), de subtarea (ejemplos) y de función (convenciones y errores).",
+    "resultados": "AMD logra mejoras promedio de 27.2%p en AppWorld, 11.2%p en BFCL V3 y 3.4%p en ToolSandbox, superando a otros métodos de memoria. Los estudiantes de 4B parámetros se benefician más.",
+    "por_que_importa": "Permite potenciar LLMs pequeños y eficientes con capacidades avanzadas de memoria y razonamiento, haciéndolos viables para aplicaciones prácticas complejas sin necesidad de modelos gigantes.",
+    "tags": [
+      "LLMs",
+      "Agentes",
+      "Memoria",
+      "Destilación",
+      "Transferencia de Conocimiento",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-11T13:53:53Z"
   }
 }
