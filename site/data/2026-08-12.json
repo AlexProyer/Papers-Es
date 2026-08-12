@@ -1,0 +1,686 @@
+{
+  "date": "2026-08-12",
+  "report_type": "filtrado",
+  "evaluated": 162,
+  "selected": 15,
+  "papers": [
+    {
+      "id": "arxiv:2608.10530v1",
+      "rank": 1,
+      "title": "On Understanding, Identifying, and Mitigating Vulnerabilities in Agentic Large Language Models",
+      "authors": [
+        "Md Jafrin Hossain",
+        "Mohammad Arif Hossain",
+        "Nirwan Ansari"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-11",
+      "url": "https://arxiv.org/abs/2608.10530v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.10530v1",
+      "score": 57,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+7)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Large Language Models (LLMs) have undergone a shift from stateless conversational interfaces to autonomous agents capable of multi-step planning, tool invocation, code execution, and maintaining persistent memory. When these agents operate with real-world privileges---calling APIs, modifying files, and querying databases---a compromised reasoning step can trigger unauthorized data access, irreversible state changes, or cascading failures, yet the security research community has not kept pace. To quantify the state of the field, we conducted a systematic literature review under PRISMA 2020 guidelines across six databases, screening 743 records and retaining 85 papers (2023--2025) on agentic LLM security. Attack research outpaces defense work by 3.9:1. Perception-layer vulnerabilities (prompt injection, jailbreaking, adversarial perturbations) dominate, accounting for 66\\% of papers, while action-layer vulnerabilities (tool misuse, code injection, sandbox escape) appear in only 4.7\\%, misaligned with real-world risk. Code execution security accounts for 3.5\\%, and tool-augmented agents 12\\%. We contribute a four-layer taxonomy mapping 13 vulnerability types across perception, brain, action, and interaction layers, and identify seven open problems centered on containment. Agentic LLM insecurity stems from architectural coupling, where weak isolation allows vulnerabilities to propagate across layers.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los agentes LLM autónomos presentan riesgos de seguridad emergentes que superan la investigación defensiva actual, especialmente en sus acciones.",
+        "problema": "Los modelos de lenguaje grandes (LLMs) se están convirtiendo en agentes autónomos con acceso a sistemas del mundo real. La investigación en seguridad no ha seguido el ritmo, dejando vulnerabilidades críticas sin abordar, especialmente en las capas de acción y ejecución de código.",
+        "propuesta": "Se realizó una revisión sistemática de la literatura sobre la seguridad de los agentes LLM, identificando 85 artículos relevantes. Se propone una taxonomía de cuatro capas (percepción, cerebro, acción, interacción) para mapear 13 tipos de vulnerabilidades y se señalan siete problemas abiertos, centrándose en la contención.",
+        "resultados": "La investigación sobre ataques supera a la defensa en 3.9:1. Las vulnerabilidades de percepción (inyección de prompts, jailbreaking) representan el 66% de los estudios, mientras que las de acción (mal uso de herramientas, inyección de código) solo el 4.7%. La seguridad de la ejecución de código es del 3.5% y los agentes aumentados con herramientas del 12%.",
+        "por_que_importa": "La falta de investigación en defensa y la desproporción de vulnerabilidades de acción frente a las de percepción crean un riesgo significativo para la implementación segura de agentes LLM autónomos en entornos del mundo real.",
+        "tags": [
+          "Agentes LLM",
+          "Ciberseguridad",
+          "Vulnerabilidades",
+          "Revisión sistemática",
+          "Defensa"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-12T13:54:27Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.11047v1",
+      "rank": 2,
+      "title": "V-FiLLM: Verified Financial LLM Reasoning Benchmark",
+      "authors": [
+        "Alicia Larsen",
+        "Victoire Laurent",
+        "Aulia Kharis Rakhamsari",
+        "Lara Turgut"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-08-11",
+      "url": "https://arxiv.org/abs/2608.11047v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.11047v1",
+      "score": 51,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+7)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "While existing benchmarks have made substantial progress in evaluating LLMs across STEM domains, financial reasoning over structured data remains comparatively less explored. We introduce V-FiLLM, a framework that generates financial reasoning benchmarks from executable computation trees grounded in real tables, yielding items whose answers are correct by construction. Trees are evaluated symbolically to obtain ground truth and rendered into natural-language questions, removing any model from the labeling loop, so items can be generated at arbitrary scale without annotation cost and without inheriting a generator's error rate. V-FiLLM exposes four independently controllable axes of difficulty including computation depth, expression breadth, financial concept complexity, and context size. By evaluating on open-source models, we find that accuracy falls up to 51% as reasoning depth increases, and up to 47% points under adversarial numerical perturbations, highlighting remaining challenges in robust financial reasoning over tables. We further show that lightweight LoRA fine-tuning on verified chain-of-thought traces improves accuracy from 81.1% to 85.6% on held-out problems and outperforms the base model by 5% points on FinQA (Chen et al., 2022a), s), suggesting that targeted, low-cost adaptation is a promising direction for compositional reasoning in financial QA.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "V-FiLLM evalúa la capacidad de los LLMs para razonar sobre datos financieros estructurados, revelando debilidades clave y proponiendo mejoras.",
+        "problema": "Los benchmarks actuales para LLMs en razonamiento financiero sobre datos estructurados son limitados. Evaluar la precisión y robustez de los LLMs en este dominio es difícil debido a la complejidad y el coste de la anotación manual.",
+        "propuesta": "Se introduce V-FiLLM, un framework que genera benchmarks de razonamiento financiero a partir de árboles de computación ejecutables. Las respuestas son correctas por construcción, eliminando el error humano en la anotación y permitiendo la generación a gran escala. El sistema controla cuatro ejes de dificultad: profundidad de cómputo, amplitud de expresión, complejidad de conceptos financieros y tamaño del contexto.",
+        "resultados": "La precisión de los LLMs cae hasta un 51% con el aumento de la profundidad de razonamiento y hasta 47 puntos porcentuales ante perturbaciones numéricas adversas. El fine-tuning con LoRA sobre trazas de 'chain-of-thought' verificadas mejora la precisión del 81.1% al 85.6% en problemas no vistos y supera al modelo base en un 5% en FinQA.",
+        "por_que_importa": "Este trabajo es crucial para desarrollar LLMs más fiables en el análisis financiero, un área donde los errores pueden tener consecuencias graves. La metodología de generación automática reduce costes y mejora la escalabilidad, mientras que los hallazgos sobre la robustez y las mejoras mediante fine-tuning ofrecen vías prácticas para la mejora de estos modelos.",
+        "tags": [
+          "LLMs",
+          "Razonamiento Financiero",
+          "Benchmarks",
+          "Ciberseguridad",
+          "IA",
+          "Procesamiento de Datos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-12T13:54:38Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.10959v1",
+      "rank": 3,
+      "title": "Once Poisoned, Arbitrarily Controlled: A Programmable Backdoor in VLMs",
+      "authors": [
+        "Tao Lin",
+        "Gaojie Jin",
+        "Zongxin Liu",
+        "Peng Wu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-11",
+      "url": "https://arxiv.org/abs/2608.10959v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.10959v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Existing vision-language model (VLM) backdoors are usually treated as static vulnerabilities: one-to-one and N-to-N attacks bind one or more triggers to a finite set of targets before victim training. This assumption substantially underestimates the threat. We show that a single poisoning phase can implant a programmable backdoor into a VLM, allowing an attacker to choose previously unseen target-caption semantics at inference time and synthesize corresponding stealthy triggers on demand. Unlike fixed-mapping attacks, the proposed any-to-any caption-control paradigm decouples post-training target selection from poisoning, enabling dynamic control of target captions without retraining the VLM. Our method has two components. First, a heuristic poisoning strategy exposes the model to diverse trigger-caption pairs, encouraging it to learn a general trigger-as-instruction rule rather than memorize a specific backdoor pattern. Second, a feature-space trigger steganography method maps any attacker-specified target caption to a stealthy visual trigger, implemented as either a norm-controlled perturbation or a non-semantic patch. Once inserted into arbitrary images, these triggers cause the poisoned VLM to generate outputs semantically aligned with the chosen target caption, even when the target was unseen during poisoning. Extensive experiments show that our attack achieves high any-to-any caption-control success rates, preserves clean model utility, and remains effective under several classical backdoor defenses.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Una nueva vulnerabilidad permite controlar modelos de IA visual-lingüísticos con 'backdoors' programables y disparadores visuales ocultos.",
+        "problema": "Las vulnerabilidades 'backdoor' en modelos visual-lingüísticos (VLMs) existentes son estáticas y limitadas a objetivos predefinidos. Esto subestima la amenaza, ya que un atacante podría controlar dinámicamente los objetivos.",
+        "propuesta": "Se propone una estrategia de envenenamiento que enseña al VLM una regla general de 'disparador como instrucción', permitiendo al atacante seleccionar semánticas de destino arbitrarias en tiempo de inferencia y generar disparadores visuales sigilosos (perturbaciones o parches) para controlarlas sin reentrenamiento.",
+        "resultados": "La técnica logra altas tasas de éxito en el control de cualquier semántica a cualquier otra ('any-to-any'), preserva la utilidad del modelo limpio y es efectiva contra defensas clásicas de 'backdoor'.",
+        "por_que_importa": "Permite ataques de 'backdoor' mucho más flexibles y sigilosos contra VLMs, representando una amenaza de seguridad significativa que requiere nuevas estrategias de defensa.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Backdoor",
+          "VLM",
+          "Seguridad de modelos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-12T13:54:47Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.11149v1",
+      "rank": 4,
+      "title": "PRMU: A Corpus-Free Benchmark for Person-Centric Knowledge Unlearning in Multimodal Large Language Models",
+      "authors": [
+        "Huafeng Chen",
+        "Yueming Lyu",
+        "Ziyuan Chen",
+        "Wenda Tan"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CV]",
+      "category": "cs.CV",
+      "date": "2026-08-11",
+      "url": "https://arxiv.org/abs/2608.11149v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.11149v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Multimodal large language models (MLLMs) have demonstrated remarkable capabilities in storing and recalling rich person-related knowledge, raising increasing concerns about reliable knowledge removal. However, existing machine unlearning approaches for MLLMs typically assume access to original forget and retain corpora, which are often unavailable in realistic deletion scenarios. To address this limitation, we introduce PRMU, a benchmark for evaluating corpus-free multimodal unlearning under realistic person-centric deletion requests. PRMU focuses on naturally acquired person-related knowledge and evaluates whether models can remove target knowledge while preserving related knowledge through diverse textual and visual probes, including adversarial evaluation and fine-grained locality analysis. To facilitate research in this setting, we further introduce Similarity-Gated Projection Editing (SGPE), a lightweight corpus-free unlearning baseline with knowledge displacement, protected parameter-space editing, and locality-aware multimodal control. Extensive experiments on representative MLLMs reveal that existing unlearning methods often suffer from unfavorable forgetting-locality trade-offs, with significant locality degradation under aggressive forgetting settings, and remain vulnerable to multimodal knowledge reactivation. Meanwhile, SGPE provides a competitive trade-off between target forgetting, locality preservation, and general multimodal utility. We hope PRMU can facilitate future research toward realistic and scalable multimodal machine unlearning. Code and dataset will be released at https://github.com/2231122/PRMU.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Nuevo benchmark y método para eliminar conocimiento específico de personas en modelos multimodales sin usar datos originales.",
+        "problema": "Los modelos de lenguaje multimodales (MLLMs) retienen conocimiento sobre personas, pero eliminarlo es difícil, especialmente sin acceso a los datos originales de entrenamiento (corpus).",
+        "propuesta": "Se introduce PRMU, un benchmark para evaluar la eliminación de conocimiento sin corpus, y SGPE, un método ligero para lograrlo, centrándose en eliminar conocimiento específico de personas preservando el resto.",
+        "resultados": "Los métodos existentes fallan en el equilibrio entre eliminar conocimiento y preservar la localidad (conocimiento relacionado), y son vulnerables a la reactivación. SGPE ofrece un equilibrio competitivo.",
+        "por_que_importa": "Permite eliminar de forma fiable y segura información personal de modelos multimodales, crucial para la privacidad y la regulación, en escenarios prácticos donde los datos originales no están disponibles.",
+        "tags": [
+          "IA multimodal",
+          "Eliminación de conocimiento",
+          "Privacidad",
+          "Benchmarks",
+          "Seguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-12T13:55:00Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.10694v1",
+      "rank": 5,
+      "title": "Optimize Cheap, Deploy Strong: Cost-Aware Cross-Tier Transfer for Evolutionary Optimization",
+      "authors": [
+        "Tal Oved",
+        "Roi Pony",
+        "Oshri Naparstek",
+        "Udi barzelay"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.NE]",
+      "category": "cs.NE",
+      "date": "2026-08-11",
+      "url": "https://arxiv.org/abs/2608.10694v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.10694v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Evolutionary optimization of LLM prompts and agentic programs (e.g., GEPA) is dominated by fitness evaluation: scoring each candidate runs an answering LLM over a validation set, so the evaluator's price tier dictates total search cost. We restructure that search by decoupling the three roles an LLM plays, running the high-volume answering role on the cheapest tier, reserving a strong model for the rare reflection/variation operator, then exploiting upward cross-tier transfer to deploy the cheaply evolved prompt on a stronger target. We contribute a cost-controlled characterization of when cheap-tier search substitutes for target-tier search, and where it fails. Across four tasks (HotpotQA, IFBench, LiveBench-Math, HoVer) and eleven models in four model families, the resulting prompt matches or exceeds same-tier optimization while placing over 96% of search tokens on the cheapest tier, at 5.6-14x lower search cost, rising to 25-54x where reasoning tiers emit long chains of thought on every fitness call.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Optimiza prompts de LLM de forma económica usando modelos baratos y transfiriendo el conocimiento a modelos potentes.",
+        "problema": "La optimización de prompts para LLMs es costosa porque cada evaluación de aptitud requiere ejecutar un LLM sobre un conjunto de validación, y el coste del modelo evaluador determina el coste total de la búsqueda.",
+        "propuesta": "Se propone reestructurar la búsqueda desacoplando los tres roles de un LLM: el rol de respuesta se ejecuta en el nivel más barato, un modelo fuerte se reserva para la reflexión/variación, y se explota la transferencia inter-nivel para desplegar el prompt evolucionado de forma barata en un objetivo más potente.",
+        "resultados": "La optimización resultante iguala o supera la optimización del mismo nivel, colocando más del 96% de los tokens de búsqueda en el nivel más barato, con un coste de búsqueda 5.6-14 veces menor, y hasta 25-54 veces menor cuando los niveles de razonamiento emiten cadenas de pensamiento largas en cada llamada de aptitud.",
+        "por_que_importa": "Permite optimizar de manera eficiente y rentable los prompts de LLMs, reduciendo drásticamente los costes computacionales sin sacrificar el rendimiento, lo que facilita la experimentación y el despliegue de soluciones de IA más potentes.",
+        "tags": [
+          "LLM",
+          "optimización",
+          "coste",
+          "transferencia de conocimiento",
+          "prompts"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-12T13:55:10Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.11146v1",
+      "rank": 6,
+      "title": "The Illusion of Cross-Lingual Safety in Low-Resource Languages",
+      "authors": [
+        "Abigail Oppong",
+        "P Sam Sahil",
+        "Tadesse Destaw Belay",
+        "Maryam Ibrahim Mukhtar"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CL]",
+      "category": "cs.CL",
+      "date": "2026-08-11",
+      "url": "https://arxiv.org/abs/2608.11146v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.11146v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Safety alignment in large language models (LLMs) is largely developed in English, assuming these safeguards generalize across multilingual settings. However, this assumption remains underexplored and exposes a vulnerability in low-resource languages. We investigate cross-lingual safety transfer in four African languages, Twi, Hausa, Amharic, and Swahili, using LoDNA, a new safety dataset that pairs literal translations with culturally localized prompts. To move beyond generation-based evaluation, we propose a latent geometric framework that probes hidden-state refusal representations in LLMs. Our experimental results show that cross-lingual safety transfer is severely limited; harmful prompts retain less than 10% of the English refusal signal across most language-model pairs. Literal and localized prompts are semantically aligned (cosine 0.95-0.996) but drift across layers, suggesting models encode the concepts without routing them to safety mechanisms. These findings demonstrate that current multilingual safety alignment is superficial, providing strong evidence against the assumption of a universal, language-agnostic harm manifold within the specific low-resource languages studied. Warning: This paper contains example data that may be offensive or harmful.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Las salvaguardas de seguridad de los LLM no se transfieren bien a idiomas de bajos recursos, creando vulnerabilidades ocultas.",
+        "problema": "La alineación de seguridad en modelos de lenguaje grandes (LLM) se desarrolla principalmente en inglés, asumiendo que se generaliza a otros idiomas, pero esto no se ha investigado en lenguas de bajos recursos, exponiendo una vulnerabilidad.",
+        "propuesta": "Se investiga la transferencia de seguridad multilingüe en cuatro lenguas africanas (Twi, Hausa, Amharic, Swahili) usando LoDNA, un nuevo conjunto de datos de seguridad. Se propone un marco geométrico latente para analizar las representaciones de rechazo en los estados ocultos de los LLM.",
+        "resultados": "La transferencia de seguridad multilingüe es limitada; las indicaciones dañinas retienen menos del 10% de la señal de rechazo del inglés en la mayoría de los pares idioma-modelo. Las indicaciones literales y localizadas están alineadas semánticamente (coseno 0.95-0.996) pero se desvían entre capas.",
+        "por_que_importa": "Demuestra que la alineación de seguridad multilingüe actual es superficial y no se puede confiar en ella para idiomas de bajos recursos, lo que requiere un enfoque más localizado y profundo para garantizar la seguridad.",
+        "tags": [
+          "LLM",
+          "seguridad",
+          "multilingüe",
+          "idiomas de bajos recursos",
+          "vulnerabilidad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-12T13:55:20Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.10513",
+      "rank": 1,
+      "title": "SafeCap: Improving LVLM Safety with Image Captioning Reinforcement Learning",
+      "authors": [
+        "Caoyuan Ma",
+        "Wenpu Liu",
+        "Weichu Xie",
+        "Tian Gu"
+      ],
+      "source": "Semantic Scholar",
+      "venue": "",
+      "category": null,
+      "date": "2026-08-11",
+      "url": "https://arxiv.org/abs/2608.10513",
+      "pdf_url": null,
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "Large vision-language models (LVLMs) remain vulnerable to jailbreak attacks that exploit visual inputs to bypass safety alignment inherited from their language backbones. We propose SafeCap, a reinforcement-learning framework that aligns LVLMs through learned self-captioning. SafeCap trains a policy model to first generate a safety-relevant image caption and then produce a final answer; the caption is further optimized by whether it enables a frozen LLM to reach a safety-aligned decision. This caption-mediated objective encourages the policy to expose visual cues relevant to safe response generation rather than relying solely on direct refusal supervision. Across five multimodal safety benchmarks and six vision-utility benchmarks, SafeCap substantially improves aggregate safety performance under its intended DirectCap protocol, with gains of 3.7-19.0 points in safety average across four model settings while maintaining comparable or improved vision utility. Under controlled comparisons on matched backbones and data, SafeCap outperforms safety SFT, DPO, and SafeGRPO, demonstrating the effectiveness of caption-mediated reinforcement learning for multimodal safety alignment.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "SafeCap usa aprendizaje por refuerzo y subtítulos de imágenes para hacer los modelos de IA visual más seguros frente a ataques.",
+        "problema": "Los modelos de IA que combinan visión y lenguaje (LVLMs) son vulnerables a ataques que usan imágenes para eludir sus medidas de seguridad.",
+        "propuesta": "SafeCap entrena un modelo para generar primero un subtítulo de imagen relevante para la seguridad y luego una respuesta final. El subtítulo se optimiza para guiar a un modelo de lenguaje congelado a tomar decisiones seguras.",
+        "resultados": "SafeCap mejora la seguridad en 5 benchmarks multimodales (ganancias de 3.7-19.0 puntos) y mantiene o mejora la utilidad visual en 6 benchmarks, superando a otros métodos como SFT, DPO y SafeGRPO.",
+        "por_que_importa": "Este enfoque mejora la robustez de los modelos de IA multimodales frente a ataques de seguridad, haciéndolos más confiables en aplicaciones prácticas sin sacrificar su rendimiento.",
+        "tags": [
+          "IA multimodal",
+          "Ciberseguridad",
+          "Seguridad de IA",
+          "Aprendizaje por refuerzo",
+          "Subtítulos de imágenes"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-12T13:55:30Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.10454",
+      "rank": 2,
+      "title": "Nuclear fusion for AI: A pathway to power data centers sustainably",
+      "authors": [
+        "Layla S. Araiinejad",
+        "V. Nair"
+      ],
+      "source": "Semantic Scholar",
+      "venue": "",
+      "category": null,
+      "date": "2026-08-11",
+      "url": "https://arxiv.org/abs/2608.10454",
+      "pdf_url": null,
+      "score": 50,
+      "topics": [
+        "LLM",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, compliance & audit"
+      ],
+      "abstract_en": "This perspective examines whether nuclear fusion can provide a scalable, low-carbon power source for rapidly growing AI-driven data center demand. As large language models, cloud computing, and cryptocurrency mining accelerate electricity consumption growth, data centers are projected to account for a substantially larger share of U.S. and global electricity use in the coming decades, creating significant pressure on grid reliability and decarbonization goals. We evaluate the technical and economic alignment between data center load profiles and nuclear power, particularly fusion, through a comparative analysis of capacity factors, levelized cost of electricity, grid interconnection constraints, and deployment pathways. Unlike intermittent renewables, nuclear fission and fusion offer high-capacity-factor, firm baseload generation suited to AI training and inference workloads that require continuous, reliable power. Preliminary techno-economic analysis suggests that several Nth-of-a-kind fusion concepts, particularly magnetic confinement systems, may become cost-competitive with firmed renewable systems and advanced fission for hyperscale data center applications. Co-location of fusion plants with data centers further reduces transmission bottlenecks, improves resilience, and aligns with emerging hyperscaler procurement strategies. We also assess recent regulatory developments and argue that fusion's favorable safety profile and reduced waste burden improve its long-term social and political viability relative to fission. We conclude that fusion represents a strategically important pathway for sustainably powering next-generation computing infrastructure and should be prioritized in both policy and industrial deployment planning.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "La fusión nuclear podría ser la solución energética sostenible para los crecientes centros de datos de IA.",
+        "problema": "La demanda de energía de los centros de datos de IA está creciendo exponencialmente, ejerciendo presión sobre la fiabilidad de la red y los objetivos de descarbonización.",
+        "propuesta": "Evaluar la viabilidad de la fusión nuclear como fuente de energía escalable y baja en carbono para centros de datos, comparando sus perfiles de carga con los de la energía nuclear.",
+        "resultados": "Varios conceptos de fusión, especialmente los de confinamiento magnético, podrían ser competitivos en costes con las renovables y la fisión avanzada para centros de datos hiperscale. La co-ubicación reduce cuellos de botella y mejora la resiliencia.",
+        "por_que_importa": "La fusión ofrece una energía de base continua y fiable, crucial para la IA, y representa una vía estratégica para la infraestructura informática sostenible del futuro.",
+        "tags": [
+          "fusión nuclear",
+          "centros de datos",
+          "IA",
+          "energía sostenible",
+          "ciberseguridad",
+          "tecnología"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-12T13:55:39Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.10366",
+      "rank": 1,
+      "title": "DSAgentBench: Can Agents Automate End-to-End Data-Science Workflows in Real Computer Environments?",
+      "authors": [
+        "Mizanur Rahman",
+        "Mohammed Saidul Islam",
+        "Ridwan Mahbub",
+        "Md Tahmid Rahman Laskar"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-11",
+      "url": "https://arxiv.org/abs/2608.10366",
+      "pdf_url": "https://arxiv.org/pdf/2608.10366",
+      "score": 65,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "Real-world data science involves long-horizon workflows that span data wrangling, exploration, modeling, visualization, and validation, and require coordinated use of tools such as notebooks, IDEs, terminals, browsers, and databases within real operating environments. Yet existing benchmarks lack real-computer interaction and do not evaluate whether agents can execute complete end-to-end data-science workflows in realistic computing environments, failing to capture the multi-stage, multi-tool nature of data-science practice. We introduce DSAgentBench, the first benchmark to evaluate whether agents can automate full data-science workflows inside real computer environments. DSAgentBench contains 275 diverse tasks covering the entire data-science life-cycle, reflecting the complexity and tool coordination required in practice. Each task requires grounding decisions in intermediate outputs and coordinated tool use, and includes a deterministic evaluator that verifies analytical correctness, visual outputs, and model performance rather than code-only execution. Our extensive experiments with 15 closed- and open-source models show that even the strongest agent, Claude-4.6-Sonnet, achieves only 56.70% task success, while all open-source agents remain below 1%, frequently failing at tool orchestration, OS grounding, and multi-step reasoning. These results reveal a substantial capability gap between current agentic systems and real data-science workflows, positioning DSAgentBench as a foundation for developing grounded, verifiable, autonomous data-science agents. We release DSAgentBench at https://github.com/vis-nlp/DSAgentBench.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa si los agentes de IA pueden automatizar flujos de trabajo completos de ciencia de datos en entornos reales, revelando una brecha de capacidad significativa.",
+        "problema": "Los flujos de trabajo de ciencia de datos del mundo real son complejos, requieren la coordinación de múltiples herramientas (IDE, terminales, bases de datos) y no son bien representados por los benchmarks actuales, que carecen de interacción con el entorno real y no evalúan flujos de trabajo completos de extremo a extremo.",
+        "propuesta": "Se introduce DSAgentBench, el primer benchmark diseñado para evaluar la capacidad de los agentes de IA para automatizar flujos de trabajo completos de ciencia de datos dentro de entornos informáticos reales. Incluye 275 tareas diversas que cubren todo el ciclo de vida de la ciencia de datos, exigiendo la toma de decisiones basada en salidas intermedias y el uso coordinado de herramientas, con un evaluador determinista que verifica la corrección analítica y el rendimiento.",
+        "resultados": "Los experimentos con 15 modelos mostraron que el mejor agente, Claude-4.6-Sonnet, solo alcanzó el 56.70% de éxito en las tareas. Todos los agentes de código abierto obtuvieron menos del 1% de éxito, fallando frecuentemente en la orquestación de herramientas, la interacción con el sistema operativo y el razonamiento multi-paso.",
+        "por_que_importa": "Este benchmark revela una brecha sustancial entre las capacidades actuales de los agentes de IA y las demandas de los flujos de trabajo de ciencia de datos reales. DSAgentBench servirá como base para el desarrollo de agentes de ciencia de datos autónomos, verificables y con mejor conexión al mundo real.",
+        "tags": [
+          "agentes de IA",
+          "ciencia de datos",
+          "automatización",
+          "benchmarking",
+          "flujos de trabajo",
+          "ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-12T13:55:50Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.10812",
+      "rank": 2,
+      "title": "Reference-Free Post-Training of Open Large Language Models for Multilingual Machine Translation",
+      "authors": [
+        "Chris Han",
+        "Pengzhi Gao",
+        "Pei Fu",
+        "Jian Luan"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-11",
+      "url": "https://arxiv.org/abs/2608.10812",
+      "pdf_url": "https://arxiv.org/pdf/2608.10812",
+      "score": 64,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+7)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "We study reference-free post-training for multilingual machine translation with open large language models. Starting from the supervised-finetuned MiLMMT-46-v0.1 models, we apply Group Relative Policy Optimization (GRPO) with a reward that averages two reference-free quality estimation models and is gated by language identification. We then linearly interpolate the supervised fine-tuning (SFT) and reinforcement learning (RL) model checkpoints to obtain MiLMMT-46-v1.0. Across 46 languages, the resulting models consistently improve translation quality over their SFT counterparts, outperform strong recent open baselines, including Seed-X, HY-MT2, and TranslateGemma, and achieve leading reference-free scores against evaluated proprietary systems such as Google Translate, Gemini 3 Pro, and GPT-5. We further investigate on-policy distillation and find that it reaches, but does not surpass, the quality frontier achieved by RL with checkpoint interpolation. We release the models and code to facilitate future research.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Mejora la traducción automática multilingüe de modelos de lenguaje abiertos sin necesidad de traducciones de referencia.",
+        "problema": "Entrenar modelos de lenguaje grandes (LLMs) para traducción automática multilingüe de alta calidad sin traducciones de referencia (ground truth) es un desafío.",
+        "propuesta": "Se propone un método de post-entrenamiento sin referencias llamado Group Relative Policy Optimization (GRPO), utilizando una recompensa basada en estimadores de calidad y un método de interpolación lineal de checkpoints SFT y RL para obtener el modelo final.",
+        "resultados": "Los modelos resultantes (MiLMMT-46-v1.0) mejoran consistentemente la calidad de traducción en 46 idiomas, superan a otros modelos abiertos (Seed-X, HY-MT2, TranslateGemma) y logran puntuaciones de referencia de alta calidad comparables a sistemas propietarios (Google Translate, Gemini 3 Pro, GPT-5). La destilación on-policy alcanza la calidad del RL con interpolación de checkpoints, pero no la supera.",
+        "por_que_importa": "Permite mejorar la traducción automática multilingüe de forma más eficiente y escalable, reduciendo la dependencia de datos de alta calidad y costosos para el entrenamiento.",
+        "tags": [
+          "traducción automática",
+          "modelos de lenguaje",
+          "multilingüe",
+          "aprendizaje por refuerzo",
+          "ciberseguridad",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-12T13:56:00Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.10915",
+      "rank": 3,
+      "title": "ComBodied Agents: a New Paradigm of Human-Centric Agentic AI",
+      "authors": [
+        "Qianggang Ding",
+        "Xingyao Wang",
+        "Rui Feng",
+        "Zhibin Wang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-11",
+      "url": "https://arxiv.org/abs/2608.10915",
+      "pdf_url": "https://arxiv.org/pdf/2608.10915",
+      "score": 63,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "After an older adult misses a medication dose, a software agent can send another reminder and an embodied agent can bring the medication. Yet neither explains whether the person forgot, is confused, has side effects, or deliberately refused, nor what support is appropriate. This reveals a structural gap in Agentic AI: Digital Agents primarily transform software states, while Embodied Agents transform physical states; neither makes a person's evolving state and agency the primary object of modeling, intervention, and evaluation. We introduce Combodied Agents, a human-centered paradigm that perceives, models, predicts, and supports individual human-state trajectories over time, using software tools, sensors, wearables, robots, and human services as action channels rather than end goals. We unify fragmented capabilities across personal assistants, health agents, AI companions, and adaptive human--AI systems into a closed loop: event-based multimodal perception reconstructs meaningful personal events; longitudinal, correctable memory provides temporal context; Personal World Models estimate future personal states and outcomes under alternative decisions and interventions; and an admissible intervention policy selects proportionate support under consent, uncertainty, safety, reversibility, and user control. Feedback from the person and environment updates the loop. Rather than requiring an exhaustive Human Digital Twin, the framework uses purpose-bounded, uncertainty-aware, user-correctable representations. We organize the design space by human-state targets, relational contexts, and agent roles, and propose scenario-centered evaluation, agency-preservation metrics, benchmark requirements, edge-native personal models, and governance directions. Combodied Agents shift Agentic AI from external task completion toward sustained human benefit.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Agentes 'Combodied' unifican IA digital y robótica para modelar y apoyar el estado humano, priorizando el bienestar a largo plazo.",
+        "problema": "La IA actual, tanto digital como robótica, se enfoca en tareas y estados físicos/digitales, descuidando la modelización y el apoyo al estado y la agencia evolutiva de las personas.",
+        "propuesta": "Introducir el paradigma de Agentes 'Combodied' (Combinados), que perciben, modelan, predicen y apoyan las trayectorias del estado humano a lo largo del tiempo, utilizando diversos canales de acción (software, sensores, robots, servicios) y un bucle cerrado de percepción, memoria, modelos del mundo personal e intervención.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero propone un marco de diseño, métricas de preservación de la agencia y requisitos de benchmark.",
+        "por_que_importa": "Este enfoque cambia el objetivo de la IA de la simple finalización de tareas a la consecución de un beneficio humano sostenido, mejorando el apoyo personalizado en áreas como la salud y la asistencia.",
+        "tags": [
+          "IA centrada en humanos",
+          "Agentes inteligentes",
+          "Robótica",
+          "Salud digital",
+          "Interacción humano-IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-12T13:56:10Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.10875",
+      "rank": 4,
+      "title": "VibeLifeBench: Can Your Life Agent Be Proactive and Persistent in a Living World?",
+      "authors": [
+        "Xiaohongshu Inc"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-11",
+      "url": "https://arxiv.org/abs/2608.10875",
+      "pdf_url": "https://arxiv.org/pdf/2608.10875",
+      "score": 59,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Large language model (LLM) agents are increasingly deployed as personal assistants. Existing evaluations, however, mostly use short, self-contained requests in static environments. Everyday life assistance is different. A task runs for weeks rather than minutes. The world keeps changing while the agent is not being prompted. Many constraints are never stated outright. An agent that merely answers the request in front of it will fail at such a task. What is needed instead is an agent that stays proactive and consistent. It decides on its own when to act, when to ask, and when to stay silent. It notices changes that nobody announced. It keeps one plan coherent from the first day to the last. No current benchmark measures this. We introduce VibeLifeBench, a benchmark of 200 long-horizon tasks across ten everyday-life domains. Each task is a scripted multi-week timeline in a simulated world of 22 mock services. The world advances on its own clock, and many of its changes are silent, so only an agent that re-inspects the world discovers them. Every task is graded by fine-grained, weighted checks that read only what the agent actually left behind, covering the end state, the timeliness of its actions, and whether it upheld the implicit constraints. We evaluate seven frontier models. All of them score low, which shows how far current agents are from assisting with real life. We will open-source all tasks, environments, and the evaluation framework.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa si los asistentes de IA pueden ser proactivos y persistentes en tareas de la vida real a largo plazo.",
+        "problema": "Las evaluaciones actuales de agentes LLM se centran en tareas cortas y estáticas, no reflejando la naturaleza continua, cambiante y con restricciones implícitas de la asistencia en la vida cotidiana.",
+        "propuesta": "Se introduce VibeLifeBench, un benchmark con 200 tareas de largo plazo en 10 dominios, simulando un mundo con 22 servicios que evoluciona independientemente y con cambios silenciosos, evaluando la proactividad y persistencia del agente.",
+        "resultados": "Los siete modelos evaluados obtienen puntuaciones bajas, indicando que los agentes actuales están lejos de poder asistir en tareas de la vida real.",
+        "por_que_importa": "Este benchmark es crucial para medir y mejorar la capacidad de los agentes de IA para manejar tareas complejas y dinámicas del mundo real, yendo más allá de simples respuestas a peticiones.",
+        "tags": [
+          "agentes inteligentes",
+          "evaluación de IA",
+          "tareas de largo plazo",
+          "vida cotidiana",
+          "IA proactiva",
+          "ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-12T13:56:20Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.10692",
+      "rank": 5,
+      "title": "SPIEval: Evaluating Large Language Models as Mobile Assistants over Scattered Personal Information",
+      "authors": [
+        "Junjie Ye",
+        "Zhuohui Sheng",
+        "Shaofan Liu",
+        "Yulun Zhu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-11",
+      "url": "https://arxiv.org/abs/2608.10692",
+      "pdf_url": "https://arxiv.org/pdf/2608.10692",
+      "score": 57,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Large language models (LLMs) are increasingly deployed as mobile assistants, where a key challenge is leveraging personal information scattered across multiple applications (apps) to complete user instructions. However, due to the lack of dedicated benchmarks, their capabilities remain poorly understood. To address this gap, we introduce SPIEval, a human-curated benchmark grounded in five cognitive capabilities (i.e., reasoning, disambiguation, integration, preference inference, and multi-intent decomposition). SPIEval comprises 250 tasks spanning 4,335 personal records distributed across 10 apps and supports multi-turn interaction through 21 tools. Analysis shows that the benchmark exhibits diverse scenarios, challenging tasks, scattered information, controllable environments, and verifiable outcomes. We evaluate nine representative LLMs and find substantial room for improvement. The best-performing model, GPT-5.5 (xhigh), achieves only 57.3% accuracy, while the weakest achieves just 16.4%. Further analysis reveals that 79% of failures stem from inaccurate information localization, as LLMs often commit to plausible but incorrect information instead of continuing retrieval for verification. We also find that fewer than 2% of retrieval actions employ advanced search methods and observe substantial variation in search efficiency across models. These findings expose fundamental limitations of current LLM-based mobile assistants and motivate future research in this direction. Data and code are available at https://huggingface.co/datasets/Junjie-Ye/SPIEval.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evaluar la capacidad de los LLMs como asistentes móviles para usar información personal dispersa en apps.",
+        "problema": "Los asistentes móviles basados en LLMs tienen dificultades para acceder y utilizar información personal dispersa en múltiples aplicaciones para completar instrucciones del usuario, y faltan benchmarks para evaluar esta capacidad.",
+        "propuesta": "Se introduce SPIEval, un benchmark curado manualmente con 250 tareas que cubren 5 capacidades cognitivas y utilizan 10 apps y 21 herramientas, para evaluar LLMs en el manejo de información personal dispersa.",
+        "resultados": "Los 9 LLMs evaluados muestran un rendimiento bajo, con el mejor (GPT-5.5 xhigh) alcanzando solo el 57.3% de precisión y el peor el 16.4%. El 79% de los fallos se deben a la localización incorrecta de información, y menos del 2% de las acciones de recuperación usan métodos avanzados.",
+        "por_que_importa": "Expone limitaciones fundamentales en los asistentes móviles actuales basados en LLMs, destacando la necesidad de mejorar la localización de información y las estrategias de búsqueda para su adopción práctica.",
+        "tags": [
+          "LLMs",
+          "Asistentes Móviles",
+          "Información Personal",
+          "Benchmarks",
+          "Ciberseguridad",
+          "Procesamiento de Lenguaje Natural"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-12T13:56:30Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.10628",
+      "rank": 6,
+      "title": "InSight-doc: Agentic Visual Perception for Long-Document Understanding",
+      "authors": [
+        "Kaican Li",
+        "Weiyan Xie",
+        "Lewei Yao",
+        "Jiannan Wu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-11",
+      "url": "https://arxiv.org/abs/2608.10628",
+      "pdf_url": "https://arxiv.org/pdf/2608.10628",
+      "score": 57,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "Long-document understanding often requires reasoning over many visually rich pages, making inference costly and prone to context rot. In this work, we propose InSight-doc, an agentic visual perception framework that treats visual resolution as an adaptive reasoning-time resource. InSight-doc starts from low resolution and selectively zooms into high-resolution regions for finer evidence, without relying on any external retriever. To train such an agent, we construct an active-perception corpus of 17.9K high-quality SFT examples with region-level zoom-in trajectories, accompanied by 19.2K hard RL examples. Through SFT+RL, InSight-doc-8B improves the baseline by 4.3--16.4 accuracy points over document VQA benchmarks. On long documents, it reduces hallucination by more than 40% and inference latency by 41%--68% while maintaining an accuracy lead. Our code, datasets, and model are released at https://github.com/m-Just/InSight-doc .",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "InSight-doc revoluciona la comprensión de documentos largos adaptando la resolución visual de forma inteligente para mejorar la precisión y reducir costos.",
+        "problema": "Comprender documentos largos con contenido visual es costoso y propenso a errores debido a la necesidad de procesar muchas páginas, lo que puede llevar a la pérdida de contexto.",
+        "propuesta": "Se propone InSight-doc, un marco de percepción visual agentivo que trata la resolución visual como un recurso adaptable. Comienza con baja resolución y se enfoca selectivamente en regiones de alta resolución para obtener evidencia, sin necesidad de recuperadores externos.",
+        "resultados": "InSight-doc-8B mejora la precisión en benchmarks de VQA de documentos en 4.3-16.4 puntos. Reduce las alucinaciones en documentos largos en más del 40% y la latencia de inferencia en un 41%-68%, manteniendo una ventaja en precisión.",
+        "por_que_importa": "Este enfoque optimiza la eficiencia y la fiabilidad de los modelos de IA para procesar documentos complejos y visualmente ricos, reduciendo costos computacionales y mejorando la calidad de las respuestas en aplicaciones prácticas.",
+        "tags": [
+          "comprensión de documentos",
+          "percepción visual",
+          "IA adaptativa",
+          "eficiencia computacional",
+          "ciberseguridad",
+          "procesamiento de lenguaje natural"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-12T13:56:40Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.10299",
+      "rank": 7,
+      "title": "Co-Evolution in Agentic Systems: Toward Self-Directed Evolution Beyond Human Design",
+      "authors": [
+        "Qing Zong",
+        "Jiayu Liu",
+        "Junhao Shen",
+        "Zecong Tang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-10",
+      "url": "https://arxiv.org/abs/2608.10299",
+      "pdf_url": "https://arxiv.org/pdf/2608.10299",
+      "score": 51,
+      "topics": [
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: AI agents, adversarial ML"
+      ],
+      "abstract_en": "Agentic systems are increasingly expected to improve after deployment, yet single-entity self-evolution is often bounded by a static learning context, such as fixed tasks and feedback. This survey focuses on co-evolution in agentic systems, a multi-component form of self-evolution in which multiple agents and their environment impose adaptive pressure on one another. To organize existing papers, we propose a progressive three-stage taxonomy that traces how the system gradually sheds human-engineered constraints. Agent--Agent Co-Evolution studies how agents adapt through dynamic peers, including adversarial, collaborative, and organizational adaptation. Agent--Environment Co-Evolution extends this loop to adaptive tasks, feedback, and interaction spaces that change with the agents. Meta Co-Evolution further explores the possibility of making the evolution mechanism itself evolvable. We also discuss open challenges in evaluating such systems, scaling them across multiple components, and keeping increasingly autonomous evolutionary processes safe and controllable. This survey provides a unified foundation for building robust and open-ended agentic systems that can improve beyond fixed human-designed paths.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Explorando la co-evolución en sistemas de agentes para lograr una mejora continua y autónoma más allá del diseño humano.",
+        "problema": "Los sistemas de agentes actuales a menudo tienen una capacidad limitada de auto-mejora post-despliegue debido a contextos de aprendizaje estáticos (tareas y feedback fijos).",
+        "propuesta": "Se propone un marco de co-evolución donde múltiples agentes y su entorno se influyen mutuamente, evolucionando progresivamente para liberarse de restricciones humanas. Se introduce una taxonomía de tres etapas: Co-evolución Agente-Agente, Co-evolución Agente-Entorno y Meta Co-evolución.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero organiza la investigación existente y destaca los desafíos abiertos en evaluación, escalabilidad y seguridad de estos sistemas.",
+        "por_que_importa": "Permite el desarrollo de sistemas de agentes más robustos y capaces de una mejora continua y abierta, superando las limitaciones del diseño humano inicial y adaptándose dinámicamente.",
+        "tags": [
+          "sistemas de agentes",
+          "co-evolución",
+          "auto-mejora",
+          "inteligencia artificial",
+          "ciberseguridad",
+          "evolución"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-12T13:56:49Z"
+      }
+    }
+  ],
+  "generated_at": "2026-08-12T13:56:49Z"
+}

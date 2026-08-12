@@ -3894,5 +3894,253 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-08-11T13:53:53Z"
+  },
+  "arxiv:2608.10530v1": {
+    "tldr": "Los agentes LLM autónomos presentan riesgos de seguridad emergentes que superan la investigación defensiva actual, especialmente en sus acciones.",
+    "problema": "Los modelos de lenguaje grandes (LLMs) se están convirtiendo en agentes autónomos con acceso a sistemas del mundo real. La investigación en seguridad no ha seguido el ritmo, dejando vulnerabilidades críticas sin abordar, especialmente en las capas de acción y ejecución de código.",
+    "propuesta": "Se realizó una revisión sistemática de la literatura sobre la seguridad de los agentes LLM, identificando 85 artículos relevantes. Se propone una taxonomía de cuatro capas (percepción, cerebro, acción, interacción) para mapear 13 tipos de vulnerabilidades y se señalan siete problemas abiertos, centrándose en la contención.",
+    "resultados": "La investigación sobre ataques supera a la defensa en 3.9:1. Las vulnerabilidades de percepción (inyección de prompts, jailbreaking) representan el 66% de los estudios, mientras que las de acción (mal uso de herramientas, inyección de código) solo el 4.7%. La seguridad de la ejecución de código es del 3.5% y los agentes aumentados con herramientas del 12%.",
+    "por_que_importa": "La falta de investigación en defensa y la desproporción de vulnerabilidades de acción frente a las de percepción crean un riesgo significativo para la implementación segura de agentes LLM autónomos en entornos del mundo real.",
+    "tags": [
+      "Agentes LLM",
+      "Ciberseguridad",
+      "Vulnerabilidades",
+      "Revisión sistemática",
+      "Defensa"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-12T13:54:27Z"
+  },
+  "arxiv:2608.11047v1": {
+    "tldr": "V-FiLLM evalúa la capacidad de los LLMs para razonar sobre datos financieros estructurados, revelando debilidades clave y proponiendo mejoras.",
+    "problema": "Los benchmarks actuales para LLMs en razonamiento financiero sobre datos estructurados son limitados. Evaluar la precisión y robustez de los LLMs en este dominio es difícil debido a la complejidad y el coste de la anotación manual.",
+    "propuesta": "Se introduce V-FiLLM, un framework que genera benchmarks de razonamiento financiero a partir de árboles de computación ejecutables. Las respuestas son correctas por construcción, eliminando el error humano en la anotación y permitiendo la generación a gran escala. El sistema controla cuatro ejes de dificultad: profundidad de cómputo, amplitud de expresión, complejidad de conceptos financieros y tamaño del contexto.",
+    "resultados": "La precisión de los LLMs cae hasta un 51% con el aumento de la profundidad de razonamiento y hasta 47 puntos porcentuales ante perturbaciones numéricas adversas. El fine-tuning con LoRA sobre trazas de 'chain-of-thought' verificadas mejora la precisión del 81.1% al 85.6% en problemas no vistos y supera al modelo base en un 5% en FinQA.",
+    "por_que_importa": "Este trabajo es crucial para desarrollar LLMs más fiables en el análisis financiero, un área donde los errores pueden tener consecuencias graves. La metodología de generación automática reduce costes y mejora la escalabilidad, mientras que los hallazgos sobre la robustez y las mejoras mediante fine-tuning ofrecen vías prácticas para la mejora de estos modelos.",
+    "tags": [
+      "LLMs",
+      "Razonamiento Financiero",
+      "Benchmarks",
+      "Ciberseguridad",
+      "IA",
+      "Procesamiento de Datos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-12T13:54:38Z"
+  },
+  "arxiv:2608.10959v1": {
+    "tldr": "Una nueva vulnerabilidad permite controlar modelos de IA visual-lingüísticos con 'backdoors' programables y disparadores visuales ocultos.",
+    "problema": "Las vulnerabilidades 'backdoor' en modelos visual-lingüísticos (VLMs) existentes son estáticas y limitadas a objetivos predefinidos. Esto subestima la amenaza, ya que un atacante podría controlar dinámicamente los objetivos.",
+    "propuesta": "Se propone una estrategia de envenenamiento que enseña al VLM una regla general de 'disparador como instrucción', permitiendo al atacante seleccionar semánticas de destino arbitrarias en tiempo de inferencia y generar disparadores visuales sigilosos (perturbaciones o parches) para controlarlas sin reentrenamiento.",
+    "resultados": "La técnica logra altas tasas de éxito en el control de cualquier semántica a cualquier otra ('any-to-any'), preserva la utilidad del modelo limpio y es efectiva contra defensas clásicas de 'backdoor'.",
+    "por_que_importa": "Permite ataques de 'backdoor' mucho más flexibles y sigilosos contra VLMs, representando una amenaza de seguridad significativa que requiere nuevas estrategias de defensa.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Backdoor",
+      "VLM",
+      "Seguridad de modelos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-12T13:54:47Z"
+  },
+  "arxiv:2608.11149v1": {
+    "tldr": "Nuevo benchmark y método para eliminar conocimiento específico de personas en modelos multimodales sin usar datos originales.",
+    "problema": "Los modelos de lenguaje multimodales (MLLMs) retienen conocimiento sobre personas, pero eliminarlo es difícil, especialmente sin acceso a los datos originales de entrenamiento (corpus).",
+    "propuesta": "Se introduce PRMU, un benchmark para evaluar la eliminación de conocimiento sin corpus, y SGPE, un método ligero para lograrlo, centrándose en eliminar conocimiento específico de personas preservando el resto.",
+    "resultados": "Los métodos existentes fallan en el equilibrio entre eliminar conocimiento y preservar la localidad (conocimiento relacionado), y son vulnerables a la reactivación. SGPE ofrece un equilibrio competitivo.",
+    "por_que_importa": "Permite eliminar de forma fiable y segura información personal de modelos multimodales, crucial para la privacidad y la regulación, en escenarios prácticos donde los datos originales no están disponibles.",
+    "tags": [
+      "IA multimodal",
+      "Eliminación de conocimiento",
+      "Privacidad",
+      "Benchmarks",
+      "Seguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-12T13:55:00Z"
+  },
+  "arxiv:2608.10694v1": {
+    "tldr": "Optimiza prompts de LLM de forma económica usando modelos baratos y transfiriendo el conocimiento a modelos potentes.",
+    "problema": "La optimización de prompts para LLMs es costosa porque cada evaluación de aptitud requiere ejecutar un LLM sobre un conjunto de validación, y el coste del modelo evaluador determina el coste total de la búsqueda.",
+    "propuesta": "Se propone reestructurar la búsqueda desacoplando los tres roles de un LLM: el rol de respuesta se ejecuta en el nivel más barato, un modelo fuerte se reserva para la reflexión/variación, y se explota la transferencia inter-nivel para desplegar el prompt evolucionado de forma barata en un objetivo más potente.",
+    "resultados": "La optimización resultante iguala o supera la optimización del mismo nivel, colocando más del 96% de los tokens de búsqueda en el nivel más barato, con un coste de búsqueda 5.6-14 veces menor, y hasta 25-54 veces menor cuando los niveles de razonamiento emiten cadenas de pensamiento largas en cada llamada de aptitud.",
+    "por_que_importa": "Permite optimizar de manera eficiente y rentable los prompts de LLMs, reduciendo drásticamente los costes computacionales sin sacrificar el rendimiento, lo que facilita la experimentación y el despliegue de soluciones de IA más potentes.",
+    "tags": [
+      "LLM",
+      "optimización",
+      "coste",
+      "transferencia de conocimiento",
+      "prompts"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-12T13:55:10Z"
+  },
+  "arxiv:2608.11146v1": {
+    "tldr": "Las salvaguardas de seguridad de los LLM no se transfieren bien a idiomas de bajos recursos, creando vulnerabilidades ocultas.",
+    "problema": "La alineación de seguridad en modelos de lenguaje grandes (LLM) se desarrolla principalmente en inglés, asumiendo que se generaliza a otros idiomas, pero esto no se ha investigado en lenguas de bajos recursos, exponiendo una vulnerabilidad.",
+    "propuesta": "Se investiga la transferencia de seguridad multilingüe en cuatro lenguas africanas (Twi, Hausa, Amharic, Swahili) usando LoDNA, un nuevo conjunto de datos de seguridad. Se propone un marco geométrico latente para analizar las representaciones de rechazo en los estados ocultos de los LLM.",
+    "resultados": "La transferencia de seguridad multilingüe es limitada; las indicaciones dañinas retienen menos del 10% de la señal de rechazo del inglés en la mayoría de los pares idioma-modelo. Las indicaciones literales y localizadas están alineadas semánticamente (coseno 0.95-0.996) pero se desvían entre capas.",
+    "por_que_importa": "Demuestra que la alineación de seguridad multilingüe actual es superficial y no se puede confiar en ella para idiomas de bajos recursos, lo que requiere un enfoque más localizado y profundo para garantizar la seguridad.",
+    "tags": [
+      "LLM",
+      "seguridad",
+      "multilingüe",
+      "idiomas de bajos recursos",
+      "vulnerabilidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-12T13:55:20Z"
+  },
+  "arxiv:2608.10513": {
+    "tldr": "SafeCap usa aprendizaje por refuerzo y subtítulos de imágenes para hacer los modelos de IA visual más seguros frente a ataques.",
+    "problema": "Los modelos de IA que combinan visión y lenguaje (LVLMs) son vulnerables a ataques que usan imágenes para eludir sus medidas de seguridad.",
+    "propuesta": "SafeCap entrena un modelo para generar primero un subtítulo de imagen relevante para la seguridad y luego una respuesta final. El subtítulo se optimiza para guiar a un modelo de lenguaje congelado a tomar decisiones seguras.",
+    "resultados": "SafeCap mejora la seguridad en 5 benchmarks multimodales (ganancias de 3.7-19.0 puntos) y mantiene o mejora la utilidad visual en 6 benchmarks, superando a otros métodos como SFT, DPO y SafeGRPO.",
+    "por_que_importa": "Este enfoque mejora la robustez de los modelos de IA multimodales frente a ataques de seguridad, haciéndolos más confiables en aplicaciones prácticas sin sacrificar su rendimiento.",
+    "tags": [
+      "IA multimodal",
+      "Ciberseguridad",
+      "Seguridad de IA",
+      "Aprendizaje por refuerzo",
+      "Subtítulos de imágenes"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-12T13:55:30Z"
+  },
+  "arxiv:2608.10454": {
+    "tldr": "La fusión nuclear podría ser la solución energética sostenible para los crecientes centros de datos de IA.",
+    "problema": "La demanda de energía de los centros de datos de IA está creciendo exponencialmente, ejerciendo presión sobre la fiabilidad de la red y los objetivos de descarbonización.",
+    "propuesta": "Evaluar la viabilidad de la fusión nuclear como fuente de energía escalable y baja en carbono para centros de datos, comparando sus perfiles de carga con los de la energía nuclear.",
+    "resultados": "Varios conceptos de fusión, especialmente los de confinamiento magnético, podrían ser competitivos en costes con las renovables y la fisión avanzada para centros de datos hiperscale. La co-ubicación reduce cuellos de botella y mejora la resiliencia.",
+    "por_que_importa": "La fusión ofrece una energía de base continua y fiable, crucial para la IA, y representa una vía estratégica para la infraestructura informática sostenible del futuro.",
+    "tags": [
+      "fusión nuclear",
+      "centros de datos",
+      "IA",
+      "energía sostenible",
+      "ciberseguridad",
+      "tecnología"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-12T13:55:39Z"
+  },
+  "arxiv:2608.10366": {
+    "tldr": "Evalúa si los agentes de IA pueden automatizar flujos de trabajo completos de ciencia de datos en entornos reales, revelando una brecha de capacidad significativa.",
+    "problema": "Los flujos de trabajo de ciencia de datos del mundo real son complejos, requieren la coordinación de múltiples herramientas (IDE, terminales, bases de datos) y no son bien representados por los benchmarks actuales, que carecen de interacción con el entorno real y no evalúan flujos de trabajo completos de extremo a extremo.",
+    "propuesta": "Se introduce DSAgentBench, el primer benchmark diseñado para evaluar la capacidad de los agentes de IA para automatizar flujos de trabajo completos de ciencia de datos dentro de entornos informáticos reales. Incluye 275 tareas diversas que cubren todo el ciclo de vida de la ciencia de datos, exigiendo la toma de decisiones basada en salidas intermedias y el uso coordinado de herramientas, con un evaluador determinista que verifica la corrección analítica y el rendimiento.",
+    "resultados": "Los experimentos con 15 modelos mostraron que el mejor agente, Claude-4.6-Sonnet, solo alcanzó el 56.70% de éxito en las tareas. Todos los agentes de código abierto obtuvieron menos del 1% de éxito, fallando frecuentemente en la orquestación de herramientas, la interacción con el sistema operativo y el razonamiento multi-paso.",
+    "por_que_importa": "Este benchmark revela una brecha sustancial entre las capacidades actuales de los agentes de IA y las demandas de los flujos de trabajo de ciencia de datos reales. DSAgentBench servirá como base para el desarrollo de agentes de ciencia de datos autónomos, verificables y con mejor conexión al mundo real.",
+    "tags": [
+      "agentes de IA",
+      "ciencia de datos",
+      "automatización",
+      "benchmarking",
+      "flujos de trabajo",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-12T13:55:50Z"
+  },
+  "arxiv:2608.10812": {
+    "tldr": "Mejora la traducción automática multilingüe de modelos de lenguaje abiertos sin necesidad de traducciones de referencia.",
+    "problema": "Entrenar modelos de lenguaje grandes (LLMs) para traducción automática multilingüe de alta calidad sin traducciones de referencia (ground truth) es un desafío.",
+    "propuesta": "Se propone un método de post-entrenamiento sin referencias llamado Group Relative Policy Optimization (GRPO), utilizando una recompensa basada en estimadores de calidad y un método de interpolación lineal de checkpoints SFT y RL para obtener el modelo final.",
+    "resultados": "Los modelos resultantes (MiLMMT-46-v1.0) mejoran consistentemente la calidad de traducción en 46 idiomas, superan a otros modelos abiertos (Seed-X, HY-MT2, TranslateGemma) y logran puntuaciones de referencia de alta calidad comparables a sistemas propietarios (Google Translate, Gemini 3 Pro, GPT-5). La destilación on-policy alcanza la calidad del RL con interpolación de checkpoints, pero no la supera.",
+    "por_que_importa": "Permite mejorar la traducción automática multilingüe de forma más eficiente y escalable, reduciendo la dependencia de datos de alta calidad y costosos para el entrenamiento.",
+    "tags": [
+      "traducción automática",
+      "modelos de lenguaje",
+      "multilingüe",
+      "aprendizaje por refuerzo",
+      "ciberseguridad",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-12T13:56:00Z"
+  },
+  "arxiv:2608.10915": {
+    "tldr": "Agentes 'Combodied' unifican IA digital y robótica para modelar y apoyar el estado humano, priorizando el bienestar a largo plazo.",
+    "problema": "La IA actual, tanto digital como robótica, se enfoca en tareas y estados físicos/digitales, descuidando la modelización y el apoyo al estado y la agencia evolutiva de las personas.",
+    "propuesta": "Introducir el paradigma de Agentes 'Combodied' (Combinados), que perciben, modelan, predicen y apoyan las trayectorias del estado humano a lo largo del tiempo, utilizando diversos canales de acción (software, sensores, robots, servicios) y un bucle cerrado de percepción, memoria, modelos del mundo personal e intervención.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero propone un marco de diseño, métricas de preservación de la agencia y requisitos de benchmark.",
+    "por_que_importa": "Este enfoque cambia el objetivo de la IA de la simple finalización de tareas a la consecución de un beneficio humano sostenido, mejorando el apoyo personalizado en áreas como la salud y la asistencia.",
+    "tags": [
+      "IA centrada en humanos",
+      "Agentes inteligentes",
+      "Robótica",
+      "Salud digital",
+      "Interacción humano-IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-12T13:56:10Z"
+  },
+  "arxiv:2608.10875": {
+    "tldr": "Evalúa si los asistentes de IA pueden ser proactivos y persistentes en tareas de la vida real a largo plazo.",
+    "problema": "Las evaluaciones actuales de agentes LLM se centran en tareas cortas y estáticas, no reflejando la naturaleza continua, cambiante y con restricciones implícitas de la asistencia en la vida cotidiana.",
+    "propuesta": "Se introduce VibeLifeBench, un benchmark con 200 tareas de largo plazo en 10 dominios, simulando un mundo con 22 servicios que evoluciona independientemente y con cambios silenciosos, evaluando la proactividad y persistencia del agente.",
+    "resultados": "Los siete modelos evaluados obtienen puntuaciones bajas, indicando que los agentes actuales están lejos de poder asistir en tareas de la vida real.",
+    "por_que_importa": "Este benchmark es crucial para medir y mejorar la capacidad de los agentes de IA para manejar tareas complejas y dinámicas del mundo real, yendo más allá de simples respuestas a peticiones.",
+    "tags": [
+      "agentes inteligentes",
+      "evaluación de IA",
+      "tareas de largo plazo",
+      "vida cotidiana",
+      "IA proactiva",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-12T13:56:20Z"
+  },
+  "arxiv:2608.10692": {
+    "tldr": "Evaluar la capacidad de los LLMs como asistentes móviles para usar información personal dispersa en apps.",
+    "problema": "Los asistentes móviles basados en LLMs tienen dificultades para acceder y utilizar información personal dispersa en múltiples aplicaciones para completar instrucciones del usuario, y faltan benchmarks para evaluar esta capacidad.",
+    "propuesta": "Se introduce SPIEval, un benchmark curado manualmente con 250 tareas que cubren 5 capacidades cognitivas y utilizan 10 apps y 21 herramientas, para evaluar LLMs en el manejo de información personal dispersa.",
+    "resultados": "Los 9 LLMs evaluados muestran un rendimiento bajo, con el mejor (GPT-5.5 xhigh) alcanzando solo el 57.3% de precisión y el peor el 16.4%. El 79% de los fallos se deben a la localización incorrecta de información, y menos del 2% de las acciones de recuperación usan métodos avanzados.",
+    "por_que_importa": "Expone limitaciones fundamentales en los asistentes móviles actuales basados en LLMs, destacando la necesidad de mejorar la localización de información y las estrategias de búsqueda para su adopción práctica.",
+    "tags": [
+      "LLMs",
+      "Asistentes Móviles",
+      "Información Personal",
+      "Benchmarks",
+      "Ciberseguridad",
+      "Procesamiento de Lenguaje Natural"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-12T13:56:30Z"
+  },
+  "arxiv:2608.10628": {
+    "tldr": "InSight-doc revoluciona la comprensión de documentos largos adaptando la resolución visual de forma inteligente para mejorar la precisión y reducir costos.",
+    "problema": "Comprender documentos largos con contenido visual es costoso y propenso a errores debido a la necesidad de procesar muchas páginas, lo que puede llevar a la pérdida de contexto.",
+    "propuesta": "Se propone InSight-doc, un marco de percepción visual agentivo que trata la resolución visual como un recurso adaptable. Comienza con baja resolución y se enfoca selectivamente en regiones de alta resolución para obtener evidencia, sin necesidad de recuperadores externos.",
+    "resultados": "InSight-doc-8B mejora la precisión en benchmarks de VQA de documentos en 4.3-16.4 puntos. Reduce las alucinaciones en documentos largos en más del 40% y la latencia de inferencia en un 41%-68%, manteniendo una ventaja en precisión.",
+    "por_que_importa": "Este enfoque optimiza la eficiencia y la fiabilidad de los modelos de IA para procesar documentos complejos y visualmente ricos, reduciendo costos computacionales y mejorando la calidad de las respuestas en aplicaciones prácticas.",
+    "tags": [
+      "comprensión de documentos",
+      "percepción visual",
+      "IA adaptativa",
+      "eficiencia computacional",
+      "ciberseguridad",
+      "procesamiento de lenguaje natural"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-12T13:56:40Z"
+  },
+  "arxiv:2608.10299": {
+    "tldr": "Explorando la co-evolución en sistemas de agentes para lograr una mejora continua y autónoma más allá del diseño humano.",
+    "problema": "Los sistemas de agentes actuales a menudo tienen una capacidad limitada de auto-mejora post-despliegue debido a contextos de aprendizaje estáticos (tareas y feedback fijos).",
+    "propuesta": "Se propone un marco de co-evolución donde múltiples agentes y su entorno se influyen mutuamente, evolucionando progresivamente para liberarse de restricciones humanas. Se introduce una taxonomía de tres etapas: Co-evolución Agente-Agente, Co-evolución Agente-Entorno y Meta Co-evolución.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero organiza la investigación existente y destaca los desafíos abiertos en evaluación, escalabilidad y seguridad de estos sistemas.",
+    "por_que_importa": "Permite el desarrollo de sistemas de agentes más robustos y capaces de una mejora continua y abierta, superando las limitaciones del diseño humano inicial y adaptándose dinámicamente.",
+    "tags": [
+      "sistemas de agentes",
+      "co-evolución",
+      "auto-mejora",
+      "inteligencia artificial",
+      "ciberseguridad",
+      "evolución"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-12T13:56:49Z"
   }
 }
