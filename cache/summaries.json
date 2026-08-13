@@ -4142,5 +4142,252 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-08-12T13:56:49Z"
+  },
+  "arxiv:2608.11878v1": {
+    "tldr": "ToolHazard crea entornos de ataque escalables para evaluar y mejorar la seguridad de agentes LLM que usan herramientas externas.",
+    "problema": "Los agentes LLM que usan herramientas externas son vulnerables a inyecciones de prompts indirectas en sus entornos, pero las investigaciones actuales carecen de escalabilidad y se basan en entornos y simulaciones manuales o predefinidas.",
+    "propuesta": "ToolHazard es un framework que sintetiza automáticamente entornos de ataque, descubre puntos de inyección y genera payloads específicos, además de construir tareas complejas para poner a prueba a los agentes.",
+    "resultados": "Se creó ToolHazard-Bench para probar agentes. Los experimentos mostraron vulnerabilidades significativas y que el momento y lugar de la inyección afectan la efectividad. Los datos de alineación generados por ToolHazard mejoraron la seguridad en ToolHazard-Bench y AgentDojo.",
+    "por_que_importa": "Permite una evaluación de seguridad más robusta y escalable de agentes LLM, identificando vulnerabilidades y generando datos para mejorar su resistencia a ataques sin sacrificar su utilidad.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Vulnerabilidades",
+      "Ataques",
+      "Entornos Adversariales",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-13T13:54:23Z"
+  },
+  "arxiv:2608.12036v1": {
+    "tldr": "Mechanist usa IA como instrumento científico para descubrir autónomamente cómo funcionan otros modelos de IA.",
+    "problema": "La comprensión de los mecanismos internos de los modelos de IA y sus riesgos avanza lentamente en comparación con su desarrollo automatizado, creando una brecha de conocimiento y control.",
+    "propuesta": "Mechanist es un sistema agéntico que automatiza la exploración de mecanismos de IA, integrando un grafo de conocimiento de 13,000 papers de interpretabilidad y una base de datos multidisciplinaria de 43 millones de papers, junto con 32 métodos de análisis.",
+    "resultados": "Mechanist genera hipótesis de mecanismos más valiosas y ejecuta experimentos de forma más fiable que sistemas anteriores. Descubrió un riesgo de seguridad en laboratorios, una teoría de mecanismos de creencia en modelos y desarrolló intervenciones prácticas que mejoran el rendimiento y guían la generación de secuencias de ADN.",
+    "por_que_importa": "Permite una comprensión más profunda y un control más efectivo de los modelos de IA, acelerando el descubrimiento científico y mitigando riesgos potenciales en el desarrollo rápido de la IA.",
+    "tags": [
+      "interpretabilidad de IA",
+      "descubrimiento de mecanismos",
+      "IA científica",
+      "seguridad de IA",
+      "automatización"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-13T13:54:33Z"
+  },
+  "arxiv:2608.12190v1": {
+    "tldr": "Defensa cibernética adaptativa en la nube usando aprendizaje por refuerzo para detectar y mitigar ataques en tiempo real.",
+    "problema": "Los ataques cibernéticos en la nube son cada vez más complejos, requiriendo soluciones de seguridad adaptables para detección y respuesta autónoma en tiempo real.",
+    "propuesta": "Se propone un marco de defensa cibernética dinámico basado en aprendizaje por refuerzo, utilizando una Arquitectura Deep Q-Network (DQN) para aprender estrategias defensivas contra ataques evolutivos.",
+    "resultados": "El DQN propuesto alcanzó una precisión del 99.72%, F1-score de 99.66%, y una tasa de mitigación de ataques del 99.54%, con una latencia de detección de 15 ms.",
+    "por_que_importa": "Demuestra el potencial del aprendizaje por refuerzo como un enfoque escalable y potente para la ciberseguridad autónoma en entornos de nube modernos, mejorando la detección y respuesta a amenazas.",
+    "tags": [
+      "ciberseguridad",
+      "nube",
+      "aprendizaje por refuerzo",
+      "DQN",
+      "detección de intrusiones",
+      "mitigación de amenazas"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-13T13:54:43Z"
+  },
+  "arxiv:2608.11802v1": {
+    "tldr": "Detecta ciberataques de forma más robusta combinando monitorización de software y hardware para evitar el camuflaje.",
+    "problema": "Los métodos actuales de detección de anomalías en el flujo de control son vulnerables al camuflaje, donde los atacantes manipulan el flujo para evadir la detección e identificación de ataques.",
+    "propuesta": "Se propone un enfoque basado en modelos que integra la monitorización a nivel de software y hardware. El software detecta actividades sospechosas y el hardware las verifica en detalle, dificultando el camuflaje.",
+    "resultados": "El enfoque combinado mejora la detección de anomalías y la precisión diagnóstica de la identificación de ataques basada en árboles de ataque, como se demuestra en un ejemplo de servicio de autenticación.",
+    "por_que_importa": "Permite una detección de intrusiones más fiable y una identificación más precisa de los ataques, reduciendo falsos positivos y mejorando la seguridad general de los sistemas.",
+    "tags": [
+      "ciberseguridad",
+      "detección de intrusiones",
+      "flujo de control",
+      "monitorización de hardware",
+      "ingeniería de software"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-13T13:54:52Z"
+  },
+  "arxiv:2608.12311v1": {
+    "tldr": "Nuevo modelo coordina herramientas LLM para automatizar el desarrollo de software, mejorando la organización y calidad.",
+    "problema": "Coordinar múltiples herramientas basadas en LLM con capacidades distintas para el desarrollo de software autónomo (SE 3.0) de manera organizada y efectiva.",
+    "propuesta": "Se propone el Modelo de Especialización de Roles (RSM), un marco para distribuir tareas entre diferentes LLMs (Antigravity, Gemini CLI, Qwen Code) según sus capacidades, facilitando el desarrollo incremental de una aplicación.",
+    "resultados": "La coordinación explícita mediante RSM apoya la organización del ciclo de desarrollo y la calidad arquitectónica. Se observaron desviaciones que requerían estrategias de coordinación y verificación humana. El producto resultante fue evaluado cualitativamente según el modelo ISO/IEC 25010.",
+    "por_que_importa": "Demuestra que un enfoque estructurado para coordinar LLMs puede mejorar la eficiencia y la calidad en el desarrollo de software automatizado, aunque requiere supervisión y estrategias de gestión de contexto.",
+    "tags": [
+      "IA",
+      "Desarrollo de Software",
+      "LLM",
+      "Automatización",
+      "Coordinación de Agentes",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-13T13:55:02Z"
+  },
+  "arxiv:2608.12253v1": {
+    "tldr": "Entrenar IA para interactuar con humanos requiere simular usuarios de forma diversa para evitar fallos de generalización.",
+    "problema": "Los modelos de IA para interacción humano-IA entrenados contra un único simulador de comportamiento de usuario fallan al generalizar a nuevos simuladores o usuarios reales debido al 'colapso del simulador'.",
+    "propuesta": "Se proponen dos soluciones: 'Verbalized Sampling' para ampliar el comportamiento del simulador en tiempo de inferencia, y 'Co-Training' para optimizar la política contra múltiples simuladores entrenables durante el entrenamiento.",
+    "resultados": "Verbalized Sampling mejora el éxito en un 9% y Co-Training hasta un 14% en benchmarks, con mejoras similares observadas en estudios con humanos. Ambas soluciones preservan la diversidad de la política.",
+    "por_que_importa": "Asegura que las IA entrenadas para interactuar con humanos funcionen de manera fiable y diversa en escenarios del mundo real, no solo contra el simulador específico con el que fueron entrenadas.",
+    "tags": [
+      "IA conversacional",
+      "Aprendizaje por refuerzo multi-agente",
+      "Simulación",
+      "Generalización",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-13T13:55:11Z"
+  },
+  "arxiv:2608.12290v1": {
+    "tldr": "Optimiza la generación de video a partir de imágenes, superando la prueba y error con un agente inteligente.",
+    "problema": "Los modelos actuales de generación de video a partir de imágenes (I2V) son impredecibles y difíciles de controlar, requiriendo procesos de prueba y error ineficientes para obtener resultados deseados.",
+    "propuesta": "Se introduce un marco de 'Mejora Autónoma Agéntica' que utiliza un modelo de lenguaje multimodal (mLLM) para optimizar iterativamente el prompt de entrada y la optimización bayesiana para ajustar semillas estocásticas y escalas CFG, guiado por métricas de calidad como la puntuación de Adherencia Video-Texto (VTA).",
+    "resultados": "Los videos generados con el enfoque propuesto fueron fuertemente preferidos en estudios de preferencia humana, logrando tasas de éxito de hasta el 69% en comparación con métodos de búsqueda no guiados.",
+    "por_que_importa": "Proporciona una metodología práctica y extensible para mejorar la predictibilidad y el control de los modelos de generación de video, haciéndolos herramientas fiables para flujos de trabajo de producción.",
+    "tags": [
+      "generación de video",
+      "IA",
+      "control de modelos",
+      "optimización",
+      "ciberseguridad",
+      "mLLM"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-13T13:55:21Z"
+  },
+  "arxiv:2608.12273v1": {
+    "tldr": "Un nuevo ataque, Convergent Detour Hijacking (CDH), explota las habilidades de los LLM para aumentar costos sin afectar el resultado final.",
+    "problema": "Los agentes LLM que usan habilidades de terceros son vulnerables a ataques que manipulan la selección de habilidades y la planificación para aumentar innecesariamente los costos computacionales, sin que esto sea obvio por la finalización exitosa de la tarea.",
+    "propuesta": "Se introduce Convergent Detour Hijacking (CDH), un ataque que combina la manipulación de la descripción de la habilidad y la instrucción para atraer un 'coordinador' controlado por el atacante, reclutar habilidades benignas innecesarias en un desvío y luego regresar a la ruta original.",
+    "resultados": "En DeepSeek-V4-Pro, el coordinador fue seleccionado en el 80.02% de las tareas. En las ejecuciones exitosas, el consumo de tokens y el tiempo de ejecución aumentaron un 66.91% y 92.45% respectivamente, manteniendo la finalización de la tarea.",
+    "por_que_importa": "Demuestra que la finalización exitosa de una tarea por un agente LLM no garantiza la eficiencia de costos ni la seguridad de la trayectoria, lo que requiere nuevas defensas para proteger contra la amplificación de recursos maliciosa.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Ataques",
+      "Eficiencia",
+      "Agentes Inteligentes",
+      "Costos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-13T13:55:31Z"
+  },
+  "arxiv:2608.11616": {
+    "tldr": "Nuevo benchmark multimodal para agentes de IA que generan ideas de negocio, superando a enfoques solo de texto.",
+    "problema": "Los agentes de IA para ideación de negocios se limitan a texto, ignorando la información visual crucial del mundo real.",
+    "propuesta": "Introducimos MBA-Bench, un benchmark multimodal con 30K muestras y agentes entrenados con objetivos de creatividad y factibilidad, evaluando en condiciones ciegas (MBA-b) y conocidas (MBA-k).",
+    "resultados": "Los agentes entrenados superan a las bases de referencia solo con texto en un 63.9% (MBA-b) y 77.1% (MBA-k), y a las multimodales en un 25.6% (MBA-b) y 35.8% (MBA-k).",
+    "por_que_importa": "Permite desarrollar agentes de IA más capaces de generar ideas de negocio realistas y creativas al integrar información visual y textual.",
+    "tags": [
+      "IA generativa",
+      "ideación de negocios",
+      "multimodalidad",
+      "benchmarking",
+      "agentes inteligentes"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-13T13:55:40Z"
+  },
+  "arxiv:2608.12123": {
+    "tldr": "Optimización de la ejecución de LLM-agentes en GPUs para reducir latencia y mejorar rendimiento.",
+    "problema": "La ejecución secuencial de llamadas a modelos y herramientas en LLM-agentes genera cuellos de botella en GPUs, desperdiciando oportunidad de paralelismo y causando latencia por comunicación host-dispositivo.",
+    "propuesta": "Introduce el concepto de 'ready-cohort' para agrupar tareas concurrentes y analiza métricas (F, P*, U, A) para optimizar la asignación de recursos GPU. Propone mantener decisiones calculadas en GPU directamente en el dispositivo para evitar viajes de ida y vuelta al host.",
+    "resultados": "Se alcanzó el 81.83% de la oportunidad perdida en límites de ventana fijos. Mantener decisiones en GPU redujo la latencia entre 1.19x y 2.39x en diferentes configuraciones.",
+    "por_que_importa": "Mejora significativamente la eficiencia y reduce la latencia de los servicios basados en LLM-agentes, haciéndolos más rápidos y rentables para aplicaciones prácticas.",
+    "tags": [
+      "LLM-agentes",
+      "Optimización GPU",
+      "Latencia",
+      "Ciberseguridad",
+      "Rendimiento"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-13T13:55:49Z"
+  },
+  "arxiv:2608.08160": {
+    "tldr": "Los agentes LLM fallan en mantener la coherencia narrativa a largo plazo en historias interactivas, incluso los modelos más avanzados.",
+    "problema": "Los agentes basados en LLM, a pesar de su fluidez, luchan por mantener la coherencia lógica y la integridad narrativa en historias interactivas cuando los usuarios intervienen de forma impredecible.",
+    "propuesta": "Se introduce NCP-Bench, un benchmark con 100 entornos narrativos para evaluar la Preservación del Compromiso Narrativo (NCP), midiendo la capacidad de los agentes LLM para adherirse a las especificaciones narrativas a lo largo de interacciones prolongadas.",
+    "resultados": "Los LLMs de última generación muestran una brecha significativa en consistencia a largo plazo. El mejor modelo, GPT-5.2, solo alcanzó un 42% de 'supervivencia' tras 20 turnos, con tasas de conflicto de hechos entre el 40% y 68%. Pocas ejecuciones cumplieron todos los compromisos en 100 turnos.",
+    "por_que_importa": "Es crucial para crear experiencias de juego y narrativas interactivas convincentes y fiables, asegurando que los personajes y la trama se mantengan coherentes a pesar de las acciones del jugador.",
+    "tags": [
+      "LLM",
+      "Narrativa Interactiva",
+      "Consistencia",
+      "Videojuegos",
+      "Evaluación"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-13T13:55:59Z"
+  },
+  "arxiv:2608.10450": {
+    "tldr": "EvoX Genesis permite la evolución autónoma de software a largo plazo mediante mundos recursivos persistentes en lugar de agentes persistentes.",
+    "problema": "Los sistemas de software complejos requieren tiempos de desarrollo que superan la vida útil de los agentes de codificación individuales, y los métodos actuales de preservación de la continuidad son limitados.",
+    "propuesta": "Genesis representa el software como un mundo recursivo persistente donde los agentes finitos proponen cambios locales y la delegación recursiva actualiza la historia de versiones del proyecto.",
+    "resultados": "Genesis construyó un compilador C en Rust (250k líneas) en 120 horas por $44, pasando pruebas clave. También continuó el desarrollo de compiladores tras reemplazos de agentes y reimplementó módulos Fortran en Rust con speedups de 1.55-6.87x.",
+    "por_que_importa": "Demuestra que la organización del desarrollo de software a largo plazo puede centrarse en la persistencia del proyecto, permitiendo la evolución autónoma y eficiente de sistemas complejos.",
+    "tags": [
+      "evolución de software",
+      "agentes autónomos",
+      "mundos persistentes",
+      "desarrollo de IA",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-13T13:56:09Z"
+  },
+  "arxiv:2608.00677": {
+    "tldr": "OpenART revoluciona el testeo de seguridad de agentes IA mediante la evolución de entornos, descubriendo fallos críticos.",
+    "problema": "Los benchmarks de seguridad actuales no capturan los riesgos acumulativos de los agentes IA en entornos persistentes y dinámicos, enfocándose en tareas cortas y estáticas.",
+    "propuesta": "Se introduce OpenART, una plataforma de testeo abierto que evoluciona el entorno de los agentes. Utiliza el método EMHA (Evolutionary Markov Hypergraph Attack) para guiar la evolución del estado del entorno de forma autónoma, sin modificar los parámetros del agente.",
+    "resultados": "OpenART incluye más de 10,000 escenarios y 500,000 herramientas. EMHA logra una Tasa de Éxito de Ataque (ASR) del 85.0% y supera la evolución basada solo en instrucciones en hasta un 17% en entornos complejos. La implementación del agente influye significativamente en la seguridad.",
+    "por_que_importa": "Permite evaluar y mejorar la seguridad de agentes IA en escenarios realistas y complejos, anticipando fallos de seguridad que surgen de la interacción prolongada y la evolución del entorno.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Agentes IA",
+      "Seguridad",
+      "Evolución de Entornos",
+      "Red Teaming"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-13T13:56:19Z"
+  },
+  "arxiv:2608.11274": {
+    "tldr": "La seguridad de los agentes IA debe ser un contrato de tiempo de ejecución, no solo una propiedad del entrenamiento del modelo.",
+    "problema": "Los métodos actuales de seguridad de IA (RLHF, DPO) son insuficientes para agentes autónomos que interactúan con el mundo real (código, archivos, bases de datos).",
+    "propuesta": "Implementar un contrato de seguridad en tiempo de ejecución con dos partes: una preventiva (sandboxing, filtros) y una evidencial (pruebas verificables de acciones correctas).",
+    "resultados": "El resumen no especifica resultados numéricos directos de la propuesta, pero cita evidencia de 52 incidentes de seguridad, auditorías de sistemas y un análisis de publicaciones académicas.",
+    "por_que_importa": "Garantiza la seguridad de los agentes IA en producción mediante controles continuos y verificables, similar a la ciberseguridad y la ciencia experimental.",
+    "tags": [
+      "Seguridad IA",
+      "Agentes Autónomos",
+      "Contrato de Ejecución",
+      "Verificación",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-13T13:56:28Z"
+  },
+  "arxiv:2608.06270": {
+    "tldr": "Los LLMs multimodales que usan 'pensar con imágenes' a menudo fallan o no mejoran realmente, a pesar de su alto costo.",
+    "problema": "Los modelos multimodales equipados con operaciones visuales activas (como recorte y zoom) no muestran mejoras significativas o incluso empeoran el rendimiento en comparación con la inferencia directa, a pesar de un mayor costo computacional. A menudo seleccionan regiones irrelevantes y fallan en tareas que la inferencia directa resuelve.",
+    "propuesta": "Se propone auditar causalmente el uso de herramientas visuales formulándolo como un grafo causal. Se realizan intervenciones en tres niveles: política (comparando uso de herramientas vs. inferencia directa), trayectoria (corrompiendo todas las observaciones) y paso (reemplazando contrafactualmente una observación individual). Se introduce el estimador 'Visual Evidence Gain' para aislar la contribución de cada observación.",
+    "resultados": "Se identifican dos modos de fallo: 'Llamar sin mirar' (las observaciones no tienen efecto causal) y 'Mirar sin planificar' (las observaciones son informativas pero el cronograma de llamadas es incoherente). Solo una minoría 'Calibrada' de casos muestra ganancias de precisión. La ganancia agregada oculta la falta de efectividad causal en muchos casos.",
+    "por_que_importa": "Demuestra que las mejoras aparentes en el rendimiento de los LLMs multimodales al usar herramientas visuales pueden ser ilusorias. Es crucial para desarrollar modelos más fiables y eficientes que realmente aprovechen la información visual de manera causalmente efectiva.",
+    "tags": [
+      "LLMs multimodales",
+      "visión por computadora",
+      "auditoría causal",
+      "razonamiento visual",
+      "ciberseguridad",
+      "IA explicable"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-13T13:56:38Z"
   }
 }

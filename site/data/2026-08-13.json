@@ -1,0 +1,691 @@
+{
+  "date": "2026-08-13",
+  "report_type": "filtrado",
+  "evaluated": 144,
+  "selected": 18,
+  "papers": [
+    {
+      "id": "arxiv:2608.11878v1",
+      "rank": 1,
+      "title": "ToolHazard: Scaling Adversarial Environments for Security Evaluation and Alignment of LLM-based Agents",
+      "authors": [
+        "Yutao Mou",
+        "Pengfei Yang",
+        "Zhe Yin",
+        "Zhangchi Xue"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-12",
+      "url": "https://arxiv.org/abs/2608.11878v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.11878v1",
+      "score": 59,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "Large language model (LLM) agents integrated with external tools are vulnerable to indirect prompt injections embedded in environmental states. However, existing studies largely rely on manually implemented or reused environments, stochastic LLM-based tool simulation, and predefined injection locations, limiting scalable security research across broader domains. To bridge this gap, we propose **ToolHazard**, a scalable adversarial environment synthesis framework that reduces human engineering and supports expansion with additional seed domains and compute. Through an Environment Simulator, an Attacker Agent, and a User Simulator, ToolHazard synthesizes executable stateful environments, discovers viable injection points and generates environment-specific payloads, and constructs state-grounded long-horizon tasks. Based on ToolHazard, we build **ToolHazard-Bench** for stress-testing agents under complex workflows and diverse environmental attacks. Experiments reveal substantial agent vulnerabilities and show that injection timing and placement affect attack effectiveness. Moreover, ToolHazard-generated alignment data improves security on both ToolHazard-Bench and AgentDojo while preserving benign task utility.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "ToolHazard crea entornos de ataque escalables para evaluar y mejorar la seguridad de agentes LLM que usan herramientas externas.",
+        "problema": "Los agentes LLM que usan herramientas externas son vulnerables a inyecciones de prompts indirectas en sus entornos, pero las investigaciones actuales carecen de escalabilidad y se basan en entornos y simulaciones manuales o predefinidas.",
+        "propuesta": "ToolHazard es un framework que sintetiza automáticamente entornos de ataque, descubre puntos de inyección y genera payloads específicos, además de construir tareas complejas para poner a prueba a los agentes.",
+        "resultados": "Se creó ToolHazard-Bench para probar agentes. Los experimentos mostraron vulnerabilidades significativas y que el momento y lugar de la inyección afectan la efectividad. Los datos de alineación generados por ToolHazard mejoraron la seguridad en ToolHazard-Bench y AgentDojo.",
+        "por_que_importa": "Permite una evaluación de seguridad más robusta y escalable de agentes LLM, identificando vulnerabilidades y generando datos para mejorar su resistencia a ataques sin sacrificar su utilidad.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Vulnerabilidades",
+          "Ataques",
+          "Entornos Adversariales",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-13T13:54:23Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.12036v1",
+      "rank": 2,
+      "title": "Mechanist: AI as a Scientific Instrument for Discovering the Mechanisms of Intelligence",
+      "authors": [
+        "Mengru Wang",
+        "Junfeng Fang",
+        "Shuofei Qiao",
+        "Zhenqian Xu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CL]",
+      "category": "cs.CL",
+      "date": "2026-08-12",
+      "url": "https://arxiv.org/abs/2608.12036v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.12036v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "AI models have achieved remarkable success across diverse domains, yet the mechanisms underlying their capabilities and the risks they may pose remain poorly understood. As AI development becomes faster and increasingly automated, mechanistic exploration remains largely manual, widening the gap between what models can do and our ability to understand and control them. To bridge this gap, we introduce Mechanist, an agentic system that uses AI as a scientific instrument for the autonomous discovery of mechanisms underlying AI intelligence. To support autonomous mechanistic discovery, we construct an interpretability-focused knowledge graph of approximately 13,000 papers and integrate it with a multidisciplinary database of 43 million papers spanning 26 fields. We further curate a library of 32 foundational methods for mechanism analysis, causal intervention, and validation. Compared with Claude Code and existing AI-scientist systems, Mechanist generates more valuable mechanism hypotheses and executes experiments more reliably. Mechanist also demonstrates a progression from discovering model behaviors to explaining and controlling AI models. Specifically, Mechanist first uncovers a counterintuitive safety risk in scientific laboratories, showing that unsafe traits can transfer across modalities through apparently safe training data. Mechanist then develops a mechanism theory of belief, revealing how models represent world knowledge, form beliefs, infer the beliefs of others, and how these mechanisms emerge during pretraining. Finally, Mechanist translates these mechanistic insights into practical interventions that improve model performance across diverse scenarios and steer scientific foundation models toward generating DNA sequences with specified properties.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Mechanist usa IA como instrumento científico para descubrir autónomamente cómo funcionan otros modelos de IA.",
+        "problema": "La comprensión de los mecanismos internos de los modelos de IA y sus riesgos avanza lentamente en comparación con su desarrollo automatizado, creando una brecha de conocimiento y control.",
+        "propuesta": "Mechanist es un sistema agéntico que automatiza la exploración de mecanismos de IA, integrando un grafo de conocimiento de 13,000 papers de interpretabilidad y una base de datos multidisciplinaria de 43 millones de papers, junto con 32 métodos de análisis.",
+        "resultados": "Mechanist genera hipótesis de mecanismos más valiosas y ejecuta experimentos de forma más fiable que sistemas anteriores. Descubrió un riesgo de seguridad en laboratorios, una teoría de mecanismos de creencia en modelos y desarrolló intervenciones prácticas que mejoran el rendimiento y guían la generación de secuencias de ADN.",
+        "por_que_importa": "Permite una comprensión más profunda y un control más efectivo de los modelos de IA, acelerando el descubrimiento científico y mitigando riesgos potenciales en el desarrollo rápido de la IA.",
+        "tags": [
+          "interpretabilidad de IA",
+          "descubrimiento de mecanismos",
+          "IA científica",
+          "seguridad de IA",
+          "automatización"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-13T13:54:33Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.12190v1",
+      "rank": 3,
+      "title": "Machine Learning-Based Cyber Defense for Cloud Infrastructure: An Adaptive Deep Q-Network Architecture for Intelligent Intrusion Detection and Automated Threat Mitigation",
+      "authors": [
+        "Md Yassir Mottalib",
+        "Md Yousuf",
+        "Eklachur Rahman Bhuiyan",
+        "S M Ahsan Habib"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-12",
+      "url": "https://arxiv.org/abs/2608.12190v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.12190v1",
+      "score": 53,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: cybersecurity, vuln & threats"
+      ],
+      "abstract_en": "With the increasing complexity of cyber assaults in cloud environments, adaptable security solutions are needed that can support real-time detection and autonomous response. In this paper, we propose a reinforcement learning-based dynamic cyber defense framework. We deploy a Deep Q-Network (DQN) to train effective defensive strategies to counteract the evolving cyberattacks. We leverage the CICIDS2017 dataset for model creation and the UNSW-NB15 dataset for external validation, involving preprocessing of data, feature engineering, and adaptive policy learning. We compare the proposed DQN with decision tree, support vector machine, random forest, XGBoost, and multilayer perceptron models. The proposed DQN achieves an accuracy of 99.72%, a precision of 99.68%, a recall of 99.65%, an F1-score of 99.66%, and an ROC-AUC of 0.999, while the false positive rate is 0.31%, the false negative rate is 0.35%, and the detection latency is 15 ms. The framework achieved 99.54% attack mitigation rate, demonstrating strong adaptive and real-time defensive capabilities. These results demonstrate the potential of reinforcement learning as a powerful and scalable approach for autonomous cybersecurity in modern cloud environments.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Defensa cibernética adaptativa en la nube usando aprendizaje por refuerzo para detectar y mitigar ataques en tiempo real.",
+        "problema": "Los ataques cibernéticos en la nube son cada vez más complejos, requiriendo soluciones de seguridad adaptables para detección y respuesta autónoma en tiempo real.",
+        "propuesta": "Se propone un marco de defensa cibernética dinámico basado en aprendizaje por refuerzo, utilizando una Arquitectura Deep Q-Network (DQN) para aprender estrategias defensivas contra ataques evolutivos.",
+        "resultados": "El DQN propuesto alcanzó una precisión del 99.72%, F1-score de 99.66%, y una tasa de mitigación de ataques del 99.54%, con una latencia de detección de 15 ms.",
+        "por_que_importa": "Demuestra el potencial del aprendizaje por refuerzo como un enfoque escalable y potente para la ciberseguridad autónoma en entornos de nube modernos, mejorando la detección y respuesta a amenazas.",
+        "tags": [
+          "ciberseguridad",
+          "nube",
+          "aprendizaje por refuerzo",
+          "DQN",
+          "detección de intrusiones",
+          "mitigación de amenazas"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-13T13:54:43Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.11802v1",
+      "rank": 4,
+      "title": "Towards Model-based Run-time Cybersecurity: On Control-Flow Anomaly Detection, Attack Identification, and Hardware Monitoring",
+      "authors": [
+        "Martin Sachenbacher",
+        "Martin Leucker",
+        "Alexander Weiss",
+        "Aliyu Tanko Ali"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-12",
+      "url": "https://arxiv.org/abs/2608.11802v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.11802v1",
+      "score": 53,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "anomaly detection"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: cybersecurity, vuln & threats, anomaly detection"
+      ],
+      "abstract_en": "Methods to increase the resilience of systems to cyber-attacks become increasingly important. Control-flow monitoring provides a principled basis to ensure integrity and detect possible anomalies at run-time. Once anomalies have been detected, so-called attack trees can be used to identify possible types of attacks. However, this approach is vulnerable to camouflage, by which attackers try to evade detection (and correct identification) by deliberately manipulating also the system's observed control flow. In this paper, we outline a model-based approach that provides more robust intrusion detection and attack identification through an architecture that combines software- with hardware-based monitoring. In this approach, software-level observation indicates suspicious activities, while hardware-level monitoring checks them separately in more detail, making it much harder for attacks to camouflage themselves and go undetected. We illustrate the approach with an authentication-service example that captures a realistic failure mode: a software-level observer sees an anomalous but apparently harmless control-flow deviation, maps it to a benign root cause in an attack tree, but misses the true intrusion. A second, independent hardware control-flow monitor observes the actual transition sequence and thereby changes the attack-tree diagnosis from a low-severity configuration or maintenance issue to a high-confidence code-injection or control-flow hijack. In this scenario, the proposed combination of control-flow anomaly detection, attack-tree based intrusion identification, and hardware-based monitoring can improve not only anomaly detection, but also the diagnostic precision of attack-tree-based cyber-attack identification.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Detecta ciberataques de forma más robusta combinando monitorización de software y hardware para evitar el camuflaje.",
+        "problema": "Los métodos actuales de detección de anomalías en el flujo de control son vulnerables al camuflaje, donde los atacantes manipulan el flujo para evadir la detección e identificación de ataques.",
+        "propuesta": "Se propone un enfoque basado en modelos que integra la monitorización a nivel de software y hardware. El software detecta actividades sospechosas y el hardware las verifica en detalle, dificultando el camuflaje.",
+        "resultados": "El enfoque combinado mejora la detección de anomalías y la precisión diagnóstica de la identificación de ataques basada en árboles de ataque, como se demuestra en un ejemplo de servicio de autenticación.",
+        "por_que_importa": "Permite una detección de intrusiones más fiable y una identificación más precisa de los ataques, reduciendo falsos positivos y mejorando la seguridad general de los sistemas.",
+        "tags": [
+          "ciberseguridad",
+          "detección de intrusiones",
+          "flujo de control",
+          "monitorización de hardware",
+          "ingeniería de software"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-13T13:54:52Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.12311v1",
+      "rank": 5,
+      "title": "The Role Specialization Model (RSM): Coordinating LLM-Based Tools in Agentic Software Development - An Exploratory Case Study",
+      "authors": [
+        "Carlos Alberto Fernández-y-Fernández",
+        "Jorge R. Aguilar-Cisneros"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-08-12",
+      "url": "https://arxiv.org/abs/2608.12311v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.12311v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "The integration of large language models (LLMs) into software development workflows has given rise to a paradigm known as Agentic Software Engineering (SE 3.0), in which autonomous agents manage full development life cycles under human supervision. This paper presents an exploratory case study in which three LLM-based tools, Antigravity (an agentic IDE with a Gemini 2.5 backend), Gemini CLI, and Qwen Code (local execution via Ollama), are coordinated according to a role-distribution framework proposed in this work as the Role Specialization Model (RSM). Three research questions guide the study: (RQ1) how can LLM-based tools with distinct capabilities be coordinated through the RSM in a real development workflow; (RQ2) what deviations from the planned role distribution emerge during RSM execution and what factors explain them; and (RQ3) how does the resulting product compare against the ISO/IEC 25010 quality model. The objective was to propose the RSM with the incremental development of a Python desktop application for interactive climate-data visualization. The workflow, observed deviations, prompt-hardening techniques, and a qualitative quality assessment are documented. Results suggest that explicit role coordination can support development cycle organization and architectural quality, but requires deliberate coordination strategies, context management, and human verification of agent-generated outputs.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Nuevo modelo coordina herramientas LLM para automatizar el desarrollo de software, mejorando la organización y calidad.",
+        "problema": "Coordinar múltiples herramientas basadas en LLM con capacidades distintas para el desarrollo de software autónomo (SE 3.0) de manera organizada y efectiva.",
+        "propuesta": "Se propone el Modelo de Especialización de Roles (RSM), un marco para distribuir tareas entre diferentes LLMs (Antigravity, Gemini CLI, Qwen Code) según sus capacidades, facilitando el desarrollo incremental de una aplicación.",
+        "resultados": "La coordinación explícita mediante RSM apoya la organización del ciclo de desarrollo y la calidad arquitectónica. Se observaron desviaciones que requerían estrategias de coordinación y verificación humana. El producto resultante fue evaluado cualitativamente según el modelo ISO/IEC 25010.",
+        "por_que_importa": "Demuestra que un enfoque estructurado para coordinar LLMs puede mejorar la eficiencia y la calidad en el desarrollo de software automatizado, aunque requiere supervisión y estrategias de gestión de contexto.",
+        "tags": [
+          "IA",
+          "Desarrollo de Software",
+          "LLM",
+          "Automatización",
+          "Coordinación de Agentes",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-13T13:55:02Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.12253v1",
+      "rank": 6,
+      "title": "One Frozen Simulator Is Not Enough: Simulator Collapse in Multi-Agent RL",
+      "authors": [
+        "Simon Yu",
+        "Nicholas Tomlin",
+        "Marwa Abdulhai",
+        "Ximing Lu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-08-12",
+      "url": "https://arxiv.org/abs/2608.12253v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.12253v1",
+      "score": 52,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Multi-agent reinforcement learning for human-AI interaction typically relies on a single large language model to simulate user behavior. We show that this approach systematically fails to generalize, and trace the failure to simulator collapse: because the simulator LLM is mode-collapsed, an LLM policy trained against it overfits to narrow strategies that exploit the simulator's dominant mode, and such a policy transfers poorly to unseen simulators and real users. We formalize this collapse theoretically and propose two complementary solutions, one at inference time and one at training time. The inference-time solution, Verbalized Sampling, broadens the simulator's behavior by sampling from a verbalized response distribution, reducing mode collapse. The training-time solution, Co-Training, jointly optimizes the policy against a population of trainable simulators, preventing it from overfitting to any single simulator's mode. We validate both solutions on three multi-turn benchmarks: Persuasion for Good, $τ^2$-bench, and CooperBench. Verbalized Sampling improves held-out success by up to 9% over single-simulator RL, and Co-Training pushes gains further to 14%; the human study shows similar gain on real users. Both solutions preserve the policy diversity that collapses under single-simulator RL. To support further work in this direction, we release SCOPE, an open-source framework for Population Co-Training multi-agent RL. More broadly, our results suggest that the diversity of the training environment, not only the policy, is critical to the generalization of multi-turn RL to real-world deployment.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Entrenar IA para interactuar con humanos requiere simular usuarios de forma diversa para evitar fallos de generalización.",
+        "problema": "Los modelos de IA para interacción humano-IA entrenados contra un único simulador de comportamiento de usuario fallan al generalizar a nuevos simuladores o usuarios reales debido al 'colapso del simulador'.",
+        "propuesta": "Se proponen dos soluciones: 'Verbalized Sampling' para ampliar el comportamiento del simulador en tiempo de inferencia, y 'Co-Training' para optimizar la política contra múltiples simuladores entrenables durante el entrenamiento.",
+        "resultados": "Verbalized Sampling mejora el éxito en un 9% y Co-Training hasta un 14% en benchmarks, con mejoras similares observadas en estudios con humanos. Ambas soluciones preservan la diversidad de la política.",
+        "por_que_importa": "Asegura que las IA entrenadas para interactuar con humanos funcionen de manera fiable y diversa en escenarios del mundo real, no solo contra el simulador específico con el que fueron entrenadas.",
+        "tags": [
+          "IA conversacional",
+          "Aprendizaje por refuerzo multi-agente",
+          "Simulación",
+          "Generalización",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-13T13:55:11Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.12290v1",
+      "rank": 7,
+      "title": "Beyond Trial-and-Error: Agentic Optimization for Image-to-Video Adherence",
+      "authors": [
+        "Aman Tyagi",
+        "Hemanth Boinpally",
+        "Jonathan Chen",
+        "Douglas Gebert"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-08-12",
+      "url": "https://arxiv.org/abs/2608.12290v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.12290v1",
+      "score": 51,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+7)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Modern black-box Image-to-Video (I2V) models offer powerful capabilities in automated content creation, yet their lack of fine-grained control and reliability presents significant challenges in professional workflows. Their inherent stochasticity causes minor variations in textual prompts or hyperparameters to yield drastically different outputs often necessitating inefficient, brute-force trial-and-error processes. To address these limitations, we introduce the ``Agentic Self-Improvement\" framework, which reframes video synthesis into a closed-loop, goal-directed optimization. Our framework systematically navigates the generation parameter space using a novel two-stage approach. In the first stage, an iterative prompt optimization loop uses a multimodal Large Language Model (mLLM) to refine the input prompt. This refinement implements two automated evaluations: Davidsonian Scene Graph (DSG) queries ensure semantic adherence, and Common Mistake Questions (CMQ) for artifact detection. At the second stage, we use Bayesian optimization to efficiently co-optimize stochastic seeds and CFG scales. This search is guided by a suite of quality metrics, including the novel Video-Text Adherence (VTA) score derived from the DSG and CMQ evaluations. Our framework significantly outperforms unguided search methods: in human preference studies, videos generated via our agentic approach were strongly preferred over baseline outputs, achieving win rates up to 69\\%. This work provides a practical and extensible methodology for enhancing the predictability and control of state-of-the-art video generation models, moving the field beyond speculative curiosities toward reliable, production-ready tools.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Optimiza la generación de video a partir de imágenes, superando la prueba y error con un agente inteligente.",
+        "problema": "Los modelos actuales de generación de video a partir de imágenes (I2V) son impredecibles y difíciles de controlar, requiriendo procesos de prueba y error ineficientes para obtener resultados deseados.",
+        "propuesta": "Se introduce un marco de 'Mejora Autónoma Agéntica' que utiliza un modelo de lenguaje multimodal (mLLM) para optimizar iterativamente el prompt de entrada y la optimización bayesiana para ajustar semillas estocásticas y escalas CFG, guiado por métricas de calidad como la puntuación de Adherencia Video-Texto (VTA).",
+        "resultados": "Los videos generados con el enfoque propuesto fueron fuertemente preferidos en estudios de preferencia humana, logrando tasas de éxito de hasta el 69% en comparación con métodos de búsqueda no guiados.",
+        "por_que_importa": "Proporciona una metodología práctica y extensible para mejorar la predictibilidad y el control de los modelos de generación de video, haciéndolos herramientas fiables para flujos de trabajo de producción.",
+        "tags": [
+          "generación de video",
+          "IA",
+          "control de modelos",
+          "optimización",
+          "ciberseguridad",
+          "mLLM"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-13T13:55:21Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.12273v1",
+      "rank": 8,
+      "title": "Convergent Detour Hijacking: Task-Preserving Resource Amplification in Skill-Based LLM Agents",
+      "authors": [
+        "Junliang Liu",
+        "Ruoyu Li",
+        "Wenxin Tang",
+        "Jingyu Xiao"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-12",
+      "url": "https://arxiv.org/abs/2608.12273v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.12273v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "LLM agents increasingly rely on third-party skills, using natural-language descriptions for selection and instruction bodies for planning. This progressive-disclosure design exposes two sequential control points to untrusted publishers: a static skill may steer an otherwise correct task onto an unnecessarily costly trajectory. Prior work studies selection manipulation, malicious skill instructions, and tool-chain resource amplification largely separately, leaving their end-to-end composition unclear. We introduce Convergent Detour Hijacking (CDH), a text-only, runtime-independent attack that couples these stages. Under shared semantic cover, a description establishes relevance during selection, while an aligned body reuses that rationale to fabricate plausible dependencies during planning. CDH attracts an attacker-controlled coordinator alongside legitimate skills, recruits unnecessary benign skills into a bounded detour, and then re-enters the original route to preserve task completion. We evaluate it across multiple LLM backends and 491 held-out tasks under single-task and multi-turn conditions. On DeepSeek-V4-Pro, the matched coordinator is selected in 80.02% of tasks; among coordinator-hit runs that complete tasks, token consumption and end-to-end execution time increase by 66.91% and 92.45%, respectively, while aggregate task completion remains comparable. Thus, correct outcomes do not guarantee trajectory integrity or cost safety.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Un nuevo ataque, Convergent Detour Hijacking (CDH), explota las habilidades de los LLM para aumentar costos sin afectar el resultado final.",
+        "problema": "Los agentes LLM que usan habilidades de terceros son vulnerables a ataques que manipulan la selección de habilidades y la planificación para aumentar innecesariamente los costos computacionales, sin que esto sea obvio por la finalización exitosa de la tarea.",
+        "propuesta": "Se introduce Convergent Detour Hijacking (CDH), un ataque que combina la manipulación de la descripción de la habilidad y la instrucción para atraer un 'coordinador' controlado por el atacante, reclutar habilidades benignas innecesarias en un desvío y luego regresar a la ruta original.",
+        "resultados": "En DeepSeek-V4-Pro, el coordinador fue seleccionado en el 80.02% de las tareas. En las ejecuciones exitosas, el consumo de tokens y el tiempo de ejecución aumentaron un 66.91% y 92.45% respectivamente, manteniendo la finalización de la tarea.",
+        "por_que_importa": "Demuestra que la finalización exitosa de una tarea por un agente LLM no garantiza la eficiencia de costos ni la seguridad de la trayectoria, lo que requiere nuevas defensas para proteger contra la amplificación de recursos maliciosa.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Ataques",
+          "Eficiencia",
+          "Agentes Inteligentes",
+          "Costos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-13T13:55:31Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.11616",
+      "rank": 1,
+      "title": "MBA: Multimodal Benchmark and Agents for Real-World Business Ideation",
+      "authors": [
+        "Hojun Choi",
+        "Jaeyo Shin",
+        "Suin Lee",
+        "Hyunjung Shim"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-12",
+      "url": "https://arxiv.org/abs/2608.11616",
+      "pdf_url": "https://arxiv.org/pdf/2608.11616",
+      "score": 77,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Agentic systems powered by large language models (LLMs) have opened new opportunities for business ideation. Yet existing approaches remain confined to a text-only paradigm, despite the inherently multimodal nature of real-world contexts. We thus introduce MBA-Bench, the first multimodal benchmark for training and evaluating business ideation agents, comprising 30K samples across six domains, each domain characterized by distinct visual cues not fully conveyed by text alone. Concretely, we automatically caption images and employ GPT-4o to generate five reference ideas for each of three business questions through retrieval query generation, market evidence retrieval, and evidence-augmented synthesis. Following prior work, we evaluate agents across six business-oriented criteria using MLLM-as-a-Judge. To consider settings where criteria are hidden or disclosed, we present MBA-b and MBA-k for blind and known, respectively. We train both with two novel reward objectives---creativity and feasibility---while MBA-k further optimizes the six disclosed criteria for eight in total. Both are trained via LoRA-based supervised fine-tuning followed by group relative policy optimization with these setting-specific rewards. For extensive experiments on MBA-Bench, we set up two baselines accommodating either captions only or multimodal inputs, with the latter nearing closed-source performance on several metrics. MBA-b and MBA-k outperform caption baselines by 63.9% and 77.1%, and multimodal baselines by 25.6% and 35.8%, respectively.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Nuevo benchmark multimodal para agentes de IA que generan ideas de negocio, superando a enfoques solo de texto.",
+        "problema": "Los agentes de IA para ideación de negocios se limitan a texto, ignorando la información visual crucial del mundo real.",
+        "propuesta": "Introducimos MBA-Bench, un benchmark multimodal con 30K muestras y agentes entrenados con objetivos de creatividad y factibilidad, evaluando en condiciones ciegas (MBA-b) y conocidas (MBA-k).",
+        "resultados": "Los agentes entrenados superan a las bases de referencia solo con texto en un 63.9% (MBA-b) y 77.1% (MBA-k), y a las multimodales en un 25.6% (MBA-b) y 35.8% (MBA-k).",
+        "por_que_importa": "Permite desarrollar agentes de IA más capaces de generar ideas de negocio realistas y creativas al integrar información visual y textual.",
+        "tags": [
+          "IA generativa",
+          "ideación de negocios",
+          "multimodalidad",
+          "benchmarking",
+          "agentes inteligentes"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-13T13:55:40Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.12123",
+      "rank": 2,
+      "title": "Ready Cohorts: Bounding GPU Opportunity and Avoiding Host Round Trips in LLM-Agent Control",
+      "authors": [
+        "Josef Liyanjun Chen"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-12",
+      "url": "https://arxiv.org/abs/2608.12123",
+      "pdf_url": "https://arxiv.org/pdf/2608.12123",
+      "score": 69,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "LLM-agent services repeatedly execute small deterministic transitions between model and tool calls: route an outcome, update state, and emit the next effect. We ask when this control path exposes enough concurrent work for GPU execution, and what changes when a GPU-computed route decision remains on device. We formalize the ready-cohort boundary using fixed-partition share F, exact offline share P*, local upper bound U, and online achieved share A. Under zero service time, unlimited capacity, and equal relative launch deadlines, a specialized dynamic program computes P* exactly. In a stationary Poisson replay of one pinned 851-session public trace panel, the primary condition at 100,000 target active sessions, K=256, and a 50 ms launch deadline gives F=30.19%, P*=43.00%, and U=45.85%. Exact packing recovers 81.83% of the opportunity lost at fixed window boundaries. The outcome-derived route key is a conditioning proxy, not proof of executable identity. A separate mechanism study keeps a GPU-computed binary decision on device instead of returning four bytes to the host and redispatching. Across four named GPU placements, the device-resident path is faster in all 36 configurations; within-placement row-median ratios range from 1.19x to 2.39x. Across both admissible mechanisms, all 14,557,440 tested batched invocations match a separately implemented host oracle. A fixed nested device graph that removes no host decision is slower in all 60 configurations across five placements. Together, the studies establish two measurable gates for GPU agent control: deadline-feasible cohort supply and observation placement. A joined finite online runtime is required to measure A, CPU displacement, and service-level benefit.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Optimización de la ejecución de LLM-agentes en GPUs para reducir latencia y mejorar rendimiento.",
+        "problema": "La ejecución secuencial de llamadas a modelos y herramientas en LLM-agentes genera cuellos de botella en GPUs, desperdiciando oportunidad de paralelismo y causando latencia por comunicación host-dispositivo.",
+        "propuesta": "Introduce el concepto de 'ready-cohort' para agrupar tareas concurrentes y analiza métricas (F, P*, U, A) para optimizar la asignación de recursos GPU. Propone mantener decisiones calculadas en GPU directamente en el dispositivo para evitar viajes de ida y vuelta al host.",
+        "resultados": "Se alcanzó el 81.83% de la oportunidad perdida en límites de ventana fijos. Mantener decisiones en GPU redujo la latencia entre 1.19x y 2.39x en diferentes configuraciones.",
+        "por_que_importa": "Mejora significativamente la eficiencia y reduce la latencia de los servicios basados en LLM-agentes, haciéndolos más rápidos y rentables para aplicaciones prácticas.",
+        "tags": [
+          "LLM-agentes",
+          "Optimización GPU",
+          "Latencia",
+          "Ciberseguridad",
+          "Rendimiento"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-13T13:55:49Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.08160",
+      "rank": 3,
+      "title": "Can LLM Agents Stick to the Script? A Benchmark for Long-Horizon Consistency in Interactive Narratives",
+      "authors": [
+        "Yingpeng Ma",
+        "Jianhao Yan",
+        "Bei Shi",
+        "Ka Hou Kam"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-08",
+      "url": "https://arxiv.org/abs/2608.08160",
+      "pdf_url": "https://arxiv.org/pdf/2608.08160",
+      "score": 60,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "The rapid advancement of Large Language Models (LLMs) is revolutionizing AI for Games by enabling open-ended and fluid interactive storytelling. However, existing research has largely overlooked the critical challenge of maintaining long-horizon logical consistency and narrative integrity against unconstrained user interventions. To address this, we formulate this challenge as Narrative Commitment Preservation (NCP), and take interactive narrative as our testbed. We introduce NCP-Bench, a benchmark of 100 narrative environments derived from movie synopses. Each environment includes a structured narrative specification (trajectory, commitments, and initial facts) that we can automatically check throughout the interaction between the player agent and the narrator agent. Experiments across state-of-the-art LLMs reveal a substantial long-horizon consistency gap: high linguistic quality does not guarantee commitment preservation; even strong models frequently generate logically conflicting content under adversarial interventions, with the best-performing model (GPT-5.2) achieving only 42% survival rate after 20 turns and fact conflict rates ranging from 40% to 68% across models, and only isolated runs satisfying all achievement commitments within the 100-turn limit.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los agentes LLM fallan en mantener la coherencia narrativa a largo plazo en historias interactivas, incluso los modelos más avanzados.",
+        "problema": "Los agentes basados en LLM, a pesar de su fluidez, luchan por mantener la coherencia lógica y la integridad narrativa en historias interactivas cuando los usuarios intervienen de forma impredecible.",
+        "propuesta": "Se introduce NCP-Bench, un benchmark con 100 entornos narrativos para evaluar la Preservación del Compromiso Narrativo (NCP), midiendo la capacidad de los agentes LLM para adherirse a las especificaciones narrativas a lo largo de interacciones prolongadas.",
+        "resultados": "Los LLMs de última generación muestran una brecha significativa en consistencia a largo plazo. El mejor modelo, GPT-5.2, solo alcanzó un 42% de 'supervivencia' tras 20 turnos, con tasas de conflicto de hechos entre el 40% y 68%. Pocas ejecuciones cumplieron todos los compromisos en 100 turnos.",
+        "por_que_importa": "Es crucial para crear experiencias de juego y narrativas interactivas convincentes y fiables, asegurando que los personajes y la trama se mantengan coherentes a pesar de las acciones del jugador.",
+        "tags": [
+          "LLM",
+          "Narrativa Interactiva",
+          "Consistencia",
+          "Videojuegos",
+          "Evaluación"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-13T13:55:59Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.10450",
+      "rank": 4,
+      "title": "Persistent Recursive Worlds Enable Autonomous Software Evolution",
+      "authors": [
+        "Beichen Huang",
+        "Zhenyu Liang",
+        "Bowen Zheng",
+        "Ran Cheng"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-12",
+      "url": "https://arxiv.org/abs/2608.10450",
+      "pdf_url": "https://arxiv.org/pdf/2608.10450",
+      "score": 60,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "Complex software systems develop over timescales that exceed the lifespan of any individual coding agent. Most agentic software systems preserve continuity through persistent sessions, memories, managers or shared context. We introduce EvoX Genesis (hereafter, Genesis), which instead makes the software project persistent while allowing local agents to remain finite-lived. Genesis represents software as a persistent recursive world: each local world is situated by an accepted version and a repository path, finite-lived agents propose local changes, recursive delegation moves work across paths, and only accepted consequences advance the persistent version history. We evaluate this organization across formation, continuation and redevelopment. Starting from a repository with no compiler implementation, Genesis used DeepSeek V4 Flash to build a Rust-based C compiler with about 250k tracked lines; the run lasted over 120 hours, archived over 1,000 agent episodes and incurred only US$44 in model-token charges. The compiler passed the complete c-testsuite and most LLVM and Csmith tests. In a separate compiler world generated with GLM 5.2, development continued after repeated agent replacement while retaining full test performance. Genesis also reimplemented 13 MESA modules with over 100k Fortran lines as a Rust workspace with nearly 90k Rust lines; across six numerical workloads, it achieved median speedups of 1.55--6.87x. These results show that long-horizon software development can be organized around a persistent project rather than a persistent agent.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "EvoX Genesis permite la evolución autónoma de software a largo plazo mediante mundos recursivos persistentes en lugar de agentes persistentes.",
+        "problema": "Los sistemas de software complejos requieren tiempos de desarrollo que superan la vida útil de los agentes de codificación individuales, y los métodos actuales de preservación de la continuidad son limitados.",
+        "propuesta": "Genesis representa el software como un mundo recursivo persistente donde los agentes finitos proponen cambios locales y la delegación recursiva actualiza la historia de versiones del proyecto.",
+        "resultados": "Genesis construyó un compilador C en Rust (250k líneas) en 120 horas por $44, pasando pruebas clave. También continuó el desarrollo de compiladores tras reemplazos de agentes y reimplementó módulos Fortran en Rust con speedups de 1.55-6.87x.",
+        "por_que_importa": "Demuestra que la organización del desarrollo de software a largo plazo puede centrarse en la persistencia del proyecto, permitiendo la evolución autónoma y eficiente de sistemas complejos.",
+        "tags": [
+          "evolución de software",
+          "agentes autónomos",
+          "mundos persistentes",
+          "desarrollo de IA",
+          "ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-13T13:56:09Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.00677",
+      "rank": 5,
+      "title": "OpenART: Scaling Agent Red Teaming via Open-Ended Environment Evolution",
+      "authors": [
+        "Yunhao Chen",
+        "Xin Wang",
+        "Yixu Wang",
+        "Yi Liu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-01",
+      "url": "https://arxiv.org/abs/2608.00677",
+      "pdf_url": "https://arxiv.org/pdf/2608.00677",
+      "score": 58,
+      "topics": [
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: AI agents, adversarial ML"
+      ],
+      "abstract_en": "AI agents operate in persistent environments where early state changes can influence decisions far into the future. Unlike conventional language-model interactions, agent behavior is mediated through a shared state that is repeatedly modified and reused across long-horizon workflows. Current safety benchmarks often fail to capture these cumulative risks because they focus on short, static tasks. To address these limitations, we introduce OpenART, an open-ended arena for scalable agent red teaming through environment evolution. OpenART provides over 10,000 validated stateful scenarios across 50 domains, drawing from a pool of more than 500,000 tools and skills. These tasks require a median of 97 tool calls and enable unified evaluation across 75 different agent-model configurations. To systematically explore these evolving attack surfaces, we propose the Evolutionary Markov Hypergraph Attack (EMHA). EMHA is a black-box policy that performs feedback-driven environment evolution by coordinating authorized state transitions without requiring parameter updates. Throughout the evaluation, task objectives remain fixed while only the environment state changes. Across all configurations, EMHA achieves a pooled Attack Success Rate (ASR) of 85.0%. Its advantage over instruction-only evolution increases from approximately 2% on simple environments to over 17% on the most complex ones, demonstrating that environment evolution increasingly exposes safety failures as task complexity grows. Furthermore, our analysis shows that the specific runtime implementation of an agent explains a significant portion of safety variation beyond the underlying model's capabilities. These results establish OpenART as a scalable foundation for studying agent safety in complex, evolving environments.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "OpenART revoluciona el testeo de seguridad de agentes IA mediante la evolución de entornos, descubriendo fallos críticos.",
+        "problema": "Los benchmarks de seguridad actuales no capturan los riesgos acumulativos de los agentes IA en entornos persistentes y dinámicos, enfocándose en tareas cortas y estáticas.",
+        "propuesta": "Se introduce OpenART, una plataforma de testeo abierto que evoluciona el entorno de los agentes. Utiliza el método EMHA (Evolutionary Markov Hypergraph Attack) para guiar la evolución del estado del entorno de forma autónoma, sin modificar los parámetros del agente.",
+        "resultados": "OpenART incluye más de 10,000 escenarios y 500,000 herramientas. EMHA logra una Tasa de Éxito de Ataque (ASR) del 85.0% y supera la evolución basada solo en instrucciones en hasta un 17% en entornos complejos. La implementación del agente influye significativamente en la seguridad.",
+        "por_que_importa": "Permite evaluar y mejorar la seguridad de agentes IA en escenarios realistas y complejos, anticipando fallos de seguridad que surgen de la interacción prolongada y la evolución del entorno.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Agentes IA",
+          "Seguridad",
+          "Evolución de Entornos",
+          "Red Teaming"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-13T13:56:19Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.11274",
+      "rank": 6,
+      "title": "Agent Safety Should Be a Runtime Contract",
+      "authors": [
+        "Albus W. Ng",
+        "Yi Han",
+        "Jusheng Zhang",
+        "Wenhao Wang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-11",
+      "url": "https://arxiv.org/abs/2608.11274",
+      "pdf_url": "https://arxiv.org/pdf/2608.11274",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "The dominant paradigm treats AI safety as a property to be instilled during model training via RLHF, DPO, or Constitutional AI. We argue this is structurally insufficient for autonomous agents that execute code, mutate files, send messages, and modify databases. Agent safety should be a runtime contract enforced by the harness, and the contract has two complementary faces. The preventive face blocks dangerous actions before they happen via sandboxes, permission gates, output filters, and trajectory monitors. The evidential face requires verifiable proof that good actions actually happened, gating task submission on hard evidence such as test runs, log captures, file diffs, and citation grounding. We ground the position in four lines of public evidence, with row-level protocols and data released in the supplementary JSON files: a survey of 52 documented AI-agent and LLM safety incidents, a false-completion audit with 31 non-contested core cases plus one disputed illustrative case, a trajectory-schema audit of 12 public agent systems and harnesses, and a title-level audit of all 28,560 papers accepted at NeurIPS, ICML, and ICLR 2023-2025 showing a pooled 8-12x imbalance between training-time and deployment-time publication. Two prior communities that needed to enforce safety, computer security and the experimental sciences, converged on runtime contracts with both preventive and evidential elements; agentic AI is now under the same pressure. We formalize an Agent Trajectory Schema and Evidence Chain, state a compositional gating proposition based on standard monitor composition, and outline a research agenda. The right unit of safety in agentic AI is the trajectory-with-checkable-evidence, not the model.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "La seguridad de los agentes IA debe ser un contrato de tiempo de ejecución, no solo una propiedad del entrenamiento del modelo.",
+        "problema": "Los métodos actuales de seguridad de IA (RLHF, DPO) son insuficientes para agentes autónomos que interactúan con el mundo real (código, archivos, bases de datos).",
+        "propuesta": "Implementar un contrato de seguridad en tiempo de ejecución con dos partes: una preventiva (sandboxing, filtros) y una evidencial (pruebas verificables de acciones correctas).",
+        "resultados": "El resumen no especifica resultados numéricos directos de la propuesta, pero cita evidencia de 52 incidentes de seguridad, auditorías de sistemas y un análisis de publicaciones académicas.",
+        "por_que_importa": "Garantiza la seguridad de los agentes IA en producción mediante controles continuos y verificables, similar a la ciberseguridad y la ciencia experimental.",
+        "tags": [
+          "Seguridad IA",
+          "Agentes Autónomos",
+          "Contrato de Ejecución",
+          "Verificación",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-13T13:56:28Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.06270",
+      "rank": 7,
+      "title": "The Illusion of Visual Tool-Use: A Causal Audit of Thinking with Images",
+      "authors": [
+        "Zhiheng Wang",
+        "Bo Peng",
+        "Lai Wei",
+        "Chaochao Lu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-06",
+      "url": "https://arxiv.org/abs/2608.06270",
+      "pdf_url": "https://arxiv.org/pdf/2608.06270",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "The \"thinking-with-images\" paradigm equips multimodal LLMs with active visual operations such as crop-and-zoom. However, models using these operations often achieve only marginal or negative gains over direct inference at substantially higher token cost. They may also repeatedly crop irrelevant regions and fail on questions that direct inference answers correctly. We ask whether the returned visual evidence causally affects the answer. To answer this question, we formulate visual tool-use as a causal graph that separates observation-mediated paths from action-induced shortcuts. We then audit it through interventions at the three levels: policy (comparing tool-use with direct inference), trajectory (corrupting all observations during rollout), and step (counterfactually replacing one individual observation under a fixed prefix). Our step-level estimand, Visual Evidence Gain, isolates the contribution of each returned observation. Across six representative models and five fine-grained perception benchmarks, we uncover policy miscalibration with two failure modes. In Calling Without Looking, returned observations have no causal effect on the answer. In Looking Without Planning, observations are informative but the call schedule is incoherent. A trajectory-level diagnostic decomposes the policy-level accuracy gain and shows that the gain is concentrated in a Calibrated minority. We term this discrepancy the illusion of visual tool-use: despite aggregate accuracy gains, visual tool-use is not causally effective across a broad range of rollouts. The code is available at https://github.com/OpenCausaLab/CauAudit.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los LLMs multimodales que usan 'pensar con imágenes' a menudo fallan o no mejoran realmente, a pesar de su alto costo.",
+        "problema": "Los modelos multimodales equipados con operaciones visuales activas (como recorte y zoom) no muestran mejoras significativas o incluso empeoran el rendimiento en comparación con la inferencia directa, a pesar de un mayor costo computacional. A menudo seleccionan regiones irrelevantes y fallan en tareas que la inferencia directa resuelve.",
+        "propuesta": "Se propone auditar causalmente el uso de herramientas visuales formulándolo como un grafo causal. Se realizan intervenciones en tres niveles: política (comparando uso de herramientas vs. inferencia directa), trayectoria (corrompiendo todas las observaciones) y paso (reemplazando contrafactualmente una observación individual). Se introduce el estimador 'Visual Evidence Gain' para aislar la contribución de cada observación.",
+        "resultados": "Se identifican dos modos de fallo: 'Llamar sin mirar' (las observaciones no tienen efecto causal) y 'Mirar sin planificar' (las observaciones son informativas pero el cronograma de llamadas es incoherente). Solo una minoría 'Calibrada' de casos muestra ganancias de precisión. La ganancia agregada oculta la falta de efectividad causal en muchos casos.",
+        "por_que_importa": "Demuestra que las mejoras aparentes en el rendimiento de los LLMs multimodales al usar herramientas visuales pueden ser ilusorias. Es crucial para desarrollar modelos más fiables y eficientes que realmente aprovechen la información visual de manera causalmente efectiva.",
+        "tags": [
+          "LLMs multimodales",
+          "visión por computadora",
+          "auditoría causal",
+          "razonamiento visual",
+          "ciberseguridad",
+          "IA explicable"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-13T13:56:38Z"
+      }
+    }
+  ],
+  "generated_at": "2026-08-13T13:56:38Z"
+}
