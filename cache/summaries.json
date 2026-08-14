@@ -4389,5 +4389,167 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-08-13T13:56:38Z"
+  },
+  "arxiv:2608.13450v1": {
+    "tldr": "Analiza dinámicamente debilidades en software de vehículos autónomos usando LLMs para confirmar su explotabilidad.",
+    "problema": "Identificar y confirmar la explotabilidad de debilidades en el complejo software de vehículos autónomos es difícil y requiere artefactos de prueba difíciles de crear manualmente.",
+    "propuesta": "Utilizar modelos de lenguaje grandes (LLMs) para automatizar el análisis dinámico y la confirmación de la explotabilidad de debilidades de software identificadas mediante análisis estático en Autoware.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que se identificaron 1,375 reglas de decisión, 2,274 validaciones y 482 flujos de entrada-salida de seguridad.",
+    "por_que_importa": "Permite mejorar la seguridad de los vehículos autónomos al automatizar la detección y validación de vulnerabilidades críticas, facilitando la corrección proactiva.",
+    "tags": [
+      "vehículos autónomos",
+      "ciberseguridad",
+      "LLMs",
+      "análisis dinámico",
+      "vulnerabilidades"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-14T13:51:15Z"
+  },
+  "arxiv:2608.12889v1": {
+    "tldr": "Los sistemas de detección de smishing son vulnerables a ataques de ofuscación; los modelos transformer son más robustos que los clásicos.",
+    "problema": "Los sistemas actuales de detección de smishing fallan ante ataques que ofuscan el texto (caracteres, idiomas, estructura), especialmente en entornos de bajos recursos.",
+    "propuesta": "Se comparan cinco arquitecturas (tres clásicas y dos transformers multilingües) bajo ataques genéricos y dirigidos para evaluar su robustez contra el smishing.",
+    "resultados": "Los modelos transformer (mBERT, XLM-RoBERTa) mostraron mayor robustez adversarial que los modelos clásicos (Random Forest, XGBoost, CNN+BiLSTM) frente a diferentes tipos de ataques.",
+    "por_que_importa": "Es crucial desarrollar sistemas de detección de smishing más resistentes a ataques para proteger a los usuarios, especialmente considerando la creciente sofisticación de los atacantes.",
+    "tags": [
+      "smishing",
+      "ciberseguridad",
+      "IA",
+      "robustez adversarial",
+      "detección de fraudes",
+      "modelos transformer"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-14T13:51:25Z"
+  },
+  "arxiv:2608.13191v1": {
+    "tldr": "Los invariantes de programas clásicos son una solución poderosa para proteger contratos inteligentes contra ciberataques.",
+    "problema": "Los contratos inteligentes en blockchains son vulnerables a ataques de ciberdelincuentes que roban miles de millones, y no existe una solución probada para este problema abierto.",
+    "propuesta": "Se propone el uso de la noción clásica de invariantes de programas como una solución para proteger contratos inteligentes, y se diseña un protocolo experimental para estudiar su efectividad contra ataques pasados y la capacidad de herramientas automatizadas para encontrarlos.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero afirma que los invariantes son una solución poderosa y que se estudiará su efectividad contra ataques reales y la capacidad de herramientas automatizadas.",
+    "por_que_importa": "Demuestra cómo una técnica clásica de programación puede ser una defensa robusta y efectiva contra las vulnerabilidades de los contratos inteligentes, mejorando la seguridad en el ecosistema blockchain.",
+    "tags": [
+      "contratos inteligentes",
+      "seguridad blockchain",
+      "invariantes de programas",
+      "ciberseguridad",
+      "prevención de ataques"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-14T13:51:34Z"
+  },
+  "arxiv:2608.12962v1": {
+    "tldr": "El aprendizaje federado vertical (VFL) es vulnerable a ataques de puerta trasera debido a su estructura de información asimétrica.",
+    "problema": "Los ataques de puerta trasera (backdoor attacks) son una amenaza significativa en el Aprendizaje Federado Vertical (VFL), ya que la estructura de información asimétrica permite a los contribuyentes maliciosos envenenar el modelo durante el entrenamiento.",
+    "propuesta": "El paper analiza las vulnerabilidades de puerta trasera en VFL, destacando la brecha entre la investigación teórica y las implicaciones prácticas de estos ataques en escenarios reales.",
+    "resultados": "El resumen no especifica resultados numéricos, pero señala que el VFL permite a los atacantes envenenar el modelo durante el entrenamiento.",
+    "por_que_importa": "Comprender estas vulnerabilidades es crucial para desarrollar defensas robustas y garantizar la seguridad y confiabilidad de los sistemas VFL en la práctica, especialmente ante la creciente demanda de privacidad.",
+    "tags": [
+      "aprendizaje federado",
+      "ciberseguridad",
+      "ataques de puerta trasera",
+      "privacidad",
+      "VFL"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-14T13:51:44Z"
+  },
+  "arxiv:2608.12977v1": {
+    "tldr": "Defensas de seguridad para agentes LLM que se adaptan solas, yendo más allá de las reglas manuales.",
+    "problema": "Las crecientes capacidades de los agentes LLM generan amenazas de seguridad complejas, y las defensas actuales dependen de intervenciones manuales difíciles de mantener.",
+    "propuesta": "Se propone una formulación a nivel de 'harness' para construir defensas de tiempo de ejecución que se auto-evolucionan, permitiendo la construcción y mantenimiento sistemático de mecanismos de defensa.",
+    "resultados": "El resumen no especifica resultados numéricos, pero sienta las bases para un marco unificado de construcción de defensas.",
+    "por_que_importa": "Permite crear defensas de seguridad más robustas, adaptables y fáciles de mantener para agentes LLM, reduciendo la carga manual y mejorando la seguridad.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Defensa Adaptativa",
+      "Agentes Autónomos",
+      "Seguridad de IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-14T13:51:53Z"
+  },
+  "arxiv:2608.13558v1": {
+    "tldr": "OmniScientist es un científico de IA omnimodal y multidisciplinar que revoluciona la investigación al procesar diversos tipos de datos científicos.",
+    "problema": "Los sistemas de IA para la investigación científica actual solo procesan texto, código o etiquetas, perdiendo información crucial de datos espaciales, temporales, multicanal y procedimentales.",
+    "propuesta": "Se introduce OmniScientist, un sistema de IA omnimodal y multidisciplinar que realiza investigación científica de forma end-to-end, razonando directamente sobre datos heterogéneos y multimodales.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero destaca la capacidad de OmniScientist para acceder a relaciones científicas decisivas previamente indisponibles.",
+    "por_que_importa": "Permite a los investigadores acceder a una comprensión más profunda y completa de los datos científicos, superando las limitaciones de los sistemas actuales y acelerando el descubrimiento.",
+    "tags": [
+      "IA",
+      "Investigación Científica",
+      "Multimodalidad",
+      "Ciberseguridad",
+      "Descubrimiento de Datos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-14T13:52:02Z"
+  },
+  "arxiv:2608.13463v1": {
+    "tldr": "Un agente MLLM dirige dinámicamente imágenes a la red neuronal más adecuada para mejorar la clasificación de imágenes entre diferentes conjuntos de datos.",
+    "problema": "Los modelos de clasificación de imágenes actuales funcionan bien en un solo conjunto de datos, pero fallan al generalizar a través de dominios y niveles de dificultad variados.",
+    "propuesta": "Se propone ARMDIL, un sistema de 'ensemble' que utiliza un agente MLLM para seleccionar dinámicamente el 'backbone' de visión más apropiado para cada imagen de entrada. El 'ensemble' incluye redes neuronales convolucionales, modelos de aprendizaje de representaciones auto-supervisadas y modelos de visión-lenguaje.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que el enfoque mejora la generalización en clasificación de imágenes a través de dominios.",
+    "por_que_importa": "Permite construir sistemas de clasificación de imágenes más robustos y adaptables que pueden manejar la variabilidad inherente en los datos del mundo real, mejorando la fiabilidad en diversas aplicaciones.",
+    "tags": [
+      "clasificación de imágenes",
+      "aprendizaje profundo",
+      "grandes modelos de lenguaje",
+      "adaptación de dominio",
+      "ensembles"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-14T13:52:12Z"
+  },
+  "arxiv:2608.13453v1": {
+    "tldr": "Atacamos modelos de robótica multihabilidad con texturas universales que causan fallos en múltiples tareas, comprometiendo su seguridad.",
+    "problema": "Los modelos de Visión-Lenguaje-Acción (VLA) para robótica, aunque versátiles, son vulnerables a ataques adversariales que pueden provocar comportamientos físicos inseguros. Los ataques actuales se centran en una sola tarea, dejando sin explorar la vulnerabilidad transversal de estos modelos multihabilidad.",
+    "propuesta": "Se introduce UniTexture, un ataque adversarial universal que emplea una única textura 3D para generar interferencias que afectan a múltiples tareas y modelos VLA de forma simultánea.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que UniTexture es efectiva como ataque transversal.",
+    "por_que_importa": "Demuestra la necesidad de desarrollar defensas robustas contra ataques adversariales que no se limiten a tareas específicas, garantizando la seguridad y fiabilidad de los sistemas robóticos basados en VLA en entornos reales.",
+    "tags": [
+      "IA",
+      "Robótica",
+      "Ciberseguridad",
+      "Ataques Adversariales",
+      "Visión por Computadora",
+      "Procesamiento del Lenguaje Natural"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-14T13:52:22Z"
+  },
+  "arxiv:2608.12990": {
+    "tldr": "LycheeMemory V2 revoluciona la memoria de los agentes LLM con consolidación semántica por segmentos, reduciendo costos y preservando detalles cruciales.",
+    "problema": "Los agentes LLM necesitan recordar interacciones pasadas para tareas a largo plazo, pero los sistemas actuales son costosos y pueden perder detalles importantes al resumir.",
+    "propuesta": "LycheeMemory V2 propone un marco de memoria eficiente que reemplaza la consolidación por turno con una consolidación semántica a nivel de segmento, optimizando el uso de LLMs.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que el sistema es más eficiente que los métodos de consolidación por turno.",
+    "por_que_importa": "Permite que los agentes LLM manejen conversaciones más largas y complejas de manera más económica y efectiva, manteniendo la información relevante para tareas futuras.",
+    "tags": [
+      "LLM",
+      "Agentes IA",
+      "Memoria a Largo Plazo",
+      "Ciberseguridad",
+      "Eficiencia"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-14T13:52:31Z"
+  },
+  "arxiv:2608.12743": {
+    "tldr": "Agente de Memoria Espacial: Mejora la inteligencia espacial de los agentes VLM usando memoria de procedimientos basada en experiencia.",
+    "problema": "Los agentes VLM (Vision-Language Models) actuales tienen capacidades de razonamiento espacial limitadas, a pesar de su creciente importancia en robótica y asistentes multimodales.",
+    "propuesta": "Se propone un nuevo enfoque llamado 'Agente de Memoria Espacial' que dota a un VLM congelado (sin reentrenamiento) de memoria de procedimientos basada en la experiencia, permitiéndole recordar y reutilizar acciones espaciales pasadas.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que el enfoque mejora la inteligencia espacial de los agentes VLM.",
+    "por_que_importa": "Permite mejorar significativamente las capacidades de razonamiento espacial de los agentes VLM sin necesidad de reentrenar modelos costosos, abriendo puertas a aplicaciones más sofisticadas en robótica y asistentes virtuales.",
+    "tags": [
+      "Inteligencia Artificial",
+      "Agentes VLM",
+      "Memoria Espacial",
+      "Robótica",
+      "Procesamiento de Lenguaje Natural"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-14T13:52:41Z"
   }
 }

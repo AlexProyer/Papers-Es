@@ -1,0 +1,464 @@
+{
+  "date": "2026-08-14",
+  "report_type": "filtrado",
+  "evaluated": 155,
+  "selected": 11,
+  "papers": [
+    {
+      "id": "arxiv:2608.13450v1",
+      "rank": 1,
+      "title": "LLM-Assisted Dynamic Threat Analysis for Attacker-Reachable Software Weaknesses in Autonomous Vehicles",
+      "authors": [
+        "Md Wasiul Haque",
+        "Sagar Dasgupta",
+        "Mizanur Rahman",
+        "Md Rayhanur Rahman"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-13",
+      "url": "https://arxiv.org/abs/2608.13450v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.13450v1",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "Autonomous vehicles depend on large safety-critical software stacks, where weaknesses reachable from adversarial inputs may affect steering, braking, or other control decisions. Static analysis can identify candidate sites, but dynamically confirming exploitability requires executable test artifacts that are difficult to construct manually. We investigate whether large language models (LLMs) can automate this process for Autoware, an open-source autonomous-driving stack. We perform compiler-precise static analysis across 185 packages, identifying 1,375 decision rules, 2,274 validation checks, and 482 input-to-safety-output flows, from which...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Analiza dinámicamente debilidades en software de vehículos autónomos usando LLMs para confirmar su explotabilidad.",
+        "problema": "Identificar y confirmar la explotabilidad de debilidades en el complejo software de vehículos autónomos es difícil y requiere artefactos de prueba difíciles de crear manualmente.",
+        "propuesta": "Utilizar modelos de lenguaje grandes (LLMs) para automatizar el análisis dinámico y la confirmación de la explotabilidad de debilidades de software identificadas mediante análisis estático en Autoware.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que se identificaron 1,375 reglas de decisión, 2,274 validaciones y 482 flujos de entrada-salida de seguridad.",
+        "por_que_importa": "Permite mejorar la seguridad de los vehículos autónomos al automatizar la detección y validación de vulnerabilidades críticas, facilitando la corrección proactiva.",
+        "tags": [
+          "vehículos autónomos",
+          "ciberseguridad",
+          "LLMs",
+          "análisis dinámico",
+          "vulnerabilidades"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-14T13:51:15Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.12889v1",
+      "rank": 2,
+      "title": "Adversarial Robustness in Smishing Detection: A Comparative Analysis of Adversarial Fragility in Classical vs. Transformer-Based Detection Systems",
+      "authors": [
+        "Denzel Chiuseni",
+        "Athanase Bahizire",
+        "Silva Hama",
+        "Jema David Ndibwile"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-13",
+      "url": "https://arxiv.org/abs/2608.12889v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.12889v1",
+      "score": 56,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: cybersecurity, vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Smishing detection systems are commonly trained and evaluated on clean, monolingual text. In low-resource settings, however, attackers frequently circumvent these systems through character obfuscation, cross-lingual code-switching, and structural perturbation. This study evaluates adversarial robustness for five model architectures: three classical lexical models (Random Forest, XGBoost, CNN+BiLSTM) and two multilingual transformers (mBERT, XLM-RoBERTa), using a dataset of 27,037 messages. Classical models are subjected to black-box generic attacks, while transformers are evaluated with attention-guided targeting. Each model is tested across three attack...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Los sistemas de detección de smishing son vulnerables a ataques de ofuscación; los modelos transformer son más robustos que los clásicos.",
+        "problema": "Los sistemas actuales de detección de smishing fallan ante ataques que ofuscan el texto (caracteres, idiomas, estructura), especialmente en entornos de bajos recursos.",
+        "propuesta": "Se comparan cinco arquitecturas (tres clásicas y dos transformers multilingües) bajo ataques genéricos y dirigidos para evaluar su robustez contra el smishing.",
+        "resultados": "Los modelos transformer (mBERT, XLM-RoBERTa) mostraron mayor robustez adversarial que los modelos clásicos (Random Forest, XGBoost, CNN+BiLSTM) frente a diferentes tipos de ataques.",
+        "por_que_importa": "Es crucial desarrollar sistemas de detección de smishing más resistentes a ataques para proteger a los usuarios, especialmente considerando la creciente sofisticación de los atacantes.",
+        "tags": [
+          "smishing",
+          "ciberseguridad",
+          "IA",
+          "robustez adversarial",
+          "detección de fraudes",
+          "modelos transformer"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-14T13:51:25Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.13191v1",
+      "rank": 3,
+      "title": "Smart Contract Invariants Protect Against Cybercriminals",
+      "authors": [
+        "Sofia Bobadilla",
+        "Humaira Afrin",
+        "Angela Novelli",
+        "Martin Monperrus"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-13",
+      "url": "https://arxiv.org/abs/2608.13191v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.13191v1",
+      "score": 54,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Blockchains are among the most adversarial environments in computing. Billions are stolen by cybercriminals who exploit vulnerabilities. This is an open problem and no concept or technique has proven to really make a difference. In this paper, we claim that the classical notion of program invariant is perhaps the most powerful solution to the problem. We devise anoriginal experimental protocol to 1) study how invariants would have protected against past real-world attacks and 2) whether state-of-the-art automated tools can find...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Los invariantes de programas clásicos son una solución poderosa para proteger contratos inteligentes contra ciberataques.",
+        "problema": "Los contratos inteligentes en blockchains son vulnerables a ataques de ciberdelincuentes que roban miles de millones, y no existe una solución probada para este problema abierto.",
+        "propuesta": "Se propone el uso de la noción clásica de invariantes de programas como una solución para proteger contratos inteligentes, y se diseña un protocolo experimental para estudiar su efectividad contra ataques pasados y la capacidad de herramientas automatizadas para encontrarlos.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero afirma que los invariantes son una solución poderosa y que se estudiará su efectividad contra ataques reales y la capacidad de herramientas automatizadas.",
+        "por_que_importa": "Demuestra cómo una técnica clásica de programación puede ser una defensa robusta y efectiva contra las vulnerabilidades de los contratos inteligentes, mejorando la seguridad en el ecosistema blockchain.",
+        "tags": [
+          "contratos inteligentes",
+          "seguridad blockchain",
+          "invariantes de programas",
+          "ciberseguridad",
+          "prevención de ataques"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-14T13:51:34Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.12962v1",
+      "rank": 4,
+      "title": "Understanding Backdoor Vulnerabilities in Vertical Federated Learning: The Gap Between Research and Practice",
+      "authors": [
+        "Ziqi Zhao",
+        "Jialin Lu",
+        "Junjie Shan",
+        "Junyuan Zhang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-13",
+      "url": "https://arxiv.org/abs/2608.12962v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.12962v1",
+      "score": 52,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Vertical Federated Learning (VFL) enables organizations holding complementary features of shared entities to collaborate and train models. In this setting, the initiator can withhold information about the learning task, while other contributors participate without exposing their local datasets, creating an asymmetric information structure aligned with growing privacy demands. However, this asymmetry is a double-edged sword. Among various threats, backdoor attacks are particularly concerning because VFL not only enables malicious contributors to poison the model during training, but also allows them...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "El aprendizaje federado vertical (VFL) es vulnerable a ataques de puerta trasera debido a su estructura de información asimétrica.",
+        "problema": "Los ataques de puerta trasera (backdoor attacks) son una amenaza significativa en el Aprendizaje Federado Vertical (VFL), ya que la estructura de información asimétrica permite a los contribuyentes maliciosos envenenar el modelo durante el entrenamiento.",
+        "propuesta": "El paper analiza las vulnerabilidades de puerta trasera en VFL, destacando la brecha entre la investigación teórica y las implicaciones prácticas de estos ataques en escenarios reales.",
+        "resultados": "El resumen no especifica resultados numéricos, pero señala que el VFL permite a los atacantes envenenar el modelo durante el entrenamiento.",
+        "por_que_importa": "Comprender estas vulnerabilidades es crucial para desarrollar defensas robustas y garantizar la seguridad y confiabilidad de los sistemas VFL en la práctica, especialmente ante la creciente demanda de privacidad.",
+        "tags": [
+          "aprendizaje federado",
+          "ciberseguridad",
+          "ataques de puerta trasera",
+          "privacidad",
+          "VFL"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-14T13:51:44Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.12977v1",
+      "rank": 5,
+      "title": "Beyond Handcrafted Security: Towards Self-Evolving Defense for LLM Agents",
+      "authors": [
+        "Jiajun Ruan",
+        "Peiyang Li",
+        "Yukun Chen",
+        "Fengting Li"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-13",
+      "url": "https://arxiv.org/abs/2608.12977v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.12977v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "The expanding operational capabilities of large language model (LLM) agents introduce sophisticated security threats. Runtime defenses have emerged as an effective approach to mitigating these risks by integrating security mechanisms into the agent execution loop. However, existing runtime defenses rely heavily on manually designed interventions and lack a principled framework for their construction and maintenance. In this work, we first develop a harness-level formulation of runtime defense that systematically characterizes how harness mechanisms enable defense construction and provides a unified...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Defensas de seguridad para agentes LLM que se adaptan solas, yendo más allá de las reglas manuales.",
+        "problema": "Las crecientes capacidades de los agentes LLM generan amenazas de seguridad complejas, y las defensas actuales dependen de intervenciones manuales difíciles de mantener.",
+        "propuesta": "Se propone una formulación a nivel de 'harness' para construir defensas de tiempo de ejecución que se auto-evolucionan, permitiendo la construcción y mantenimiento sistemático de mecanismos de defensa.",
+        "resultados": "El resumen no especifica resultados numéricos, pero sienta las bases para un marco unificado de construcción de defensas.",
+        "por_que_importa": "Permite crear defensas de seguridad más robustas, adaptables y fáciles de mantener para agentes LLM, reduciendo la carga manual y mejorando la seguridad.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Defensa Adaptativa",
+          "Agentes Autónomos",
+          "Seguridad de IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-14T13:51:53Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.13558v1",
+      "rank": 6,
+      "title": "OmniScientist: An Omni-Modal Omni-Discipline AI Scientist",
+      "authors": [
+        "Bobo Li",
+        "Hao Fei",
+        "Tianjie Ju",
+        "Mong-Li Lee"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-08-13",
+      "url": "https://arxiv.org/abs/2608.13558v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.13558v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Recent advances in foundation models have enabled AI scientists to automate increasingly complete research workflows, from hypothesis generation and code execution to manuscript preparation. Yet workflow coverage alone does not provide access to the full evidence on which scientific discovery depends. Existing systems typically reason over text, code, labels, or precomputed summaries, leaving scientifically decisive spatial, temporal, cross-channel, and procedural relations unavailable to the agent. We introduce OmniScientist, an end-to-end, omni-modal AI scientist that conducts multidisciplinary research directly from heterogeneous...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "OmniScientist es un científico de IA omnimodal y multidisciplinar que revoluciona la investigación al procesar diversos tipos de datos científicos.",
+        "problema": "Los sistemas de IA para la investigación científica actual solo procesan texto, código o etiquetas, perdiendo información crucial de datos espaciales, temporales, multicanal y procedimentales.",
+        "propuesta": "Se introduce OmniScientist, un sistema de IA omnimodal y multidisciplinar que realiza investigación científica de forma end-to-end, razonando directamente sobre datos heterogéneos y multimodales.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero destaca la capacidad de OmniScientist para acceder a relaciones científicas decisivas previamente indisponibles.",
+        "por_que_importa": "Permite a los investigadores acceder a una comprensión más profunda y completa de los datos científicos, superando las limitaciones de los sistemas actuales y acelerando el descubrimiento.",
+        "tags": [
+          "IA",
+          "Investigación Científica",
+          "Multimodalidad",
+          "Ciberseguridad",
+          "Descubrimiento de Datos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-14T13:52:02Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.13463v1",
+      "rank": 7,
+      "title": "MLLM-Routed Heterogeneous Ensembles for Robust Cross-Dataset Image Classification",
+      "authors": [
+        "Daniel Perkins",
+        "John Squires",
+        "Janou Milligan",
+        "Chandra Raskoti"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-08-13",
+      "url": "https://arxiv.org/abs/2608.13463v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.13463v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Modern image classification models excel when trained on single task-specific datasets but often struggle to generalize across domains and difficulty levels. We propose ARMDIL, an Adaptive Router for Multi-Domain Image classification with LLMs. ARMDIL is an ensemble that uses a multimodal large language model (MLLM) agent to dynamically route each image to the most suitable vision backbone. Our diverse ensemble employs convolutional neural networks (ResNets), self-supervised representation learners (SSL), and vision-language models (VLMs), each trained on a unified label space...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Un agente MLLM dirige dinámicamente imágenes a la red neuronal más adecuada para mejorar la clasificación de imágenes entre diferentes conjuntos de datos.",
+        "problema": "Los modelos de clasificación de imágenes actuales funcionan bien en un solo conjunto de datos, pero fallan al generalizar a través de dominios y niveles de dificultad variados.",
+        "propuesta": "Se propone ARMDIL, un sistema de 'ensemble' que utiliza un agente MLLM para seleccionar dinámicamente el 'backbone' de visión más apropiado para cada imagen de entrada. El 'ensemble' incluye redes neuronales convolucionales, modelos de aprendizaje de representaciones auto-supervisadas y modelos de visión-lenguaje.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que el enfoque mejora la generalización en clasificación de imágenes a través de dominios.",
+        "por_que_importa": "Permite construir sistemas de clasificación de imágenes más robustos y adaptables que pueden manejar la variabilidad inherente en los datos del mundo real, mejorando la fiabilidad en diversas aplicaciones.",
+        "tags": [
+          "clasificación de imágenes",
+          "aprendizaje profundo",
+          "grandes modelos de lenguaje",
+          "adaptación de dominio",
+          "ensembles"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-14T13:52:12Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.13453v1",
+      "rank": 8,
+      "title": "UniTexture: Cross-Task Universal Adversarial Textures for Vision-Language-Action Models",
+      "authors": [
+        "Yukun Dai",
+        "Mingzhe Dai",
+        "Tianshi Wang",
+        "Fengling Li"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-08-13",
+      "url": "https://arxiv.org/abs/2608.13453v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.13453v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Vision-Language-Action (VLA) models have emerged as generalist robotic policies capable of following diverse language instructions and performing a wide range of manipulation tasks. However, their direct control over embodied agents also exposes them to adversarial interference that may cause unsafe physical behaviors. Existing attacks on robotic policies are typically optimized for a single task or instruction, leaving the cross-task vulnerabilities of multitask VLAs largely unexplored. We introduce UniTexture, a cross-task universal adversarial texture attack that uses a single textured 3D...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Atacamos modelos de robótica multihabilidad con texturas universales que causan fallos en múltiples tareas, comprometiendo su seguridad.",
+        "problema": "Los modelos de Visión-Lenguaje-Acción (VLA) para robótica, aunque versátiles, son vulnerables a ataques adversariales que pueden provocar comportamientos físicos inseguros. Los ataques actuales se centran en una sola tarea, dejando sin explorar la vulnerabilidad transversal de estos modelos multihabilidad.",
+        "propuesta": "Se introduce UniTexture, un ataque adversarial universal que emplea una única textura 3D para generar interferencias que afectan a múltiples tareas y modelos VLA de forma simultánea.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que UniTexture es efectiva como ataque transversal.",
+        "por_que_importa": "Demuestra la necesidad de desarrollar defensas robustas contra ataques adversariales que no se limiten a tareas específicas, garantizando la seguridad y fiabilidad de los sistemas robóticos basados en VLA en entornos reales.",
+        "tags": [
+          "IA",
+          "Robótica",
+          "Ciberseguridad",
+          "Ataques Adversariales",
+          "Visión por Computadora",
+          "Procesamiento del Lenguaje Natural"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-14T13:52:22Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.12990",
+      "rank": 1,
+      "title": "LycheeMemory V2: Efficient Long-Term Memory for LLM Agents via Semantic Segment-Level Consolidation",
+      "authors": [
+        "Dongfang Li",
+        "Zixuan Liu",
+        "Junmai Wang",
+        "Jiahe Huang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-13",
+      "url": "https://arxiv.org/abs/2608.12990",
+      "pdf_url": "https://arxiv.org/pdf/2608.12990",
+      "score": 74,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Long-horizon LLM agents must preserve information from past interactions to support future tasks. Existing memory systems typically rely on eager consolidation, invoking LLMs after each interaction to extract, summarize, or update memories. This design makes memory construction increasingly costly as conversations grow. Coarse summarization can reduce construction cost but risks discarding fine-grained contextual evidence, whereas larger retrieval contexts or multi-hop LLM reasoning shift the overhead to query time. We present LycheeMemory V2, an efficient long-term memory framework that replaces turn-level...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "LycheeMemory V2 revoluciona la memoria de los agentes LLM con consolidación semántica por segmentos, reduciendo costos y preservando detalles cruciales.",
+        "problema": "Los agentes LLM necesitan recordar interacciones pasadas para tareas a largo plazo, pero los sistemas actuales son costosos y pueden perder detalles importantes al resumir.",
+        "propuesta": "LycheeMemory V2 propone un marco de memoria eficiente que reemplaza la consolidación por turno con una consolidación semántica a nivel de segmento, optimizando el uso de LLMs.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que el sistema es más eficiente que los métodos de consolidación por turno.",
+        "por_que_importa": "Permite que los agentes LLM manejen conversaciones más largas y complejas de manera más económica y efectiva, manteniendo la información relevante para tareas futuras.",
+        "tags": [
+          "LLM",
+          "Agentes IA",
+          "Memoria a Largo Plazo",
+          "Ciberseguridad",
+          "Eficiencia"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-14T13:52:31Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.12743",
+      "rank": 2,
+      "title": "Spatial Memory Agent: Experience-Grounded Procedure Memory for Spatial Intelligence",
+      "authors": [
+        "Haokai Zhang",
+        "Yuhang Ding",
+        "Yunshu Zhou",
+        "Xinze Du"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-13",
+      "url": "https://arxiv.org/abs/2608.12743",
+      "pdf_url": "https://arxiv.org/pdf/2608.12743",
+      "score": 60,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "Spatial intelligence is becoming a foundation for embodied agents, robotic planning, and multimodal assistants. To improve the spatial reasoning ability of VLM agents, existing work has mainly followed two lines. One line uses post-training methods, such as supervised fine-tuning and reinforcement learning. Another line adopts an agentic paradigm in which the model calls external spatial tools, such as depth estimation and 3D reconstruction tools, to gather intermediate spatial evidence. We study a complementary and underexplored route: Can a frozen VLM...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Agente de Memoria Espacial: Mejora la inteligencia espacial de los agentes VLM usando memoria de procedimientos basada en experiencia.",
+        "problema": "Los agentes VLM (Vision-Language Models) actuales tienen capacidades de razonamiento espacial limitadas, a pesar de su creciente importancia en robótica y asistentes multimodales.",
+        "propuesta": "Se propone un nuevo enfoque llamado 'Agente de Memoria Espacial' que dota a un VLM congelado (sin reentrenamiento) de memoria de procedimientos basada en la experiencia, permitiéndole recordar y reutilizar acciones espaciales pasadas.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que el enfoque mejora la inteligencia espacial de los agentes VLM.",
+        "por_que_importa": "Permite mejorar significativamente las capacidades de razonamiento espacial de los agentes VLM sin necesidad de reentrenar modelos costosos, abriendo puertas a aplicaciones más sofisticadas en robótica y asistentes virtuales.",
+        "tags": [
+          "Inteligencia Artificial",
+          "Agentes VLM",
+          "Memoria Espacial",
+          "Robótica",
+          "Procesamiento de Lenguaje Natural"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-14T13:52:41Z"
+      }
+    }
+  ],
+  "generated_at": "2026-08-14T13:52:41Z"
+}
