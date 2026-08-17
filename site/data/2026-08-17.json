@@ -1,0 +1,53 @@
+{
+  "date": "2026-08-17",
+  "report_type": "filtrado",
+  "evaluated": 26,
+  "selected": 1,
+  "papers": [
+    {
+      "id": "arxiv:2608.09209",
+      "rank": 1,
+      "title": "UNMASK: Discovering and Causally Verifying Spurious Shortcuts in Text Classifiers",
+      "authors": [
+        "Chidaksh Ravuru",
+        "Shashank Srivastava"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-10",
+      "url": "https://arxiv.org/abs/2608.09209",
+      "pdf_url": "https://arxiv.org/pdf/2608.09209",
+      "score": 52,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Neural language models trained on large crowdsourced corpora frequently exploit spurious surface patterns tied to target labels without true linguistic or causal relevance, boosting benchmark performance while failing on adversarial or out-of-distribution inputs. Existing approaches either require manual specification of the feature vocabulary or automate discovery only partially, leaving the gap between dataset-level correlation and model-level exploitation unaddressed. We present U N M ASK, a fully automated pipeline that discovers, causally verifies, and mitigates spurious correlations in text classifiers without additional human annotation. Given unlabeled training examples, U N M ASK generates candidate surface patterns as executable boolean expressions, filters them through a statistical validation protocol with independent replication, and establishes causal model dependence via verified counterfactual interventions. Causally confirmed features then serve as annotation-free group definitions for Deep Feature Reweighting, eliminating the group labels that standard DFR requires. Applied to BERT and RoBERTa trained on MNLI, our pipeline independently rediscovers established lexical-overlap and negation biases, verifying 9 of 10 features on BERT and 6 on RoBERTa, and improving HANS accuracy by up to 12.58 pp. On CivilComments-WILDS, programmatic groups match the 70.1% worst- group accuracy of hand-labeled DFR (Kirichenko et al., 2023) without demographic annotation. We further demonstrate that the discovery and validation stages generalize to reward model preference data, surfacing interpretable spurious correlations in RewardBench2.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "UNMASK descubre y verifica causalmente atajos espurios en clasificadores de texto, mejorando su robustez sin anotaciones.",
+        "problema": "Los modelos de lenguaje a menudo explotan patrones superficiales irrelevantes para las etiquetas, lo que infla el rendimiento en benchmarks pero falla ante entradas adversarias o fuera de distribución. Los métodos actuales son incompletos o requieren intervención manual.",
+        "propuesta": "UNMASK es un pipeline automatizado que genera patrones superficiales como expresiones booleanas, los valida estadísticamente y confirma su causalidad mediante intervenciones contrafactuales. Estos patrones se usan para reponderar características sin necesidad de etiquetas de grupo.",
+        "resultados": "En MNLI, redescubre sesgos léxicos y de negación, verificando 9/10 características en BERT y 6/10 en RoBERTa, mejorando la precisión de HANS hasta en 12.58 pp. En CivilComments-WILDS, iguala la precisión del 70.1% del peor grupo con anotación manual, sin usar datos demográficos. Generaliza a datos de preferencia de modelos de recompensa.",
+        "por_que_importa": "Permite crear modelos de lenguaje más robustos y confiables, especialmente en aplicaciones críticas, al identificar y mitigar automáticamente sesgos ocultos sin requerir costosas anotaciones humanas.",
+        "tags": [
+          "IA explicable",
+          "robustez de modelos",
+          "clasificación de texto",
+          "sesgos algorítmicos",
+          "ciberseguridad",
+          "auditoría de modelos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-17T13:14:06Z"
+      }
+    }
+  ],
+  "generated_at": "2026-08-17T13:14:07Z"
+}
