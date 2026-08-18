@@ -4568,5 +4568,202 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-08-17T13:14:06Z"
+  },
+  "arxiv:2608.16843v1": {
+    "tldr": "Agentes con IA avanzada son vulnerables a ataques que van de lo digital a lo físico, necesitando nuevas defensas.",
+    "problema": "Los agentes físicos controlados por modelos de IA fundacionales (foundation models) presentan riesgos de seguridad al poder propagar ataques digitales a acciones físicas, pero las clasificaciones actuales de amenazas no identifican claramente el punto de entrada al sistema.",
+    "propuesta": "Se propone una nueva organización de la seguridad de estos agentes centrada en los 'límites de confianza' (trust boundaries), separando la superficie de ataque de los mecanismos, y organizando el sistema en cinco capas y doce superficies de ataque.",
+    "resultados": "Se analizaron 58 ataques y 61 defensas. La investigación se concentra en percepción multimodal e interfaces de acción, mientras que las defensas se centran en el nivel de acción y protección en tiempo de ejecución. Las áreas de contexto/memoria, middleware, integridad del estado del mundo y confianza multi-agente están poco exploradas.",
+    "por_que_importa": "Es crucial entender y mitigar estas vulnerabilidades para garantizar la seguridad y fiabilidad de los agentes físicos autónomos en aplicaciones del mundo real, desde robots industriales hasta vehículos autónomos.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Agentes Físicos",
+      "Modelos Fundacionales",
+      "Seguridad de Sistemas"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-18T13:21:46Z"
+  },
+  "arxiv:2608.16775v1": {
+    "tldr": "Descubre cómo la geometría de las respuestas de los LLM revela la influencia de los datos en ciberseguridad.",
+    "problema": "Los LLM en ciberseguridad necesitan confianza en sus respuestas, pero los métodos actuales no rastrean de forma fiable el origen de la información en logs complejos y similares.",
+    "propuesta": "Proponemos Topological Attribution Distance (TAD), que usa topología para medir cómo la geometría de la respuesta de un LLM cambia al considerar diferentes segmentos de logs, identificando así las fuentes de información críticas.",
+    "resultados": "TAD identifica de forma adaptativa los logs más influyentes en las salidas de LLM para análisis de ciberataques, proporcionando una trazabilidad explicable.",
+    "por_que_importa": "Permite verificar la evidencia y aumentar la confianza en las decisiones de los LLM en ciberseguridad y flujos de trabajo de IA, crucial para la toma de decisiones rápida y fiable.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "IA Explicable",
+      "Atribución de Datos",
+      "Generación de Texto"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-18T13:21:56Z"
+  },
+  "arxiv:2608.16422v1": {
+    "tldr": "Los LLMs revolucionan las simulaciones de ciberseguridad, creando entornos realistas y acelerando el entrenamiento de defensas hasta 50,000 veces.",
+    "problema": "Las crecientes y sofisticadas amenazas cibernéticas requieren estrategias de defensa más adaptables y escalables, pero las simulaciones actuales son lentas y poco realistas.",
+    "propuesta": "Utilizar Large Language Models (LLMs) para automatizar la creación de entornos de simulación de redes (usando YAML) y entrenar agentes de aprendizaje por refuerzo (RL) de forma más eficiente y realista.",
+    "resultados": "Agentes basados en LLMs lograron tasas de compromiso de hasta el 94.5% y ejecutaron evaluaciones en 0.02-0.06 segundos, lo que representa una mejora de ~25,000x a 50,000x en velocidad comparado con métodos RL tradicionales.",
+    "por_que_importa": "Permite desarrollar sistemas de ciberdefensa más inteligentes, robustos y rápidos mediante simulaciones más eficientes y realistas, acelerando la investigación y el desarrollo.",
+    "tags": [
+      "LLMs",
+      "Ciberseguridad",
+      "Simulación",
+      "Inteligencia Artificial",
+      "Aprendizaje por Refuerzo",
+      "Automatización"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-18T13:22:06Z"
+  },
+  "arxiv:2608.16508v1": {
+    "tldr": "Detecta amenazas de ciberseguridad sin entrenamiento previo usando LLMs y análisis de actividad del usuario.",
+    "problema": "La detección de amenazas internas y APTs a partir de logs de seguridad heterogéneos es compleja y requiere modelos que puedan generalizar a amenazas desconocidas (zero-shot).",
+    "propuesta": "Un marco de dos etapas con LLMs que primero genera indicadores de riesgo estructurados a partir de líneas de tiempo de actividad del usuario (con contexto histórico vía RAG) y luego clasifica estos indicadores para detectar patrones de ataque.",
+    "resultados": "Supera al estado del arte (GABM) en dos datasets (CERT r5.2, PicoDomain), mejorando el F1-score hasta 11.40pp y 31.50pp respectivamente. La calidad de los indicadores de riesgo es clave.",
+    "por_que_importa": "Permite una detección de amenazas más robusta y adaptable, incluso para ataques nunca antes vistos, mejorando la postura de ciberseguridad sin necesidad de reentrenamiento constante.",
+    "tags": [
+      "ciberseguridad",
+      "deteccion de amenazas",
+      "LLMs",
+      "zero-shot",
+      "RAG",
+      "APT"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-18T13:22:16Z"
+  },
+  "arxiv:2608.16032v1": {
+    "tldr": "PoEM protege a los agentes LLM contra ataques de razonamiento falsificado verificando las acciones ejecutadas, no la memoria.",
+    "problema": "Los agentes LLM dependen de memoria externa para el contexto, pero esta puede ser manipulada por adversarios para engañar al agente y saltarse pasos de seguridad críticos, un ataque conocido como FARMA. Las defensas existentes como SENTINEL son fácilmente evadidas.",
+    "propuesta": "Se propone Proof-of-Execution Memory (PoEM), un sistema que mantiene un registro separado e inalterable (HMAC-chained ledger) de los pasos de seguridad que realmente se ejecutaron. Solo se permite omitir un paso si el registro confirma su ejecución previa.",
+    "resultados": "PoEM reduce el éxito de los ataques a 0% en tres modelos y tres escenarios, sin afectar la operación legítima (0% o 1.7% de falsos positivos). En contraste, SENTINEL bloquea erróneamente entre 33-50% de operaciones legítimas. El overhead de PoEM es de microsegundos.",
+    "por_que_importa": "PoEM ofrece una defensa robusta y eficiente contra ataques de manipulación del razonamiento en agentes LLM, crucial para la seguridad y fiabilidad de aplicaciones críticas que utilizan estas tecnologías, especialmente a medida que los modelos se vuelven más capaces.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Agentes Inteligentes",
+      "Defensa",
+      "Integridad",
+      "Verificación"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-18T13:22:25Z"
+  },
+  "arxiv:2608.16393v1": {
+    "tldr": "Evaluamos la resistencia de DeepSeek Harness a ataques de inyección indirecta de prompts, encontrando vulnerabilidades explotables.",
+    "problema": "Los sistemas de IA como DeepSeek Harness son vulnerables a ataques de inyección indirecta de prompts, donde instrucciones maliciosas se ocultan en datos externos, poniendo en riesgo la seguridad.",
+    "propuesta": "Se utilizó AI-Infra-Guard (A.I.G) para diseñar y ejecutar 14,560 pruebas controladas a través de 16 canales de contenido indirecto, evaluando la resistencia de DeepSeek Harness (DSH) a 12 métodos de ataque.",
+    "resultados": "Se observaron tasas de éxito de ataque de hasta 17.0% (falsa completitud, modo texto, JuezL), 25.5% (Unicode oculto, modo archivo, JuezR) y 16.0% (canal de habilidades, modo archivo, JuezR). El JuezL reportó cumplimiento parcial más frecuentemente (7.3% vs 2.0%).",
+    "por_que_importa": "Identifica debilidades específicas en el manejo de datos externos y llamadas a herramientas en DSH, crucial para desarrollar defensas efectivas y asegurar sistemas de IA contra ataques sigilosos.",
+    "tags": [
+      "inyección de prompts",
+      "seguridad IA",
+      "DeepSeek Harness",
+      "AIG",
+      "vulnerabilidades"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-18T13:22:35Z"
+  },
+  "arxiv:2608.16246v1": {
+    "tldr": "CompoSkill ataca agentes de IA compuestos por habilidades seguras individualmente, explotando riesgos en su interconexión.",
+    "problema": "Los agentes de IA autónomos dependen de habilidades certificadas individualmente, pero estas certificaciones fallan cuando las habilidades se componen, creando riesgos de seguridad no detectados por escáneres actuales.",
+    "propuesta": "Se presenta CompoSkill, un framework con un atacante de caja blanca (conoce las habilidades) y uno de caja negra (deduce y busca cadenas de riesgo). Se introduce CompoSkill-Bench, un benchmark con 1140 flujos de trabajo para evaluar ataques de composición de habilidades.",
+    "resultados": "CompoSkill logra tasas de formación de cadenas de riesgo (CFR) de hasta 83.3% (caja blanca) y 80.6% (caja negra). Los escáneres existentes bloquean solo una fracción limitada de estas composiciones riesgosas. Se observa un patrón 'bridge-bonus-then-hop-decay' en el éxito del ataque.",
+    "por_que_importa": "Demuestra una brecha sistemática en la certificación de habilidades individuales para agentes de IA. Los métodos actuales de seguridad son insuficientes ante ataques de composición, requiriendo nuevas defensas para proteger sistemas de IA autónomos.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Agentes Autónomos",
+      "Composición de Habilidades",
+      "Vulnerabilidades"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-18T13:22:45Z"
+  },
+  "arxiv:2608.16763v1": {
+    "tldr": "LAVA valida documentos financieros a gran escala con IA multimodal, asegurando precisión y trazabilidad en auditorías complejas.",
+    "problema": "Los documentos financieros (nóminas, impuestos, préstamos) tienen formatos diversos y reglas de negocio complejas, lo que dificulta su validación precisa y consistente con los sistemas actuales.",
+    "propuesta": "Se propone LAVA, un framework modular que usa modelos de lenguaje multimodales para recuperar reglas, extraer información preservando el diseño, enriquecer metadatos y verificar cálculos de forma auditable.",
+    "resultados": "LAVA supera a los métodos base en control de alucinaciones y manejo de casos extremos, manteniendo un uso eficiente de tokens en un gran benchmark del mundo real con reglas de validación expertas.",
+    "por_que_importa": "Permite auditorías financieras más precisas, fiables y trazables a gran escala, crucial para el cumplimiento normativo y la toma de decisiones en empresas.",
+    "tags": [
+      "IA",
+      "validación financiera",
+      "documentos",
+      "auditoría",
+      "modelos multimodales",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-18T13:22:55Z"
+  },
+  "arxiv:2608.16033": {
+    "tldr": "Los LLMs fallan al razonar eficientemente con presupuestos computacionales limitados y compartidos, incluso cuando son competentes individualmente.",
+    "problema": "Los modelos de lenguaje grandes (LLMs) tienen dificultades para asignar de manera óptima recursos computacionales limitados cuando deben resolver múltiples tareas simultáneamente bajo un presupuesto compartido. Los benchmarks existentes no evalúan esta capacidad comparándola con su rendimiento individual.",
+    "propuesta": "Se introduce $R^3$-Bench, un benchmark que evalúa LLMs en suites de seis problemas (matemáticas, programación, razonamiento abstracto) bajo presupuestos compartidos, tanto en configuraciones sin herramientas como agenticas. Se define un 'oráculo empírico' basado en el rendimiento individual para comparar.",
+    "resultados": "El rendimiento bajo presupuesto compartido es consistentemente inferior al 'oráculo empírico' (71 de 72 casos). Bajo presión moderada, la asignación equitativa de recursos supera el rendimiento en el concurso para 4 de 6 modelos. Los diagnósticos muestran patrones de fallo dependientes de la presión y poca actualización de estrategias.",
+    "por_que_importa": "Revela una brecha significativa entre la competencia demostrada por los LLMs en tareas individuales y su capacidad para operar eficientemente en escenarios del mundo real con recursos limitados y múltiples demandas.",
+    "tags": [
+      "LLMs",
+      "Racionalidad de Recursos",
+      "Benchmarking",
+      "Gestión de Presupuesto",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-18T13:23:05Z"
+  },
+  "arxiv:2608.13900": {
+    "tldr": "Nuevos agentes IA con transacciones ACID garantizan ejecución fiable y consistente en tareas complejas.",
+    "problema": "Los agentes IA autónomos que realizan tareas de largo alcance enfrentan desafíos similares a las bases de datos, necesitando ejecución fiable, consistencia, concurrencia segura y gestión de estado duradera, especialmente con la incertidumbre del modelo y entornos dinámicos.",
+    "propuesta": "Se introduce el concepto de 'transacción agentica' y un marco de sistema de agentes compatible con ACID, reinterpretando las propiedades ACID (Atomicidad, Consistencia, Aislamiento, Durabilidad) para la ejecución de agentes mediante garantías semánticas. Se implementa un agente de datos compatible con ACID utilizando ciclos de exploración-ejecución-validación transaccionales, centros de habilidades transaccionales, validación basada en divergencia de confianza y aislamiento consciente de dependencias semánticas.",
+    "resultados": "El sistema logra una mejora del 10.6% sobre los agentes de última generación, incluido Claude Code, en benchmarks ampliamente utilizados.",
+    "por_que_importa": "Proporciona una base para construir sistemas de agentes IA fiables, escalables y confiables, extendiendo los principios transaccionales a la IA para mejorar la robustez en aplicaciones prácticas.",
+    "tags": [
+      "Agentes IA",
+      "Transacciones ACID",
+      "Fiabilidad",
+      "Consistencia",
+      "Ciberseguridad",
+      "LLM"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-18T13:23:15Z"
+  },
+  "arxiv:2608.16003": {
+    "tldr": "Los LLM ajustan su umbral de verificación hacia la complacencia después de una ronda de corrección, reduciendo falsas alarmas.",
+    "problema": "Los sistemas de verificación automática basados en LLM pueden ser demasiado estrictos, generando falsas alarmas. Se investiga si el contexto de auditoría y reparación previa afecta esta tendencia.",
+    "propuesta": "Se analiza cómo la inclusión de una conversación previa de auditoría y reparación en el contexto del LLM afecta sus umbrales de verificación, comparándolo con un control sin este historial.",
+    "resultados": "La inclusión del historial de auditoría-reparación reduce las falsas alarmas entre 2.8 y 11.5 puntos porcentuales (reducción del 9-25%). Este efecto se mantiene incluso cuando la auditoría previa detectó un error, y se debe a un cambio en el umbral de decisión del modelo, no a una mejor discriminación.",
+    "por_que_importa": "Comprender estos sesgos es crucial para desplegar LLM de forma segura y fiable en tareas críticas de verificación y corrección, optimizando su rendimiento y evitando penalizaciones innecesarias.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Verificación Automática",
+      "Procesamiento de Lenguaje Natural",
+      "Auditoría"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-18T13:23:25Z"
+  },
+  "arxiv:2608.14718": {
+    "tldr": "VideoGAIA evalúa la inteligencia de asistentes de IA en comprensión de video mediante interacciones complejas y multi-turno, superando los límites actuales.",
+    "problema": "Las tareas convencionales de comprensión de video para modelos multimodales de lenguaje (MLLMs) están saturadas, con rendimientos cercanos al 90%, lo que las hace insuficientes para evaluar la inteligencia de los MLLMs avanzados.",
+    "propuesta": "Se introduce VideoGAIA, un benchmark de comprensión de video agentic. Formula la tarea como un proceso de interacción multi-turno que requiere que los modelos perciban videos, usen herramientas externas, recopilen información y sinteticen evidencia multimodal a lo largo de varias interacciones.",
+    "resultados": "Los MLLMs evaluados, incluyendo modelos de vanguardia como GPT-5.5 y Kimi-K3, obtienen menos del 60% de precisión en VideoGAIA, lo que demuestra su dificultad y valía como benchmark.",
+    "por_que_importa": "VideoGAIA impulsa la evaluación de MLLMs más allá de las tareas simples, empujando el desarrollo hacia asistentes de IA más capaces y versátiles en la comprensión de videos complejos y dinámicos.",
+    "tags": [
+      "comprensión de video",
+      "asistentes de IA",
+      "benchmarking",
+      "modelos multimodales",
+      "inteligencia artificial"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-18T13:23:35Z"
   }
 }

@@ -1,0 +1,550 @@
+{
+  "date": "2026-08-18",
+  "report_type": "filtrado",
+  "evaluated": 174,
+  "selected": 16,
+  "papers": [
+    {
+      "id": "arxiv:2608.16843v1",
+      "rank": 1,
+      "title": "Security of Foundation-Model-Powered Embodied Agents: Attack Surfaces, Attacks, Defenses, and Evaluation",
+      "authors": [
+        "Jiawei Liu",
+        "Jiacheng Guo",
+        "Tian Zhang",
+        "Yiwei Xu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.RO]",
+      "category": "cs.RO",
+      "date": "2026-08-17",
+      "url": "https://arxiv.org/abs/2608.16843v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.16843v1",
+      "score": 60,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "Foundation models are increasingly used for perception, reasoning, planning, and action generation in embodied agents, creating security risks that can propagate from digital inputs to physical behavior. Existing surveys often organize threats by mechanisms such as jailbreaks, prompt injection, backdoors, poisoning, or adversarial examples, but these categories do not consistently identify where an adversary first enters the embodied control loop. We present a trust-boundary-centric survey of foundation-model-powered embodied-agent security. Using a first-compromised-trust-boundary principle, we separate attack surface from attack mechanism and organize the system into five layers and twelve attack surfaces spanning the model supply chain, user instructions, context and memory, physical semantic environments, multimodal perception, world state, internal reasoning, task planning, action interfaces, middleware, multi-agent communication, and execution control. Based on 58 attack records and 61 defense records collected through August 15, 2026, we analyze representative attacks, cross-layer propagation, defense placement, and evaluation practices. Our quantitative analysis shows that attack research is concentrated on multimodal perception and action interfaces, while defenses are especially concentrated on action-level and runtime protection. Context and long-term memory, middleware and networking, world-state integrity, and multi-agent trust remain comparatively underexplored. We conclude with open challenges in state provenance, compositional defenses, long-horizon attack propagation, physical realizability, Byzantine multi-robot behavior, and unified closed-loop evaluation.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Agentes con IA avanzada son vulnerables a ataques que van de lo digital a lo físico, necesitando nuevas defensas.",
+        "problema": "Los agentes físicos controlados por modelos de IA fundacionales (foundation models) presentan riesgos de seguridad al poder propagar ataques digitales a acciones físicas, pero las clasificaciones actuales de amenazas no identifican claramente el punto de entrada al sistema.",
+        "propuesta": "Se propone una nueva organización de la seguridad de estos agentes centrada en los 'límites de confianza' (trust boundaries), separando la superficie de ataque de los mecanismos, y organizando el sistema en cinco capas y doce superficies de ataque.",
+        "resultados": "Se analizaron 58 ataques y 61 defensas. La investigación se concentra en percepción multimodal e interfaces de acción, mientras que las defensas se centran en el nivel de acción y protección en tiempo de ejecución. Las áreas de contexto/memoria, middleware, integridad del estado del mundo y confianza multi-agente están poco exploradas.",
+        "por_que_importa": "Es crucial entender y mitigar estas vulnerabilidades para garantizar la seguridad y fiabilidad de los agentes físicos autónomos en aplicaciones del mundo real, desde robots industriales hasta vehículos autónomos.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Agentes Físicos",
+          "Modelos Fundacionales",
+          "Seguridad de Sistemas"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-18T13:21:46Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.16775v1",
+      "rank": 2,
+      "title": "Topological Attribution Distance (TAD): Revealing Segment-Level RAG Influence on LLM Output Geometry for Incident Log Analysis",
+      "authors": [
+        "Reza Fayyazi",
+        "Michael Zuzak",
+        "Shanchieh Jay Yang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-17",
+      "url": "https://arxiv.org/abs/2608.16775v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.16775v1",
+      "score": 56,
+      "topics": [
+        "cybersecurity",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: cybersecurity, LLM, AI agents"
+      ],
+      "abstract_en": "Large Language Models (LLMs) are increasingly being deployed in cybersecurity operations to assist cybersecurity analysts with rapid decision-making against emerging threats. However, there is a main criteria that must be met when using LLMs in cybersecurity, that is, trust in the generated outputs. As Agentic AI is integrated into operational systems, a robust evidence attribution and provenance tracking technique is essential to trace the origins of model generations. When autonomous agents make a decision (right or wrong), the ability to trace back through the decision chain is critical, as without it, teams cannot identify which segment of the data caused the model generation. Existing methods often struggle to distinguish among complex and highly similar evidence sources, such as cyber incident logs. This reveals a key gap: current approaches do not adequately capture the holistic geometric relationship between the retrieved evidence and the generated response for reliable evidence verification. To bridge this gap, we propose Topological Attribution Distance (TAD), inspired by Topology, to characterize and capture the global geometric shape of an output and its changes against its retrieved logs. In other words, if the embeddings of a specific source log drastically changes the geometry of the model's response in the embedding space, this suggests that such log is a critical source for the model's generated response. Therefore, TAD is powered by segment-level ablation attribution to investigate incident logs of an actual cyberattack. We demonstrate how TAD finds the most attributed logs on LLM outputs in an adaptive manner. This can provide an explainable and trustworthy tracing based on each LLM's hidden state to understand how geometrically different retrieved logs influence the model generation, and provide evidence verification in cybersecurity and Agentic-AI workflows.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Descubre cómo la geometría de las respuestas de los LLM revela la influencia de los datos en ciberseguridad.",
+        "problema": "Los LLM en ciberseguridad necesitan confianza en sus respuestas, pero los métodos actuales no rastrean de forma fiable el origen de la información en logs complejos y similares.",
+        "propuesta": "Proponemos Topological Attribution Distance (TAD), que usa topología para medir cómo la geometría de la respuesta de un LLM cambia al considerar diferentes segmentos de logs, identificando así las fuentes de información críticas.",
+        "resultados": "TAD identifica de forma adaptativa los logs más influyentes en las salidas de LLM para análisis de ciberataques, proporcionando una trazabilidad explicable.",
+        "por_que_importa": "Permite verificar la evidencia y aumentar la confianza en las decisiones de los LLM en ciberseguridad y flujos de trabajo de IA, crucial para la toma de decisiones rápida y fiable.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "IA Explicable",
+          "Atribución de Datos",
+          "Generación de Texto"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-18T13:21:56Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.16422v1",
+      "rank": 3,
+      "title": "Proving the Utility of Large Language Models in Cybersecurity Simulations: A Comprehensive Examination",
+      "authors": [
+        "Stylianos Kampakis",
+        "Fabio Rovai",
+        "Marcos Charalambides",
+        "Theodosis Mourouzis"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-17",
+      "url": "https://arxiv.org/abs/2608.16422v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.16422v1",
+      "score": 56,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: cybersecurity, vuln & threats, LLM"
+      ],
+      "abstract_en": "Cyber threats continue to escalate in both frequency and sophistication, necessitating more adaptive and scalable defense strategies. This paper explores how Large Language Models (LLMs) can bolster cybersecurity simulations by automating the creation of synthetic environments and identifying latent vulnerabilities. We employ YAML as a structured representation format for simulating complex network configurations, thereby enabling Large Language Model-driven pipelines to support and improve reinforcement learning (RL) agent training. Comparative studies examine the advantages of LLM-based techniques over classical approaches such as Double Q-learning with Prioritized Experience Replay (PER), emphasizing increased efficiency, higher adaptability, and enhanced realism in cyberattack simulations. In empirical benchmarks across multiple synthetic topologies, LLM-instantiated Python agents achieved up to a 94.5% compromise rate while executing in 0.02-0.06 seconds per assessment---a ~25,000x to 50,000x speedup over traditional RL training cycles. Our findings underscore the transformative potential of integrating LLMs into cybersecurity research, ultimately paving the way for more intelligent and robust cyber-defense systems.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los LLMs revolucionan las simulaciones de ciberseguridad, creando entornos realistas y acelerando el entrenamiento de defensas hasta 50,000 veces.",
+        "problema": "Las crecientes y sofisticadas amenazas cibernéticas requieren estrategias de defensa más adaptables y escalables, pero las simulaciones actuales son lentas y poco realistas.",
+        "propuesta": "Utilizar Large Language Models (LLMs) para automatizar la creación de entornos de simulación de redes (usando YAML) y entrenar agentes de aprendizaje por refuerzo (RL) de forma más eficiente y realista.",
+        "resultados": "Agentes basados en LLMs lograron tasas de compromiso de hasta el 94.5% y ejecutaron evaluaciones en 0.02-0.06 segundos, lo que representa una mejora de ~25,000x a 50,000x en velocidad comparado con métodos RL tradicionales.",
+        "por_que_importa": "Permite desarrollar sistemas de ciberdefensa más inteligentes, robustos y rápidos mediante simulaciones más eficientes y realistas, acelerando la investigación y el desarrollo.",
+        "tags": [
+          "LLMs",
+          "Ciberseguridad",
+          "Simulación",
+          "Inteligencia Artificial",
+          "Aprendizaje por Refuerzo",
+          "Automatización"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-18T13:22:06Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.16508v1",
+      "rank": 4,
+      "title": "LLMs for Zero-Shot Threat Detection via Structured Risk Indicators",
+      "authors": [
+        "Abdullah Alghamdi",
+        "Siamak Layeghy",
+        "Marius Portmann"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-17",
+      "url": "https://arxiv.org/abs/2608.16508v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.16508v1",
+      "score": 54,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "We propose a two-stage large language model (LLM) framework for zero-shot detection of insider threats and advanced persistent threats (APTs) from heterogeneous security logs. The framework models user activity as chronological timelines and incorporates retrieval-augmented generation (RAG) to provide personalised behavioural context from each user's historical activity. Rather than performing end-to-end classification directly from raw logs, it first generates structured, interpretable sets of threat-specific risk indicators, which are then classified jointly across temporal sequences to capture attack patterns spanning multiple windows.The framework is evaluated on two benchmark datasets, CERT r5.2 for insider threat detection and PicoDomain for APT detection, using four combinations of two open-weight LLMs under both retrieval and non-retrieval settings. All configurations outperform the previous state-of-the-art LLM-based framework (GABM), with the best configuration improving the F1-score by 11.40 percentage points on CERT r5.2 and 31.50 percentage points on PicoDomain. Results further show that retrieval mainly benefits weaker LLMs by generating more discriminative risk indicators, whereas stronger models achieve comparable performance without retrieved context. The most effective assignment of LLMs to the two stages depends on the dataset. These findings show that the quality of the generated risk indicators is the main driver of zero-shot cyber threat detection performance.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Detecta amenazas de ciberseguridad sin entrenamiento previo usando LLMs y análisis de actividad del usuario.",
+        "problema": "La detección de amenazas internas y APTs a partir de logs de seguridad heterogéneos es compleja y requiere modelos que puedan generalizar a amenazas desconocidas (zero-shot).",
+        "propuesta": "Un marco de dos etapas con LLMs que primero genera indicadores de riesgo estructurados a partir de líneas de tiempo de actividad del usuario (con contexto histórico vía RAG) y luego clasifica estos indicadores para detectar patrones de ataque.",
+        "resultados": "Supera al estado del arte (GABM) en dos datasets (CERT r5.2, PicoDomain), mejorando el F1-score hasta 11.40pp y 31.50pp respectivamente. La calidad de los indicadores de riesgo es clave.",
+        "por_que_importa": "Permite una detección de amenazas más robusta y adaptable, incluso para ataques nunca antes vistos, mejorando la postura de ciberseguridad sin necesidad de reentrenamiento constante.",
+        "tags": [
+          "ciberseguridad",
+          "deteccion de amenazas",
+          "LLMs",
+          "zero-shot",
+          "RAG",
+          "APT"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-18T13:22:16Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.16032v1",
+      "rank": 5,
+      "title": "Proof-of-Execution Memory: Defending LLM Agents Against Forged-Reasoning Attacks by Verifying What Actually Happened",
+      "authors": [
+        "Md Habibur Rahman",
+        "Jaeho Kim"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-17",
+      "url": "https://arxiv.org/abs/2608.16032v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.16032v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "LLM agents are stateless and rely on external memory to carry context between steps. Because agents treat that memory as trustworthy, an adversary who can write to it can steer their behavior. The FARMA attack does this with no malicious command: it inserts fabricated entries into the agent's reasoning memory claiming a required safety step is already done, so the agent skips it. SENTINEL, the defense proposed with FARMA, scores entries against a fixed list of suspicious wordings; its authors note that an attacker who knows the list can reword the forgery and evade it, and leave this open. We show the gap is worse than stated. An automated attacker that simply asks a language model to reword the forgery evades SENTINEL on its first try, reducing its protection to zero on every model tested. We also find a capability paradox: the attack succeeds far more often on stronger models (98-100% on GPT-4o and GPT-4o-mini) than on Llama-3.1-8B (44%), because more capable agents follow reworded claims more faithfully, so the threat grows with capability. We propose Proof-of-Execution Memory (PoEM), which does not inspect memory at all. PoEM keeps a separate, tamper-evident, HMAC-chained ledger of the safety steps that actually executed, writable only by the trusted action layer, and allows a skip only if the ledger confirms real execution. An attacker can change what memory says but cannot forge a ledger entry for a step that never ran, so rewording no longer helps. Across three models and three scenarios, PoEM drives attack success to 0% while leaving legitimate operation intact (0% false positives in eight of nine cells, 1.7% in the ninth, within sampling noise), whereas SENTINEL wrongly blocks 33-50% of legitimate operations. PoEM also withstands attacks aimed at itself, adds microseconds of overhead, and works unchanged in a real LangChain agent. PoEM protects exactly the decisions it gates.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "PoEM protege a los agentes LLM contra ataques de razonamiento falsificado verificando las acciones ejecutadas, no la memoria.",
+        "problema": "Los agentes LLM dependen de memoria externa para el contexto, pero esta puede ser manipulada por adversarios para engañar al agente y saltarse pasos de seguridad críticos, un ataque conocido como FARMA. Las defensas existentes como SENTINEL son fácilmente evadidas.",
+        "propuesta": "Se propone Proof-of-Execution Memory (PoEM), un sistema que mantiene un registro separado e inalterable (HMAC-chained ledger) de los pasos de seguridad que realmente se ejecutaron. Solo se permite omitir un paso si el registro confirma su ejecución previa.",
+        "resultados": "PoEM reduce el éxito de los ataques a 0% en tres modelos y tres escenarios, sin afectar la operación legítima (0% o 1.7% de falsos positivos). En contraste, SENTINEL bloquea erróneamente entre 33-50% de operaciones legítimas. El overhead de PoEM es de microsegundos.",
+        "por_que_importa": "PoEM ofrece una defensa robusta y eficiente contra ataques de manipulación del razonamiento en agentes LLM, crucial para la seguridad y fiabilidad de aplicaciones críticas que utilizan estas tecnologías, especialmente a medida que los modelos se vuelven más capaces.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Agentes Inteligentes",
+          "Defensa",
+          "Integridad",
+          "Verificación"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-18T13:22:25Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.16393v1",
+      "rank": 6,
+      "title": "Security Assessment of DeepSeek Harness with A.I.G: Evaluating Resistance to Indirect Prompt Injection",
+      "authors": [
+        "Zonghao Ying",
+        "Xiangfan Wu",
+        "Huiyu Wu",
+        "Xing Zheng"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-17",
+      "url": "https://arxiv.org/abs/2608.16393v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.16393v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "compliance & audit",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, compliance & audit, adversarial ML"
+      ],
+      "abstract_en": "We assess indirect prompt injection in DeepSeek Harness (DSH), using AI-Infra-Guard (A.I.G) to construct tests, deliver controlled taint, execute DSH, collect traces, and judge outcomes. The study covers 14,560 controlled executions over 16 indirect-content channels, text and file carrier modes, 35 payload objectives, one unmodified baseline, and 12 attack methods. The experiment preserves DSH's agent loop, tool registry, model adapter, and session-event path; source tools and sensitive sinks are local fixtures, so attempted actions are recorded without external side effects. We evaluate each trace with a deterministic rule-based judge, \\JudgeR{} (RuleJudge), and a semantic LLM-based judge, \\JudgeL{} (LLMJudge). The strongest observed attack success rates are 17.0% under \\JudgeL{} for fake-completion attack in text mode, 25.5% under \\JudgeR{} for hidden Unicode in file mode, and 16.0% under \\JudgeR{} for the skills channel in file mode. \\JudgeL{} also assigns partial compliance more often than \\JudgeR{} (7.3% versus 2.0%). We relate these results to DSH's treatment of tool results, additional contexts, and tool-call policy hooks, then identify controls that should sit between untrusted content and sensitive actions. Our code is available at https://github.com/Tencent/AI-Infra-Guard.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evaluamos la resistencia de DeepSeek Harness a ataques de inyección indirecta de prompts, encontrando vulnerabilidades explotables.",
+        "problema": "Los sistemas de IA como DeepSeek Harness son vulnerables a ataques de inyección indirecta de prompts, donde instrucciones maliciosas se ocultan en datos externos, poniendo en riesgo la seguridad.",
+        "propuesta": "Se utilizó AI-Infra-Guard (A.I.G) para diseñar y ejecutar 14,560 pruebas controladas a través de 16 canales de contenido indirecto, evaluando la resistencia de DeepSeek Harness (DSH) a 12 métodos de ataque.",
+        "resultados": "Se observaron tasas de éxito de ataque de hasta 17.0% (falsa completitud, modo texto, JuezL), 25.5% (Unicode oculto, modo archivo, JuezR) y 16.0% (canal de habilidades, modo archivo, JuezR). El JuezL reportó cumplimiento parcial más frecuentemente (7.3% vs 2.0%).",
+        "por_que_importa": "Identifica debilidades específicas en el manejo de datos externos y llamadas a herramientas en DSH, crucial para desarrollar defensas efectivas y asegurar sistemas de IA contra ataques sigilosos.",
+        "tags": [
+          "inyección de prompts",
+          "seguridad IA",
+          "DeepSeek Harness",
+          "AIG",
+          "vulnerabilidades"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-18T13:22:35Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.16246v1",
+      "rank": 7,
+      "title": "CompoSkill: Compositional Skill Chain Attacks from Individually Scanner-Passing LLM Agent Skills",
+      "authors": [
+        "Mingxiao Liu",
+        "Zhoumian Jiang",
+        "Jianan Ma",
+        "Jian Zhang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-17",
+      "url": "https://arxiv.org/abs/2608.16246v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.16246v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Autonomous AI agents tackling Long Horizon Tasks depend on marketplace skills that are certified one at a time: a scanner returns a safety verdict for each skill and declares the ecosystem safe if every package passes. We show that this assumption fails under skill composition. A skill may pass the per-skill scanner individually yet participate in a risky composition when an agent connects its outputs, capabilities, or side effects with those of other scanner-passing skills. This makes skill composition risk a path level property rather than a node level property, explaining why existing skill scanners that inspect individual packages achieve limited interception. To study this threat, we present CompoSkill, a framework that constructs skill composition attacks through a dual attacker system. The white-box attacker knows the victim's installed skill pool and directly injects explicit skill-id sequences; the black-box attacker knows only a role profile, downloads the top marketplace skills for that scenario, builds a Skill Composition Graph, and searches for high risk chains whose implicit lures never name skill identifiers. We further construct CompoSkill-Bench, a benchmark of 1,140 records built from long-horizon professional workflows across five threats and six scenarios on OpenClaw and Nanobot. CompoSkill achieves risk Chain Formation Rates (CFR) up to 83.3% in the white box setting and 80.6% in the black box setting, while existing skill scanners block only a limited fraction of the risky compositions. Finally, we observe a bridge-bonus-then-hop-decay pattern: a bridge skill can increase attack success, but Attack Success Rate (ASR) decreases once additional hops make the risk chain longer than three skills. These results expose a systematic gap in single skill certification for autonomous AI agents.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "CompoSkill ataca agentes de IA compuestos por habilidades seguras individualmente, explotando riesgos en su interconexión.",
+        "problema": "Los agentes de IA autónomos dependen de habilidades certificadas individualmente, pero estas certificaciones fallan cuando las habilidades se componen, creando riesgos de seguridad no detectados por escáneres actuales.",
+        "propuesta": "Se presenta CompoSkill, un framework con un atacante de caja blanca (conoce las habilidades) y uno de caja negra (deduce y busca cadenas de riesgo). Se introduce CompoSkill-Bench, un benchmark con 1140 flujos de trabajo para evaluar ataques de composición de habilidades.",
+        "resultados": "CompoSkill logra tasas de formación de cadenas de riesgo (CFR) de hasta 83.3% (caja blanca) y 80.6% (caja negra). Los escáneres existentes bloquean solo una fracción limitada de estas composiciones riesgosas. Se observa un patrón 'bridge-bonus-then-hop-decay' en el éxito del ataque.",
+        "por_que_importa": "Demuestra una brecha sistemática en la certificación de habilidades individuales para agentes de IA. Los métodos actuales de seguridad son insuficientes ante ataques de composición, requiriendo nuevas defensas para proteger sistemas de IA autónomos.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Agentes Autónomos",
+          "Composición de Habilidades",
+          "Vulnerabilidades"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-18T13:22:45Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.16763v1",
+      "rank": 8,
+      "title": "LAVA: Logic-Aware Validation and Augmentation Framework for Large-Scale Financial Document Auditing",
+      "authors": [
+        "Ruoqi Shu",
+        "Xuhui Wang",
+        "Isaac Wang",
+        "Yanming Mai"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-08-17",
+      "url": "https://arxiv.org/abs/2608.16763v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.16763v1",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: LLM, compliance & audit"
+      ],
+      "abstract_en": "Financial document validation in production, such as payroll auditing, tax compliance, and loan underwriting, demands exceptional accuracy, consistency, and reproducibility under strict enterprise constraints. In practice, documents arrive with heterogeneous layouts and formats, semantically rich and context-dependent content, and embedded business rules that current pipelines struggle to process reliably. We introduce LAVA (Logic-Aware Validation and Augmentation), a modular, backbone-agnostic pipeline built on multimodal large language models, that integrates a four-stage design: document-rule retrieval, layout-preserving information extraction, auxiliary metadata enrichment, and auditable symbolic/arithmetic verification. LAVA supports robust rule grounding, fine-grained error attribution, and consistent, traceable end-to-end execution, capabilities essential for high-stakes deployment. Evaluated on a large real-world benchmark with diverse financial documents and dozens of expert-curated validation rules, LAVA outperforms baselines in hallucination control and edge-case handling while maintaining efficient token usage, demonstrating practicality for high-volume, time-critical validation.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "LAVA valida documentos financieros a gran escala con IA multimodal, asegurando precisión y trazabilidad en auditorías complejas.",
+        "problema": "Los documentos financieros (nóminas, impuestos, préstamos) tienen formatos diversos y reglas de negocio complejas, lo que dificulta su validación precisa y consistente con los sistemas actuales.",
+        "propuesta": "Se propone LAVA, un framework modular que usa modelos de lenguaje multimodales para recuperar reglas, extraer información preservando el diseño, enriquecer metadatos y verificar cálculos de forma auditable.",
+        "resultados": "LAVA supera a los métodos base en control de alucinaciones y manejo de casos extremos, manteniendo un uso eficiente de tokens en un gran benchmark del mundo real con reglas de validación expertas.",
+        "por_que_importa": "Permite auditorías financieras más precisas, fiables y trazables a gran escala, crucial para el cumplimiento normativo y la toma de decisiones en empresas.",
+        "tags": [
+          "IA",
+          "validación financiera",
+          "documentos",
+          "auditoría",
+          "modelos multimodales",
+          "ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-18T13:22:55Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.16033",
+      "rank": 1,
+      "title": "R^3-Bench: LLMs Struggle with Resource-Rational Reasoning under Shared Budgets",
+      "authors": [
+        "Peisong Wang",
+        "Zhiwei Ma",
+        "Bowen Liu",
+        "Feixue Liu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-17",
+      "url": "https://arxiv.org/abs/2608.16033",
+      "pdf_url": "https://arxiv.org/pdf/2608.16033",
+      "score": 69,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "In cognitive science, resource rationality asks how an agent should allocate limited computation to maximize expected value. Most reasoning and agent benchmarks use independent per-task budgets; existing shared-budget studies do not calibrate suite performance against the same model's demonstrated single-problem competence. We introduce $R^3$-Bench, which evaluates six-problem suites under shared budgets across mathematics, competitive programming, and abstract reasoning in tool-free and agentic settings. Matched single-problem response curves define an offline empirical oracle over observed successes. Across 72 main-table cells for six models, the oracle mean matches or exceeds the contest mean in all cells and is strictly higher in 71. Under moderate tool-free pressure, equal-allocation replay also exceeds contest performance for four of six models. Trajectory diagnostics reveal limited strategy updating and pressure-dependent failure patterns. In a three-model diagnostic under strong agentic pressure, at least one fixed scheduler exceeds the contest mean in six of nine cells, but no policy dominates across domains. These results expose a persistent gap between demonstrated competence and shared-budget realization.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los LLMs fallan al razonar eficientemente con presupuestos computacionales limitados y compartidos, incluso cuando son competentes individualmente.",
+        "problema": "Los modelos de lenguaje grandes (LLMs) tienen dificultades para asignar de manera óptima recursos computacionales limitados cuando deben resolver múltiples tareas simultáneamente bajo un presupuesto compartido. Los benchmarks existentes no evalúan esta capacidad comparándola con su rendimiento individual.",
+        "propuesta": "Se introduce $R^3$-Bench, un benchmark que evalúa LLMs en suites de seis problemas (matemáticas, programación, razonamiento abstracto) bajo presupuestos compartidos, tanto en configuraciones sin herramientas como agenticas. Se define un 'oráculo empírico' basado en el rendimiento individual para comparar.",
+        "resultados": "El rendimiento bajo presupuesto compartido es consistentemente inferior al 'oráculo empírico' (71 de 72 casos). Bajo presión moderada, la asignación equitativa de recursos supera el rendimiento en el concurso para 4 de 6 modelos. Los diagnósticos muestran patrones de fallo dependientes de la presión y poca actualización de estrategias.",
+        "por_que_importa": "Revela una brecha significativa entre la competencia demostrada por los LLMs en tareas individuales y su capacidad para operar eficientemente en escenarios del mundo real con recursos limitados y múltiples demandas.",
+        "tags": [
+          "LLMs",
+          "Racionalidad de Recursos",
+          "Benchmarking",
+          "Gestión de Presupuesto",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-18T13:23:05Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.13900",
+      "rank": 2,
+      "title": "Agentic Transaction: Towards ACID-Compliant Agent Systems",
+      "authors": [
+        "Zhaoyan Sun",
+        "Xiaoxiao Wang",
+        "Guoliang Li"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-14",
+      "url": "https://arxiv.org/abs/2608.13900",
+      "pdf_url": "https://arxiv.org/pdf/2608.13900",
+      "score": 57,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Large language model (LLM) agents are evolving from conversational assistants into autonomous systems that execute long-horizon tasks through reasoning, tool use, code generation, and workspace manipulation. As agents increasingly operate over persistent environments and multi-step workflows, they face challenges analogous to those addressed by transactional database systems: reliable execution, consistent outcomes, safe concurrency, and durable state management. We introduce the concept of an agentic transaction and propose an ACID-compliant agent system framework that reinterprets the classical ACID properties for agent execution through four semantic guarantees: Semantic Atomicity, Semantic Consistency, Semantic Isolation, and Semantic Durability. Together, these properties provide a principled foundation for building reliable agent systems despite model uncertainty and dynamic execution environments. To instantiate this framework, we develop an ACID-compliant data agent that realizes these guarantees through transactional exploration-execution-validation cycles, transactional skill hubs, confidence divergence-based validation, semantic dependency-aware isolation, and transaction-aware semantic state management. Experimental results on widely used benchmarks show that our system achieves a 10.6% improvement over state-of-the-art agents, including Claude Code. This work opens a broader research agenda on extending transactional principles and system architectures toward building trustworthy, scalable, and self-evolving AI agent systems.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Nuevos agentes IA con transacciones ACID garantizan ejecución fiable y consistente en tareas complejas.",
+        "problema": "Los agentes IA autónomos que realizan tareas de largo alcance enfrentan desafíos similares a las bases de datos, necesitando ejecución fiable, consistencia, concurrencia segura y gestión de estado duradera, especialmente con la incertidumbre del modelo y entornos dinámicos.",
+        "propuesta": "Se introduce el concepto de 'transacción agentica' y un marco de sistema de agentes compatible con ACID, reinterpretando las propiedades ACID (Atomicidad, Consistencia, Aislamiento, Durabilidad) para la ejecución de agentes mediante garantías semánticas. Se implementa un agente de datos compatible con ACID utilizando ciclos de exploración-ejecución-validación transaccionales, centros de habilidades transaccionales, validación basada en divergencia de confianza y aislamiento consciente de dependencias semánticas.",
+        "resultados": "El sistema logra una mejora del 10.6% sobre los agentes de última generación, incluido Claude Code, en benchmarks ampliamente utilizados.",
+        "por_que_importa": "Proporciona una base para construir sistemas de agentes IA fiables, escalables y confiables, extendiendo los principios transaccionales a la IA para mejorar la robustez en aplicaciones prácticas.",
+        "tags": [
+          "Agentes IA",
+          "Transacciones ACID",
+          "Fiabilidad",
+          "Consistencia",
+          "Ciberseguridad",
+          "LLM"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-18T13:23:15Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.16003",
+      "rank": 3,
+      "title": "Prior Audit-Repair Context Shifts LLM Verifier Thresholds Toward Leniency",
+      "authors": [
+        "Parsa Mazaheri",
+        "Kasra Mazaheri"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-17",
+      "url": "https://arxiv.org/abs/2608.16003",
+      "pdf_url": "https://arxiv.org/pdf/2608.16003",
+      "score": 57,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Automated checking pipelines increasingly place one language model as the checker and another (or the same one) as the fixer. We ask whether that wiring changes what the checker reports. Measuring false alarms on human-verified-correct ProcessBench traces with the present task held byte-identical, we find that a completed audit -> repair episode already in the model's context lowers false alarms in 15 of 15 model x wording combinations, by 2.8 to 11.5 percentage points against a length-matched non-audit control, a 9 to 25% reduction relative to that control. The direction contradicts what the accumulated-message literature predicts: an episode whose audit reported an error lowers false alarms further still, at all five wordings on the model where that manipulation lands cleanly, though a negativity asymmetry predicts more flagging. Decomposing the episode finds repair content and audit verdict complementary: different components carry the effect on different model families. Signal-detection analysis locates the change in the threshold rather than in discrimination -- the criterion moves in 15 of 15 combinations and survives correction in 13 while d' survives in none, though the d' test is half as sensitive by construction -- and a hand audit of 50 false alarms finds 82% simply wrong, so at this operating point the shift need not be harmful. With reasoning enabled the effect keeps its relative size on both models tested, and the threshold reading holds there too.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los LLM ajustan su umbral de verificación hacia la complacencia después de una ronda de corrección, reduciendo falsas alarmas.",
+        "problema": "Los sistemas de verificación automática basados en LLM pueden ser demasiado estrictos, generando falsas alarmas. Se investiga si el contexto de auditoría y reparación previa afecta esta tendencia.",
+        "propuesta": "Se analiza cómo la inclusión de una conversación previa de auditoría y reparación en el contexto del LLM afecta sus umbrales de verificación, comparándolo con un control sin este historial.",
+        "resultados": "La inclusión del historial de auditoría-reparación reduce las falsas alarmas entre 2.8 y 11.5 puntos porcentuales (reducción del 9-25%). Este efecto se mantiene incluso cuando la auditoría previa detectó un error, y se debe a un cambio en el umbral de decisión del modelo, no a una mejor discriminación.",
+        "por_que_importa": "Comprender estos sesgos es crucial para desplegar LLM de forma segura y fiable en tareas críticas de verificación y corrección, optimizando su rendimiento y evitando penalizaciones innecesarias.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Verificación Automática",
+          "Procesamiento de Lenguaje Natural",
+          "Auditoría"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-18T13:23:25Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.14718",
+      "rank": 4,
+      "title": "VideoGAIA: A Benchmark for General AI Assistants on Agentic Video Understanding",
+      "authors": [
+        "Fan Zhang",
+        "Guangming Yao",
+        "Jinyang Wu",
+        "Hao Wu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-12",
+      "url": "https://arxiv.org/abs/2608.14718",
+      "pdf_url": "https://arxiv.org/pdf/2608.14718",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Video understanding is a fundamental task for evaluating the capabilities of multimodal large language models (MLLMs). However, existing leading models have already achieved approximately 90% accuracy on the Video-MME leaderboard, suggesting that conventional single-turn video understanding tasks are becoming increasingly saturated and insufficient for assessing the intelligence of advanced MLLMs. Towards this end, we introduce VideoGAIA, an agentic video understanding benchmark for general artificial intelligence (AI) assistants. Moving beyond one-shot video question answering, VideoGAIA formulates video understanding as a multi-turn, tool-augmented interaction process, where models must iteratively perceive videos, invoke external tools, gather complementary information, and integrate multimodal evidence across turns. VideoGAIA contains 271 model-human co-designed tasks covering diverse and complex real-world scenarios. Each video-question-answer instance is independently verified by three human experts to ensure both correctness and appropriate difficulty. All evaluated MLLMs, including frontier models such as GPT-5.5 and Kimi-K3, achieve less than 60% accuracy on VideoGAIA, highlighting its value as a high-quality and timely benchmark for evaluating next-generation MLLMs. We hope that VideoGAIA will facilitate the transition from conventional video understanding toward agentic video understanding.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "VideoGAIA evalúa la inteligencia de asistentes de IA en comprensión de video mediante interacciones complejas y multi-turno, superando los límites actuales.",
+        "problema": "Las tareas convencionales de comprensión de video para modelos multimodales de lenguaje (MLLMs) están saturadas, con rendimientos cercanos al 90%, lo que las hace insuficientes para evaluar la inteligencia de los MLLMs avanzados.",
+        "propuesta": "Se introduce VideoGAIA, un benchmark de comprensión de video agentic. Formula la tarea como un proceso de interacción multi-turno que requiere que los modelos perciban videos, usen herramientas externas, recopilen información y sinteticen evidencia multimodal a lo largo de varias interacciones.",
+        "resultados": "Los MLLMs evaluados, incluyendo modelos de vanguardia como GPT-5.5 y Kimi-K3, obtienen menos del 60% de precisión en VideoGAIA, lo que demuestra su dificultad y valía como benchmark.",
+        "por_que_importa": "VideoGAIA impulsa la evaluación de MLLMs más allá de las tareas simples, empujando el desarrollo hacia asistentes de IA más capaces y versátiles en la comprensión de videos complejos y dinámicos.",
+        "tags": [
+          "comprensión de video",
+          "asistentes de IA",
+          "benchmarking",
+          "modelos multimodales",
+          "inteligencia artificial"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-18T13:23:35Z"
+      }
+    }
+  ],
+  "generated_at": "2026-08-18T13:23:35Z"
+}
