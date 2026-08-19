@@ -1,0 +1,692 @@
+{
+  "date": "2026-08-19",
+  "report_type": "filtrado",
+  "evaluated": 180,
+  "selected": 15,
+  "papers": [
+    {
+      "id": "arxiv:2608.17659v1",
+      "rank": 1,
+      "title": "MobileWorldSafety: Benchmarking GUI Agent Safety Against Environmental Injection Attacks in Android Apps",
+      "authors": [
+        "Sujin Chen",
+        "Lijun Li",
+        "Tianyi Du",
+        "Jing Shao"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-18",
+      "url": "https://arxiv.org/abs/2608.17659v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.17659v1",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "LLM-powered GUI agents that autonomously operate smartphones are rapidly transitioning from research prototypes to early real-world deployment. However, because these agents routinely process untrusted environmental content, they are highly vulnerable to environmental injection attacks, which include indirect prompt injections and adversarial instructions. Such attacks can manipulate the behavior of agents without user awareness through diverse channels encountered in everyday mobile use. Despite these risks, existing benchmarks often fail to capture everyday user scenarios, lacking a systematic evaluation of GUI agents under environmental injection attacks on mobile devices. To address this gap, we introduce MobileWorldSafety, a benchmark of 142 risk tasks built on real Android applications. For each task, we define a programmatically verifiable risk indicator over the final system state and evaluate outcomes with a two-stage pipeline: rule-based verification handles unambiguous cases, while an LLM judge adjudicates ambiguous ones. This distinguishes safety failures from capability failures and enables objective and reproducible assessment. Evaluations on six agents, including both general agents and specialized GUI agents, demonstrate that all agents remain highly vulnerable, with attack success rates ranging from 40.4% to 66.9%. These findings indicate that current agents often fail to maintain safety alignment when adversarial content is presented as ordinary mobile context. MobileWorldSafety provides a foundation for quantifying these vulnerabilities and advancing research on robust mobile GUI agents.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa la seguridad de agentes IA en móviles frente a ataques de inyección, revelando vulnerabilidades significativas.",
+        "problema": "Los agentes IA que operan smartphones son vulnerables a ataques de inyección ambiental (instrucciones maliciosas ocultas en contenido normal) que pueden manipular su comportamiento sin que el usuario se dé cuenta.",
+        "propuesta": "Se introduce MobileWorldSafety, un benchmark con 142 tareas de riesgo basadas en apps Android reales, evaluadas mediante verificación basada en reglas y un juez IA para distinguir fallos de seguridad de fallos de capacidad.",
+        "resultados": "Los seis agentes evaluados mostraron altas tasas de éxito de ataque, entre 40.4% y 66.9%, indicando que fallan en mantener la seguridad cuando se enfrentan a contenido adversarial presentado como contexto móvil normal.",
+        "por_que_importa": "Este benchmark cuantifica las vulnerabilidades de los agentes IA en móviles ante ataques comunes, sentando las bases para desarrollar agentes más robustos y seguros en el uso diario.",
+        "tags": [
+          "IA móvil",
+          "ciberseguridad",
+          "ataques de inyección",
+          "benchmarking",
+          "seguridad de agentes"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-19T13:23:36Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.17960v1",
+      "rank": 2,
+      "title": "COMA: A Compositional Misleading Attack Class on Security-RAG, and a Causal Counterfactual Defense",
+      "authors": [
+        "Chinmay Gondhalekar",
+        "Urjitkumar Patel"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-18",
+      "url": "https://arxiv.org/abs/2608.17960v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.17960v1",
+      "score": 59,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: cybersecurity, vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Every document a security copilot retrieves can be true, instruction-free, and non-contradictory --- and the copilot can still be driven to assess a critical, exploitable vulnerability correctly and then recommend a remediation that leaves it open. We study this failure in retrieval-augmented generation (RAG) backing analyst-facing copilots in Security Operations Centers, and identify a class of attacks, \\emph{\\compmis{}} (COMA), in which every adversarial document is factually correct, instruction-free, non-contradictory, and distributionally benign --- yet the answer is misled by their \\emph{composition}. We realize \\compmis{} through \\emph{action-corruption}, which steers a correctly-diagnosed vulnerability toward an inferior remediation, and \\emph{verdict-flip}, which destabilizes the exploitability verdict via an undecidable reachability chain. Action-corruption bites all five tested models --- including frontier reasoning models --- on every run, on two synthetic domains and a real CVE (CVE-2021-33813); verdict-flip bites stochastically, decreasing with model capability but never vanishing. A single principle governs both: the attack succeeds when the disambiguating fact must be \\emph{inferred} rather than \\emph{read}. We propose \\ccd{} (Causal Counterfactual Defense), an audit that measures the leave-one-out causal influence of each retrieved document and flags answers whose influence concentrates on low-trust documents. \\ccd{} localizes the attack to attacker-controlled documents with no false positives on four benign multi-document controls; an adaptive influence-spreading adversary is caught by an \\emph{aggregate} variant. We release attack seeds and a \\ccd{} reference implementation.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Atacan sistemas de IA de ciberseguridad con documentos correctos pero engañosos, proponiendo una defensa causal para mitigar el riesgo.",
+        "problema": "Los sistemas RAG de ciberseguridad pueden ser engañados para recomendar acciones inseguras o evaluar incorrectamente vulnerabilidades, incluso con documentos de entrada válidos y no contradictorios.",
+        "propuesta": "Se introduce COMA, una clase de ataques de composición que explota la inferencia en lugar de la lectura directa de hechos. Se propone Causal Counterfactual Defense (CCD) para auditar la influencia de cada documento recuperado y detectar respuestas engañosas.",
+        "resultados": "COMA afecta a todos los modelos probados en todos los intentos, tanto en dominios sintéticos como en un CVE real. CCD detecta el ataque sin falsos positivos en controles benignos y una variante adaptativa es capturada por una versión agregada.",
+        "por_que_importa": "Asegura la fiabilidad de las herramientas de IA en ciberseguridad, crucial para la toma de decisiones críticas en la detección y remediación de vulnerabilidades.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "RAG",
+          "Ataques de Composición",
+          "Defensa Causal"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-19T13:23:46Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.17933v1",
+      "rank": 3,
+      "title": "EvoTS-Agent: A Self-Evolving LLM Agent for Financial Time Series Change Point Detection",
+      "authors": [
+        "Lei Jiang",
+        "Ye Wei",
+        "Xinyu Xi",
+        "Jordan Langham-Lopez"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-08-18",
+      "url": "https://arxiv.org/abs/2608.17933v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.17933v1",
+      "score": 55,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Financial time series exhibit non-stationary and heterogeneous statistical properties, making change-point detection challenging because no single unsupervised algorithm performs consistently across assets and market regimes. Conventional workflows consequently depend heavily on expert-driven model selection, feature design, and hyperparameter tuning, limiting their scalability and adaptability. We propose EvoTS-Agent, a validation-guided self-evolving LLM agent for autonomous financial time-series change-point detection. EvoTS-Agent first performs curated exploratory data analysis to characterize dataset properties and initialize candidate detection models. It then evolves executable experiment trajectories through three complementary operators: \\textit{Revision} exploits the current best solution, \\textit{Alternative Strategy} explores fundamentally different modeling directions when progress stagnates, and \\textit{Recombination} synthesizes complementary evidence from high-performing trajectories. Validation feedback guides trajectory evolution throughout the search, enabling the agent to adapt its detection pipeline to the statistical characteristics of each dataset while preserving reliable optimization. Experiments across four benchmark datasets demonstrate that EvoTS-Agent consistently outperforms existing LLM-based agents while maintaining a 100\\% execution success rate across all evaluated backbone LLMs.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Detecta cambios en series temporales financieras de forma autónoma y adaptable, superando a otros métodos.",
+        "problema": "La detección de puntos de cambio en series temporales financieras es difícil debido a sus propiedades cambiantes y a la necesidad de ajustes manuales expertos en los modelos, lo que limita su escalabilidad y adaptabilidad.",
+        "propuesta": "Se propone EvoTS-Agent, un agente LLM que se autoevoluciona guiado por validación para detectar puntos de cambio de forma autónoma. Realiza análisis exploratorio, genera y evoluciona experimentos (revisión, exploración de estrategias alternativas, recombinación) para adaptar el pipeline de detección a las características de cada dataset.",
+        "resultados": "EvoTS-Agent supera consistentemente a otros agentes basados en LLM en cuatro datasets de referencia y mantiene una tasa de éxito de ejecución del 100% en todos los LLMs evaluados.",
+        "por_que_importa": "Permite una detección de cambios más robusta, adaptable y escalable en finanzas, reduciendo la dependencia de la intervención experta y mejorando la fiabilidad en diversos escenarios de mercado.",
+        "tags": [
+          "detección de cambios",
+          "series temporales financieras",
+          "agentes LLM",
+          "aprendizaje automático",
+          "automatización",
+          "finanzas"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-19T13:24:13Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.17556v1",
+      "rank": 4,
+      "title": "Reflex-Guard: A Low-Latency Guardrail for LLM Prompt Safety Using Dense Semantic Embeddings",
+      "authors": [
+        "Istiaque Ahmed",
+        "Afia Anjum Borsha",
+        "Ranat Das Prangon",
+        "Abu-fuad Ahmad"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-18",
+      "url": "https://arxiv.org/abs/2608.17556v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.17556v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Large Language Models (LLMs) in real-world applications often face the risks of specially crafted prompts designed to bypass the safety controls. Existing guardrail methods, such as LLM-as-a-judge and cloud-based safety APIs are able to detect unsafe content. However, they often add a delay of about 250-900 ms to each request. This delay is too high for real-time applications, when the system usually needs to respond in less than 100 ms. Furthermore, routing user prompts through external moderation endpoints raises significant data privacy concerns. This paper introduces Reflex-Guard, a lightweight guardrail that runs locally. It uses jailbreak-aware preprocessing, compact sentence-transformer embeddings, and seven fast binary classifiers. Together, these components enable high-accuracy prompt safety filtering with much lower latency than existing solutions. Through systematic evaluation on a strategically balanced dataset of 30,568 samples drawn from five complementary sources, we demonstrate that Reflex-Guard achieves 95.9% recall on harmful prompts at 37.6 ms end-to-end latency. It is faster than existing baselines, including Llama Guard 2 at 255 ms and SafeDecoding at 723 ms. It can detect 100% of GCG suffix attacks and Base64-encoded prompts using the default threshold. However, DrAttack structured prompts required lowering the threshold to 0.03 for optimal detection, as they produced a distinct probability distribution. Reflex-Guard achieves Reflex Efficiency Score (RES) scores up to 16.79, significantly outperforming Llama Guard 2 (11.90) and SafeDecoding (9.80). This analysis offers practical deployment advice and shows that different attack types occupy distinct regions in the embedding probability space.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Reflex-Guard es un sistema local de baja latencia para proteger LLMs contra prompts maliciosos, superando a las soluciones actuales.",
+        "problema": "Los LLMs actuales son vulnerables a prompts diseñados para evadir sus controles de seguridad, y las soluciones existentes introducen latencias inaceptables (250-900 ms) o plantean preocupaciones de privacidad al usar servicios externos.",
+        "propuesta": "Se propone Reflex-Guard, un sistema de defensa local y ligero que utiliza preprocesamiento consciente de jailbreaks, embeddings semánticos densos y clasificadores binarios rápidos para filtrar prompts inseguros con baja latencia.",
+        "resultados": "Reflex-Guard alcanza un 95.9% de recall en prompts dañinos con una latencia de 37.6 ms, superando a Llama Guard 2 (255 ms) y SafeDecoding (723 ms). Detecta el 100% de ataques GCG y prompts Base64, y logra puntuaciones RES de hasta 16.79.",
+        "por_que_importa": "Permite la implementación de LLMs seguros en aplicaciones en tiempo real, abordando la necesidad crítica de respuestas rápidas y protegiendo la privacidad de los datos al operar localmente.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "IA",
+          "Prompt Injection",
+          "Baja Latencia",
+          "Privacidad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-19T13:24:23Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.17597v1",
+      "rank": 5,
+      "title": "HarnessRisk: A Lifecycle-Oriented Benchmark for Agent Harness Safety",
+      "authors": [
+        "Yajing Bai",
+        "Jinhao Duan",
+        "Jie Peng",
+        "Xianfeng Wu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-18",
+      "url": "https://arxiv.org/abs/2608.17597v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.17597v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Large language models are increasingly deployed through agent harnesses that manage tools, extensions, persistent state, permissions, and external actions. Existing safety benchmarks mainly target individual attack mechanisms or a limited subset of operational settings, making it difficult to compare how safety failures emerge across different harness responsibilities. We present HarnessRisk, a lifecycle oriented benchmark that organizes agent harness safety into six operational phases including Harness Configuration, Capability Extension, Runtime Operation, State Persistence, Action Control, and Incident Recovery. HarnessRisk contains 128 sandboxed cases, each pairing a benign user objective with an adversarial instruction embedded in an untrusted workflow artifact. We evaluate each trajectory using Utility, Attack Success Rate, Persistence, and Detection. Across three harnesses, six language models, and 14 model and harness configurations, attack success ranges from 12.6% to 80.9%, while Utility remains between 75.0% and 97.6%. Harness Configuration is the most vulnerable phase across all three harnesses, showing that attacks can succeed by altering security sensitive parameters within otherwise authorized workflows. We also find that explicit risk recognition does not reliably lead to safe action, as some configurations detect risks in more than 90% of runs while retaining substantial attack success. These results highlight the need to evaluate agent safety across multiple harness responsibilities and at the level of the deployed model and harness configuration.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evaluamos la seguridad de los 'agent harnesses' de LLMs en un nuevo benchmark que cubre todo su ciclo de vida.",
+        "problema": "Los benchmarks de seguridad actuales para 'agent harnesses' (sistemas que gestionan LLMs con herramientas, permisos, etc.) son limitados y no cubren todo el ciclo de vida operativo, dificultando la comparación de fallos de seguridad.",
+        "propuesta": "Presentamos HarnessRisk, un benchmark con 128 casos en sandbox que organiza la seguridad en seis fases (configuración, extensión de capacidades, operación, persistencia, control de acciones, recuperación) y evalúa la utilidad, tasa de éxito de ataque, persistencia y detección.",
+        "resultados": "Los ataques tienen éxito entre el 12.6% y el 80.9% de las veces, mientras que la utilidad se mantiene entre 75.0% y 97.6%. La fase de 'Harness Configuration' es la más vulnerable. La detección explícita de riesgos no garantiza la seguridad.",
+        "por_que_importa": "Es crucial evaluar la seguridad de los LLMs a través de sus 'agent harnesses' considerando todas sus responsabilidades y configuraciones específicas para prevenir ataques efectivos.",
+        "tags": [
+          "agent harness",
+          "LLM seguridad",
+          "benchmark",
+          "ciberseguridad",
+          "inteligencia artificial"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-19T13:24:33Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.17829v1",
+      "rank": 6,
+      "title": "The Model's Tell: Measuring Context-Leakage Attack Signals with Behavior Gauges",
+      "authors": [
+        "Maosen Zhang",
+        "Jianshuo Dong",
+        "Boting Lu",
+        "Wenyue Li"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-18",
+      "url": "https://arxiv.org/abs/2608.17829v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.17829v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "LLMs increasingly rely on external contexts, such as pre-defined system prompts or retrieved documents, to improve generation quality. However, processing these contexts alongside user queries creates an attack surface: adversarial inputs can induce models to disclose them. Prior probing studies suggest that leakage-related signals emerge in hidden states, yet the need to extract these states poses additional deployment challenges. In this paper, we explore whether this internal signal leaves a more accessible ``tell'' before decoding. We propose LeakGauge, which probes this response by appending a suffix that gauges leakage behavior and mapping its prefill token probabilities to an attack-risk score. While a direct gauge uses the initial tokens of confidential content, we find that a content-agnostic one that verbalizes leakage behavior yields more robust signals. Across 11 LLMs, including GLM-5.2 (753B) and Kimi-K3 (2.8T), LeakGauge reaches an AUROC range of 0.944--0.996 on unseen attacks. The signal remains stable when the content changes language or the attack shifts from verbatim to semantic disclosure. By activation-steering interventions, we further show that the risk score is sensitive to an internal leakage-related direction, relating the observable signal to the model's internal representation. In addition, LeakGauge enables an input detector with fewer than 0.5K extra parameters and added latency of 10.34 ms. Code: \\href{https://github.com/yeasen-z/LeakGauge}.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Detecta fugas de información confidencial en LLMs analizando el comportamiento de sus respuestas, sin necesidad de acceder a estados internos.",
+        "problema": "Los modelos de lenguaje grandes (LLMs) pueden filtrar accidentalmente información confidencial (prompts, documentos) que procesan junto a las consultas del usuario, y las técnicas actuales para detectarlo requieren acceso a estados internos del modelo, lo cual es complejo de implementar.",
+        "propuesta": "Se propone LeakGauge, un método que detecta la fuga de contexto analizando las probabilidades de los tokens de salida del modelo al añadir un sufijo específico. Se encontró que un sufijo agnóstico al contenido, que verbaliza el comportamiento de fuga, es más efectivo.",
+        "resultados": "LeakGauge alcanza un AUROC entre 0.944 y 0.996 en 11 LLMs, incluso con ataques no vistos, cambios de idioma y tipos de fuga (verbatim vs. semántica). Permite crear un detector de entradas con menos de 0.5K parámetros y 10.34 ms de latencia adicional.",
+        "por_que_importa": "Ofrece una forma práctica y eficiente de proteger la confidencialidad de los datos en sistemas que usan LLMs, al no requerir acceso a los estados internos del modelo y añadir mínima latencia.",
+        "tags": [
+          "LLMs",
+          "Fuga de Información",
+          "Ciberseguridad",
+          "Privacidad",
+          "Detección de Ataques",
+          "Prompt Injection"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-19T13:24:43Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.17796v1",
+      "rank": 7,
+      "title": "Diff-DDoS: Realistic Cyber-Physical Attack Synthesis and Robust Detection for 5G-Enabled CPS Using Tabular Diffusion Models",
+      "authors": [
+        "Bilal Hussain",
+        "Xiao Tang",
+        "Qinghe Du",
+        "Tan Li"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-18",
+      "url": "https://arxiv.org/abs/2608.17796v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.17796v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Deep learning-based DDoS detectors for 5G-enabled cyber-physical systems face scarce labeled attack data and unrealistic synthetic substitutes, which limit robustness against adaptive adversaries. Detectors trained on hand-crafted attacks with fixed scaling multipliers degrade catastrophically (F1-score drops of about 47 percent to 100 percent, depending on scenario) when confronted with realistic, distribution-preserving samples. We propose Diff-DDoS, a three-phase framework for realistic attack synthesis and robust detection using tabular diffusion models. Phase 1 trains a baseline CNN cell-level detector on spatiotemporal grids from call detail records (CDRs). Phase 2 trains a tabular denoising diffusion probabilistic model (TabDDPM) on normal CDR aggregates to generate realistic attacks and expose detector vulnerabilities. Phase 3 introduces adversarial diffusion training (ADT), using inverse classifier guidance to generate hard yet distribution-preserving samples until the detector converges. On a Milano CDR dataset across SMS-flooding, silent-call, Internet-signaling, and blended scenarios, ResNet50 with ADT recovers F1-scores of 79.62 percent (silent-call), 100 percent (Internet), and 92.79 percent (blended). After validation-based threshold calibration, ADT reaches 100 percent SMS F1 versus 47.3 percent for CTGAN, and matches the strongest gradient-based adversarial-training baseline on silent-call. These results support tabular diffusion models for stress-testing and hardening intrusion detectors in data-scarce 5G cyber-physical deployments.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Generamos ataques DDoS realistas para redes 5G y entrenamos detectores más robustos usando modelos de difusión, mejorando drásticamente la detección.",
+        "problema": "Los detectores de ataques DDoS en sistemas ciberfísicos 5G carecen de datos de ataque realistas y suficientes, lo que los hace vulnerables a adversarios adaptativos y falla su rendimiento.",
+        "propuesta": "Se propone Diff-DDoS, un marco con tres fases: 1) detector CNN base, 2) generación de ataques realistas con modelos de difusión tabulares (TabDDPM), y 3) entrenamiento adversarial con difusión (ADT) para endurecer el detector.",
+        "resultados": "El detector ResNet50 con ADT recupera F1-scores del 79.62% (silent-call), 100% (Internet) y 92.79% (blended). Para SMS-flooding, ADT alcanza 100% F1 vs 47.3% de CTGAN.",
+        "por_que_importa": "Permite crear defensas más robustas contra ataques DDoS en redes 5G, crucial para la seguridad de sistemas ciberfísicos críticos ante la escasez de datos de ataque realistas.",
+        "tags": [
+          "ciberseguridad",
+          "5G",
+          "ataques DDoS",
+          "modelos de difusión",
+          "IA",
+          "sistemas ciberfísicos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-19T13:24:53Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.17671v1",
+      "rank": 8,
+      "title": "Benchmarking Automated Security Patch Backporting: How Far Are We?",
+      "authors": [
+        "Jincheng Yang",
+        "Yulong Fu",
+        "Chengwei Liu",
+        "Lyuye Zhang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-18",
+      "url": "https://arxiv.org/abs/2608.17671v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.17671v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Automated security patch backporting is critical for mitigating N-day vulnerabilities. Recent tools report success rates above 80% on their respective datasets. However, these evaluations are often confined to homogeneous environments, such as one repository or specific project versions. Consequently, it remains unclear how well these tools generalize beyond their originally targeted scenarios. We present Porting Benchmark, a curated dataset of 1,234 security patch backporting cases spanning cross-version, cross-branch, and cross-repository scenarios, paired with a common evaluation framework. Using this benchmark, we evaluate five tools spanning program analysis, LLM prompting, and LLM agents under aligned settings. Our results show that aligned evaluation changes the apparent performance landscape: PortGPT and TSBPort remain comparatively strong on the Replication Dataset, while FixMorph and Mystique degrade substantially under the common protocol. Performance degrades sharply on structurally complex patches: the best commit-level success rate falls from 85.2% on Type-I patches to 24.0% on Type-IV. We identify four root-cause categories (missing target API awareness, cross-version semantic mismatch, non-local dependency propagation failure, and patch construction or localization failure) and derive concrete directions for next-generation tool design. On a 45-case dynamically validated subset with verified test cases and constructed POCs, we further observe that reference-based benchmark scores do not fully capture real-world remediation: exact match sharply under-credits harder target adaptations, while executable validation reveals residual integration failures in the target that static reference agreement misses. Executable-feedback refinement provides limited but measurable recovery on the hardest executable cases.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evaluar la portabilidad automática de parches de seguridad revela que las herramientas actuales fallan en escenarios complejos y heterogéneos.",
+        "problema": "Las herramientas actuales de portabilidad automática de parches de seguridad se evalúan en entornos homogéneos, lo que dificulta saber su rendimiento real en escenarios más diversos y complejos.",
+        "propuesta": "Presentamos 'Porting Benchmark', un conjunto de datos con 1.234 casos de portabilidad de parches de seguridad en diferentes versiones, ramas y repositorios, junto con un marco de evaluación común para comparar cinco herramientas (análisis de programas, LLM prompting, LLM agents).",
+        "resultados": "La evaluación alineada cambia el panorama: PortGPT y TSBPort se mantienen fuertes, mientras que FixMorph y Mystique se degradan. El rendimiento cae drásticamente en parches complejos (del 85.2% al 24.0%). Se identifican cuatro causas raíz de fallos. La validación ejecutable revela fallos de integración residuales que las métricas de coincidencia exacta no capturan.",
+        "por_que_importa": "Demuestra que las herramientas actuales no generalizan bien a la complejidad del mundo real, identificando áreas clave para mejorar el diseño de futuras herramientas y asegurando una remediación de vulnerabilidades más robusta y fiable.",
+        "tags": [
+          "ciberseguridad",
+          "parches de seguridad",
+          "inteligencia artificial",
+          "benchmarking",
+          "ingeniería de software"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-19T13:25:03Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.16393",
+      "rank": 1,
+      "title": "Security Assessment of DeepSeek Harness with A.I.G: Evaluating Resistance to Indirect Prompt Injection",
+      "authors": [
+        "Zonghao Ying",
+        "Xiangfan Wu",
+        "Huiyu Wu",
+        "Xing Zheng"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-18",
+      "url": "https://arxiv.org/abs/2608.16393",
+      "pdf_url": "https://arxiv.org/pdf/2608.16393",
+      "score": 78,
+      "topics": [
+        "LLM",
+        "compliance & audit",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, compliance & audit, adversarial ML"
+      ],
+      "abstract_en": "We assess indirect prompt injection in DeepSeek Harness (DSH), using AI-Infra-Guard (A.I.G) to construct tests, deliver controlled taint, execute DSH, collect traces, and judge outcomes. The study covers 14,560 controlled executions over 16 indirect-content channels, text and file carrier modes, 35 payload objectives, one unmodified baseline, and 12 attack methods. The experiment preserves DSH's agent loop, tool registry, model adapter, and session-event path; source tools and sensitive sinks are local fixtures, so attempted actions are recorded without external side effects. We evaluate each trace with a deterministic rule-based judge, \\JudgeR{} (RuleJudge), and a semantic LLM-based judge, \\JudgeL{} (LLMJudge). The strongest observed attack success rates are 17.0% under \\JudgeL{} for fake-completion attack in text mode, 25.5% under \\JudgeR{} for hidden Unicode in file mode, and 16.0% under \\JudgeR{} for the skills channel in file mode. \\JudgeL{} also assigns partial compliance more often than \\JudgeR{} (7.3% versus 2.0%). We relate these results to DSH's treatment of tool results, additional contexts, and tool-call policy hooks, then identify controls that should sit between untrusted content and sensitive actions. Our code is available at https://github.com/Tencent/AI-Infra-Guard/tree/main/Research/deepseek-harness-security-assessment .",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evaluamos la resistencia de DeepSeek Harness a ataques de inyección indirecta de prompts, identificando vulnerabilidades clave.",
+        "problema": "Los sistemas de IA como DeepSeek Harness son vulnerables a la inyección indirecta de prompts, donde instrucciones maliciosas se ocultan en datos externos, lo que podría comprometer su seguridad y fiabilidad.",
+        "propuesta": "Se utilizó AI-Infra-Guard (A.I.G) para diseñar y ejecutar un conjunto exhaustivo de pruebas de inyección indirecta de prompts contra DeepSeek Harness (DSH), evaluando 14,560 ejecuciones en diversos canales y modos.",
+        "resultados": "Se observaron tasas de éxito de ataque de hasta el 25.5% (caracteres Unicode ocultos en modo archivo) y 17.0% (ataque de falsa finalización en modo texto). El juez LLM (\"JudgeL\") reportó cumplimiento parcial más frecuentemente (7.3%) que el juez basado en reglas (\"JudgeR\") (2.0%).",
+        "por_que_importa": "Identificar y cuantificar estas vulnerabilidades es crucial para desarrollar defensas robustas y asegurar la integridad de los sistemas de IA que interactúan con fuentes de datos no confiables.",
+        "tags": [
+          "inyección de prompts",
+          "ciberseguridad IA",
+          "DeepSeek Harness",
+          "evaluación de seguridad",
+          "LLM"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-19T13:25:12Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.17310",
+      "rank": 2,
+      "title": "Agentic ESOpt: Fine-Tuning Long-Horizon LLM Agents with Minimal GPU Requirements",
+      "authors": [
+        "Zhi Zheng",
+        "Rongsheng Chen",
+        "Yunpeng Ba",
+        "Zhenkun Wang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-18",
+      "url": "https://arxiv.org/abs/2608.17310",
+      "pdf_url": "https://arxiv.org/pdf/2608.17310",
+      "score": 69,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Reinforcement Learning (RL) has been promising in single-turn LLM fine-tuning. However, long-horizon agentic reasoning introduces increasingly branching interactions and sparse rewards, exposing several limitations of RL: its heavyweight backpropagation-based training stack makes it impractical to fine-tune larger LLMs, and longer-horizon trajectories make credit assignment in RL substantially harder. This paper argues that evolution strategies (ES) can be a better choice for fine-tuning long-horizon LLM agents. Compared with agentic RL, ES offers three key advantages: 1) Model Scalability: ES enables full-parameter optimization with only minimal, inference-level GPU memory, making it possible to fine-tune large LLMs. 2) Flexibility: its lightweight, black-box feedback interface makes ES fine-tuning easy to compose with prompt-space evolution (e.g., skill optimization & test-time compute); and 3) Long-Horizon Scalability: ES performs trajectory-level parameter attribution without decomposing rewards across horizons, yielding better scalability than Agentic RL as the horizon length grows. Based on this insight, we propose Agentic ESOpt, a full-parameter agentic fine-tuning framework tailored to flexible parameter--context co-evolution. At each step, Agentic ESOpt samples perturbations around the current LLM parameters, evaluates the resulting agents with rewards, and applies an online reward-weighted update. To improve the exploration--adaptation trade-off, Agentic ESOpt further introduces a cosine decay schedule of the perturbation scale $σ$. On WebArena-Lite, full-parameter optimization of Qwen-3.5-27B improves the No Skill baseline by 6.69%. In test-time automatic heuristic design, Agentic ESOpt performs online prompt--parameter co-evolution, improving its matched baseline in 28 of 36 settings.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Estrategias de evolución para afinar agentes LLM de largo alcance con poca memoria GPU.",
+        "problema": "El Reinforcement Learning (RL) es ineficiente para afinar agentes LLM de largo alcance debido a la alta demanda de memoria y la dificultad de asignación de crédito en trayectorias largas.",
+        "propuesta": "Se propone Agentic ESOpt, un framework de afinación de agentes LLM que utiliza estrategias de evolución (ES) para optimizar parámetros completos con mínima memoria GPU, facilitando la co-evolución de parámetros y prompts.",
+        "resultados": "En WebArena-Lite, se mejoró el rendimiento en un 6.69% para Qwen-3.5-27B. En diseño automático de heurísticas, Agentic ESOpt superó a su baseline en 28 de 36 configuraciones.",
+        "por_que_importa": "Permite afinar modelos LLM grandes y agentes complejos de forma eficiente en hardware limitado, abriendo nuevas posibilidades para la personalización y optimización de agentes en tareas de largo alcance.",
+        "tags": [
+          "LLM",
+          "Agentes",
+          "Estrategias de Evolución",
+          "Afinación Eficiente",
+          "Ciberseguridad",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-19T13:25:22Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.17402",
+      "rank": 3,
+      "title": "MoE-ViE: Mixture of Experts Vision Encoder for Efficient Image and Video Understanding",
+      "authors": [
+        "Bonan Zhang",
+        "Shiyu Dong",
+        "Quan Hung Tran",
+        "Katharina Gschwind"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-18",
+      "url": "https://arxiv.org/abs/2608.17402",
+      "pdf_url": "https://arxiv.org/pdf/2608.17402",
+      "score": 67,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Vision encoders are a critical component of vision-language models, and scaling their capacity effectively improves performance. However, dense scaling increases compute cost and inference latency. Mixture-of-Experts (MoE) architectures offer a compelling alternative, having enabled efficient scaling in LLMs, yet the MoE design space for CLIP-style vision encoders remains underexplored at State-of-the-Art (SOTA) levels. In this work, we systematically study MoE designs for vision encoder scaling and find that fine-grained MoE topologies yield substantial gains over both dense and standard MoE counterparts. We further propose an auxiliary-loss-free balancing variant for better expert utilization, and design a specialized MoE kernel to mitigate inference latency overhead. To enhance video capabilities while preserving image knowledge, we introduce frame-level distillation paired with a novel freezing mechanism. We pretrain a series of Mixture-of-Experts Vision Encoders (MoE-ViE) across a range of sizes, all consistently outperforming their dense counterparts. Our largest model matches the zero-shot performance of a SOTA encoder 1.7x its size at 76% of its latency. When aligned with an LLM, MoE-ViE surpasses all compared encoders on image and video benchmarks, including those with up to 5x more activated parameters. Code is available at https://github.com/facebookresearch/moe_vie.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "MoE-ViE introduce una arquitectura de 'Mezcla de Expertos' para codificadores de visión, logrando mayor eficiencia y rendimiento en tareas de imagen y video.",
+        "problema": "Los codificadores de visión densos, aunque potentes, incrementan excesivamente el coste computacional y la latencia de inferencia al escalar su capacidad.",
+        "propuesta": "Se propone MoE-ViE, una arquitectura de 'Mezcla de Expertos' (MoE) para codificadores de visión, explorando topologías finas, un balanceador sin pérdida auxiliar, kernels optimizados y destilación para video.",
+        "resultados": "MoE-ViE supera a sus contrapartes densas y a otros MoE. El modelo más grande iguala el rendimiento zero-shot de un codificador 1.7x mayor con un 76% de latencia. Supera a codificadores 5x más grandes en benchmarks de imagen y video.",
+        "por_que_importa": "Permite escalar modelos de visión de manera más eficiente, reduciendo costes y latencia sin sacrificar, e incluso mejorando, el rendimiento en tareas complejas de imagen y video.",
+        "tags": [
+          "Mezcla de Expertos",
+          "Codificador de Visión",
+          "Eficiencia Computacional",
+          "Procesamiento de Video",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-19T13:25:32Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.17067",
+      "rank": 4,
+      "title": "DiSCO: Defending text-to-image generation through distribution-guided contrastive prompt optimization",
+      "authors": [
+        "Tong Zhang",
+        "Motasem Alfarra",
+        "Carlos Hinojosa",
+        "Christos Louizos"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-17",
+      "url": "https://arxiv.org/abs/2608.17067",
+      "pdf_url": "https://arxiv.org/pdf/2608.17067",
+      "score": 59,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "As text-to-image generative models advance, they raise critical safety concerns, particularly the generation of Not-Safe-For-Work (NSFW) content such as violence and nudity, further exacerbated by red-teaming adversarial attacks. Existing defenses predominantly operate under white-box assumptions, relying on text encoder optimization, weight editing, or inference-time intervention, and fundamentally cannot scale to proprietary models. Black-box alternatives based on LLM prompt rewriting offer broader applicability, yet fail in a critical regime we identify as the \\textit{benign adversarial} problem: prompts that are linguistically safe but still trigger harmful generation due to the model's learned data distribution. We propose DiSCO, a zero-shot, strictly black-box defense that operates entirely at the prompt level as a plug-and-play module, requiring no model retraining, fine-tuning, or access to model internals. DiSCO performs distribution-guided suffix expansion via beam search, optimized through contrastive scoring over safe and unsafe image pools generated by the target model itself, with iterative adaptive feedback until safe content is produced. We demonstrate that DiSCO consistently enhances the safety of both undefended and defended models on the I2P benchmark under multiple red-teaming attacks, achieving 37.7% and 25.13% ASR reduction, respectively, while maintaining semantic fidelity and improving image coherence. As a black-box, architecture-agnostic module, DiSCO can be readily applied to any text-to-image system without necessitating any changes to the model itself.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "DiSCO defiende modelos de generación de imágenes a partir de texto contra contenido dañino sin acceder a su código interno.",
+        "problema": "Los modelos de generación de texto a imagen pueden crear contenido inapropiado (NSFW) incluso con prompts aparentemente seguros, y las defensas actuales no funcionan con modelos propietarios (caja negra).",
+        "propuesta": "DiSCO es una defensa de caja negra que optimiza los prompts añadiendo sufijos de forma iterativa, guiada por la distribución de imágenes seguras e inseguras generadas por el propio modelo, sin necesidad de reentrenamiento.",
+        "resultados": "DiSCO reduce la tasa de generación de contenido dañino (ASR) en un 37.7% en modelos sin defensa y un 25.13% en modelos ya defendidos, manteniendo la fidelidad semántica y la coherencia de la imagen.",
+        "por_que_importa": "Permite aplicar defensas de seguridad a cualquier modelo de generación de imágenes existente, incluidas las APIs cerradas, mejorando la seguridad sin comprometer la calidad o la accesibilidad.",
+        "tags": [
+          "IA generativa",
+          "ciberseguridad",
+          "modelos de caja negra",
+          "seguridad de IA",
+          "prompts"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-19T13:25:41Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.17800",
+      "rank": 5,
+      "title": "StartupBench: Benchmarking General-Purpose Agents on Market-Validated End-to-End Workflows",
+      "authors": [
+        "Liya Zhu",
+        "Xin Ma",
+        "Tao Liu",
+        "Haodong Wang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-18",
+      "url": "https://arxiv.org/abs/2608.17800",
+      "pdf_url": "https://arxiv.org/pdf/2608.17800",
+      "score": 57,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Recent advances in Large Language Models(LLMs) and agents have substantially improved the ability of AI systems to execute complex tasks. Yet existing benchmarks largely rely on researcher-selected tasks, leaving uncertain whether such progress extends to the work that real-world users actually demand from AI systems. We introduce \\textbf{StartupBench}, an E2E agent benchmark grounded in market-validated AI startup products. Rather than defining tasks from pre-defined assumptions about useful agent capabilities, we systematically study AI products with demonstrated adoption, together with their product workflows and users, to identify real-world tasks for which AI has established practical demand across diverse professional domains. We translate these workflows into complete deliverable-oriented tasks and evaluate them with fine-grained rubrics capturing their complex requirements. Across representative models evaluated under a unified agent harness, even the strongest model successfully completes only approximately 30\\% of StartupBench, despite making substantial partial progress on many tasks. Further analysis identifies aspects like complex instruction following and domain-specific expertise as major sources of failure. Our results reveal that many market-validated workflows remain beyond the reliable capabilities of current general-purpose agents, establishing StartupBench as an empirical measure of progress toward E2E completions of real-world user tasks.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "StartupBench evalúa agentes de IA en flujos de trabajo reales de startups, revelando que incluso los modelos más avanzados fallan en el 70% de las tareas.",
+        "problema": "Los benchmarks actuales de IA se basan en tareas seleccionadas por investigadores, sin reflejar las necesidades reales de los usuarios y la demanda del mercado.",
+        "propuesta": "Se introduce StartupBench, un benchmark para agentes de IA basado en flujos de trabajo de productos de startups que ya han sido validados por el mercado, evaluando tareas completas y orientadas a resultados.",
+        "resultados": "Incluso el mejor modelo evaluado solo completa aproximadamente el 30% de las tareas de StartupBench, mostrando progreso parcial en otras. Las principales causas de fallo incluyen la dificultad para seguir instrucciones complejas y la falta de experiencia en dominios específicos.",
+        "por_que_importa": "Demuestra que los flujos de trabajo del mundo real, validados por el mercado, aún están lejos de las capacidades fiables de los agentes de IA de propósito general, señalando áreas clave para la investigación y el desarrollo futuro.",
+        "tags": [
+          "benchmarking",
+          "agentes de IA",
+          "flujos de trabajo reales",
+          "LLMs",
+          "ciberseguridad",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-19T13:25:51Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.17286",
+      "rank": 6,
+      "title": "Abra: Scaling Diffusion Image Training",
+      "authors": [
+        "Kyle Chickering",
+        "Wei-An Lin",
+        "Swayam Bhanded",
+        "Dan Saunders"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-18",
+      "url": "https://arxiv.org/abs/2608.17286",
+      "pdf_url": "https://arxiv.org/pdf/2608.17286",
+      "score": 57,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Compute-optimal scaling laws guide the training of frontier language models yet remain largely unexplored for visual generation. We present a systematic scaling law study for text-to-image diffusion models using Abra, a controlled family of flow-matching transformers trained across three orders of magnitude worth of compute ($10^{19}$ to $10^{22}$ FLOPs), reaching significantly larger compute budgets than previous works. We demonstrate that diffusion models scale just as predictably as language models but require far more data to train optimally: compute optimality occurs at approximately $200$ image tokens per parameter, ten times the Chinchilla compute-optimal prescription for LLMs. We show that unlike language models, diffusion models are robust to overtraining and that practitioners should err on the side of more data rather than a larger model. Finally, we show that this predictability extends beyond training loss to generative quality metrics, optimal CFG settings, representation quality, and even the shape of the training curves, which collapse onto a universal form.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Descubren leyes de escalado para entrenar modelos de difusión de imágenes, necesitando 10 veces más datos que los modelos de lenguaje.",
+        "problema": "Falta de comprensión sobre cómo escalar eficientemente el entrenamiento de modelos de difusión de texto a imagen, a diferencia de los modelos de lenguaje.",
+        "propuesta": "Se presenta Abra, una familia de transformadores entrenados con un rango de cómputo de tres órdenes de magnitud ($10^{19}$ a $10^{22}$ FLOPs), para estudiar sistemáticamente las leyes de escalado en modelos de difusión.",
+        "resultados": "Los modelos de difusión requieren aproximadamente 200 tokens de imagen por parámetro para ser óptimos en cómputo (10x más que los LLMs). Son robustos al sobreentrenamiento y se benefician más de datos adicionales que de modelos más grandes. La predictibilidad se extiende a métricas de calidad y configuración.",
+        "por_que_importa": "Permite entrenar modelos de generación de imágenes más potentes y eficientes, guiando las decisiones sobre la cantidad de datos y el tamaño del modelo para obtener mejores resultados.",
+        "tags": [
+          "modelos de difusion",
+          "escalado",
+          "entrenamiento",
+          "vision por computadora",
+          "IA generativa",
+          "optimizacion"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-19T13:26:01Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.16002",
+      "rank": 7,
+      "title": "From Sequence to Structure: Relational Uncertainty Propagation for LLM Agents",
+      "authors": [
+        "Zhengzhao Ma. Boxi Cao",
+        "Yaojie Lu",
+        "Hongyu Lin",
+        "Xianpei Han"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-17",
+      "url": "https://arxiv.org/abs/2608.16002",
+      "pdf_url": "https://arxiv.org/pdf/2608.16002",
+      "score": 56,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+7)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Reliable uncertainty quantification (UQ) is essential for deploying large language model (LLM) agents in complex interactive environments. Existing UQ methods largely rely on local signals, such as token probabilities, predictive entropy, or per-step confidence, and therefore overlook the long-range dependencies through which errors accumulate across an execution trajectory. As a result, they may fail to identify agent failures whose causes originate several reasoning or interaction steps before the final answer. We propose RUPA (Relational Uncertainty Propagation for Agents), a trajectory-level UQ framework for LLM agents. RUPA represents an execution history as a directed trajectory graph in which reasoning states, tool interactions, and environment feedback are nodes connected by temporal and semantic dependency edges. It then propagates uncertainty over this graph to capture how execution risk accumulates and transfers across interaction steps. The propagated signal is combined with trajectory-level behavioral features and goal-alignment information to produce a confidence estimate for the full agent trajectory. We evaluate RUPA on representative agent benchmarks, including $τ$-2, Terminal-Bench-2, and GAIA, using 6 open-source LLMs spanning multiple model families. Experimental results show that RUPA consistently outperforms existing UQ methods by providing more accurate uncertainty estimates, enabling earlier failure detection, and improving uncertainty-guided agent execution across diverse agent tasks. These results demonstrate that explicitly modeling relational dependency is crucial to reliable UQ for long-horizon LLM agents, providing a practical foundation for trustworthy agent execution.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Mejora la fiabilidad de los agentes LLM al rastrear la incertidumbre a lo largo de sus interacciones, no solo en pasos individuales.",
+        "problema": "Los métodos actuales de cuantificación de incertidumbre en agentes LLM fallan al no capturar cómo los errores se acumulan a lo largo de múltiples pasos de razonamiento o interacción, lo que lleva a la detección tardía de fallos.",
+        "propuesta": "Se propone RUPA, un marco que modela el historial de ejecución como un grafo de trayectorias, propagando la incertidumbre a través de las dependencias temporales y semánticas para estimar la confianza total de la trayectoria.",
+        "resultados": "RUPA supera consistentemente a los métodos existentes en la estimación de incertidumbre, permitiendo una detección más temprana de fallos y mejorando la ejecución guiada por incertidumbre en benchmarks como τ-2, Terminal-Bench-2 y GAIA con 6 LLMs de código abierto.",
+        "por_que_importa": "Permite una mayor fiabilidad y seguridad en la implementación de agentes LLM en entornos complejos, detectando fallos de forma proactiva y mejorando la toma de decisiones.",
+        "tags": [
+          "LLM Agents",
+          "Uncertainty Quantification",
+          "Cybersecurity",
+          "AI Reliability",
+          "Trajectory Modeling"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-19T13:26:20Z"
+      }
+    }
+  ],
+  "generated_at": "2026-08-19T13:26:20Z"
+}

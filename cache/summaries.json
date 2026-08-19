@@ -4765,5 +4765,252 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-08-18T13:23:35Z"
+  },
+  "arxiv:2608.17659v1": {
+    "tldr": "Evalúa la seguridad de agentes IA en móviles frente a ataques de inyección, revelando vulnerabilidades significativas.",
+    "problema": "Los agentes IA que operan smartphones son vulnerables a ataques de inyección ambiental (instrucciones maliciosas ocultas en contenido normal) que pueden manipular su comportamiento sin que el usuario se dé cuenta.",
+    "propuesta": "Se introduce MobileWorldSafety, un benchmark con 142 tareas de riesgo basadas en apps Android reales, evaluadas mediante verificación basada en reglas y un juez IA para distinguir fallos de seguridad de fallos de capacidad.",
+    "resultados": "Los seis agentes evaluados mostraron altas tasas de éxito de ataque, entre 40.4% y 66.9%, indicando que fallan en mantener la seguridad cuando se enfrentan a contenido adversarial presentado como contexto móvil normal.",
+    "por_que_importa": "Este benchmark cuantifica las vulnerabilidades de los agentes IA en móviles ante ataques comunes, sentando las bases para desarrollar agentes más robustos y seguros en el uso diario.",
+    "tags": [
+      "IA móvil",
+      "ciberseguridad",
+      "ataques de inyección",
+      "benchmarking",
+      "seguridad de agentes"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-19T13:23:36Z"
+  },
+  "arxiv:2608.17960v1": {
+    "tldr": "Atacan sistemas de IA de ciberseguridad con documentos correctos pero engañosos, proponiendo una defensa causal para mitigar el riesgo.",
+    "problema": "Los sistemas RAG de ciberseguridad pueden ser engañados para recomendar acciones inseguras o evaluar incorrectamente vulnerabilidades, incluso con documentos de entrada válidos y no contradictorios.",
+    "propuesta": "Se introduce COMA, una clase de ataques de composición que explota la inferencia en lugar de la lectura directa de hechos. Se propone Causal Counterfactual Defense (CCD) para auditar la influencia de cada documento recuperado y detectar respuestas engañosas.",
+    "resultados": "COMA afecta a todos los modelos probados en todos los intentos, tanto en dominios sintéticos como en un CVE real. CCD detecta el ataque sin falsos positivos en controles benignos y una variante adaptativa es capturada por una versión agregada.",
+    "por_que_importa": "Asegura la fiabilidad de las herramientas de IA en ciberseguridad, crucial para la toma de decisiones críticas en la detección y remediación de vulnerabilidades.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "RAG",
+      "Ataques de Composición",
+      "Defensa Causal"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-19T13:23:46Z"
+  },
+  "arxiv:2608.17933v1": {
+    "tldr": "Detecta cambios en series temporales financieras de forma autónoma y adaptable, superando a otros métodos.",
+    "problema": "La detección de puntos de cambio en series temporales financieras es difícil debido a sus propiedades cambiantes y a la necesidad de ajustes manuales expertos en los modelos, lo que limita su escalabilidad y adaptabilidad.",
+    "propuesta": "Se propone EvoTS-Agent, un agente LLM que se autoevoluciona guiado por validación para detectar puntos de cambio de forma autónoma. Realiza análisis exploratorio, genera y evoluciona experimentos (revisión, exploración de estrategias alternativas, recombinación) para adaptar el pipeline de detección a las características de cada dataset.",
+    "resultados": "EvoTS-Agent supera consistentemente a otros agentes basados en LLM en cuatro datasets de referencia y mantiene una tasa de éxito de ejecución del 100% en todos los LLMs evaluados.",
+    "por_que_importa": "Permite una detección de cambios más robusta, adaptable y escalable en finanzas, reduciendo la dependencia de la intervención experta y mejorando la fiabilidad en diversos escenarios de mercado.",
+    "tags": [
+      "detección de cambios",
+      "series temporales financieras",
+      "agentes LLM",
+      "aprendizaje automático",
+      "automatización",
+      "finanzas"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-19T13:24:13Z"
+  },
+  "arxiv:2608.17556v1": {
+    "tldr": "Reflex-Guard es un sistema local de baja latencia para proteger LLMs contra prompts maliciosos, superando a las soluciones actuales.",
+    "problema": "Los LLMs actuales son vulnerables a prompts diseñados para evadir sus controles de seguridad, y las soluciones existentes introducen latencias inaceptables (250-900 ms) o plantean preocupaciones de privacidad al usar servicios externos.",
+    "propuesta": "Se propone Reflex-Guard, un sistema de defensa local y ligero que utiliza preprocesamiento consciente de jailbreaks, embeddings semánticos densos y clasificadores binarios rápidos para filtrar prompts inseguros con baja latencia.",
+    "resultados": "Reflex-Guard alcanza un 95.9% de recall en prompts dañinos con una latencia de 37.6 ms, superando a Llama Guard 2 (255 ms) y SafeDecoding (723 ms). Detecta el 100% de ataques GCG y prompts Base64, y logra puntuaciones RES de hasta 16.79.",
+    "por_que_importa": "Permite la implementación de LLMs seguros en aplicaciones en tiempo real, abordando la necesidad crítica de respuestas rápidas y protegiendo la privacidad de los datos al operar localmente.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "IA",
+      "Prompt Injection",
+      "Baja Latencia",
+      "Privacidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-19T13:24:23Z"
+  },
+  "arxiv:2608.17597v1": {
+    "tldr": "Evaluamos la seguridad de los 'agent harnesses' de LLMs en un nuevo benchmark que cubre todo su ciclo de vida.",
+    "problema": "Los benchmarks de seguridad actuales para 'agent harnesses' (sistemas que gestionan LLMs con herramientas, permisos, etc.) son limitados y no cubren todo el ciclo de vida operativo, dificultando la comparación de fallos de seguridad.",
+    "propuesta": "Presentamos HarnessRisk, un benchmark con 128 casos en sandbox que organiza la seguridad en seis fases (configuración, extensión de capacidades, operación, persistencia, control de acciones, recuperación) y evalúa la utilidad, tasa de éxito de ataque, persistencia y detección.",
+    "resultados": "Los ataques tienen éxito entre el 12.6% y el 80.9% de las veces, mientras que la utilidad se mantiene entre 75.0% y 97.6%. La fase de 'Harness Configuration' es la más vulnerable. La detección explícita de riesgos no garantiza la seguridad.",
+    "por_que_importa": "Es crucial evaluar la seguridad de los LLMs a través de sus 'agent harnesses' considerando todas sus responsabilidades y configuraciones específicas para prevenir ataques efectivos.",
+    "tags": [
+      "agent harness",
+      "LLM seguridad",
+      "benchmark",
+      "ciberseguridad",
+      "inteligencia artificial"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-19T13:24:33Z"
+  },
+  "arxiv:2608.17829v1": {
+    "tldr": "Detecta fugas de información confidencial en LLMs analizando el comportamiento de sus respuestas, sin necesidad de acceder a estados internos.",
+    "problema": "Los modelos de lenguaje grandes (LLMs) pueden filtrar accidentalmente información confidencial (prompts, documentos) que procesan junto a las consultas del usuario, y las técnicas actuales para detectarlo requieren acceso a estados internos del modelo, lo cual es complejo de implementar.",
+    "propuesta": "Se propone LeakGauge, un método que detecta la fuga de contexto analizando las probabilidades de los tokens de salida del modelo al añadir un sufijo específico. Se encontró que un sufijo agnóstico al contenido, que verbaliza el comportamiento de fuga, es más efectivo.",
+    "resultados": "LeakGauge alcanza un AUROC entre 0.944 y 0.996 en 11 LLMs, incluso con ataques no vistos, cambios de idioma y tipos de fuga (verbatim vs. semántica). Permite crear un detector de entradas con menos de 0.5K parámetros y 10.34 ms de latencia adicional.",
+    "por_que_importa": "Ofrece una forma práctica y eficiente de proteger la confidencialidad de los datos en sistemas que usan LLMs, al no requerir acceso a los estados internos del modelo y añadir mínima latencia.",
+    "tags": [
+      "LLMs",
+      "Fuga de Información",
+      "Ciberseguridad",
+      "Privacidad",
+      "Detección de Ataques",
+      "Prompt Injection"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-19T13:24:43Z"
+  },
+  "arxiv:2608.17796v1": {
+    "tldr": "Generamos ataques DDoS realistas para redes 5G y entrenamos detectores más robustos usando modelos de difusión, mejorando drásticamente la detección.",
+    "problema": "Los detectores de ataques DDoS en sistemas ciberfísicos 5G carecen de datos de ataque realistas y suficientes, lo que los hace vulnerables a adversarios adaptativos y falla su rendimiento.",
+    "propuesta": "Se propone Diff-DDoS, un marco con tres fases: 1) detector CNN base, 2) generación de ataques realistas con modelos de difusión tabulares (TabDDPM), y 3) entrenamiento adversarial con difusión (ADT) para endurecer el detector.",
+    "resultados": "El detector ResNet50 con ADT recupera F1-scores del 79.62% (silent-call), 100% (Internet) y 92.79% (blended). Para SMS-flooding, ADT alcanza 100% F1 vs 47.3% de CTGAN.",
+    "por_que_importa": "Permite crear defensas más robustas contra ataques DDoS en redes 5G, crucial para la seguridad de sistemas ciberfísicos críticos ante la escasez de datos de ataque realistas.",
+    "tags": [
+      "ciberseguridad",
+      "5G",
+      "ataques DDoS",
+      "modelos de difusión",
+      "IA",
+      "sistemas ciberfísicos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-19T13:24:53Z"
+  },
+  "arxiv:2608.17671v1": {
+    "tldr": "Evaluar la portabilidad automática de parches de seguridad revela que las herramientas actuales fallan en escenarios complejos y heterogéneos.",
+    "problema": "Las herramientas actuales de portabilidad automática de parches de seguridad se evalúan en entornos homogéneos, lo que dificulta saber su rendimiento real en escenarios más diversos y complejos.",
+    "propuesta": "Presentamos 'Porting Benchmark', un conjunto de datos con 1.234 casos de portabilidad de parches de seguridad en diferentes versiones, ramas y repositorios, junto con un marco de evaluación común para comparar cinco herramientas (análisis de programas, LLM prompting, LLM agents).",
+    "resultados": "La evaluación alineada cambia el panorama: PortGPT y TSBPort se mantienen fuertes, mientras que FixMorph y Mystique se degradan. El rendimiento cae drásticamente en parches complejos (del 85.2% al 24.0%). Se identifican cuatro causas raíz de fallos. La validación ejecutable revela fallos de integración residuales que las métricas de coincidencia exacta no capturan.",
+    "por_que_importa": "Demuestra que las herramientas actuales no generalizan bien a la complejidad del mundo real, identificando áreas clave para mejorar el diseño de futuras herramientas y asegurando una remediación de vulnerabilidades más robusta y fiable.",
+    "tags": [
+      "ciberseguridad",
+      "parches de seguridad",
+      "inteligencia artificial",
+      "benchmarking",
+      "ingeniería de software"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-19T13:25:03Z"
+  },
+  "arxiv:2608.16393": {
+    "tldr": "Evaluamos la resistencia de DeepSeek Harness a ataques de inyección indirecta de prompts, identificando vulnerabilidades clave.",
+    "problema": "Los sistemas de IA como DeepSeek Harness son vulnerables a la inyección indirecta de prompts, donde instrucciones maliciosas se ocultan en datos externos, lo que podría comprometer su seguridad y fiabilidad.",
+    "propuesta": "Se utilizó AI-Infra-Guard (A.I.G) para diseñar y ejecutar un conjunto exhaustivo de pruebas de inyección indirecta de prompts contra DeepSeek Harness (DSH), evaluando 14,560 ejecuciones en diversos canales y modos.",
+    "resultados": "Se observaron tasas de éxito de ataque de hasta el 25.5% (caracteres Unicode ocultos en modo archivo) y 17.0% (ataque de falsa finalización en modo texto). El juez LLM (\"JudgeL\") reportó cumplimiento parcial más frecuentemente (7.3%) que el juez basado en reglas (\"JudgeR\") (2.0%).",
+    "por_que_importa": "Identificar y cuantificar estas vulnerabilidades es crucial para desarrollar defensas robustas y asegurar la integridad de los sistemas de IA que interactúan con fuentes de datos no confiables.",
+    "tags": [
+      "inyección de prompts",
+      "ciberseguridad IA",
+      "DeepSeek Harness",
+      "evaluación de seguridad",
+      "LLM"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-19T13:25:12Z"
+  },
+  "arxiv:2608.17310": {
+    "tldr": "Estrategias de evolución para afinar agentes LLM de largo alcance con poca memoria GPU.",
+    "problema": "El Reinforcement Learning (RL) es ineficiente para afinar agentes LLM de largo alcance debido a la alta demanda de memoria y la dificultad de asignación de crédito en trayectorias largas.",
+    "propuesta": "Se propone Agentic ESOpt, un framework de afinación de agentes LLM que utiliza estrategias de evolución (ES) para optimizar parámetros completos con mínima memoria GPU, facilitando la co-evolución de parámetros y prompts.",
+    "resultados": "En WebArena-Lite, se mejoró el rendimiento en un 6.69% para Qwen-3.5-27B. En diseño automático de heurísticas, Agentic ESOpt superó a su baseline en 28 de 36 configuraciones.",
+    "por_que_importa": "Permite afinar modelos LLM grandes y agentes complejos de forma eficiente en hardware limitado, abriendo nuevas posibilidades para la personalización y optimización de agentes en tareas de largo alcance.",
+    "tags": [
+      "LLM",
+      "Agentes",
+      "Estrategias de Evolución",
+      "Afinación Eficiente",
+      "Ciberseguridad",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-19T13:25:22Z"
+  },
+  "arxiv:2608.17402": {
+    "tldr": "MoE-ViE introduce una arquitectura de 'Mezcla de Expertos' para codificadores de visión, logrando mayor eficiencia y rendimiento en tareas de imagen y video.",
+    "problema": "Los codificadores de visión densos, aunque potentes, incrementan excesivamente el coste computacional y la latencia de inferencia al escalar su capacidad.",
+    "propuesta": "Se propone MoE-ViE, una arquitectura de 'Mezcla de Expertos' (MoE) para codificadores de visión, explorando topologías finas, un balanceador sin pérdida auxiliar, kernels optimizados y destilación para video.",
+    "resultados": "MoE-ViE supera a sus contrapartes densas y a otros MoE. El modelo más grande iguala el rendimiento zero-shot de un codificador 1.7x mayor con un 76% de latencia. Supera a codificadores 5x más grandes en benchmarks de imagen y video.",
+    "por_que_importa": "Permite escalar modelos de visión de manera más eficiente, reduciendo costes y latencia sin sacrificar, e incluso mejorando, el rendimiento en tareas complejas de imagen y video.",
+    "tags": [
+      "Mezcla de Expertos",
+      "Codificador de Visión",
+      "Eficiencia Computacional",
+      "Procesamiento de Video",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-19T13:25:32Z"
+  },
+  "arxiv:2608.17067": {
+    "tldr": "DiSCO defiende modelos de generación de imágenes a partir de texto contra contenido dañino sin acceder a su código interno.",
+    "problema": "Los modelos de generación de texto a imagen pueden crear contenido inapropiado (NSFW) incluso con prompts aparentemente seguros, y las defensas actuales no funcionan con modelos propietarios (caja negra).",
+    "propuesta": "DiSCO es una defensa de caja negra que optimiza los prompts añadiendo sufijos de forma iterativa, guiada por la distribución de imágenes seguras e inseguras generadas por el propio modelo, sin necesidad de reentrenamiento.",
+    "resultados": "DiSCO reduce la tasa de generación de contenido dañino (ASR) en un 37.7% en modelos sin defensa y un 25.13% en modelos ya defendidos, manteniendo la fidelidad semántica y la coherencia de la imagen.",
+    "por_que_importa": "Permite aplicar defensas de seguridad a cualquier modelo de generación de imágenes existente, incluidas las APIs cerradas, mejorando la seguridad sin comprometer la calidad o la accesibilidad.",
+    "tags": [
+      "IA generativa",
+      "ciberseguridad",
+      "modelos de caja negra",
+      "seguridad de IA",
+      "prompts"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-19T13:25:41Z"
+  },
+  "arxiv:2608.17800": {
+    "tldr": "StartupBench evalúa agentes de IA en flujos de trabajo reales de startups, revelando que incluso los modelos más avanzados fallan en el 70% de las tareas.",
+    "problema": "Los benchmarks actuales de IA se basan en tareas seleccionadas por investigadores, sin reflejar las necesidades reales de los usuarios y la demanda del mercado.",
+    "propuesta": "Se introduce StartupBench, un benchmark para agentes de IA basado en flujos de trabajo de productos de startups que ya han sido validados por el mercado, evaluando tareas completas y orientadas a resultados.",
+    "resultados": "Incluso el mejor modelo evaluado solo completa aproximadamente el 30% de las tareas de StartupBench, mostrando progreso parcial en otras. Las principales causas de fallo incluyen la dificultad para seguir instrucciones complejas y la falta de experiencia en dominios específicos.",
+    "por_que_importa": "Demuestra que los flujos de trabajo del mundo real, validados por el mercado, aún están lejos de las capacidades fiables de los agentes de IA de propósito general, señalando áreas clave para la investigación y el desarrollo futuro.",
+    "tags": [
+      "benchmarking",
+      "agentes de IA",
+      "flujos de trabajo reales",
+      "LLMs",
+      "ciberseguridad",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-19T13:25:51Z"
+  },
+  "arxiv:2608.17286": {
+    "tldr": "Descubren leyes de escalado para entrenar modelos de difusión de imágenes, necesitando 10 veces más datos que los modelos de lenguaje.",
+    "problema": "Falta de comprensión sobre cómo escalar eficientemente el entrenamiento de modelos de difusión de texto a imagen, a diferencia de los modelos de lenguaje.",
+    "propuesta": "Se presenta Abra, una familia de transformadores entrenados con un rango de cómputo de tres órdenes de magnitud ($10^{19}$ a $10^{22}$ FLOPs), para estudiar sistemáticamente las leyes de escalado en modelos de difusión.",
+    "resultados": "Los modelos de difusión requieren aproximadamente 200 tokens de imagen por parámetro para ser óptimos en cómputo (10x más que los LLMs). Son robustos al sobreentrenamiento y se benefician más de datos adicionales que de modelos más grandes. La predictibilidad se extiende a métricas de calidad y configuración.",
+    "por_que_importa": "Permite entrenar modelos de generación de imágenes más potentes y eficientes, guiando las decisiones sobre la cantidad de datos y el tamaño del modelo para obtener mejores resultados.",
+    "tags": [
+      "modelos de difusion",
+      "escalado",
+      "entrenamiento",
+      "vision por computadora",
+      "IA generativa",
+      "optimizacion"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-19T13:26:01Z"
+  },
+  "arxiv:2608.16002": {
+    "tldr": "Mejora la fiabilidad de los agentes LLM al rastrear la incertidumbre a lo largo de sus interacciones, no solo en pasos individuales.",
+    "problema": "Los métodos actuales de cuantificación de incertidumbre en agentes LLM fallan al no capturar cómo los errores se acumulan a lo largo de múltiples pasos de razonamiento o interacción, lo que lleva a la detección tardía de fallos.",
+    "propuesta": "Se propone RUPA, un marco que modela el historial de ejecución como un grafo de trayectorias, propagando la incertidumbre a través de las dependencias temporales y semánticas para estimar la confianza total de la trayectoria.",
+    "resultados": "RUPA supera consistentemente a los métodos existentes en la estimación de incertidumbre, permitiendo una detección más temprana de fallos y mejorando la ejecución guiada por incertidumbre en benchmarks como τ-2, Terminal-Bench-2 y GAIA con 6 LLMs de código abierto.",
+    "por_que_importa": "Permite una mayor fiabilidad y seguridad en la implementación de agentes LLM en entornos complejos, detectando fallos de forma proactiva y mejorando la toma de decisiones.",
+    "tags": [
+      "LLM Agents",
+      "Uncertainty Quantification",
+      "Cybersecurity",
+      "AI Reliability",
+      "Trajectory Modeling"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-19T13:26:20Z"
   }
 }
