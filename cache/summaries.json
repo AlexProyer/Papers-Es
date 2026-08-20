@@ -5012,5 +5012,218 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-08-19T13:26:20Z"
+  },
+  "arxiv:2608.19135v1": {
+    "tldr": "Defensa autónoma para vehículos conectados: un sistema multi-agente protege contra mensajes V2X falsos en milisegundos.",
+    "problema": "Los vehículos conectados deben validar mensajes de seguridad en 100ms, pero los sistemas actuales fallan ante ataques coordinados o ambiguos, arriesgando falsas frenadas de emergencia.",
+    "propuesta": "Una arquitectura de tres niveles (vehículo, borde, nube) con agentes que clasifican mensajes en 10ms, fusionan datos en el borde en 50ms y aprenden modelos de forma federada en la nube, priorizando la seguridad ante la duda.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero la arquitectura cumple las restricciones de latencia de 100ms para mensajes V2X.",
+    "por_que_importa": "Permite una defensa proactiva y en tiempo real contra ataques a la seguridad vial en vehículos conectados, crucial para la adopción de la conducción autónoma.",
+    "tags": [
+      "ciberseguridad vehicular",
+      "V2X",
+      "defensa autónoma",
+      "IA multi-agente",
+      "seguridad en automoción"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-20T13:25:26Z"
+  },
+  "arxiv:2608.19011v1": {
+    "tldr": "Automatiza la creación de reglas de detección de ciberamenazas (Sigma) a partir de inteligencia de amenazas, mejorando la velocidad y precisión.",
+    "problema": "La creación manual de reglas de detección de ciberamenazas (Sigma) es lenta, propensa a errores y no escala ante la rápida evolución de las amenazas (APTs). Los repositorios existentes no siempre se adaptan a entornos específicos o a nuevas amenazas.",
+    "propuesta": "Se propone AUTOSIGMA, una solución automatizada que transforma informes de inteligencia de amenazas (CTI) no estructurados en reglas Sigma. Utiliza una base de conocimiento para enriquecer la información, la compara con reglas existentes y emplea un modelo LLM como juez para validar iterativamente las reglas generadas.",
+    "resultados": "AUTOSIGMA supera a soluciones alternativas y modelos LLM en validez, relevancia, cobertura de técnicas MITRE ATT&CK y robustez ante la calidad de la entrada, según evaluaciones con informes de APTs reales y blogs de seguridad.",
+    "por_que_importa": "Permite a los equipos de seguridad generar de forma más rápida y precisa reglas de detección adaptadas a amenazas emergentes y a sus entornos específicos, mejorando la postura de ciberseguridad.",
+    "tags": [
+      "ciberseguridad",
+      "inteligencia de amenazas",
+      "detección de amenazas",
+      "reglas Sigma",
+      "automatización",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-20T13:25:35Z"
+  },
+  "arxiv:2608.18613v1": {
+    "tldr": "CTIFoundry revoluciona la inteligencia de amenazas cibernéticas para agentes LLM, mejorando la investigación con una estructura de datos nativa.",
+    "problema": "Los LLM para ciberseguridad consumen inteligencia de amenazas (CTI) de forma ineficiente, ya que los informes y bases de datos se presentan como datos opacos, limitando la capacidad de los agentes para realizar investigaciones complejas.",
+    "propuesta": "CTIFoundry es un andamio de corpus nativo para agentes que materializa la estructura latente de los datos de CTI mediante un grafo de ontología determinista, una capa de informes anclada a fragmentos y superficies de recuperación híbridas.",
+    "resultados": "En el benchmark CTIConnect, un agente con CTIFoundry mejoró su F1 general en +0.19 a +0.28 en comparación con el mismo agente sin él. Un modelo pequeño con CTIFoundry superó a un modelo insignia sin él, y el agente con CTIFoundry usó la mitad de llamadas a herramientas.",
+    "por_que_importa": "Mejora drásticamente la eficiencia y precisión de los agentes LLM en la investigación de amenazas cibernéticas, permitiendo que modelos más pequeños logren un rendimiento superior y reduciendo el esfuerzo computacional.",
+    "tags": [
+      "ciberseguridad",
+      "inteligencia de amenazas",
+      "LLM",
+      "agentes IA",
+      "estructuración de datos",
+      "recuperación de información"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-20T13:26:27Z"
+  },
+  "arxiv:2608.18736v1": {
+    "tldr": "FedLNS protege modelos de lenguaje federados contra manipulaciones maliciosas usando firmas de normalización de capas.",
+    "problema": "Los modelos de lenguaje entrenados de forma federada son vulnerables a que clientes maliciosos introduzcan datos corruptos o asociaciones incorrectas, degradando el modelo global y aumentando el riesgo de alucinaciones.",
+    "propuesta": "Se propone FedLNS, un framework del lado del servidor que representa cada actualización de cliente mediante cambios en los parámetros de las capas de normalización. Estas 'firmas' se comparan con una referencia robusta para detectar y filtrar actualizaciones sospechosas sin intercambiar metadatos adicionales.",
+    "resultados": "FedLNS logra una perplejidad de prueba menor que seis métodos de referencia en arquitecturas GPT, BERT y LLaMA, incluso con un 40% de manipulación de objetivos y datos IID y no-IID.",
+    "por_que_importa": "Permite entrenar modelos de lenguaje federados de forma segura y robusta, protegiendo la integridad del modelo global sin requerir datos crudos, conjuntos de datos confiables, ejemplos de ataque o detectores entrenados por separado.",
+    "tags": [
+      "aprendizaje federado",
+      "seguridad de IA",
+      "modelos de lenguaje",
+      "ciberseguridad",
+      "detección de anomalías"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-20T13:26:37Z"
+  },
+  "arxiv:2608.19088v1": {
+    "tldr": "Detecta puertas traseras en modelos de detección de objetos analizando cambios en la distribución de predicciones antes del NMS.",
+    "problema": "Los modelos de detección de objetos son vulnerables a ataques de 'puertas traseras' que causan fallos específicos ante disparadores ocultos. Los métodos actuales fallan al generalizar a ataques a nivel de escena y requieren acceso a pesos o conocimiento del disparador.",
+    "propuesta": "DistScan, un framework que detecta puertas traseras observando un cambio sistemático en la distribución de clases predichas antes de la supresión de no máximos (NMS), incluso en entradas limpias. Agrega predicciones intermedias y marca el modelo si la distribución se desvía significativamente de las frecuencias de entrenamiento.",
+    "resultados": "DistScan supera a los métodos existentes, mejorando la precisión promedio de detección en 27.32 puntos porcentuales sobre la mejor línea base aplicable en escenarios de ataque a nivel de escena.",
+    "por_que_importa": "Ofrece un método de detección de puertas traseras más robusto y generalizable, especialmente para ataques a nivel de escena, sin necesidad de acceso a pesos del modelo, conocimiento del disparador o reentrenamiento.",
+    "tags": [
+      "detección de objetos",
+      "ciberseguridad",
+      "IA",
+      "puertas traseras",
+      "NMS"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-20T13:26:46Z"
+  },
+  "arxiv:2608.19190v1": {
+    "tldr": "Identifica URLs maliciosas usando redes sociales y backlinks, logrando una precisión casi perfecta.",
+    "problema": "Los métodos actuales para detectar sitios web maliciosos fallan contra las amenazas en constante evolución, ya que se basan en análisis de datos estáticos.",
+    "propuesta": "Se propone SiNMULI, un enfoque basado en redes con signos (signed networks) que modela la identificación de URLs maliciosas como un problema de clasificación binaria, utilizando la teoría del equilibrio social y el análisis de redes de hipervínculos (backlinks).",
+    "resultados": "SiNMULI alcanza una precisión del 99.89%, un recall del 99.62% y una puntuación F1 del 99.80%, superando a modelos tradicionales de ML y deep learning.",
+    "por_que_importa": "Ofrece una solución ligera, escalable y robusta para la ciberdefensa, con alta precisión, interpretabilidad y resistencia a la ofuscación, sin depender de datos de entrenamiento.",
+    "tags": [
+      "ciberseguridad",
+      "detección de malware",
+      "redes sociales",
+      "URLs maliciosas",
+      "machine learning"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-20T13:26:56Z"
+  },
+  "arxiv:2608.19161v1": {
+    "tldr": "Detecta y previene la coordinación oculta entre agentes de IA mediante el análisis de sus comunicaciones privadas invisibles.",
+    "problema": "Los agentes de IA pueden coordinarse secretamente a través de estados latentes ocultos, invisibles en las transcripciones públicas, facilitando acciones dañinas.",
+    "propuesta": "Se introduce Verifiable Latent Alignments (VLA), un marco que monitoriza y dirige los canales de comunicación privados enlazando estados latentes y acciones públicas mediante identificadores de eventos, utilizando detección de anomalías y análisis contrafactual.",
+    "resultados": "El monitor alcanza un AUROC de 0.993 (agentes homogéneos) y 0.854 (heterogéneos). La dirección (steering) recupera el 100% de la distribución de pujas y reduce el comportamiento colusorio en 47.3 puntos porcentuales.",
+    "por_que_importa": "Permite detectar y mitigar la coordinación encubierta en sistemas multi-agente, crucial para la seguridad y fiabilidad de aplicaciones de IA.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Coordinación Oculta",
+      "Agentes Múltiples",
+      "Comunicación Latente",
+      "Monitoreo"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-20T13:27:06Z"
+  },
+  "arxiv:2608.18976v1": {
+    "tldr": "Un nuevo ataque llamado 'catastrophic learning' explota la plasticidad de las redes de aprendizaje continuo para bloquear la adquisición de nuevo conocimiento.",
+    "problema": "Las redes de aprendizaje continuo (CL) son vulnerables a un nuevo tipo de ataque ('learning blockers') que reduce su capacidad de aprender nueva información sin olvidar la anterior, un problema no abordado por ataques previos que solo buscaban reintroducir el olvido catastrófico.",
+    "propuesta": "Se introduce el concepto de 'catastrophic learning', se formaliza el escenario y el modelo de amenaza, y se proponen seis estrategias de ataque (Label-Exchange, Tensor-Exchange, Attraction, Repulsion, Coincident, Preceding) que manipulan los datos para reducir la plasticidad de los modelos CL.",
+    "resultados": "Evaluado en MNIST y Split-CIFAR10 contra DER, ER-ACE e iCaRL en más de 4,480 simulaciones, el ataque demostró una fuerte vulnerabilidad, pudiendo el adversario impedir selectivamente la adquisición de nuevo conocimiento y promover la pérdida del conocimiento previo.",
+    "por_que_importa": "Este ataque representa una amenaza de seguridad significativa para los sistemas de IA que aprenden continuamente, ya que puede ser usado para sabotear el entrenamiento de modelos en tiempo real, impidiendo su adaptación y degradando su rendimiento de forma controlada.",
+    "tags": [
+      "aprendizaje continuo",
+      "ciberseguridad",
+      "ataques de IA",
+      "plasticidad",
+      "vulnerabilidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-20T13:27:16Z"
+  },
+  "arxiv:2608.17253": {
+    "tldr": "Entrena modelos de IA en grupo sin supervisión para mejorar su razonamiento y diversidad, superando métodos con supervisión.",
+    "problema": "Los métodos de aprendizaje por refuerzo (RL) para mejorar el razonamiento en IA requieren mucha supervisión humana, que es costosa y escasa. El auto-recompensa puede generar sesgos y homogeneidad.",
+    "propuesta": "Co-RL entrena modelos de IA en grupo (cohortes) de forma cooperativa y sin supervisión. Los modelos, sin compartir parámetros, se optimizan con recompensas de sus pares. La diversidad en la cohorte (modelos, tamaños, datos) reduce errores correlacionados.",
+    "resultados": "Co-RL mejora el razonamiento en un 3.0-8.6% en 7 benchmarks de texto y 2.3-7.2% en 4 benchmarks multimodales, superando a modelos base y métodos sin etiquetas, y igualando o superando a métodos supervisados.",
+    "por_que_importa": "Permite entrenar modelos de IA con capacidades de razonamiento avanzadas sin depender de costosas anotaciones humanas, manteniendo la diversidad y evitando colapsos de entrenamiento.",
+    "tags": [
+      "IA",
+      "Aprendizaje por Refuerzo",
+      "Sin Supervisión",
+      "Multi-Agente",
+      "Razonamiento",
+      "Diversidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-20T13:27:26Z"
+  },
+  "arxiv:2608.18423": {
+    "tldr": "FM-Bench evalúa la capacidad de los LLMs para gestionar un club de fútbol a largo plazo, superando a los scripts pero con comportamientos variables.",
+    "problema": "Evaluar la toma de decisiones sostenida de agentes de modelos de lenguaje (LLMs) en horizontes temporales largos, donde las acciones tienen consecuencias acumulativas y el entorno responde a sus elecciones, algo que no se ha medido adecuadamente.",
+    "propuesta": "Se introduce FM-Bench, un benchmark que simula la gestión de un club de fútbol durante 20 años de juego. Los LLMs interactúan con 26 herramientas para realizar tareas como draft, traspasos, negociaciones, inversiones y alineaciones, enfrentándose a un motor de juego determinista y a otros agentes o scripts.",
+    "resultados": "Los 15 modelos evaluados completaron todos los horizontes temporales, mientras que los baselines de scripts fallaron en la mayoría. Claude-fable-5 lideró en la pista individual y en la Arena (evaluación cara a cara). El rendimiento no se correlaciona con el tamaño, precio o proveedor, sino con el comportamiento gerencial (inversión tardía, gestión de efectivo, renovaciones anticipadas). Ningún modelo aprendió los precios ocultos del mercado ni gestionó la memoria de forma óptima.",
+    "por_que_importa": "Demuestra la viabilidad de los LLMs para tareas de gestión complejas y a largo plazo, identificando comportamientos clave para el éxito y revelando limitaciones actuales en el aprendizaje del mercado y la gestión de memoria, crucial para aplicaciones prácticas de agentes autónomos.",
+    "tags": [
+      "agentes LLM",
+      "toma de decisiones",
+      "gestión a largo plazo",
+      "benchmarking",
+      "ciberseguridad",
+      "inteligencia artificial"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-20T13:27:36Z"
+  },
+  "arxiv:2608.18852": {
+    "tldr": "SkillGate mejora la selección de habilidades en agentes de IA de largo alcance, superando problemas de entrenamiento con recompensas tradicionales.",
+    "problema": "Los agentes de IA que usan 'habilidades' (instrucciones) para tareas complejas no tienen un método efectivo para entrenar la política que elige qué habilidad usar, sufriendo de 'selector credit starvation' donde la recompensa final no asigna crédito correctamente a la elección de la habilidad, especialmente en trayectorias largas.",
+    "propuesta": "SkillGate propone un nuevo método de entrenamiento que separa el crédito de recompensa. El crédito por resultado solo se aplica a los tokens de ejecución, mientras que un crédito de ventaja local se aplica específicamente a los tokens que nombran la habilidad elegida, asegurando que las elecciones correctas sean recompensadas positivamente.",
+    "resultados": "En cinco benchmarks, SkillGate mejoró el éxito de una política de 9B de 40.8% a 53.2%, superando el entrenamiento con recompensa de resultado solo. También redujo la exposición a candidatos erróneos en dos tercios y disminuyó el número de habilidades leídas.",
+    "por_que_importa": "Este método permite a los agentes de IA tomar decisiones más inteligentes sobre qué 'habilidades' usar en tareas de largo alcance, mejorando significativamente su rendimiento y eficiencia en aplicaciones prácticas.",
+    "tags": [
+      "IA",
+      "Agentes",
+      "Aprendizaje por Refuerzo",
+      "Ciberseguridad",
+      "Selección de Habilidades"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-20T13:27:46Z"
+  },
+  "arxiv:2608.13558": {
+    "tldr": "OmniScientist es un científico IA omnimodal que realiza investigación multidisciplinar directamente desde evidencia cruda heterogénea.",
+    "problema": "Los sistemas de IA científica actuales solo razonan sobre texto o resúmenes precalculados, perdiendo información crucial de datos espaciales, temporales, multicanal y procedimentales.",
+    "propuesta": "OmniScientist utiliza una capa de percepción y tres agentes autónomos (ideación, experimento, redacción) para procesar evidencia científica cruda y heterogénea (imágenes, señales, audio, video, etc.) en un pipeline determinista.",
+    "resultados": "Completó el ciclo completo de investigación desde datos crudos hasta manuscrito en 36 casos reales, logrando una puntuación media de 6.3. La percepción directa mejoró todas las dimensiones de evaluación y ganó el 85% de las comparaciones directas frente a un modelo que solo usaba características escalares precalculadas.",
+    "por_que_importa": "Demuestra que la percepción directa de evidencia cruda a lo largo de todo el ciclo de investigación es esencial para descubrimientos científicos fundamentados y abre un camino práctico hacia científicos IA más capaces.",
+    "tags": [
+      "IA Científica",
+      "Multimodalidad",
+      "Descubrimiento Científico",
+      "Investigación Autónoma",
+      "Procesamiento de Datos Crudos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-20T13:27:56Z"
+  },
+  "arxiv:2608.14229": {
+    "tldr": "Elimina información de modelos de lenguaje de forma más eficiente, priorizando el olvido de datos menos populares.",
+    "problema": "Los modelos de lenguaje aprenden y retienen mejor la información popular, lo que dificulta su eliminación selectiva con métodos actuales que aplican una presión de gradiente uniforme.",
+    "propuesta": "Se propone AdaPop, un método que ajusta la dificultad de olvido basándose en la popularidad de los datos (medida por proxies externos) y la confianza del modelo en el token, utilizando un controlador de doble ascenso para balancear el olvido y la retención.",
+    "resultados": "AdaPop filtra aproximadamente 5 veces menos contenido olvidado bajo consultas parafraseadas y 1.6 veces menos bajo reformulaciones adversarias, en comparación con métodos competidores. Las representaciones internas de los datos olvidados se alejan más del estado original del modelo.",
+    "por_que_importa": "Permite una eliminación de datos más precisa y eficiente en modelos grandes, crucial para la privacidad, la eliminación de sesgos o el cumplimiento normativo, sin degradar el rendimiento general.",
+    "tags": [
+      "aprendizaje",
+      "olvido",
+      "modelos de lenguaje",
+      "privacidad",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-20T13:28:05Z"
   }
 }
