@@ -5225,5 +5225,154 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-08-20T13:28:05Z"
+  },
+  "arxiv:2608.19982v1": {
+    "tldr": "COPA defiende los LLMs contra ataques de inyección de prompts que evolucionan, adaptándose continuamente a nuevas amenazas sin olvidar las antiguas.",
+    "problema": "Los LLMs son vulnerables a ataques de inyección de prompts que manipulan su comportamiento. Las defensas actuales son estáticas y requieren rediseño ante nuevas estrategias de ataque, y los métodos de alineación continua no consideran adversarios que evolucionan adaptativamente.",
+    "propuesta": "Se propone COPA, un marco de optimización continua de preferencias que trata la defensa contra inyección de prompts como un problema de aprendizaje continuo. Utiliza optimización basada en GRPO para incorporar nuevas amenazas y experiencia con margen ponderado para retener defensas contra ataques previos, permitiendo la adaptación continua.",
+    "resultados": "COPA reduce la tasa de éxito de los ataques hasta 6.3x y 4.4x en promedio en comparación con defensas de vanguardia, frente a flujos de ataques de inyección de prompts continuos.",
+    "por_que_importa": "Permite a los LLMs adaptarse de forma continua a adversarios que evolucionan, manteniendo la robustez contra amenazas pasadas y preservando las capacidades generales del modelo, crucial para despliegues en el mundo real.",
+    "tags": [
+      "LLMs",
+      "Ciberseguridad",
+      "Inyección de Prompts",
+      "Aprendizaje Continuo",
+      "Defensa Adaptativa"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-21T13:24:42Z"
+  },
+  "arxiv:2608.19857v1": {
+    "tldr": "Los modelos de lenguaje pueden filtrar secretos inadvertidamente a través de sus respuestas, incluso sin ser atacados directamente.",
+    "problema": "Los modelos de IA, al manejar información sensible (calendarios, credenciales, etc.), pueden filtrar inadvertidamente esa información en sus respuestas 'benignas', permitiendo su reconstrucción por un atacante.",
+    "propuesta": "Se estudia si la mera presencia de secretos en la ventana de contexto de un modelo genera correlaciones ocultas en sus salidas, y si los atacantes pueden amplificar este efecto mediante prompts diseñados.",
+    "resultados": "Se reconstruyen secretos de 2 dígitos con precisión casi perfecta y secretos de 4 dígitos con un 82% de coincidencia exacta, a partir de salidas del modelo ante peticiones ordinarias. Modelos más capaces filtran más.",
+    "por_que_importa": "Demuestra una vulnerabilidad práctica donde la capacidad de los modelos de IA puede amplificar la fuga de información sensible, permitiendo ataques de inferencia y extracción de datos como números de seguridad social.",
+    "tags": [
+      "fuga de información",
+      "modelos de lenguaje",
+      "privacidad",
+      "ciberseguridad",
+      "ataques de IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-21T13:24:51Z"
+  },
+  "arxiv:2608.20160v1": {
+    "tldr": "Chameleon defiende contra ataques de huella digital de sitios web en Tor mediante la transformación aleatoria del tráfico.",
+    "problema": "Los ataques de huella digital de sitios web (WF) pueden inferir la actividad de navegación de los usuarios en Tor analizando el tráfico cifrado, y las defensas existentes a menudo son predecibles y vulnerables a ataques avanzados.",
+    "propuesta": "Chameleon utiliza una técnica de 'morphing' de tráfico aleatorio de muchos a muchos, seleccionando candidatos que son diversos dentro de su clase pero similares entre clases, para confundir a los atacantes y aumentar la incertidumbre adversarial. Implementa un mecanismo de sincronización basado en 'radix-trie' para la identificación de rastros y reduce la sobrecarga mediante mutación de rastros y coincidencia de prefijos normalizada.",
+    "resultados": "Chameleon reduce la precisión de los ataques basados en entrenamiento adversarial hasta en un 36.74% y la sobrecarga de ancho de banda y tiempo en un 34.12% y 60.38%, respectivamente. Limita el rendimiento de ataques DAAE-based RF a un F1-score de 35.19% (comparado con 88.22% de Adaptive Tamaraw). En un entorno real, incurre en solo un 16.25% de sobrecarga de tiempo.",
+    "por_que_importa": "Mejora significativamente la privacidad del usuario en Tor al hacer que la actividad de navegación sea mucho más difícil de rastrear, superando las limitaciones de las defensas anteriores y siendo práctico para su implementación.",
+    "tags": [
+      "Tor",
+      "Ciberseguridad",
+      "Privacidad",
+      "Defensa",
+      "Transformación de tráfico",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-21T13:25:01Z"
+  },
+  "arxiv:2608.20320v1": {
+    "tldr": "Un enfoque de agentes conversacionales y LLMs multimodales mejora la predicción de la demanda de transporte sensible al clima.",
+    "problema": "La investigación del comportamiento de viaje y la predicción de la demanda a menudo desarrollan y evalúan la recolección de datos y el modelado predictivo por separado.",
+    "propuesta": "Se propone un flujo de trabajo de tres agentes que integra una encuesta conversacional (chatbot con imágenes) para recopilar datos de elección de modo de viaje bajo diferentes escenarios climáticos, y utiliza modelos de regresión, random forest y LLMs (multimodales) para predecir la demanda.",
+    "resultados": "El modelo Random Forest alcanzó un 69.6% de precisión. El mejor LLM solo de texto (zero-shot) llegó al 69.9%. La mejor configuración multimodal (visión) alcanzó el 71.5% de precisión, demostrando la utilidad del contexto visual.",
+    "por_que_importa": "Demuestra cómo coordinar encuestas conversacionales, modelado de comportamiento y predicción con LLMs multimodales en un flujo de trabajo auditable para mejorar la predicción de la demanda de transporte.",
+    "tags": [
+      "comportamiento de viaje",
+      "predicción de demanda",
+      "LLMs",
+      "IA multimodal",
+      "ciberseguridad",
+      "recopilación de datos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-21T13:25:11Z"
+  },
+  "arxiv:2608.19938v1": {
+    "tldr": "Los LLMs superan a las herramientas tradicionales en la detección de anomalías en logs de autenticación, especialmente los modelos específicos para endpoints.",
+    "problema": "Las herramientas actuales de detección de anomalías en logs (como Wazuh y OpenSearch) se basan en reglas predefinidas o estadísticas generales, fallando en la interpretación de la semántica y el contexto específico de los endpoints, lo que lleva a una detección ineficaz de comportamientos anómalos, incluyendo casos límite.",
+    "propuesta": "Se propone un marco de clasificación estandarizado basado en instrucciones para LLMs, utilizando datos de autenticación específicos de endpoints generados en un entorno controlado. Se evalúan tres LLMs (Meta Llama 3.1 8B Instruct, Qwen 2.5 7B Instruct, GPT-OSS 20B) frente a Wazuh y OpenSearch.",
+    "resultados": "Meta Llama 3.1 8B Instruct logró la mejor detección general con 89.3% de precisión, 88.2% de recall y 91.8% de F1-score, detectando el 80% de los casos límite. En comparación, Wazuh tuvo 52.0% de precisión y OpenSearch 49.3%. Qwen tuvo menor rendimiento pero menor latencia (no se especifica latencia exacta) y 100% de respuestas válidas.",
+    "por_que_importa": "Los LLMs, especialmente cuando se entrenan con datos específicos del endpoint, ofrecen una mejora significativa en la detección de amenazas de ciberseguridad complejas y sutiles, superando a las soluciones existentes y reduciendo la tasa de falsos negativos.",
+    "tags": [
+      "LLMs",
+      "Ciberseguridad",
+      "Detección de Anomalías",
+      "Logs",
+      "Autenticación",
+      "Endpoint Security"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-21T13:25:21Z"
+  },
+  "arxiv:2608.20129v1": {
+    "tldr": "Integra la inteligencia de los LLMs con el control de vehículos autónomos para una conducción más segura y adaptable.",
+    "problema": "Los vehículos autónomos fallan en situaciones complejas que requieren razonamiento contextual, y los LLMs puros son lentos y propensos a alucinaciones para el control directo.",
+    "propuesta": "Un marco híbrido que orquesta controladores de RL (PPO) y PID, utilizando LLMs para razonamiento de sentido común y para refinar iterativamente la función de recompensa del RL.",
+    "resultados": "El marco propuesto se evaluó en escenarios CARLA aleatorizados, demostrando el potencial de integrar el razonamiento LLM con métodos convencionales manteniendo el control y la seguridad.",
+    "por_que_importa": "Permite crear vehículos autónomos más robustos y adaptables a situaciones imprevistas, mejorando la seguridad y la fiabilidad en la conducción real.",
+    "tags": [
+      "vehículos autónomos",
+      "inteligencia artificial",
+      "LLMs",
+      "sentido común",
+      "ciberseguridad",
+      "control"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-21T13:25:30Z"
+  },
+  "arxiv:2608.19861": {
+    "tldr": "PolicyGuide guía a los agentes LLM a través de flujos de trabajo complejos, asegurando el cumplimiento de políticas en cada paso.",
+    "problema": "Los agentes LLM en atención al cliente fallan al seguir políticas, ya sea realizando acciones prohibidas u omitiendo pasos necesarios en procesos de múltiples etapas.",
+    "propuesta": "PolicyGuide compila las políticas en grafos de flujo de trabajo y utiliza un verificador proactivo en los límites de turnos del usuario para guiar al agente por un camino de cumplimiento.",
+    "resultados": "Mejora la tasa de éxito promedio (Pass4) de 0.42 a 0.62 en dominios de aerolíneas, retail y telecomunicaciones, con mejoras significativas en telecomunicaciones (0.19 a 0.61). Los flujos de trabajo son transferibles a otros modelos como Claude Sonnet 4.6 y Gemini 2.5 Pro.",
+    "por_que_importa": "Asegura que los agentes LLM realicen tareas complejas de manera fiable y segura, reduciendo errores costosos y mejorando la experiencia del cliente en interacciones críticas.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Cumplimiento de Políticas",
+      "Agentes IA",
+      "Flujo de Trabajo"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-21T13:25:40Z"
+  },
+  "arxiv:2608.19880": {
+    "tldr": "EnvHarness revoluciona el entrenamiento de agentes IA adaptando entornos estáticos dinámicamente sin necesidad de reconstruirlos.",
+    "problema": "Los entornos de entrenamiento para agentes IA son estáticos y no se adaptan a las debilidades del agente, requiriendo costosos rediseños o pipelines específicos de dominio para su mejora.",
+    "propuesta": "Se propone EnvHarness, una capa programable que modifica el comportamiento de entornos estáticos existentes mediante componentes enchufables, y EnvRigger, una herramienta que automatiza la síntesis de estos componentes observando el comportamiento del agente.",
+    "resultados": "EnvHarness mejora el rendimiento en cinco benchmarks de cuatro dominios, logrando hasta 9.0 puntos de mejora en instancias no vistas y reduciendo los pasos de ejecución en un 9.8%.",
+    "por_que_importa": "Reduce significativamente la carga de ingeniería para crear entornos de entrenamiento adaptativos, permitiendo una co-evolución más eficiente y continua de agentes y sus entornos.",
+    "tags": [
+      "agentes IA",
+      "entrenamiento adaptativo",
+      "ciberseguridad",
+      "aprendizaje por refuerzo",
+      "automatización"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-21T13:25:50Z"
+  },
+  "arxiv:2608.19758": {
+    "tldr": "FlashPrefill V2 acelera drásticamente el procesamiento de LLMs de contexto largo, superando a las versiones anteriores y a los métodos densos.",
+    "problema": "La complejidad cuadrática de la atención en LLMs de contexto largo es un cuello de botella, especialmente en la fase de prellenado (prefill), limitando su eficiencia en producción.",
+    "propuesta": "FlashPrefill V2 mejora el prellenado con atención dispersa mediante una corrección por promedio para reducir errores, optimizaciones de acceso a memoria y paralelismo (PackGQA, warp specialization, pingpong pipelining), soporte para FP8, caché KV paginada y batching continuo, integrándose en frameworks como SGLang.",
+    "resultados": "En GPUs NVIDIA H20, FlashPrefill V2 logra aceleraciones de hasta 47.26x (FP8) y 27.19x (BF16) comparado con FlashAttention-2 a 128K de contexto. En FP8, supera en 30.49x a una línea base densa alineada con FA3/4.",
+    "por_que_importa": "Permite desplegar LLMs de contexto muy largo de manera mucho más eficiente y rápida en hardware común, haciendo que estas capacidades sean prácticas para aplicaciones del mundo real.",
+    "tags": [
+      "LLMs",
+      "Atención Dispersa",
+      "Optimización",
+      "Servicio de IA",
+      "Contexto Largo",
+      "Rendimiento"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-21T13:25:59Z"
   }
 }

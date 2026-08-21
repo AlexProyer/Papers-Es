@@ -1,0 +1,420 @@
+{
+  "date": "2026-08-21",
+  "report_type": "filtrado",
+  "evaluated": 158,
+  "selected": 9,
+  "papers": [
+    {
+      "id": "arxiv:2608.19982v1",
+      "rank": 1,
+      "title": "COPA: Continual Preference Optimization for Adaptive Prompt Injection Defense",
+      "authors": [
+        "Roshan Sood",
+        "Onat Gungor",
+        "Tajana Rosing"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-20",
+      "url": "https://arxiv.org/abs/2608.19982v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.19982v1",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "LLMs remain vulnerable to prompt injection attacks, where adversarial instructions embedded in user inputs or external content manipulate model behavior and bypass safeguards. Existing defenses are predominantly static, relying on fixed alignment objectives or attack-specific filtering mechanisms that require redesign as new attack strategies emerge. While recent lifelong alignment methods address shifting user preferences, they do not account for adaptive adversaries that continually evolve to exploit weaknesses in previously learned defenses. This limitation is particularly important in real-world deployments, where evolving attack distributions necessitate continual adaptation without sacrificing robustness to previously encountered threats. We present COPA, a continual preference optimization framework that treats prompt-injection defense as a lifelong learning problem. Instead of one-time alignment, COPA incrementally incorporates feedback from newly observed attacks via GRPO-based optimization and uses margin-weighted experience replay to retain defenses against prior attack classes. This enables continuous adaptation to emerging threats while mitigating catastrophic forgetting and preserving general-purpose model capabilities. Across lifelong prompt injection attack streams, COPA reduces attack success rate by up to 6.3x and 4.4x on average compared to state-of-the-art defenses. These results highlight continual preference optimization as an effective paradigm for defending LLMs against adaptive adversaries.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "COPA defiende los LLMs contra ataques de inyección de prompts que evolucionan, adaptándose continuamente a nuevas amenazas sin olvidar las antiguas.",
+        "problema": "Los LLMs son vulnerables a ataques de inyección de prompts que manipulan su comportamiento. Las defensas actuales son estáticas y requieren rediseño ante nuevas estrategias de ataque, y los métodos de alineación continua no consideran adversarios que evolucionan adaptativamente.",
+        "propuesta": "Se propone COPA, un marco de optimización continua de preferencias que trata la defensa contra inyección de prompts como un problema de aprendizaje continuo. Utiliza optimización basada en GRPO para incorporar nuevas amenazas y experiencia con margen ponderado para retener defensas contra ataques previos, permitiendo la adaptación continua.",
+        "resultados": "COPA reduce la tasa de éxito de los ataques hasta 6.3x y 4.4x en promedio en comparación con defensas de vanguardia, frente a flujos de ataques de inyección de prompts continuos.",
+        "por_que_importa": "Permite a los LLMs adaptarse de forma continua a adversarios que evolucionan, manteniendo la robustez contra amenazas pasadas y preservando las capacidades generales del modelo, crucial para despliegues en el mundo real.",
+        "tags": [
+          "LLMs",
+          "Ciberseguridad",
+          "Inyección de Prompts",
+          "Aprendizaje Continuo",
+          "Defensa Adaptativa"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-21T13:24:42Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.19857v1",
+      "rank": 2,
+      "title": "Inadvertent Context Leakage in Language Models",
+      "authors": [
+        "Jaiden Fairoze",
+        "Neal Mangaokar",
+        "Kamalika Chaudhuri",
+        "Sanjam Garg"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-20",
+      "url": "https://arxiv.org/abs/2608.19857v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.19857v1",
+      "score": 56,
+      "topics": [
+        "vuln & threats",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, AI agents, adversarial ML"
+      ],
+      "abstract_en": "For AI agents to be useful beyond simple chat, they must hold sensitive user context such as calendars, credentials, health records, and financial data. We study whether the mere presence of such secrets in a model's context window introduces hidden correlations into the model's benign outputs, allowing reconstruction even when the model correctly refuses direct extraction. We further study whether an adversary can actively engineer prompts that amplify this effect, using the model as a covert carrier to transmit secrets through seemingly innocuous text. In both cases, this limited leakage is exploited using a novel adaptive attack that assumes black-box access to the underlying model. In controlled experiments across eight proprietary models, we find that 2-digit in-context secrets are reconstructed with near-perfect accuracy and 4-digit secrets at 82\\% exact match, all from outputs the model produces in response to ordinary, non-adversarial requests. We observe that more capable models leak more: stronger instruction-following amplifies sensitivity to in-context secrets, suggesting leakage is a byproduct of capability as opposed to a patchable bug. We show this leakage enables two practical attacks: (1) a trained classifier that infers semantic predicates about user memories (e.g., health conditions, financial events) from routine natural-language outputs, and (2) an RL-trained adversary that extracts full Social Security Numbers from a production-style agent.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los modelos de lenguaje pueden filtrar secretos inadvertidamente a través de sus respuestas, incluso sin ser atacados directamente.",
+        "problema": "Los modelos de IA, al manejar información sensible (calendarios, credenciales, etc.), pueden filtrar inadvertidamente esa información en sus respuestas 'benignas', permitiendo su reconstrucción por un atacante.",
+        "propuesta": "Se estudia si la mera presencia de secretos en la ventana de contexto de un modelo genera correlaciones ocultas en sus salidas, y si los atacantes pueden amplificar este efecto mediante prompts diseñados.",
+        "resultados": "Se reconstruyen secretos de 2 dígitos con precisión casi perfecta y secretos de 4 dígitos con un 82% de coincidencia exacta, a partir de salidas del modelo ante peticiones ordinarias. Modelos más capaces filtran más.",
+        "por_que_importa": "Demuestra una vulnerabilidad práctica donde la capacidad de los modelos de IA puede amplificar la fuga de información sensible, permitiendo ataques de inferencia y extracción de datos como números de seguridad social.",
+        "tags": [
+          "fuga de información",
+          "modelos de lenguaje",
+          "privacidad",
+          "ciberseguridad",
+          "ataques de IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-21T13:24:51Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.20160v1",
+      "rank": 3,
+      "title": "Chameleon: Robust Defense Against Tor Website Fingerprinting via Many-to-Many Traffic Morphing",
+      "authors": [
+        "Yuwen Cui",
+        "Kai Wei",
+        "Kehan Shen",
+        "Ning Wang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-20",
+      "url": "https://arxiv.org/abs/2608.20160v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.20160v1",
+      "score": 54,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Website fingerprinting (WF) attacks can infer users' browsing activities from encrypted Tor traffic by exploiting side-channel features. Although many WF defenses have been proposed, we find that most existing defenses create learnable web trace mapping features. We further show that robustness against adversarial training does not necessarily imply robustness against defense-aware autoencoder (DAAE)-based attacks. To address these limitations, we present Chameleon, a robust WF defense based on many-to-many randomized traffic morphing. Chameleon selects morphing candidates with high intra-class diversity and low inter-class disparity. Chameleon randomly maps each webpage trace to multiple candidates, and allows different webpages to share morphing targets, thereby increasing adversarial uncertainty. For practical Tor deployment, Chameleon introduces a radix-trie-based synchronization mechanism that enables pluggable transport (PT) endpoints to identify consistent morphing traces using packet-direction prefixes, together with trace mutation and normalized prefix matching to reduce overhead. We evaluate Chameleon against six state-of-the-art defenses and five WF attacks on three public datasets in closed- and open-world settings. Compared with Adaptive Tamaraw, Chameleon reduces adversarial-training-based attack accuracy by up to 36.74% while reducing bandwidth and time overhead by 34.12% and 60.38%, respectively. Under DAAE-based RF attacks on GTT23, Chameleon limits attack performance to 35.19% F1-score while Adaptive Tamaraw only limits it to 88.22% F1-score. In the real-world PT bridge evaluation, Chameleon substantially reduces the effectiveness of strong WF attacks while incurring only 16.25% time overhead.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Chameleon defiende contra ataques de huella digital de sitios web en Tor mediante la transformación aleatoria del tráfico.",
+        "problema": "Los ataques de huella digital de sitios web (WF) pueden inferir la actividad de navegación de los usuarios en Tor analizando el tráfico cifrado, y las defensas existentes a menudo son predecibles y vulnerables a ataques avanzados.",
+        "propuesta": "Chameleon utiliza una técnica de 'morphing' de tráfico aleatorio de muchos a muchos, seleccionando candidatos que son diversos dentro de su clase pero similares entre clases, para confundir a los atacantes y aumentar la incertidumbre adversarial. Implementa un mecanismo de sincronización basado en 'radix-trie' para la identificación de rastros y reduce la sobrecarga mediante mutación de rastros y coincidencia de prefijos normalizada.",
+        "resultados": "Chameleon reduce la precisión de los ataques basados en entrenamiento adversarial hasta en un 36.74% y la sobrecarga de ancho de banda y tiempo en un 34.12% y 60.38%, respectivamente. Limita el rendimiento de ataques DAAE-based RF a un F1-score de 35.19% (comparado con 88.22% de Adaptive Tamaraw). En un entorno real, incurre en solo un 16.25% de sobrecarga de tiempo.",
+        "por_que_importa": "Mejora significativamente la privacidad del usuario en Tor al hacer que la actividad de navegación sea mucho más difícil de rastrear, superando las limitaciones de las defensas anteriores y siendo práctico para su implementación.",
+        "tags": [
+          "Tor",
+          "Ciberseguridad",
+          "Privacidad",
+          "Defensa",
+          "Transformación de tráfico",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-21T13:25:01Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.20320v1",
+      "rank": 4,
+      "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
+      "authors": [
+        "Narges Ahmadi",
+        "Yubo Jiao",
+        "Jônatas Augusto Manzolli",
+        "Jiangbo Yu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-08-20",
+      "url": "https://arxiv.org/abs/2608.20320v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.20320v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Travel behavior research increasingly combines digital data collection with predictive modeling, yet these stages are often developed and evaluated separately. This study proposes a three-agent workflow integrating conversational data collection, structured data processing, and behavioral prediction. A chatbot-administered, image-augmented stated-preference survey collected mode choices from student commuters across five predefined weather scenarios, yielding 454 respondent-scenario observations. Weather-related associations were analyzed using a multinomial logit model, while logistic regression and random forest provided machine-learning benchmarks. Nine locally deployed large language models (LLMs), ranging from 2 to 35 billion parameters, were evaluated across four zero-shot prompt-and-context conditions and extended through persona, few-shot, and vision-based configurations. Random forest achieved 69.6% five-class accuracy, while the best text-only zero-shot LLM reached 69.9% without task-specific fitting. Habitual travel information produced the most consistent gains, Expert framing generally outperformed Role-Play, and persona information was most useful when habitual travel information was unavailable. Few-shot prompting improved prediction for several models, with gains stabilizing after a small number of examples. Using the same weather images shown to respondents, the best vision-based configuration reached 71.5% five-class accuracy, indicating that visual context may provide additional predictive information for selected models. Overall, the study shows how conversational surveys, structured data processing, conventional behavioral modeling, machine learning, and multimodal LLM prediction can be coordinated within an auditable multi-agent workflow.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Un enfoque de agentes conversacionales y LLMs multimodales mejora la predicción de la demanda de transporte sensible al clima.",
+        "problema": "La investigación del comportamiento de viaje y la predicción de la demanda a menudo desarrollan y evalúan la recolección de datos y el modelado predictivo por separado.",
+        "propuesta": "Se propone un flujo de trabajo de tres agentes que integra una encuesta conversacional (chatbot con imágenes) para recopilar datos de elección de modo de viaje bajo diferentes escenarios climáticos, y utiliza modelos de regresión, random forest y LLMs (multimodales) para predecir la demanda.",
+        "resultados": "El modelo Random Forest alcanzó un 69.6% de precisión. El mejor LLM solo de texto (zero-shot) llegó al 69.9%. La mejor configuración multimodal (visión) alcanzó el 71.5% de precisión, demostrando la utilidad del contexto visual.",
+        "por_que_importa": "Demuestra cómo coordinar encuestas conversacionales, modelado de comportamiento y predicción con LLMs multimodales en un flujo de trabajo auditable para mejorar la predicción de la demanda de transporte.",
+        "tags": [
+          "comportamiento de viaje",
+          "predicción de demanda",
+          "LLMs",
+          "IA multimodal",
+          "ciberseguridad",
+          "recopilación de datos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-21T13:25:11Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.19938v1",
+      "rank": 5,
+      "title": "From Noise to Signal: Improving Security Log Anomaly Detection Using LLMs with Endpoint-Specific Logs",
+      "authors": [
+        "Christopher Henshaw",
+        "Gour Karmakar"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-20",
+      "url": "https://arxiv.org/abs/2608.19938v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.19938v1",
+      "score": 53,
+      "topics": [
+        "cybersecurity",
+        "anomaly detection",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: cybersecurity, anomaly detection, LLM"
+      ],
+      "abstract_en": "Existing approaches to anomalous behaviour log detection, such as Wazuh rely primarily on predefined detection rules, while statistical anomaly detection approaches such as OpenSearch identify deviations from previously observed behavioural patterns. Recent research has investigated LLMs for log anomaly detection because of their ability to interpret semantic and contextual information. However, LLM-based approaches can be affected by prompt construction, noisy log data, and reliance on generic datasets that may lack endpoint-specific authentication behaviours. To address these limitations, this study develops a standardised instruction-based LLM classification framework for detecting anomalous authentication behaviours, including borderline cases. A controlled cybersecurity testbed was developed to generate endpoint-specific authentication data, producing a curated dataset comprising normal, borderline, and anomalous behavioural scenarios. Three instruction-tuned LLMs, Meta Llama 3.1 8B Instruct, Qwen 2.5 7B Instruct, and GPT-OSS 20B, were evaluated against Wazuh rule-based detection and OpenSearch Anomaly Detection using a common ground-truth severity framework. Meta Llama 3.1 8B Instruct achieved the strongest overall end-to-end detection performance, with an accuracy of 89.3%, recall of 88.2%, F1-score of 91.8%, and false negative rate of 11.8%. In comparison, Wazuh achieved an accuracy of 52.0% and false negative rate of 68.6%, while OpenSearch achieved an accuracy of 49.3% and false negative rate of 74.5%. Meta Llama also detected 80% of the borderline anomalous scenarios, compared with 20% for Wazuh and 15% for OpenSearch. Qwen achieved lower overall detection performance than Meta Llama but recorded the lowest average inference latency and 100% structured-response validity. GPT-OSS demonstrated strong classification performance when valid responses were produced.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los LLMs superan a las herramientas tradicionales en la detección de anomalías en logs de autenticación, especialmente los modelos específicos para endpoints.",
+        "problema": "Las herramientas actuales de detección de anomalías en logs (como Wazuh y OpenSearch) se basan en reglas predefinidas o estadísticas generales, fallando en la interpretación de la semántica y el contexto específico de los endpoints, lo que lleva a una detección ineficaz de comportamientos anómalos, incluyendo casos límite.",
+        "propuesta": "Se propone un marco de clasificación estandarizado basado en instrucciones para LLMs, utilizando datos de autenticación específicos de endpoints generados en un entorno controlado. Se evalúan tres LLMs (Meta Llama 3.1 8B Instruct, Qwen 2.5 7B Instruct, GPT-OSS 20B) frente a Wazuh y OpenSearch.",
+        "resultados": "Meta Llama 3.1 8B Instruct logró la mejor detección general con 89.3% de precisión, 88.2% de recall y 91.8% de F1-score, detectando el 80% de los casos límite. En comparación, Wazuh tuvo 52.0% de precisión y OpenSearch 49.3%. Qwen tuvo menor rendimiento pero menor latencia (no se especifica latencia exacta) y 100% de respuestas válidas.",
+        "por_que_importa": "Los LLMs, especialmente cuando se entrenan con datos específicos del endpoint, ofrecen una mejora significativa en la detección de amenazas de ciberseguridad complejas y sutiles, superando a las soluciones existentes y reduciendo la tasa de falsos negativos.",
+        "tags": [
+          "LLMs",
+          "Ciberseguridad",
+          "Detección de Anomalías",
+          "Logs",
+          "Autenticación",
+          "Endpoint Security"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-21T13:25:21Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.20129v1",
+      "rank": 6,
+      "title": "Multi-Agent Orchestration with the Common-Sense Reasoning Capabilities of LLMs for Autonomous Driving",
+      "authors": [
+        "Mehdi Azarafza",
+        "Faezeh Pasandideh",
+        "Ali Ehteshami Bejnordi",
+        "Stefan Henkler"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CV]",
+      "category": "cs.CV",
+      "date": "2026-08-20",
+      "url": "https://arxiv.org/abs/2608.20129v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.20129v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Autonomous vehicles require robust perception and decision-making capabilities to operate in diverse and unseen scenarios. While reinforcement learning and rule-based methods can provide effective control and safety mechanisms, their performance may degrade in situations requiring contextual reasoning. Large Language Models (LLMs) have demonstrated strong capabilities in understanding multimodal information and generating contextual reasoning, however, their use for direct vehicle control can introduce latency and hallucination risks. To address these limitations, a hybrid framework is proposed. This system uses an orchestrator to coordinate PPO-trained reinforcement learning and PID control, with LLM common-sense reasoning applied throughout the framework. LLM reasoning is further employed iteratively to refine the RL reward function for dynamic driving environments. The proposed framework is evaluated in highly randomized CARLA scenarios under diverse environmental and traffic conditions. The results demonstrate the potential of integrating LLM-based reasoning with conventional autonomous driving methods while retaining structured control and safety mechanism.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Integra la inteligencia de los LLMs con el control de vehículos autónomos para una conducción más segura y adaptable.",
+        "problema": "Los vehículos autónomos fallan en situaciones complejas que requieren razonamiento contextual, y los LLMs puros son lentos y propensos a alucinaciones para el control directo.",
+        "propuesta": "Un marco híbrido que orquesta controladores de RL (PPO) y PID, utilizando LLMs para razonamiento de sentido común y para refinar iterativamente la función de recompensa del RL.",
+        "resultados": "El marco propuesto se evaluó en escenarios CARLA aleatorizados, demostrando el potencial de integrar el razonamiento LLM con métodos convencionales manteniendo el control y la seguridad.",
+        "por_que_importa": "Permite crear vehículos autónomos más robustos y adaptables a situaciones imprevistas, mejorando la seguridad y la fiabilidad en la conducción real.",
+        "tags": [
+          "vehículos autónomos",
+          "inteligencia artificial",
+          "LLMs",
+          "sentido común",
+          "ciberseguridad",
+          "control"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-21T13:25:30Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.19861",
+      "rank": 1,
+      "title": "PolicyGuide: From Guarding One Action to Guiding the Whole Workflow for Policy-Compliant LLM Agents",
+      "authors": [
+        "Seongjae Kang",
+        "Taehyung Yu",
+        "Sung Ju Hwang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-20",
+      "url": "https://arxiv.org/abs/2608.19861",
+      "pdf_url": "https://arxiv.org/pdf/2608.19861",
+      "score": 85,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents, compliance & audit"
+      ],
+      "abstract_en": "Customer-service LLM agents must follow organizational policy when acting on a user's behalf. Compliance failures arise from either forbidden actions, such as granting an ineligible change, or omitted procedural requirements, such as identification or confirmation. Runtime safeguards can intervene on risky actions, but action-local checks do not guide an agent through a multi-step procedure. Workflow-following systems support prescribed process execution, but primarily target workflow completion rather than safeguarding agent behavior. PolicyGuide instead compiles each domain policy into a workflow graph and invokes a proactive verifier at user-turn boundaries. From persisted graph state, the verifier reconciles open requests and returns step-specific remediation along a policy-compliant path. Across the $τ^2$-bench airline, retail, and telecom domains with a GPT-5.4 agent and verifier, PolicyGuide raises mean $\\mathrm{Pass}^4$ from $0.42$ to $0.62$, with the largest gain on telecom ($0.19$ to $0.61$), the most workflow-structured domain. The same workflows transfer to Claude Sonnet 4.6 and Gemini 2.5 Pro agents. Complementary evaluations find the lowest observed attack-success rate under adversarial users and the strongest procedural compliance in an author-designed workflow-level validation.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "PolicyGuide guía a los agentes LLM a través de flujos de trabajo complejos, asegurando el cumplimiento de políticas en cada paso.",
+        "problema": "Los agentes LLM en atención al cliente fallan al seguir políticas, ya sea realizando acciones prohibidas u omitiendo pasos necesarios en procesos de múltiples etapas.",
+        "propuesta": "PolicyGuide compila las políticas en grafos de flujo de trabajo y utiliza un verificador proactivo en los límites de turnos del usuario para guiar al agente por un camino de cumplimiento.",
+        "resultados": "Mejora la tasa de éxito promedio (Pass4) de 0.42 a 0.62 en dominios de aerolíneas, retail y telecomunicaciones, con mejoras significativas en telecomunicaciones (0.19 a 0.61). Los flujos de trabajo son transferibles a otros modelos como Claude Sonnet 4.6 y Gemini 2.5 Pro.",
+        "por_que_importa": "Asegura que los agentes LLM realicen tareas complejas de manera fiable y segura, reduciendo errores costosos y mejorando la experiencia del cliente en interacciones críticas.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Cumplimiento de Políticas",
+          "Agentes IA",
+          "Flujo de Trabajo"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-21T13:25:40Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.19880",
+      "rank": 2,
+      "title": "EnvHarness: Awakening Static Worlds for Agent Learning",
+      "authors": [
+        "Chengsong Huang",
+        "Zifeng Wang",
+        "Rujun Han",
+        "Jun Yan"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-20",
+      "url": "https://arxiv.org/abs/2608.19880",
+      "pdf_url": "https://arxiv.org/pdf/2608.19880",
+      "score": 71,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "LLM agents learn by interacting with environments, yet these environments are hand-built and static: blind to an agent's weaknesses, and quickly left behind as it improves. While recent environment generation methods attempt to address this, they require domain-specific pipelines, rely on expensive or unreliable verifiers, and still produce static environments. To alleviate the engineering burden of rebuilding environments from scratch, we propose Environment Harness (EnvHarness), a programmable layer of plug-in components that wraps a static environment to reshape its behavior without modifying the underlying logic. Operating through standard interfaces, EnvHarness applies across diverse domains while ensuring every reshaped environment retains its original verifier. To automate this process, we introduce EnvRigger, which treats the target policy as a black box, observing its execution trajectories to synthesize EnvHarness components targeting diagnosed flaws, and validating them via fresh rollouts. Across five benchmarks in four domains, EnvHarness outperforms both original environments and domain-specific environment generation pipelines, achieving up to a 9.0-point improvement on held-out instances with 9.8% fewer execution steps. Furthermore, EnvHarness provides a superior optimization signal for reinforcement learning, enabling continuous, targeted co-evolution of the policy and its environment.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "EnvHarness revoluciona el entrenamiento de agentes IA adaptando entornos estáticos dinámicamente sin necesidad de reconstruirlos.",
+        "problema": "Los entornos de entrenamiento para agentes IA son estáticos y no se adaptan a las debilidades del agente, requiriendo costosos rediseños o pipelines específicos de dominio para su mejora.",
+        "propuesta": "Se propone EnvHarness, una capa programable que modifica el comportamiento de entornos estáticos existentes mediante componentes enchufables, y EnvRigger, una herramienta que automatiza la síntesis de estos componentes observando el comportamiento del agente.",
+        "resultados": "EnvHarness mejora el rendimiento en cinco benchmarks de cuatro dominios, logrando hasta 9.0 puntos de mejora en instancias no vistas y reduciendo los pasos de ejecución en un 9.8%.",
+        "por_que_importa": "Reduce significativamente la carga de ingeniería para crear entornos de entrenamiento adaptativos, permitiendo una co-evolución más eficiente y continua de agentes y sus entornos.",
+        "tags": [
+          "agentes IA",
+          "entrenamiento adaptativo",
+          "ciberseguridad",
+          "aprendizaje por refuerzo",
+          "automatización"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-21T13:25:50Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.19758",
+      "rank": 3,
+      "title": "FlashPrefill V2: Block-Sparse Prefill Attention for Long-Context LLM Serving",
+      "authors": [
+        "Qihang Fan",
+        "Huaibo Huang",
+        "Zhiying Wu",
+        "Bingning Wang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-20",
+      "url": "https://arxiv.org/abs/2608.19758",
+      "pdf_url": "https://arxiv.org/pdf/2608.19758",
+      "score": 57,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Long-context modeling is a pivotal capability for Large Language Models, yet the quadratic complexity of attention remains a critical bottleneck, particularly during the compute-intensive prefilling phase. Our previous work, FlashPrefill, mitigates this cost through instantaneous pattern discovery and max-based dynamic thresholding; however, it remains an algorithmic prototype that is still distant from production deployment. In this paper, we present FlashPrefill V2, which evolves FlashPrefill from a prototype toward practical long-context serving along three dimensions. First, we introduce a mean correction term that effectively suppresses the approximation error, keeping performance degradation manageable even at extreme sparsity levels. Second, we redesign the sparse attention operator with PackGQA memory access, warp specialization, and pingpong pipelining, fully aligning with the latest FlashAttention-3/4 implementations and supporting FP8 inference to meet practical quantization requirements. Third, FlashPrefill V2 natively supports paged KV cache and continuous batching, allowing integration as an attention backend in modern inference frameworks such as SGLang. Extensive evaluations on NVIDIA H20 GPUs---among the most widely deployed inference accelerators---demonstrate that FlashPrefill V2 delivers up to 47.26x and 27.19x speedups over FlashAttention-2 at 128K context length under FP8 and BF16 precision, respectively, and, in FP8, still achieves a 30.49x speedup against an FA3/4-aligned dense baseline.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "FlashPrefill V2 acelera drásticamente el procesamiento de LLMs de contexto largo, superando a las versiones anteriores y a los métodos densos.",
+        "problema": "La complejidad cuadrática de la atención en LLMs de contexto largo es un cuello de botella, especialmente en la fase de prellenado (prefill), limitando su eficiencia en producción.",
+        "propuesta": "FlashPrefill V2 mejora el prellenado con atención dispersa mediante una corrección por promedio para reducir errores, optimizaciones de acceso a memoria y paralelismo (PackGQA, warp specialization, pingpong pipelining), soporte para FP8, caché KV paginada y batching continuo, integrándose en frameworks como SGLang.",
+        "resultados": "En GPUs NVIDIA H20, FlashPrefill V2 logra aceleraciones de hasta 47.26x (FP8) y 27.19x (BF16) comparado con FlashAttention-2 a 128K de contexto. En FP8, supera en 30.49x a una línea base densa alineada con FA3/4.",
+        "por_que_importa": "Permite desplegar LLMs de contexto muy largo de manera mucho más eficiente y rápida en hardware común, haciendo que estas capacidades sean prácticas para aplicaciones del mundo real.",
+        "tags": [
+          "LLMs",
+          "Atención Dispersa",
+          "Optimización",
+          "Servicio de IA",
+          "Contexto Largo",
+          "Rendimiento"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-21T13:25:59Z"
+      }
+    }
+  ],
+  "generated_at": "2026-08-21T13:25:59Z"
+}
