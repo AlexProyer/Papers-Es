@@ -1,0 +1,55 @@
+{
+  "date": "2026-08-24",
+  "report_type": "filtrado",
+  "evaluated": 17,
+  "selected": 1,
+  "papers": [
+    {
+      "id": "arxiv:2608.21156",
+      "rank": 1,
+      "title": "Graph Engineering in the Era of LLM Agents: From Individual Intelligence to System Intelligence",
+      "authors": [
+        "Yuyuan Feng",
+        "Zhishang Xiang",
+        "Chaobin Yang",
+        "Qichao Ma"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-21",
+      "url": "https://arxiv.org/abs/2608.21156",
+      "pdf_url": "https://arxiv.org/pdf/2608.21156",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+1)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "LLMs have evolved from language generators to autonomous agents capable of complex, long-horizon tasks. This evolution has produced paradigms including Prompt Engineering to elicit model capabilities, Context Engineering to manage information access, Harness Engineering to organize external tools and resources, and Loop Engineering to support continual reflection and self-improvement. Yet as tasks grow more complex, individual intelligence faces a fundamental limit: many tasks require heterogeneous expertise, interdependent subtasks, parallel execution, independent verification, and persistent state, exceeding any single agent's organizational capacity. Augmenting one agent's capabilities or context cannot resolve this architectural mismatch; intelligence must instead be distributed across specialized agents and organized at the system level. We call this System Intelligence: an agent system's ability to organize and coordinate multiple intelligent components into a coherent, adaptive whole pursuing a shared objective. Achieving it requires more than adding agents; it demands explicit structures to organize work, coordinate heterogeneous agents, and maintain evolving execution states. We introduce Graph Engineering, an emerging paradigm for next-generation agent systems. Unlike prior paradigms that mainly optimize individual interactions or agent-level behavior, Graph Engineering constructs explicit, dynamic, evolving graph structures representing tasks, agents, and system states. These abstractions provide a unified foundation for organizing complex objectives, orchestrating heterogeneous agents, modeling system dynamics, and enabling scalable agent evolution. We systematically review the principles, methodologies, and applications of Graph Engineering for LLM agents. Related papers, open-source data, and projects are collected at https://github.com/DEEP-JLU/Awesome-Graph-Engineering.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Ingeniería de Grafos: la clave para que múltiples agentes LLM colaboren y resuelvan tareas complejas como un sistema inteligente.",
+        "problema": "Las tareas complejas que requieren diversas experticias, sub-tareas interdependientes y verificación independiente superan la capacidad de un solo agente LLM, incluso con mejoras en prompts o contexto.",
+        "propuesta": "Introduce la 'Ingeniería de Grafos' para construir estructuras de grafos explícitas, dinámicas y evolutivas que representen tareas, agentes y estados del sistema, permitiendo la organización y coordinación de múltiples agentes especializados.",
+        "resultados": "El resumen no especifica resultados numéricos, pero propone la Ingeniería de Grafos como un paradigma para lograr 'Inteligencia de Sistemas' mediante la organización y coordinación de componentes inteligentes.",
+        "por_que_importa": "Permite superar las limitaciones de la inteligencia individual de los LLM, posibilitando la resolución de problemas mucho más complejos y a gran escala mediante la colaboración orquestada de agentes especializados.",
+        "tags": [
+          "agentes LLM",
+          "inteligencia de sistemas",
+          "ingeniería de grafos",
+          "ciberseguridad",
+          "IA distribuida",
+          "orquestación de agentes"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-24T13:28:51Z"
+      }
+    }
+  ],
+  "generated_at": "2026-08-24T13:28:51Z"
+}

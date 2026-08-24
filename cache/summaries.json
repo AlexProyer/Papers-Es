@@ -5374,5 +5374,22 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-08-21T13:25:59Z"
+  },
+  "arxiv:2608.21156": {
+    "tldr": "Ingeniería de Grafos: la clave para que múltiples agentes LLM colaboren y resuelvan tareas complejas como un sistema inteligente.",
+    "problema": "Las tareas complejas que requieren diversas experticias, sub-tareas interdependientes y verificación independiente superan la capacidad de un solo agente LLM, incluso con mejoras en prompts o contexto.",
+    "propuesta": "Introduce la 'Ingeniería de Grafos' para construir estructuras de grafos explícitas, dinámicas y evolutivas que representen tareas, agentes y estados del sistema, permitiendo la organización y coordinación de múltiples agentes especializados.",
+    "resultados": "El resumen no especifica resultados numéricos, pero propone la Ingeniería de Grafos como un paradigma para lograr 'Inteligencia de Sistemas' mediante la organización y coordinación de componentes inteligentes.",
+    "por_que_importa": "Permite superar las limitaciones de la inteligencia individual de los LLM, posibilitando la resolución de problemas mucho más complejos y a gran escala mediante la colaboración orquestada de agentes especializados.",
+    "tags": [
+      "agentes LLM",
+      "inteligencia de sistemas",
+      "ingeniería de grafos",
+      "ciberseguridad",
+      "IA distribuida",
+      "orquestación de agentes"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-24T13:28:51Z"
   }
 }
