@@ -1,0 +1,647 @@
+{
+  "date": "2026-08-25",
+  "report_type": "filtrado",
+  "evaluated": 183,
+  "selected": 14,
+  "papers": [
+    {
+      "id": "arxiv:2608.23185v1",
+      "rank": 1,
+      "title": "Towards Automated Cyber Threat Intelligence Elicitation in Underground Forums",
+      "authors": [
+        "Lorenzo Bossi",
+        "Federico Saccani",
+        "Francesco Panebianco",
+        "Antonio Maci"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-24",
+      "url": "https://arxiv.org/abs/2608.23185v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.23185v1",
+      "score": 60,
+      "topics": [
+        "cybersecurity",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: cybersecurity, LLM, AI agents"
+      ],
+      "abstract_en": "Cyber threat intelligence from underground forums has traditionally relied on passive monitoring. However, as users have become more aware of large-scale data collection, valuable intelligence has become increasingly rare in open forums, often migrating instead to private or harder-to-reach spaces, making passive approaches inadequate. Building on the intuition that relevant information can be obtained through active elicitation, this paper presents DarkBot, to the best of our knowledge, the first multi-agent LLM-based system for active CTI elicitation in underground forums. DarkBot decomposes the interaction task across eleven specialized agents organized into three functional blocks: engagement gating for relevance and safety filtering, context-aware question generation driven by MITRE ATT&CK tactics, and linguistic style adaptation to better align with real forum users. In a controlled evaluation across 100 CrimeBB conversations, the system recovered 72.8% of the validated MITRE ATT&CK techniques present in the original discussions by observing only the initial post at the start of each interaction, and it consistently outperformed a monolithic baseline. The proposed layered safety design contained all injected jailbreak attempts at the pipeline level. These results were further supported by real-world experiments: in a prospective matched deployment, threads assigned to DarkBot accumulated an average of 3.85 more CTI entities than their controls over seven days, and across 104 live forum conversations, the system elicited CTI-relevant disclosures without observed account suspensions, moderator interventions, or explicit accusations of automated participation.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "DarkBot usa agentes LLM para extraer inteligencia de amenazas cibernéticas de foros clandestinos de forma activa y segura.",
+        "problema": "La inteligencia de amenazas cibernéticas en foros clandestinos es cada vez más difícil de obtener mediante monitorización pasiva debido a la migración de información a espacios privados y a la mayor conciencia de los usuarios sobre la recopilación de datos.",
+        "propuesta": "Se presenta DarkBot, un sistema multi-agente basado en LLM que elicita activamente CTI en foros clandestinos. Descompone la tarea en once agentes especializados en tres bloques: filtrado de relevancia y seguridad, generación de preguntas contextualizadas (basadas en MITRE ATT&CK) y adaptación del estilo lingüístico.",
+        "resultados": "En 100 conversaciones de CrimeBB, DarkBot recuperó el 72.8% de las técnicas MITRE ATT&CK validadas. En un despliegue real, los hilos con DarkBot acumularon un promedio de 3.85 entidades CTI más que los controles en siete días. En 104 conversaciones en vivo, no se observaron suspensiones de cuentas ni intervenciones de moderadores.",
+        "por_que_importa": "Este sistema permite obtener inteligencia de amenazas cibernéticas de forma más eficaz y segura, superando las limitaciones de los métodos pasivos y adaptándose al entorno de los foros clandestinos, lo que es crucial para la defensa proactiva.",
+        "tags": [
+          "Inteligencia de Amenazas",
+          "Foros Clandestinos",
+          "LLM",
+          "Ciberseguridad",
+          "Automatización",
+          "Agentes Inteligentes"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-25T13:26:11Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.23471v1",
+      "rank": 2,
+      "title": "InjecMEM: Memory Injection Attack on LLM Agent Memory Systems",
+      "authors": [
+        "Hanling Tian",
+        "Gengyu Zhang",
+        "Zeyang Sha",
+        "Jingying Wang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-24",
+      "url": "https://arxiv.org/abs/2608.23471v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.23471v1",
+      "score": 56,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Memory is becoming a default subsystem in deployed LLM agents to provide persistent personalization and continuity. This naturally prompts a question: will memory system introduce new vulnerabilities into agents? Thus we propose InjecMEM, a novel memory injection attack paradigm that requires only a single interaction (no read/edit access to memory store) to steer later responses of related queries toward a pre-specified output. Guided by the retrieval-then-generate mechanism of memory systems, we craft the injection with a retriever-agnostic anchor and an adversarial command. The anchor contains high-recall topical cues so that downstream retrieval consistently associates the record with the target topic. The command is a short sequence optimized to remain effective under uncertain fused contexts, variable placements, and long prompts so that it reliably steers outputs once retrieved. We learn the command via gradient-based coordinate search, averaging over synthetic prompt templates and insertion positions, and extend it to joint optimization across backbones to study transfer. Evaluated across multiple memory systems and backbone models, InjecMEM achieves reliable topic-conditioned retrieval and targeted generation, remains effective under memory drift, and leaves non-target queries unaffected. Our results underscore the need to harden memory systems and provide a reproducible framework for studying agent memory.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Nuevo ataque de inyección de memoria en LLMs permite secuestrar respuestas futuras con una sola interacción.",
+        "problema": "Los sistemas de memoria en agentes LLM, cruciales para la personalización, pueden introducir nuevas vulnerabilidades de seguridad.",
+        "propuesta": "InjecMEM es un ataque que inyecta datos maliciosos en la memoria del LLM usando un 'ancla' para asegurar la recuperación y un 'comando' optimizado para controlar la generación de respuestas.",
+        "resultados": "InjecMEM logra una recuperación y generación de respuestas dirigidas de forma fiable, incluso con deriva de memoria, y no afecta a consultas no relacionadas. El resumen no especifica métricas numéricas.",
+        "por_que_importa": "Demuestra la necesidad urgente de fortalecer la seguridad de los sistemas de memoria en agentes LLM para prevenir el secuestro de su comportamiento y proteger la información del usuario.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Vulnerabilidad",
+          "Memoria",
+          "Ataque de Inyección"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-25T13:26:20Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.23181v1",
+      "rank": 3,
+      "title": "CyberFactory: Scaling Cyber Security Capabilities with Instances from the Wild",
+      "authors": [
+        "Jian Yang",
+        "Haau-Sing Li",
+        "Shawn Guo",
+        "Zixi Zhao"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-24",
+      "url": "https://arxiv.org/abs/2608.23181v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.23181v1",
+      "score": 54,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+4)",
+        "🎯 temas: cybersecurity, vuln & threats, LLM"
+      ],
+      "abstract_en": "As large language models (LLMs) continue to advance in coding capabilities, their potential in cybersecurity has drawn increasing research attention, with closed-source LLMs (e.g., Mythos) delivering advanced cybersecurity capabilities. However, existing open-source efforts remain limited: frontier open-weight models do not provide reproducible cybersecurity training solutions, open-source training solutions focus on isolated tasks and lack scalable agentic data, and scaling agentic rollouts requires strong domain priors. In this work, we introduce \\textbf{CyberFactory}, a unified open-source framework that connects data construction, trajectory synthesis, and model training across proof-of-concept (PoC) generation, vulnerability patching, and cybersecurity question answering (CyberQA). CyberFactory transforms public vulnerability artifacts, including CVEs from the wild, into executable and verifiable task instances. It further uses a reusable vulnerability-analysis skill to guide the teacher through source inspection, problem solving with domain prior, and evidence-based validation. The resulting supervision is agentic: the model interacts with tools and target environments and revises its solutions according to execution feedback. Using these trajectories, we train and release \\modelname\\footnote{\\emph{Aegis} is, in Greek mythology, the protective shield of Zeus and Athena; the name reflects the model's defensive, security-oriented purpose.}, which internalizes the skill-guided procedure without requiring the skill at inference time. On CyberGym, \\modelname reaches 52.4% Pass@1 under a one-hour budget, improving over its Qwen~3.5 base model by +22.8 points and outperforming the evaluated general-purpose backbones under the same scaffold.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "CyberFactory: un marco de código abierto para entrenar modelos de IA en ciberseguridad usando datos reales y escalables.",
+        "problema": "Los modelos de IA de código abierto actuales para ciberseguridad son limitados, carecen de soluciones de entrenamiento reproducibles y datos escalables para tareas complejas.",
+        "propuesta": "CyberFactory es un marco unificado que conecta la construcción de datos, la síntesis de trayectorias y el entrenamiento de modelos, transformando artefactos de vulnerabilidad públicos en instancias de tareas ejecutables y verificables, guiado por habilidades de análisis de vulnerabilidades.",
+        "resultados": "El modelo resultante, Aegis, alcanza un 52.4% de Pass@1 en CyberGym bajo un presupuesto de una hora, mejorando en 22.8 puntos sobre su modelo base Qwen 3.5 y superando a otros modelos generales.",
+        "por_que_importa": "Permite el desarrollo y la mejora de modelos de IA de código abierto para ciberseguridad, haciéndolos más capaces y accesibles para la defensa y la detección de amenazas.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Código Abierto",
+          "Modelos de Lenguaje",
+          "Entrenamiento de Modelos",
+          "Vulnerabilidades"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-25T13:26:29Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.23473v1",
+      "rank": 4,
+      "title": "MetaCaster: Meta-Harness-Optimized Agent for End-to-End Few-Shot Learning of Lightweight Time Series Forecasters",
+      "authors": [
+        "ChengAo Shen",
+        "Wenchao Yu",
+        "Fangyu Wu",
+        "Dongjin Song"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-08-24",
+      "url": "https://arxiv.org/abs/2608.23473v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.23473v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Time series forecasting (TSF) is evolving toward multimodal and agentic settings, yet using foundation models remains uneconomical in resource-constrained scenarios, where compact, specialized forecasters are more desirable. However, lightweight forecasters typically require substantial training data, limiting their use in domains with scarce, slowly accumulated, or privacy-sensitive time series. To address this dilemma, we investigate the challenging problem of few-shot learning for lightweight forecasters. We propose MetaCaster, a meta-harness-optimized multi-agent framework that uses agentic data generation to automatically train specialized lightweight forecasters from only a few examples and textual contexts. Our work highlights a new TSF paradigm in which agents act not as forecasters but as intermediary engineers that prepare efficient, task-specific forecasters for deployment. Experiments on 18 datasets, 23 state-of-the-art lightweight forecasters, and 14 baselines demonstrate that MetaCaster achieves both data efficiency and computational efficiency while maintaining high-quality TSF performance.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "MetaCaster entrena eficientemente pronosticadores de series temporales ligeros con pocos datos, usando agentes para generar datos y optimizar modelos.",
+        "problema": "Los modelos de IA para pronóstico de series temporales son costosos y requieren muchos datos, lo cual es un problema en escenarios con datos limitados, de lenta acumulación o sensibles a la privacidad.",
+        "propuesta": "MetaCaster es un marco multi-agente que utiliza agentes para generar datos y entrenar automáticamente pronosticadores ligeros especializados a partir de muy pocos ejemplos y contexto textual.",
+        "resultados": "MetaCaster demuestra eficiencia en datos y cómputo, manteniendo un alto rendimiento en 18 conjuntos de datos y 23 modelos ligeros de vanguardia.",
+        "por_que_importa": "Permite crear pronosticadores de series temporales precisos y eficientes en entornos con recursos limitados o datos escasos, democratizando el acceso a esta tecnología.",
+        "tags": [
+          "pronóstico de series temporales",
+          "aprendizaje con pocos ejemplos",
+          "IA ligera",
+          "agentes de IA",
+          "ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-25T13:26:38Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.23375v1",
+      "rank": 5,
+      "title": "Adversarial Entropy Inflation Against Gumbel-Based Inference Verification",
+      "authors": [
+        "Nikita Kezins"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-24",
+      "url": "https://arxiv.org/abs/2608.23375v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.23375v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Gumbel-based inference verification bounds LLM weight exfiltration by only forgiving token choices that plausibly arise from honest GPU nondeterminism, reporting a >200x slowdown for a steganographic adversary under benign prompt traffic. This bound assumes a passive attacker; we show it degrades sharply against an adversary who instead controls the prompt distribution. Because the verifier's admissible-token-set size is driven by the model's own output entropy, prompts engineered to break grammatical and sub-word structure -- rather than benign conversational traffic -- widen that set and open a materially larger covert channel. Across six instruction-tuned models spanning 1B to 32B parameters and three random seeds, our strongest attack (character- and script-level disruption) roughly doubles bits leaked per token relative to benign prompts, cutting the slowdown factor to 60x - 118x. These results indicate that static, benign-traffic-calibrated thresholds are insufficient for this defense, and that jitter-forgiveness thresholds should instead be calibrated dynamically against local token entropy.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Una nueva técnica de ataque debilita las defensas contra la exfiltración de datos en LLMs al manipular la entropía de salida del modelo.",
+        "problema": "Las defensas actuales contra la exfiltración de pesos de LLMs (Gumbel-based inference verification) asumen un atacante pasivo y se basan en la entropía de salida del modelo bajo tráfico benigno. Un atacante activo puede manipular la distribución de los prompts para ensanchar el conjunto de tokens admisibles y crear un canal encubierto más grande.",
+        "propuesta": "Se propone un ataque de 'inflación de entropía adversaria' que genera prompts con estructuras gramaticales y de sub-palabras rotas para aumentar la entropía de salida del LLM. Esto ensancha el conjunto de tokens permitidos por el verificador, facilitando la exfiltración de datos.",
+        "resultados": "El ataque propuesto casi duplica los bits filtrados por token en comparación con prompts benignos, reduciendo el factor de ralentización de la defensa de más de 200x a entre 60x y 118x en modelos de 1B a 32B parámetros.",
+        "por_que_importa": "Demuestra que los umbrales estáticos de defensa calibrados con tráfico benigno son insuficientes contra atacantes activos. Sugiere la necesidad de calibrar dinámicamente los umbrales de 'perdón de fluctuaciones' basándose en la entropía local de los tokens para mantener la seguridad.",
+        "tags": [
+          "LLMs",
+          "Ciberseguridad",
+          "Exfiltración de datos",
+          "Ataques adversarios",
+          "Entropía",
+          "Verificación de inferencia"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-25T13:26:48Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.23339v1",
+      "rank": 6,
+      "title": "CERTIoT-6G: Continuous Cybersecurity Certification for IoT Devices in 5G/6G Networks",
+      "authors": [
+        "Evangelos Lempesis",
+        "Fabio Palmese",
+        "Hamed Haddadi",
+        "Anna Maria Mandalari"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-24",
+      "url": "https://arxiv.org/abs/2608.23339v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.23339v1",
+      "score": 53,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: cybersecurity, vuln & threats, compliance & audit"
+      ],
+      "abstract_en": "The massive adoption of Internet of Things (IoT) devices across critical domains such as healthcare, smart cities, industrial automation, and critical infrastructure introduces significant cybersecurity and regulatory challenges. Current and forthcoming European regulations, including the Cyber Resilience Act (CRA) and the NIS2 Directive, require manufacturers, operators, and other organizations to ensure secure-by-design devices, continuous vulnerability management, and resilient operation throughout the device lifecycle. Traditional certification mechanisms remain static, manual, and difficult to scale across heterogeneous IoT ecosystems. This paper presents CERTIoT-6G, a Security-as-a-Service (SECaaS) framework that enables automated cybersecurity certification and continuous compliance monitoring of IoT devices operating in 5G and future 6G networks. The framework integrates automated compliance analysis, real-time traffic monitoring, and adversarial testing capabilities. We validate the CERTIoT-6G framework on different IoT device categories operating in an advanced 5G testbed. Evaluation results reveal critical compliance gaps, particularly in traffic encryption and availability under unstable conditions, and demonstrate that the framework produces actionable verdicts mapped to regulatory requirements across heterogeneous device types. Furthermore, we show that the monitoring pipeline has a negligible impact on live 5G traffic.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "CERTIoT-6G automatiza la certificación de ciberseguridad para dispositivos IoT en redes 5G/6G, garantizando el cumplimiento continuo de normativas.",
+        "problema": "Los dispositivos IoT, cada vez más presentes en sectores críticos, enfrentan desafíos de ciberseguridad y regulatorios. Los métodos de certificación actuales son estáticos, manuales y difíciles de escalar, lo que complica el cumplimiento de normativas como la CRA y NIS2 que exigen seguridad desde el diseño y gestión continua de vulnerabilidades.",
+        "propuesta": "Se propone CERTIoT-6G, un marco de Seguridad como Servicio (SECaaS) que automatiza la certificación de ciberseguridad y el monitoreo de cumplimiento continuo para dispositivos IoT en redes 5G/6G. Integra análisis automatizado de cumplimiento, monitoreo de tráfico en tiempo real y pruebas adversarias.",
+        "resultados": "La validación en un banco de pruebas 5G reveló brechas críticas de cumplimiento (cifrado de tráfico, disponibilidad bajo inestabilidad) y demostró que el marco genera veredictos accionables mapeados a requisitos regulatorios para diversos tipos de dispositivos. El monitoreo tuvo un impacto insignificante en el tráfico 5G.",
+        "por_que_importa": "Permite a los fabricantes y operadores cumplir de forma eficiente y continua con las crecientes regulaciones de ciberseguridad para IoT, reduciendo riesgos y asegurando la operación resiliente de dispositivos en redes avanzadas.",
+        "tags": [
+          "IoT",
+          "Ciberseguridad",
+          "5G",
+          "6G",
+          "Certificación",
+          "Cumplimiento"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-25T13:26:57Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.23264v1",
+      "rank": 7,
+      "title": "Hidden in the Request: Explaining Unethical LLM Compliance through Token Relevance",
+      "authors": [
+        "Or Biton",
+        "Tomer Krichli",
+        "Itai Allouche",
+        "Joseph Keshet"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CL]",
+      "category": "cs.CL",
+      "date": "2026-08-24",
+      "url": "https://arxiv.org/abs/2608.23264v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.23264v1",
+      "score": 53,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: vuln & threats, LLM, compliance & audit"
+      ],
+      "abstract_en": "Although Large Language Models (LLMs) are aligned to optimize for both helpfulness and harmlessness, these dual objectives may conflict, inevitably leading to alignment failures. This work systematically investigates instances where LLMs fail to exhibit ethical behavior. To understand the underlying mechanics of these vulnerabilities, we introduce a probing methodology that presents unethical scenarios to LLMs in three distinct structural modalities: objective classification tasks, subjective first-person statements, and direct requests for assistance. We find that model performance degrades in the request-for-assistance-based form. Using Layer-wise Relevance Propagation (LRP), we trace this discrepancy to an attribution bias: the model places greater emphasis on benign task-framing tokens (e.g., \"Can you help me...\") than on tokens signaling the underlying unethical behavior (e.g., \"without getting caught\"), which we term cue-tokens. We hypothesize that this under-attribution contributes to harmful compliance. To test this, we introduce two LRP-guided decoding methods that steer generation toward trajectories more relevant to cue tokens. Empirical evaluations show that these interventions promote safer responses, supporting cue-token attribution's role in compliance failures.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los LLMs fallan éticamente al priorizar el contexto sobre las señales de peligro, pero podemos guiarlos hacia respuestas más seguras.",
+        "problema": "Los Modelos de Lenguaje Grandes (LLMs) a veces fallan en su alineación ética, produciendo respuestas inapropiadas o dañinas, especialmente cuando se les presentan escenarios poco éticos.",
+        "propuesta": "Se introduce una metodología de sondeo para evaluar LLMs ante escenarios poco éticos presentados de tres formas distintas. Utilizando Layer-wise Relevance Propagation (LRP), se identifica un sesgo de atribución donde los LLMs dan más peso a tokens benignos del marco de la tarea ('¿Puedes ayudarme?') que a los tokens que señalan el comportamiento poco ético ('sin ser atrapado'). Se proponen dos métodos de decodificación guiados por LRP para dirigir la generación hacia tokens de señalización, promoviendo respuestas más seguras.",
+        "resultados": "El rendimiento del modelo se degrada en la modalidad de solicitud de ayuda. Las intervenciones guiadas por LRP promovieron respuestas más seguras, validando el papel de la atribución de tokens de señalización en los fallos de cumplimiento.",
+        "por_que_importa": "Comprender y mitigar las fallas éticas en los LLMs es crucial para su despliegue seguro y confiable en aplicaciones del mundo real. Esta investigación ofrece una vía para mejorar la seguridad y la alineación ética de los LLMs.",
+        "tags": [
+          "LLMs",
+          "Ética IA",
+          "Seguridad IA",
+          "Alineación",
+          "Procesamiento del Lenguaje Natural"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-25T13:27:07Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.22868v1",
+      "rank": 8,
+      "title": "AgentFlow: A Flow-Centric Policy Language and Framework for Securing LLM Agent Systems",
+      "authors": [
+        "Basavesh Ammanaghatta Shivakumar",
+        "Swarn Priya",
+        "Peng Gao"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-24",
+      "url": "https://arxiv.org/abs/2608.22868v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.22868v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "LLM agents increasingly read untrusted content, invoke external tools, access private data, and delegate work to other agents. Harm often arises not from a single unsafe action but from the flow of sensitive data across a sequence of otherwise plausible steps. We present AgentFlow, a flow-centric policy language and runtime enforcement model for specifying where data may travel in agent systems. Policies are defined over labeled runtime edges and constrain which tools may receive sensitive fields, which sinks may receive released data, and what authority may cross delegation boundaries. The language supports flow and path rules, task-scoped capabilities, controlled release, and stateful taint semantics. A runtime reference monitor mediates agent actions, and a bounded SMT-based verifier checks safety properties for a structured policy fragment. We evaluate AgentFlow on multiple agent benchmarks. In our prototype, seven safety properties verify in under 0.5 seconds each, and the verifier catches all seeded unsafe policy variants in our study. On 949 AgentDojo injected cases across four suites, AgentFlow reduces confirmed compromise from 33.0\\% to 0.0\\% while improving aggregate utility from 46.7\\% to 63.3\\%. On a 200-case AgentDyn Dailylife benchmark, it reduces confirmed compromise from 73.5\\% to 0.0\\% while preserving near-baseline utility (44.5\\% to 43.5\\%). Breadth checks across ASB, InjecAgent, BIPIA, AgentHarm, and MCPTox replays suggest that the configured policies block the benchmark-specified policy-visible attacker flows; in ASB's direct-prompt-injection harness, attack success is 0/1{,}200. These results are preliminary and scoped to the modeled policy-visible agent behaviors and evaluated benchmarks.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "AgentFlow protege sistemas de agentes LLM controlando el flujo de datos sensibles a través de políticas de seguridad.",
+        "problema": "Los sistemas de agentes LLM manejan datos sensibles y ejecutan acciones que pueden ser explotadas a través de secuencias de pasos aparentemente inofensivos, llevando a compromisos de seguridad.",
+        "propuesta": "AgentFlow introduce un lenguaje de políticas centrado en el flujo y un modelo de ejecución para definir y hacer cumplir restricciones sobre dónde pueden viajar los datos sensibles, qué herramientas pueden recibirlos y qué autoridad se puede delegar.",
+        "resultados": "AgentFlow reduce el compromiso confirmado del 33.0% al 0.0% en AgentDojo, mejorando la utilidad del 46.7% al 63.3%. En AgentDyn, reduce el compromiso del 73.5% al 0.0% con una ligera disminución de la utilidad (44.5% a 43.5%). Las propiedades de seguridad se verifican en menos de 0.5 segundos cada una.",
+        "por_que_importa": "Proporciona un mecanismo práctico y verificable para asegurar sistemas de agentes LLM complejos, mitigando riesgos de seguridad sin sacrificar excesivamente la utilidad funcional.",
+        "tags": [
+          "LLM",
+          "Agentes IA",
+          "Ciberseguridad",
+          "Control de Flujo de Datos",
+          "Seguridad de IA",
+          "Políticas de Seguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-25T13:27:16Z"
+      }
+    },
+    {
+      "id": "arxiv:2606.13610",
+      "rank": 1,
+      "title": "One Polluted Page Is Enough: Evaluating Web Content Pollution in LLM Recommenders",
+      "authors": [
+        "Minghao Luo",
+        "Liang Chen"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-24",
+      "url": "https://arxiv.org/abs/2606.13610",
+      "pdf_url": "https://arxiv.org/pdf/2606.13610",
+      "score": 72,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Search-augmented LLMs increasingly mediate everyday consumer recommendations by retrieving live web content. This creates a new risk: LLM recommenders may consume web content that Generative Engine Optimization (GEO) operators have polluted to mislead them. We ask: to what extent do they become unwitting promoters of fake products? We introduce FORGE (Fake Online Recommendations in Generative Environments), which locally rewrites real products in a frozen set of retrieved web pages into fake ones and measures how often the LLM recommends the fake product, across 225 real products in 15 categories and 5 consumer scenarios. Across 12 commercial and open-weights LLMs, all models are vulnerable: a single polluted page yields fooled rates of up to 27%, while the full top-3 replacement raises this to 73.8%. Vulnerability varies across categories, increasing when models lack stable prior knowledge of the products. Reasoning does not mitigate this vulnerability; instead, it often generates spurious social proof to justify false recommendations. None of the four defenses is adequate: the skepticism prompt can exacerbate vulnerability much like reasoning, the two consensus filters risk suppressing legitimate products, and credibility re-ranking helps every model but removes only a sixth of the fakes. We release the FORGE benchmark and the evaluation code at https://github.com/leoluolol/forge-benchmark.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los LLMs que recomiendan productos en la web son vulnerables a contenido falso, promoviendo productos engañosos hasta en un 73.8%.",
+        "problema": "Los modelos de lenguaje grandes (LLMs) usados para recomendar productos en la web pueden ser engañados por contenido web manipulado ('Generative Engine Optimization' - GEO) para recomendar productos falsos o engañosos, actuando como promotores involuntarios de estos.",
+        "propuesta": "Se introduce FORGE, un método para evaluar esta vulnerabilidad. FORGE modifica páginas web reales para introducir productos falsos y mide la frecuencia con la que los LLMs recomiendan estos productos falsos, probando 12 LLMs en 15 categorías y 5 escenarios de consumo.",
+        "resultados": "Todos los LLMs evaluados son vulnerables. Una sola página manipulada puede engañar a los modelos hasta en un 27% de los casos. Reemplazando los 3 principales resultados de búsqueda, la tasa de engaño sube al 73.8%. La vulnerabilidad varía por categoría y empeora si el LLM tiene poco conocimiento previo del producto. El razonamiento no ayuda e incluso puede generar justificaciones falsas. Las defensas probadas (prompts, filtros de consenso, reordenación por credibilidad) son insuficientes.",
+        "por_que_importa": "Esta investigación expone un riesgo significativo en la cadena de recomendación de productos mediada por IA, afectando la confianza del consumidor y la integridad del comercio electrónico. Las defensas actuales no son suficientes, lo que requiere nuevas estrategias para asegurar la fiabilidad de las recomendaciones de LLMs.",
+        "tags": [
+          "LLMs",
+          "Ciberseguridad",
+          "Recomendaciones",
+          "Contenido Falso",
+          "Vulnerabilidad",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-25T13:27:26Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.23035",
+      "rank": 2,
+      "title": "MobilePA-Bench: Benchmarking Mobile Planner Agents on Complex Real-World Tasks",
+      "authors": [
+        "Yi Zhu",
+        "Xiongwei Wu",
+        "Qiyi Wang",
+        "Tingyu Qu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-24",
+      "url": "https://arxiv.org/abs/2608.23035",
+      "pdf_url": "https://arxiv.org/pdf/2608.23035",
+      "score": 69,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "As on-device LLM agents evolve into personal copilots, the mobile operating system has become a key testbed for this paradigm, making rigorous capability evaluation essential. Yet existing benchmarks fall into two camps, each with a critical blind spot: GUI-centric benchmarks test surface-level screen manipulation while overlooking background tool use and long-horizon planning, whereas static function-calling benchmarks rely on offline API matching that is detached from real runtime constraints. To close this gap, we present \\textbf{MobilePA-Bench}, an interactive, stateful, and tool-centric benchmark for evaluating the tool-calling and planning abilities of mobile planning agents. MobilePA-Bench runs on an executable sandbox that maintains live application databases and returns structured feedback, spanning $13$ functional domains and $212$ realistic mobile tools. Beyond basic tool use, it evaluates a central planning agent along three advanced dimensions: \\emph{(1)~Sub-agent Collaboration}---decomposing a complex task and delegating specialized work to capable sub-agents; \\emph{(2)~Memory Usage}---recalling stored memories, user profiles, and past preferences to resolve implicit requests; and \\emph{(3)~Skill Usage}---invoking pre-packaged composite skills instead of planning every step from scratch. Extensive experiments show that current frontier LLMs remain unreliable in mobile settings: performance drops sharply under strict tool ordering, permission limits, and unexpected runtime errors. By pairing an interactive function-calling sandbox with evidence-based verification, MobilePA-Bench serves as both a practical diagnostic benchmark and an interactive foundation for agentic reinforcement learning---accelerating the development of dependable mobile agents.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Se introduce MobilePA-Bench, un nuevo benchmark para evaluar la planificación y uso de herramientas de agentes LLM en dispositivos móviles.",
+        "problema": "Los benchmarks actuales para agentes LLM en móviles son o muy superficiales (centrados en GUI) o desconectados de las restricciones del mundo real (llamadas a API estáticas), fallando en evaluar la planificación a largo plazo y el uso de herramientas en segundo plano.",
+        "propuesta": "Se propone MobilePA-Bench, un benchmark interactivo y con estado que simula un entorno móvil real con aplicaciones y herramientas, evaluando la colaboración entre sub-agentes, el uso de memoria y la invocación de habilidades compuestas.",
+        "resultados": "Los LLMs actuales fallan significativamente en entornos móviles simulados, especialmente bajo restricciones de orden de herramientas, permisos y errores de ejecución. El resumen no especifica métricas de rendimiento detalladas.",
+        "por_que_importa": "Es crucial para desarrollar agentes LLM fiables y capaces que funcionen como copilotos en dispositivos móviles, abordando las limitaciones de los sistemas actuales y acelerando la investigación en este campo.",
+        "tags": [
+          "agentes IA",
+          "LLM",
+          "benchmarking",
+          "dispositivos móviles",
+          "ciberseguridad",
+          "planificación"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-25T13:27:36Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.23200",
+      "rank": 3,
+      "title": "LongWoF-Bench: Evaluating EvoMap Genes for Verifiable Long-Workflow Tasks",
+      "authors": [
+        "Xiao Zhang",
+        "Qumeng Sun",
+        "Jihao Li",
+        "Yiming Ren"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-24",
+      "url": "https://arxiv.org/abs/2608.23200",
+      "pdf_url": "https://arxiv.org/pdf/2608.23200",
+      "score": 62,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Large language models are increasingly expected to execute complex workflows whose success depends on maintaining interdependent constraints and producing artifacts that satisfy strict end-to-end verification. Yet successful execution experience is typically lost after a single run, forcing subsequent models to rediscover strategies and failure modes from scratch. We study whether such experience can instead be externalized and reused through EvoMap, where verifier-confirmed execution trajectories are consolidated into structured Gene. To evaluate this setting, we introduce the Long-Workflow Benchmark (LongWoF-Bench), comprising 778 machine-verifiable tasks across code generation, agent-environment synthesis, mathematical reasoning, and rule following. On the 252 tasks with verifier-confirmed Opus trajectories, evolved EvoMap Gene outperform Skill across all seven evaluated models by 8.7-15.5 percentage points, with the gains extending to consumer models from different model families. In contrast, reference-distilled Gene do not exhibit the same advantage, indicating that compact representation alone is insufficient and that Gene utility is closely associated with verified experience provenance. For Claude Opus, Gene reuse also completes 39 more tasks than Skill while reducing solve-time token consumption by 9.9%. Together, these results show that verified execution experience can be retained and shared as a reusable external resource, enabling models to improve long-workflow completion without repeatedly paying the full cost of experience discovery.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Reutiliza la experiencia de ejecución verificada de LLMs para mejorar la finalización de flujos de trabajo complejos y reducir costos.",
+        "problema": "Los modelos de lenguaje grandes (LLMs) pierden la experiencia de ejecución de flujos de trabajo complejos, obligándolos a redescubrir estrategias y fallos en cada intento.",
+        "propuesta": "Externalizar y reutilizar la experiencia de ejecución verificada mediante EvoMap, que consolida trayectorias confirmadas por un verificador en 'Genes' estructurados.",
+        "resultados": "Los 'Genes' EvoMap superaron a 'Skill' en 7 modelos en 252 tareas, mejorando el rendimiento entre 8.7 y 15.5 puntos porcentuales. Para Claude Opus, los 'Genes' completaron 39 tareas más y redujeron el consumo de tokens en un 9.9%.",
+        "por_que_importa": "Permite a los LLMs mejorar la finalización de flujos de trabajo largos y complejos sin incurrir repetidamente en el alto costo de adquirir experiencia desde cero, haciendo la IA más eficiente y fiable.",
+        "tags": [
+          "LLMs",
+          "Flujos de Trabajo",
+          "Reutilización de Experiencia",
+          "Ciberseguridad",
+          "Verificación",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-25T13:27:45Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.22849",
+      "rank": 4,
+      "title": "RIBOSPAN: A Long-Context RNA Foundation Model for Versatile RNA Modeling",
+      "authors": [
+        "Ziyuan Wang",
+        "Bohao Tang",
+        "Fei Zhang",
+        "Shuo Han"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-24",
+      "url": "https://arxiv.org/abs/2608.22849",
+      "pdf_url": "https://arxiv.org/pdf/2608.22849",
+      "score": 62,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Full-length RNAs, particularly messenger RNAs, often exceed the context lengths used to pretrain existing RNA foundation models, limiting complete-transcript modeling at single-nucleotide resolution. We present RIBOSPAN, a 1.61-billion-parameter bidirectional RNA foundation model natively pretrained with context lengths up to 10,240 nt. RIBOSPAN combines dense bidirectional self-attention, single-nucleotide tokenization, and attention-isolated sequence packing to enable high-resolution modeling of complete long RNAs. We evaluate the model through nucleotide reconstruction, a controlled long-context representation benchmark, and frozen RNA-type representation analysis. Native 10K pretraining preserves strong reconstruction at 10,240 tokens, while continued pretraining with 40% masking improves recovery under heavy corruption while preserving representation quality. The long-context benchmark further shows that native 10K models maintain strong contextual responsiveness and context-specific representation separation while keeping perturbation-induced representation changes highly localized. Inference-time YaRN scaling recovers much of the contextual organization lost by direct extrapolation of short-context models, but induces substantially greater distal representation diffusion. Frozen-representation evaluations further demonstrate state-of-the-art RNA representation quality, with RIBOSPAN achieving the strongest overall performance across diverse RNA types and retaining a clear advantage on long RNAs. Building on the same backbone, we develop a multidimensionally conditioned discrete-diffusion framework for full-length mRNA generation and redesign, including synonymous-codon diffusion for protein-preserving CDS optimization. Together, RIBOSPAN establishes a powerful long-context foundation for transferable RNA representation learning and full-transcript mRNA design.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "RIBOSPAN es un modelo de IA para analizar y diseñar ARN completos, superando las limitaciones de contexto de modelos anteriores.",
+        "problema": "Los modelos de ARN existentes no pueden procesar secuencias de ARN completas (especialmente ARNm) debido a limitaciones en la longitud del contexto, lo que impide un análisis detallado a nivel de nucleótido.",
+        "propuesta": "Se presenta RIBOSPAN, un modelo de fundacional bidireccional de 1.61 mil millones de parámetros, preentrenado nativamente con longitudes de contexto de hasta 10,240 nucleótidos (nt), utilizando autoatención densa bidireccional y empaquetado de secuencias aislado para modelar ARN largos con alta resolución.",
+        "resultados": "RIBOSPAN mantiene una fuerte capacidad de reconstrucción con 10,240 tokens, mejora la recuperación bajo corrupción con preentrenamiento adicional y muestra una calidad de representación de ARN de última generación, superando a otros modelos, especialmente en ARN largos. La generación y rediseño de ARNm completo es posible, incluyendo la optimización de CDS preservando la proteína.",
+        "por_que_importa": "Establece una base sólida para el aprendizaje de representaciones de ARN transferibles y el diseño de ARNm completo, permitiendo avances en la investigación y aplicaciones biotecnológicas que requieren el análisis de ARN completos.",
+        "tags": [
+          "ARN",
+          "Inteligencia Artificial",
+          "Modelado de Lenguaje",
+          "Biología Computacional",
+          "Diseño de Fármacos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-25T13:27:55Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.22817",
+      "rank": 5,
+      "title": "Industrial-Instruction: An End-to-End Framework for Building Instruction-Tuning and Benchmark Datasets from Industrial Technical Reports",
+      "authors": [
+        "Parsa Bakhtiari",
+        "Hassan Bashiri",
+        "Alireza Khalilipour",
+        "Masoud Nasiripour"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-24",
+      "url": "https://arxiv.org/abs/2608.22817",
+      "pdf_url": "https://arxiv.org/pdf/2608.22817",
+      "score": 60,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Industrial technical reports contain high-value knowledge for maintenance, troubleshooting, and product engineering, but their heterogeneous structure (dense prose, specifications, tables) makes them difficult to index and reason over with standard retrieval and QA pipelines, and no public instruction-tuning or benchmark datasets are built from such documents. We address this gap with Industrial-Instruction, contributing (i) two open QA datasets built from real industrial technical reports and (ii) the end-to-end pipeline that produces them. Using 906 public Panasonic documents (7,525 pages), we apply layout-aware extraction, build a semantic retrieval index, and synthesize multiple-choice QA grounded in retrieved evidence under five query-document relationships (irrelevant retrieval, single-/multi-document support, single-/multi-document answer). After filtering an initial 23.9k generated samples, each dataset provides approximately 13.6k QA pairs with source documents and a held-out benchmark split. Fine-tuning small open LLMs (under 10B parameters) improves Set-Match Accuracy from 28.5% to 42.0% and F1 from 46.6% to 63.5% on the Panasonic benchmark. We release two parallel versions built by the same pipeline: one generated with the open-weight Qwen3-30B-A3B-Instruct model and one with the closed, API-based Claude-Opus-4.6 model, enabling a direct comparison of open- versus frontier-model data generation. The Claude-Opus-4.6 dataset yields a cleaner raw corpus and larger fine-tuning gains, at roughly two orders of magnitude higher cost. MMLU evaluation shows models trained on the Claude-Opus-4.6 data retain essentially all general knowledge, versus a small but measurable forgetting effect for the Qwen-generated data. Together, these datasets and pipeline offer a practical, reproducible path toward scalable industrial benchmarks and training data from real-world documentation.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Crea datasets de preguntas y respuestas a partir de informes técnicos industriales para mejorar modelos de IA.",
+        "problema": "Los informes técnicos industriales son ricos en conocimiento pero difíciles de usar por su estructura heterogénea, y faltan datasets públicos para entrenar y evaluar modelos de IA en ellos.",
+        "propuesta": "Se presenta Industrial-Instruction, un pipeline completo para crear datasets de preguntas y respuestas (QA) a partir de informes técnicos reales, utilizando extracción consciente del diseño y recuperación semántica.",
+        "resultados": "Se generaron dos datasets con ~13.6k pares QA cada uno. El fine-tuning de LLMs pequeños mejoró la precisión de coincidencia de conjuntos del 28.5% al 42.0% y el F1 del 46.6% al 63.5% en el benchmark de Panasonic. Los datos generados con Claude-Opus-4.6 mostraron mejores resultados y menor olvido de conocimiento general.",
+        "por_que_importa": "Permite crear benchmarks y datos de entrenamiento escalables y reproducibles a partir de documentación industrial real, facilitando la mejora de la IA en este dominio crítico.",
+        "tags": [
+          "IA industrial",
+          "Procesamiento de lenguaje natural",
+          "Datasets",
+          "Ciberseguridad",
+          "Ingeniería",
+          "Informes técnicos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-25T13:28:04Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.20169",
+      "rank": 6,
+      "title": "Task-CoEvolve: Efficient Harness Optimization via Adaptive Validation Task Selection",
+      "authors": [
+        "Atsuyuki Miyai",
+        "Kiyoharu Aizawa",
+        "Toshihiko Yamasaki"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-24",
+      "url": "https://arxiv.org/abs/2608.20169",
+      "pdf_url": "https://arxiv.org/pdf/2608.20169",
+      "score": 59,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "We present a novel approach to efficient LLM harness optimization through adaptive validation task selection. Harness optimization iteratively rewrites the harness code based on validation performance, enabling substantial performance gains without updating the underlying model weights. Existing approaches, however, evaluate a fixed validation set in full at every iteration, incurring substantial evaluation costs even on tasks that become less discriminative as the harness evolves. We propose $\\textbf{Task-CoEvolve}$, which co-evolves the validation tasks with the harness by addressing two challenges: selecting informative tasks and estimating full-set performance from partial evaluations. Task-CoEvolve builds on the observation that tasks on which candidate harnesses disagree are more informative for distinguishing among them than tasks that are consistently solved or failed. It uses variance-weighted sampling based on past outcomes to focus evaluation on tasks near the capability frontier, with the sampling distribution adapting as the harness evolves. It then estimates full-set scores from the sampled tasks by accounting for their sampling probabilities, enabling consistent comparisons across iterations despite evaluating different subsets. Experiments on online text classification and Terminal-Bench 2.1 show that Task-CoEvolve consistently outperforms subset-based baselines and matches the final performance of full-set search while reducing the number of evaluations during optimization by 80%. Code will be released at https://github.com/Agent4Science-UTokyo/Task-CoEvolve.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Optimiza el código de LLMs de forma eficiente adaptando las tareas de validación al progreso del modelo.",
+        "problema": "La optimización de LLMs evalúa un conjunto fijo de tareas en cada iteración, lo que genera altos costos computacionales, especialmente cuando algunas tareas pierden su capacidad discriminatoria.",
+        "propuesta": "Task-CoEvolve adapta las tareas de validación junto con el código del LLM. Selecciona tareas informativas basándose en la varianza de resultados pasados y estima el rendimiento completo a partir de evaluaciones parciales.",
+        "resultados": "Reduce el número de evaluaciones en un 80% manteniendo el rendimiento final, superando a los métodos basados en subconjuntos fijos.",
+        "por_que_importa": "Permite optimizar LLMs de manera mucho más eficiente, reduciendo costos computacionales y acelerando la mejora del rendimiento sin necesidad de reentrenar el modelo.",
+        "tags": [
+          "LLMs",
+          "Optimización",
+          "Validación Adaptativa",
+          "Eficiencia Computacional",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-25T13:28:14Z"
+      }
+    }
+  ],
+  "generated_at": "2026-08-25T13:28:14Z"
+}

@@ -5391,5 +5391,238 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-08-24T13:28:51Z"
+  },
+  "arxiv:2608.23185v1": {
+    "tldr": "DarkBot usa agentes LLM para extraer inteligencia de amenazas cibernéticas de foros clandestinos de forma activa y segura.",
+    "problema": "La inteligencia de amenazas cibernéticas en foros clandestinos es cada vez más difícil de obtener mediante monitorización pasiva debido a la migración de información a espacios privados y a la mayor conciencia de los usuarios sobre la recopilación de datos.",
+    "propuesta": "Se presenta DarkBot, un sistema multi-agente basado en LLM que elicita activamente CTI en foros clandestinos. Descompone la tarea en once agentes especializados en tres bloques: filtrado de relevancia y seguridad, generación de preguntas contextualizadas (basadas en MITRE ATT&CK) y adaptación del estilo lingüístico.",
+    "resultados": "En 100 conversaciones de CrimeBB, DarkBot recuperó el 72.8% de las técnicas MITRE ATT&CK validadas. En un despliegue real, los hilos con DarkBot acumularon un promedio de 3.85 entidades CTI más que los controles en siete días. En 104 conversaciones en vivo, no se observaron suspensiones de cuentas ni intervenciones de moderadores.",
+    "por_que_importa": "Este sistema permite obtener inteligencia de amenazas cibernéticas de forma más eficaz y segura, superando las limitaciones de los métodos pasivos y adaptándose al entorno de los foros clandestinos, lo que es crucial para la defensa proactiva.",
+    "tags": [
+      "Inteligencia de Amenazas",
+      "Foros Clandestinos",
+      "LLM",
+      "Ciberseguridad",
+      "Automatización",
+      "Agentes Inteligentes"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-25T13:26:11Z"
+  },
+  "arxiv:2608.23471v1": {
+    "tldr": "Nuevo ataque de inyección de memoria en LLMs permite secuestrar respuestas futuras con una sola interacción.",
+    "problema": "Los sistemas de memoria en agentes LLM, cruciales para la personalización, pueden introducir nuevas vulnerabilidades de seguridad.",
+    "propuesta": "InjecMEM es un ataque que inyecta datos maliciosos en la memoria del LLM usando un 'ancla' para asegurar la recuperación y un 'comando' optimizado para controlar la generación de respuestas.",
+    "resultados": "InjecMEM logra una recuperación y generación de respuestas dirigidas de forma fiable, incluso con deriva de memoria, y no afecta a consultas no relacionadas. El resumen no especifica métricas numéricas.",
+    "por_que_importa": "Demuestra la necesidad urgente de fortalecer la seguridad de los sistemas de memoria en agentes LLM para prevenir el secuestro de su comportamiento y proteger la información del usuario.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Vulnerabilidad",
+      "Memoria",
+      "Ataque de Inyección"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-25T13:26:20Z"
+  },
+  "arxiv:2608.23181v1": {
+    "tldr": "CyberFactory: un marco de código abierto para entrenar modelos de IA en ciberseguridad usando datos reales y escalables.",
+    "problema": "Los modelos de IA de código abierto actuales para ciberseguridad son limitados, carecen de soluciones de entrenamiento reproducibles y datos escalables para tareas complejas.",
+    "propuesta": "CyberFactory es un marco unificado que conecta la construcción de datos, la síntesis de trayectorias y el entrenamiento de modelos, transformando artefactos de vulnerabilidad públicos en instancias de tareas ejecutables y verificables, guiado por habilidades de análisis de vulnerabilidades.",
+    "resultados": "El modelo resultante, Aegis, alcanza un 52.4% de Pass@1 en CyberGym bajo un presupuesto de una hora, mejorando en 22.8 puntos sobre su modelo base Qwen 3.5 y superando a otros modelos generales.",
+    "por_que_importa": "Permite el desarrollo y la mejora de modelos de IA de código abierto para ciberseguridad, haciéndolos más capaces y accesibles para la defensa y la detección de amenazas.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Código Abierto",
+      "Modelos de Lenguaje",
+      "Entrenamiento de Modelos",
+      "Vulnerabilidades"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-25T13:26:29Z"
+  },
+  "arxiv:2608.23473v1": {
+    "tldr": "MetaCaster entrena eficientemente pronosticadores de series temporales ligeros con pocos datos, usando agentes para generar datos y optimizar modelos.",
+    "problema": "Los modelos de IA para pronóstico de series temporales son costosos y requieren muchos datos, lo cual es un problema en escenarios con datos limitados, de lenta acumulación o sensibles a la privacidad.",
+    "propuesta": "MetaCaster es un marco multi-agente que utiliza agentes para generar datos y entrenar automáticamente pronosticadores ligeros especializados a partir de muy pocos ejemplos y contexto textual.",
+    "resultados": "MetaCaster demuestra eficiencia en datos y cómputo, manteniendo un alto rendimiento en 18 conjuntos de datos y 23 modelos ligeros de vanguardia.",
+    "por_que_importa": "Permite crear pronosticadores de series temporales precisos y eficientes en entornos con recursos limitados o datos escasos, democratizando el acceso a esta tecnología.",
+    "tags": [
+      "pronóstico de series temporales",
+      "aprendizaje con pocos ejemplos",
+      "IA ligera",
+      "agentes de IA",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-25T13:26:38Z"
+  },
+  "arxiv:2608.23375v1": {
+    "tldr": "Una nueva técnica de ataque debilita las defensas contra la exfiltración de datos en LLMs al manipular la entropía de salida del modelo.",
+    "problema": "Las defensas actuales contra la exfiltración de pesos de LLMs (Gumbel-based inference verification) asumen un atacante pasivo y se basan en la entropía de salida del modelo bajo tráfico benigno. Un atacante activo puede manipular la distribución de los prompts para ensanchar el conjunto de tokens admisibles y crear un canal encubierto más grande.",
+    "propuesta": "Se propone un ataque de 'inflación de entropía adversaria' que genera prompts con estructuras gramaticales y de sub-palabras rotas para aumentar la entropía de salida del LLM. Esto ensancha el conjunto de tokens permitidos por el verificador, facilitando la exfiltración de datos.",
+    "resultados": "El ataque propuesto casi duplica los bits filtrados por token en comparación con prompts benignos, reduciendo el factor de ralentización de la defensa de más de 200x a entre 60x y 118x en modelos de 1B a 32B parámetros.",
+    "por_que_importa": "Demuestra que los umbrales estáticos de defensa calibrados con tráfico benigno son insuficientes contra atacantes activos. Sugiere la necesidad de calibrar dinámicamente los umbrales de 'perdón de fluctuaciones' basándose en la entropía local de los tokens para mantener la seguridad.",
+    "tags": [
+      "LLMs",
+      "Ciberseguridad",
+      "Exfiltración de datos",
+      "Ataques adversarios",
+      "Entropía",
+      "Verificación de inferencia"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-25T13:26:48Z"
+  },
+  "arxiv:2608.23339v1": {
+    "tldr": "CERTIoT-6G automatiza la certificación de ciberseguridad para dispositivos IoT en redes 5G/6G, garantizando el cumplimiento continuo de normativas.",
+    "problema": "Los dispositivos IoT, cada vez más presentes en sectores críticos, enfrentan desafíos de ciberseguridad y regulatorios. Los métodos de certificación actuales son estáticos, manuales y difíciles de escalar, lo que complica el cumplimiento de normativas como la CRA y NIS2 que exigen seguridad desde el diseño y gestión continua de vulnerabilidades.",
+    "propuesta": "Se propone CERTIoT-6G, un marco de Seguridad como Servicio (SECaaS) que automatiza la certificación de ciberseguridad y el monitoreo de cumplimiento continuo para dispositivos IoT en redes 5G/6G. Integra análisis automatizado de cumplimiento, monitoreo de tráfico en tiempo real y pruebas adversarias.",
+    "resultados": "La validación en un banco de pruebas 5G reveló brechas críticas de cumplimiento (cifrado de tráfico, disponibilidad bajo inestabilidad) y demostró que el marco genera veredictos accionables mapeados a requisitos regulatorios para diversos tipos de dispositivos. El monitoreo tuvo un impacto insignificante en el tráfico 5G.",
+    "por_que_importa": "Permite a los fabricantes y operadores cumplir de forma eficiente y continua con las crecientes regulaciones de ciberseguridad para IoT, reduciendo riesgos y asegurando la operación resiliente de dispositivos en redes avanzadas.",
+    "tags": [
+      "IoT",
+      "Ciberseguridad",
+      "5G",
+      "6G",
+      "Certificación",
+      "Cumplimiento"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-25T13:26:57Z"
+  },
+  "arxiv:2608.23264v1": {
+    "tldr": "Los LLMs fallan éticamente al priorizar el contexto sobre las señales de peligro, pero podemos guiarlos hacia respuestas más seguras.",
+    "problema": "Los Modelos de Lenguaje Grandes (LLMs) a veces fallan en su alineación ética, produciendo respuestas inapropiadas o dañinas, especialmente cuando se les presentan escenarios poco éticos.",
+    "propuesta": "Se introduce una metodología de sondeo para evaluar LLMs ante escenarios poco éticos presentados de tres formas distintas. Utilizando Layer-wise Relevance Propagation (LRP), se identifica un sesgo de atribución donde los LLMs dan más peso a tokens benignos del marco de la tarea ('¿Puedes ayudarme?') que a los tokens que señalan el comportamiento poco ético ('sin ser atrapado'). Se proponen dos métodos de decodificación guiados por LRP para dirigir la generación hacia tokens de señalización, promoviendo respuestas más seguras.",
+    "resultados": "El rendimiento del modelo se degrada en la modalidad de solicitud de ayuda. Las intervenciones guiadas por LRP promovieron respuestas más seguras, validando el papel de la atribución de tokens de señalización en los fallos de cumplimiento.",
+    "por_que_importa": "Comprender y mitigar las fallas éticas en los LLMs es crucial para su despliegue seguro y confiable en aplicaciones del mundo real. Esta investigación ofrece una vía para mejorar la seguridad y la alineación ética de los LLMs.",
+    "tags": [
+      "LLMs",
+      "Ética IA",
+      "Seguridad IA",
+      "Alineación",
+      "Procesamiento del Lenguaje Natural"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-25T13:27:07Z"
+  },
+  "arxiv:2608.22868v1": {
+    "tldr": "AgentFlow protege sistemas de agentes LLM controlando el flujo de datos sensibles a través de políticas de seguridad.",
+    "problema": "Los sistemas de agentes LLM manejan datos sensibles y ejecutan acciones que pueden ser explotadas a través de secuencias de pasos aparentemente inofensivos, llevando a compromisos de seguridad.",
+    "propuesta": "AgentFlow introduce un lenguaje de políticas centrado en el flujo y un modelo de ejecución para definir y hacer cumplir restricciones sobre dónde pueden viajar los datos sensibles, qué herramientas pueden recibirlos y qué autoridad se puede delegar.",
+    "resultados": "AgentFlow reduce el compromiso confirmado del 33.0% al 0.0% en AgentDojo, mejorando la utilidad del 46.7% al 63.3%. En AgentDyn, reduce el compromiso del 73.5% al 0.0% con una ligera disminución de la utilidad (44.5% a 43.5%). Las propiedades de seguridad se verifican en menos de 0.5 segundos cada una.",
+    "por_que_importa": "Proporciona un mecanismo práctico y verificable para asegurar sistemas de agentes LLM complejos, mitigando riesgos de seguridad sin sacrificar excesivamente la utilidad funcional.",
+    "tags": [
+      "LLM",
+      "Agentes IA",
+      "Ciberseguridad",
+      "Control de Flujo de Datos",
+      "Seguridad de IA",
+      "Políticas de Seguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-25T13:27:16Z"
+  },
+  "arxiv:2606.13610": {
+    "tldr": "Los LLMs que recomiendan productos en la web son vulnerables a contenido falso, promoviendo productos engañosos hasta en un 73.8%.",
+    "problema": "Los modelos de lenguaje grandes (LLMs) usados para recomendar productos en la web pueden ser engañados por contenido web manipulado ('Generative Engine Optimization' - GEO) para recomendar productos falsos o engañosos, actuando como promotores involuntarios de estos.",
+    "propuesta": "Se introduce FORGE, un método para evaluar esta vulnerabilidad. FORGE modifica páginas web reales para introducir productos falsos y mide la frecuencia con la que los LLMs recomiendan estos productos falsos, probando 12 LLMs en 15 categorías y 5 escenarios de consumo.",
+    "resultados": "Todos los LLMs evaluados son vulnerables. Una sola página manipulada puede engañar a los modelos hasta en un 27% de los casos. Reemplazando los 3 principales resultados de búsqueda, la tasa de engaño sube al 73.8%. La vulnerabilidad varía por categoría y empeora si el LLM tiene poco conocimiento previo del producto. El razonamiento no ayuda e incluso puede generar justificaciones falsas. Las defensas probadas (prompts, filtros de consenso, reordenación por credibilidad) son insuficientes.",
+    "por_que_importa": "Esta investigación expone un riesgo significativo en la cadena de recomendación de productos mediada por IA, afectando la confianza del consumidor y la integridad del comercio electrónico. Las defensas actuales no son suficientes, lo que requiere nuevas estrategias para asegurar la fiabilidad de las recomendaciones de LLMs.",
+    "tags": [
+      "LLMs",
+      "Ciberseguridad",
+      "Recomendaciones",
+      "Contenido Falso",
+      "Vulnerabilidad",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-25T13:27:26Z"
+  },
+  "arxiv:2608.23035": {
+    "tldr": "Se introduce MobilePA-Bench, un nuevo benchmark para evaluar la planificación y uso de herramientas de agentes LLM en dispositivos móviles.",
+    "problema": "Los benchmarks actuales para agentes LLM en móviles son o muy superficiales (centrados en GUI) o desconectados de las restricciones del mundo real (llamadas a API estáticas), fallando en evaluar la planificación a largo plazo y el uso de herramientas en segundo plano.",
+    "propuesta": "Se propone MobilePA-Bench, un benchmark interactivo y con estado que simula un entorno móvil real con aplicaciones y herramientas, evaluando la colaboración entre sub-agentes, el uso de memoria y la invocación de habilidades compuestas.",
+    "resultados": "Los LLMs actuales fallan significativamente en entornos móviles simulados, especialmente bajo restricciones de orden de herramientas, permisos y errores de ejecución. El resumen no especifica métricas de rendimiento detalladas.",
+    "por_que_importa": "Es crucial para desarrollar agentes LLM fiables y capaces que funcionen como copilotos en dispositivos móviles, abordando las limitaciones de los sistemas actuales y acelerando la investigación en este campo.",
+    "tags": [
+      "agentes IA",
+      "LLM",
+      "benchmarking",
+      "dispositivos móviles",
+      "ciberseguridad",
+      "planificación"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-25T13:27:36Z"
+  },
+  "arxiv:2608.23200": {
+    "tldr": "Reutiliza la experiencia de ejecución verificada de LLMs para mejorar la finalización de flujos de trabajo complejos y reducir costos.",
+    "problema": "Los modelos de lenguaje grandes (LLMs) pierden la experiencia de ejecución de flujos de trabajo complejos, obligándolos a redescubrir estrategias y fallos en cada intento.",
+    "propuesta": "Externalizar y reutilizar la experiencia de ejecución verificada mediante EvoMap, que consolida trayectorias confirmadas por un verificador en 'Genes' estructurados.",
+    "resultados": "Los 'Genes' EvoMap superaron a 'Skill' en 7 modelos en 252 tareas, mejorando el rendimiento entre 8.7 y 15.5 puntos porcentuales. Para Claude Opus, los 'Genes' completaron 39 tareas más y redujeron el consumo de tokens en un 9.9%.",
+    "por_que_importa": "Permite a los LLMs mejorar la finalización de flujos de trabajo largos y complejos sin incurrir repetidamente en el alto costo de adquirir experiencia desde cero, haciendo la IA más eficiente y fiable.",
+    "tags": [
+      "LLMs",
+      "Flujos de Trabajo",
+      "Reutilización de Experiencia",
+      "Ciberseguridad",
+      "Verificación",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-25T13:27:45Z"
+  },
+  "arxiv:2608.22849": {
+    "tldr": "RIBOSPAN es un modelo de IA para analizar y diseñar ARN completos, superando las limitaciones de contexto de modelos anteriores.",
+    "problema": "Los modelos de ARN existentes no pueden procesar secuencias de ARN completas (especialmente ARNm) debido a limitaciones en la longitud del contexto, lo que impide un análisis detallado a nivel de nucleótido.",
+    "propuesta": "Se presenta RIBOSPAN, un modelo de fundacional bidireccional de 1.61 mil millones de parámetros, preentrenado nativamente con longitudes de contexto de hasta 10,240 nucleótidos (nt), utilizando autoatención densa bidireccional y empaquetado de secuencias aislado para modelar ARN largos con alta resolución.",
+    "resultados": "RIBOSPAN mantiene una fuerte capacidad de reconstrucción con 10,240 tokens, mejora la recuperación bajo corrupción con preentrenamiento adicional y muestra una calidad de representación de ARN de última generación, superando a otros modelos, especialmente en ARN largos. La generación y rediseño de ARNm completo es posible, incluyendo la optimización de CDS preservando la proteína.",
+    "por_que_importa": "Establece una base sólida para el aprendizaje de representaciones de ARN transferibles y el diseño de ARNm completo, permitiendo avances en la investigación y aplicaciones biotecnológicas que requieren el análisis de ARN completos.",
+    "tags": [
+      "ARN",
+      "Inteligencia Artificial",
+      "Modelado de Lenguaje",
+      "Biología Computacional",
+      "Diseño de Fármacos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-25T13:27:55Z"
+  },
+  "arxiv:2608.22817": {
+    "tldr": "Crea datasets de preguntas y respuestas a partir de informes técnicos industriales para mejorar modelos de IA.",
+    "problema": "Los informes técnicos industriales son ricos en conocimiento pero difíciles de usar por su estructura heterogénea, y faltan datasets públicos para entrenar y evaluar modelos de IA en ellos.",
+    "propuesta": "Se presenta Industrial-Instruction, un pipeline completo para crear datasets de preguntas y respuestas (QA) a partir de informes técnicos reales, utilizando extracción consciente del diseño y recuperación semántica.",
+    "resultados": "Se generaron dos datasets con ~13.6k pares QA cada uno. El fine-tuning de LLMs pequeños mejoró la precisión de coincidencia de conjuntos del 28.5% al 42.0% y el F1 del 46.6% al 63.5% en el benchmark de Panasonic. Los datos generados con Claude-Opus-4.6 mostraron mejores resultados y menor olvido de conocimiento general.",
+    "por_que_importa": "Permite crear benchmarks y datos de entrenamiento escalables y reproducibles a partir de documentación industrial real, facilitando la mejora de la IA en este dominio crítico.",
+    "tags": [
+      "IA industrial",
+      "Procesamiento de lenguaje natural",
+      "Datasets",
+      "Ciberseguridad",
+      "Ingeniería",
+      "Informes técnicos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-25T13:28:04Z"
+  },
+  "arxiv:2608.20169": {
+    "tldr": "Optimiza el código de LLMs de forma eficiente adaptando las tareas de validación al progreso del modelo.",
+    "problema": "La optimización de LLMs evalúa un conjunto fijo de tareas en cada iteración, lo que genera altos costos computacionales, especialmente cuando algunas tareas pierden su capacidad discriminatoria.",
+    "propuesta": "Task-CoEvolve adapta las tareas de validación junto con el código del LLM. Selecciona tareas informativas basándose en la varianza de resultados pasados y estima el rendimiento completo a partir de evaluaciones parciales.",
+    "resultados": "Reduce el número de evaluaciones en un 80% manteniendo el rendimiento final, superando a los métodos basados en subconjuntos fijos.",
+    "por_que_importa": "Permite optimizar LLMs de manera mucho más eficiente, reduciendo costos computacionales y acelerando la mejora del rendimiento sin necesidad de reentrenar el modelo.",
+    "tags": [
+      "LLMs",
+      "Optimización",
+      "Validación Adaptativa",
+      "Eficiencia Computacional",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-25T13:28:14Z"
   }
 }
