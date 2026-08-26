@@ -1,0 +1,559 @@
+{
+  "date": "2026-08-26",
+  "report_type": "filtrado",
+  "evaluated": 178,
+  "selected": 12,
+  "papers": [
+    {
+      "id": "arxiv:2608.23959v1",
+      "rank": 1,
+      "title": "NeuronGuard: Robust LLM Safety Alignment via Ablation-Aware Safety Signal Redistribution",
+      "authors": [
+        "Anjun Gao",
+        "Yueyang Quan",
+        "Yufei Xia",
+        "Zhuqing Liu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-25",
+      "url": "https://arxiv.org/abs/2608.23959v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.23959v1",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "Safety alignment in large language models (LLMs) remains brittle against a growing spectrum of attacks. Jailbreak attacks bypass safety mechanisms through crafted prompts, while neuron-level attacks directly prune safety-critical neurons post-deployment. Both exploit a common weakness: safety-relevant information concentrates in a sparse neuron subset. We present NeuronGuard, a fine-tuning-stage defense that simultaneously hardens LLMs against both attack classes by redistributing safety signals across a broader set of neurons. NeuronGuard dynamically identifies safety-critical neurons via periodically refreshed per-layer linear classifiers, forces refusal behavior under deliberate neuron ablation, and applies KL-divergence regularization for distributional consistency. A randomized gradient projection strategy preserves downstream task utility by resolving conflicts between the defense and task objectives. We provide a formal guarantee that NeuronGuard strictly reduces the attack success rate (ASR) upper bound, and experiments across three LLMs, six state-of-the-art attack strategies, and multimodal settings confirm near-zero ASR while maintaining task accuracy, including against white-box adaptive adversaries.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "NeuronGuard fortalece la seguridad de los LLMs contra ataques de 'jailbreak' y de 'neurona' redistribuyendo señales de seguridad.",
+        "problema": "Los modelos de lenguaje grandes (LLMs) son vulnerables a ataques que eluden sus mecanismos de seguridad (jailbreak) o dañan neuronas críticas (ataques a nivel de neurona), debido a que la información de seguridad se concentra en pocas neuronas.",
+        "propuesta": "NeuronGuard es una defensa en la etapa de 'fine-tuning' que identifica neuronas críticas, las fortalece contra la ablación, y redistribuye las señales de seguridad a un conjunto más amplio de neuronas usando clasificadores lineales y regularización KL. Utiliza proyección de gradiente aleatorio para mantener la utilidad de la tarea.",
+        "resultados": "Se garantiza formalmente una reducción del límite superior de la tasa de éxito de ataque (ASR). Los experimentos muestran una ASR cercana a cero contra 6 estrategias de ataque y adversarios adaptativos, manteniendo la precisión de la tarea en 3 LLMs y entornos multimodales.",
+        "por_que_importa": "Mejora significativamente la robustez de la alineación de seguridad de los LLMs, haciéndolos más seguros y confiables en aplicaciones prácticas frente a ataques sofisticados, sin sacrificar su rendimiento.",
+        "tags": [
+          "LLMs",
+          "Seguridad IA",
+          "Alineación de IA",
+          "Ciberseguridad",
+          "Defensa contra ataques",
+          "NeuronGuard"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-26T13:31:41Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.24454v1",
+      "rank": 2,
+      "title": "Defending Network Intrusion Detection Systems Based on Graph Neural Networks Against Structural Adversarial Attacks",
+      "authors": [
+        "Dimitri Galli",
+        "Andrea Venturi",
+        "Dario Stabili",
+        "Mauro Andreolini"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-25",
+      "url": "https://arxiv.org/abs/2608.24454v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.24454v1",
+      "score": 59,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: cybersecurity, vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Graph Neural Networks (GNNs) represent a promising solution for Machine Learning (ML) based Network Intrusion Detection Systems (NIDS), thanks to their ability to leverage both network flow features and topological patterns. While GNN classifiers demonstrate superior robustness against feature-based adversarial attacks compared to other ML detectors, they remain vulnerable to structural adversarial attacks, where an attacker perturbs the underlying network graph topology by injecting edges or inserting nodes. Such attacks pose a realistic and severe threat, undermining the reliability of GNN-based NIDS in practical deployments. While countermeasures have been proposed in the literature, they often rely on assumptions that are unrealistic in real-world cybersecurity scenarios. In this paper, we propose a defense framework based on adversarial training to strengthen GNN-based NIDS against structural attacks. We generate adversarial samples by strategically replacing the source and destination nodes in benign network flows, thereby efficiently mimicking edge injection attacks. We evaluate our approach on two widely used datasets (CTU-13 and TON-IoT) using E-GraphSAGE as the base GNN classifier. Experimental results show that our approach produces hardened detectors with superior detection performance on clean graphs and enhanced robustness against structural adversarial attacks.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Protege los sistemas de detección de intrusiones basados en GNN contra ataques que manipulan la topología de la red.",
+        "problema": "Los sistemas de detección de intrusiones basados en Redes Neuronales de Grafos (GNN) son vulnerables a ataques que alteran la estructura de la red (topología), lo que socava su fiabilidad en entornos reales.",
+        "propuesta": "Se propone un marco de defensa basado en entrenamiento adversarial. Este método genera muestras adversariales simulando ataques de inyección de aristas mediante la sustitución estratégica de nodos de origen y destino en flujos de red benignos.",
+        "resultados": "El enfoque propuesto fortalece los detectores GNN, mejorando el rendimiento en grafos limpios y aumentando la robustez contra ataques adversariales estructurales. Los resultados se evaluaron en los datasets CTU-13 y TON-IoT usando E-GraphSAGE.",
+        "por_que_importa": "Asegura la fiabilidad y eficacia de los sistemas de detección de intrusiones basados en GNN frente a amenazas realistas que buscan eludir la detección manipulando la estructura de la red.",
+        "tags": [
+          "ciberseguridad",
+          "GNN",
+          "detección de intrusiones",
+          "ataques adversariales",
+          "entrenamiento adversarial",
+          "redes"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-26T13:31:50Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.23965v1",
+      "rank": 3,
+      "title": "RAGSentinel: Certifiable Geometric Consensus for Robust Retrieval-Augmented Generation",
+      "authors": [
+        "Yueyang Quan",
+        "Anjun Gao",
+        "Yufei Xia",
+        "Minghong Fang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-25",
+      "url": "https://arxiv.org/abs/2608.23965v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.23965v1",
+      "score": 59,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "Retrieval-augmented generation (RAG) improves the factuality of large language models by grounding responses in external documents, but it also exposes a critical security vulnerability: adversarial documents injected into the knowledge database can enter the context window and steer the model toward targeted incorrect answers. Existing post-retrieval defenses rely on instruction following, parametric knowledge, or text-level consistency, all of which can be imitated or optimized against by adaptive attackers. We propose RAGSentinel, a training-free, label-free defense for black-box RAG systems. RAGSentinel uses a surrogate encoder to measure query-conditioned hidden-state shifts induced by retrieved documents, removes shared topic directions, and filters poisoned documents as geometric outliers from a robust majority consensus. We prove that, under an honest-majority assumption and a representation-level separation condition, RAGSentinel exactly recovers a poison-free majority-sized context. Experiments across three question-answering datasets, three LLM families, and multiple poisoning attacks show that RAGSentinel consistently achieves low attack success rates while preserving competitive accuracy and remaining effective against adaptive attacks with full pipeline knowledge.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "RAGSentinel protege la generación de lenguaje contra documentos maliciosos que buscan engañar al modelo, usando geometría para detectar y eliminar información falsa.",
+        "problema": "Los sistemas de generación aumentada por recuperación (RAG) son vulnerables a documentos adversarios que pueden ser usados para manipular las respuestas del modelo de lenguaje, y las defensas actuales son fácilmente evadibles.",
+        "propuesta": "RAGSentinel, una defensa sin entrenamiento ni etiquetas para sistemas RAG de caja negra, utiliza un codificador sustituto para medir cambios en los estados ocultos condicionados por la consulta, elimina direcciones de temas compartidos y filtra documentos envenenados como valores atípicos geométricos.",
+        "resultados": "RAGSentinel logra consistentemente bajas tasas de éxito de ataque, preserva una precisión competitiva y se mantiene efectivo contra ataques adaptativos, según experimentos en tres conjuntos de datos de preguntas y respuestas y tres familias de LLM.",
+        "por_que_importa": "Asegura la fiabilidad y seguridad de los sistemas de IA que dependen de información externa para generar respuestas precisas, protegiéndolos de manipulaciones adversarias.",
+        "tags": [
+          "RAG",
+          "Seguridad IA",
+          "Robustez",
+          "Generación de Lenguaje",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-26T13:32:00Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.24022v1",
+      "rank": 4,
+      "title": "What Guides the Agent? Adjudicating Unauthorized Behavior via Localizing Behavior-Guiding Instructions",
+      "authors": [
+        "Yichao Gao",
+        "Yumo Zhang",
+        "Yunhao Yao",
+        "Haohua Du"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-25",
+      "url": "https://arxiv.org/abs/2608.24022v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.24022v1",
+      "score": 56,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "LLM agents integrated with external resources gain complex task capabilities, yet the unified natural-language context channel makes them vulnerable to injection attacks: untrusted external data may be dynamically parsed as behavior-guiding instructions during LLM inference, thereby subverting the agent's decision. Existing defenses focus on static detection or isolation of malicious content at the input/output level, remains insufficient for detecting such dynamic inducements that arise during model reasoning. We propose Attnlocate, a runtime framework for fine-grained localization of context spans that genuinely influence tool-calling decisions, i.e., behavior-guiding instructions. Attnlocate casts this localization problem as an object detection task, aiming to detect the distinctive activation traces induced by behavior-guiding instructions within the attention matrix. Specifically, we design a multi-head, multi-layer attention aggregation scheme to construct a token-level feature space tailored for object detection. Then, a 1-D U-Net equipped with an anchor-free detection head is deployed to detect these spans. Finally, based on the authority of the provider from which the detected behavior-guiding spans originate, Attnlocate dynamically adjudicates malicious invocation attempts. We evaluate Attnlocate across ten agent configurations from five LLM families, covering scenarios involving indirect prompt injection and tool poisoning. Attnlocate achieves a mean IoU of 0.743, an average AUROC of 0.956, and a 0.934 true-positive rate at 0.067 false-positive rate. It also transfers effectively across unseen models and supports authority policy adaptation without retraining.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Detecta y neutraliza instrucciones maliciosas que guían el comportamiento de agentes IA, incluso cuando surgen dinámicamente durante la ejecución.",
+        "problema": "Los agentes IA que usan recursos externos son vulnerables a ataques de inyección que manipulan sus decisiones de comportamiento a través de datos no confiables interpretados como instrucciones durante la inferencia.",
+        "propuesta": "Se propone Attnlocate, un framework de tiempo de ejecución que localiza las instrucciones que guían el comportamiento en la matriz de atención del modelo, tratándolo como un problema de detección de objetos y adjudicando invocaciones maliciosas según la autoridad del proveedor.",
+        "resultados": "Attnlocate logra una IoU media de 0.743, un AUROC promedio de 0.956 y una tasa de verdaderos positivos de 0.934 con una tasa de falsos positivos de 0.067, mostrando efectividad en diversos modelos y adaptabilidad a políticas sin reentrenamiento.",
+        "por_que_importa": "Mejora la seguridad de los agentes IA al permitir la detección y mitigación de ataques de inyección de comportamiento en tiempo real, protegiendo contra la subversión de sus funciones.",
+        "tags": [
+          "agentes IA",
+          "seguridad",
+          "inyección de prompts",
+          "detección de comportamiento",
+          "ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-26T13:32:10Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.24857v1",
+      "rank": 5,
+      "title": "Prompt Structure Redistributes, Not Reduces: An Empirical Analysis of Security-Weaknesses in LLM-Generated Python Code",
+      "authors": [
+        "Maitreyee Das Urmi",
+        "Jessica Pourleyli",
+        "Fabio Santos",
+        "Glaucia Melo"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-25",
+      "url": "https://arxiv.org/abs/2608.24857v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.24857v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, compliance & audit"
+      ],
+      "abstract_en": "Large Language Models (LLMs) increasingly generate code from natural-language prompts, making prompt engineering a key mechanism for shaping the security of generated software. Structured and security-oriented prompts are widely used to encourage safer code, yet their effects extend beyond whether detected weaknesses are simply present or absent. Using 424 security-sensitive Python tasks, we generate solutions with GPT-4o and LLaMA 3.1-8B under five prompt variants that progressively add structural and security guidance, and evaluate them with Bandit and CodeQL along two axes: generation compliance and security weakness prevalence, severity, and CWE distributions. Structured prompting substantially reduces refusals (e.g., GPT-4o invalid outputs drop from 338 of 424 to 37-52), enabling large-scale analysis, but security-oriented refinements do not consistently reduce overall weakness prevalence. For GPT-4o, stronger prompts primarily redistribute risk: high-severity findings fall (20.8% to 13.6%) while low-severity findings rise (32% to 43.5%); LLaMA shows weaker, less consistent shifts. We also observe security-driven semantic drift, where stricter prompts silently remove or rewrite explicitly requested unsafe constructs. Overall, prompt structure improves compliance but is an unreliable substitute for robust security controls in LLM-assisted development.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "La ingeniería de prompts en LLMs mejora la generación de código, pero cambia el tipo de vulnerabilidades en lugar de eliminarlas.",
+        "problema": "Se asume que los prompts estructurados y orientados a la seguridad reducen las debilidades en el código generado por LLMs, pero su impacto real no se ha analizado a gran escala.",
+        "propuesta": "Se analizaron 424 tareas de Python usando GPT-4o y LLaMA 3.1-8B con cinco variantes de prompts, evaluando la conformidad y la prevalencia, severidad y distribución de debilidades de seguridad con Bandit y CodeQL.",
+        "resultados": "Los prompts estructurados reducen drásticamente los rechazos (GPT-4o: de 338 a 37-52). Los prompts de seguridad no reducen la prevalencia general de debilidades, sino que las redistribuyen: la severidad alta disminuye (20.8% a 13.6%) mientras la baja aumenta (32% a 43.5%) en GPT-4o. Se observa 'deriva semántica' donde los prompts estrictos modifican o eliminan código inseguro solicitado.",
+        "por_que_importa": "La estructura del prompt mejora la usabilidad pero no es suficiente para garantizar la seguridad. Los desarrolladores no deben depender solo de prompts para la seguridad del código generado por IA, sino que necesitan controles robustos.",
+        "tags": [
+          "LLMs",
+          "Seguridad de Código",
+          "Ingeniería de Prompts",
+          "Vulnerabilidades",
+          "Desarrollo Asistido por IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-26T13:32:19Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.24017v1",
+      "rank": 6,
+      "title": "WebMCP-Phalanx: Enforcing and Characterizing Trust Boundaries for Browser-Integrated LLM Agents",
+      "authors": [
+        "Lin-Fa Lee",
+        "YI-YU Chang",
+        "Kuo-Hui Yeh"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-25",
+      "url": "https://arxiv.org/abs/2608.24017v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.24017v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "The emerging W3C WebMCP proposal enables LLM agents to invoke tools exposed by web pages. In multi-party web environments, however, integrating agent execution into a browser security model centered on the Same-Origin Policy (SOP) leaves insufficient provenance and lifecycle guarantees for agent-accessible tools, creating three risks: subject-attribution spoofing, uncontrolled tool lifecycles, and semantic prompt injection. We propose WebMCP-Phalanx, a dual-layer agent runtime architecture. Its first layer provides a browser-native trust anchor that binds each tool to its registering principal through cryptographically protected capability credentials and propagates provenance labels throughout the tool lifecycle. Its second layer separates semantic inspection from privileged tool use. A Quarantine Agent (Q-LLM), without tool invocation authority, inspects tool metadata, outputs, and page-supplied content for prompt injection. Validated content is then forwarded to a Privileged Agent (P-LLM) for execution, while the Q-LLM's internal state remains hidden from page scripts. Empirical evaluation shows that the browser-native ownership mechanism reduces revocation and overwrite attack success from 100\\% to 0\\%. The dual-agent runtime blocks all 80 prompt-injection attempts embedded in tool descriptions and limits tool-return attacks to 2 successful cases out of 80. Across experiments, task utility remains statistically indistinguishable from the no-attack baseline. Under a white-box adaptive attacker, however, description-based filtering can be bypassed through malicious tool names invoked before inspection. This finding motivates a call-timing gate that delays tool invocation until all agent-visible tool metadata has been validated.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "WebMCP-Phalanx protege a los agentes LLM integrados en navegadores contra ataques de inyección de prompts y suplantación de identidad.",
+        "problema": "La propuesta W3C WebMCP permite a los agentes LLM usar herramientas web, pero la seguridad del navegador actual (SOP) no garantiza la procedencia ni el ciclo de vida de estas herramientas, creando riesgos de suplantación, control de ciclo de vida y inyección de prompts.",
+        "propuesta": "WebMCP-Phalanx es una arquitectura de runtime de dos capas. La primera capa usa credenciales criptográficas para vincular herramientas a sus usuarios y rastrear su procedencia. La segunda capa separa la inspección semántica (Q-LLM) del uso de herramientas (P-LLM), previniendo inyecciones de prompts.",
+        "resultados": "Reduce los ataques de revocación y sobrescritura de 100% a 0%. Bloquea 80 de 80 intentos de inyección de prompts en descripciones y limita los ataques de retorno de herramientas a 2 de 80 casos. La utilidad de la tarea se mantiene estadísticamente igual que sin ataques.",
+        "por_que_importa": "Asegura que los agentes LLM que interactúan con herramientas web sean confiables y seguros, protegiendo a los usuarios y las aplicaciones de ataques maliciosos sin sacrificar la funcionalidad.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Navegadores",
+          "LLM",
+          "Seguridad Web",
+          "Procedencia"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-26T13:32:29Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.24252v1",
+      "rank": 7,
+      "title": "SA-Bench: Evaluating Semantic Alignment in LLM-Based Paper Reproduction",
+      "authors": [
+        "Xue Hu",
+        "Zewei Pan",
+        "Zeli Su",
+        "Zhou Liu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-08-25",
+      "url": "https://arxiv.org/abs/2608.24252v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.24252v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "LLM agents can generate paper reproduction code, yet often produce scientifically unfaithful implementations. We define this failure mode as semantic drift, where generated code silently diverges from the paper's specifications. We introduce SemanticAlign-Bench(SA-Bench), a diagnostic benchmark covering 30 papers from ICLR, ICML and NeurIPS 2025. For each paper, we decompose its specifications into atomic and verifiable implementation claims, which we call Semantic Alignment Units (SAUs) and evaluate repositories along four diagnostic dimensions spanning numerical, methodological, protocol and ordering drift. In total, we construct 1,491 SAUs across five ML domains and evaluate 12 generator configurations (4 models $\\times$ 3 scaffolds). Even the strongest configuration (Claude+PaperCoder) achieves a mean SAU score of only 0.301 out of 1.0, with an overall mean of 0.221 across 360 evaluations. A failure taxonomy reveals that agents attempt most requirements but implement them incorrectly, with implementation mismatch and stubs accounting for the majority of zero-scored claims. Our analysis further indicates that scaffolds optimized for executability provide limited leverage for scientific reproduction; narrowing the gap requires scaffolds that prioritize semantic specification verification. The benchmark, annotations and evaluation pipeline are publicly available.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa la fidelidad científica del código generado por LLMs para reproducir papers, revelando una 'deriva semántica' significativa.",
+        "problema": "Los agentes LLM generan código para reproducir papers académicos, pero a menudo producen implementaciones científicamente infieles, un fallo denominado 'deriva semántica'.",
+        "propuesta": "Se introduce SA-Bench, un benchmark de diagnóstico con 1,491 'Unidades de Alineación Semántica' (SAUs) para evaluar la deriva numérica, metodológica, de protocolo y de orden, cubriendo 30 papers.",
+        "resultados": "Incluso la mejor configuración (Claude+PaperCoder) solo alcanza una puntuación media de SAU de 0.301/1.0, con una media general de 0.221. Los agentes fallan principalmente por implementar incorrectamente los requisitos.",
+        "por_que_importa": "Es crucial para garantizar la fiabilidad y reproducibilidad de la investigación científica generada por IA, identificando áreas de mejora en los LLMs y sus scaffolds.",
+        "tags": [
+          "LLM",
+          "Reproducibilidad",
+          "Benchmarking",
+          "Fidelidad Científica",
+          "Deriva Semántica",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-26T13:32:38Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.24069",
+      "rank": 1,
+      "title": "Poisoning Agentic Alpha: Adversarial Vulnerabilities Across Roles and Architectures in Multi-Agent Trading Systems",
+      "authors": [
+        "CheolWon Na",
+        "Hao Ni",
+        "Lukasz Szpruch",
+        "Zhangyang Wang"
+      ],
+      "source": "Semantic Scholar",
+      "venue": "",
+      "category": null,
+      "date": "2026-08-25",
+      "url": "https://arxiv.org/abs/2608.24069",
+      "pdf_url": null,
+      "score": 56,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "LLM-based multi-agent trading systems, in which specialized agents collaborate through structured communication to produce trading decisions, are moving rapidly from research prototypes to live deployments that control real assets. The same inter-agent communication that makes them effective also exposes them: a corrupted signal can propagate to the final decision and translate into realized financial loss. Unlike prior attacks that presume privileged access to system internals, we restrict the adversary to what is practically reachable---the source data and prompts agents consume---yielding a low-barrier, and thus democratized threat model instantiated as role-specific adversaries. We present the first systematic empirical study in the financial domain to characterize how an adversarial signal enters a multi-agent trading system and how far it survives toward the decision. Along the role axis, we decompose a widely-used trading pipeline into four functional roles---Analyst, Researcher, Trader, and Risk Manager---and pair each with an attack matched to its interface. Along the structural axis, we evaluate four communication topologies under data- and agent-level attacks, using the Adversarial Signal Preservation Score (APS) as a post-hoc lens on why some designs are more robust than others. We conduct experiments across five assets, two backbones, and two target directions. A central finding is that no architecture is inherently robust. These findings provide insights for the future design of safer and more robust agentic trading systems.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Agentes de trading basados en IA son vulnerables a ataques de datos que causan pérdidas financieras, sin importar su arquitectura.",
+        "problema": "Los sistemas de trading multi-agente basados en LLMs, que usan comunicación entre agentes para tomar decisiones, son vulnerables a ataques que corrompen señales de datos, propagándose hasta la decisión final y causando pérdidas financieras. Los ataques previos requerían acceso privilegiado, pero este estudio se enfoca en ataques accesibles a través de datos y prompts consumidos por los agentes.",
+        "propuesta": "Se presenta el primer estudio empírico sistemático en el dominio financiero para caracterizar cómo una señal adversarial entra en un sistema de trading multi-agente y qué tan lejos sobrevive. Se descompone un pipeline de trading en cuatro roles (Analista, Investigador, Trader, Gestor de Riesgos) y se empareja cada uno con un ataque específico. Se evalúan cuatro topologías de comunicación bajo ataques a nivel de datos y de agente, usando el Adversarial Signal Preservation Score (APS) para analizar la robustez.",
+        "resultados": "No existe una arquitectura inherentemente robusta contra las señales adversariales. Los experimentos se realizaron en cinco activos, dos backbones y dos direcciones de objetivo.",
+        "por_que_importa": "Los hallazgos son cruciales para diseñar sistemas de trading basados en agentes más seguros y robustos, mitigando el riesgo de pérdidas financieras debido a ataques de datos accesibles.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Trading Algorítmico",
+          "Sistemas Multi-Agente",
+          "Vulnerabilidades"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-26T13:32:48Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.24551",
+      "rank": 2,
+      "title": "FraudBench: Protocol-Sensitive Benchmarking of Adversarial Robustness for Financial Risk Assessment",
+      "authors": [
+        "Xitong Zeng",
+        "Zhaoge Bi",
+        "Yitian Yang",
+        "Huaming Chen"
+      ],
+      "source": "Semantic Scholar",
+      "venue": "",
+      "category": null,
+      "date": "2026-08-25",
+      "url": "https://arxiv.org/abs/2608.24551",
+      "pdf_url": null,
+      "score": 50,
+      "topics": [
+        "fraud detection",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: fraud detection, adversarial ML"
+      ],
+      "abstract_en": "Machine learning models are widely used in financial fraud and credit-risk detection, yet their adversarial robustness remains difficult to evaluate because financial tabular data involve domain-specific constraints, severe class imbalance, and asymmetric attacker capability. We argue that, in this setting, robustness is not only an attribute of the model, but also an attribute of the evaluation protocol. Different ways of enforcing constraints and capability can lead to substantially different robustness conclusions. This paper presents FraudBench, a protocol-sensitive benchmark for adversarial robustness evaluation in financial fraud and credit-risk detection. Rather than treating domain constraints as post-hoc validity checks, FraudBench evaluates the same dataset--model--attack--defence setting under three matched protocols: unconstrained attacks, post-hoc feasibility filtering, and deployment-aware constraint-integrated attacks. FraudBench covers four public financial datasets, and evaluates neural, tree-based, and ensemble models using three attack settings. Our results show that robustness conclusions are highly protocol-sensitive. On Lending Club Loan Data under the white-box setting, post-hoc filtering leaves only 3.7 feasible-flipped examples on average, whereas in-attack projection with attacker mutability masking produces 2,832.3 feasible-flipped examples under the same perturbation budget. The results on IEEE-CIS further show that feasibility and attacker capability are separate axes, while black-box evaluation shows that protocol choice can alter model-family rankings. These findings suggest that fraud robustness evaluation should report predictive degradation and attack feasibility jointly, and should incorporate domain constraints into attack generation rather than treating them as post-processing checks.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evaluar la robustez de modelos de IA contra fraudes en finanzas requiere protocolos sensibles al dominio para obtener conclusiones fiables.",
+        "problema": "La evaluación de la robustez de los modelos de aprendizaje automático contra ataques adversarios en datos financieros es difícil debido a restricciones específicas del dominio, desequilibrio de clases y capacidades asimétricas de los atacantes. Las conclusiones sobre la robustez varían significativamente según el protocolo de evaluación.",
+        "propuesta": "Se presenta FraudBench, un benchmark sensible al protocolo para evaluar la robustez adversarial en la detección de fraudes y riesgos crediticios. En lugar de aplicar restricciones como verificaciones posteriores, FraudBench evalúa el mismo escenario (dataset, modelo, ataque, defensa) bajo tres protocolos: ataques sin restricciones, filtrado de viabilidad post-hoc y ataques integrados con restricciones conscientes del despliegue.",
+        "resultados": "Las conclusiones sobre la robustez son altamente sensibles al protocolo. Por ejemplo, en Lending Club, el filtrado post-hoc deja un promedio de 3.7 ejemplos viables, mientras que la integración en el ataque produce 2,832.3 ejemplos viables bajo el mismo presupuesto de perturbación. Los resultados en IEEE-CIS muestran que la viabilidad y la capacidad del atacante son ejes separados. La evaluación black-box indica que la elección del protocolo puede alterar el ranking de familias de modelos.",
+        "por_que_importa": "Es crucial incorporar las restricciones del dominio en la generación de ataques, no solo como verificaciones posteriores, para obtener evaluaciones de robustez precisas y fiables en aplicaciones financieras del mundo real.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Finanzas",
+          "Robustez Adversarial",
+          "Benchmarking",
+          "Machine Learning"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-26T13:32:58Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.24053",
+      "rank": 1,
+      "title": "WeMM-Embedding: WeChat Multi-Modal Embedding Technical Report",
+      "authors": [
+        "Junjie Zhou",
+        "Ke Mei",
+        "Lei Li",
+        "Tianyi Wang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-25",
+      "url": "https://arxiv.org/abs/2608.24053",
+      "pdf_url": "https://arxiv.org/pdf/2608.24053",
+      "score": 67,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "Universal multimodal embeddings are becoming a core component of modern AI systems, enabling heterogeneous content to be represented in a shared space for applications such as retrieval, recommendation, classification, and agentic systems. In this report, we present WeMM-Embedding, a family of universal multimodal embedding models supporting text, images, videos, visual documents, and arbitrarily interleaved multimodal inputs with flexible output dimensions. The family comprises 2B, 4B, and 9B variants and is trained in two stages: a large-scale multimodal alignment stage, followed by a refinement stage using curated data, fine-grained relevance supervision, and cross-scale knowledge transfer. Across extensive evaluations, WeMM-Embedding achieves leading performance on multiple public benchmarks. Notably, the 2B variant already surpasses the previously leading 8B open-source baseline on MMEB-v2, while the 9B variant further achieves a new state-of-the-art overall score of 80.6. WeMM-Embedding also demonstrates strong practical performance across WeChat applications, with substantial gains on a 26-task in-house benchmark and consistent improvements across 14 online A/B tests. It has been deployed at scale across recommendation and search applications, including WeChat Channels, Official Accounts, Moments, and e-commerce services. We have released the model weights and code to facilitate future research at https://github.com/Tencent/WeMM-Embedding.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Presentamos WeMM-Embedding, un modelo de IA multimodal que unifica texto, imágenes y videos en un único espacio de representación.",
+        "problema": "La necesidad de representar y procesar de manera unificada diversos tipos de contenido (texto, imágenes, videos, documentos visuales) para aplicaciones de IA como búsqueda, recomendación y clasificación.",
+        "propuesta": "WeMM-Embedding es una familia de modelos (2B, 4B, 9B) entrenados en dos etapas: alineación multimodal a gran escala y refinamiento con datos curados y supervisión detallada, permitiendo manejar entradas multimodales arbitrariamente intercaladas.",
+        "resultados": "La variante 2B supera a un modelo de 8B existente en MMEB-v2. La variante 9B alcanza un nuevo estado del arte con 80.6 puntos. Ha mostrado mejoras sustanciales en benchmarks internos y pruebas A/B online, y ya se ha desplegado en aplicaciones de WeChat.",
+        "por_que_importa": "Permite crear sistemas de IA más eficientes y potentes al entender y relacionar información de diferentes modalidades, mejorando directamente la experiencia del usuario en aplicaciones de gran escala como las de WeChat.",
+        "tags": [
+          "IA multimodal",
+          "Embeddings",
+          "Procesamiento de lenguaje natural",
+          "Visión por computadora",
+          "Sistemas de recomendación"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-26T13:33:07Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.23181",
+      "rank": 2,
+      "title": "CyberFactory: Scaling Cyber Security Capabilities with Instances from the Wild",
+      "authors": [
+        "Jian Yang",
+        "Haau-Sing Li",
+        "Shawn Guo",
+        "Zixi Zhao"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-24",
+      "url": "https://arxiv.org/abs/2608.23181",
+      "pdf_url": "https://arxiv.org/pdf/2608.23181",
+      "score": 59,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+4)",
+        "🎯 temas: cybersecurity, vuln & threats, LLM"
+      ],
+      "abstract_en": "As large language models (LLMs) continue to advance in coding capabilities, their potential in cybersecurity has drawn increasing research attention, with closed-source LLMs (e.g., Mythos) delivering advanced cybersecurity capabilities. However, existing open-source efforts remain limited: frontier open-weight models do not provide reproducible cybersecurity training solutions, open-source training solutions focus on isolated tasks and lack scalable agentic data, and scaling agentic rollouts requires strong domain priors. In this work, we introduce \\textbf{CyberFactory}, a unified open-source framework that connects data construction, trajectory synthesis, and model training across proof-of-concept (PoC) generation, vulnerability patching, and cybersecurity question answering (CyberQA). CyberFactory transforms public vulnerability artifacts, including CVEs from the wild, into executable and verifiable task instances. It further uses a reusable vulnerability-analysis skill to guide the teacher through source inspection, problem solving with domain prior, and evidence-based validation. The resulting supervision is agentic: the model interacts with tools and target environments and revises its solutions according to execution feedback. Using these trajectories, we train and release \\modelname\\footnote{\\emph{Aegis} is, in Greek mythology, the protective shield of Zeus and Athena; the name reflects the model's defensive, security-oriented purpose.}, which internalizes the skill-guided procedure without requiring the skill at inference time. On CyberGym, \\modelname reaches 52.4% Pass@1 under a one-hour budget, improving over its Qwen~3.5 base model by +22.8 points and outperforming the evaluated general-purpose backbones under the same scaffold.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "CyberFactory es un marco de código abierto para entrenar LLMs en ciberseguridad usando datos reales y un enfoque de agente.",
+        "problema": "Los modelos de lenguaje grandes (LLMs) de código abierto actuales carecen de soluciones de entrenamiento reproducibles y datos escalables para tareas de ciberseguridad, lo que limita su aplicación práctica.",
+        "propuesta": "CyberFactory es un marco unificado que conecta la construcción de datos, la síntesis de trayectorias y el entrenamiento de modelos. Transforma artefactos de vulnerabilidad públicos (CVEs) en instancias de tareas ejecutables y verificables, utilizando una habilidad de análisis de vulnerabilidades para guiar el proceso de aprendizaje del modelo de forma agentica.",
+        "resultados": "El modelo entrenado con CyberFactory, Aegis, alcanza un 52.4% en Pass@1 en CyberGym bajo un presupuesto de una hora, mejorando en 22.8 puntos sobre su modelo base Qwen 3.5 y superando a otros modelos de propósito general.",
+        "por_que_importa": "Proporciona una solución escalable y de código abierto para mejorar las capacidades de los LLMs en ciberseguridad, permitiendo su aplicación práctica en la generación de pruebas de concepto, parcheo de vulnerabilidades y respuesta a preguntas de ciberseguridad.",
+        "tags": [
+          "ciberseguridad",
+          "LLMs",
+          "código abierto",
+          "entrenamiento",
+          "vulnerabilidades",
+          "agentes"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-26T13:33:17Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.23566",
+      "rank": 3,
+      "title": "Best Practice Critic Optimization",
+      "authors": [
+        "Penghui Qi",
+        "Xiangxin Zhou",
+        "Wee Sun Lee"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-25",
+      "url": "https://arxiv.org/abs/2608.23566",
+      "pdf_url": "https://arxiv.org/pdf/2608.23566",
+      "score": 57,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Group-based reinforcement learning methods such as GRPO for large language models avoid training a critic by sampling multiple responses for each prompt. A reliable critic could instead estimate token-level advantages from one response, but standard critic-based training recipes are often unstable. We study this instability and develop **Best Practice Critic Optimization (BPCO)**, a recipe that combines DPPO, value predictions bounded to the reward range, Monte Carlo value targets, unnormalized policy advantages, and length-adaptive generalized advantage estimation. Because the critic is used only during training, BPCO can also condition it on reward-defining information, such as a reference answer or grading rubric, that is hidden from the policy. Controlled experiments isolate the effect of each design choice. Across mathematical reasoning tasks with models ranging from 1.5B parameters to 30B-A3B mixtures of experts, BPCO improves a strong critic-based baseline consistently, and matches or exceeds a group-based baseline while sampling one response per prompt. The same recipe also improves learning with rubric-based rewards. These results show that a carefully designed critic provides a reliable alternative to group-relative advantage estimation. Code is available at https://github.com/QPHutu/golden_critic.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Optimizamos el entrenamiento de modelos de lenguaje con refuerzo usando un crítico más fiable, mejorando el rendimiento y la eficiencia.",
+        "problema": "Los métodos de aprendizaje por refuerzo para modelos de lenguaje a menudo requieren muestrear múltiples respuestas por prompt, lo cual es ineficiente. Los métodos basados en un único crítico son inestables y difíciles de entrenar.",
+        "propuesta": "Se introduce Best Practice Critic Optimization (BPCO), una receta de entrenamiento que combina varias técnicas (DPPO, predicciones de valor acotadas, objetivos de valor Monte Carlo, ventajas de política no normalizadas, GAE adaptativo a la longitud) para estabilizar y mejorar el entrenamiento de un crítico.",
+        "resultados": "BPCO mejora consistentemente un baseline basado en crítico y iguala o supera un baseline grupal, usando solo una respuesta por prompt. Mejora el aprendizaje con recompensas basadas en rúbricas. Se usaron modelos de 1.5B a 30B parámetros.",
+        "por_que_importa": "Permite entrenar modelos de lenguaje con aprendizaje por refuerzo de forma más eficiente y estable, utilizando un crítico bien diseñado como alternativa a métodos más costosos computacionalmente.",
+        "tags": [
+          "aprendizaje por refuerzo",
+          "modelos de lenguaje",
+          "crítico",
+          "optimización",
+          "eficiencia"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-26T13:33:26Z"
+      }
+    }
+  ],
+  "generated_at": "2026-08-26T13:33:26Z"
+}

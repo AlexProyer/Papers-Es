@@ -5624,5 +5624,203 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-08-25T13:28:14Z"
+  },
+  "arxiv:2608.23959v1": {
+    "tldr": "NeuronGuard fortalece la seguridad de los LLMs contra ataques de 'jailbreak' y de 'neurona' redistribuyendo señales de seguridad.",
+    "problema": "Los modelos de lenguaje grandes (LLMs) son vulnerables a ataques que eluden sus mecanismos de seguridad (jailbreak) o dañan neuronas críticas (ataques a nivel de neurona), debido a que la información de seguridad se concentra en pocas neuronas.",
+    "propuesta": "NeuronGuard es una defensa en la etapa de 'fine-tuning' que identifica neuronas críticas, las fortalece contra la ablación, y redistribuye las señales de seguridad a un conjunto más amplio de neuronas usando clasificadores lineales y regularización KL. Utiliza proyección de gradiente aleatorio para mantener la utilidad de la tarea.",
+    "resultados": "Se garantiza formalmente una reducción del límite superior de la tasa de éxito de ataque (ASR). Los experimentos muestran una ASR cercana a cero contra 6 estrategias de ataque y adversarios adaptativos, manteniendo la precisión de la tarea en 3 LLMs y entornos multimodales.",
+    "por_que_importa": "Mejora significativamente la robustez de la alineación de seguridad de los LLMs, haciéndolos más seguros y confiables en aplicaciones prácticas frente a ataques sofisticados, sin sacrificar su rendimiento.",
+    "tags": [
+      "LLMs",
+      "Seguridad IA",
+      "Alineación de IA",
+      "Ciberseguridad",
+      "Defensa contra ataques",
+      "NeuronGuard"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-26T13:31:41Z"
+  },
+  "arxiv:2608.24454v1": {
+    "tldr": "Protege los sistemas de detección de intrusiones basados en GNN contra ataques que manipulan la topología de la red.",
+    "problema": "Los sistemas de detección de intrusiones basados en Redes Neuronales de Grafos (GNN) son vulnerables a ataques que alteran la estructura de la red (topología), lo que socava su fiabilidad en entornos reales.",
+    "propuesta": "Se propone un marco de defensa basado en entrenamiento adversarial. Este método genera muestras adversariales simulando ataques de inyección de aristas mediante la sustitución estratégica de nodos de origen y destino en flujos de red benignos.",
+    "resultados": "El enfoque propuesto fortalece los detectores GNN, mejorando el rendimiento en grafos limpios y aumentando la robustez contra ataques adversariales estructurales. Los resultados se evaluaron en los datasets CTU-13 y TON-IoT usando E-GraphSAGE.",
+    "por_que_importa": "Asegura la fiabilidad y eficacia de los sistemas de detección de intrusiones basados en GNN frente a amenazas realistas que buscan eludir la detección manipulando la estructura de la red.",
+    "tags": [
+      "ciberseguridad",
+      "GNN",
+      "detección de intrusiones",
+      "ataques adversariales",
+      "entrenamiento adversarial",
+      "redes"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-26T13:31:50Z"
+  },
+  "arxiv:2608.23965v1": {
+    "tldr": "RAGSentinel protege la generación de lenguaje contra documentos maliciosos que buscan engañar al modelo, usando geometría para detectar y eliminar información falsa.",
+    "problema": "Los sistemas de generación aumentada por recuperación (RAG) son vulnerables a documentos adversarios que pueden ser usados para manipular las respuestas del modelo de lenguaje, y las defensas actuales son fácilmente evadibles.",
+    "propuesta": "RAGSentinel, una defensa sin entrenamiento ni etiquetas para sistemas RAG de caja negra, utiliza un codificador sustituto para medir cambios en los estados ocultos condicionados por la consulta, elimina direcciones de temas compartidos y filtra documentos envenenados como valores atípicos geométricos.",
+    "resultados": "RAGSentinel logra consistentemente bajas tasas de éxito de ataque, preserva una precisión competitiva y se mantiene efectivo contra ataques adaptativos, según experimentos en tres conjuntos de datos de preguntas y respuestas y tres familias de LLM.",
+    "por_que_importa": "Asegura la fiabilidad y seguridad de los sistemas de IA que dependen de información externa para generar respuestas precisas, protegiéndolos de manipulaciones adversarias.",
+    "tags": [
+      "RAG",
+      "Seguridad IA",
+      "Robustez",
+      "Generación de Lenguaje",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-26T13:32:00Z"
+  },
+  "arxiv:2608.24022v1": {
+    "tldr": "Detecta y neutraliza instrucciones maliciosas que guían el comportamiento de agentes IA, incluso cuando surgen dinámicamente durante la ejecución.",
+    "problema": "Los agentes IA que usan recursos externos son vulnerables a ataques de inyección que manipulan sus decisiones de comportamiento a través de datos no confiables interpretados como instrucciones durante la inferencia.",
+    "propuesta": "Se propone Attnlocate, un framework de tiempo de ejecución que localiza las instrucciones que guían el comportamiento en la matriz de atención del modelo, tratándolo como un problema de detección de objetos y adjudicando invocaciones maliciosas según la autoridad del proveedor.",
+    "resultados": "Attnlocate logra una IoU media de 0.743, un AUROC promedio de 0.956 y una tasa de verdaderos positivos de 0.934 con una tasa de falsos positivos de 0.067, mostrando efectividad en diversos modelos y adaptabilidad a políticas sin reentrenamiento.",
+    "por_que_importa": "Mejora la seguridad de los agentes IA al permitir la detección y mitigación de ataques de inyección de comportamiento en tiempo real, protegiendo contra la subversión de sus funciones.",
+    "tags": [
+      "agentes IA",
+      "seguridad",
+      "inyección de prompts",
+      "detección de comportamiento",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-26T13:32:10Z"
+  },
+  "arxiv:2608.24857v1": {
+    "tldr": "La ingeniería de prompts en LLMs mejora la generación de código, pero cambia el tipo de vulnerabilidades en lugar de eliminarlas.",
+    "problema": "Se asume que los prompts estructurados y orientados a la seguridad reducen las debilidades en el código generado por LLMs, pero su impacto real no se ha analizado a gran escala.",
+    "propuesta": "Se analizaron 424 tareas de Python usando GPT-4o y LLaMA 3.1-8B con cinco variantes de prompts, evaluando la conformidad y la prevalencia, severidad y distribución de debilidades de seguridad con Bandit y CodeQL.",
+    "resultados": "Los prompts estructurados reducen drásticamente los rechazos (GPT-4o: de 338 a 37-52). Los prompts de seguridad no reducen la prevalencia general de debilidades, sino que las redistribuyen: la severidad alta disminuye (20.8% a 13.6%) mientras la baja aumenta (32% a 43.5%) en GPT-4o. Se observa 'deriva semántica' donde los prompts estrictos modifican o eliminan código inseguro solicitado.",
+    "por_que_importa": "La estructura del prompt mejora la usabilidad pero no es suficiente para garantizar la seguridad. Los desarrolladores no deben depender solo de prompts para la seguridad del código generado por IA, sino que necesitan controles robustos.",
+    "tags": [
+      "LLMs",
+      "Seguridad de Código",
+      "Ingeniería de Prompts",
+      "Vulnerabilidades",
+      "Desarrollo Asistido por IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-26T13:32:19Z"
+  },
+  "arxiv:2608.24017v1": {
+    "tldr": "WebMCP-Phalanx protege a los agentes LLM integrados en navegadores contra ataques de inyección de prompts y suplantación de identidad.",
+    "problema": "La propuesta W3C WebMCP permite a los agentes LLM usar herramientas web, pero la seguridad del navegador actual (SOP) no garantiza la procedencia ni el ciclo de vida de estas herramientas, creando riesgos de suplantación, control de ciclo de vida y inyección de prompts.",
+    "propuesta": "WebMCP-Phalanx es una arquitectura de runtime de dos capas. La primera capa usa credenciales criptográficas para vincular herramientas a sus usuarios y rastrear su procedencia. La segunda capa separa la inspección semántica (Q-LLM) del uso de herramientas (P-LLM), previniendo inyecciones de prompts.",
+    "resultados": "Reduce los ataques de revocación y sobrescritura de 100% a 0%. Bloquea 80 de 80 intentos de inyección de prompts en descripciones y limita los ataques de retorno de herramientas a 2 de 80 casos. La utilidad de la tarea se mantiene estadísticamente igual que sin ataques.",
+    "por_que_importa": "Asegura que los agentes LLM que interactúan con herramientas web sean confiables y seguros, protegiendo a los usuarios y las aplicaciones de ataques maliciosos sin sacrificar la funcionalidad.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Navegadores",
+      "LLM",
+      "Seguridad Web",
+      "Procedencia"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-26T13:32:29Z"
+  },
+  "arxiv:2608.24252v1": {
+    "tldr": "Evalúa la fidelidad científica del código generado por LLMs para reproducir papers, revelando una 'deriva semántica' significativa.",
+    "problema": "Los agentes LLM generan código para reproducir papers académicos, pero a menudo producen implementaciones científicamente infieles, un fallo denominado 'deriva semántica'.",
+    "propuesta": "Se introduce SA-Bench, un benchmark de diagnóstico con 1,491 'Unidades de Alineación Semántica' (SAUs) para evaluar la deriva numérica, metodológica, de protocolo y de orden, cubriendo 30 papers.",
+    "resultados": "Incluso la mejor configuración (Claude+PaperCoder) solo alcanza una puntuación media de SAU de 0.301/1.0, con una media general de 0.221. Los agentes fallan principalmente por implementar incorrectamente los requisitos.",
+    "por_que_importa": "Es crucial para garantizar la fiabilidad y reproducibilidad de la investigación científica generada por IA, identificando áreas de mejora en los LLMs y sus scaffolds.",
+    "tags": [
+      "LLM",
+      "Reproducibilidad",
+      "Benchmarking",
+      "Fidelidad Científica",
+      "Deriva Semántica",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-26T13:32:38Z"
+  },
+  "arxiv:2608.24069": {
+    "tldr": "Agentes de trading basados en IA son vulnerables a ataques de datos que causan pérdidas financieras, sin importar su arquitectura.",
+    "problema": "Los sistemas de trading multi-agente basados en LLMs, que usan comunicación entre agentes para tomar decisiones, son vulnerables a ataques que corrompen señales de datos, propagándose hasta la decisión final y causando pérdidas financieras. Los ataques previos requerían acceso privilegiado, pero este estudio se enfoca en ataques accesibles a través de datos y prompts consumidos por los agentes.",
+    "propuesta": "Se presenta el primer estudio empírico sistemático en el dominio financiero para caracterizar cómo una señal adversarial entra en un sistema de trading multi-agente y qué tan lejos sobrevive. Se descompone un pipeline de trading en cuatro roles (Analista, Investigador, Trader, Gestor de Riesgos) y se empareja cada uno con un ataque específico. Se evalúan cuatro topologías de comunicación bajo ataques a nivel de datos y de agente, usando el Adversarial Signal Preservation Score (APS) para analizar la robustez.",
+    "resultados": "No existe una arquitectura inherentemente robusta contra las señales adversariales. Los experimentos se realizaron en cinco activos, dos backbones y dos direcciones de objetivo.",
+    "por_que_importa": "Los hallazgos son cruciales para diseñar sistemas de trading basados en agentes más seguros y robustos, mitigando el riesgo de pérdidas financieras debido a ataques de datos accesibles.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Trading Algorítmico",
+      "Sistemas Multi-Agente",
+      "Vulnerabilidades"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-26T13:32:48Z"
+  },
+  "arxiv:2608.24551": {
+    "tldr": "Evaluar la robustez de modelos de IA contra fraudes en finanzas requiere protocolos sensibles al dominio para obtener conclusiones fiables.",
+    "problema": "La evaluación de la robustez de los modelos de aprendizaje automático contra ataques adversarios en datos financieros es difícil debido a restricciones específicas del dominio, desequilibrio de clases y capacidades asimétricas de los atacantes. Las conclusiones sobre la robustez varían significativamente según el protocolo de evaluación.",
+    "propuesta": "Se presenta FraudBench, un benchmark sensible al protocolo para evaluar la robustez adversarial en la detección de fraudes y riesgos crediticios. En lugar de aplicar restricciones como verificaciones posteriores, FraudBench evalúa el mismo escenario (dataset, modelo, ataque, defensa) bajo tres protocolos: ataques sin restricciones, filtrado de viabilidad post-hoc y ataques integrados con restricciones conscientes del despliegue.",
+    "resultados": "Las conclusiones sobre la robustez son altamente sensibles al protocolo. Por ejemplo, en Lending Club, el filtrado post-hoc deja un promedio de 3.7 ejemplos viables, mientras que la integración en el ataque produce 2,832.3 ejemplos viables bajo el mismo presupuesto de perturbación. Los resultados en IEEE-CIS muestran que la viabilidad y la capacidad del atacante son ejes separados. La evaluación black-box indica que la elección del protocolo puede alterar el ranking de familias de modelos.",
+    "por_que_importa": "Es crucial incorporar las restricciones del dominio en la generación de ataques, no solo como verificaciones posteriores, para obtener evaluaciones de robustez precisas y fiables en aplicaciones financieras del mundo real.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Finanzas",
+      "Robustez Adversarial",
+      "Benchmarking",
+      "Machine Learning"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-26T13:32:58Z"
+  },
+  "arxiv:2608.24053": {
+    "tldr": "Presentamos WeMM-Embedding, un modelo de IA multimodal que unifica texto, imágenes y videos en un único espacio de representación.",
+    "problema": "La necesidad de representar y procesar de manera unificada diversos tipos de contenido (texto, imágenes, videos, documentos visuales) para aplicaciones de IA como búsqueda, recomendación y clasificación.",
+    "propuesta": "WeMM-Embedding es una familia de modelos (2B, 4B, 9B) entrenados en dos etapas: alineación multimodal a gran escala y refinamiento con datos curados y supervisión detallada, permitiendo manejar entradas multimodales arbitrariamente intercaladas.",
+    "resultados": "La variante 2B supera a un modelo de 8B existente en MMEB-v2. La variante 9B alcanza un nuevo estado del arte con 80.6 puntos. Ha mostrado mejoras sustanciales en benchmarks internos y pruebas A/B online, y ya se ha desplegado en aplicaciones de WeChat.",
+    "por_que_importa": "Permite crear sistemas de IA más eficientes y potentes al entender y relacionar información de diferentes modalidades, mejorando directamente la experiencia del usuario en aplicaciones de gran escala como las de WeChat.",
+    "tags": [
+      "IA multimodal",
+      "Embeddings",
+      "Procesamiento de lenguaje natural",
+      "Visión por computadora",
+      "Sistemas de recomendación"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-26T13:33:07Z"
+  },
+  "arxiv:2608.23181": {
+    "tldr": "CyberFactory es un marco de código abierto para entrenar LLMs en ciberseguridad usando datos reales y un enfoque de agente.",
+    "problema": "Los modelos de lenguaje grandes (LLMs) de código abierto actuales carecen de soluciones de entrenamiento reproducibles y datos escalables para tareas de ciberseguridad, lo que limita su aplicación práctica.",
+    "propuesta": "CyberFactory es un marco unificado que conecta la construcción de datos, la síntesis de trayectorias y el entrenamiento de modelos. Transforma artefactos de vulnerabilidad públicos (CVEs) en instancias de tareas ejecutables y verificables, utilizando una habilidad de análisis de vulnerabilidades para guiar el proceso de aprendizaje del modelo de forma agentica.",
+    "resultados": "El modelo entrenado con CyberFactory, Aegis, alcanza un 52.4% en Pass@1 en CyberGym bajo un presupuesto de una hora, mejorando en 22.8 puntos sobre su modelo base Qwen 3.5 y superando a otros modelos de propósito general.",
+    "por_que_importa": "Proporciona una solución escalable y de código abierto para mejorar las capacidades de los LLMs en ciberseguridad, permitiendo su aplicación práctica en la generación de pruebas de concepto, parcheo de vulnerabilidades y respuesta a preguntas de ciberseguridad.",
+    "tags": [
+      "ciberseguridad",
+      "LLMs",
+      "código abierto",
+      "entrenamiento",
+      "vulnerabilidades",
+      "agentes"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-26T13:33:17Z"
+  },
+  "arxiv:2608.23566": {
+    "tldr": "Optimizamos el entrenamiento de modelos de lenguaje con refuerzo usando un crítico más fiable, mejorando el rendimiento y la eficiencia.",
+    "problema": "Los métodos de aprendizaje por refuerzo para modelos de lenguaje a menudo requieren muestrear múltiples respuestas por prompt, lo cual es ineficiente. Los métodos basados en un único crítico son inestables y difíciles de entrenar.",
+    "propuesta": "Se introduce Best Practice Critic Optimization (BPCO), una receta de entrenamiento que combina varias técnicas (DPPO, predicciones de valor acotadas, objetivos de valor Monte Carlo, ventajas de política no normalizadas, GAE adaptativo a la longitud) para estabilizar y mejorar el entrenamiento de un crítico.",
+    "resultados": "BPCO mejora consistentemente un baseline basado en crítico y iguala o supera un baseline grupal, usando solo una respuesta por prompt. Mejora el aprendizaje con recompensas basadas en rúbricas. Se usaron modelos de 1.5B a 30B parámetros.",
+    "por_que_importa": "Permite entrenar modelos de lenguaje con aprendizaje por refuerzo de forma más eficiente y estable, utilizando un crítico bien diseñado como alternativa a métodos más costosos computacionalmente.",
+    "tags": [
+      "aprendizaje por refuerzo",
+      "modelos de lenguaje",
+      "crítico",
+      "optimización",
+      "eficiencia"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-26T13:33:26Z"
   }
 }
