@@ -1,0 +1,603 @@
+{
+  "date": "2026-08-27",
+  "report_type": "filtrado",
+  "evaluated": 170,
+  "selected": 21,
+  "papers": [
+    {
+      "id": "arxiv:2608.26031v1",
+      "rank": 1,
+      "title": "Vulnerable Code Search: Transferable Attack for Code Language Models",
+      "authors": [
+        "Kaicheng Wang",
+        "Liyan Huang",
+        "Jesse Thomason",
+        "Weihang Wang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-26",
+      "url": "https://arxiv.org/abs/2608.26031v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26031v1",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "Reliable code retrieval is crucial for developer productivity and effective code reuse. However, current neural code language models (CLMs) powering search tools are susceptible to adversarial attacks targeting non-functional textual elements. In this paper, we introduce a programming language-agnostic, transferable, adversarial attack that exploits this CLM vulnerability. Our approach perturbs identifiers within a code snippet without altering the snippet's functionality to artificially align the code with a target query. We demonstrate that our attack, even when computed using smaller code embedding models, such as CodeT5+, is highly effective and transferable to larger, closed-source embedding models, like Voyage-code-3, or LLMs like Gemini-3.1-Pro. Our attack can increase the similarity between the query and arbitrary, irrelevant code snippets, consequently degrading key retrieval metrics such as the Mean Reciprocal Rank (MRR) of state-of-the-art models by up to 77%. The experimental results highlight the fragility of current code search methods and underscore the need for more robust, semantic-aware approaches.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Atacantes pueden engañar a modelos de búsqueda de código, haciendo que encuentren código irrelevante hasta un 77% peor.",
+        "problema": "Los modelos de lenguaje de código (CLMs) usados en búsqueda de código son vulnerables a ataques adversariales que alteran elementos no funcionales del código para hacerlo parecer relevante a una consulta, degradando la calidad de los resultados de búsqueda.",
+        "propuesta": "Se propone un ataque adverserial agnóstico al lenguaje de programación y transferible que perturba identificadores en fragmentos de código sin cambiar su funcionalidad, forzando una alineación artificial con una consulta objetivo.",
+        "resultados": "El ataque aumenta la similitud entre consultas y fragmentos de código irrelevantes, degradando métricas clave como el Mean Reciprocal Rank (MRR) hasta en un 77%. El ataque es efectivo incluso usando modelos de embedding más pequeños y es transferible a modelos más grandes y cerrados.",
+        "por_que_importa": "Demuestra la fragilidad de los métodos actuales de búsqueda de código y la necesidad urgente de desarrollar enfoques más robustos y conscientes de la semántica para proteger la integridad de las herramientas de desarrollo.",
+        "tags": [
+          "ciberseguridad",
+          "IA",
+          "modelos de lenguaje",
+          "búsqueda de código",
+          "ataques adversariales"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-27T22:27:17Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.26008v1",
+      "rank": 2,
+      "title": "A Self-Evolving Multi-Agent Framework Defense against LLM Jailbreak Attacks",
+      "authors": [
+        "Tongyan Hu",
+        "Bryan Hooi"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-26",
+      "url": "https://arxiv.org/abs/2608.26008v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26008v1",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Large language models (LLMs) remain vulnerable to jailbreak attacks that exploit techniques such as role-playing, obfuscation, code transformation, and multi-step indirection to elicit harmful outputs. As jailbreak strategies keep emerging, defenses have proliferated in an ongoing cat-and-mouse game, yet most remain static: their safety behavior is fixed at deployment, so they cannot accumulate defensive experience or adapt to unseen strategies. We propose a self-evolving test-time defense built around a persistent, cross-interaction rule memory: when an attack succeeds, the framework abstracts that failure into a method-level rule capturing the structural attack wrapper rather than the harmful topic, and reuses it against future inputs. Because rules are method-level, one induced rule generalizes across an entire attack family, and the label space expands as novel wrappers appear. The mechanism operates entirely through external memory and prompting, with no parameter updates, and applies to both open-weight and black-box API models. We realize it as four cooperating modules, but the contribution is the memory-based adaptation mechanism, not the module decomposition. Across four black-box jailbreak families and multiple models, our method substantially reduces attack success rates while preserving benign utility, remains robust under an adaptive composite-wrapper attack, and does not increase over-refusal as the memory grows.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Una defensa adaptable contra ataques a LLMs que aprende y evoluciona en tiempo real para bloquear nuevas tácticas de 'jailbreak'.",
+        "problema": "Los modelos de lenguaje grandes (LLMs) son vulnerables a ataques de 'jailbreak' que buscan obtener respuestas dañinas. Las defensas actuales son estáticas y no pueden adaptarse a nuevas estrategias de ataque emergentes.",
+        "propuesta": "Se propone un marco de defensa que evoluciona en tiempo de ejecución, utilizando una memoria persistente de reglas. Cuando un ataque tiene éxito, se genera una regla generalizada para bloquear ataques similares en el futuro, sin necesidad de reentrenar el modelo.",
+        "resultados": "La defensa reduce sustancialmente las tasas de éxito de los ataques en cuatro familias de ataques y múltiples modelos, se mantiene robusta contra ataques compuestos y no aumenta el exceso de rechazo de consultas benignas.",
+        "por_que_importa": "Permite crear defensas más resilientes y adaptables contra las amenazas de seguridad en constante evolución para los LLMs, protegiendo su uso práctico sin sacrificar su utilidad.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Defensa Adaptativa",
+          "Jailbreak",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-27T22:27:26Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.25817v1",
+      "rank": 3,
+      "title": "SkillShield: Prompt-Space Security Skills for LLM Coding Agents",
+      "authors": [
+        "Xiaodong Wu",
+        "Zhimin Zhao",
+        "Qi Li",
+        "Xiangman Li"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-26",
+      "url": "https://arxiv.org/abs/2608.25817v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.25817v1",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "A coding agent edits files and executes shell commands with its developer's privileges, allowing malicious requests to translate directly into harmful actions or functional malware. Existing defenses have complementary limitations: weight-level alignment is unavailable to API-only deployers, whereas input filters and execution-boundary monitors require auxiliary classification or checking components along the agent's trajectory. We therefore introduce SkillShield, a system-prompt defense that synthesizes security skills offline from known attacks or recorded agent failures. These skills are injected into the system prompt at session start and remain active throughout the tool-use loop. Unlike a reference monitor, they protect the system by defining the security policies the model should follow during execution. Due to the limited system-prompt space, we examine three fixed-budget provisioning scopes: all-classes, with one skill covering all threat classes, per-bundle, with one skill targeting a related subset, and per-class, with one skill dedicated to a single known class and used as the upper-bound reference. None requires runtime request classification or routing. Across six large language models on RedCode, the default all-classes skill reduces malware-generation severity from 3.37 to 0.58 and achieves a 43.6% execution attack success rate, comparable to Llama Guard 3's 42.7% without its separate 8B classifier. The per-bundle and class-fixed per-class settings further reduce this rate to 36.2% and 14.5%, respectively. Under two non-adaptive jailbreak families, SkillShield continues to outperform all baselines on malware generation. Across 731 benign task descriptions, SkillShield yields a mean safety-refusal rate of 0.14%. These results demonstrate the potential of prompt-space security skills to prevent harmful actions and malware generation for LLM coding agents.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "SkillShield protege a los agentes de codificación LLM de ataques maliciosos utilizando habilidades de seguridad integradas en el prompt del sistema.",
+        "problema": "Los agentes de codificación LLM, al tener acceso a archivos y comandos de shell, pueden ser explotados para ejecutar acciones dañinas o generar malware. Las defensas existentes tienen limitaciones, como la necesidad de acceso a los pesos del modelo o componentes de monitoreo adicionales.",
+        "propuesta": "SkillShield introduce un enfoque de defensa en el espacio de prompts del sistema. Sintetiza habilidades de seguridad a partir de ataques conocidos o fallos del agente y las inyecta en el prompt del sistema al inicio de la sesión, guiando al modelo para que siga políticas de seguridad durante la ejecución.",
+        "resultados": "SkillShield reduce la severidad de la generación de malware de 3.37 a 0.58 y la tasa de éxito de ataques de ejecución al 43.6% en seis LLMs. Configuraciones más específicas (per-bundle y per-class) reducen aún más esta tasa al 36.2% y 14.5%, respectivamente. La tasa de rechazo de seguridad para tareas benignas es del 0.14%.",
+        "por_que_importa": "Este enfoque ofrece una defensa eficaz contra la generación de código malicioso y la ejecución de ataques en agentes LLM, sin requerir monitoreo en tiempo de ejecución o acceso a los pesos del modelo, lo que lo hace práctico para implementaciones basadas en API.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Prompt Engineering",
+          "Agentes de IA",
+          "Seguridad de IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-27T22:27:35Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.25490v1",
+      "rank": 4,
+      "title": "MMJailBench: A Factorized Benchmark for Disentangling Multimodal Jailbreak Vulnerabilities",
+      "authors": [
+        "Tianshi Wang",
+        "Jingsong Wang",
+        "Yafei Huang",
+        "Fengling Li"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-26",
+      "url": "https://arxiv.org/abs/2608.25490v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.25490v1",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "Multimodal Large Language Models (MLLMs) are increasingly deployed in real-world applications, yet how different factors shape their jailbreak vulnerabilities remains poorly understood. Existing benchmarks often couple harmful intent, prompt framing, visual semantics, and instruction carrier within individual jailbreak instances, obscuring the specific sources of observed vulnerabilities. To address this limitation, we introduce MMJailBench, a factorized benchmark that systematically varies and combines these factors under controlled configurations, enabling fine-grained comparison and factor-level attribution. Large-scale evaluations across 16 open-weight and proprietary MLLMs reveal highly heterogeneous and model-dependent vulnerability profiles. Jailbreak vulnerability varies markedly across harm domains, exposing uneven coverage in current multimodal safety alignment. Prompt framing emerges as the dominant source of variation, task-relevant visual semantics systematically increase jailbreak susceptibility with authority-like cues exposing particularly pronounced vulnerabilities, and visually rendered instructions do not consistently increase jailbreak susceptibility relative to direct textual instructions. To further investigate the risks introduced by multimodal context, we conduct diagnostic analyses on a representative open-weight model and identify vulnerability-associated patterns in internal representations and cross-modal interactions. Finally, we develop a modular multimodal jailbreak evaluation suite with full and lightweight configurations, multiple judge options, and multidimensional metrics, enabling reproducible, scalable, and cost-efficient multimodal jailbreak auditing.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Nuevo benchmark factorizado MMJailBench desvela cómo los factores multimodales influyen en las vulnerabilidades de seguridad de los LLMs.",
+        "problema": "Los modelos de lenguaje multimodales (MLLMs) son vulnerables a ataques de 'jailbreak', pero no se comprende bien qué factores específicos (intención dañina, encuadre del prompt, semántica visual, etc.) causan estas vulnerabilidades, ya que los benchmarks actuales los combinan.",
+        "propuesta": "Se introduce MMJailBench, un benchmark factorizado que aísla y combina sistemáticamente diferentes factores de ataque para evaluar las vulnerabilidades de los MLLMs de forma granular y atribuir responsabilidades.",
+        "resultados": "Evaluaciones en 16 MLLMs muestran perfiles de vulnerabilidad heterogéneos y dependientes del modelo. El encuadre del prompt es la fuente principal de variación. La semántica visual relevante para la tarea aumenta la susceptibilidad, especialmente con indicios de autoridad. Las instrucciones visuales no aumentan consistentemente la vulnerabilidad frente a las textuales.",
+        "por_que_importa": "Permite identificar y mitigar de forma precisa las debilidades de seguridad en los MLLMs, mejorando su robustez en aplicaciones del mundo real y facilitando auditorías de seguridad reproducibles y escalables.",
+        "tags": [
+          "IA multimodal",
+          "Ciberseguridad",
+          "Vulnerabilidad",
+          "Benchmark",
+          "LLM",
+          "Seguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-27T22:28:01Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.25281v1",
+      "rank": 5,
+      "title": "Schrödinger Bridges over Kinetic Swarming Models",
+      "authors": [
+        "Asmaa Eldesoukey",
+        "Md Zulfiqur Haider",
+        "Italo Napolitano",
+        "Yongxin Chen"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [stat.ML]",
+      "category": "stat.ML",
+      "date": "2026-08-26",
+      "url": "https://arxiv.org/abs/2608.25281v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.25281v1",
+      "score": 56,
+      "topics": [
+        "vuln & threats",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, AI agents, adversarial ML"
+      ],
+      "abstract_en": "Paradigmatic interaction models explain how collective behaviors can emerge in complex systems from interactions among the constituent agents. In bio-inspired swarms, however, interactions alone may not suffice to bring the population to a desired aggregate configuration within a prescribed time horizon, as needed in applications ranging from targeted therapy to collective transport and emergency evacuation. In the present work, we consider finite-horizon minimum-energy collective steering for inertial swarms that are subject to stochastic disturbances. We focus on the mean-field representations of these multi-agent systems driven by Cucker--Smale alignment or Morse attraction--repulsion interactions. Our objective is to steer the swarm between prescribed endpoint distributions using a state-feedback control, where the endpoint specifications can be full phase-space distributions (positions and velocities) or position marginals alone. Our formalism is rooted in the theory of Schrödinger bridges, which has inspired contemporary developments spanning statistical inference, biological modeling, stochastic control, and generative learning. Within the bridges framework, the uncontrolled interacting stochastic dynamics are viewed as a prior model, and the optimal control as the minimum-energy corrective drift needed to realize the prescribed distributions. We derive nonlinear, coupled necessary optimality systems with a time-symmetric structure reminiscent of classical Schrödinger bridges, and propose nested fixed-point schemes to numerically solve them. Numerical examples show that the obtained optimal control (corrective drift) can dynamically exploit or counteract the interaction forces, depending on whether the latter are favorable or adversarial to the steering task.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Controla enjambres inerciales con ruido para alcanzar configuraciones deseadas en tiempo limitado, usando un enfoque de puentes de Schrödinger.",
+        "problema": "Los modelos de interacción tradicionales no garantizan que los enjambres alcancen una configuración deseada en un tiempo específico, especialmente con ruido y sistemas inerciales.",
+        "propuesta": "Se propone un marco basado en la teoría de puentes de Schrödinger para diseñar un control de retroalimentación de estado de mínima energía que guíe las distribuciones de los enjambres hacia configuraciones finales especificadas (posiciones y/o velocidades).",
+        "resultados": "Se derivan sistemas de optimización necesarios y se proponen esquemas numéricos para resolverlos. Los ejemplos numéricos demuestran que el control puede aprovechar o contrarrestar las fuerzas de interacción según sea necesario.",
+        "por_que_importa": "Permite dirigir colectivamente sistemas con ruido, como en terapias dirigidas o evacuaciones, garantizando la convergencia a estados deseados en plazos definidos, lo cual es crucial para aplicaciones prácticas.",
+        "tags": [
+          "control colectivo",
+          "puentes de Schrödinger",
+          "enjambres",
+          "sistemas estocásticos",
+          "optimización"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-27T22:28:11Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.25905v1",
+      "rank": 6,
+      "title": "Answer Is Cheap, Show Me the Evidence! Augmenting Automated Vulnerability Assessment with Evidence",
+      "authors": [
+        "Shengyi Pan",
+        "Zelong Zheng",
+        "Jiayuan Zhou",
+        "Xing Hu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-08-26",
+      "url": "https://arxiv.org/abs/2608.25905v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.25905v1",
+      "score": 55,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Software vulnerability (SV) assessment helps prioritize remediation by characterizing reported vulnerabilities. Existing automated methods predict assessment results from SV reports (SVRs), but often overlook information in rich text, such as screenshots and code snippets, as well as contextual information about vulnerable projects. They also focus on prediction accuracy without providing explanations or supporting evidence, limiting their practical use when analysts must validate imperfect predictions. We propose EAVA, a framework that uses large language models (LLMs) to assess SVs and provide supporting evidence. EAVA employs specialized LLM agents to process rich-text content and project information, and builds a dedicated assessment model through a two-stage training pipeline. It first uses supervised instruction tuning on automatically annotated reasoning trajectories to inject domain knowledge, and then applies reinforcement learning to improve intrinsic reasoning. EAVA also retrieves similar historical vulnerabilities as supplementary evidence. Experiments on a newly collected SVR dataset show that EAVA outperforms the strongest baseline by 5.3 to 35.2 percent across multiple metrics. Ablation studies confirm the effectiveness of assessment-specific model training and information enrichment. A user study with security experts further demonstrates that the evidence provided by EAVA is useful and practical for real-world SV assessment.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa vulnerabilidades de software con IA, mostrando evidencia para una validación más fiable y práctica.",
+        "problema": "Las herramientas automáticas de evaluación de vulnerabilidades de software a menudo ignoran información rica (imágenes, código) y no proporcionan evidencia para validar sus predicciones, limitando su utilidad práctica.",
+        "propuesta": "Se propone EAVA, un framework que utiliza LLMs especializados para procesar contenido de texto enriquecido, información de proyectos y vulnerabilidades históricas similares, proporcionando evidencia de apoyo para la evaluación.",
+        "resultados": "EAVA supera al mejor baseline en un 5.3% a 35.2% en múltiples métricas. Un estudio de usuarios con expertos en seguridad confirmó la utilidad y practicidad de la evidencia proporcionada.",
+        "por_que_importa": "Permite a los analistas validar predicciones de IA de forma más eficiente y fiable, mejorando la priorización de la remediación de vulnerabilidades en la práctica.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Vulnerabilidades de Software",
+          "LLMs",
+          "Evidencia"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-27T22:28:20Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.26088v1",
+      "rank": 7,
+      "title": "Planetary Prediction Engine: Autonomous Geospatial Prediction via Intelligent Data Selection and Foundation Model Embeddings",
+      "authors": [
+        "Evelyn Ma",
+        "Rama Kumar Pasumarthi",
+        "Kishwar Shafin",
+        "Mandar Sharma"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-08-26",
+      "url": "https://arxiv.org/abs/2608.26088v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26088v1",
+      "score": 54,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Addressing critical global challenges, from food security and disaster risk to disease outbreaks and socio-economic vulnerability, demands high-fidelity geospatial modeling. However, building predictive planetary models remains bottlenecked by a fragmented data ecosystem, requiring manual data retrieval, multimodal data curation and fusion along with iterative model selection. We present the Planetary Prediction Engine (PPE), an autonomous AI system that executes this end-to-end workflow directly from natural-language queries. PPE synthesizes multimodal datasets on the fly, retrieving spatiotemporally relevant covariates across open-web and Earth observation platforms (Data Commons, Google Earth Engine) and fusing them with geospatial foundation model embeddings (PDFM, AlphaEarth). Simultaneously, it searches over task-tailored model architecture families with automated overfitting guards. Across diverse tasks, geographies, and scientific domains, PPE consistently outperforms state-of-the-art or manually tuned expert baselines. For US spatial regression, PPE improves mean $R^2$ across 21 CDC health indicators (76.8% vs. 60.0%), FEMA national risk indices (64.9% vs. 60.0%), and the Social Vulnerability Index (66.2% vs. 58.6%). For spatial downscaling in data-scarce settings, PPE integrates localized proxies to double baseline accuracy in Nigerian food security indicators ($R^2$ of 66.1% vs. 31.5%). For epidemiological nowcasting of the 2026 DRC Bundibugyo Ebola outbreak, PPE achieves a Recall@10 of 83.3% (identifying 15 of 18 newly invaded health zones across five weekly forecasts), a +10.3 percentage-point improvement over the public state-of-the-art modeling (~73%). By combining autonomous multimodal planetary data discovery with targeted model optimization, PPE lowers the technical barrier to planetary-scale analytics, enabling rapid, customized, expert-level deployment.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Un motor de IA predice desafíos globales de forma autónoma usando datos multimodales y modelos fundacionales.",
+        "problema": "La creación de modelos predictivos geoespaciales de alta fidelidad para desafíos globales se ve obstaculizada por la fragmentación de datos, la curación manual y la selección iterativa de modelos.",
+        "propuesta": "Se presenta el Planetary Prediction Engine (PPE), un sistema de IA autónomo que automatiza la recuperación, fusión y modelado de datos multimodales a partir de consultas en lenguaje natural, utilizando embeddings de modelos fundacionales y optimización automática de arquitecturas.",
+        "resultados": "El PPE supera a los modelos de referencia en diversas tareas: mejora el R² en indicadores de salud de EE. UU. (76.8% vs 60.0%), duplica la precisión en seguridad alimentaria de Nigeria (R² 66.1% vs 31.5%) y mejora la predicción de brotes de Ébola en la RDC (Recall@10 de 83.3% vs ~73%).",
+        "por_que_importa": "Reduce la barrera técnica para el análisis a escala planetaria, permitiendo la implementación rápida y personalizada de modelos predictivos de nivel experto para abordar desafíos globales críticos.",
+        "tags": [
+          "IA",
+          "Modelado Predictivo",
+          "Datos Geoespaciales",
+          "Modelos Fundacionales",
+          "Ciberseguridad",
+          "Análisis de Datos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-27T22:28:29Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.26049v1",
+      "rank": 8,
+      "title": "RTLGuard: A Lightweight Teacher-Student Defense for Poisoned RTL Code Generation Models",
+      "authors": [
+        "Mahshid Rezakhani",
+        "Kimia Azar",
+        "Hadi Kamali"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-08-26",
+      "url": "https://arxiv.org/abs/2608.26049v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26049v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "The rapid advancement of large language models (LLMs) is driving a shift toward automated register transfer level (RTL) code generation, enabling designers to translate high-level specs. into synthesizable hardware. However, this reliance on pre-trained (3rd-party) fine-tuned models may introduce critical trust issues, as the training data and adaptation process of these models are often opaque. Thus, adversaries (even model providers) may embed hidden backdoor threats during fine-tuning, allowing malicious behavior, e.g., hardware Trojans, to be triggered by seemingly benign prompts given by victim user at inference time. In this paper, we introduce RTLGuard, to mitigate such a trust issue in AI-enabled IC supply chain. Rather than prohibitive computational cost of full-parameter retraining, RTLGuard leverages a teacher-student framework designed to sanitize compromised RTL generation models by (1) fine-tuning a small-scale, \"clean\" teacher model on a limited set of trusted RTL data, (2) guiding the poisoned target model via a composite teacher-student objective, and (3) incorporating feature alignment and knowledge distillation to suppress malicious behaviors. Our experiments across various LLM architectures demonstrate that RTLGuard significantly reduces the Attack Success Rate (ASR) while preserving the functional correctness and synthesizability of the generated RTL code.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "RTLGuard protege la generación de código de hardware contra ataques ocultos en modelos de IA, garantizando la seguridad del diseño.",
+        "problema": "Los modelos de IA para generar código de hardware (RTL) pueden ser comprometidos con 'backdoors' que introducen fallos maliciosos (Troyanos de hardware) activados por entradas aparentemente inofensivas, comprometiendo la cadena de suministro de circuitos integrados.",
+        "propuesta": "RTLGuard utiliza un enfoque de 'maestro-alumno'. Entrena un modelo 'maestro' pequeño con datos confiables y luego usa este maestro para guiar y 'sanear' el modelo 'alumno' comprometido, suprimiendo comportamientos maliciosos mediante alineación de características y destilación de conocimiento.",
+        "resultados": "RTLGuard reduce significativamente la Tasa de Éxito del Ataque (ASR) y mantiene la corrección funcional y la sintetizabilidad del código RTL generado, según experimentos en diversas arquitecturas de LLM.",
+        "por_que_importa": "Asegura la confiabilidad de los diseños de hardware generados por IA, protegiendo contra vulnerabilidades ocultas y garantizando la integridad en la cadena de suministro de semiconductores.",
+        "tags": [
+          "ciberseguridad",
+          "hardware",
+          "IA",
+          "RTL",
+          "Troyanos de hardware",
+          "modelos de lenguaje"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-27T22:28:39Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.25593",
+      "rank": 1,
+      "title": "JIT-Agent: Scaling Harness Intelligence via Just-in-Time Harness Evolution",
+      "authors": [
+        "Guibin Zhang",
+        "Leo Lu",
+        "Fangzhou Xie",
+        "Kang Zhu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-26",
+      "url": "https://arxiv.org/abs/2608.25593",
+      "pdf_url": "https://arxiv.org/pdf/2608.25593",
+      "score": 77,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Agent capability is not determined by the model alone. The agent harness, encompassing memory management, planning strategy, action protocol, and tool/skill orchestration, can dominate the contribution of the underlying foundation model. Yet harness design remains manual, task-specific, and fundamentally unscalable. We present JIT-Agent, a harness intelligence model trained to synthesize task-adaptive agent harnesses on the fly for arbitrary off-the-shelf agentic LLMs. We formalize the agent harness as a composable, machine-generatable artifact governed by a fixed four-module protocol, and train JIT-Agent to customize harnesses for a given task at hand, repair harnesses for stable and reliable execution, and self-evolve by distilling performance signals from an expanding archive of prior harness configurations. Equipped with JIT-Agent as a harness helper, DeepSeek-V4-Flash surpasses GPT-5.6 on DeepSearchQA (+9.1) and OdysseyBench (+4.3), while the already strong GLM-5.2 gains up to +20.2 points. Across controlled evaluations, JIT-Agent-generated harnesses are performance-competitive with mature agent runtimes such as OpenCode and Claude Code and consistently improve multi-scale model families of DeepSeek V4, Mimo-V2.5, and Qwen3.6. To our knowledge, JIT-Agent is the first model purpose-built for just-in-time harness generation, establishing harness intelligence as a trainable, transferable, and compounding dimension of agent capability orthogonal to model scaling.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "JIT-Agent genera automáticamente 'arneses' inteligentes para agentes IA, mejorando su rendimiento sin cambiar el modelo base.",
+        "problema": "El diseño de 'arneses' (gestión de memoria, planificación, etc.) para agentes IA es manual, específico para cada tarea y no escala, limitando su potencial.",
+        "propuesta": "Presentamos JIT-Agent, un modelo que genera dinámicamente 'arneses' adaptados a tareas específicas para cualquier modelo de lenguaje grande (LLM) preexistente, optimizando su ejecución y aprendiendo de experiencias pasadas.",
+        "resultados": "Con JIT-Agent, DeepSeek-V4-Flash supera a GPT-5.6 en DeepSearchQA (+9.1) y OdysseyBench (+4.3). GLM-5.2 mejora hasta +20.2 puntos. Los 'arneses' generados son competitivos con sistemas maduros y mejoran consistentemente diversas familias de modelos.",
+        "por_que_importa": "Permite escalar la inteligencia de los agentes IA de forma eficiente, haciendo que los modelos existentes sean más capaces y fiables sin necesidad de reentrenamiento costoso, abriendo una nueva vía para mejorar el rendimiento de la IA.",
+        "tags": [
+          "Agentes IA",
+          "Generación Automática",
+          "Optimización",
+          "Harness Inteligente",
+          "Escalabilidad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-27T22:28:48Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.25529",
+      "rank": 2,
+      "title": "Video-IFBench: Evaluating Instruction Following of Multimodal LLMs in Video Understanding Scenarios",
+      "authors": [
+        "Hongbo Liu",
+        "Peixian Chen",
+        "Sihan Liu",
+        "Peiyuan Zhang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-26",
+      "url": "https://arxiv.org/abs/2608.25529",
+      "pdf_url": "https://arxiv.org/pdf/2608.25529",
+      "score": 63,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Multimodal Large Language Models (MLLMs) have shown strong performance in video understanding. However, their ability to follow instructions in this domain remains under-explored. Real-world video understanding requires models not only to interpret video content correctly, but also to satisfy diverse user-specified constraints. Existing benchmarks focus primarily on task accuracy rather than instruction adherence, leaving this capability insufficiently evaluated. To address this gap, we introduce Video-IFBench, a comprehensive benchmark for evaluating instruction following in video understanding, where models must satisfy diverse user-specified constraints, including those grounded in visual and audio content. We develop an instruction taxonomy with four templates, including single-task, multi-task, selection, and nested instructions, covering 32 task types and 39 manually designed constraint categories spanning both semantic and format requirements. To reduce annotation cost, we build a semi-automatic data construction pipeline that combines MLLMs, programmatic processing, and human verification, resulting in 1.5K samples. We conduct a large-scale evaluation of more than 20 recent MLLMs and show that video instruction following remains challenging for current models, especially for instructions with many constraints, semantic constraints, or complex conditional structures that require selecting the correct branch or path based on video content. We hope our work will facilitate future research on instruction following in video understanding scenarios.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa la capacidad de los modelos de lenguaje multimodales para seguir instrucciones en videos, un área poco explorada.",
+        "problema": "Los modelos actuales de lenguaje multimodales (MLLMs) para video entienden el contenido pero no siguen instrucciones complejas o con restricciones visuales/auditivas, y las pruebas existentes no miden esto adecuadamente.",
+        "propuesta": "Se introduce Video-IFBench, un benchmark con 32 tipos de tareas y 39 categorías de restricciones (semánticas y de formato) para evaluar la habilidad de los MLLMs para seguir instrucciones en videos, usando una taxonomía de instrucciones y un pipeline semi-automático para generar datos.",
+        "resultados": "La evaluación de más de 20 MLLMs muestra que seguir instrucciones complejas, con múltiples restricciones, o condicionales, sigue siendo un desafío para los modelos actuales.",
+        "por_que_importa": "Mejora la fiabilidad y usabilidad de los MLLMs en aplicaciones prácticas de video que requieren precisión y cumplimiento de requisitos específicos del usuario.",
+        "tags": [
+          "MLLMs",
+          "Video",
+          "Instruction Following",
+          "Benchmark",
+          "Evaluación",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-27T22:28:57Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.25832",
+      "rank": 3,
+      "title": "Skill Issue: Are Skills Language-Invariant in LLMs?",
+      "authors": [
+        "Bobby Cheng",
+        "Adam Gaber",
+        "Zhengyuan Liu",
+        "Catherine Arnett"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-26",
+      "url": "https://arxiv.org/abs/2608.25832",
+      "pdf_url": "https://arxiv.org/pdf/2608.25832",
+      "score": 57,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Large language models access knowledge inconsistently across languages, but to what extent do they differ in their skill sets when interacting with different languages? This work quantifies cross-lingual skill inconsistency orthogonally from knowledge and general benchmark performance. We do this via multilingual self-play: two instances of the same model compete in a text-based game, each interacting through a different language interface. Since the model, opponent, rules, state space, and available actions remain fixed, this setting isolates the effect of language on the model's realized behavior. We build a multilingual extension to TextArena and evaluate three open-weight models across eight languages and six games covering spatial reasoning, imperfect information, resource allocation, and repeated interaction. We find that the same model can exhibit markedly different playing strength across languages, with systematic variation in win--loss margins, invalid actions, and strategic tendencies. Detailed analyses reveal language-specific failures in spatial reasoning, card-conditioned decisions, and optimal move selection. In some settings, changing only the intermediate reasoning language recovers much of the lost performance, suggesting that language can affect different stages of the decision process. These results show that skill discrepancies are a measurable major roadblock in the development of truly multilingual models. Better understanding these discrepancies can help us design models that perform more equitably across languages.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los modelos de lenguaje grandes muestran habilidades de juego drásticamente diferentes según el idioma, afectando su rendimiento y equidad.",
+        "problema": "Los modelos de lenguaje grandes (LLMs) acceden al conocimiento de manera inconsistente entre idiomas, pero no se sabe cuánto difieren sus 'habilidades' (capacidades de razonamiento y toma de decisiones) al interactuar en diferentes lenguas.",
+        "propuesta": "Se desarrolló un entorno de 'multilingual self-play' (autocompetición multilingüe) donde dos instancias del mismo LLM compiten en un juego basado en texto, cada una usando una interfaz de idioma diferente. Esto aísla el efecto del idioma en el comportamiento del modelo.",
+        "resultados": "Se observó que el mismo modelo muestra una fuerza de juego marcadamente diferente entre idiomas, con variaciones sistemáticas en márgenes de victoria/derrota y acciones inválidas. Cambiar el idioma intermedio de razonamiento recuperó parte del rendimiento perdido en algunos casos.",
+        "por_que_importa": "Las discrepancias de habilidades entre idiomas son un obstáculo importante para crear modelos verdaderamente multilingües y equitativos. Comprenderlas ayuda a diseñar LLMs que funcionen mejor en todos los idiomas.",
+        "tags": [
+          "LLMs",
+          "Multilingüismo",
+          "Habilidades",
+          "Ciberseguridad",
+          "Rendimiento"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-27T22:29:06Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.24099",
+      "rank": 4,
+      "title": "Are Android GUI Agents Robust Against Runtime Anomalies? AnTrap: Evaluating Agents in Dynamic Adversarial Environments",
+      "authors": [
+        "Guo Gan",
+        "Yilun Zhao",
+        "Cong Chen",
+        "Jinbiao Wei"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-25",
+      "url": "https://arxiv.org/abs/2608.24099",
+      "pdf_url": "https://arxiv.org/pdf/2608.24099",
+      "score": 52,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "GUI agents often encounter dynamic anomalies when deployed on Android devices, from unexpected pop-ups to action misuse, yet existing benchmarks lack systematic evaluation of agent robustness against runtime anomalies. We introduce AnTrap, a comprehensive benchmark that injects dynamic perturbations into agent execution trajectories. We propose a taxonomy organizing real-world anomalies into four layers (State, Thinking, Action and Round) with ten fine-grained subcategories, and develop a construction pipeline that preserves task solvability while introducing realistic adversarial conditions. Evaluating 16 leading GUI models, we reveal universal vulnerability to dynamic anomalies, with even the strongest models suffering significant performance degradation. Furthermore, we conduct GRPO training in both original and adversarial environments to validate our benchmark, separating environment-learnable anomalies from reasoning-bottlenecked ones. Our findings show that while single-step traps at state and action layers are largely addressable through adversarial reinforcement learning, deep contextual traps, like state deadlock, expose intrinsic limitations that cannot be resolved by training in environments with traps alone.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Agentes de GUI en Android son vulnerables a anomalías inesperadas; AnTrap los evalúa y revela debilidades.",
+        "problema": "Los agentes de interfaz gráfica de usuario (GUI) en Android fallan ante anomalías dinámicas (pop-ups, acciones erróneas) porque las pruebas actuales no las evalúan sistemáticamente.",
+        "propuesta": "Se introduce AnTrap, un benchmark que inyecta perturbaciones dinámicas y clasifica anomalías en 4 capas (Estado, Pensamiento, Acción, Ronda) para evaluar la robustez de los agentes.",
+        "resultados": "Los 16 modelos evaluados muestran vulnerabilidad universal; el rendimiento se degrada significativamente. Las trampas de un solo paso son manejables con aprendizaje por refuerzo, pero las trampas contextuales profundas exponen limitaciones intrínsecas.",
+        "por_que_importa": "Revela la fragilidad de los agentes de GUI actuales ante escenarios reales y dinámicos, destacando la necesidad de arquitecturas más robustas y métodos de entrenamiento que aborden fallos contextuales profundos.",
+        "tags": [
+          "agentes GUI",
+          "Android",
+          "robustez",
+          "anomalías",
+          "ciberseguridad",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-27T22:29:16Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.24358",
+      "rank": 5,
+      "title": "The Handoff Tax: Continuing Non-Native Trajectories in LLM Agents",
+      "authors": [
+        "Roy Ganz",
+        "Mor Shpigel Nacson",
+        "Adi Kalyanpur",
+        "Ron Litman"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-25",
+      "url": "https://arxiv.org/abs/2608.24358",
+      "pdf_url": "https://arxiv.org/pdf/2608.24358",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Coding agents perform long-running tasks spanning dozens of model calls, tool uses, and code edits. As these runs unfold, users face a practical cost-quality trade-off: escalating to a stronger model when a cheaper one struggles, or downshifting once the hard reasoning is complete. Each switch requires the receiver to continue a non-native trajectory produced by another model. We study how this handoff affects quality and cost, and how varying the trajectory information inherited by the receiver changes the outcome. Using pairs of low-cost, low-capability (LC) and high-cost, high-capability (HC) models from the Claude and GPT families, we vary handoff direction, timing, and interface, comparing full-trajectory transfer, compaction, and trajectory removal while preserving the repository state. Across both model families, full-trajectory escalation recovers less than half of the LC-to-HC quality gap while incurring a substantial cost premium. We term this cost-quality penalty the handoff tax. By contrast, downshift offers a favorable cost-quality point. Interestingly, the preferred interface also reverses with direction: reducing LC-model trajectory information improves escalation quality, whereas removing the HC-model trajectory reduces downshift quality.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Cambiar entre modelos de IA para tareas complejas tiene un costo oculto que reduce la calidad y aumenta los gastos.",
+        "problema": "Los agentes de IA que realizan tareas largas y complejas a menudo requieren cambiar entre modelos de diferente capacidad (más baratos/menos capaces a más caros/más capaces y viceversa). Este cambio, o 'handoff', puede degradar la calidad del resultado y aumentar los costos.",
+        "propuesta": "El estudio investiga el impacto de este 'handoff' en la calidad y el costo, analizando cómo la información de la trayectoria (historial de interacciones y razonamiento) transferida al nuevo modelo afecta el resultado. Se experimenta con diferentes direcciones de cambio (escalada y reducción), momentos y formas de transferir la información (completa, compactada o eliminada).",
+        "resultados": "La escalada de un modelo de baja capacidad a uno de alta capacidad recupera menos de la mitad de la brecha de calidad perdida, pero aumenta significativamente el costo (el 'handoff tax'). La reducción de capacidad ofrece un mejor balance costo-calidad. Curiosamente, reducir la información del historial mejora la escalada, mientras que eliminarlo perjudica la reducción.",
+        "por_que_importa": "Comprender el 'handoff tax' es crucial para optimizar el uso de modelos de IA en aplicaciones prácticas, permitiendo diseñar estrategias de 'handoff' que minimicen costos sin sacrificar excesivamente la calidad, especialmente en tareas de larga duración.",
+        "tags": [
+          "agentes IA",
+          "costo-efectividad",
+          "rendimiento de modelos",
+          "optimización",
+          "ciberseguridad",
+          "computación en la nube"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-08-27T22:29:25Z"
+      }
+    }
+  ],
+  "generated_at": "2026-08-27T22:29:25Z"
+}

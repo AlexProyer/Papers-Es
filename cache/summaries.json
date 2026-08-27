@@ -5822,5 +5822,219 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-08-26T13:33:26Z"
+  },
+  "arxiv:2608.26031v1": {
+    "tldr": "Atacantes pueden engañar a modelos de búsqueda de código, haciendo que encuentren código irrelevante hasta un 77% peor.",
+    "problema": "Los modelos de lenguaje de código (CLMs) usados en búsqueda de código son vulnerables a ataques adversariales que alteran elementos no funcionales del código para hacerlo parecer relevante a una consulta, degradando la calidad de los resultados de búsqueda.",
+    "propuesta": "Se propone un ataque adverserial agnóstico al lenguaje de programación y transferible que perturba identificadores en fragmentos de código sin cambiar su funcionalidad, forzando una alineación artificial con una consulta objetivo.",
+    "resultados": "El ataque aumenta la similitud entre consultas y fragmentos de código irrelevantes, degradando métricas clave como el Mean Reciprocal Rank (MRR) hasta en un 77%. El ataque es efectivo incluso usando modelos de embedding más pequeños y es transferible a modelos más grandes y cerrados.",
+    "por_que_importa": "Demuestra la fragilidad de los métodos actuales de búsqueda de código y la necesidad urgente de desarrollar enfoques más robustos y conscientes de la semántica para proteger la integridad de las herramientas de desarrollo.",
+    "tags": [
+      "ciberseguridad",
+      "IA",
+      "modelos de lenguaje",
+      "búsqueda de código",
+      "ataques adversariales"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-27T22:27:17Z"
+  },
+  "arxiv:2608.26008v1": {
+    "tldr": "Una defensa adaptable contra ataques a LLMs que aprende y evoluciona en tiempo real para bloquear nuevas tácticas de 'jailbreak'.",
+    "problema": "Los modelos de lenguaje grandes (LLMs) son vulnerables a ataques de 'jailbreak' que buscan obtener respuestas dañinas. Las defensas actuales son estáticas y no pueden adaptarse a nuevas estrategias de ataque emergentes.",
+    "propuesta": "Se propone un marco de defensa que evoluciona en tiempo de ejecución, utilizando una memoria persistente de reglas. Cuando un ataque tiene éxito, se genera una regla generalizada para bloquear ataques similares en el futuro, sin necesidad de reentrenar el modelo.",
+    "resultados": "La defensa reduce sustancialmente las tasas de éxito de los ataques en cuatro familias de ataques y múltiples modelos, se mantiene robusta contra ataques compuestos y no aumenta el exceso de rechazo de consultas benignas.",
+    "por_que_importa": "Permite crear defensas más resilientes y adaptables contra las amenazas de seguridad en constante evolución para los LLMs, protegiendo su uso práctico sin sacrificar su utilidad.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Defensa Adaptativa",
+      "Jailbreak",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-27T22:27:26Z"
+  },
+  "arxiv:2608.25817v1": {
+    "tldr": "SkillShield protege a los agentes de codificación LLM de ataques maliciosos utilizando habilidades de seguridad integradas en el prompt del sistema.",
+    "problema": "Los agentes de codificación LLM, al tener acceso a archivos y comandos de shell, pueden ser explotados para ejecutar acciones dañinas o generar malware. Las defensas existentes tienen limitaciones, como la necesidad de acceso a los pesos del modelo o componentes de monitoreo adicionales.",
+    "propuesta": "SkillShield introduce un enfoque de defensa en el espacio de prompts del sistema. Sintetiza habilidades de seguridad a partir de ataques conocidos o fallos del agente y las inyecta en el prompt del sistema al inicio de la sesión, guiando al modelo para que siga políticas de seguridad durante la ejecución.",
+    "resultados": "SkillShield reduce la severidad de la generación de malware de 3.37 a 0.58 y la tasa de éxito de ataques de ejecución al 43.6% en seis LLMs. Configuraciones más específicas (per-bundle y per-class) reducen aún más esta tasa al 36.2% y 14.5%, respectivamente. La tasa de rechazo de seguridad para tareas benignas es del 0.14%.",
+    "por_que_importa": "Este enfoque ofrece una defensa eficaz contra la generación de código malicioso y la ejecución de ataques en agentes LLM, sin requerir monitoreo en tiempo de ejecución o acceso a los pesos del modelo, lo que lo hace práctico para implementaciones basadas en API.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Prompt Engineering",
+      "Agentes de IA",
+      "Seguridad de IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-27T22:27:35Z"
+  },
+  "arxiv:2608.25490v1": {
+    "tldr": "Nuevo benchmark factorizado MMJailBench desvela cómo los factores multimodales influyen en las vulnerabilidades de seguridad de los LLMs.",
+    "problema": "Los modelos de lenguaje multimodales (MLLMs) son vulnerables a ataques de 'jailbreak', pero no se comprende bien qué factores específicos (intención dañina, encuadre del prompt, semántica visual, etc.) causan estas vulnerabilidades, ya que los benchmarks actuales los combinan.",
+    "propuesta": "Se introduce MMJailBench, un benchmark factorizado que aísla y combina sistemáticamente diferentes factores de ataque para evaluar las vulnerabilidades de los MLLMs de forma granular y atribuir responsabilidades.",
+    "resultados": "Evaluaciones en 16 MLLMs muestran perfiles de vulnerabilidad heterogéneos y dependientes del modelo. El encuadre del prompt es la fuente principal de variación. La semántica visual relevante para la tarea aumenta la susceptibilidad, especialmente con indicios de autoridad. Las instrucciones visuales no aumentan consistentemente la vulnerabilidad frente a las textuales.",
+    "por_que_importa": "Permite identificar y mitigar de forma precisa las debilidades de seguridad en los MLLMs, mejorando su robustez en aplicaciones del mundo real y facilitando auditorías de seguridad reproducibles y escalables.",
+    "tags": [
+      "IA multimodal",
+      "Ciberseguridad",
+      "Vulnerabilidad",
+      "Benchmark",
+      "LLM",
+      "Seguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-27T22:28:01Z"
+  },
+  "arxiv:2608.25281v1": {
+    "tldr": "Controla enjambres inerciales con ruido para alcanzar configuraciones deseadas en tiempo limitado, usando un enfoque de puentes de Schrödinger.",
+    "problema": "Los modelos de interacción tradicionales no garantizan que los enjambres alcancen una configuración deseada en un tiempo específico, especialmente con ruido y sistemas inerciales.",
+    "propuesta": "Se propone un marco basado en la teoría de puentes de Schrödinger para diseñar un control de retroalimentación de estado de mínima energía que guíe las distribuciones de los enjambres hacia configuraciones finales especificadas (posiciones y/o velocidades).",
+    "resultados": "Se derivan sistemas de optimización necesarios y se proponen esquemas numéricos para resolverlos. Los ejemplos numéricos demuestran que el control puede aprovechar o contrarrestar las fuerzas de interacción según sea necesario.",
+    "por_que_importa": "Permite dirigir colectivamente sistemas con ruido, como en terapias dirigidas o evacuaciones, garantizando la convergencia a estados deseados en plazos definidos, lo cual es crucial para aplicaciones prácticas.",
+    "tags": [
+      "control colectivo",
+      "puentes de Schrödinger",
+      "enjambres",
+      "sistemas estocásticos",
+      "optimización"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-27T22:28:11Z"
+  },
+  "arxiv:2608.25905v1": {
+    "tldr": "Evalúa vulnerabilidades de software con IA, mostrando evidencia para una validación más fiable y práctica.",
+    "problema": "Las herramientas automáticas de evaluación de vulnerabilidades de software a menudo ignoran información rica (imágenes, código) y no proporcionan evidencia para validar sus predicciones, limitando su utilidad práctica.",
+    "propuesta": "Se propone EAVA, un framework que utiliza LLMs especializados para procesar contenido de texto enriquecido, información de proyectos y vulnerabilidades históricas similares, proporcionando evidencia de apoyo para la evaluación.",
+    "resultados": "EAVA supera al mejor baseline en un 5.3% a 35.2% en múltiples métricas. Un estudio de usuarios con expertos en seguridad confirmó la utilidad y practicidad de la evidencia proporcionada.",
+    "por_que_importa": "Permite a los analistas validar predicciones de IA de forma más eficiente y fiable, mejorando la priorización de la remediación de vulnerabilidades en la práctica.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Vulnerabilidades de Software",
+      "LLMs",
+      "Evidencia"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-27T22:28:20Z"
+  },
+  "arxiv:2608.26088v1": {
+    "tldr": "Un motor de IA predice desafíos globales de forma autónoma usando datos multimodales y modelos fundacionales.",
+    "problema": "La creación de modelos predictivos geoespaciales de alta fidelidad para desafíos globales se ve obstaculizada por la fragmentación de datos, la curación manual y la selección iterativa de modelos.",
+    "propuesta": "Se presenta el Planetary Prediction Engine (PPE), un sistema de IA autónomo que automatiza la recuperación, fusión y modelado de datos multimodales a partir de consultas en lenguaje natural, utilizando embeddings de modelos fundacionales y optimización automática de arquitecturas.",
+    "resultados": "El PPE supera a los modelos de referencia en diversas tareas: mejora el R² en indicadores de salud de EE. UU. (76.8% vs 60.0%), duplica la precisión en seguridad alimentaria de Nigeria (R² 66.1% vs 31.5%) y mejora la predicción de brotes de Ébola en la RDC (Recall@10 de 83.3% vs ~73%).",
+    "por_que_importa": "Reduce la barrera técnica para el análisis a escala planetaria, permitiendo la implementación rápida y personalizada de modelos predictivos de nivel experto para abordar desafíos globales críticos.",
+    "tags": [
+      "IA",
+      "Modelado Predictivo",
+      "Datos Geoespaciales",
+      "Modelos Fundacionales",
+      "Ciberseguridad",
+      "Análisis de Datos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-27T22:28:29Z"
+  },
+  "arxiv:2608.26049v1": {
+    "tldr": "RTLGuard protege la generación de código de hardware contra ataques ocultos en modelos de IA, garantizando la seguridad del diseño.",
+    "problema": "Los modelos de IA para generar código de hardware (RTL) pueden ser comprometidos con 'backdoors' que introducen fallos maliciosos (Troyanos de hardware) activados por entradas aparentemente inofensivas, comprometiendo la cadena de suministro de circuitos integrados.",
+    "propuesta": "RTLGuard utiliza un enfoque de 'maestro-alumno'. Entrena un modelo 'maestro' pequeño con datos confiables y luego usa este maestro para guiar y 'sanear' el modelo 'alumno' comprometido, suprimiendo comportamientos maliciosos mediante alineación de características y destilación de conocimiento.",
+    "resultados": "RTLGuard reduce significativamente la Tasa de Éxito del Ataque (ASR) y mantiene la corrección funcional y la sintetizabilidad del código RTL generado, según experimentos en diversas arquitecturas de LLM.",
+    "por_que_importa": "Asegura la confiabilidad de los diseños de hardware generados por IA, protegiendo contra vulnerabilidades ocultas y garantizando la integridad en la cadena de suministro de semiconductores.",
+    "tags": [
+      "ciberseguridad",
+      "hardware",
+      "IA",
+      "RTL",
+      "Troyanos de hardware",
+      "modelos de lenguaje"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-27T22:28:39Z"
+  },
+  "arxiv:2608.25593": {
+    "tldr": "JIT-Agent genera automáticamente 'arneses' inteligentes para agentes IA, mejorando su rendimiento sin cambiar el modelo base.",
+    "problema": "El diseño de 'arneses' (gestión de memoria, planificación, etc.) para agentes IA es manual, específico para cada tarea y no escala, limitando su potencial.",
+    "propuesta": "Presentamos JIT-Agent, un modelo que genera dinámicamente 'arneses' adaptados a tareas específicas para cualquier modelo de lenguaje grande (LLM) preexistente, optimizando su ejecución y aprendiendo de experiencias pasadas.",
+    "resultados": "Con JIT-Agent, DeepSeek-V4-Flash supera a GPT-5.6 en DeepSearchQA (+9.1) y OdysseyBench (+4.3). GLM-5.2 mejora hasta +20.2 puntos. Los 'arneses' generados son competitivos con sistemas maduros y mejoran consistentemente diversas familias de modelos.",
+    "por_que_importa": "Permite escalar la inteligencia de los agentes IA de forma eficiente, haciendo que los modelos existentes sean más capaces y fiables sin necesidad de reentrenamiento costoso, abriendo una nueva vía para mejorar el rendimiento de la IA.",
+    "tags": [
+      "Agentes IA",
+      "Generación Automática",
+      "Optimización",
+      "Harness Inteligente",
+      "Escalabilidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-27T22:28:48Z"
+  },
+  "arxiv:2608.25529": {
+    "tldr": "Evalúa la capacidad de los modelos de lenguaje multimodales para seguir instrucciones en videos, un área poco explorada.",
+    "problema": "Los modelos actuales de lenguaje multimodales (MLLMs) para video entienden el contenido pero no siguen instrucciones complejas o con restricciones visuales/auditivas, y las pruebas existentes no miden esto adecuadamente.",
+    "propuesta": "Se introduce Video-IFBench, un benchmark con 32 tipos de tareas y 39 categorías de restricciones (semánticas y de formato) para evaluar la habilidad de los MLLMs para seguir instrucciones en videos, usando una taxonomía de instrucciones y un pipeline semi-automático para generar datos.",
+    "resultados": "La evaluación de más de 20 MLLMs muestra que seguir instrucciones complejas, con múltiples restricciones, o condicionales, sigue siendo un desafío para los modelos actuales.",
+    "por_que_importa": "Mejora la fiabilidad y usabilidad de los MLLMs en aplicaciones prácticas de video que requieren precisión y cumplimiento de requisitos específicos del usuario.",
+    "tags": [
+      "MLLMs",
+      "Video",
+      "Instruction Following",
+      "Benchmark",
+      "Evaluación",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-27T22:28:57Z"
+  },
+  "arxiv:2608.25832": {
+    "tldr": "Los modelos de lenguaje grandes muestran habilidades de juego drásticamente diferentes según el idioma, afectando su rendimiento y equidad.",
+    "problema": "Los modelos de lenguaje grandes (LLMs) acceden al conocimiento de manera inconsistente entre idiomas, pero no se sabe cuánto difieren sus 'habilidades' (capacidades de razonamiento y toma de decisiones) al interactuar en diferentes lenguas.",
+    "propuesta": "Se desarrolló un entorno de 'multilingual self-play' (autocompetición multilingüe) donde dos instancias del mismo LLM compiten en un juego basado en texto, cada una usando una interfaz de idioma diferente. Esto aísla el efecto del idioma en el comportamiento del modelo.",
+    "resultados": "Se observó que el mismo modelo muestra una fuerza de juego marcadamente diferente entre idiomas, con variaciones sistemáticas en márgenes de victoria/derrota y acciones inválidas. Cambiar el idioma intermedio de razonamiento recuperó parte del rendimiento perdido en algunos casos.",
+    "por_que_importa": "Las discrepancias de habilidades entre idiomas son un obstáculo importante para crear modelos verdaderamente multilingües y equitativos. Comprenderlas ayuda a diseñar LLMs que funcionen mejor en todos los idiomas.",
+    "tags": [
+      "LLMs",
+      "Multilingüismo",
+      "Habilidades",
+      "Ciberseguridad",
+      "Rendimiento"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-27T22:29:06Z"
+  },
+  "arxiv:2608.24099": {
+    "tldr": "Agentes de GUI en Android son vulnerables a anomalías inesperadas; AnTrap los evalúa y revela debilidades.",
+    "problema": "Los agentes de interfaz gráfica de usuario (GUI) en Android fallan ante anomalías dinámicas (pop-ups, acciones erróneas) porque las pruebas actuales no las evalúan sistemáticamente.",
+    "propuesta": "Se introduce AnTrap, un benchmark que inyecta perturbaciones dinámicas y clasifica anomalías en 4 capas (Estado, Pensamiento, Acción, Ronda) para evaluar la robustez de los agentes.",
+    "resultados": "Los 16 modelos evaluados muestran vulnerabilidad universal; el rendimiento se degrada significativamente. Las trampas de un solo paso son manejables con aprendizaje por refuerzo, pero las trampas contextuales profundas exponen limitaciones intrínsecas.",
+    "por_que_importa": "Revela la fragilidad de los agentes de GUI actuales ante escenarios reales y dinámicos, destacando la necesidad de arquitecturas más robustas y métodos de entrenamiento que aborden fallos contextuales profundos.",
+    "tags": [
+      "agentes GUI",
+      "Android",
+      "robustez",
+      "anomalías",
+      "ciberseguridad",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-27T22:29:16Z"
+  },
+  "arxiv:2608.24358": {
+    "tldr": "Cambiar entre modelos de IA para tareas complejas tiene un costo oculto que reduce la calidad y aumenta los gastos.",
+    "problema": "Los agentes de IA que realizan tareas largas y complejas a menudo requieren cambiar entre modelos de diferente capacidad (más baratos/menos capaces a más caros/más capaces y viceversa). Este cambio, o 'handoff', puede degradar la calidad del resultado y aumentar los costos.",
+    "propuesta": "El estudio investiga el impacto de este 'handoff' en la calidad y el costo, analizando cómo la información de la trayectoria (historial de interacciones y razonamiento) transferida al nuevo modelo afecta el resultado. Se experimenta con diferentes direcciones de cambio (escalada y reducción), momentos y formas de transferir la información (completa, compactada o eliminada).",
+    "resultados": "La escalada de un modelo de baja capacidad a uno de alta capacidad recupera menos de la mitad de la brecha de calidad perdida, pero aumenta significativamente el costo (el 'handoff tax'). La reducción de capacidad ofrece un mejor balance costo-calidad. Curiosamente, reducir la información del historial mejora la escalada, mientras que eliminarlo perjudica la reducción.",
+    "por_que_importa": "Comprender el 'handoff tax' es crucial para optimizar el uso de modelos de IA en aplicaciones prácticas, permitiendo diseñar estrategias de 'handoff' que minimicen costos sin sacrificar excesivamente la calidad, especialmente en tareas de larga duración.",
+    "tags": [
+      "agentes IA",
+      "costo-efectividad",
+      "rendimiento de modelos",
+      "optimización",
+      "ciberseguridad",
+      "computación en la nube"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-27T22:29:25Z"
   }
 }
