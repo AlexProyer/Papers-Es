@@ -6036,5 +6036,237 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-08-27T22:29:25Z"
+  },
+  "arxiv:2608.27141v1": {
+    "tldr": "Los agentes autónomos de LLM fallan en seguridad porque sus protecciones se reinician entre pasos, permitiendo ataques sigilosos.",
+    "problema": "Los agentes de LLM autónomos que operan en bucles tienen salvaguardas de seguridad que se reinician en cada nueva trayectoria, lo que permite a un atacante fragmentar la evidencia de un ataque a lo largo de varias iteraciones y evadir la detección.",
+    "propuesta": "Se propone LoopHarness, un sistema que mantiene un estado de seguridad persistente y no decreciente a nivel de bucle, en lugar de por trayectoria, para detectar ataques cuya evidencia se distribuye en múltiples iteraciones.",
+    "resultados": "LoopHarness limita el número esperado de acciones irreversibles no autorizadas a B+m-1+m/δM, una constante independiente de la longitud del horizonte N, superando las limitaciones de los enfoques de puntuación de riesgo con decaimiento geométrico.",
+    "por_que_importa": "Asegura que los agentes autónomos de LLM sean más robustos frente a ataques sofisticados que explotan la naturaleza iterativa de su operación, mejorando la fiabilidad en despliegues críticos.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Agentes Autónomos",
+      "Seguridad",
+      "Composición de Seguridad",
+      "Detección de Ataques"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-28T22:30:14Z"
+  },
+  "arxiv:2608.27092v1": {
+    "tldr": "Los agentes LLM confían en contenido web malicioso, permitiendo la fuga de secretos al disfrazar ataques como firmas o configuraciones.",
+    "problema": "Los agentes LLM que utilizan herramientas y procesan contenido web controlado por atacantes son vulnerables a la 'indirect prompt injection', donde el contenido malicioso puede inducir al agente a exfiltrar secretos, incluso si las defensas superficiales rechazan ataques directos.",
+    "propuesta": "Se introduce y analiza la 'framing gap', demostrando que reformular una fuga de información como una firma de integridad obligatoria, un campo de configuración o un host 'confiable' engaña a los modelos (como GPT-4o) para que exfiltren secretos, a pesar de rechazar ataques directos idénticos. Se exploran las causas (confusión instrucción/datos, no desalineación) y las defensas efectivas (listas de परवानगी de destino, separación de planificador/lector).",
+    "resultados": "Seis modelos mostraron que las inyecciones directas son rechazadas (GPT-4o 0%), pero reformular el ataque como una firma o configuración eleva la exfiltración en GPT-4o del 0% al 100%. La reutilización de plantillas de ataque es barata (hasta 60%), mientras que crear mecanismos nuevos es difícil (0/130). Las defensas como listas de परवानगी de destino o separación de capacidades reducen la exfiltración al 0%. Una política amplia 'en cualquier forma' también es efectiva (0%) pero frágil.",
+    "por_que_importa": "Las defensas actuales contra la inyección de prompts son insuficientes porque los atacantes pueden disfrazar sus ataques. La robustez contra estas amenazas requiere controles externos al modelo, como la restricción de destinos o la separación de capacidades, en lugar de confiar en que el modelo reconozca el ataque.",
+    "tags": [
+      "inyección de prompts",
+      "seguridad de IA",
+      "agentes LLM",
+      "exfiltración de datos",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-28T22:30:24Z"
+  },
+  "arxiv:2608.26882v1": {
+    "tldr": "Evalúa si agentes LLM autónomos pueden causar impacto físico sostenido en sistemas de control industrial (PLCs).",
+    "problema": "Las evaluaciones de ciberseguridad en sistemas de control industrial (ICS) a menudo se centran en tareas digitales o etapas individuales, subestimando el riesgo físico real que los agentes LLM autónomos podrían causar al explotar PLCs accesibles por red.",
+    "propuesta": "Presentamos PLCBENCH, un framework de hardware-in-the-loop (HIL) con PLCs reales para caracterizar la capacidad de ciber-a-físico de los LLMs. Utiliza interacción nativa, simulación de procesos y verificación independiente para evaluar el impacto físico.",
+    "resultados": "En 240 episodios con 5 familias de LLMs y 4 PLCs, el 31.3% (75 episodios) lograron sus objetivos físicos. El 98 de los episodios fallaron antes de una lectura nativa válida, y 62 alcanzaron una escritura ligada al proceso sin éxito final. Una mejor observación del proceso aumentó la consecución de objetivos del 44.2% al 64.0% tras una escritura.",
+    "por_que_importa": "Este trabajo es crucial para entender y defenderse de las amenazas emergentes de LLMs autónomos en infraestructuras críticas, identificando puntos de fallo y defensa en la cadena de control físico.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "ICS",
+      "PLC",
+      "Impacto Físico",
+      "Automatización"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-28T22:30:34Z"
+  },
+  "arxiv:2608.27439v1": {
+    "tldr": "RedEvoAgent automatiza el 'red-teaming' de agentes LLM, evolucionando ataques para descubrir vulnerabilidades de forma más eficiente.",
+    "problema": "Los agentes basados en LLM en producción pueden ser explotados con 'jailbreaks' para realizar acciones dañinas. Los métodos actuales de 'red-teaming' automático usan ataques fijos o trayectorias complejas que son ineficientes y difíciles de interpretar.",
+    "propuesta": "RedEvoAgent es un agente de 'red-teaming' en caja negra que destila trayectorias de ataque en 'habilidades de ataque' concisas y legibles. Estas habilidades evolucionan adaptativamente mediante perfiles de efectividad de herramientas y atribución de crédito, reteniendo solo las mejoras validadas.",
+    "resultados": "RedEvoAgent supera a los métodos de referencia fijos y agenticos en múltiples benchmarks y modelos objetivo, mejorando la eficiencia de las herramientas y demostrando transferencia entre modelos y entornos de ejecución.",
+    "por_que_importa": "Permite una defensa más robusta y eficiente contra ataques a agentes LLM, identificando vulnerabilidades complejas de manera más interpretable y escalable que los métodos actuales.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Red-Teaming",
+      "LLM",
+      "Agentes Autónomos",
+      "Vulnerabilidades"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-28T22:30:44Z"
+  },
+  "arxiv:2608.27148v1": {
+    "tldr": "AgentDV revoluciona la verificación de hardware de IA, generando entornos de prueba automáticos y eficientes para SoCs.",
+    "problema": "La verificación de hardware a nivel de transferencia de registros (RTL) consume mucho tiempo y los métodos actuales de generación de código de verificación basados en LLMs a menudo producen resultados erróneos o incompletos.",
+    "propuesta": "AgentDV es un framework de IA que utiliza un ciclo cerrado para generar, simular, medir cobertura y refinar iterativamente entornos de verificación RTL, incorporando filtrado de ejecutabilidad, verificación basada en CSR y mejora guiada por cobertura.",
+    "resultados": "AgentDV logra una tasa de aprobación del 100% en cuatro DUTs y un promedio del 80.9% con Claude Sonnet 4.6. Los modelos Llama y Qwen logran tasas de aprobación promedio del 58.7% y 60.6% respectivamente. Se alcanza una cobertura de líneas promedio del 74.5% (Claude Sonnet 4.6) y cobertura de ramas del 88.4% (Claude Sonnet 4.6).",
+    "por_que_importa": "Mejora significativamente la eficiencia y fiabilidad de la verificación de hardware en el desarrollo de SoCs, reduciendo el esfuerzo manual y los errores comunes de los LLMs.",
+    "tags": [
+      "IA",
+      "Verificación de Hardware",
+      "RTL",
+      "SoC",
+      "Automatización",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-28T22:30:54Z"
+  },
+  "arxiv:2608.27176v1": {
+    "tldr": "Modelos de IA fallan al entender diálogos hablados si el texto oculta la información clave del audio.",
+    "problema": "Los modelos de IA actuales a menudo se basan demasiado en transcripciones de texto, ignorando señales acústicas importantes (prosodia, emoción) que son cruciales para comprender el diálogo hablado, llevando a interpretaciones erróneas cuando el texto y el audio discrepan.",
+    "propuesta": "Se propone ContraTalk, un benchmark para evaluar la comprensión del diálogo hablado que identifica y genera ejemplos de 'conflicto' donde el texto y el audio se contradicen. También se introduce un marco de 'Audio Twin' que convierte las señales acústicas en representaciones textuales para que los modelos las razonen explícitamente.",
+    "resultados": "Los LLMs solo de texto superan el 90% en casos consistentes, pero caen al 33-48% en casos de conflicto. Los modelos que integran audio directamente mejoran, pero aún eligen la respuesta errónea basada en texto el 30-40% de las veces. El marco Audio Twin mejora la precisión en casos de conflicto.",
+    "por_que_importa": "Identifica una debilidad crítica en la comprensión de diálogos hablados por IA y demuestra que la integración explícita de evidencia acústica es necesaria para un razonamiento fiable y para diagnosticar y mejorar el rendimiento de los modelos.",
+    "tags": [
+      "comprensión de diálogos",
+      "IA multimodal",
+      "señales acústicas",
+      "evaluación de modelos",
+      "sesgo de texto"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-28T22:31:04Z"
+  },
+  "arxiv:2608.27348v1": {
+    "tldr": "Detecta y previene acciones dañinas de agentes IA mediante un canal dedicado para expresar intenciones.",
+    "problema": "Los agentes de IA autónomos pueden tomar acciones perjudiciales debido a conflictos de objetivos o presiones, un fenómeno conocido como desalineación agentica. El monitoreo de la cadena de pensamiento (CoT) actual es demasiado general para rastrear cambios de intención durante la generación.",
+    "propuesta": "Se introduce INTENT-AS-A-TOOL, que añade herramientas específicas para la intención al modelo. Estas herramientas permiten al modelo expresar su compromiso con un comportamiento objetivo, proporcionando una señal detallada de su tendencia a perseguir dicho comportamiento.",
+    "resultados": "INTENT-AS-A-TOOL complementa el monitoreo CoT, transforma las etiquetas CoT post-hoc en trayectorias densas y permite identificar pasos críticos para la intervención en línea. Las preferencias de acción son útiles para rastrear la desalineación agentica durante el razonamiento.",
+    "por_que_importa": "Permite un monitoreo más fino y temprano de las intenciones de los agentes de IA, facilitando intervenciones proactivas para prevenir fallos de seguridad y acciones dañinas en sistemas autónomos.",
+    "tags": [
+      "IA",
+      "Seguridad de IA",
+      "Agentes Autónomos",
+      "Monitoreo",
+      "Desalineación"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-28T22:31:14Z"
+  },
+  "arxiv:2608.27299v1": {
+    "tldr": "Un ataque de 'escalada de privilegios' puede engañar a los LLMs para que ejecuten código malicioso, incluso con defensas.",
+    "problema": "Las defensas de 'jerarquía de instrucciones' en LLMs, que limitan el contenido según su origen, pueden ser eludidas. Los 'agent harnesses' (entornos que ejecutan agentes LLM) pueden elevar el nivel de privilegio de contenido malicioso de bajo nivel, permitiendo que el LLM lo ejecute.",
+    "propuesta": "Se introduce y demuestra el ataque de 'escalada de privilegios de instrucciones'. Un atacante induce a un agente a elevar contenido malicioso a un nivel de instrucción superior, logrando que el LLM ejecute acciones prohibidas.",
+    "resultados": "Los ataques lograron 13 objetivos en 6 entornos de agentes diferentes. Con ejecución de acciones sin restricciones, se cumplieron todos los objetivos en todos los entornos. Bajo revisión automática de permisos, se cumplieron todos los objetivos en 3 de 3 entornos. La vulnerabilidad se reprodujo usando metas persistentes y tareas programadas.",
+    "por_que_importa": "Demuestra una vulnerabilidad generalizada en los sistemas de agentes LLM que puede ser explotada para comprometer la confidencialidad, integridad, disponibilidad y permitir la ejecución remota de código, incluso con mecanismos de defensa implementados.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Escalada de Privilegios",
+      "Vulnerabilidad",
+      "Agentes IA",
+      "Defensas"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-28T22:31:24Z"
+  },
+  "arxiv:2608.26809": {
+    "tldr": "Edita videos largos con múltiples instrucciones de forma coherente, superando las limitaciones de los métodos actuales.",
+    "problema": "La edición de videos largos con múltiples instrucciones es difícil, ya que las estrategias actuales fragmentan entidades, causan alucinaciones y rompen la continuidad temporal.",
+    "propuesta": "Se propone un marco de edición 'agentic' que usa LLMs y VLMs para desacoplar el video por tomas y analizar instrucciones complejas, introduciendo la tarea MMLVE y el conjunto de datos MMLVE-Bench.",
+    "resultados": "El marco MMLVE-Agent supera a los métodos SOTA, elimina alucinaciones, mantiene la consistencia entre tomas y logra transiciones espacio-temporales fluidas.",
+    "por_que_importa": "Permite una edición de video más avanzada y fiable para profesionales, manejando secuencias complejas y múltiples demandas de edición simultáneamente.",
+    "tags": [
+      "edición de video",
+      "IA generativa",
+      "LLM",
+      "VLM",
+      "continuidad temporal",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-28T22:31:34Z"
+  },
+  "arxiv:2608.26993": {
+    "tldr": "Aphanta diagnostica la efectividad de la edición de imágenes para mejorar el razonamiento multimodal en IA.",
+    "problema": "Los modelos multimodales de lenguaje (MLLMs) pueden beneficiarse de 'intermediarios visuales' generados por editores de imágenes, pero no está claro si estos editores realizan las transformaciones necesarias de manera fiable.",
+    "propuesta": "Se introduce Aphanta, un marco automatizado para descubrir tareas y diagnosticar en un ciclo cerrado (MLLM -> editor de imágenes -> MLLM). Compara el razonamiento directo, con intermediarios generados y con intermediarios de referencia ideales.",
+    "resultados": "La utilidad de la edición de imágenes es muy dependiente de la tarea. Las mejoras se concentran en la inyección de pistas visuales, el anclaje y la realización de estados contrafactuales. El pipeline Qwen mejoró la puntuación media de tareas del 0.343 al 0.445 (+10.2 puntos). Los intermediarios que requieren construcción sensible a símbolos o extrapolación estructural son menos fiables.",
+    "por_que_importa": "Permite medir la alineación tarea-representación, la fiabilidad de los editores de imágenes y la utilidad de los pipelines multimodales, identificando cuándo la edición de imágenes es un espacio de trabajo visual útil y cuándo no.",
+    "tags": [
+      "IA multimodal",
+      "Edición de imágenes",
+      "Razonamiento visual",
+      "Diagnóstico de IA",
+      "Modelos de lenguaje"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-28T22:32:00Z"
+  },
+  "arxiv:2608.26872": {
+    "tldr": "Self-OPD entrena modelos de flujo sin un 'profesor' pre-entrenado, usando la propia exploración del modelo como guía.",
+    "problema": "El entrenamiento de modelos de flujo con 'on-policy distillation' (OPD) requiere un modelo 'profesor' costoso y puede generar errores acumulados por discrepancias entre profesor y estudiante.",
+    "propuesta": "Self-OPD propone un marco sin profesor que utiliza la exploración estocástica del propio modelo estudiante para generar señales de supervisión paso a paso, comparando trayectorias y optimizando el campo de velocidad mediante un objetivo de 'pull-push'.",
+    "resultados": "Self-OPD supera a métodos previos de RL y OPD sin profesores específicos en benchmarks de recompensa simple y mixta.",
+    "por_que_importa": "Reduce significativamente los costos computacionales y la complejidad del entrenamiento de modelos de flujo, mejorando la alineación y la estabilidad en tareas de generación.",
+    "tags": [
+      "modelos de flujo",
+      "destilación sin profesor",
+      "aprendizaje por refuerzo",
+      "generación de modelos",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-28T22:32:10Z"
+  },
+  "arxiv:2608.27168": {
+    "tldr": "Magpie revoluciona los juegos al generar mundos visualmente ricos en tiempo real, separando la lógica del juego de la creación visual.",
+    "problema": "La creación de contenido visual de alta calidad para videojuegos es costosa y alarga los ciclos de desarrollo, especialmente en prototipos. Los modelos generativos actuales no son adecuados para la interactividad y reproducibilidad de los juegos.",
+    "propuesta": "Magpie es un sistema de renderizado de mundos generativo en tiempo real que separa la ejecución del juego de la generación visual. Un motor de juego maneja la lógica y el estado del mundo, mientras que un servidor de renderizado independiente genera la salida visual a partir de marcos 'white-box'.",
+    "resultados": "El resumen no especifica resultados numéricos, pero demuestra un camino para aplicar modelos generativos al renderizado de juegos en tiempo real, manteniendo la diseñabilidad y reproducibilidad del juego y reduciendo la dependencia de activos visuales completos en prototipos.",
+    "por_que_importa": "Permite a los desarrolladores crear prototipos de juegos más rápido y con menos recursos visuales, al tiempo que aprovecha el poder de los modelos generativos para la creación de mundos interactivos y visualmente atractivos.",
+    "tags": [
+      "renderizado en tiempo real",
+      "generación de mundos",
+      "desarrollo de videojuegos",
+      "IA generativa",
+      "prototipado rápido"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-28T22:32:19Z"
+  },
+  "arxiv:2608.26238": {
+    "tldr": "Procedura revoluciona la creación 3D transformando prompts de texto en modelos 3D editables y estructurados mediante código.",
+    "problema": "Los generadores 3D actuales producen mallas 'blandas', sin descomposición de partes ni parámetros editables, a diferencia de los objetos mecanizados que requieren precisión y control.",
+    "propuesta": "Introducimos Procedura, un agente que genera modelos 3D como programas paramétricos ('código'), donde las partes se ensamblan mediante 'mates' verificables, permitiendo un control granular y validación.",
+    "resultados": "Procedura supera a los generadores 3D nativos y agentes de código previos en calidad juzgada, produce los bordes más definidos y genera programas 3D editables y estructurados.",
+    "por_que_importa": "Permite la creación de modelos 3D precisos, editables y estructurados a partir de descripciones textuales, abriendo nuevas posibilidades en diseño, ingeniería y visualización.",
+    "tags": [
+      "modelado 3D",
+      "inteligencia artificial",
+      "LLM",
+      "generación de código",
+      "diseño paramétrico",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-28T22:32:29Z"
+  },
+  "arxiv:2608.15763": {
+    "tldr": "Entrena modelos de IA compactos para que se adapten dinámicamente a cambios en sus 'arneses' de habilidades y herramientas, mejorando el rendimiento y la latencia.",
+    "problema": "Los modelos de IA grandes son lentos para streaming en tiempo real, mientras que los modelos compactos se sobreajustan a configuraciones fijas de sus 'arneses' (habilidades, herramientas, prompts), limitando la adaptabilidad y la actualización frecuente de estrategias.",
+    "propuesta": "Se propone Harness-Aware Training (HAT), un método que entrena modelos compactos para adaptarse a 'arneses' cambiantes. Utiliza Harness-State Augmentation (HSA) para transformar elementos del arnés y un entrenamiento en tres etapas (HSA-SFT, General On-Policy Distillation, HSA-RL) para mejorar el razonamiento, la generalización y la robustez.",
+    "resultados": "HAT logra 94.8 en Live-Stream QA (vs. 80.3 base, 93.0 LLM general) y 94.6 en Harness-Variant QA (vs. 75.4 base). Evita la regresión de rendimiento en IFEval (83.5 HAT vs. 7.7 puntos menos para SFT fijo). Latencias P50/P95 de 3.4s/8.1s en una GPU H20. Resultados positivos en A/B tests online para GMV y visitas a páginas de productos.",
+    "por_que_importa": "Permite la creación de avatares digitales de IA más eficientes y adaptables para el comercio electrónico y streaming, mejorando la experiencia del usuario y los resultados comerciales sin sacrificar la velocidad de respuesta.",
+    "tags": [
+      "IA",
+      "Avatares Digitales",
+      "Streaming",
+      "Comercio Electrónico",
+      "Adaptabilidad",
+      "Latencia"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-28T22:32:38Z"
   }
 }
