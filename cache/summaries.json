@@ -6268,5 +6268,38 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-08-28T22:32:38Z"
+  },
+  "arxiv:2608.18524": {
+    "tldr": "DART-SD mejora agentes LLM para llamar herramientas, superando la limitación de imitar trayectorias completas.",
+    "problema": "Los agentes LLM que usan herramientas en múltiples turnos sufren una degradación severa de la diversidad de políticas al forzar la imitación de trayectorias completas, especialmente en tareas con sub-objetivos independientes.",
+    "propuesta": "DART-SD propone un marco que modela el proceso de ejecución como un grafo de transición de estados (ISTG) que respeta la topología de diamante. Identifica puntos críticos de ruptura (CTB) y recupera referencias de éxito para guiar una auto-destilación localizada, corrigiendo solo los pasos de recuperación sin alterar el razonamiento previo válido.",
+    "resultados": "DART-SD supera significativamente a los métodos tradicionales de trayectoria completa en benchmarks complejos de llamadas a herramientas multi-turno.",
+    "por_que_importa": "Permite crear agentes de IA más robustos y diversos, capaces de manejar tareas complejas con múltiples pasos de forma más eficiente y menos propensa a errores.",
+    "tags": [
+      "agentes LLM",
+      "llamada a herramientas",
+      "auto-destilación",
+      "ciberseguridad",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-31T19:10:24Z"
+  },
+  "arxiv:2608.28476": {
+    "tldr": "ContextPilot revoluciona la gestión del contexto en IA, permitiendo a los agentes planificar y recordar proactivamente para tareas complejas.",
+    "problema": "Las tareas de IA a largo plazo se ven obstaculizadas por la gestión ineficiente del contexto, que crece continuamente y limita las capacidades de planificación, memoria y compresión adaptativa de los modelos.",
+    "propuesta": "ContextPilot introduce un marco de gestión proactiva del contexto que amplía el conjunto de herramientas con capacidades de planificación, memoria a largo plazo y descarga de contexto adaptable, junto con un método de aprendizaje por refuerzo (RL) optimizado para la toma de decisiones críticas en la edición del contexto.",
+    "resultados": "ContextPilot logra un rendimiento superior con un contexto de trabajo más compacto, superando consistentemente a los métodos existentes en tareas de QA de contexto largo y búsqueda profunda.",
+    "por_que_importa": "Mejora significativamente la eficiencia y eficacia de los modelos de IA en tareas complejas y de larga duración, reduciendo la carga computacional y mejorando la precisión al gestionar de forma inteligente la información.",
+    "tags": [
+      "IA",
+      "Gestión de Contexto",
+      "Aprendizaje por Refuerzo",
+      "LLMs",
+      "Ciberseguridad",
+      "Proactividad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-08-31T19:10:33Z"
   }
 }
