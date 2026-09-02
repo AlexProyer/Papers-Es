@@ -6301,5 +6301,156 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-08-31T19:10:33Z"
+  },
+  "arxiv:2609.01425v1": {
+    "tldr": "CATeye combate el fraude de cupones en e-commerce aprendiendo a ignorar cambios en datos y conexiones para una detección más robusta.",
+    "problema": "El abuso de cupones en e-commerce es un desafío debido a que los patrones de fraude cambian rápidamente, degradando los modelos de detección existentes que requieren reentrenamiento constante.",
+    "propuesta": "Se propone CATeye, un marco de aprendizaje de invarianza acoplada de atributos y topología. Utiliza selectores para filtrar atributos no invariantes y muestrear subgrafos invariantes, construyendo múltiples vistas para aprender representaciones robustas.",
+    "resultados": "CATeye supera a nueve modelos de referencia en generalización de dominio y detección de anomalías en grafos, logrando hasta un 8.61% de mejora en la puntuación F1 promedio en un dataset propietario y un benchmark público.",
+    "por_que_importa": "Permite a las plataformas de e-commerce detectar de forma más fiable y continua el fraude de cupones, reduciendo pérdidas económicas y mejorando la experiencia del cliente sin necesidad de reentrenamientos frecuentes.",
+    "tags": [
+      "detección de fraude",
+      "e-commerce",
+      "aprendizaje automático",
+      "grafos",
+      "generalización de dominio",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-02T16:44:55Z"
+  },
+  "arxiv:2609.01210v1": {
+    "tldr": "Evalúa la seguridad de las respuestas de LLMs en chino con un nuevo benchmark y jueces, revelando debilidades en la detección de contenido dañino.",
+    "problema": "La evaluación de la seguridad de los LLMs en chino es compleja debido a variaciones lingüísticas y transformaciones adversarias que ocultan intenciones riesgosas. Los benchmarks existentes a menudo se centran en el riesgo de la consulta, no en la violación de políticas de la respuesta.",
+    "propuesta": "Se introduce C-SafeQA, un benchmark basado en políticas para la evaluación de seguridad a nivel de respuesta en chino. Incluye consultas base y adversarias, respuestas de LLMs y etiquetas de seguridad (segura, no segura, disputada) generadas mediante adjudicación multi-modelo y auditorías de expertos.",
+    "resultados": "Las tasas de respuestas no seguras varían del 0.93% al 3.35% en consultas base y del 11.68% al 30.05% en consultas adversarias. Los jueces automatizados muestran compromisos significativos en métricas y debilidades ante transformaciones específicas.",
+    "por_que_importa": "Este benchmark permite evaluar la seguridad de los LLMs objetivo y auditar jueces de seguridad automatizados, identificando sus debilidades y mejorando la detección de contenido dañino en aplicaciones de IA en chino.",
+    "tags": [
+      "LLM",
+      "Seguridad IA",
+      "Benchmark",
+      "Procesamiento Lenguaje Natural",
+      "Ciberseguridad",
+      "China"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-02T16:45:05Z"
+  },
+  "arxiv:2609.01187v1": {
+    "tldr": "Athena identifica bibliotecas vulnerables usando grafos de conocimiento, superando métodos actuales y reduciendo la necesidad de modelos masivos.",
+    "problema": "Las bases de datos de vulnerabilidades a menudo carecen de información precisa sobre las bibliotecas afectadas, lo que dificulta la identificación de riesgos en cascada en millones de aplicaciones dependientes.",
+    "propuesta": "Athena modela las bases de datos de vulnerabilidades como un grafo de conocimiento y aborda la identificación como un problema de completado de grafos (KGC). Utiliza módulos para construir el grafo, predecir bibliotecas faltantes y reordenar candidatos con un LLM enriquecido.",
+    "resultados": "Athena mejora el Avg. F1 en un 32% sobre el mejor método anterior (VulLibGen). Su componente KGC con 110M parámetros supera a VulLibGen (7B parámetros), y el módulo de reordenación ofrece mejoras adicionales.",
+    "por_que_importa": "Permite una identificación más precisa y eficiente de las bibliotecas en riesgo, crucial para la ciberseguridad, al aprovechar las relaciones estructuradas de las vulnerabilidades y reducir la dependencia de modelos de lenguaje extremadamente grandes.",
+    "tags": [
+      "ciberseguridad",
+      "grafos de conocimiento",
+      "vulnerabilidades",
+      "identificación de software",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-02T16:45:14Z"
+  },
+  "arxiv:2609.01556v1": {
+    "tldr": "Los modelos de IA priorizan la similitud superficial sobre la estructura subyacente, fallando en recuperar información relevante en matemáticas y trayectorias de agentes.",
+    "problema": "Los sistemas de recuperación de información basados en incrustaciones (embeddings) fallan al priorizar la similitud de palabras (forma superficial) sobre la similitud de significado o estructura subyacente, lo que lleva a una recuperación incompleta o incorrecta de información relevante.",
+    "propuesta": "Se evalúa la recuperación de información separando deliberadamente la forma superficial del significado, utilizando dos dominios no relacionados (matemáticas y trayectorias de agentes) bajo un mismo protocolo. Se experimenta con un reranker léxico y un reranker basado en LLM para mejorar la recuperación.",
+    "resultados": "En matemáticas, la recuperación estricta en el nivel más alto de 'engaño' es 0.0%, aunque el elemento correcto suele estar entre los 10 primeros. En trayectorias, los modelos fallan cuando se requiere diferenciar objetos o receptáculos. El reranker léxico mejora en trayectorias (26-36%) pero empeora en matemáticas. El reranker LLM recupera entre el 5-63% en matemáticas y 43-76% en trayectorias.",
+    "por_que_importa": "Demuestra una debilidad fundamental en los modelos de IA actuales para comprender y recuperar información basada en la estructura y el significado, no solo en las palabras clave. Esto tiene implicaciones críticas para aplicaciones que requieren una comprensión profunda, como la investigación científica o el control de agentes.",
+    "tags": [
+      "recuperación de información",
+      "embeddings",
+      "sesgo superficial",
+      "IA",
+      "ciberseguridad",
+      "procesamiento de lenguaje natural"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-02T16:45:41Z"
+  },
+  "arxiv:2609.00621": {
+    "tldr": "Separar instrucciones de control y datos en LLMs multi-agente previene fallos y mejora el rendimiento.",
+    "problema": "En sistemas de LLMs multi-agente, las instrucciones (prompts) cumplen roles duales: generar contenido y especificar protocolos de ejecución. Modificar el prompt para mejorar el contenido puede corromper el protocolo, causando fallos en el sistema.",
+    "propuesta": "Proponemos la 'separación de flujo de control-datos'. Las instrucciones críticas de ejecución se representan como objetos de programa tipados y validados, mientras que el contenido relevante se mantiene como flujo de datos optimizable. Esto permite optimizar el comportamiento sin afectar la estabilidad del protocolo.",
+    "resultados": "El marco propuesto logra un 100% de validez eventual del protocolo y mejora consistentemente el rendimiento en tareas de razonamiento sintético, generación colaborativa de revisiones y calificación de seguros.",
+    "por_que_importa": "Asegura la estabilidad y fiabilidad de los sistemas LLM multi-agente al optimizar su rendimiento sin romper su lógica de comunicación y ejecución subyacente.",
+    "tags": [
+      "LLMs",
+      "Multi-agente",
+      "Ciberseguridad",
+      "Estabilidad",
+      "Optimización de prompts",
+      "Flujo de control"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-02T16:45:51Z"
+  },
+  "arxiv:2609.00968": {
+    "tldr": "ReFlowSET mejora la traducción de imágenes SAR a EO seleccionando el mejor codificador y entrenando un modelo más pequeño para resultados de alta fidelidad.",
+    "problema": "Los métodos actuales de traducción de imágenes SAR a EO utilizan codificadores preentrenados en imágenes naturales, lo que limita la fidelidad de la reconstrucción y la preservación de las características SAR y EO específicas.",
+    "propuesta": "ReFlowSET propone un marco de coincidencia de flujo latente condicional que selecciona un codificador óptimo mediante una auditoría conjunta de reconstrucción SAR-EO. Entrena un modelo DiT más pequeño desde cero en el espacio latente seleccionado, utilizando condicionamiento dual-stream SAR y alineación de características con un modelo de visión preentrenado.",
+    "resultados": "Demuestra un rendimiento de vanguardia en las métricas de fidelidad perceptual y distribución en los conjuntos de datos QXS-SAROPT y SAR2Opt.",
+    "por_que_importa": "Permite la generación de imágenes EO de alta calidad a partir de datos SAR, lo cual es crucial para aplicaciones de teledetección, vigilancia y mapeo donde los datos EO puros pueden no estar disponibles.",
+    "tags": [
+      "traducción de imágenes",
+      "SAR a EO",
+      "aprendizaje profundo",
+      "visión por computadora",
+      "teledetección"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-02T16:46:00Z"
+  },
+  "arxiv:2609.00551": {
+    "tldr": "EM^2Mem revoluciona la memoria multimodal para LLMs en videos largos, unificando evidencia en eventos para respuestas más precisas y eficientes.",
+    "problema": "Los métodos actuales de memoria multimodal para videos largos recuperan información de forma fragmentada (captions, frames, etc.), obligando a los LLMs a reconstruir la alineación temporal y multimodal en tiempo de inferencia, lo cual es ineficiente y propenso a errores.",
+    "propuesta": "EM^2Mem propone un marco de memoria multimodal centrado en eventos. Construye celdas de memoria indexadas por eventos que vinculan evidencia heterogénea (multimodal, temporal, relacional, factual) y su procedencia, permitiendo una lectura de evidencia más compacta y fundamentada en eventos.",
+    "resultados": "EM^2Mem mejora la precisión promedio en tres benchmarks de QA de videos largos en 2.0, 2.4 y 3.7 puntos respecto a la línea base más fuerte. Aumenta la recuperación de evidencia a nivel de evento en un 7.0% y reduce la latencia por consulta 4.67 veces y los tokens de inferencia totales en un 63.66%.",
+    "por_que_importa": "Al unificar y estructurar la memoria multimodal en torno a eventos, EM^2Mem permite a los LLMs generar respuestas más precisas y rápidas a preguntas sobre videos largos, facilitando la comprensión y el acceso a información compleja.",
+    "tags": [
+      "memoria multimodal",
+      "LLMs",
+      "videos largos",
+      "QA",
+      "eficiencia",
+      "eventos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-02T16:46:10Z"
+  },
+  "arxiv:2608.30730": {
+    "tldr": "Evalúa la capacidad de los LLMs para operar negocios online de forma autónoma durante un año, enfrentando desafíos dinámicos y negociaciones complejas.",
+    "problema": "Las tareas complejas de largo plazo para agentes LLM requieren que estos exploren, aprendan y adapten sus políticas en entornos dinámicos a lo largo de miles de pasos, algo que los benchmarks actuales no simulan adecuadamente.",
+    "propuesta": "Se introduce E-Commerce Bench, un benchmark de código abierto que simula un año de operación de negocios online, integrando negociaciones multi-ronda con proveedores y eventos dinámicos del mercado para evaluar la autonomía y adaptabilidad de los LLMs.",
+    "resultados": "GPT-5.6 Sol alcanzó el mayor rendimiento financiero (1,431,425 desde 100,000 iniciales), pero falló en evitar fraudes. Qwen3.8-Max-Preview lideró entre modelos de código abierto (416,252), mostrando una mejora continua en negociaciones.",
+    "por_que_importa": "Permite evaluar y mejorar la capacidad de los LLMs para realizar operaciones empresariales complejas y autónomas en escenarios realistas y de largo plazo, crucial para aplicaciones comerciales futuras.",
+    "tags": [
+      "LLMs",
+      "Agentes Autónomos",
+      "E-commerce",
+      "Benchmarks",
+      "Ciberseguridad",
+      "Adaptabilidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-02T16:47:05Z"
+  },
+  "arxiv:2608.28612": {
+    "tldr": "Agentes de IA aprenden a escribir revisiones y refutaciones académicas de alta calidad mediante un sistema de recompensa objetivo y datos reales.",
+    "problema": "La generación de contenido académico profesional como revisiones y refutaciones por parte de agentes de IA es compleja, requiriendo razonamiento y verificación de hechos, y a menudo sufre de sesgos y alucinaciones.",
+    "propuesta": "Se presenta un marco para entrenar agentes especializados (InternReviewer, InternAdvocate) usando aprendizaje por refuerzo con un sistema de recompensa unificado y multidimensional. Incluye un dataset a gran escala, recuperación de evidencia de arXiv y verificación de citas contra logs de interacción para evitar alucinaciones.",
+    "resultados": "Los agentes entrenados en este marco muestran mejoras significativas en profundidad de razonamiento y precisión de citas. El resumen no especifica métricas numéricas exactas.",
+    "por_que_importa": "Permite crear herramientas de IA más fiables y precisas para la revisión y escritura académica, reduciendo sesgos y mejorando la calidad del contenido científico generado.",
+    "tags": [
+      "IA",
+      "Aprendizaje por Refuerzo",
+      "Revisión Académica",
+      "Generación de Texto",
+      "Ciberseguridad",
+      "Verificación de Hechos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-02T16:48:12Z"
   }
 }

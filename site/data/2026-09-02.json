@@ -1,0 +1,420 @@
+{
+  "date": "2026-09-02",
+  "report_type": "filtrado",
+  "evaluated": 173,
+  "selected": 9,
+  "papers": [
+    {
+      "id": "arxiv:2609.01425v1",
+      "rank": 1,
+      "title": "CATeye: Coupled Attribute-Topology Invariance Learning for Voucher Abuse Detection",
+      "authors": [
+        "Tian Tian",
+        "Shuaicheng Niu",
+        "Hao Kuang",
+        "Yuanhang Hu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.LG]",
+      "category": "cs.LG",
+      "date": "2026-09-01",
+      "url": "https://arxiv.org/abs/2609.01425v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.01425v1",
+      "score": 52,
+      "topics": [
+        "vuln & threats",
+        "anomaly detection",
+        "fraud detection"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: vuln & threats, anomaly detection, fraud detection"
+      ],
+      "abstract_en": "Voucher abuse poses a major challenge in e-commerce, where malicious users exploit promotional vouchers for profit. Unfortunately, fraud patterns evolve rapidly over time and across regions, causing distribution shifts that degrade existing detection models unless retrained frequently. To tackle this, we propose the Coupled Attribute-Topology Invariance Learning framework (CATeye). The key challenge arises from coupled attribute-topology shift, where edges built from attribute proximity cause environment-driven attribute shift to induce shifted topology, thereby amplifying variant signals through GNN message passing. CATeye sees through such coupled shifts with two learnable selectors. First, an Attribute Invariance Selector (AIS) learns node-adaptive masks to filter out non-invariant attributes. Then, conditioned on retained invariant attributes, an Edge Invariance Selector (EIS) samples an invariant subgraph and isolates non-invariant edges. Using the resulting invariant and non-invariant components, CATeye constructs multiple views and applies view-specific objectives to emphasize domain-invariant representations while suppressing domain-specific variations. Experiments on both a proprietary dataset from Lazada, a major Southeast Asian e-commerce platform, and a public benchmark show that CATeye consistently outperforms nine strong domain generalization and graph anomaly detection baselines, achieving up to an 8.61% improvement in average F1 score over the strongest baseline. Source code is publicly available at https://github.com/Tian0426/CATeye.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "CATeye combate el fraude de cupones en e-commerce aprendiendo a ignorar cambios en datos y conexiones para una detección más robusta.",
+        "problema": "El abuso de cupones en e-commerce es un desafío debido a que los patrones de fraude cambian rápidamente, degradando los modelos de detección existentes que requieren reentrenamiento constante.",
+        "propuesta": "Se propone CATeye, un marco de aprendizaje de invarianza acoplada de atributos y topología. Utiliza selectores para filtrar atributos no invariantes y muestrear subgrafos invariantes, construyendo múltiples vistas para aprender representaciones robustas.",
+        "resultados": "CATeye supera a nueve modelos de referencia en generalización de dominio y detección de anomalías en grafos, logrando hasta un 8.61% de mejora en la puntuación F1 promedio en un dataset propietario y un benchmark público.",
+        "por_que_importa": "Permite a las plataformas de e-commerce detectar de forma más fiable y continua el fraude de cupones, reduciendo pérdidas económicas y mejorando la experiencia del cliente sin necesidad de reentrenamientos frecuentes.",
+        "tags": [
+          "detección de fraude",
+          "e-commerce",
+          "aprendizaje automático",
+          "grafos",
+          "generalización de dominio",
+          "ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-02T16:44:55Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.01210v1",
+      "rank": 2,
+      "title": "Who Judges the Judges? A Chinese Safety QA Benchmark for Evaluating LLM Responses and Safety Judges",
+      "authors": [
+        "Rui Yang",
+        "Shuang Huang",
+        "Junhua Liu",
+        "Ziqi Zhao"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-01",
+      "url": "https://arxiv.org/abs/2609.01210v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.01210v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Safety benchmarks for large language models often assess the risk of a user query, although the outcome of question answering depends on whether the response violates a policy. This distinction is critical in Chinese harmful-content evaluation, where linguistic variation and adversarial transformations can obscure risky intent. We introduce C-SafeQA, a policy-grounded benchmark for response-level Chinese safety evaluation. It comprises 538 base queries and 8,877 adversarial queries answered by four full-model LLM deployments, yielding 37,660 query-response records labeled safe, unsafe, or disputed. Reference labels are generated through agreement-aware multi-model adjudication and blind audits of stratified subsets by three safety experts. C-SafeQA supports both evaluation of target-model safety and auditing of seven automated safety judges against shared reference labels. Unsafe-response rates range from 0.93% to 3.35% on base queries and from 11.68% to 30.05% on adversarial queries. On the adversarial subset, judges show substantial trade-offs between unsafe-response recall and risk-query-conditioned safe-response false positive rate, and no judge dominates all metrics. Both acrostic transformations reduce unsafe recall for all seven judges, revealing mechanism-specific evaluator weaknesses. Dataset records, metadata, verification code, and judge scripts are publicly released to support recomputation, while benchmark construction, target-response generation, and private adjudication remain outside the release boundary.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa la seguridad de las respuestas de LLMs en chino con un nuevo benchmark y jueces, revelando debilidades en la detección de contenido dañino.",
+        "problema": "La evaluación de la seguridad de los LLMs en chino es compleja debido a variaciones lingüísticas y transformaciones adversarias que ocultan intenciones riesgosas. Los benchmarks existentes a menudo se centran en el riesgo de la consulta, no en la violación de políticas de la respuesta.",
+        "propuesta": "Se introduce C-SafeQA, un benchmark basado en políticas para la evaluación de seguridad a nivel de respuesta en chino. Incluye consultas base y adversarias, respuestas de LLMs y etiquetas de seguridad (segura, no segura, disputada) generadas mediante adjudicación multi-modelo y auditorías de expertos.",
+        "resultados": "Las tasas de respuestas no seguras varían del 0.93% al 3.35% en consultas base y del 11.68% al 30.05% en consultas adversarias. Los jueces automatizados muestran compromisos significativos en métricas y debilidades ante transformaciones específicas.",
+        "por_que_importa": "Este benchmark permite evaluar la seguridad de los LLMs objetivo y auditar jueces de seguridad automatizados, identificando sus debilidades y mejorando la detección de contenido dañino en aplicaciones de IA en chino.",
+        "tags": [
+          "LLM",
+          "Seguridad IA",
+          "Benchmark",
+          "Procesamiento Lenguaje Natural",
+          "Ciberseguridad",
+          "China"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-02T16:45:05Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.01187v1",
+      "rank": 3,
+      "title": "Athena: Vulnerability-Affected Library Identification via Knowledge Graph Completion",
+      "authors": [
+        "Phong Trinh Duy",
+        "Trang Dang Yen",
+        "Hung Nguyen-Huu",
+        "Bach Le"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-01",
+      "url": "https://arxiv.org/abs/2609.01187v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.01187v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "A single vulnerability in a widely used library can cascade through millions of dependent applications, yet more than half of vulnerability database entries contain missing or incorrect affected-library information. Existing automated approaches neglect the relational structure of vulnerability databases, treating identification as an isolated text retrieval problem. In this paper, we propose Athena, the first graph-based approach for vulnerability affected library identification. Athena models vulnerability databases as a knowledge graph and reformulates the identification problem as knowledge graph completion (KGC). It comprises three key modules: a Modeling module that constructs a security knowledge graph integrating CVEs, libraries, CWE weakness types, CPE products, and software ecosystems; a Completion module that applies a modular KGC backbone to predict missing affected libraries for a given CVE via link prediction; and a Re-ranking module that retrieves KGC candidates and rescores them using a fine-tuned LLM augmented with knowledge graph embeddings, jointly leveraging structural and textual information. Our experiments on VulLib demonstrate that Athena significantly outperforms four state-of-the-art baselines, achieving a 32% improvement in Avg. F1 over the best baseline (i.e., VulLibGen). Notably, our KGC backbone with only 110M parameters already surpasses VulLibGen's best configuration at 7B parameters, demonstrating the effectiveness of graph-based modeling; the re-ranking module then provides substantial further gains, consistently outperforming the best baseline across all evaluated LLM backbones.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Athena identifica bibliotecas vulnerables usando grafos de conocimiento, superando métodos actuales y reduciendo la necesidad de modelos masivos.",
+        "problema": "Las bases de datos de vulnerabilidades a menudo carecen de información precisa sobre las bibliotecas afectadas, lo que dificulta la identificación de riesgos en cascada en millones de aplicaciones dependientes.",
+        "propuesta": "Athena modela las bases de datos de vulnerabilidades como un grafo de conocimiento y aborda la identificación como un problema de completado de grafos (KGC). Utiliza módulos para construir el grafo, predecir bibliotecas faltantes y reordenar candidatos con un LLM enriquecido.",
+        "resultados": "Athena mejora el Avg. F1 en un 32% sobre el mejor método anterior (VulLibGen). Su componente KGC con 110M parámetros supera a VulLibGen (7B parámetros), y el módulo de reordenación ofrece mejoras adicionales.",
+        "por_que_importa": "Permite una identificación más precisa y eficiente de las bibliotecas en riesgo, crucial para la ciberseguridad, al aprovechar las relaciones estructuradas de las vulnerabilidades y reducir la dependencia de modelos de lenguaje extremadamente grandes.",
+        "tags": [
+          "ciberseguridad",
+          "grafos de conocimiento",
+          "vulnerabilidades",
+          "identificación de software",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-02T16:45:14Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.01556v1",
+      "rank": 4,
+      "title": "Retrieved but not ranked: surface-form bias in structural retrieval, from mathematics to agent trajectories",
+      "authors": [
+        "Nabira Rashid",
+        "Manolis Kellis"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-09-01",
+      "url": "https://arxiv.org/abs/2609.01556v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.01556v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "We evaluate embedding retrieval where surface form and meaning are pulled apart on purpose: retrieving items that share underlying structure but not wording, in two unrelated domains under one protocol, competition mathematics (MathNet-Retrieve; 500 queries, 117,088-item corpus) and embodied-agent trajectories (ALFWorld-derived; 118 queries, 336 trajectories). In mathematics the failure is complete: strict Hit@1 at the heaviest disguise tier is 0.0% for both production embedders (bootstrap 95% CI [0.0, 0.0]) while the correct item sits in the top 10 nearly always, and in 95.2 to 99.8% of misses the winner is more lexically similar to the query than the correct answer. In trajectories, where surface variation is incidental, the same models land at or near hypergeometric chance when gold must involve a different object, and below chance for all three embedders once gold must differ in object and receptacle: retrieval anchors on literal tokens, not task structure. A lexical reranker control hurts in mathematics and helps in trajectories (closing 26 to 36% of the gap, CIs excluding zero); its sign reveals whether a benchmark's surface variation is adversarial or incidental. An LLM reranker recovers 5 to 63% of the gap in mathematics and 43 to 76% in trajectories; direction replicates across three judges (all 21 cells positive), but effect sizes, tier profiles, and the outlier judge change with domain (paired differences excluding zero everywhere). Mathematics gains concentrate on well-known competitions (+19.8 points, CI [+6.7, +33.2], one of six cells), so part of the recovery is memorization. In a paired downstream experiment (210 queries, graders at 96 to 99% agreement), oracle retrieval was indistinguishable from adversarially bad retrieval (McNemar p = 0.678); the solver's 69.5% zero-shot accuracy is largely a truncation proxy (97 to 100% on finished answers), leaving no headroom.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los modelos de IA priorizan la similitud superficial sobre la estructura subyacente, fallando en recuperar información relevante en matemáticas y trayectorias de agentes.",
+        "problema": "Los sistemas de recuperación de información basados en incrustaciones (embeddings) fallan al priorizar la similitud de palabras (forma superficial) sobre la similitud de significado o estructura subyacente, lo que lleva a una recuperación incompleta o incorrecta de información relevante.",
+        "propuesta": "Se evalúa la recuperación de información separando deliberadamente la forma superficial del significado, utilizando dos dominios no relacionados (matemáticas y trayectorias de agentes) bajo un mismo protocolo. Se experimenta con un reranker léxico y un reranker basado en LLM para mejorar la recuperación.",
+        "resultados": "En matemáticas, la recuperación estricta en el nivel más alto de 'engaño' es 0.0%, aunque el elemento correcto suele estar entre los 10 primeros. En trayectorias, los modelos fallan cuando se requiere diferenciar objetos o receptáculos. El reranker léxico mejora en trayectorias (26-36%) pero empeora en matemáticas. El reranker LLM recupera entre el 5-63% en matemáticas y 43-76% en trayectorias.",
+        "por_que_importa": "Demuestra una debilidad fundamental en los modelos de IA actuales para comprender y recuperar información basada en la estructura y el significado, no solo en las palabras clave. Esto tiene implicaciones críticas para aplicaciones que requieren una comprensión profunda, como la investigación científica o el control de agentes.",
+        "tags": [
+          "recuperación de información",
+          "embeddings",
+          "sesgo superficial",
+          "IA",
+          "ciberseguridad",
+          "procesamiento de lenguaje natural"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-02T16:45:41Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.00621",
+      "rank": 1,
+      "title": "Control-Data Flow Separation: Stable Prompt Optimization in Multi-Agent LLMs",
+      "authors": [
+        "Wentao Zhang",
+        "Syed Shariyar Murtaza",
+        "Junaid Ahmad Bhatti",
+        "Utkarsh Soni"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-01",
+      "url": "https://arxiv.org/abs/2609.00621",
+      "pdf_url": "https://arxiv.org/pdf/2609.00621",
+      "score": 69,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Prompt optimization can improve multi-agent LLM systems, but the prompts being optimized often serve two entangled roles: generating task-relevant content and specifying execution-critical protocols, such as message routing, output formatting, and termination signals, on which the underlying code relies. As a result, a prompt edit intended to improve content generation can inadvertently corrupt the protocol and cause the entire agent pipeline to fail. Our key observation is that these two roles have different representations: execution protocols are typically structured, while task-relevant content is usually expressed in unstructured language. Based on this, we propose control-data flow separation, where execution-critical control is represented as typed, validated program objects, while task-relevant language remains the optimizable data flow for agent communication. This design allows optimizers to improve multi-agent behavior without exposing the routing or formatting interface to prompt drift. Across synthetic reasoning, collaborative review generation, and insurance rating workflows, our framework empirically achieves 100% eventual protocol validity while consistently improving task performance.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Separar instrucciones de control y datos en LLMs multi-agente previene fallos y mejora el rendimiento.",
+        "problema": "En sistemas de LLMs multi-agente, las instrucciones (prompts) cumplen roles duales: generar contenido y especificar protocolos de ejecución. Modificar el prompt para mejorar el contenido puede corromper el protocolo, causando fallos en el sistema.",
+        "propuesta": "Proponemos la 'separación de flujo de control-datos'. Las instrucciones críticas de ejecución se representan como objetos de programa tipados y validados, mientras que el contenido relevante se mantiene como flujo de datos optimizable. Esto permite optimizar el comportamiento sin afectar la estabilidad del protocolo.",
+        "resultados": "El marco propuesto logra un 100% de validez eventual del protocolo y mejora consistentemente el rendimiento en tareas de razonamiento sintético, generación colaborativa de revisiones y calificación de seguros.",
+        "por_que_importa": "Asegura la estabilidad y fiabilidad de los sistemas LLM multi-agente al optimizar su rendimiento sin romper su lógica de comunicación y ejecución subyacente.",
+        "tags": [
+          "LLMs",
+          "Multi-agente",
+          "Ciberseguridad",
+          "Estabilidad",
+          "Optimización de prompts",
+          "Flujo de control"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-02T16:45:51Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.00968",
+      "rank": 2,
+      "title": "ReFlowSET: Representation-Aligned Latent Flow Matching for SAR-to-EO Image Translation",
+      "authors": [
+        "Jeonghyeok Do",
+        "Seungchul Lee",
+        "Munchurl Kim"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-01",
+      "url": "https://arxiv.org/abs/2609.00968",
+      "pdf_url": "https://arxiv.org/pdf/2609.00968",
+      "score": 65,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "SAR-to-EO image translation aims to generate electro-optical (EO) imagery from synthetic aperture radar (SAR) observations. Existing latent diffusion approaches typically inherit a predetermined autoencoder, although reconstruction fidelity can vary substantially across codecs and modalities. Because the latent codec affects the round-trip preservation of both SAR conditions and EO targets, codec selection constitutes a fundamental design choice; nevertheless, existing methods largely rely on codecs pretrained on natural images. To remedy this, we introduce ReFlowSET, a conditional latent flow-matching framework that selects its codec through a joint SAR--EO reconstruction audit. Rather than inheriting a heavyweight pretrained generator, ReFlowSET trains a substantially smaller conditional DiT from scratch in the selected latent space, using dual-stream SAR conditioning followed by joint feature refinement. To provide semantic guidance for this from-scratch training, intermediate noisy-EO features are aligned with clean target-EO representations extracted by a frozen vision foundation model. This alignment is used only during training and introduces no additional inference cost. Experiments on QXS-SAROPT and SAR2Opt demonstrate state-of-the-art performance across diverse perceptual fidelity and distributional metrics. Code and pretrained weights are publicly available at https://github.com/KAIST-VICLab/ReFlowSET.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "ReFlowSET mejora la traducción de imágenes SAR a EO seleccionando el mejor codificador y entrenando un modelo más pequeño para resultados de alta fidelidad.",
+        "problema": "Los métodos actuales de traducción de imágenes SAR a EO utilizan codificadores preentrenados en imágenes naturales, lo que limita la fidelidad de la reconstrucción y la preservación de las características SAR y EO específicas.",
+        "propuesta": "ReFlowSET propone un marco de coincidencia de flujo latente condicional que selecciona un codificador óptimo mediante una auditoría conjunta de reconstrucción SAR-EO. Entrena un modelo DiT más pequeño desde cero en el espacio latente seleccionado, utilizando condicionamiento dual-stream SAR y alineación de características con un modelo de visión preentrenado.",
+        "resultados": "Demuestra un rendimiento de vanguardia en las métricas de fidelidad perceptual y distribución en los conjuntos de datos QXS-SAROPT y SAR2Opt.",
+        "por_que_importa": "Permite la generación de imágenes EO de alta calidad a partir de datos SAR, lo cual es crucial para aplicaciones de teledetección, vigilancia y mapeo donde los datos EO puros pueden no estar disponibles.",
+        "tags": [
+          "traducción de imágenes",
+          "SAR a EO",
+          "aprendizaje profundo",
+          "visión por computadora",
+          "teledetección"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-02T16:46:00Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.00551",
+      "rank": 3,
+      "title": "EM^2Mem: Event-Centric Multimodal Memory for Large Language Models",
+      "authors": [
+        "Yijun Chen",
+        "Yaqi Zheng",
+        "Yanya Li",
+        "Boyi Xiao"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-01",
+      "url": "https://arxiv.org/abs/2609.00551",
+      "pdf_url": "https://arxiv.org/pdf/2609.00551",
+      "score": 63,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Multimodal memory offers a scalable interface for long-video question answering, but existing methods often retrieve captions, frames, transcripts, summaries, or graph facts as isolated fragments. Although searchable, such fragments are not generation-ready: language models must reconstruct cross-modal and temporal alignments at inference time, when context is limited and attribution is difficult. We propose EM^2Mem, an event-centric multimodal memory framework that binds heterogeneous evidence to event anchors during memory construction. Each event-indexed memory cell aligns multimodal records, temporal context, graph-linked relations, semantic facts, and provenance, enabling compact evidence readout over grounded multimodal events rather than modality-specific fragments. Across three long-video QA benchmarks, EM^2Mem improves average accuracy over the strongest memory baseline by 2.0, 2.4, and 3.7 points, improves strict event-level Top-5 evidence recall by 7.0 points, and reduces per-query latency by 4.67 times and total inference tokens by 63.66% (The code will be integrated into https://github.com/zjunlp/LightMem).",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "EM^2Mem revoluciona la memoria multimodal para LLMs en videos largos, unificando evidencia en eventos para respuestas más precisas y eficientes.",
+        "problema": "Los métodos actuales de memoria multimodal para videos largos recuperan información de forma fragmentada (captions, frames, etc.), obligando a los LLMs a reconstruir la alineación temporal y multimodal en tiempo de inferencia, lo cual es ineficiente y propenso a errores.",
+        "propuesta": "EM^2Mem propone un marco de memoria multimodal centrado en eventos. Construye celdas de memoria indexadas por eventos que vinculan evidencia heterogénea (multimodal, temporal, relacional, factual) y su procedencia, permitiendo una lectura de evidencia más compacta y fundamentada en eventos.",
+        "resultados": "EM^2Mem mejora la precisión promedio en tres benchmarks de QA de videos largos en 2.0, 2.4 y 3.7 puntos respecto a la línea base más fuerte. Aumenta la recuperación de evidencia a nivel de evento en un 7.0% y reduce la latencia por consulta 4.67 veces y los tokens de inferencia totales en un 63.66%.",
+        "por_que_importa": "Al unificar y estructurar la memoria multimodal en torno a eventos, EM^2Mem permite a los LLMs generar respuestas más precisas y rápidas a preguntas sobre videos largos, facilitando la comprensión y el acceso a información compleja.",
+        "tags": [
+          "memoria multimodal",
+          "LLMs",
+          "videos largos",
+          "QA",
+          "eficiencia",
+          "eventos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-02T16:46:10Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.30730",
+      "rank": 4,
+      "title": "E-Commerce Bench: Evaluating LLM Agents on Long-Horizon Autonomous Business Operation",
+      "authors": [
+        "Wei Fan",
+        "Xinjie Shen",
+        "Xudong Guo",
+        "Jianhong Tu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-31",
+      "url": "https://arxiv.org/abs/2608.30730",
+      "pdf_url": "https://arxiv.org/pdf/2608.30730",
+      "score": 56,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "fraud detection"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+1)",
+        "🎯 temas: LLM, AI agents, fraud detection"
+      ],
+      "abstract_en": "Long-horizon agentic tasks go beyond chaining short tasks over more interaction turns. Their evolving dynamic environments and long-range dependencies require Large Language Models (LLMs) to continually explore, learn from experience, and adapt their policies over thousands of steps. We introduce E-Commerce Bench, the first open-source benchmark that integrates multi-round counterpart negotiation and dynamic events into a year-long business operation. Over a 365-day year, an LLM agent concurrently runs multiple online stores, researching the market, negotiating with suppliers to source inventory, optimizing sales strategies, fulfilling orders, handling returns, and managing cash flow to maximize its end-of-year total assets. To construct a realistic merchant-side operating environment, the product and supplier data are derived from a real e-commerce platform, while a year-long calendar of promotions, natural disasters, and supply-chain shocks continually reshapes demand. For reproducibility, both sides of the market are deterministic: customer purchases and returns follow a fixed demand model, while a negotiation kernel determines supplier pricing, concessions, and decisions, with an LLM used only to verbalize them. We evaluate 18 frontier models across seven dimensions, including year-end assets, and find that no single model dominates. GPT-5.6 Sol earns the most, growing the 100,000 opening stake into 1,431,425, yet it ranks 16th of 18 on fraud avoidance and trails Fable5 in operational efficiency. Among open-weight models, Qwen3.8-Max-Preview leads with 416,252, 38% above GLM 5.2 (high), and achieves the strongest learning over the horizon, progressively bargaining down prices across repeated orders. Our code is available at https://github.com/QwenLM/E-CommerceBench.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa la capacidad de los LLMs para operar negocios online de forma autónoma durante un año, enfrentando desafíos dinámicos y negociaciones complejas.",
+        "problema": "Las tareas complejas de largo plazo para agentes LLM requieren que estos exploren, aprendan y adapten sus políticas en entornos dinámicos a lo largo de miles de pasos, algo que los benchmarks actuales no simulan adecuadamente.",
+        "propuesta": "Se introduce E-Commerce Bench, un benchmark de código abierto que simula un año de operación de negocios online, integrando negociaciones multi-ronda con proveedores y eventos dinámicos del mercado para evaluar la autonomía y adaptabilidad de los LLMs.",
+        "resultados": "GPT-5.6 Sol alcanzó el mayor rendimiento financiero (1,431,425 desde 100,000 iniciales), pero falló en evitar fraudes. Qwen3.8-Max-Preview lideró entre modelos de código abierto (416,252), mostrando una mejora continua en negociaciones.",
+        "por_que_importa": "Permite evaluar y mejorar la capacidad de los LLMs para realizar operaciones empresariales complejas y autónomas en escenarios realistas y de largo plazo, crucial para aplicaciones comerciales futuras.",
+        "tags": [
+          "LLMs",
+          "Agentes Autónomos",
+          "E-commerce",
+          "Benchmarks",
+          "Ciberseguridad",
+          "Adaptabilidad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-02T16:47:05Z"
+      }
+    },
+    {
+      "id": "arxiv:2608.28612",
+      "rank": 5,
+      "title": "InternReviewer & InternAdvocate: Objective Reward and Evaluation for Agentic Reinforcement Learning in Peer Review and Rebuttal",
+      "authors": [
+        "Xuerui Su",
+        "Liya Guo",
+        "Qizhi Pei",
+        "Qipeng Guo"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-07-21",
+      "url": "https://arxiv.org/abs/2608.28612",
+      "pdf_url": "https://arxiv.org/pdf/2608.28612",
+      "score": 53,
+      "topics": [
+        "AI agents",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+4)",
+        "🎯 temas: AI agents, compliance & audit"
+      ],
+      "abstract_en": "Generating professional scholarly content, such as peer reviews and rebuttals, requires an intricate synergy between domain reasoning and factual grounding. This work presents a comprehensive framework for the development and evaluation of specialized scholarly agents, InternReviewer and InternAdvocate. We first establish a large-scale, high-quality scholarly dataset and integrate a high-efficiency arXiv retrieval tool to enable active evidence gathering. To optimize these agents, we implement an agentic Reinforcement Learning (RL) paradigm driven by a unified objective metric and reward system. This system avoids the biases of subjective model-based judging by employing multi-dimensional criteria, including reference-anchored semantic alignment, structural compliance, and a strict verification mechanism that cross-checks citations against real-time interaction logs to eliminate hallucinations. Experimental results demonstrate that agents trained within this closed-loop framework exhibit significant improvements in reasoning depth and citation accuracy.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Agentes de IA aprenden a escribir revisiones y refutaciones académicas de alta calidad mediante un sistema de recompensa objetivo y datos reales.",
+        "problema": "La generación de contenido académico profesional como revisiones y refutaciones por parte de agentes de IA es compleja, requiriendo razonamiento y verificación de hechos, y a menudo sufre de sesgos y alucinaciones.",
+        "propuesta": "Se presenta un marco para entrenar agentes especializados (InternReviewer, InternAdvocate) usando aprendizaje por refuerzo con un sistema de recompensa unificado y multidimensional. Incluye un dataset a gran escala, recuperación de evidencia de arXiv y verificación de citas contra logs de interacción para evitar alucinaciones.",
+        "resultados": "Los agentes entrenados en este marco muestran mejoras significativas en profundidad de razonamiento y precisión de citas. El resumen no especifica métricas numéricas exactas.",
+        "por_que_importa": "Permite crear herramientas de IA más fiables y precisas para la revisión y escritura académica, reduciendo sesgos y mejorando la calidad del contenido científico generado.",
+        "tags": [
+          "IA",
+          "Aprendizaje por Refuerzo",
+          "Revisión Académica",
+          "Generación de Texto",
+          "Ciberseguridad",
+          "Verificación de Hechos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-02T16:48:12Z"
+      }
+    }
+  ],
+  "generated_at": "2026-09-02T16:48:12Z"
+}
