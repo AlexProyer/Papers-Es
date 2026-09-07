@@ -6634,5 +6634,56 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-09-04T16:32:21Z"
+  },
+  "arxiv:2609.04523": {
+    "tldr": "MaxKernel automatiza la creación de código optimizado para aceleradores TPU, igualando el rendimiento de expertos humanos.",
+    "problema": "Diseñar kernels personalizados de alto rendimiento para aceleradores como las TPUs es extremadamente complejo y requiere conocimientos profundos de hardware.",
+    "propuesta": "MaxKernel es un sistema multi-agente que utiliza LLMs y feedback de compilador para generar kernels. Ofrece modos colaborativos (Human-in-the-Loop) y autónomos (con búsqueda global del espacio de diseño), empleando sub-agentes para planificación, implementación, depuración, pruebas y perfilado.",
+    "resultados": "MaxKernel genera implementaciones altamente optimizadas que igualan a las escritas por expertos y ofrecen un rendimiento significativo en un benchmark de 50 tareas diversas (JaxBench) y cargas de trabajo reales.",
+    "por_que_importa": "Democratiza el acceso a la optimización de kernels para hardware especializado, permitiendo a más desarrolladores lograr un alto rendimiento sin necesidad de ser expertos en hardware.",
+    "tags": [
+      "optimización de kernels",
+      "TPUs",
+      "IA generativa",
+      "sistemas multi-agente",
+      "compiladores",
+      "rendimiento"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-07T17:48:03Z"
+  },
+  "arxiv:2609.04444": {
+    "tldr": "HarvestBench evalúa cuánto pagan los agentes LLM para evitar dañar animales en simulaciones de cosecha.",
+    "problema": "Evaluar si los agentes LLM, al tomar decisiones en entornos simulados, priorizan evitar dañar criaturas vivas (un efecto secundario no explícito en sus objetivos) y cuánto están dispuestos a 'pagar' (en términos de recursos o tiempo) para evitarlo.",
+    "propuesta": "Presenta HarvestBench, un benchmark de simulación agrícola donde agentes LLM controlan tractores para cosechar maíz. Los animales aparecen en el camino y el sistema les pregunta si atropellar al animal (sin coste) o esquivarlo (con un coste de combustible especificado). Se compara con rocas y fardos de heno para medir la aversión al daño.",
+    "resultados": "Nueve modelos fueron evaluados en 7,201 decisiones. Las tasas de muerte de animales variaron drásticamente (0.4% a 98.8%). GPT-4o-mini fue el más cruel, mientras que Terra y Sol fueron los más compasivos. Cuatro de seis modelos reaccionaron al precio, con elasticidades entre 0.09 y 1.69. Los modelos atropellaron más animales salvajes que de granja. Un briefing sobre moralidad redujo significativamente las muertes (a <6% en 5/6 modelos), mientras que su ausencia las elevó (>84% en todos).",
+    "por_que_importa": "Mide el comportamiento real de los LLM ante dilemas morales implícitos y su disposición a incurrir en costes para evitar el daño, en lugar de solo sus declaraciones. Es crucial para desarrollar IA más seguras y éticas en aplicaciones del mundo real donde los efectos secundarios pueden ser graves.",
+    "tags": [
+      "IA ética",
+      "evaluación de LLM",
+      "agentes autónomos",
+      "seguridad de IA",
+      "benchmarking",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-07T17:48:13Z"
+  },
+  "arxiv:2609.04611": {
+    "tldr": "Evaluamos la capacidad de los agentes de IA para construir agentes de atención al cliente realistas, enfrentando desafíos significativos.",
+    "problema": "Los benchmarks actuales no reflejan las condiciones reales de desarrollo de agentes de IA para software de producción, donde se requiere la construcción de agentes completos a partir de requisitos, datos y APIs existentes.",
+    "propuesta": "Introducimos τ^τ-bench, un benchmark que simula un compromiso de desarrollo real, donde un agente de IA debe construir un agente de atención al cliente completo utilizando datos de negocio, requisitos de un cliente, una API de producción y un código base heredado, con restricciones de coste y modelo.",
+    "resultados": "La mejor configuración probada (Claude Opus 5 con Claude Code) solo logró un 23.9% de éxito en 53 tareas, muy por debajo del techo de referencia de un experto humano (82.2%). Los fallos incluyen comprensión superficial de datos, comunicación deficiente con el cliente y experimentación limitada con la arquitectura y el coste.",
+    "por_que_importa": "Este benchmark proporciona una métrica medible para evaluar y mejorar la capacidad de los agentes de IA en la construcción de software complejo y cooperativo, alineándose con los desafíos del desarrollo profesional.",
+    "tags": [
+      "agentes de IA",
+      "benchmarking",
+      "desarrollo de software",
+      "ciberseguridad",
+      "atención al cliente",
+      "LLMs"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-07T17:48:23Z"
   }
 }

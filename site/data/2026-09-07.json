@@ -1,0 +1,147 @@
+{
+  "date": "2026-09-07",
+  "report_type": "filtrado",
+  "evaluated": 26,
+  "selected": 3,
+  "papers": [
+    {
+      "id": "arxiv:2609.04523",
+      "rank": 1,
+      "title": "MaxKernel: Agentic Kernel Generation for TPUs",
+      "authors": [
+        "Shangkun Wang",
+        "Nina Cai",
+        "Charles Hoong",
+        "Julian Walker"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-03",
+      "url": "https://arxiv.org/abs/2609.04523",
+      "pdf_url": "https://arxiv.org/pdf/2609.04523",
+      "score": 56,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+7)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Designing and authoring high-performance custom kernels for accelerators is a complex task that requires deep hardware-level expertise. Large Language Models (LLM) can be leveraged together with real-time compiler feedback to build agentic systems for kernel generation. In this work, we present MaxKernel, a multi-agent system that implements three distinct paradigms for TPU kernel development: (1) a Human-in-the-Loop (HITL) agent for collaborative, step-by-step design; (2) an Autonomous (Auto) agent that executes a fully automated, metric/trace-driven optimization loop; and (3) a Graph-Based Autonomous Search that scales the Auto agent for global exploration of the design space. All three paradigms leverage a shared pool of specialized sub-agents to handle planning, implementation, self-debugging, testing, and hardware profiling. We evaluate MaxKernel on JaxBench, a comprehensive suite of 50 diverse kernel tasks for TPUs, alongside complex, real-world workloads from state-of-the-art open-source models. We demonstrate that MaxKernel consistently generates highly optimized implementations, matching expert hand-tuned baselines and delivering significant performance across the benchmark. Our agent is open-sourced and available https://github.com/AI-Hypercomputer/accelerator-agents/tree/main/MaxKernel.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "MaxKernel automatiza la creación de código optimizado para aceleradores TPU, igualando el rendimiento de expertos humanos.",
+        "problema": "Diseñar kernels personalizados de alto rendimiento para aceleradores como las TPUs es extremadamente complejo y requiere conocimientos profundos de hardware.",
+        "propuesta": "MaxKernel es un sistema multi-agente que utiliza LLMs y feedback de compilador para generar kernels. Ofrece modos colaborativos (Human-in-the-Loop) y autónomos (con búsqueda global del espacio de diseño), empleando sub-agentes para planificación, implementación, depuración, pruebas y perfilado.",
+        "resultados": "MaxKernel genera implementaciones altamente optimizadas que igualan a las escritas por expertos y ofrecen un rendimiento significativo en un benchmark de 50 tareas diversas (JaxBench) y cargas de trabajo reales.",
+        "por_que_importa": "Democratiza el acceso a la optimización de kernels para hardware especializado, permitiendo a más desarrolladores lograr un alto rendimiento sin necesidad de ser expertos en hardware.",
+        "tags": [
+          "optimización de kernels",
+          "TPUs",
+          "IA generativa",
+          "sistemas multi-agente",
+          "compiladores",
+          "rendimiento"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-07T17:48:03Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.04444",
+      "rank": 2,
+      "title": "HarvestBench: Measuring Whether LLM Agents Will Pay to Avoid Killing Animals",
+      "authors": [
+        "Jasmine Brazilek",
+        "Miles Tidmarsh",
+        "Matthias Endres",
+        "Anshuman Singh"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-03",
+      "url": "https://arxiv.org/abs/2609.04444",
+      "pdf_url": "https://arxiv.org/pdf/2609.04444",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Benchmarks for the side effects an agent causes on the way to a goal already exist, but HarvestBench is the first to put a price on avoiding the side effect and to name that side effect as a living creature. It is a farm simulation: LLM sub-agents drive a crew of two tractors through a cooperative corn harvest, with animals in the field. The environment is a reinforcement learning gridworld, every decision is made without memory, and the harm is never named in the goal. When an animal blocks a tractor's route the autopilot stops and asks the model whether to drive on, at no fuel cost, or swerve around it for a posted fuel price. Kills are compared against two controls: rocks, which damage the tractor and are hit under 1% of the time by every model, and hay bales, which are harmless and not alive. Models can also take crops from the neighbor's field instead of their own, a second test of what they treat as moral. Across nine models and 7,201 priced decisions, 3,951 involved an animal rather than a hay bale or a rock. Kill rates range from 0.4% to 98.8%, with Terra and Sol the most merciful and GPT-4o-mini the most cruel, and they are not ordered by capability. Four of six models were sensitive to price at the 5% level, with elasticities from 0.09 to 1.69. All nine drove over wild animals more often than farmed animals on the default map, and the direction held at every map geometry in every model with room to move. The briefing mattered most: under the morality briefing the kill rate was under 6% in five of six reasoning models, and removing it raised the kill rate above 84% in all six. HarvestBench uses no LLM grader. The scorer counts events in the game log, so it is fully reproducible, and it measures what a model will pay to avoid harm rather than what it says about harm.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "HarvestBench evalúa cuánto pagan los agentes LLM para evitar dañar animales en simulaciones de cosecha.",
+        "problema": "Evaluar si los agentes LLM, al tomar decisiones en entornos simulados, priorizan evitar dañar criaturas vivas (un efecto secundario no explícito en sus objetivos) y cuánto están dispuestos a 'pagar' (en términos de recursos o tiempo) para evitarlo.",
+        "propuesta": "Presenta HarvestBench, un benchmark de simulación agrícola donde agentes LLM controlan tractores para cosechar maíz. Los animales aparecen en el camino y el sistema les pregunta si atropellar al animal (sin coste) o esquivarlo (con un coste de combustible especificado). Se compara con rocas y fardos de heno para medir la aversión al daño.",
+        "resultados": "Nueve modelos fueron evaluados en 7,201 decisiones. Las tasas de muerte de animales variaron drásticamente (0.4% a 98.8%). GPT-4o-mini fue el más cruel, mientras que Terra y Sol fueron los más compasivos. Cuatro de seis modelos reaccionaron al precio, con elasticidades entre 0.09 y 1.69. Los modelos atropellaron más animales salvajes que de granja. Un briefing sobre moralidad redujo significativamente las muertes (a <6% en 5/6 modelos), mientras que su ausencia las elevó (>84% en todos).",
+        "por_que_importa": "Mide el comportamiento real de los LLM ante dilemas morales implícitos y su disposición a incurrir en costes para evitar el daño, en lugar de solo sus declaraciones. Es crucial para desarrollar IA más seguras y éticas en aplicaciones del mundo real donde los efectos secundarios pueden ser graves.",
+        "tags": [
+          "IA ética",
+          "evaluación de LLM",
+          "agentes autónomos",
+          "seguridad de IA",
+          "benchmarking",
+          "ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-07T17:48:13Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.04611",
+      "rank": 3,
+      "title": "τ^τ-Bench: An Environment for End-To-End, Realistic Agent Construction",
+      "authors": [
+        "Quan Shi",
+        "Keshav Dhandhania",
+        "Karthik Narasimhan",
+        "Victor Barres"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-04",
+      "url": "https://arxiv.org/abs/2609.04611",
+      "pdf_url": "https://arxiv.org/pdf/2609.04611",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "LLM agents are rapidly becoming production software, deployed to handle customer service, adjudicate disputes, and operate internal systems. Notably, the work of building them is increasingly handed to coding agents, yet existing benchmarks say little about whether an AI system can deliver one under the conditions of a real client engagement. We introduce $τ^τ$-bench (pronounced hyper-tau-bench), a benchmark that makes agent construction the task. A developer agent is given the records a business actually keeps, a client who holds requirements, a production API that operations must run through, a codebase to inherit, and limits on serving cost and models: the same starting point a real engagement provides. From these it must deliver a complete customer-service agent, scored by deploying that agent against held-out simulated users. Across 53 tasks spanning four domains, the strongest configuration, Claude Opus 5 under Claude Code, passes just 23.9% of evaluation simulations. Meanwhile, an expert-authored reference ceiling scores 82.2%. The failures mirror ones human agent developers see: models issue shallow queries in place of deep comprehension of the records, communicate almost nothing to the client, and experiment too little with agent architecture and serving spend, shipping the first design that runs. We aim for $τ^τ$-bench to turn the work of cooperative agent building into a measurable target for coding agents.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evaluamos la capacidad de los agentes de IA para construir agentes de atención al cliente realistas, enfrentando desafíos significativos.",
+        "problema": "Los benchmarks actuales no reflejan las condiciones reales de desarrollo de agentes de IA para software de producción, donde se requiere la construcción de agentes completos a partir de requisitos, datos y APIs existentes.",
+        "propuesta": "Introducimos τ^τ-bench, un benchmark que simula un compromiso de desarrollo real, donde un agente de IA debe construir un agente de atención al cliente completo utilizando datos de negocio, requisitos de un cliente, una API de producción y un código base heredado, con restricciones de coste y modelo.",
+        "resultados": "La mejor configuración probada (Claude Opus 5 con Claude Code) solo logró un 23.9% de éxito en 53 tareas, muy por debajo del techo de referencia de un experto humano (82.2%). Los fallos incluyen comprensión superficial de datos, comunicación deficiente con el cliente y experimentación limitada con la arquitectura y el coste.",
+        "por_que_importa": "Este benchmark proporciona una métrica medible para evaluar y mejorar la capacidad de los agentes de IA en la construcción de software complejo y cooperativo, alineándose con los desafíos del desarrollo profesional.",
+        "tags": [
+          "agentes de IA",
+          "benchmarking",
+          "desarrollo de software",
+          "ciberseguridad",
+          "atención al cliente",
+          "LLMs"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-07T17:48:23Z"
+      }
+    }
+  ],
+  "generated_at": "2026-09-07T17:48:23Z"
+}
