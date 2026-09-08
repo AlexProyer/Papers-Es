@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-08",
+  "report_type": "filtrado",
+  "evaluated": 10,
+  "selected": 1,
+  "papers": [
+    {
+      "id": "arxiv:2609.04010",
+      "rank": 1,
+      "title": "Unlocking Lossless Speedups in LLMs via Discrete Diffusion",
+      "authors": [
+        "Subham Sekhar Sahoo",
+        "Lingjie Chen",
+        "Khiem Pham",
+        "Jonathan Geuter"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-03",
+      "url": "https://arxiv.org/abs/2609.04010",
+      "pdf_url": "https://arxiv.org/pdf/2609.04010",
+      "score": 56,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Large Language Models (LLMs) owe much of their success to next-token prediction (NTP), but their autoregressive (AR) structure requires slow, sequential token generation. To overcome this bottleneck, we introduce diffusion-augmented LLMs, a new class of models that defines an AR model distribution while using diffusion to draw multiple tokens in parallel from that distribution. We decouple the parameters of these models into two sets: AR weights, trained using the standard NTP objective, and lightweight diffusion weights, trained to generate multiple tokens simultaneously. The diffusion weights are learned through a simple Diffusion Distillation phase that adds negligible overhead to existing LLM training pipelines. We also introduce $Ψ$-Spec, a family of samplers that enables lossless acceleration and inference-time scaling at a fixed context length. Unlike speculative decoding, our method requires no separate draft model. Unlike diffusion LLMs (d-LLMs), it accelerates generation without sacrificing the quality of the underlying AR model. The resulting models, called Uno, can be trained from scratch or built by augmenting existing open-weight AR LLMs. Uno achieves higher throughput than leading speculative-decoding methods at every evaluated batch size and delivers up to $3\\times$ speedups over the base AR model, including at the largest batch size supported by the device. Notably, our 8B Uno model outperforms the leading open d-LLM, the 26B DiffusionGemma, and the proprietary Mercury 2 across all evaluated benchmarks in agentic tool use, coding, and long-context reasoning. We release code and checkpoints at: https://s-sahoo.github.io/uno/",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Acelera la generación de texto en LLMs usando difusión, logrando mayor velocidad sin sacrificar calidad.",
+        "problema": "La generación secuencial de tokens en los Modelos de Lenguaje Grandes (LLMs) es lenta y limita su eficiencia.",
+        "propuesta": "Introduce 'Uno', una nueva clase de LLMs que combinan pesos autorregresivos (AR) con pesos de difusión ligeros para generar múltiples tokens en paralelo, usando un proceso de destilación de difusión y samplers Ψ-Spec para aceleración sin pérdida.",
+        "resultados": "Logra hasta 3x de aceleración sobre el modelo AR base, superando a métodos de decodificación especulativa y modelos de difusión existentes (como DiffusionGemma 26B y Mercury 2) en benchmarks de uso de herramientas, codificación y razonamiento de contexto largo.",
+        "por_que_importa": "Ofrece una forma práctica de acelerar significativamente la inferencia de LLMs sin requerir modelos adicionales ni comprometer la calidad, mejorando la eficiencia en aplicaciones del mundo real.",
+        "tags": [
+          "LLMs",
+          "Generación de Texto",
+          "Difusión",
+          "Aceleración",
+          "Ciberseguridad",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-08T16:48:53Z"
+      }
+    }
+  ],
+  "generated_at": "2026-09-08T16:48:53Z"
+}

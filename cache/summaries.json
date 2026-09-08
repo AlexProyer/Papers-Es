@@ -6685,5 +6685,22 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-09-07T17:48:23Z"
+  },
+  "arxiv:2609.04010": {
+    "tldr": "Acelera la generación de texto en LLMs usando difusión, logrando mayor velocidad sin sacrificar calidad.",
+    "problema": "La generación secuencial de tokens en los Modelos de Lenguaje Grandes (LLMs) es lenta y limita su eficiencia.",
+    "propuesta": "Introduce 'Uno', una nueva clase de LLMs que combinan pesos autorregresivos (AR) con pesos de difusión ligeros para generar múltiples tokens en paralelo, usando un proceso de destilación de difusión y samplers Ψ-Spec para aceleración sin pérdida.",
+    "resultados": "Logra hasta 3x de aceleración sobre el modelo AR base, superando a métodos de decodificación especulativa y modelos de difusión existentes (como DiffusionGemma 26B y Mercury 2) en benchmarks de uso de herramientas, codificación y razonamiento de contexto largo.",
+    "por_que_importa": "Ofrece una forma práctica de acelerar significativamente la inferencia de LLMs sin requerir modelos adicionales ni comprometer la calidad, mejorando la eficiencia en aplicaciones del mundo real.",
+    "tags": [
+      "LLMs",
+      "Generación de Texto",
+      "Difusión",
+      "Aceleración",
+      "Ciberseguridad",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-08T16:48:53Z"
   }
 }
