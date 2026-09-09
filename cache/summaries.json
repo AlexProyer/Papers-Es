@@ -6702,5 +6702,207 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-09-08T16:48:53Z"
+  },
+  "arxiv:2609.08373v1": {
+    "tldr": "Los 'jailbreaks' estructurales en IA son efectivos pero no se agravan con otros idiomas, incluso reduciendo su impacto.",
+    "problema": "Los modelos de lenguaje alineados fallan ante 'jailbreaks' estructurales (IICL) y la pérdida de alineación en idiomas no ingleses. Se hipotetiza que estas debilidades se suman.",
+    "propuesta": "Se evalúa la hipótesis de que los 'jailbreaks' estructurales (IICL) y la falta de alineación en idiomas no ingleses se potencian mutuamente, utilizando dos modelos Gemini en benchmarks de daño y abuso financiero en inglés, español, hindi y árabe.",
+    "resultados": "Los 'jailbreaks' IICL aumentan drásticamente el éxito del ataque (de <=6.7% a 80-100%), pero forzar la salida a idiomas no ingleses atenúa el ataque (11 de 12 condiciones no inglesas puntúan por debajo de su base en inglés). El riesgo principal es el ataque estructural en inglés, especialmente en finanzas.",
+    "por_que_importa": "Demuestra que las vulnerabilidades de 'jailbreak' no son aditivas. El riesgo residual más significativo es el ataque estructural en inglés, no una combinación de ataques multilingües, lo que orienta los esfuerzos de defensa.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Jailbreak",
+      "Modelos de Lenguaje",
+      "Seguridad",
+      "Multilingüe"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-09T16:48:29Z"
+  },
+  "arxiv:2609.08331v1": {
+    "tldr": "Las defensas actuales contra ataques a videos de IA son ineficaces; se necesitan soluciones a nivel de sistema.",
+    "problema": "Los modelos de lenguaje de video (VideoLLMs) son vulnerables a ataques que explotan su proceso de observación (muestreo de frames, compresión, fusión) para ocultar contenido dañino. Las defensas existentes operan a nivel de píxel y no protegen adecuadamente.",
+    "propuesta": "Se introduce DefTEval, un marco de evaluación para probar si las defensas a nivel de entrada (píxel) pueden mitigar ataques a nivel de observación en VideoLLMs. Se evalúan cinco VideoLLMs, once defensas y cinco tipos de ataque.",
+    "resultados": "Las defensas a nivel de entrada ofrecen protección limitada e inconsistente. Las tasas de detección de contenido dañino son frecuentemente cercanas a cero, incluso cuando las señales dañinas están en cada frame muestreado. La efectividad de la defensa depende más de la arquitectura del modelo que del método de defensa.",
+    "por_que_importa": "La seguridad de los VideoLLMs requiere mecanismos de robustez a nivel de sistema, incluyendo garantías de cobertura conscientes del muestreo, preservación de características relevantes para la seguridad a nivel de token y fusión equilibrada de modalidades, ya que las defensas actuales son insuficientes.",
+    "tags": [
+      "VideoLLMs",
+      "Ciberseguridad",
+      "Inteligencia Artificial",
+      "Ataques Adversariales",
+      "Robustez"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-09T16:48:38Z"
+  },
+  "arxiv:2609.09087v1": {
+    "tldr": "PrivEscalate evalúa y mejora la capacidad de los LLMs para escalar privilegios en Linux, un paso crucial en ciberataques.",
+    "problema": "La eficacia de los LLMs en tareas complejas de post-explotación, como la escalada de privilegios en Linux, no ha sido bien medida a gran escala, limitando la comparación de sus capacidades y la evaluación de riesgos.",
+    "propuesta": "Se presenta PrivEscalate, un benchmark a gran escala con 531 escenarios Dockerizados para evaluar la escalada de privilegios en Linux, y PrivEscAgent, un agente especializado que mejora el rendimiento de LLMs genéricos mediante técnicas de enumeración y planificación.",
+    "resultados": "Se evaluaron seis LLMs, mostrando capacidades heterogéneas según la clase de vulnerabilidad. El éxito de los LLMs es sensible a perturbaciones ambientales, aunque el riesgo no se elimina. Las arquitecturas de agente influyen en las tasas de éxito. PrivEscAgent mejora los baselines sin modificar los LLMs subyacentes.",
+    "por_que_importa": "Permite una evaluación más precisa de los riesgos de ciberseguridad asociados a LLMs en ataques, ayuda a validar herramientas defensivas y entrena equipos de red teaming para contrarrestar estas nuevas amenazas automatizadas.",
+    "tags": [
+      "LLMs",
+      "Ciberseguridad",
+      "Escalada de Privilegios",
+      "Linux",
+      "Benchmarking",
+      "Automatización de Ataques"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-09T16:48:48Z"
+  },
+  "arxiv:2609.08965v1": {
+    "tldr": "PlannerForge usa agentes LLM para automatizar y mejorar las pruebas de seguridad de vehículos autónomos, desde la generación de escenarios hasta la evaluación.",
+    "problema": "Las pruebas de escenarios para sistemas de conducción autónoma son un proceso fragmentado y modular, con herramientas separadas para cada etapa (generación, recuperación, modificación, ejecución, análisis), lo que limita la interacción y la eficiencia.",
+    "propuesta": "PlannerForge es un marco de agentes LLM que unifica y extiende todas las etapas de las pruebas basadas en escenarios, incluyendo la generación, selección, modificación, enrutamiento de módulos, pruebas de planificadores, mejora y benchmarking de sistemas de conducción autónoma.",
+    "resultados": "Las puntuaciones por tarea van de 0.88 a 1.00. Los modelos de código abierto (20-35B) igualan a las APIs comerciales en la mayoría de las tareas. La cadena de módulos retiene el 83% / 78% de las consultas iniciales (comerciales / código abierto). Supera a Scenario Factory 2.0 y BM25 en generación y selección de escenarios, y a From-Words-to-Collisions en ediciones físicamente válidas (>=94%). El ajuste de costes mejora el éxito del planificador (del 50.4% al 70.2%) y reduce las colisiones (del 19.0% al 8.4%).",
+    "por_que_importa": "Automatiza y mejora significativamente la seguridad y eficiencia de las pruebas de vehículos autónomos, haciendo que el proceso sea más cohesivo y permitiendo el uso de modelos LLM de código abierto más accesibles.",
+    "tags": [
+      "conducción autónoma",
+      "pruebas de seguridad",
+      "agentes LLM",
+      "ciberseguridad",
+      "IA",
+      "ingeniería de software"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-09T16:48:58Z"
+  },
+  "arxiv:2609.08306v1": {
+    "tldr": "HoneyRoute protege modelos de lenguaje de ataques, redirigiendo peticiones maliciosas a honeypots y recolectando inteligencia del atacante.",
+    "problema": "Los sistemas de serving de LLMs son vulnerables a ataques que pueden agotar recursos o comprometer la seguridad. Las defensas existentes no protegen la capa de serving ni recolectan inteligencia de los atacantes.",
+    "propuesta": "HoneyRoute introduce una capa de serving que detecta peticiones maliciosas y las redirige a un honeypot. Utiliza un router basado en embeddings, un honeypot dual (basado en reglas o una réplica del modelo) y un bucle de análisis para reentrenar el router con la inteligencia recolectada.",
+    "resultados": "El router alcanza un F1 de 0.911 con 38 ms de latencia adicional, igualando el 96% del F1 de un sistema de dos niveles pero con 1/385 de la latencia y 0% de evasión. Reduce el consumo de tokens del modelo de producción en un 97.8% bajo ataques de inundación. El reentrenamiento mejora la detección y reduce el mal enrutamiento de tráfico legítimo.",
+    "por_que_importa": "Mejora significativamente la seguridad y eficiencia de los LLMs en producción, permitiendo la detección de ataques y la recolección continua de inteligencia sin sacrificar el rendimiento.",
+    "tags": [
+      "LLM",
+      "ciberseguridad",
+      "honeypot",
+      "detección de ataques",
+      "serving",
+      "inteligencia artificial"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-09T16:49:08Z"
+  },
+  "arxiv:2609.08256v1": {
+    "tldr": "ACEA es una arena de coevolución para probar LLMs, enfrentando equipos rojos y azules en un ciclo de ataque y defensa.",
+    "problema": "Los métodos actuales para evaluar la seguridad de los LLMs (equipos rojos y azules) se desarrollan y prueban de forma aislada, lo que dificulta confiar en sus resultados.",
+    "propuesta": "ACEA es una plataforma que conecta adaptadores de equipo rojo y azul a un LLM objetivo compartido, evaluando sus tasas de ataque y defensa mediante un juez LLM y una metodología de rondas adversarias.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero describe una metodología que descompone la fuerza del ataque y la efectividad de la defensa por ronda, y permite la localización de fallos.",
+    "por_que_importa": "Proporciona una forma más fiable y procesable de evaluar y mejorar la seguridad de los LLMs al simular un ciclo continuo de ataque y defensa en un entorno controlado.",
+    "tags": [
+      "LLMs",
+      "Ciberseguridad",
+      "Evaluación de IA",
+      "Red Teaming",
+      "Blue Teaming",
+      "Defensa Adversaria"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-09T16:49:17Z"
+  },
+  "arxiv:2609.08394v1": {
+    "tldr": "Un sistema de IA compuesto para detectar malware en Windows equilibra precisión, eficiencia y robustez frente a ataques.",
+    "problema": "Los detectores de malware industriales son sistemas complejos de IA con componentes heterogéneos, pero sus arquitecturas internas son secretas, lo que dificulta su evaluación sistemática en cuanto a precisión, coste computacional y robustez ante ataques. La investigación académica, aunque transparente, suele analizar componentes aislados.",
+    "propuesta": "Se propone una metodología para evaluar y optimizar sistemas de IA compuestos de detección de malware en Windows, que equilibra explícitamente el rendimiento de detección, los requisitos computacionales y la robustez, introduciendo modelos de amenaza a nivel de sistema que consideran el conocimiento del atacante.",
+    "resultados": "El tiempo de entrenamiento del sistema se reduce y la capacidad de respuesta mejora con una pérdida marginal en el rendimiento de detección. Se demuestra que los atacantes con mayor conocimiento crean ejemplos adversarios más efectivos, degradando la capacidad de respuesta y exponiendo una relación directa entre eficiencia y robustez.",
+    "por_que_importa": "Permite a los profesionales seleccionar y desplegar sistemas de detección de malware que se ajusten mejor a sus restricciones operativas, entendiendo los compromisos entre rendimiento, velocidad y resistencia a ataques.",
+    "tags": [
+      "detección de malware",
+      "inteligencia artificial",
+      "ciberseguridad",
+      "sistemas compuestos",
+      "robustez",
+      "eficiencia"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-09T16:49:27Z"
+  },
+  "arxiv:2609.08841v1": {
+    "tldr": "Reconstruye modelos 3D completos y a escala métrica de vehículos a partir de pocas imágenes, superando limitaciones actuales.",
+    "problema": "La generación de modelos 3D de vehículos a partir de imágenes de a bordo es difícil porque los métodos actuales no garantizan la escala métrica y las cámaras solo capturan un lado del vehículo, resultando en reconstrucciones incompletas.",
+    "propuesta": "Se propone un método de reconstrucción de representaciones 3D Gaussianas para vehículos que utiliza un modelo fundacional visual para la escala métrica y una estrategia de clonación consciente de la simetría para completar las partes no observadas, aprovechando la estructura bilateral del vehículo.",
+    "resultados": "El método propuesto supera significativamente los enfoques existentes en completitud y precisión geométrica de los activos vehiculares, según experimentos en un conjunto de datos público.",
+    "por_que_importa": "Permite la creación de activos vehiculares de alta fidelidad y a escala métrica, cruciales para la generación de escenas de tráfico realistas y la simulación de escenarios de seguridad críticos.",
+    "tags": [
+      "reconstrucción 3D",
+      "visión por computadora",
+      "vehículos",
+      "escala métrica",
+      "geometría",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-09T16:49:36Z"
+  },
+  "arxiv:2609.08404": {
+    "tldr": "Nuevos entornos de IA enriquecidos con feedback mejoran el aprendizaje de agentes autónomos en tareas complejas y de largo plazo.",
+    "problema": "El entrenamiento de agentes de IA para tareas de largo plazo con Reinforcement Learning (RL) sufre de escasez de recompensas y limitaciones en la exploración y datos.",
+    "propuesta": "Se propone la adaptación del entorno (environment-side adaptation) mediante la creación de Entornos Enriquecidos con Feedback (FEEs), que reformulan el entorno para enriquecer las observaciones en lugar de solo guiar acciones.",
+    "resultados": "Los FEEs mejoran consistentemente el rendimiento en los benchmarks SciWorld y BFCL, estabilizan la dinámica de entrenamiento reduciendo la volatilidad de la entropía y facilitan la exploración proactiva del espacio de estados.",
+    "por_que_importa": "Esta técnica permite entrenar agentes de IA más capaces y eficientes para resolver problemas complejos y de largo alcance, superando las limitaciones de los métodos actuales.",
+    "tags": [
+      "IA",
+      "Aprendizaje por Refuerzo",
+      "Agentes Autónomos",
+      "Entornos de Entrenamiento",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-09T16:49:46Z"
+  },
+  "arxiv:2609.08368": {
+    "tldr": "Miles v0.1: un sistema de IA de pila completa y listo para producción para entrenamiento post-entrenamiento a escala.",
+    "problema": "La complejidad y los requisitos de recursos del entrenamiento post-entrenamiento a gran escala (RL) dificultan su acceso para investigadores y empresas.",
+    "propuesta": "Miles v0.1 es un sistema de IA de pila completa que aborda el entrenamiento post-entrenamiento con componentes verificados, limpios y personalizables, priorizando precisión, eficiencia, confiabilidad y escalabilidad. Soporta RL de parámetros completos, LoRA RL, destilación on-policy, y se extiende a modelos de difusión.",
+    "resultados": "Un estudio de caso demostró RL agentic asíncrono en un modelo GLM-5.2 744B-A40B, logrando un tiempo de paso mediano de 263 segundos en 64 GPUs NVIDIA GB300.",
+    "por_que_importa": "Hace que el entrenamiento post-entrenamiento de IA a gran escala sea más accesible y eficiente, permitiendo a más organizaciones investigar y desplegar modelos de IA avanzados.",
+    "tags": [
+      "IA",
+      "Entrenamiento Post-Entrenamiento",
+      "RL",
+      "Producción",
+      "Escalabilidad",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-09T16:49:55Z"
+  },
+  "arxiv:2609.06289": {
+    "tldr": "La geometría de los vectores de 'steering' en LLMs refleja la estructura de los valores humanos, validando su coherencia semántica.",
+    "problema": "No está claro si las técnicas de 'steering' para controlar el comportamiento de los LLMs aprenden estructuras semánticas coherentes o solo atajos específicos para cada tarea.",
+    "propuesta": "Se investiga si la geometría latente de los vectores de 'steering' en LLMs refleja la estructura teórica de los valores humanos básicos (Teoría de Schwartz), analizando métodos 'distribution-driven' y 'behavior-centric' en diversos modelos.",
+    "resultados": "Los métodos 'distribution-driven' recuperan topologías de valores humanos alineadas con predicciones teóricas (Spearman ρ hasta 0.51, p < 10⁻¹³). Los métodos 'behavior-centric' tienen un rendimiento comparable pero poca correlación con la geometría esperada. La fidelidad geométrica mejora con la escala del modelo y disminuye tras el ajuste de instrucciones. Una mejor alineación geométrica mejora la transferencia de valores humanos.",
+    "por_que_importa": "Valida que el 'steering' puede capturar una estructura semántica profunda y coherente de valores humanos, no solo atajos, lo que es crucial para desplegar LLMs de forma segura y alineada en aplicaciones sensibles.",
+    "tags": [
+      "LLMs",
+      "Ciberseguridad",
+      "Alineación",
+      "Valores Humanos",
+      "Interpretación",
+      "Steering"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-09T16:50:05Z"
+  },
+  "arxiv:2609.08183": {
+    "tldr": "NeoHorse-1 logra la auto-mejora recursiva en IA mediante un entrenamiento post-hoc inteligente y un bucle de retroalimentación.",
+    "problema": "Los sistemas de IA actuales carecen de un mecanismo concreto para observar sus capacidades y utilizarlas para aprender y mejorar de forma recursiva.",
+    "propuesta": "Se presenta NeoHorse-1, un sistema que combina un conjunto de modelos heterogéneos con un enrutamiento inteligente. Registra las interacciones, las convierte en ejemplos de entrenamiento y utiliza un currículum de tres etapas para el ajuste fino supervisado y la destilación guiada por el enrutamiento, cerrando un bucle de evaluación-selección-actualización.",
+    "resultados": "El entrenamiento post-hoc mejora el rendimiento promedio en 11 benchmarks. El modelo de 4B pasó de 58.94 a 64.87, y el de 9B de 65.60 a 69.04, reduciendo la brecha con modelos más grandes.",
+    "por_que_importa": "Establece un prototipo y un camino hacia la auto-mejora recursiva mediada por el 'harness' (entorno de herramientas), permitiendo que lo que el sistema aprende a hacer moldee su futuro aprendizaje.",
+    "tags": [
+      "IA",
+      "Auto-mejora",
+      "Entrenamiento Post-hoc",
+      "Modelos de Lenguaje",
+      "Agentes Inteligentes",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-09T16:50:14Z"
   }
 }

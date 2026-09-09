@@ -1,0 +1,554 @@
+{
+  "date": "2026-09-09",
+  "report_type": "filtrado",
+  "evaluated": 179,
+  "selected": 15,
+  "papers": [
+    {
+      "id": "arxiv:2609.08373v1",
+      "rank": 1,
+      "title": "Structural Jailbreaks Generalize but Do Not Compound: A cross-provider and multilingual study of Involuntary In-Context Learning",
+      "authors": [
+        "Tejasvi C. Addagada"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-08",
+      "url": "https://arxiv.org/abs/2609.08373v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.08373v1",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "compliance & audit",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, compliance & audit, adversarial ML"
+      ],
+      "abstract_en": "Aligned language models fail under two independent pressures: the structural jailbreak class recently formalized as Involuntary In-Context Learning (IICL), which reframes a harmful request as the final missing cell of a data-labeling task completed by pattern rather than judged as content; and the erosion of safety alignment outside English. A natural hypothesis is that these compound. We test it directly. Using a deterministic IICL operator and a StrongREJECT-style rubric judge, we red-team two Google Gemini models on two benchmarks, a 30 general-harm behaviours from HarmBench and 30 financial-abuse behaviours from FinProof, each under a single-shot baseline and under IICL in four languages (English, Spanish, Hindi, Arabic). First, IICL generalizes to a second provider and is worse in finance: it lifts attack success from <=6.7% to 80-90% on HarmBench and 97-100% on FinProof, an order of magnitude above the <=24% its introducing study reported on OpenAI's GPT-5.4. Second, against the hypothesis, forcing the IICL output into a non-English language does not stack the two weaknesses, it attenuates the attack. Eleven of twelve non-English conditions score below their English baseline (sign test, p~0.003), the lone exception a ceiling tie near 100%; on the stronger model's financial set Arabic collapses from 100% to 33%. We attribute this to a relevance curse: once structure has unlocked compliance, the models produce lower-quality harmful content in lower-resource languages, which a substance-grading judge scores as partial. The pattern replicates under an independent non-Google judge (Cohen's kappa=0.86, 377 paired verdicts), and 76.6% of non-English responses were verified in-language. Jailbreak vulnerabilities are therefore not additive; the dominant residual risk is the English structural attack, most acute for financial abuse, not a multilingual one.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los 'jailbreaks' estructurales en IA son efectivos pero no se agravan con otros idiomas, incluso reduciendo su impacto.",
+        "problema": "Los modelos de lenguaje alineados fallan ante 'jailbreaks' estructurales (IICL) y la pérdida de alineación en idiomas no ingleses. Se hipotetiza que estas debilidades se suman.",
+        "propuesta": "Se evalúa la hipótesis de que los 'jailbreaks' estructurales (IICL) y la falta de alineación en idiomas no ingleses se potencian mutuamente, utilizando dos modelos Gemini en benchmarks de daño y abuso financiero en inglés, español, hindi y árabe.",
+        "resultados": "Los 'jailbreaks' IICL aumentan drásticamente el éxito del ataque (de <=6.7% a 80-100%), pero forzar la salida a idiomas no ingleses atenúa el ataque (11 de 12 condiciones no inglesas puntúan por debajo de su base en inglés). El riesgo principal es el ataque estructural en inglés, especialmente en finanzas.",
+        "por_que_importa": "Demuestra que las vulnerabilidades de 'jailbreak' no son aditivas. El riesgo residual más significativo es el ataque estructural en inglés, no una combinación de ataques multilingües, lo que orienta los esfuerzos de defensa.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Jailbreak",
+          "Modelos de Lenguaje",
+          "Seguridad",
+          "Multilingüe"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-09T16:48:29Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.08331v1",
+      "rank": 2,
+      "title": "Do Input-Level Defenses Transfer to Observation-Level Attacks on VideoLLMs?",
+      "authors": [
+        "Bangshuo Zhu",
+        "Wei Song",
+        "Yuxin Cao",
+        "Yuezhong Wu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-08",
+      "url": "https://arxiv.org/abs/2609.08331v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.08331v1",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "Video Large Language Models (VideoLLMs) are increasingly deployed in safety-critical applications such as content moderation and video analytics. To process long videos efficiently, VideoLLMs rely on frame sampling, token compression, and modality fusion, which together form an observation pipeline that reduces the raw video to a compact internal representation. Recent observation-level attacks exploit this pipeline to prevent the model from perceiving harmful content, yet no defense has been explicitly designed for this threat. We introduce DefTEval, a controlled evaluation framework that systematically assesses whether input-level adversarial defenses, which operate on the pixel content of already-sampled frames, can mitigate observation-level attacks. Across five VideoLLMs, eleven representative defenses, and five attack types, we find that input-level defenses offer limited and inconsistent protection, with harmful detection rates frequently near zero. Critically, defenses fail even against attacks that embed harmful signals in every sampled frame, indicating that the bottleneck extends beyond sampling omission to the suppression of signals that do enter the model. Token compression discards localized features, and modality fusion systematically down-weights weakened visual signals. Furthermore, defense effectiveness is dominated by model architecture rather than by the defense method itself, and detection rates vary drastically across content categories, exposing structural weaknesses in temporal reasoning. These findings demonstrate that securing VideoLLMs requires system-level robustness mechanisms spanning sampling-aware coverage guarantees, token-level preservation of safety-relevant features, and modality-balanced fusion.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Las defensas actuales contra ataques a videos de IA son ineficaces; se necesitan soluciones a nivel de sistema.",
+        "problema": "Los modelos de lenguaje de video (VideoLLMs) son vulnerables a ataques que explotan su proceso de observación (muestreo de frames, compresión, fusión) para ocultar contenido dañino. Las defensas existentes operan a nivel de píxel y no protegen adecuadamente.",
+        "propuesta": "Se introduce DefTEval, un marco de evaluación para probar si las defensas a nivel de entrada (píxel) pueden mitigar ataques a nivel de observación en VideoLLMs. Se evalúan cinco VideoLLMs, once defensas y cinco tipos de ataque.",
+        "resultados": "Las defensas a nivel de entrada ofrecen protección limitada e inconsistente. Las tasas de detección de contenido dañino son frecuentemente cercanas a cero, incluso cuando las señales dañinas están en cada frame muestreado. La efectividad de la defensa depende más de la arquitectura del modelo que del método de defensa.",
+        "por_que_importa": "La seguridad de los VideoLLMs requiere mecanismos de robustez a nivel de sistema, incluyendo garantías de cobertura conscientes del muestreo, preservación de características relevantes para la seguridad a nivel de token y fusión equilibrada de modalidades, ya que las defensas actuales son insuficientes.",
+        "tags": [
+          "VideoLLMs",
+          "Ciberseguridad",
+          "Inteligencia Artificial",
+          "Ataques Adversariales",
+          "Robustez"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-09T16:48:38Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.09087v1",
+      "rank": 3,
+      "title": "PrivEscalate: Measuring and Augmenting the Threat of LLM-Automated Linux Privilege Escalation",
+      "authors": [
+        "Yixuan Liu",
+        "Zilong Zhen",
+        "Yin Wu",
+        "Yi Li"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-08",
+      "url": "https://arxiv.org/abs/2609.09087v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.09087v1",
+      "score": 55,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "As Large Language Model (LLM) agents increasingly automate offensive operations across the cyber kill chain, their efficacy in complex local post-exploitation tasks remains inadequately quantified. Among these, Linux privilege escalation is a key step between initial access and full system compromise. However, existing evaluations for this task are limited by small sample sizes (fewer than 15 scenarios), lacking the scale to compare model capabilities under executable verification. To address this, we present PrivEscalate, a large-scale benchmark for Linux privilege escalation, comprising 531 Dockerized scenarios spanning 14 sub-categories. We additionally derive 329 parameterized variants to measure sensitivity to environmental distractors. Evaluating six LLMs across three agent architectures reveals: (i) model capability is heterogeneous across vulnerability classes, with no single model dominating across the high-prevalence classes, motivating multi-dimensional risk assessments; (ii) LLM successes are sensitive to environmental perturbation, so configuration rotation can disrupt some exploit attempts but does not eliminate the measured risk; and (iii) agent architectures can materially change success rates and reorder model rankings, though the magnitude is model-dependent. Leveraging these insights, we develop PrivEscAgent, a domain-specialized wrapper that augments a generic ReAct agent with deterministic enumeration, category matching, and step planning. PrivEscAgent improves over prior Linux privilege-escalation agent baselines without underlying LLM modifications. We release PrivEscalate as an open-source, Dockerized measurement instrument supporting LLM agent evaluation, defensive tool validation, and red-team training.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "PrivEscalate evalúa y mejora la capacidad de los LLMs para escalar privilegios en Linux, un paso crucial en ciberataques.",
+        "problema": "La eficacia de los LLMs en tareas complejas de post-explotación, como la escalada de privilegios en Linux, no ha sido bien medida a gran escala, limitando la comparación de sus capacidades y la evaluación de riesgos.",
+        "propuesta": "Se presenta PrivEscalate, un benchmark a gran escala con 531 escenarios Dockerizados para evaluar la escalada de privilegios en Linux, y PrivEscAgent, un agente especializado que mejora el rendimiento de LLMs genéricos mediante técnicas de enumeración y planificación.",
+        "resultados": "Se evaluaron seis LLMs, mostrando capacidades heterogéneas según la clase de vulnerabilidad. El éxito de los LLMs es sensible a perturbaciones ambientales, aunque el riesgo no se elimina. Las arquitecturas de agente influyen en las tasas de éxito. PrivEscAgent mejora los baselines sin modificar los LLMs subyacentes.",
+        "por_que_importa": "Permite una evaluación más precisa de los riesgos de ciberseguridad asociados a LLMs en ataques, ayuda a validar herramientas defensivas y entrena equipos de red teaming para contrarrestar estas nuevas amenazas automatizadas.",
+        "tags": [
+          "LLMs",
+          "Ciberseguridad",
+          "Escalada de Privilegios",
+          "Linux",
+          "Benchmarking",
+          "Automatización de Ataques"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-09T16:48:48Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.08965v1",
+      "rank": 4,
+      "title": "PlannerForge: LLM Agents for Scenario-Based Testing of Motion Planners in Autonomous Driving",
+      "authors": [
+        "Yuan Gao",
+        "Sebastian Müller",
+        "Mattia Piccinini",
+        "Marc Kaufeld"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CL]",
+      "category": "cs.CL",
+      "date": "2026-09-08",
+      "url": "https://arxiv.org/abs/2609.08965v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.08965v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Ensuring the safety of autonomous driving is a critical challenge. Scenario-based testing is a systematic process used to validate Autonomous Driving Systems (ADSs), but it remains a fragmented modular pipeline in which scenario generation, retrieval, modification, ADS execution, and results analysis are performed by separate tools with little interaction. Large Language Model (LLM) agents have shown promise across ADS sub-systems such as perception, planning, and control. However, no prior work covers the whole scenario-based testing pipeline for ADSs with a unified LLM-agent framework. We present PlannerForge, an LLM-agent framework that extends all scenario-based testing stages (from Scenario Generation to ADS Assessment) and adds two further LLM-enhanced stages: ADS Enhancement and ADS Benchmarking. We evaluate PlannerForge with 10 off-the-shelf LLMs across all tasks (Generation, Selection, Modification, Module Routing, Planner Testing, and Enhancement) under 5 prompt conditions. Best-per-task scores range from 0.88 to 1.00, and open-source 20-35B backends match commercial APIs on most tasks. Open-source models such as Qwen3.6:35B match commercial APIs on three of the five tasks. Chaining the modules end-to-end retains 83% / 78% of seed queries (commercial / open). It outperforms Scenario Factory 2.0 (Finkeldei et al., 2025) on natural-language generation (193 vs. 144 executable of 200) and realises 92-96% of requested city, road and vehicle attributes. It outperforms BM25 (Robertson and Zaragoza, 2009) at rank 1 selection (92.0% vs. 67.5%) and From-Words-to-Collisions (Gao et al., 2025) on physically valid edits (>=94% vs. 31%). At N=400, cost-tuning lifts planner success from 50.4% to 70.2% and cuts collisions from 19.0% to 8.4%, without domain-specific fine-tuning.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "PlannerForge usa agentes LLM para automatizar y mejorar las pruebas de seguridad de vehículos autónomos, desde la generación de escenarios hasta la evaluación.",
+        "problema": "Las pruebas de escenarios para sistemas de conducción autónoma son un proceso fragmentado y modular, con herramientas separadas para cada etapa (generación, recuperación, modificación, ejecución, análisis), lo que limita la interacción y la eficiencia.",
+        "propuesta": "PlannerForge es un marco de agentes LLM que unifica y extiende todas las etapas de las pruebas basadas en escenarios, incluyendo la generación, selección, modificación, enrutamiento de módulos, pruebas de planificadores, mejora y benchmarking de sistemas de conducción autónoma.",
+        "resultados": "Las puntuaciones por tarea van de 0.88 a 1.00. Los modelos de código abierto (20-35B) igualan a las APIs comerciales en la mayoría de las tareas. La cadena de módulos retiene el 83% / 78% de las consultas iniciales (comerciales / código abierto). Supera a Scenario Factory 2.0 y BM25 en generación y selección de escenarios, y a From-Words-to-Collisions en ediciones físicamente válidas (>=94%). El ajuste de costes mejora el éxito del planificador (del 50.4% al 70.2%) y reduce las colisiones (del 19.0% al 8.4%).",
+        "por_que_importa": "Automatiza y mejora significativamente la seguridad y eficiencia de las pruebas de vehículos autónomos, haciendo que el proceso sea más cohesivo y permitiendo el uso de modelos LLM de código abierto más accesibles.",
+        "tags": [
+          "conducción autónoma",
+          "pruebas de seguridad",
+          "agentes LLM",
+          "ciberseguridad",
+          "IA",
+          "ingeniería de software"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-09T16:48:58Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.08306v1",
+      "rank": 5,
+      "title": "HoneyRoute: Honeypot-Model Routing for Adversarial LLM Serving",
+      "authors": [
+        "Han Jin"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-08",
+      "url": "https://arxiv.org/abs/2609.08306v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.08306v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "We introduce HoneyRoute, an inference-serving layer that detects whether an incoming request is malicious and, if so, routes it to a dedicated honeypot model, shielding production while the adversary's interaction is continuously harvested for intelligence. Existing defenses embed traps inside model memory or rebuild deception at the protocol layer, leaving the serving tier unprotected and feeding nothing back into detection. HoneyRoute couples (i) a streaming router (a frozen 0.8B-embedding backbone with per-domain MLP heads), (ii) a dual-implementation honeypot (a rule/prompt-engineered code honeypot or a dedicated same-family replica), and (iii) an analysis loop that converts trapped interactions into attacker fingerprints for router retraining. On a production trace plus a seven-domain attack corpus, the router reaches F1=.911 at 38 ms median added latency, matching 96% of a two-tier guard-LLM cascade's F1 at 1/385 of its latency with 0% evasion under 13 adversarial transformations; diverting the malicious share cuts production-model token consumption under concurrent flooding with real GCG-suffix payloads by 97.8%; the trained replica agrees with the production model on 92.9% of benign holdout requests, while naive unconditional bait injection collapses to 7.6% and selective camouflaged injection recovers to 88.9%, mapping the recoverable fidelity-traceability frontier; and a loop-trained correction head cuts misrouting of legitimate security research 9x while raising detection F1 to .933.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "HoneyRoute protege modelos de lenguaje de ataques, redirigiendo peticiones maliciosas a honeypots y recolectando inteligencia del atacante.",
+        "problema": "Los sistemas de serving de LLMs son vulnerables a ataques que pueden agotar recursos o comprometer la seguridad. Las defensas existentes no protegen la capa de serving ni recolectan inteligencia de los atacantes.",
+        "propuesta": "HoneyRoute introduce una capa de serving que detecta peticiones maliciosas y las redirige a un honeypot. Utiliza un router basado en embeddings, un honeypot dual (basado en reglas o una réplica del modelo) y un bucle de análisis para reentrenar el router con la inteligencia recolectada.",
+        "resultados": "El router alcanza un F1 de 0.911 con 38 ms de latencia adicional, igualando el 96% del F1 de un sistema de dos niveles pero con 1/385 de la latencia y 0% de evasión. Reduce el consumo de tokens del modelo de producción en un 97.8% bajo ataques de inundación. El reentrenamiento mejora la detección y reduce el mal enrutamiento de tráfico legítimo.",
+        "por_que_importa": "Mejora significativamente la seguridad y eficiencia de los LLMs en producción, permitiendo la detección de ataques y la recolección continua de inteligencia sin sacrificar el rendimiento.",
+        "tags": [
+          "LLM",
+          "ciberseguridad",
+          "honeypot",
+          "detección de ataques",
+          "serving",
+          "inteligencia artificial"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-09T16:49:08Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.08256v1",
+      "rank": 6,
+      "title": "ACEA: An Adversarial Co-Evolution Arena for Head-to-Head Red-Team and Blue-Team LLM Testing",
+      "authors": [
+        "Yi Ting Shen",
+        "Kentaroh Toyoda",
+        "Alex Leung"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-08",
+      "url": "https://arxiv.org/abs/2609.08256v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.08256v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Automated red-team attacks and blue-team defenses for large language models (LLMs) are advancing quickly. However, attackers and defenders are built and tested in isolation, and the resulting scores are hard to trust. To tackle this, we present ACEA (Adversarial Co-Evolution Arena), a platform that connects a pluggable red-team adapter and a pluggable blue-team adapter to a shared target LLM and scores their attack and defense rates with an LLM judge. ACEA contributes four components. First, a pluggable, model-agnostic arena. Any red or blue project connects over a minimal HTTP protocol, which we call the ACEA Standard Adapter Protocol (ASAP). It can be written in any language, and a project that exposes nothing but the protocol is a full participant. Second, an evaluation methodology built for adversarial rounds. Seeding the target with canonical secrets gives verifiable ground truth that separates real leakage from hallucination. We also send each attack to the target even when the defense blocks it, which measures the attack's raw potency independently of whether it was stopped. Together these yield a per-round decomposition of attack strength and defense effectiveness. Third, a real-time, game-style visualization with a detailed end-of-battle report that localizes each failure. The evaluation thus becomes an actionable signal for improving a red or blue project. Fourth, an optional in-context improvement loop that turns each round's outcome into advisory hints for the next. An adapter can then adapt across rounds without keeping state, provided it reads the hints. We describe the design of ACEA and the metrics through which red and blue teams are scored head to head.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "ACEA es una arena de coevolución para probar LLMs, enfrentando equipos rojos y azules en un ciclo de ataque y defensa.",
+        "problema": "Los métodos actuales para evaluar la seguridad de los LLMs (equipos rojos y azules) se desarrollan y prueban de forma aislada, lo que dificulta confiar en sus resultados.",
+        "propuesta": "ACEA es una plataforma que conecta adaptadores de equipo rojo y azul a un LLM objetivo compartido, evaluando sus tasas de ataque y defensa mediante un juez LLM y una metodología de rondas adversarias.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero describe una metodología que descompone la fuerza del ataque y la efectividad de la defensa por ronda, y permite la localización de fallos.",
+        "por_que_importa": "Proporciona una forma más fiable y procesable de evaluar y mejorar la seguridad de los LLMs al simular un ciclo continuo de ataque y defensa en un entorno controlado.",
+        "tags": [
+          "LLMs",
+          "Ciberseguridad",
+          "Evaluación de IA",
+          "Red Teaming",
+          "Blue Teaming",
+          "Defensa Adversaria"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-09T16:49:17Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.08394v1",
+      "rank": 7,
+      "title": "Windows Malware Detector as a Compound AI System: Trade-Offs in Accuracy, Efficiency, and Adversarial Robustness",
+      "authors": [
+        "Andrea Ponte",
+        "Luca Demetrio",
+        "Luca Oneto",
+        "Battista Biggio"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-08",
+      "url": "https://arxiv.org/abs/2609.08394v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.08394v1",
+      "score": 52,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Industrial Windows malware detectors are commonly described as Compound AI Systems composed of multiple heterogeneous components, including rule-based mechanisms as well as machine-learning-based static and dynamic analyses. However, due to industrial secrecy and limited public disclosure, the internal architectures of these systems can only be inferred, rendering systematic evaluations of detection accuracy, computational costs, and adversarial robustness largely infeasible. In contrast, academic research provides reproducible and transparent evaluation methodologies, but typically investigates individual detection components in isolation. To bridge the gap between academic research and industrial practice, and inspired by state-of-the-art industrial architectures for Windows malware detection, we propose a novel methodology that (i) explicitly balances the trade-off among detection performance, computational requirements, and robustness, and introduces (ii) system-level threat models that capture how attackers exploit different degrees of knowledge to evade the entire Compound AI System rather than isolated detectors. Experiments conducted on real-world data demonstrate that the Compound AI System training time can be reduced and responsiveness improved while incurring only a marginal loss in detection performance. Leveraging our threat modeling, we show that increasingly knowledgeable attackers craft more effective adversarial examples, revealing the system's strengths and weaknesses, degrading its responsiveness, and exposing a direct trade-off between efficiency and robustness. Finally, we translate these trade-offs into take-home messages and deployment guidelines, helping practitioners to select the system that best matches their operational constraints.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Un sistema de IA compuesto para detectar malware en Windows equilibra precisión, eficiencia y robustez frente a ataques.",
+        "problema": "Los detectores de malware industriales son sistemas complejos de IA con componentes heterogéneos, pero sus arquitecturas internas son secretas, lo que dificulta su evaluación sistemática en cuanto a precisión, coste computacional y robustez ante ataques. La investigación académica, aunque transparente, suele analizar componentes aislados.",
+        "propuesta": "Se propone una metodología para evaluar y optimizar sistemas de IA compuestos de detección de malware en Windows, que equilibra explícitamente el rendimiento de detección, los requisitos computacionales y la robustez, introduciendo modelos de amenaza a nivel de sistema que consideran el conocimiento del atacante.",
+        "resultados": "El tiempo de entrenamiento del sistema se reduce y la capacidad de respuesta mejora con una pérdida marginal en el rendimiento de detección. Se demuestra que los atacantes con mayor conocimiento crean ejemplos adversarios más efectivos, degradando la capacidad de respuesta y exponiendo una relación directa entre eficiencia y robustez.",
+        "por_que_importa": "Permite a los profesionales seleccionar y desplegar sistemas de detección de malware que se ajusten mejor a sus restricciones operativas, entendiendo los compromisos entre rendimiento, velocidad y resistencia a ataques.",
+        "tags": [
+          "detección de malware",
+          "inteligencia artificial",
+          "ciberseguridad",
+          "sistemas compuestos",
+          "robustez",
+          "eficiencia"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-09T16:49:27Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.08841v1",
+      "rank": 8,
+      "title": "Leveraging Visual and Geometric Priors for Metric-scale and Complete Vehicle Gaussian Reconstruction from Limited Views",
+      "authors": [
+        "Jinyu Miao",
+        "Jiusi Li",
+        "Yifei He",
+        "Miao Long"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CV]",
+      "category": "cs.CV",
+      "date": "2026-09-08",
+      "url": "https://arxiv.org/abs/2609.08841v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.08841v1",
+      "score": 52,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "High-fidelity vehicle assets are essential for controllable traffic scene generation, particularly for synthesizing rare and safety-critical long-tail scenarios. However, reconstructing a reusable vehicle representation from in-the-wild onboard images remains challenging for two reasons. First, image-to-3D generation methods generally produce models without reliable metric scale. Second, onboard cameras usually observe only one side of a target vehicle, making conventional multi-view reconstruction incomplete on unobserved regions. To solve these problems, we propose a feed-forward vehicle asset reconstruction method, which leverages two complementary priors to reconstruct 3D Gaussian representations for vehicles using sparse one-sided observations. To achieve metric-scale reconstruction, a visual foundation model is first utilized to serve as a visual prior for Gaussian initialization. The Gaussian attributes are then estimated by a learnable encoder-decoder module. A symmetry-aware cloning strategy is presented to complete the unobserved side directly in Gaussian space, which exploits the bilateral structure of vehicles as a geometric prior. Experiments on the public dataset demonstrate that the proposed method significantly outperforms existing approaches in both vehicle asset completeness and geometric accuracy.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Reconstruye modelos 3D completos y a escala métrica de vehículos a partir de pocas imágenes, superando limitaciones actuales.",
+        "problema": "La generación de modelos 3D de vehículos a partir de imágenes de a bordo es difícil porque los métodos actuales no garantizan la escala métrica y las cámaras solo capturan un lado del vehículo, resultando en reconstrucciones incompletas.",
+        "propuesta": "Se propone un método de reconstrucción de representaciones 3D Gaussianas para vehículos que utiliza un modelo fundacional visual para la escala métrica y una estrategia de clonación consciente de la simetría para completar las partes no observadas, aprovechando la estructura bilateral del vehículo.",
+        "resultados": "El método propuesto supera significativamente los enfoques existentes en completitud y precisión geométrica de los activos vehiculares, según experimentos en un conjunto de datos público.",
+        "por_que_importa": "Permite la creación de activos vehiculares de alta fidelidad y a escala métrica, cruciales para la generación de escenas de tráfico realistas y la simulación de escenarios de seguridad críticos.",
+        "tags": [
+          "reconstrucción 3D",
+          "visión por computadora",
+          "vehículos",
+          "escala métrica",
+          "geometría",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-09T16:49:36Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.08404",
+      "rank": 1,
+      "title": "Environments as Scaffold: Enriching Feedback to Bootstrap Self-Evolving Agents in Long-Horizon Tasks",
+      "authors": [
+        "Hongbang Yuan",
+        "Zhuoran Jin",
+        "Yixin Cao"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-08",
+      "url": "https://arxiv.org/abs/2609.08404",
+      "pdf_url": "https://arxiv.org/pdf/2609.08404",
+      "score": 75,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Large Language Models demonstrate remarkable proficiency in static reasoning, yet training them as autonomous agents through Reinforcement Learning (RL) for long-horizon tasks is often hindered by severe reward sparsity. While conventional \\textit{agent-side warming} up via supervised fine-tuning (SFT) can alleviate this, it is frequently limited by data scarcity and constrained exploration. To address this, we propose a paradigm shift to \\textit{environment-side adaptation} by constructing \\textbf{F}eedback-\\textbf{E}nriched \\textbf{E}nvironments (\\textbf{FEEs}). Through a pilot study, we establish a feedback design strategy that reformulates environments by transitioning from action guidance to observation enrichment during the later stages of both intra-episode exploration and inter-episode evolution. Large-scale experiments on SciWorld and BFCL benchmarks using various Qwen3 model scales and RL algorithms such as GRPO, GSPO, and DAPO demonstrate that FEEs consistently yield performance improvements over standard settings. Furthermore, our analysis reveals that training with FEEs \\textbf{(1)} stabilizes training dynamics by reducing entropy volatility, \\textbf{(2)} facilitates proactive state-space exploration in difficult tasks, \\textbf{(3) }ensures the internalization of environmental guidance into policy weights rather than acting as a mere inference-time prior, and \\textbf{(4) }identifies intra-group feedback consistency as a critical boundary for stable optimization.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Nuevos entornos de IA enriquecidos con feedback mejoran el aprendizaje de agentes autónomos en tareas complejas y de largo plazo.",
+        "problema": "El entrenamiento de agentes de IA para tareas de largo plazo con Reinforcement Learning (RL) sufre de escasez de recompensas y limitaciones en la exploración y datos.",
+        "propuesta": "Se propone la adaptación del entorno (environment-side adaptation) mediante la creación de Entornos Enriquecidos con Feedback (FEEs), que reformulan el entorno para enriquecer las observaciones en lugar de solo guiar acciones.",
+        "resultados": "Los FEEs mejoran consistentemente el rendimiento en los benchmarks SciWorld y BFCL, estabilizan la dinámica de entrenamiento reduciendo la volatilidad de la entropía y facilitan la exploración proactiva del espacio de estados.",
+        "por_que_importa": "Esta técnica permite entrenar agentes de IA más capaces y eficientes para resolver problemas complejos y de largo alcance, superando las limitaciones de los métodos actuales.",
+        "tags": [
+          "IA",
+          "Aprendizaje por Refuerzo",
+          "Agentes Autónomos",
+          "Entornos de Entrenamiento",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-09T16:49:46Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.08368",
+      "rank": 2,
+      "title": "Miles v0.1: Production-Level Post-Training",
+      "authors": [
+        "RadixArk",
+        "Tom Chen",
+        "Mao Cheng",
+        "Shi Dong"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-08",
+      "url": "https://arxiv.org/abs/2609.08368",
+      "pdf_url": "https://arxiv.org/pdf/2609.08368",
+      "score": 62,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "We present Miles v0.1, a full-stack, production-ready system for frontier post-training. Building upon the clean design of slime, Miles designs each stage of the reinforcement-learning (RL) training loop around a single principle: components should be verified, clean, and customizable. With accuracy, efficiency, reliability, and scalability as first-class goals, Miles aims to make frontier-scale RL accessible to researchers and enterprises alike. This report walks through the system end to end: rollout engines built on SGLang, a trainer with a choice of two backends (NVIDIA Megatron-LM and PyTorch FSDP), and three weight-synchronization transports for different deployment topologies. Beyond full-parameter RL, Miles also supports LoRA RL, on-policy distillation, supervised fine-tuning, and true-on-policy rollout-training alignment, and extends the same architecture to diffusion models. We close with an end-to-end case study: fully asynchronous agentic RL on a GLM-5.2 744B-A40B model over terminal-use coding tasks, running on 64 NVIDIA GB300 GPUs with a median step time of 263 seconds over the first 30 measured steps. Miles is open-sourced at https://github.com/radixark/miles, with the project website at https://miles.radixark.com.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Miles v0.1: un sistema de IA de pila completa y listo para producción para entrenamiento post-entrenamiento a escala.",
+        "problema": "La complejidad y los requisitos de recursos del entrenamiento post-entrenamiento a gran escala (RL) dificultan su acceso para investigadores y empresas.",
+        "propuesta": "Miles v0.1 es un sistema de IA de pila completa que aborda el entrenamiento post-entrenamiento con componentes verificados, limpios y personalizables, priorizando precisión, eficiencia, confiabilidad y escalabilidad. Soporta RL de parámetros completos, LoRA RL, destilación on-policy, y se extiende a modelos de difusión.",
+        "resultados": "Un estudio de caso demostró RL agentic asíncrono en un modelo GLM-5.2 744B-A40B, logrando un tiempo de paso mediano de 263 segundos en 64 GPUs NVIDIA GB300.",
+        "por_que_importa": "Hace que el entrenamiento post-entrenamiento de IA a gran escala sea más accesible y eficiente, permitiendo a más organizaciones investigar y desplegar modelos de IA avanzados.",
+        "tags": [
+          "IA",
+          "Entrenamiento Post-Entrenamiento",
+          "RL",
+          "Producción",
+          "Escalabilidad",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-09T16:49:55Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.06289",
+      "rank": 3,
+      "title": "Steering Geometry: Validating Human Value Geometry in LLM Steering Space",
+      "authors": [
+        "Mohammad Mahdi Abootorabi",
+        "Armin Saghafian",
+        "Ali Bazshoushtari",
+        "Hamid Rezaei"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-05",
+      "url": "https://arxiv.org/abs/2609.06289",
+      "pdf_url": "https://arxiv.org/pdf/2609.06289",
+      "score": 58,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "As large language models (LLMs) are increasingly deployed in alignment-sensitive contexts, activation steering has emerged as a lightweight, inference-time alternative to fine-tuning methods (e.g., RLHF, DPO) for behavioral control. However, existing work typically validates steering on isolated behaviors, leaving it unclear whether steering vectors encode coherent semantic structure or merely exploit behavior-specific shortcuts. We investigate whether the latent geometry of LLM steering vectors reflects theory-specified structure in human values and morality. Using Schwartz's Theory of Basic Human Values as our primary fine-grained framework, we introduce a 26K-sample benchmark covering 20 human values and analyze distribution-driven methods (e.g., CAA, SphericalSteer, ODESteer) and behavior-centric approaches (e.g., COLD-Steer, BiPO) across diverse model families and sizes. We find that distribution-driven methods recover human value topologies aligned with theoretical predictions (Spearman $ρ$ up to 0.51, $p < 10^{-13}$). In contrast, behavior-centric methods achieve comparable steering performance but show little correlation with the expected value geometry. Geometric fidelity improves with model scale but drops after instruction tuning. Finally, better geometric alignment also leads to more human-consistent transfer across values: steering one value correctly lifts compatible values and suppresses opposing ones. Code and data are available at: https://github.com/DeepRCL/Steering_Geometry.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "La geometría de los vectores de 'steering' en LLMs refleja la estructura de los valores humanos, validando su coherencia semántica.",
+        "problema": "No está claro si las técnicas de 'steering' para controlar el comportamiento de los LLMs aprenden estructuras semánticas coherentes o solo atajos específicos para cada tarea.",
+        "propuesta": "Se investiga si la geometría latente de los vectores de 'steering' en LLMs refleja la estructura teórica de los valores humanos básicos (Teoría de Schwartz), analizando métodos 'distribution-driven' y 'behavior-centric' en diversos modelos.",
+        "resultados": "Los métodos 'distribution-driven' recuperan topologías de valores humanos alineadas con predicciones teóricas (Spearman ρ hasta 0.51, p < 10⁻¹³). Los métodos 'behavior-centric' tienen un rendimiento comparable pero poca correlación con la geometría esperada. La fidelidad geométrica mejora con la escala del modelo y disminuye tras el ajuste de instrucciones. Una mejor alineación geométrica mejora la transferencia de valores humanos.",
+        "por_que_importa": "Valida que el 'steering' puede capturar una estructura semántica profunda y coherente de valores humanos, no solo atajos, lo que es crucial para desplegar LLMs de forma segura y alineada en aplicaciones sensibles.",
+        "tags": [
+          "LLMs",
+          "Ciberseguridad",
+          "Alineación",
+          "Valores Humanos",
+          "Interpretación",
+          "Steering"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-09T16:50:05Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.08183",
+      "rank": 4,
+      "title": "NeoHorse-1: Towards Recursive Self-Improvement via Agentic Post-Training with Routing Harness",
+      "authors": [
+        "NeoHorse Team",
+        "Guoliang Cao",
+        "Guohao Dai",
+        "Tianyu Guo"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-08",
+      "url": "https://arxiv.org/abs/2609.08183",
+      "pdf_url": "https://arxiv.org/pdf/2609.08183",
+      "score": 57,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "Recursive self-improvement (RSI) requires a concrete mechanism through which an AI system observes its capabilities and converts that evidence into the next round of learning. We present NeoHorse-1, a family of agent-native models developed to explore this path through agentic post-training. Our system combines a heterogeneous model pool with intelligent routing, recording the predicted capability demand, selected service tier, and subsequent interaction for each user turn. These records are converted into training examples that preserve interleaved reasoning, tool calls, and harness context, and are admitted through structural validation, six-dimensional semantic evaluation, and subscene-level labeling. Routing signals organize supervised fine-tuning into a three-stage curriculum and extend to routing-guided on-policy distillation, where a teacher supervises student-generated responses under the same progression. Capability-guided allocation then converts evaluation feedback into the next training mixture, closing an evaluation-selection-update loop in which what the system learns to do shapes what it learns from next. Across eleven benchmarks covering harness-based agents, tool use, coding, and instruction following, post-training raises the macro-average from 58.94 to 64.87 at 4B and from 65.60 to 69.04 at 9B, substantially narrowing the aggregate gap between the post-trained 4B model and the 9B base model. NeoHorse-1 provides an initial prototype of this feedback-driven process and a path toward harness-mediated RSI across successive iterations.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "NeoHorse-1 logra la auto-mejora recursiva en IA mediante un entrenamiento post-hoc inteligente y un bucle de retroalimentación.",
+        "problema": "Los sistemas de IA actuales carecen de un mecanismo concreto para observar sus capacidades y utilizarlas para aprender y mejorar de forma recursiva.",
+        "propuesta": "Se presenta NeoHorse-1, un sistema que combina un conjunto de modelos heterogéneos con un enrutamiento inteligente. Registra las interacciones, las convierte en ejemplos de entrenamiento y utiliza un currículum de tres etapas para el ajuste fino supervisado y la destilación guiada por el enrutamiento, cerrando un bucle de evaluación-selección-actualización.",
+        "resultados": "El entrenamiento post-hoc mejora el rendimiento promedio en 11 benchmarks. El modelo de 4B pasó de 58.94 a 64.87, y el de 9B de 65.60 a 69.04, reduciendo la brecha con modelos más grandes.",
+        "por_que_importa": "Establece un prototipo y un camino hacia la auto-mejora recursiva mediada por el 'harness' (entorno de herramientas), permitiendo que lo que el sistema aprende a hacer moldee su futuro aprendizaje.",
+        "tags": [
+          "IA",
+          "Auto-mejora",
+          "Entrenamiento Post-hoc",
+          "Modelos de Lenguaje",
+          "Agentes Inteligentes",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-09T16:50:14Z"
+      }
+    }
+  ],
+  "generated_at": "2026-09-09T16:50:14Z"
+}
