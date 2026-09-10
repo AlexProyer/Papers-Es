@@ -1,0 +1,549 @@
+{
+  "date": "2026-09-10",
+  "report_type": "filtrado",
+  "evaluated": 178,
+  "selected": 12,
+  "papers": [
+    {
+      "id": "arxiv:2609.10117v1",
+      "rank": 1,
+      "title": "Understanding the Security Boundary of Obfuscation-based On-Device LLM Protection",
+      "authors": [
+        "Hanyi Zhou",
+        "Chenyang Li",
+        "Yuanzhe Pang",
+        "Ke Xu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-09",
+      "url": "https://arxiv.org/abs/2609.10117v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.10117v1",
+      "score": 59,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "Trusted Execution Environments (TEEs) offer a promising mechanism for safeguarding the intellectual property of on-device Large Language Models (LLMs). To overcome the inherent computational bottlenecks of TEEs, existing TEE-Shielded LLM Partition (TSLP) methods apply efficient obfuscation schemes to computationally intensive layers, offloading them to external GPUs while retaining only lightweight operations within the TEE. Although a growing body of TSLP-based approaches has emerged, these defense mechanisms remain largely heuristic. Consequently, some methods are proven vulnerable to certain specialized adversarial attacks designed to exploit their specific architectural implementations. To overcome the limitations of these heuristic designs, this paper addresses a fundamental research question: can we establish common primitives to unify representative prior methodologies, characterize the security boundary of their compositions, and systematically extend them? To this end, we formalize a set of obfuscation primitives, defined as dual-tuples of linear computations satisfying specific algebraic properties. We demonstrate that the matrix-level weight transformations of the representative efficient TSLP frameworks studied in this paper can be expressed as compositions of these primitives; consequently, the canonical form of these primitive compositions, denoted as O_prior, characterizes the structural boundary of this primitive family. We then expose the vulnerabilities of O_prior through a novel primitive-guided attack methodology, Collapse, demonstrating a shared vulnerability in several prominent TSLP methods published in top-tier venues, such as ArrowCloak (Security'25), TSQP (S&P'25), and LoRO (NeurIPS'25). Finally, we introduce two novel obfuscation primitives and integrate them with existing constructs to formulate O_ext, extending this security boundary.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Se analizan las vulnerabilidades de las protecciones de LLMs en dispositivos y se proponen nuevas primitivas para fortalecer su seguridad.",
+        "problema": "Las protecciones de LLMs en dispositivos (TSLP) que usan Entornos de Ejecución Confiables (TEEs) y ofuscación son a menudo heurísticas y vulnerables a ataques especializados, comprometiendo la propiedad intelectual.",
+        "propuesta": "Se formalizan primitivas de ofuscación (pares de cómputos lineales con propiedades algebraicas) que unifican métodos TSLP existentes. Se caracteriza el límite de seguridad de estas composiciones (O_prior) y se explotan sus vulnerabilidades con un nuevo ataque (Collapse). Finalmente, se proponen nuevas primitivas para extender este límite (O_ext).",
+        "resultados": "Se demuestra que métodos TSLP prominentes como ArrowCloak, TSQP y LoRO son vulnerables a ataques guiados por primitivas. La extensión O_ext mejora el límite de seguridad.",
+        "por_que_importa": "Proporciona un marco formal para entender y mejorar la seguridad de los LLMs en dispositivos, crucial para proteger modelos propietarios y prevenir ataques.",
+        "tags": [
+          "LLM",
+          "Seguridad",
+          "TEEs",
+          "Ofuscación",
+          "Criptografía",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-10T16:33:51Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.09798v1",
+      "rank": 2,
+      "title": "CS-Guard: Benchmarking LLM Guardrails for Code Generation Security",
+      "authors": [
+        "Jinyang Li",
+        "Mingyu Guo",
+        "Hung X. Nguyen"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-09",
+      "url": "https://arxiv.org/abs/2609.09798v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.09798v1",
+      "score": 56,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "Large language models (LLMs) have been ex- ploited to generate malware, but the effective- ness of guardrails for code generation secu- rity remains unclear. We introduce CS-Guard, the first benchmark to systematically evalu- ate guardrails for code generation security. It covers 1) text-to-code generation with 1000 high-quality malware-generation prompts, 7 jailbreak attacks, and a novel fictional scenario attack (FSA) that embeds malicious intent in a legitimate fictional software-development sce- nario; and 2) code-to-code generation with 331 code prompts spanning code infilling, code completion, and code translation. We empiri- cally evaluate 9 guardrails across seven LLMs. We find that current guardrails perform poorly against malicious code-generation re- quests: for text-to-code, the average attack success rate (ASR) after jailbreaks reaches about 50% for many guardrails; for code-to- code, average ASR approaches 100% on base LLMs and remains high across many guardrails (14.4% to nearly 100%). Our FSA also achieves ASR close to 100% across many guardrails, raising major reliability concerns for real-world software development. To sup- port future research, CS-Guard uses a modular three-layer guardrail taxonomy that lets devel- opers register guardrails for evaluation. We release the benchmark and data to enable fur- ther community evaluation.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evaluar la seguridad de los LLMs en generación de código es crucial; CS-Guard revela que las protecciones actuales son insuficientes.",
+        "problema": "Los modelos de lenguaje grandes (LLMs) pueden ser explotados para generar código malicioso, pero la efectividad de las barreras de seguridad (guardrails) para prevenir esto no está clara.",
+        "propuesta": "Se introduce CS-Guard, el primer benchmark para evaluar sistemáticamente las barreras de seguridad en la generación de código. Incluye prompts de malware, ataques de jailbreak, un nuevo ataque de escenario ficticio (FSA) y evalúa 9 barreras en 7 LLMs.",
+        "resultados": "Las barreras actuales son poco efectivas. En texto-a-código, la tasa de éxito de ataques (ASR) post-jailbreak alcanza ~50%. En código-a-código, la ASR promedio es casi 100% en LLMs base y alta incluso con barreras (14.4% a ~100%). El FSA también supera las barreras con ASR cercano al 100%.",
+        "por_que_importa": "La baja fiabilidad de las barreras de seguridad actuales en LLMs para generación de código representa un riesgo significativo para el desarrollo de software real, ya que pueden ser fácilmente eludidas para crear software malicioso.",
+        "tags": [
+          "LLMs",
+          "Ciberseguridad",
+          "Generación de Código",
+          "Benchmarking",
+          "Seguridad de IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-10T16:34:01Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.10439v1",
+      "rank": 3,
+      "title": "Forgetting Only What Matters: Layer-Selective Unlearning toward Robust LLMs",
+      "authors": [
+        "Ravi Ranjan",
+        "Olivera Kotevska",
+        "Agoritsa Polyzou"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-09-09",
+      "url": "https://arxiv.org/abs/2609.10439v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.10439v1",
+      "score": 56,
+      "topics": [
+        "LLM",
+        "compliance & audit",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, compliance & audit, adversarial ML"
+      ],
+      "abstract_en": "Large Language Models (LLMs) can memorize and reproduce sensitive, copyrighted, or otherwise undesirable training content, creating privacy, safety, and regulatory concerns. Machine unlearning offers a practical alternative to full retraining, but many existing methods apply broad or fixed parameter updates that can degrade utility and remain brittle under deployment changes such as post-training quantization, where forgotten knowledge may partially re-emerge. We propose Forgetting Only What Matters via Unlearning Layers (FOM-UL), a layer-level unlearning framework that selects transformer layers using a forget-to-retain significance score. This score identifies layers with high influence on the forget set and low sensitivity to the retain set, allowing FOM-UL to concentrate updates where they are most effective while leaving most of the model unchanged. This targeted update strategy improves the forgetting-utility trade-off and provides an empirical path toward quantization-resilient unlearning by reducing the chance that small, diffuse updates are erased by low-bit rounding. Across TOFU, KnowUnDo, and MUSE-style evaluations, FOM-UL reduces residual memorization compared with strong GA, NPO, KLD, SURE, ReLearn, and LUNAR-based baselines while preserving retain-set utility close to the vanilla model. Under 8-bit and 4-bit post-training quantization, FOM-UL maintains stronger memorization suppression and utility preservation than competing methods, and adversarial prompt evaluations show lower recovery of forgotten content. Overall, FOM-UL provides an efficient unlearning strategy that improves targeted forgetting, utility preservation, and deployment robustness without claiming formal guarantees of erasure.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Olvida selectivamente datos sensibles en LLMs sin sacrificar su rendimiento general ni su robustez.",
+        "problema": "Los LLMs memorizan datos indeseados (privados, con copyright), y los métodos de 'unlearning' actuales pueden degradar su utilidad o ser frágiles ante cambios como la cuantización.",
+        "propuesta": "FOM-UL, un marco de 'unlearning' a nivel de capa que selecciona qué capas de transformador modificar basándose en una puntuación de significancia (alto impacto en datos a olvidar, bajo en datos a retener).",
+        "resultados": "Reduce la memorización residual comparado con métodos base (GA, NPO, etc.) mientras preserva la utilidad del modelo. Muestra mayor robustez ante cuantización de 8 y 4 bits y menor recuperación de datos olvidados en pruebas adversarias.",
+        "por_que_importa": "Ofrece una forma más eficiente y robusta de eliminar datos sensibles de LLMs, crucial para cumplir regulaciones, proteger la privacidad y asegurar la fiabilidad del modelo en producción.",
+        "tags": [
+          "LLMs",
+          "Machine Unlearning",
+          "Privacidad",
+          "Ciberseguridad",
+          "Robustez",
+          "Cuantización"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-10T16:34:10Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.10142v1",
+      "rank": 4,
+      "title": "Active Adaptation, Not Static Defense: Temporal Dynamics of Preventative Steering in Adversarial Fine-Tuning",
+      "authors": [
+        "Jing Guan",
+        "Yachao Yang",
+        "Zhaoliang Liu",
+        "Yuyao Zhang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-09",
+      "url": "https://arxiv.org/abs/2609.10142v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.10142v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Large language models remain fragile against malicious fine-tuning, motivating training-time defenses against harmful persona drift. Preventative Steering injects undesirable-trait persona vectors during fine-tuning and removes them at evaluation time, yet the mechanism behind its lasting protection remains unclear. Analyzing its temporal optimization dynamics, we find that the defense emerges from an early compensatory adaptation phase followed by a steady-state phase where the corrective signal decays; in parameter space, attention output projections emerge as the dominant residual-write route for defensive updates. Through Intervention Delta Preservation (IDP) and IDP Continuation experiments, we further show that preserving or reinjecting the weight offset fails to maintain protection, indicating that preventative steering relies on active adaptation rather than a static defense. Motivated by this finding, we propose Progressive Intensity Scheduling (PIS), which starts with a moderate injection strength and increases it after static-strength alignment begins to decay. Across the evaluated Qwen2.5 and Gemma-3 models, PIS improves safety robustness over static-strength steering while reducing harmful trait expression.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "La defensa contra el 'fine-tuning' malicioso en LLMs no es estática, sino que requiere adaptación activa y progresiva para mantener su efectividad.",
+        "problema": "Los modelos de lenguaje grandes (LLMs) son vulnerables a ataques de 'fine-tuning' malicioso que alteran su comportamiento (persona drift). Las defensas existentes, como 'Preventative Steering', no comprenden completamente su mecanismo de protección duradera.",
+        "propuesta": "Se analiza la dinámica temporal de 'Preventative Steering', identificando que la defensa surge de una adaptación temprana y un estado estable donde la señal correctiva decae. Se propone 'Progressive Intensity Scheduling' (PIS), que aumenta gradualmente la fuerza de la defensa a medida que la adaptación estática pierde efectividad.",
+        "resultados": "Los experimentos muestran que la protección de 'Preventative Steering' depende de la adaptación activa, no de una defensa estática. El PIS mejora la robustez de seguridad en modelos Qwen2.5 y Gemma-3 en comparación con la fuerza estática, reduciendo la expresión de rasgos dañinos.",
+        "por_que_importa": "Comprender y optimizar las defensas adaptativas es crucial para proteger los LLMs de manipulaciones maliciosas, garantizando su uso seguro y confiable en aplicaciones prácticas.",
+        "tags": [
+          "LLMs",
+          "Ciberseguridad",
+          "Adaptación Activa",
+          "Fine-tuning",
+          "Defensa"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-10T16:34:20Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.10105v1",
+      "rank": 5,
+      "title": "Beyond Training: A Feasibility Taxonomy for Inference-Time AI Governance",
+      "authors": [
+        "Samar Ansari"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-09",
+      "url": "https://arxiv.org/abs/2609.10105v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.10105v1",
+      "score": 53,
+      "topics": [
+        "AI agents",
+        "compliance & audit",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: AI agents, compliance & audit, adversarial ML"
+      ],
+      "abstract_en": "Compute governance today is a governance of training: the thresholds, reporting requirements, and frontier-AI regimes now in force attach to training compute and treat the trained model as the regulatory unit. That picture is incomplete: capability increasingly migrates to the deployment stage through inference-time scaling, agentic scaffolding, and compression onto consumer hardware. This paper asks which mechanisms are available once the regulatory object shifts from the training run to the inference call. We develop a feasibility taxonomy of twenty inference-time mechanisms across monitoring, verification, and enforcement, each rated on a four-point readiness scale against a documented four-vendor evidence base. We then stress the taxonomy against a two-dimensional adversary model (three capability tiers crossed with four adversary roles) and map each mechanism to four governance scenarios (domestic regulation, bilateral or multilateral coordination, industry self-regulation, and compute-marketplace governance). Fifteen of the twenty mechanisms have commercial technical substrates in production today, although governance-grade assurance and adversarial robustness vary substantially. The adversary analysis shows that this readiness holds only against a cooperative deployer and a low-to-medium-capability user: no mechanism rates adequate against a high-capability state-level deployer, and fine-tuning removes the model-internal components of the enforcement cluster, although platform-external controls can persist. A substitution analysis connects the taxonomy to a companion hardware paper as a conditional substitution principle describing when inference-stage and hardware-stage mechanisms provide comparable regulatory coverage under stated conditions. A second-rater reliability check on a random subset of the readiness ratings returned a quadratic-weighted Cohen's kappa of 0.74.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Gobernar la IA en tiempo de inferencia es crucial, ya que la capacidad se traslada de la fase de entrenamiento a la de despliegue.",
+        "problema": "La gobernanza actual de la IA se centra en la fase de entrenamiento, ignorando cómo la capacidad de los modelos se manifiesta y escala durante la inferencia (uso).",
+        "propuesta": "Se propone una taxonomía de 20 mecanismos de gobernanza en tiempo de inferencia (monitorización, verificación, ejecución), evaluando su viabilidad y robustez frente a diferentes adversarios y escenarios regulatorios.",
+        "resultados": "Quince de los veinte mecanismos tienen bases técnicas comerciales disponibles hoy, pero la garantía y robustez varían. Ningún mecanismo es adecuado contra un actor estatal de alta capacidad, y el ajuste fino (fine-tuning) puede eludir controles internos del modelo.",
+        "por_que_importa": "Permite desarrollar regulaciones y controles efectivos para la IA una vez desplegada, abordando riesgos emergentes que el enfoque actual en el entrenamiento no cubre.",
+        "tags": [
+          "gobernanza IA",
+          "inferencia IA",
+          "ciberseguridad",
+          "regulación tecnológica",
+          "riesgos IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-10T16:34:29Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.10036v1",
+      "rank": 6,
+      "title": "Belief-State Engine: Augmenting LLMs for Principled Planning Under Partial Observability",
+      "authors": [
+        "Arnab Chattopadhayay",
+        "Debdipta Halder"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.RO]",
+      "category": "cs.RO",
+      "date": "2026-09-09",
+      "url": "https://arxiv.org/abs/2609.10036v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.10036v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "Large language model agents produce fluent action sequences across a wide range of tasks, yet they fail in characteristic ways once the environment becomes partially observable. Ambiguous feedback pushes them into premature commitments. A single informative observation can collapse their uncertainty onto the wrong hypothesis. Policies drift as the history grows. We trace these symptoms to a common structural cause. An LLM agent, as commonly deployed, is a history-conditioned policy with no explicit belief over hidden state. We propose an architectural fix. The Belief-State Engine (BSE) is an inference module placed outside the LLM. It maintains a Bayesian posterior over the latent states of a given POMDP (Partially Observable Markov Decision Process) model, and at each decision step it exposes only that posterior to the LLM. The raw action-observation log is not shown. We set out a minimal four-axiom specification of what a belief-consistent internal state must satisfy, and prove that the LLM paired with the BSE is a sound Markov policy on the belief MDP induced by the underlying POMDP. It therefore inherits the Bellman optimality guarantees of classical POMDP theory, provided the LLM is never exposed to the raw history. We evaluate the architecture on the Tiger POMDP and a red-team attack-graph task, against six baselines: a reactive LLM, Chain-of-Thought, ReAct, a natural-language belief tracker, QMDP, and POMCP. Across both domains, the BSE-augmented agent improves task return, belief calibration, and decision consistency. Ten targeted ablations isolate the contribution of each architectural choice confirms that the effect is not specific to any one model. Code, environment specifications, prompt templates, and seed logs accompany this paper.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Mejora la planificación de LLMs en entornos inciertos con un motor de estado de creencia bayesiano.",
+        "problema": "Los agentes basados en LLMs fallan en entornos parcialmente observables, cometiendo errores por ambigüedad y perdiendo el rumbo a medida que la historia se alarga.",
+        "propuesta": "Introduce el Belief-State Engine (BSE), un módulo externo que mantiene una creencia bayesiana sobre el estado oculto del entorno, exponiendo solo esta creencia al LLM.",
+        "resultados": "El agente con BSE mejora el retorno de la tarea, la calibración de la creencia y la consistencia de las decisiones en comparación con seis baselines en tareas de Tiger POMDP y ataque de red.",
+        "por_que_importa": "Permite que los LLMs realicen planificación robusta y óptima en escenarios del mundo real donde la información completa no está disponible, crucial para robótica y toma de decisiones complejas.",
+        "tags": [
+          "LLMs",
+          "Planificación",
+          "Ciberseguridad",
+          "Robótica",
+          "IA",
+          "Observabilidad Parcial"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-10T16:34:39Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.10002v1",
+      "rank": 7,
+      "title": "What Makes Adversarial Examples Transfer Across Deepfake Detectors?",
+      "authors": [
+        "Rafael M. Mamede",
+        "Pedro C. Neto",
+        "Ana F. Sequeira"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-09",
+      "url": "https://arxiv.org/abs/2609.10002v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.10002v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Deepfake detectors remain vulnerable to transfer-based black-box attacks, in which adversarial examples are generated on a source surrogate model and transferred to a target model, unknown to the attacker. Yet how source--target compatibility shapes attack success remains poorly understood. Prior studies evaluate limited detector pools and rarely disentangle architectural from training factors. We conduct a controlled evaluation of adversarial transferability across 60 detectors spanning six backbones, two pretraining regimes, and five training-data configurations, using two attack procedures: AutoAttack (AA) and the Carlini--Wagner attack with Expectation over Transformation (CW--EOT). Matched comparisons reveal significantly higher transfer when source and target share an exact backbone, architecture family, pretraining regime, or training data. This compatibility structure is attack-dependent: exact backbone compatibility has the largest effect under AA, whereas shared pretraining and training data have the largest effects under CW--EOT. When transfer is averaged across non-target sources, mean attack success rate (ASR) is $7.21\\%$ under AA and $19.52\\%$ under CW--EOT. By contrast, a multi-source oracle combining both attacks attains a \\(64.48\\%\\) mean ASR after excluding exact backbone and training-data matches, showing that source averaging can substantially understate target vulnerability. We release 240,000 adversarially perturbed images, complete pairwise transfer results, detector configurations, and evaluation code. These findings establish source--target compatibility and source-model selection as central dimensions of credible transfer-based black-box robustness evaluation.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Entender qué hace que los ejemplos adversarios funcionen contra detectores de deepfakes es clave para evaluarlos correctamente.",
+        "problema": "Los detectores de deepfakes son vulnerables a ataques de transferencia, donde ejemplos creados contra un modelo funcionan contra otro desconocido, pero no se comprende bien qué factores influyen en el éxito de estos ataques.",
+        "propuesta": "Se realizó una evaluación controlada de la transferibilidad de ejemplos adversarios en 60 detectores, variando arquitecturas (backbones), preentrenamiento y datos de entrenamiento, usando dos procedimientos de ataque (AutoAttack y CW-EOT).",
+        "resultados": "La compatibilidad entre el modelo fuente y el objetivo (mismo backbone, familia arquitectónica, preentrenamiento o datos) aumenta significativamente el éxito del ataque. El efecto varía según el ataque: backbone para AA, preentrenamiento/datos para CW-EOT. El éxito promedio del ataque (ASR) fue 7.21% (AA) y 19.52% (CW-EOT). Un oráculo multi-fuente alcanzó 64.48% ASR, mostrando que promediar fuentes subestima la vulnerabilidad.",
+        "por_que_importa": "Estos hallazgos son cruciales para diseñar evaluaciones de robustez más realistas y fiables contra ataques de transferencia, identificando las características clave de los modelos que facilitan el éxito de los atacantes.",
+        "tags": [
+          "deepfakes",
+          "seguridad IA",
+          "ataques adversarios",
+          "transferibilidad",
+          "evaluación de modelos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-10T16:34:49Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.08965",
+      "rank": 1,
+      "title": "PlannerForge: LLM Agents for Scenario-Based Testing of Motion Planners in Autonomous Driving",
+      "authors": [
+        "Yuan Gao",
+        "Sebastian Müller",
+        "Mattia Piccinini",
+        "Marc Kaufeld"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-08",
+      "url": "https://arxiv.org/abs/2609.08965",
+      "pdf_url": "https://arxiv.org/pdf/2609.08965",
+      "score": 59,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Ensuring the safety of autonomous driving is a critical challenge. Scenario-based testing is a systematic process used to validate Autonomous Driving Systems (ADSs), but it remains a fragmented modular pipeline in which scenario generation, retrieval, modification, ADS execution, and results analysis are performed by separate tools with little interaction. Large Language Model (LLM) agents have shown promise across ADS sub-systems such as perception, planning, and control. However, no prior work covers the whole scenario-based testing pipeline for ADSs with a unified LLM-agent framework. We present PlannerForge, an LLM-agent framework that extends all scenario-based testing stages (from Scenario Generation to ADS Assessment) and adds two further LLM-enhanced stages: ADS Enhancement and ADS Benchmarking. We evaluate PlannerForge with 10 off-the-shelf LLMs across all tasks (Generation, Selection, Modification, Module Routing, Planner Testing, and Enhancement) under 5 prompt conditions. Best-per-task scores range from 0.88 to 1.00, and open-source 20-35B backends match commercial APIs on most tasks. Open-source models such as Qwen3.6:35B match commercial APIs on three of the five tasks. Chaining the modules end-to-end retains 83% / 78% of seed queries (commercial / open). It outperforms Scenario Factory 2.0 (Finkeldei et al., 2025) on natural-language generation (193 vs. 144 executable of 200) and realises 92-96% of requested city, road and vehicle attributes. It outperforms BM25 (Robertson and Zaragoza, 2009) at rank 1 selection (92.0% vs. 67.5%) and From-Words-to-Collisions (Gao et al., 2025) on physically valid edits (>=94% vs. 31%). At N=400, cost-tuning lifts planner success from 50.4% to 70.2% and cuts collisions from 19.0% to 8.4%, without domain-specific fine-tuning.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "PlannerForge usa agentes LLM para unificar y mejorar las pruebas de conducción autónoma, desde la generación de escenarios hasta la evaluación del ADS.",
+        "problema": "Las pruebas de escenarios para sistemas de conducción autónoma (ADS) son un proceso fragmentado y modular, con herramientas separadas para cada etapa (generación, recuperación, modificación, ejecución, análisis), lo que limita la interacción y la eficiencia.",
+        "propuesta": "Se presenta PlannerForge, un marco de agentes LLM que unifica y mejora todo el ciclo de pruebas de escenarios para ADS, incluyendo la generación, selección, modificación, enrutamiento de módulos, pruebas de planificadores y mejora del ADS, además de la evaluación y benchmarking.",
+        "resultados": "Las mejores puntuaciones por tarea van de 0.88 a 1.00. Los modelos de código abierto de 20-35B igualan a las APIs comerciales en la mayoría de las tareas. PlannerForge supera a Scenario Factory 2.0 en generación de lenguaje natural (193 vs. 144 ejecutables de 200) y a BM25 en selección de rango 1 (92.0% vs. 67.5%). El ajuste de costes mejora el éxito del planificador del 50.4% al 70.2% y reduce las colisiones del 19.0% al 8.4%. La cadena de módulos retiene el 83% / 78% de las consultas iniciales (comercial / código abierto).",
+        "por_que_importa": "Unifica y automatiza el complejo proceso de pruebas de conducción autónoma, mejorando la seguridad y eficiencia mediante el uso de LLMs, haciendo las pruebas más sistemáticas y efectivas, y democratizando el acceso con modelos de código abierto.",
+        "tags": [
+          "conducción autónoma",
+          "pruebas de software",
+          "agentes LLM",
+          "ciberseguridad",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-10T16:35:00Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.09657",
+      "rank": 2,
+      "title": "RESCUE-BENCH: Towards Relation-Aware Multi-Party Emotional Support Conversation Systems",
+      "authors": [
+        "Haichuan Hu",
+        "Yang Xiao",
+        "Mingni Tang",
+        "Jiawen Duan"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-09",
+      "url": "https://arxiv.org/abs/2609.09657",
+      "pdf_url": "https://arxiv.org/pdf/2609.09657",
+      "score": 57,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Existing emotional support conversation systems mainly focus on one-on-one seeker-supporter interactions and individual emotional states, leaving interpersonal relations in multi-party scenarios underexplored. In this work, we introduce relation-aware emotional support conversation, a new task that evaluates whether LLMs can capture and utilize the evolving dynamics of relationships to offer more effective emotional support. We construct RESCUE (Relation-aware Emotional Support Conversation Understanding and Evaluation Benchmark) from real couple and family interview conversations, containing 191 samples, 7,079 annotated turns, and 1,064.8 minutes of video. Based on rich annotations of socio-emotional and support-related dynamics, RESCUE defines six tasks that evaluate two core capabilities required for relation-aware emotional support: Relational Understanding and Relation-Sensitive Support. Experiments with ten LLMs show that current models perform relatively well on tasks relying on local emotional or intervention cues, but struggle with relation-intensive tasks such as relation pattern prediction, viewpoint prediction, and support strategy prediction. These findings reveal the limitations of current LLMs in modeling interpersonal relations and making relation-sensitive support decisions.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Nuevos sistemas de apoyo emocional para conversaciones grupales capturan y usan dinámicas de relación para un soporte más efectivo.",
+        "problema": "Los sistemas actuales de apoyo emocional se centran en interacciones uno a uno, ignorando las complejas relaciones interpersonales en conversaciones grupales.",
+        "propuesta": "Se introduce la tarea de 'conversación de apoyo emocional consciente de la relación' y se crea el benchmark RESCUE, con 191 muestras y 7.079 turnos anotados, para evaluar la comprensión relacional y el soporte sensible a la relación en LLMs.",
+        "resultados": "Los LLMs actuales funcionan bien con información emocional local, pero fallan en tareas intensivas en relaciones como predecir patrones relacionales, puntos de vista o estrategias de apoyo.",
+        "por_que_importa": "Mejorar la capacidad de los LLMs para comprender y actuar sobre las dinámicas de relación en conversaciones grupales es crucial para desarrollar sistemas de apoyo emocional más efectivos y empáticos en escenarios reales.",
+        "tags": [
+          "IA conversacional",
+          "apoyo emocional",
+          "relaciones interpersonales",
+          "LLMs",
+          "benchmarking",
+          "ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-10T16:35:09Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.10060",
+      "rank": 3,
+      "title": "Reference-Based Bias Detection in LLMs via Relative Representations of Hidden States",
+      "authors": [
+        "Marek Jeliński",
+        "Jan Dubiński",
+        "Maciej Chrabaszcz",
+        "Sebastian Cygert"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-09",
+      "url": "https://arxiv.org/abs/2609.10060",
+      "pdf_url": "https://arxiv.org/pdf/2609.10060",
+      "score": 57,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Existing bias auditing methods typically rely on model outputs, requiring costly benchmarks or judge models and potentially missing internal shifts that never appear in generated text. We propose a reference-based method that audits bias in hidden-state representations across related model variants, for example before and after fine-tuning. Because fine-tuning reshapes representation geometry, absolute hidden states are not directly comparable, so we encode each sentence by its similarities to a fixed set of anchor sentences, yielding relative representations in a shared comparison space. There we measure how target groups shift in their association with positive and negative attributes, a quantity we call the Representational Bias Shift $ΔB$. Across three model families and the WildGuardMix, DecodingTrust and ToxiGen benchmarks, $ΔB$ correlates with output-level bias change in 15 of the 18 settings we test, reaching $|r| = 0.84$ ($p < 0.001$) under full fine-tuning and becoming more model-dependent under parameter-efficient adaptation. Thresholding $ΔB$ detects checkpoints whose bias increased with ROC AUC between $0.65$ and $0.99$, and on WildGuardMix and DecodingTrust it separates them better than a SEAT-based baseline for all three families. $ΔB$ is also stable under changes to the anchor set, attribute sets and target templates. Our method requires no task-specific evaluation data and audits a model in about three minutes, using $3$-$50\\times$ less compute than the output-level benchmarks considered here. We view it as complementary to output-based auditing rather than a replacement for it.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Detecta sesgos internos en LLMs comparando representaciones de estados ocultos, superando limitaciones de métodos basados en salidas.",
+        "problema": "Los métodos actuales para detectar sesgos en Modelos de Lenguaje Grandes (LLMs) se basan en sus salidas, lo que requiere costosos conjuntos de datos o modelos de evaluación y puede pasar por alto cambios internos que no se manifiestan en el texto generado.",
+        "propuesta": "Se propone un método basado en referencias que audita los sesgos en las representaciones de estados ocultos. Codifica cada oración por sus similitudes con un conjunto fijo de oraciones ancla, creando representaciones relativas en un espacio compartido para comparar modelos (ej. antes y después del fine-tuning).",
+        "resultados": "El sesgo representacional ($ΔB$) se correlaciona con el cambio de sesgo a nivel de salida en 15 de 18 configuraciones probadas (hasta $|r|=0.84$, $p<0.001$). El umbral de $ΔB$ detecta checkpoints con aumento de sesgo con un ROC AUC entre 0.65 y 0.99, superando a una línea base SEAT en tres familias de modelos. Requiere ~3 minutos y 3-50x menos cómputo que benchmarks basados en salida.",
+        "por_que_importa": "Ofrece una forma más rápida, eficiente y profunda de auditar sesgos en LLMs, detectando problemas internos que los métodos actuales podrían pasar por alto, complementando las auditorías basadas en salidas.",
+        "tags": [
+          "LLMs",
+          "Sesgo",
+          "Ciberseguridad",
+          "Auditoría",
+          "Representaciones"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-10T16:35:19Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.09187",
+      "rank": 4,
+      "title": "AgenticGen: Reward-Guided Agentic Video Generation for Advertising",
+      "authors": [
+        "Xingyuan Bu",
+        "Chengru Song",
+        "Hao Zhou",
+        "Tao Zhou"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-08-31",
+      "url": "https://arxiv.org/abs/2609.09187",
+      "pdf_url": "https://arxiv.org/pdf/2609.09187",
+      "score": 55,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Advertising video generation is not only a video synthesis task, but also a product-conditioned reasoning problem whose success is measured by online business metrics. Recent video foundation models can generate realistic clips from multimodal conditions, yet they do not optimize how a product should be transformed into an effective advertisement or how future generation should be improved from online business feedback. To close this loop, we propose AgenticGen, a reward-guided agentic framework that decomposes advertising video generation into two trainable reasoning stages, strategy selection and draft generation, thereby exposing optimization targets that online business feedback can supervise. AgenticGen learns a performance-based reward from accumulated online feedback and a complementary rubric-based reward aligned with human quality standards, then uses them to supervise policy optimization. DPO first moves the agentic policies toward online preferences, and GRPO further refines both stages with process and outcome rewards. Offline experiments validate the reward models and successive policy optimization. Online A/B experiments in the TikTok advertising system show that AgenticGen after DPO and GRPO improves CTR by 2.72%, CVR by 2.63%, and Advv by 9.61% over the SFT baseline.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Genera videos publicitarios efectivos optimizando la estrategia y el contenido con retroalimentación online y humana.",
+        "problema": "Los modelos actuales de generación de video no optimizan la creación de anuncios basándose en métricas de negocio reales ni aprenden de la retroalimentación online para mejorar futuras creaciones.",
+        "propuesta": "AgenticGen es un framework agentivo guiado por recompensas que divide la generación de videos publicitarios en dos etapas: selección de estrategia y generación de borrador. Utiliza recompensas basadas en el rendimiento online y criterios de calidad humana para optimizar las políticas de generación mediante DPO y GRPO.",
+        "resultados": "Experimentos online en TikTok mostraron que AgenticGen mejora el CTR en un 2.72%, el CVR en un 2.63% y Advv en un 9.61% comparado con el baseline SFT.",
+        "por_que_importa": "Permite crear anuncios de video más efectivos y rentables, alineando la generación automática con los objetivos comerciales y la experiencia del usuario.",
+        "tags": [
+          "generación de video",
+          "publicidad",
+          "IA generativa",
+          "optimización",
+          "aprendizaje por refuerzo",
+          "métricas de negocio"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-10T16:36:12Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.08572",
+      "rank": 5,
+      "title": "AgentGrad: Intervention-guided Prompt Optimization for Multi Agent Systems",
+      "authors": [
+        "Jaewon Chu",
+        "Jinwoo Seo",
+        "Jaewon Cho",
+        "Jeehye Na"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-08",
+      "url": "https://arxiv.org/abs/2609.08572",
+      "pdf_url": "https://arxiv.org/pdf/2609.08572",
+      "score": 51,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Large language model (LLM)-based multi-agent systems (MAS) achieve strong performance by employing specialized multiple agents, yet their performance depends on the prompt design of each agent. For MAS prompt optimization, textual gradient methods that guide prompt updates using natural-language feedback have emerged as a leading paradigm. In this paper, we identify limitations in two stages of existing textual gradient approaches: gradient extraction and gradient aggregation. In gradient extraction, previous works select a target prompt without verifying whether modifying it resolves the failure, and derive gradients without agent-level supervision over the corresponding agent's intermediate output. In gradient aggregation, individual gradients are randomly grouped and concatenated, often mixing unrelated failure modes and producing prompts that fail to generalize. To address these limitations, we propose \\textbf{AgentGrad}, a prompt optimization framework for multi-agent systems based on sequential intervention and semantic textual gradient abstraction. For each failure, sequential intervention modifies the behavior of one agent at a time to identify the target agent whose modification resolves the failure. The modified output of the target agent then serves as agent-level supervision for extracting a fine-grained gradient. Semantic textual gradient abstraction clusters semantically similar gradients to prevent mixing unrelated failure modes, and abstracts each cluster into a generalized gradient that captures the shared corrective pattern. Experimental results show that AgentGrad achieves state-of-the-art performance across five MAS benchmarks and reduces wall-clock optimization time by $2.5\\times$ on average compared to the next-fastest baseline.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "AgentGrad optimiza prompts en sistemas multi-agente, mejorando el rendimiento y reduciendo el tiempo de optimización.",
+        "problema": "La optimización de prompts en sistemas multi-agente (MAS) con gradientes textuales sufre de una extracción y agregación de gradientes ineficientes, lo que lleva a prompts que no generalizan bien.",
+        "propuesta": "AgentGrad propone un marco de optimización basado en intervención secuencial para identificar agentes clave y abstracción textual de gradientes semánticos para agrupar y generalizar correcciones.",
+        "resultados": "AgentGrad logra un rendimiento de vanguardia en cinco benchmarks de MAS y reduce el tiempo de optimización en un promedio de 2.5x comparado con los métodos más rápidos.",
+        "por_que_importa": "Mejora la eficiencia y efectividad de los sistemas multi-agente basados en LLM, haciéndolos más fáciles de optimizar y desplegar en la práctica.",
+        "tags": [
+          "sistemas multi-agente",
+          "optimización de prompts",
+          "LLM",
+          "ciberseguridad",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-10T16:36:21Z"
+      }
+    }
+  ],
+  "generated_at": "2026-09-10T16:36:21Z"
+}

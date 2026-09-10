@@ -6904,5 +6904,202 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-09-09T16:50:14Z"
+  },
+  "arxiv:2609.10117v1": {
+    "tldr": "Se analizan las vulnerabilidades de las protecciones de LLMs en dispositivos y se proponen nuevas primitivas para fortalecer su seguridad.",
+    "problema": "Las protecciones de LLMs en dispositivos (TSLP) que usan Entornos de Ejecución Confiables (TEEs) y ofuscación son a menudo heurísticas y vulnerables a ataques especializados, comprometiendo la propiedad intelectual.",
+    "propuesta": "Se formalizan primitivas de ofuscación (pares de cómputos lineales con propiedades algebraicas) que unifican métodos TSLP existentes. Se caracteriza el límite de seguridad de estas composiciones (O_prior) y se explotan sus vulnerabilidades con un nuevo ataque (Collapse). Finalmente, se proponen nuevas primitivas para extender este límite (O_ext).",
+    "resultados": "Se demuestra que métodos TSLP prominentes como ArrowCloak, TSQP y LoRO son vulnerables a ataques guiados por primitivas. La extensión O_ext mejora el límite de seguridad.",
+    "por_que_importa": "Proporciona un marco formal para entender y mejorar la seguridad de los LLMs en dispositivos, crucial para proteger modelos propietarios y prevenir ataques.",
+    "tags": [
+      "LLM",
+      "Seguridad",
+      "TEEs",
+      "Ofuscación",
+      "Criptografía",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-10T16:33:51Z"
+  },
+  "arxiv:2609.09798v1": {
+    "tldr": "Evaluar la seguridad de los LLMs en generación de código es crucial; CS-Guard revela que las protecciones actuales son insuficientes.",
+    "problema": "Los modelos de lenguaje grandes (LLMs) pueden ser explotados para generar código malicioso, pero la efectividad de las barreras de seguridad (guardrails) para prevenir esto no está clara.",
+    "propuesta": "Se introduce CS-Guard, el primer benchmark para evaluar sistemáticamente las barreras de seguridad en la generación de código. Incluye prompts de malware, ataques de jailbreak, un nuevo ataque de escenario ficticio (FSA) y evalúa 9 barreras en 7 LLMs.",
+    "resultados": "Las barreras actuales son poco efectivas. En texto-a-código, la tasa de éxito de ataques (ASR) post-jailbreak alcanza ~50%. En código-a-código, la ASR promedio es casi 100% en LLMs base y alta incluso con barreras (14.4% a ~100%). El FSA también supera las barreras con ASR cercano al 100%.",
+    "por_que_importa": "La baja fiabilidad de las barreras de seguridad actuales en LLMs para generación de código representa un riesgo significativo para el desarrollo de software real, ya que pueden ser fácilmente eludidas para crear software malicioso.",
+    "tags": [
+      "LLMs",
+      "Ciberseguridad",
+      "Generación de Código",
+      "Benchmarking",
+      "Seguridad de IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-10T16:34:01Z"
+  },
+  "arxiv:2609.10439v1": {
+    "tldr": "Olvida selectivamente datos sensibles en LLMs sin sacrificar su rendimiento general ni su robustez.",
+    "problema": "Los LLMs memorizan datos indeseados (privados, con copyright), y los métodos de 'unlearning' actuales pueden degradar su utilidad o ser frágiles ante cambios como la cuantización.",
+    "propuesta": "FOM-UL, un marco de 'unlearning' a nivel de capa que selecciona qué capas de transformador modificar basándose en una puntuación de significancia (alto impacto en datos a olvidar, bajo en datos a retener).",
+    "resultados": "Reduce la memorización residual comparado con métodos base (GA, NPO, etc.) mientras preserva la utilidad del modelo. Muestra mayor robustez ante cuantización de 8 y 4 bits y menor recuperación de datos olvidados en pruebas adversarias.",
+    "por_que_importa": "Ofrece una forma más eficiente y robusta de eliminar datos sensibles de LLMs, crucial para cumplir regulaciones, proteger la privacidad y asegurar la fiabilidad del modelo en producción.",
+    "tags": [
+      "LLMs",
+      "Machine Unlearning",
+      "Privacidad",
+      "Ciberseguridad",
+      "Robustez",
+      "Cuantización"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-10T16:34:10Z"
+  },
+  "arxiv:2609.10142v1": {
+    "tldr": "La defensa contra el 'fine-tuning' malicioso en LLMs no es estática, sino que requiere adaptación activa y progresiva para mantener su efectividad.",
+    "problema": "Los modelos de lenguaje grandes (LLMs) son vulnerables a ataques de 'fine-tuning' malicioso que alteran su comportamiento (persona drift). Las defensas existentes, como 'Preventative Steering', no comprenden completamente su mecanismo de protección duradera.",
+    "propuesta": "Se analiza la dinámica temporal de 'Preventative Steering', identificando que la defensa surge de una adaptación temprana y un estado estable donde la señal correctiva decae. Se propone 'Progressive Intensity Scheduling' (PIS), que aumenta gradualmente la fuerza de la defensa a medida que la adaptación estática pierde efectividad.",
+    "resultados": "Los experimentos muestran que la protección de 'Preventative Steering' depende de la adaptación activa, no de una defensa estática. El PIS mejora la robustez de seguridad en modelos Qwen2.5 y Gemma-3 en comparación con la fuerza estática, reduciendo la expresión de rasgos dañinos.",
+    "por_que_importa": "Comprender y optimizar las defensas adaptativas es crucial para proteger los LLMs de manipulaciones maliciosas, garantizando su uso seguro y confiable en aplicaciones prácticas.",
+    "tags": [
+      "LLMs",
+      "Ciberseguridad",
+      "Adaptación Activa",
+      "Fine-tuning",
+      "Defensa"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-10T16:34:20Z"
+  },
+  "arxiv:2609.10105v1": {
+    "tldr": "Gobernar la IA en tiempo de inferencia es crucial, ya que la capacidad se traslada de la fase de entrenamiento a la de despliegue.",
+    "problema": "La gobernanza actual de la IA se centra en la fase de entrenamiento, ignorando cómo la capacidad de los modelos se manifiesta y escala durante la inferencia (uso).",
+    "propuesta": "Se propone una taxonomía de 20 mecanismos de gobernanza en tiempo de inferencia (monitorización, verificación, ejecución), evaluando su viabilidad y robustez frente a diferentes adversarios y escenarios regulatorios.",
+    "resultados": "Quince de los veinte mecanismos tienen bases técnicas comerciales disponibles hoy, pero la garantía y robustez varían. Ningún mecanismo es adecuado contra un actor estatal de alta capacidad, y el ajuste fino (fine-tuning) puede eludir controles internos del modelo.",
+    "por_que_importa": "Permite desarrollar regulaciones y controles efectivos para la IA una vez desplegada, abordando riesgos emergentes que el enfoque actual en el entrenamiento no cubre.",
+    "tags": [
+      "gobernanza IA",
+      "inferencia IA",
+      "ciberseguridad",
+      "regulación tecnológica",
+      "riesgos IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-10T16:34:29Z"
+  },
+  "arxiv:2609.10036v1": {
+    "tldr": "Mejora la planificación de LLMs en entornos inciertos con un motor de estado de creencia bayesiano.",
+    "problema": "Los agentes basados en LLMs fallan en entornos parcialmente observables, cometiendo errores por ambigüedad y perdiendo el rumbo a medida que la historia se alarga.",
+    "propuesta": "Introduce el Belief-State Engine (BSE), un módulo externo que mantiene una creencia bayesiana sobre el estado oculto del entorno, exponiendo solo esta creencia al LLM.",
+    "resultados": "El agente con BSE mejora el retorno de la tarea, la calibración de la creencia y la consistencia de las decisiones en comparación con seis baselines en tareas de Tiger POMDP y ataque de red.",
+    "por_que_importa": "Permite que los LLMs realicen planificación robusta y óptima en escenarios del mundo real donde la información completa no está disponible, crucial para robótica y toma de decisiones complejas.",
+    "tags": [
+      "LLMs",
+      "Planificación",
+      "Ciberseguridad",
+      "Robótica",
+      "IA",
+      "Observabilidad Parcial"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-10T16:34:39Z"
+  },
+  "arxiv:2609.10002v1": {
+    "tldr": "Entender qué hace que los ejemplos adversarios funcionen contra detectores de deepfakes es clave para evaluarlos correctamente.",
+    "problema": "Los detectores de deepfakes son vulnerables a ataques de transferencia, donde ejemplos creados contra un modelo funcionan contra otro desconocido, pero no se comprende bien qué factores influyen en el éxito de estos ataques.",
+    "propuesta": "Se realizó una evaluación controlada de la transferibilidad de ejemplos adversarios en 60 detectores, variando arquitecturas (backbones), preentrenamiento y datos de entrenamiento, usando dos procedimientos de ataque (AutoAttack y CW-EOT).",
+    "resultados": "La compatibilidad entre el modelo fuente y el objetivo (mismo backbone, familia arquitectónica, preentrenamiento o datos) aumenta significativamente el éxito del ataque. El efecto varía según el ataque: backbone para AA, preentrenamiento/datos para CW-EOT. El éxito promedio del ataque (ASR) fue 7.21% (AA) y 19.52% (CW-EOT). Un oráculo multi-fuente alcanzó 64.48% ASR, mostrando que promediar fuentes subestima la vulnerabilidad.",
+    "por_que_importa": "Estos hallazgos son cruciales para diseñar evaluaciones de robustez más realistas y fiables contra ataques de transferencia, identificando las características clave de los modelos que facilitan el éxito de los atacantes.",
+    "tags": [
+      "deepfakes",
+      "seguridad IA",
+      "ataques adversarios",
+      "transferibilidad",
+      "evaluación de modelos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-10T16:34:49Z"
+  },
+  "arxiv:2609.08965": {
+    "tldr": "PlannerForge usa agentes LLM para unificar y mejorar las pruebas de conducción autónoma, desde la generación de escenarios hasta la evaluación del ADS.",
+    "problema": "Las pruebas de escenarios para sistemas de conducción autónoma (ADS) son un proceso fragmentado y modular, con herramientas separadas para cada etapa (generación, recuperación, modificación, ejecución, análisis), lo que limita la interacción y la eficiencia.",
+    "propuesta": "Se presenta PlannerForge, un marco de agentes LLM que unifica y mejora todo el ciclo de pruebas de escenarios para ADS, incluyendo la generación, selección, modificación, enrutamiento de módulos, pruebas de planificadores y mejora del ADS, además de la evaluación y benchmarking.",
+    "resultados": "Las mejores puntuaciones por tarea van de 0.88 a 1.00. Los modelos de código abierto de 20-35B igualan a las APIs comerciales en la mayoría de las tareas. PlannerForge supera a Scenario Factory 2.0 en generación de lenguaje natural (193 vs. 144 ejecutables de 200) y a BM25 en selección de rango 1 (92.0% vs. 67.5%). El ajuste de costes mejora el éxito del planificador del 50.4% al 70.2% y reduce las colisiones del 19.0% al 8.4%. La cadena de módulos retiene el 83% / 78% de las consultas iniciales (comercial / código abierto).",
+    "por_que_importa": "Unifica y automatiza el complejo proceso de pruebas de conducción autónoma, mejorando la seguridad y eficiencia mediante el uso de LLMs, haciendo las pruebas más sistemáticas y efectivas, y democratizando el acceso con modelos de código abierto.",
+    "tags": [
+      "conducción autónoma",
+      "pruebas de software",
+      "agentes LLM",
+      "ciberseguridad",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-10T16:35:00Z"
+  },
+  "arxiv:2609.09657": {
+    "tldr": "Nuevos sistemas de apoyo emocional para conversaciones grupales capturan y usan dinámicas de relación para un soporte más efectivo.",
+    "problema": "Los sistemas actuales de apoyo emocional se centran en interacciones uno a uno, ignorando las complejas relaciones interpersonales en conversaciones grupales.",
+    "propuesta": "Se introduce la tarea de 'conversación de apoyo emocional consciente de la relación' y se crea el benchmark RESCUE, con 191 muestras y 7.079 turnos anotados, para evaluar la comprensión relacional y el soporte sensible a la relación en LLMs.",
+    "resultados": "Los LLMs actuales funcionan bien con información emocional local, pero fallan en tareas intensivas en relaciones como predecir patrones relacionales, puntos de vista o estrategias de apoyo.",
+    "por_que_importa": "Mejorar la capacidad de los LLMs para comprender y actuar sobre las dinámicas de relación en conversaciones grupales es crucial para desarrollar sistemas de apoyo emocional más efectivos y empáticos en escenarios reales.",
+    "tags": [
+      "IA conversacional",
+      "apoyo emocional",
+      "relaciones interpersonales",
+      "LLMs",
+      "benchmarking",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-10T16:35:09Z"
+  },
+  "arxiv:2609.10060": {
+    "tldr": "Detecta sesgos internos en LLMs comparando representaciones de estados ocultos, superando limitaciones de métodos basados en salidas.",
+    "problema": "Los métodos actuales para detectar sesgos en Modelos de Lenguaje Grandes (LLMs) se basan en sus salidas, lo que requiere costosos conjuntos de datos o modelos de evaluación y puede pasar por alto cambios internos que no se manifiestan en el texto generado.",
+    "propuesta": "Se propone un método basado en referencias que audita los sesgos en las representaciones de estados ocultos. Codifica cada oración por sus similitudes con un conjunto fijo de oraciones ancla, creando representaciones relativas en un espacio compartido para comparar modelos (ej. antes y después del fine-tuning).",
+    "resultados": "El sesgo representacional ($ΔB$) se correlaciona con el cambio de sesgo a nivel de salida en 15 de 18 configuraciones probadas (hasta $|r|=0.84$, $p<0.001$). El umbral de $ΔB$ detecta checkpoints con aumento de sesgo con un ROC AUC entre 0.65 y 0.99, superando a una línea base SEAT en tres familias de modelos. Requiere ~3 minutos y 3-50x menos cómputo que benchmarks basados en salida.",
+    "por_que_importa": "Ofrece una forma más rápida, eficiente y profunda de auditar sesgos en LLMs, detectando problemas internos que los métodos actuales podrían pasar por alto, complementando las auditorías basadas en salidas.",
+    "tags": [
+      "LLMs",
+      "Sesgo",
+      "Ciberseguridad",
+      "Auditoría",
+      "Representaciones"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-10T16:35:19Z"
+  },
+  "arxiv:2609.09187": {
+    "tldr": "Genera videos publicitarios efectivos optimizando la estrategia y el contenido con retroalimentación online y humana.",
+    "problema": "Los modelos actuales de generación de video no optimizan la creación de anuncios basándose en métricas de negocio reales ni aprenden de la retroalimentación online para mejorar futuras creaciones.",
+    "propuesta": "AgenticGen es un framework agentivo guiado por recompensas que divide la generación de videos publicitarios en dos etapas: selección de estrategia y generación de borrador. Utiliza recompensas basadas en el rendimiento online y criterios de calidad humana para optimizar las políticas de generación mediante DPO y GRPO.",
+    "resultados": "Experimentos online en TikTok mostraron que AgenticGen mejora el CTR en un 2.72%, el CVR en un 2.63% y Advv en un 9.61% comparado con el baseline SFT.",
+    "por_que_importa": "Permite crear anuncios de video más efectivos y rentables, alineando la generación automática con los objetivos comerciales y la experiencia del usuario.",
+    "tags": [
+      "generación de video",
+      "publicidad",
+      "IA generativa",
+      "optimización",
+      "aprendizaje por refuerzo",
+      "métricas de negocio"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-10T16:36:12Z"
+  },
+  "arxiv:2609.08572": {
+    "tldr": "AgentGrad optimiza prompts en sistemas multi-agente, mejorando el rendimiento y reduciendo el tiempo de optimización.",
+    "problema": "La optimización de prompts en sistemas multi-agente (MAS) con gradientes textuales sufre de una extracción y agregación de gradientes ineficientes, lo que lleva a prompts que no generalizan bien.",
+    "propuesta": "AgentGrad propone un marco de optimización basado en intervención secuencial para identificar agentes clave y abstracción textual de gradientes semánticos para agrupar y generalizar correcciones.",
+    "resultados": "AgentGrad logra un rendimiento de vanguardia en cinco benchmarks de MAS y reduce el tiempo de optimización en un promedio de 2.5x comparado con los métodos más rápidos.",
+    "por_que_importa": "Mejora la eficiencia y efectividad de los sistemas multi-agente basados en LLM, haciéndolos más fáciles de optimizar y desplegar en la práctica.",
+    "tags": [
+      "sistemas multi-agente",
+      "optimización de prompts",
+      "LLM",
+      "ciberseguridad",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-10T16:36:21Z"
   }
 }
