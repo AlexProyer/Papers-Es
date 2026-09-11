@@ -1,0 +1,448 @@
+{
+  "date": "2026-09-11",
+  "report_type": "filtrado",
+  "evaluated": 179,
+  "selected": 10,
+  "papers": [
+    {
+      "id": "arxiv:2609.11852v1",
+      "rank": 1,
+      "title": "BlueSTAR: Tiered Agentic Architecture for Autonomous Cyber Defense",
+      "authors": [
+        "Simona Boboila",
+        "Xavier Cadet",
+        "Edward Koh",
+        "Daniel Balasubramanian"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-10",
+      "url": "https://arxiv.org/abs/2609.11852v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.11852v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Cyber attacks are increasingly automated, narrowing the time available for human analysts to detect, reason about, and respond to intrusions. Large language models (LLMs) offer a promising foundation for autonomous cyber defense because they can correlate heterogeneous evidence and reason about previously unseen threats. However, directly applying LLMs to operational security telemetry is impractical: raw logs arrive faster than current models can process them, individual events are often ambiguous, and unconstrained LLM actions can introduce significant operational risk. We present BlueSTAR, a tiered agentic architecture for autonomous cyber defense in enterprise IT/OT networks. BlueSTAR first transforms high-volume security telemetry into compact indicators of compromise. We further introduce a resilience metric that jointly captures attacker reach, impact on mission-critical assets, and disruption caused by defensive actions. We evaluate BlueSTAR on two live enterprise IT/OT cyber ranges using seven attack chains based on real-world intrusion techniques. Across attack chains, BlueSTAR retains the fast containment of deterministic response for known threats while successfully defending against attacks requiring contextual and cross-cycle reasoning, including credential theft, repeated compromise, concurrent attackers, and attacks against physical processes.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2609.11757v1",
+      "rank": 2,
+      "title": "Signing the Transaction but Not the Decision: Whisper Attacks and a Binding Defense for AP2",
+      "authors": [
+        "Yedidel Louck",
+        "Amit Dvir",
+        "Ariel Stulman"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-10",
+      "url": "https://arxiv.org/abs/2609.11757v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.11757v1",
+      "score": 53,
+      "topics": [
+        "vuln & threats",
+        "fintech & payments"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: vuln & threats, fintech & payments"
+      ],
+      "abstract_en": "Software agents are beginning to shop and pay on a person's behalf. Agent payment protocols such as AP2 produce cryptographically valid signatures for completed purchases, yet do not constrain the decisions that lead to them. Consequently, ordinary product-description text can steer a shopping agent into forming a cart that passes every protocol check but no longer matches the user's request. In this paper, we show that this vulnerability enables three related attacks. In the first attack, the agent is steered into fetching another user's payment credentials. In the second, it assembles a cryptographically valid cart whose contents do not match what the user was shown. In the third, a single factual claim about stock or product lineage moves the agent from the cheaper displayed item to a more expensive one, while the resulting cart remains fully consistent with the listing. In experiments using the Gemini Flash-Lite models that AP2's sample agents specify by default, the three attacks succeeded at rates of 90%, 56%, and 73.3%, respectively. The same vulnerability appears across seventeen Google models, three unrelated agent frameworks, two cross-vendor anchors, and Google's own consumer assistant. To address this attack vector, we introduce A-VIP (AP2 Verified-Intent Protection), a protocol-layer defense that treats the signed intent as a capability grant rather than judging the merchant's description. The defense binds every credential lookup to the session that requested it and every cart line to the listing seen, while flagging unauthorized spending. The first two attacks leave structural traces that these bindings block with zero false positives. The third attack leaves no trace, so A-VIP surfaces unauthorized spending for user confirmation. Finally, we release the A-VIP code, machine-checked invariants, and AP2-WhisperBench, a suite of 1,544 evaluation scenarios.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Agentes de compra pueden ser engañados para realizar transacciones no deseadas; A-VIP ofrece una defensa robusta.",
+        "problema": "Los protocolos de pago de agentes, como AP2, firman transacciones pero no las decisiones que las preceden, permitiendo ataques que manipulan el comportamiento del agente para realizar compras no autorizadas o diferentes a las esperadas por el usuario.",
+        "propuesta": "Se introduce A-VIP (AP2 Verified-Intent Protection), una defensa a nivel de protocolo que vincula las credenciales y los artículos del carrito a la sesión y listado original, respectivamente, y marca gastos no autorizados.",
+        "resultados": "Los ataques de 'whisper' tuvieron tasas de éxito del 90%, 56% y 73.3% en modelos Gemini Flash-Lite. A-VIP bloquea los dos primeros ataques con cero falsos positivos y detecta el tercero, requiriendo confirmación del usuario.",
+        "por_que_importa": "Asegura que los agentes de compra actúen fielmente según las intenciones del usuario, previniendo fraudes y garantizando la integridad de las transacciones en un ecosistema de agentes en crecimiento.",
+        "tags": [
+          "ciberseguridad",
+          "agentes inteligentes",
+          "protocolos de pago",
+          "ataques de whisper",
+          "defensa A-VIP"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-11T16:40:31Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.11028v1",
+      "rank": 3,
+      "title": "BenchShield: Formal Model-Backed Instrumentation for Reward Integrity in LLM-Agent Evaluation Infrastructure",
+      "authors": [
+        "Shenghan Zheng",
+        "Zonglin Di",
+        "Yimin Liu",
+        "Kyoung Whan Choe"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-09-10",
+      "url": "https://arxiv.org/abs/2609.11028v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.11028v1",
+      "score": 53,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "LM-agent benchmarks increasingly function as interactive evaluation infrastructure. Agents observe state, call tools, modify workspaces, submit artifacts, and receive rewards from outcome procedures. This interactivity makes evaluations vulnerable to reward hacking: an agent improves its measured score by exploiting the reward-relevant trajectory instead of solving the intended task. Existing defenses rely largely on task-specific patches, prompt instructions, or post-hoc detectors. They do not provide reusable evidence that a concrete run remained within its intended evaluation boundary. This paper presents BenchShield, a model-backed instrumentation layer for reward integrity in LLM-agent evaluation. BenchShield grounds detection in a finite lifecycle model of an evaluation's reward-relevant events. Within the benchmark infrastructure, two complementary analyses operate over this model. A static, phase-aware taint analysis exposes reward-hacking paths before a run. Its runtime counterpart uses infrastructure-side evidence to attribute concrete agent use and emit evidence-backed claims. We construct BenchShield Trajectories, a human-labeled corpus of 456 adjudicated trajectories from more than 31,000 public agent runs across three benchmarks. Compared with an agentic hackability scanner baseline on the same tasks and model, BenchShield improves full-chain recall from 23-94% to 77-100%, same-vector coverage from 16-56% to 43-78%, and reduces per-task cost by up to 65%. Its runtime analysis achieves 96% accuracy in detecting reward hacking from infrastructure-side evidence.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "BenchShield protege las evaluaciones de LLM-agentes contra el 'reward hacking' mediante instrumentación respaldada por modelos formales.",
+        "problema": "Las evaluaciones de LLM-agentes son vulnerables al 'reward hacking', donde los agentes manipulan la trayectoria de recompensa en lugar de resolver la tarea. Las defensas actuales son específicas de la tarea y no ofrecen evidencia reutilizable de integridad.",
+        "propuesta": "BenchShield introduce una capa de instrumentación que utiliza un modelo de ciclo de vida finito para los eventos relevantes de recompensa. Emplea análisis estático (pre-ejecución) y dinámico (en tiempo de ejecución) para detectar y atribuir el uso del agente, emitiendo pruebas de integridad.",
+        "resultados": "BenchShield mejora la recuperación de 'reward hacking' del 23-94% al 77-100% y la cobertura de vectores similares del 16-56% al 43-78%. Su análisis en tiempo de ejecución detecta el 'reward hacking' con un 96% de precisión, reduciendo el costo por tarea hasta en un 65%. Se basa en un corpus de 456 trayectorias etiquetadas manualmente.",
+        "por_que_importa": "Asegura la fiabilidad y validez de las evaluaciones de LLM-agentes, permitiendo una comparación justa del rendimiento y previniendo la manipulación de métricas, lo cual es crucial para el desarrollo y despliegue responsable de IA.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Evaluación de IA",
+          "Integridad de Recompensa",
+          "Benchmarking"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-11T16:41:22Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.11442v1",
+      "rank": 4,
+      "title": "Chypothermia: Clock Freezing for Static Side-channel Attacks",
+      "authors": [
+        "Fatemeh Khojasteh Dana",
+        "Mehmet Ali Cetin",
+        "Xinrui Wang",
+        "Andrew Butler"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-10",
+      "url": "https://arxiv.org/abs/2609.11442v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.11442v1",
+      "score": 52,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: cybersecurity, vuln & threats"
+      ],
+      "abstract_en": "Static side-channel attacks, which exploit halted-clock conditions to extract sensitive information, pose an increasing threat to chip security. To counter these attacks, various defenses have been proposed that monitor for abnormal clock behavior and trigger the clearing of sensitive data when clock anomalies are detected. In this work, we demonstrate that exposing a chip to cryogenic temperatures interferes with on-chip mixed-signal components, responsible for signal sensing and generation. Based on this observation, we develop Chypothermia, an attack that, without any electrical tampering with the system, disables the target clock sensor, the clock generation circuit, and the voltage sensors, while preserving the secret data. While effective at halting the clock, cooling is a slow process and, on its own, is often insufficient against systems equipped with temperature sensors designed to detect thermal anomalies. To bypass these protections, we combine Chypothermia with Chypnosis (Mitard et al., IEEE SP 2026) and show that, even within a moderately low-temperature operating range, this combination can halt the clock while evading detection. We implement Chypothermia on multiple FPGA/SoC platforms and demonstrate successful disabling of both soft-IP and hard-IP sensor implementations. Finally, we apply Chypothermia to the alert handler of the OpenTitan root of trust, which incorporates a state-of-the-art clock sensor, and show that the attack evades detection and prevents key zeroization. Finally, we introduce and implement an FPGA-compatible self-heating sensor as a countermeasure and demonstrate its robustness against Chypothermia.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Congelar chips con frío extremo deshabilita sus defensas contra ataques de canal lateral, permitiendo el robo de secretos.",
+        "problema": "Los ataques de canal lateral explotan condiciones de reloj detenido para robar información. Las defensas actuales monitorizan anomalías en el reloj, pero pueden ser eludidas.",
+        "propuesta": "Se propone Chypothermia, un ataque que utiliza temperaturas criogénicas para interferir con componentes de señalización y generación de reloj, desactivando sensores sin manipulación eléctrica.",
+        "resultados": "Chypothermia deshabilita sensores de reloj, generación de reloj y sensores de voltaje en FPGAs/SoCs. Combinado con Chypnosis, evade la detección incluso a temperaturas moderadamente bajas. Se implementó una contramedida de auto-calentamiento que es robusta contra Chypothermia.",
+        "por_que_importa": "Este ataque revela una nueva vulnerabilidad física que puede eludir defensas de ciberseguridad existentes, impactando la seguridad de hardware y la protección de datos sensibles en dispositivos.",
+        "tags": [
+          "ataque canal lateral",
+          "seguridad hardware",
+          "temperatura criogénica",
+          "Chypothermia",
+          "defensas ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-11T16:41:31Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.11008v1",
+      "rank": 5,
+      "title": "DeFiFusion: Combining Transaction Events with Smart Contracts to Detect Price Manipulation Attacks",
+      "authors": [
+        "Rui Cao",
+        "Shaojing Fan",
+        "Liming Fang",
+        "Yuchan Liu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-09-10",
+      "url": "https://arxiv.org/abs/2609.11008v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.11008v1",
+      "score": 52,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Decentralized Finance (DeFi) has emerged as a rapidly growing blockchain-based financial service, where market transaction dynamics and underlying smart contract logic are intricately intertwined. This autonomous interplay, while eliminating centralized intermediaries, significantly expands the vulnerability surface of DeFi protocols to Price Manipulation Attacks (PMAs), which have already inflicted catastrophic financial losses. Despite their gravity, existing detection paradigms suffer from fundamental limitations. Transaction-centric methods lack awareness of contract execution semantics, making them prone to false positives under legitimate market volatility, while static contract analyses ignore real transaction behaviors and frequently report vulnerabilities that are infeasible to exploit in practice. We present DeFiFusion, a dual-modal PMA detection framework that closes this gap by jointly modeling transaction events and smart contract semantics within a unified pipeline. Our core insight is that PMA maliciousness emerges only from the interaction between transaction behaviors and the contract logic they exploit; neither signal suffices in isolation. Accordingly, we derive price-manipulation-aware event encoding for extracting fine-grained temporal and economic features tailored to manipulation patterns. We further introduce LLM-based contract semantic extraction to supply the execution-logic context that prior behavioral methods lack. To fuse these modalities, we propose a Dual-Modal Projection-Fusion Transformer with T5-style relative positional encoding, capturing the cyclic multi-stage execution structures that distinguish PMAs from benign market activity. Extensive experiments demonstrate that DeFiFusion consistently achieves state-of-the-art detection performance, effectively recalling 222 of the 225 PMA cases while maintaining a precision of 96.10%.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "DeFiFusion detecta manipulaciones de precios en finanzas descentralizadas combinando eventos de transacciones y la lógica de contratos inteligentes.",
+        "problema": "Los ataques de manipulación de precios (PMA) en DeFi causan grandes pérdidas financieras. Los métodos de detección actuales fallan porque analizan transacciones o contratos por separado, generando falsos positivos o ignorando la explotación real.",
+        "propuesta": "DeFiFusion es un marco de detección de doble modalidad que modela conjuntamente eventos de transacciones y la semántica de contratos inteligentes. Utiliza codificación de eventos para características temporales y económicas, extracción semántica de contratos basada en LLM y un Transformer de Proyección-Fusión de Doble Modalidad para capturar la estructura de ejecución.",
+        "resultados": "DeFiFusion detecta el 98.67% de los casos de PMA (222 de 225) con una precisión del 96.10%.",
+        "por_que_importa": "Mejora significativamente la seguridad de las finanzas descentralizadas al detectar de manera más precisa y fiable los ataques de manipulación de precios, protegiendo a los usuarios e inversores de pérdidas financieras catastróficas.",
+        "tags": [
+          "DeFi",
+          "Ciberseguridad",
+          "Detección de Ataques",
+          "Contratos Inteligentes",
+          "Blockchain",
+          "Manipulación de Precios"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-11T16:41:41Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.11303v1",
+      "rank": 6,
+      "title": "Exploring the Role of Security Experience and ChatGPT Usage Strategies on Secure Software Engineering Education",
+      "authors": [
+        "Alessio Ferrari",
+        "Minh An Nguyen",
+        "Kushal Ramkumar",
+        "Liliana Pasquale"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-09-10",
+      "url": "https://arxiv.org/abs/2609.11303v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.11303v1",
+      "score": 50,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🎯 temas: cybersecurity, vuln & threats, LLM"
+      ],
+      "abstract_en": "The rapid adoption of Large Language Models (LLMs) is reshaping software engineering education, but their role in secure software engineering education remains underexplored. We report an exploratory empirical study of how 26 graduate students in a part-time MSc Cybersecurity programme used ChatGPT during a vulnerability-fixing assignment. To characterise ChatGPT use, we analysed students' ChatGPT interaction logs using a structured double-coding procedure and examined whether usage patterns and prior cybersecurity expertise were associated with assignment performance. The results show that students with varying levels of cybersecurity expertise used broadly similar ChatGPT strategies. Individual usage patterns showed descriptive differences by grade, but none remained statistically significant after correcting for multiple comparisons. In contrast, diversity of ChatGPT usage, i.e., the number of distinct usage patterns adopted, was positively associated with performance, even after controlling for cybersecurity expertise. These exploratory findings suggest that the way students engage with ChatGPT may be more informative than whether they use it, and motivate future controlled studies to guide students toward effective LLM use in secure software engineering education.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "La forma en que los estudiantes usan ChatGPT en ciberseguridad importa más que su experiencia previa, impulsando el rendimiento.",
+        "problema": "Se desconoce cómo el uso de Modelos de Lenguaje Grandes (LLMs) como ChatGPT afecta la educación en ingeniería de software seguro, especialmente en relación con la experiencia previa de los estudiantes.",
+        "propuesta": "Se realizó un estudio empírico con 26 estudiantes de ciberseguridad analizando sus interacciones con ChatGPT durante una tarea de corrección de vulnerabilidades, correlacionando patrones de uso y experiencia con el rendimiento.",
+        "resultados": "Los estudiantes con diferente experiencia usaron estrategias similares de ChatGPT. La diversidad de estrategias de uso de ChatGPT se asoció positivamente con un mejor rendimiento, incluso controlando la experiencia previa. No se encontraron diferencias estadísticamente significativas en los patrones individuales de uso por calificación.",
+        "por_que_importa": "Sugiere que guiar a los estudiantes hacia un uso más diverso y estratégico de las herramientas LLM es crucial para mejorar la educación en ingeniería de software seguro, más allá de su nivel de experiencia.",
+        "tags": [
+          "IA en educación",
+          "Ciberseguridad",
+          "Ingeniería de Software",
+          "ChatGPT",
+          "LLMs",
+          "Aprendizaje"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-11T16:41:50Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.11412",
+      "rank": 1,
+      "title": "X-AuT: Progressive Audio-Encoder Compression for Speech LLMs with Cross-Scale Distillation",
+      "authors": [
+        "Haojun Zhang",
+        "Yi Zou",
+        "Min Chen",
+        "Qize Yu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-10",
+      "url": "https://arxiv.org/abs/2609.11412",
+      "pdf_url": "https://arxiv.org/pdf/2609.11412",
+      "score": 62,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Reducing audio-encoder depth lowers the inference cost of speech large language models, but removing complete blocks perturbs the embeddings consumed by the decoder and can cause deletion and premature end-of-sequence errors. We introduce X-AuT, a progressive framework that selects layer combinations through short behavioral probes and restores the pruned model through representation alignment, cross-scale distillation, scheduled student-policy supervision, and LoRA finetuning. The language-model backbone remains frozen, while attention LoRA adapters and the tied output embedding adapt during distillation. Training uses the highest-agreement tier from a transcript-consistency pipeline, followed by source reweighting during finetuning. On ten public Chinese--English benchmarks, compressing Qwen3-ASR-0.6B from 18 to 16 audio-encoder layers reduces macro-average error from 5.61% to 5.27%. The 14-layer model reaches 5.75% with 20.7% fewer audio-tower parameters. Under the matched recipe, the 1.7B teacher yields 5.55% mean error, compared with 8.45% for self-distillation, and progressive 18$\\rightarrow$14 pruning outperforms direct pruning (5.75% vs. 6.73%). These single-run results establish two practical operating points and show that the accuracy effects vary across benchmarks. Project website: https://xpeng-ai.github.io/x-aut",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "X-AuT comprime eficientemente modelos de lenguaje de voz, reduciendo costos sin sacrificar precisión mediante destilación y ajuste.",
+        "problema": "Reducir la profundidad de los codificadores de audio en modelos de lenguaje de voz (LLMs) para disminuir costos de inferencia, pero esto causa errores al alterar los embeddings del decodificador.",
+        "propuesta": "X-AuT es un framework que comprime progresivamente el codificador de audio usando 'probes' para seleccionar capas, alineación de representaciones, destilación 'cross-scale', supervisión de políticas y ajuste con LoRA, manteniendo el backbone del LLM congelado.",
+        "resultados": "Se redujo el error macro-promedio de Qwen3-ASR-0.6B de 5.61% a 5.27% al pasar de 18 a 16 capas. Un modelo de 14 capas logró 5.75% con 20.7% menos parámetros. La destilación progresiva (18->14 capas) superó a la directa (5.75% vs 6.73%).",
+        "por_que_importa": "Permite desplegar modelos de lenguaje de voz más eficientes y rápidos en producción, reduciendo costos computacionales y de memoria sin una pérdida significativa de rendimiento, ofreciendo puntos de operación prácticos.",
+        "tags": [
+          "compresión de modelos",
+          "modelos de lenguaje de voz",
+          "destilación de conocimiento",
+          "eficiencia computacional",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-11T16:42:18Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.11155",
+      "rank": 2,
+      "title": "DRG-MAPPO: Hierarchical Dynamic Role-Graph Multi-Agent Reinforcement Learning for Cooperative Air Combat",
+      "authors": [
+        "Junlin Liu",
+        "Chengwei Li",
+        "Yang Gao",
+        "Hui Chang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-10",
+      "url": "https://arxiv.org/abs/2609.11155",
+      "pdf_url": "https://arxiv.org/pdf/2609.11155",
+      "score": 62,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "Multi-Agent Reinforcement Learning (MARL) has emerged as a pivotal paradigm for complex decision-making in autonomous systems and air combat. While MARL has demonstrated significant potential in air combat, achieving sophisticated tactical coordination remains a non-trivial challenge. This difficulty is largely attributed to two primary limitations: (1) the absence of structured relational modeling hinders agents from capturing complex, time-varying interactions among battlefield entities; and (2) conventional flat architectures often lack the capability to explicitly model tactical roles, leading to ambiguous task allocation in highly dynamic environments. To address these challenges, we propose Hierarchical Dynamic Role-Graph Multi-Agent Proximal Policy Optimization (DRG-MAPPO), a novel MARL framework that integrates graph-based relational modeling with dynamic role assignment. Specifically, DRG-MAPPO constructs a graph-based representation of battlefield interactions and leverages graph attention mechanisms to extract critical relational features among allies, enemies, and threats. Subsequently, a high-level policy employs a dynamic role assignment mechanism to determine tactical responsibilities (e.g., ``leader'' and ``supporter''). Conditioned on these roles and encoded graph-relational features, a low-level policy executes discrete maneuver actions, facilitating the joint optimization of tactical strategy and collaborative execution. Furthermore, a target-priority auxiliary task is designed to foster the emergence of behaviors such as focus-fire. Experimental results demonstrate that DRG-MAPPO achieves a state-of-the-art win rate of 87%, suggesting that our framework effectively balances relational modeling, interpretability, and optimization stability for cooperative air combat.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "DRG-MAPPO revoluciona el combate aéreo cooperativo con IA, mejorando la coordinación táctica mediante roles dinámicos y modelado de relaciones.",
+        "problema": "La coordinación táctica en el combate aéreo con IA es difícil debido a la falta de modelado de interacciones complejas y la incapacidad de las arquitecturas planas para asignar roles tácticos explícitos en entornos dinámicos.",
+        "propuesta": "Se propone DRG-MAPPO, un marco de aprendizaje por refuerzo multi-agente que usa grafos para modelar interacciones, asigna roles tácticos dinámicamente (líder, seguidor) y utiliza políticas de alto y bajo nivel para la toma de decisiones y ejecución de maniobras.",
+        "resultados": "DRG-MAPPO alcanza una tasa de victorias del 87%, superando el estado del arte y demostrando un equilibrio efectivo entre modelado relacional, interpretabilidad y estabilidad de la optimización.",
+        "por_que_importa": "Mejora significativamente la efectividad y la coordinación de sistemas de combate aéreo autónomos, haciendo la IA más adaptable y estratégicamente competente en escenarios complejos y dinámicos.",
+        "tags": [
+          "IA",
+          "Combate Aéreo",
+          "Aprendizaje por Refuerzo",
+          "Multi-Agente",
+          "Coordinación Táctica",
+          "Roles Dinámicos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-11T16:42:27Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.11156",
+      "rank": 3,
+      "title": "UniH^3: Unifying Hierarchical Homogeneity and Heterogeneity for All-in-One Medical Image Restoration",
+      "authors": [
+        "Zhiwen Yang",
+        "Jiayin Li",
+        "Chengyu Liu",
+        "Hui Zhang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-10",
+      "url": "https://arxiv.org/abs/2609.11156",
+      "pdf_url": "https://arxiv.org/pdf/2609.11156",
+      "score": 62,
+      "topics": [
+        "vuln & threats"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: vuln & threats"
+      ],
+      "abstract_en": "All-in-One medical image restoration (MedIR) aims to address diverse tasks across modalities and degradation types using a single universal model. Existing methods typically prioritize modeling inter-task heterogeneity (e.g., distinct data distributions and degradation types). However, they largely neglect the inherent homogeneity present in medical images, such as widely shared anatomical structures within and across modalities, which can be leveraged to ease model training and improve generalization. To this end, we propose UniH3, a novel framework that Unifies Hierarchical Homogeneity and Heterogeneity for all-in-one medical image restoration. Specifically, to comprehensively exploit homogeneity, we introduce a Hierarchical Homogeneity Memory (H2M) module that progressively distills intra- and inter-task homogeneity priors from high-quality images during training, and adaptively retrieves the most relevant priors tailored to the input for guided restoration. These retrieved priors are then injected into the restoration pipeline via an efficient Homogeneity-Guided Attention (HGA) mechanism. Furthermore, to comprehensively address heterogeneity, we design a Hierarchical Heterogeneity Balancer (H2B) that mitigates both inter- and intra-task conflicts during optimization, facilitating balanced and effective multi-task learning. Extensive experiments on two large-scale benchmarks, MedIR-2D-500K and MedIR-3D-3K, demonstrate that UniH3 achieves state-of-the-art performance on both all-in-one and single-task medical image restoration. We hope this work establishes a strong benchmark and advances the development of general-purpose medical image restoration models. Code is available at https://github.com/Yaziwel/UniH3.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "UniH3 unifica la homogeneidad y heterogeneidad jerárquica para restaurar imágenes médicas con un solo modelo.",
+        "problema": "Los modelos actuales de restauración de imágenes médicas descuidan las similitudes inherentes entre tareas y modalidades, centrándose solo en sus diferencias, lo que limita su rendimiento y generalización.",
+        "propuesta": "Se propone UniH3, un marco que utiliza un Módulo de Memoria de Homogeneidad Jerárquica (H2M) para capturar y aplicar conocimientos de imágenes de alta calidad, y un Equilibrador de Heterogeneidad Jerárquica (H2B) para gestionar los conflictos entre tareas.",
+        "resultados": "UniH3 logra un rendimiento de vanguardia en tareas de restauración de imágenes médicas tanto individuales como 'todo en uno', superando a los métodos existentes en benchmarks como MedIR-2D-500K y MedIR-3D-3K.",
+        "por_que_importa": "Mejora la restauración de imágenes médicas al aprovechar las similitudes comunes, permitiendo un único modelo más eficiente y generalizable para diversas tareas, lo que podría mejorar el diagnóstico médico.",
+        "tags": [
+          "restauración de imágenes médicas",
+          "aprendizaje multi-tarea",
+          "redes neuronales",
+          "visión por computadora",
+          "inteligencia artificial"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-11T16:42:36Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.05903",
+      "rank": 4,
+      "title": "EvoSafeHarness: Evolving Model- and Domain-Specific Harnesses for Securing Agents",
+      "authors": [
+        "Nanxi Li",
+        "Yingzi Ma",
+        "Yulong Cao",
+        "Edward Suh"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-05",
+      "url": "https://arxiv.org/abs/2609.05903",
+      "pdf_url": "https://arxiv.org/pdf/2609.05903",
+      "score": 57,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Large Language Model (LLM) agents are turning language into real-world effects, making safety necessary against both indirect prompt injections and direct harmful requests. System-level safety harnesses add an enforcement layer beyond model-level defenses, but existing harnesses are usually designed once by experts and applied across heterogeneous models and domains. Effective protection is deployment-dependent: models differ in how much enforcement they need before utility declines, while domains differ in the effects, state, and action sequences that must be governed. A harness that is strict enough for one model may over-block another, and a policy that transfers across domains may miss application-specific safety relations. We present EvoSafeHarness, a safety-specific optimization framework that synthesizes a deployable harness for a frozen model in a target domain. It jointly searches a natural-language policy and executable code logic, guided by model behavior, domain specifications, and fresh-context adversarial review to reject benchmark-specific rules. Across four agent benchmark families, EvoSafeHarness achieves a stronger safety-utility frontier than fixed expert-designed defenses. On DecodingTrust-Agent, it reduces average attack success rate from 45.6% to 10.0% at a 3.3-point utility cost and achieves the best score in 14 of 15 cells. On AgentDojo, it reaches 82.8% utility at 0.0% ASR, twice CaMeL's utility at the same operating point, and transfers unchanged to unseen AgentDyn suites. It also achieves the best score on Agent-SafetyBench for every victim and keeps mean ASR below 20% under adaptive PAIR attacks with a refinement budget of 16. Analysis shows that domain semantics determine which safety relations and trajectory state are needed, while model and runtime behavior determine how and where those relations should be enforced.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "EvoSafeHarness optimiza la seguridad de agentes LLM adaptando las defensas a modelos y dominios específicos para un equilibrio superior entre seguridad y utilidad.",
+        "problema": "Las defensas de seguridad para agentes LLM son genéricas y no se adaptan a las diferencias entre modelos y dominios, lo que lleva a una protección subóptima o a una reducción excesiva de la utilidad.",
+        "propuesta": "EvoSafeHarness es un marco de optimización que sintetiza automáticamente políticas de seguridad y lógica de código ejecutables, adaptadas a un modelo y dominio específicos, utilizando la revisión adversarial y las especificaciones del dominio.",
+        "resultados": "Reduce la tasa de éxito de ataques del 45.6% al 10.0% en DecodingTrust-Agent con un coste de utilidad mínimo. En AgentDojo, alcanza el 82.8% de utilidad con 0% de tasa de éxito de ataque, duplicando la utilidad de CaMeL. Se transfiere a nuevos entornos y mantiene la tasa de éxito de ataque por debajo del 20% en Agent-SafetyBench bajo ataques adaptativos.",
+        "por_que_importa": "Permite desplegar agentes LLM más seguros y útiles en entornos del mundo real al personalizar las capas de seguridad, mejorando la protección contra ataques sin sacrificar el rendimiento.",
+        "tags": [
+          "agentes LLM",
+          "seguridad",
+          "ciberseguridad",
+          "optimización",
+          "defensas adaptativas",
+          "harness"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-11T16:43:03Z"
+      }
+    }
+  ],
+  "generated_at": "2026-09-11T16:43:03Z"
+}
