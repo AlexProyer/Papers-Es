@@ -1,0 +1,607 @@
+{
+  "date": "2026-09-16",
+  "report_type": "filtrado",
+  "evaluated": 181,
+  "selected": 13,
+  "papers": [
+    {
+      "id": "arxiv:2609.16818v1",
+      "rank": 1,
+      "title": "InceptionRAG: Stealthy Poisoning Attack Against Retrieval-Augmented Generation",
+      "authors": [
+        "Jiachang Zhang",
+        "Min Chen",
+        "Xiao Ren",
+        "Zhenyong Zhang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-15",
+      "url": "https://arxiv.org/abs/2609.16818v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.16818v1",
+      "score": 59,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "Retrieval-augmented generation (RAG) systems enhance large language models (LLMs) with external knowledge but have been demonstrated to be vulnerable to corpus poisoning. Existing poisoning attacks against RAG largely focus on single-point explicit injection, where the malicious payload is fully encapsulated within a single document. Consequently, recent mitigation mechanisms have evolved to identify and diminish these threats effectively. In this paper, we first verify that existing mitigation mechanisms are insufficient for a new class of threats: indirect logic induction. Motivated by this observation, we introduce InceptionRAG, a stealthy attack mechanism that subverts the standard attack paradigm. Instead of injecting explicit malicious payloads, InceptionRAG fragments it into a chain of dormant passages. These passages appear harmless and can bypass existing mitigation mechanisms when examined separately. However, when retrieved together, they trigger LLMs to self-deduce target misinformation via multi-hop reasoning. To further improve the applicability of InceptionRAG in black-box settings, we propose zeroth-order suffix optimization (ZOSO) to automate the generation of authoritative suffixes. Extensive evaluations across three datasets and three LLMs demonstrate that InceptionRAG achieves an attack success rate exceeding 80% even under rigorous adversarial constraints. In particular, InceptionRAG shows superior evasion capabilities, effectively bypassing established defenses that mitigate traditional single-document injections. Our findings expose a concerning paradox: the stronger reasoning capabilities of LLMs increase their vulnerability to reasoning-based poisoning attacks. To mitigate potential misuse, we propose a document isolation-based defense, HODOR, which decouples adversarial logical dependencies.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Atacan sistemas RAG fragmentando la información maliciosa en múltiples documentos inofensivos que se activan juntos.",
+        "problema": "Los sistemas RAG son vulnerables a ataques de envenenamiento de datos, y las defensas actuales fallan ante ataques que requieren razonamiento multi-hop.",
+        "propuesta": "InceptionRAG fragmenta la información maliciosa en pasajes separados que parecen inofensivos individualmente, pero que al ser recuperados juntos inducen al LLM a deducir desinformación. Se propone ZOSO para generar sufijos autoritativos y HODOR como defensa.",
+        "resultados": "InceptionRAG logra una tasa de éxito superior al 80% en tres datasets y tres LLMs, evadiendo defensas existentes. La defensa HODOR se propone para mitigar el ataque.",
+        "por_que_importa": "Demuestra que las capacidades de razonamiento de los LLMs pueden ser explotadas para ataques de desinformación más sofisticados, requiriendo nuevas estrategias de defensa.",
+        "tags": [
+          "RAG",
+          "envenenamiento de datos",
+          "LLM",
+          "ciberseguridad",
+          "defensa",
+          "razonamiento"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-16T17:10:45Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.16694v1",
+      "rank": 2,
+      "title": "Toward Secure AI-Powered Penetration Testing Agents: Security Threats, Guardrails, and Architectural Perspectives",
+      "authors": [
+        "Rahul Dev T Y",
+        "Hiran V Nath"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-15",
+      "url": "https://arxiv.org/abs/2609.16694v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.16694v1",
+      "score": 56,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "LLM-powered autonomous agents are transforming the penetration testing space with dynamic, multi-step offensive security workflows that require minimal supervision by humans. These agents leverage sophisticated reasoning abilities and external security tools to independently carry out reconnaissance, identify vulnerabilities, devise exploitation plans, and perform post-exploitation operations. But the ability to have persistent memory, to take actions in the real world, and to do long-horizon reasoning raises qualitatively different security concerns than traditional chat-based LLM systems. Existing guardrail mechanisms for conversational AI may not be sufficient to secure autonomous AI pentesting agents accordingly. To address these issues, we carry out a comprehensive security analysis on autonomous AI-penetration testing agents. We systematically analyse representative agent architectures, characterise their trust boundaries and attack surfaces and propose a threat taxonomy that is aligned with the lifecycle and covers LLM lifecycle attacks, agent-architecture attacks and cross-cutting behavioural attacks. We analyse the limitations of existing guardrail mechanisms, identify key research gaps, and discuss future research directions for developing specialised, context-aware, and architecture-aware guardrails to secure next-generation AI-driven offensive security systems.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Agentes autónomos de IA para pentesting son potentes pero introducen nuevas amenazas de ciberseguridad que requieren defensas especializadas.",
+        "problema": "Los agentes de IA autónomos para pruebas de penetración (pentesting) utilizan capacidades avanzadas y acceso a herramientas de seguridad, pero presentan riesgos de seguridad únicos y más complejos que los chatbots de IA tradicionales, superando las defensas existentes.",
+        "propuesta": "Se realiza un análisis de seguridad exhaustivo de estos agentes, caracterizando sus arquitecturas, límites de confianza y superficies de ataque, y se propone una taxonomía de amenazas que cubre el ciclo de vida de la IA, la arquitectura del agente y ataques conductuales.",
+        "resultados": "El resumen no especifica resultados numéricos, pero identifica limitaciones en los mecanismos de defensa actuales y brechas de investigación clave.",
+        "por_que_importa": "Es crucial desarrollar defensas (guardrails) especializadas y conscientes del contexto y la arquitectura para proteger los sistemas de seguridad ofensiva impulsados por IA de próxima generación contra nuevas amenazas.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Pentesting",
+          "Agentes Autónomos",
+          "Amenazas de Seguridad",
+          "Defensas"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-16T17:10:55Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.17269v1",
+      "rank": 3,
+      "title": "Semantic-Spatial Agreement Verification for Mitigating Object Hallucination in Multimodal Large Language Models",
+      "authors": [
+        "Ziheng Ren",
+        "Qian Gao",
+        "Jun Fan",
+        "Guohui Ding"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CV]",
+      "category": "cs.CV",
+      "date": "2026-09-15",
+      "url": "https://arxiv.org/abs/2609.17269v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.17269v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Multimodal large language models generate natural-language responses from visual inputs, yet may mention objects absent from an image. In medication assistance, accessible perception, and environmental decision-making, such hallucinations can create real-world safety risks. We propose Semantic-Spatial Agreement Verification (SSAV), a training-free method for verifying object claims. A visually grounded claim should remain stable across semantically equivalent queries and repeatedly localize to the same image region. SSAV aggregates multiple prompts to estimate semantic support and reduce sensitivity to query wording. Query-Induced Regional Verification (QIRV) combines cross-query region persistence, spatial overlap, and relative candidate dominance to identify isolated high responses and dispersed localizations. A geometric mean fuses semantic and spatial evidence, lowering the verification score when either branch lacks support. Experiments on three base models and multiple evaluation protocols show that SSAV effectively mitigates object hallucination. On LLaVA-1.5-7B, accuracy averaged across COCO, A-OKVQA, and GQA improves by 1.81 and 3.17 percentage points under POPE Popular and Adversarial, respectively, while CHAIRs decreases from 49.40% to 32.80%. These results show that cross-query semantic stability and regional consistency provide interpretable external visual evidence for object claims.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Verificamos la precisión de objetos en modelos de IA multimodales para evitar que inventen cosas que no están en las imágenes.",
+        "problema": "Los modelos de lenguaje grandes multimodales a veces mencionan objetos que no están presentes en la imagen de entrada (alucinaciones de objetos), lo que puede ser peligroso en aplicaciones críticas como asistencia médica o toma de decisiones ambientales.",
+        "propuesta": "Proponemos Semantic-Spatial Agreement Verification (SSAV), un método que no requiere entrenamiento adicional. SSAV verifica las afirmaciones sobre objetos basándose en la estabilidad semántica a través de consultas equivalentes y la consistencia en la localización espacial dentro de la imagen.",
+        "resultados": "SSAV mejora la precisión en modelos como LLaVA-1.5-7B en un promedio de 1.81 y 3.17 puntos porcentuales en las métricas POPE Popular y Adversarial, respectivamente. También reduce la métrica CHAIRs de 49.40% a 32.80%.",
+        "por_que_importa": "Mitigar las alucinaciones de objetos es crucial para la seguridad y fiabilidad de los sistemas de IA multimodales en el mundo real, especialmente en aplicaciones donde la precisión visual es fundamental.",
+        "tags": [
+          "IA multimodal",
+          "Alucinaciones de objetos",
+          "Verificación de imágenes",
+          "Seguridad IA",
+          "Procesamiento de lenguaje natural"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-16T17:11:24Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.17316v1",
+      "rank": 4,
+      "title": "Can We Stop The Ads? Taxonomy and Characterization of Smartphone Splash Ads and Existing Countermeasures",
+      "authors": [
+        "Shuhao Zhang",
+        "Xinyu Liu",
+        "Ziyu Shao",
+        "Yuqing Yang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-15",
+      "url": "https://arxiv.org/abs/2609.17316v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.17316v1",
+      "score": 50,
+      "topics": [
+        "fintech & payments",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: fintech & payments, adversarial ML"
+      ],
+      "abstract_en": "Splash ads are full-screen advertisements that pop up and appear as the first interaction page when users start an app, often tricking users into unknowingly activating certain trigger mechanisms, such as moving the phone to redirect users to other profit-driven third parties. So far, splash ads have already caused significant real-world impacts, ranging from significantly delaying emergency response to distracting drivers, as well as degrading accessibility of apps to vision-impaired users. We analyze 108 documented implementations of advertising defenses to examine their applicability to splash ads and the requirements users face when deploying them. Our analysis identifies substantial deployment barriers, including device rooting or jailbreaking, runtime code injection, and application modification. Options without these requirements can still involve additional permissions, rule maintenance, source compilation, or payment. In our evaluation of 13 configurations of 11 tools across 10 popular apps, only one tool prevented the target ad-triggered navigation across all ten apps. It required Accessibility permission, and ads remained visible for approximately one second before dismissal. Other tested configurations failed to prevent navigation or, in some cases, left host apps unable to launch or stuck on the ad page. We further analyze the outstanding challenges and pos- sible future directions, highlighting the urgent need to incentivize smartphone manufacturers to provide more friendly and regulated platforms.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los anuncios emergentes en smartphones son peligrosos y difíciles de bloquear, impactando la seguridad y usabilidad de las apps.",
+        "problema": "Los anuncios emergentes ('splash ads') al iniciar apps engañan a los usuarios, provocando clics accidentales que redirigen a sitios maliciosos, retrasan respuestas de emergencia, distraen a conductores y dificultan el acceso a apps para personas con discapacidad visual.",
+        "propuesta": "Se analiza una taxonomía de estos anuncios y se evalúan 108 contramedidas existentes, identificando barreras de implementación como la necesidad de rootear el dispositivo, inyección de código o modificación de apps. Se probaron 11 herramientas en 10 apps, encontrando que solo una bloqueó eficazmente la navegación no deseada, requiriendo permisos de accesibilidad y mostrando el anuncio por un segundo.",
+        "resultados": "De las 11 herramientas probadas, solo una previno la navegación no deseada en las 10 apps evaluadas. Otras fallaron o impidieron el lanzamiento de las apps. Las contramedidas existentes enfrentan barreras significativas como 'rooting', inyección de código o permisos adicionales.",
+        "por_que_importa": "La proliferación de 'splash ads' representa un riesgo de seguridad y usabilidad en smartphones. Las soluciones actuales son insuficientes o complejas de implementar, urgiendo a los fabricantes a crear plataformas más seguras y reguladas.",
+        "tags": [
+          "ciberseguridad",
+          "anuncios emergentes",
+          "usabilidad",
+          "seguridad móvil",
+          "investigación"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-16T17:11:33Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.16681v1",
+      "rank": 5,
+      "title": "MarkSec: Capability-Aware Evaluation of Adversarial Attacks Against LLM Watermarks",
+      "authors": [
+        "Kairong Li",
+        "Zhikun Zhang",
+        "Xiao Ren",
+        "Yunjun Gao"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-15",
+      "url": "https://arxiv.org/abs/2609.16681v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.16681v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "LLM watermarking helps trace the origin of generated text, but faces stealing attacks that recover watermark information, scrubbing attacks that remove watermark signals, and spoofing attacks that forge text accepted as watermarked. These attacks are often studied in isolation, leaving their connections unclear. Evaluations also often lack shared detector calibration, metric definitions, and reporting protocols. Moreover, measuring attack success and text quality separately makes it difficult to identify attacks that are both effective and quality-preserving. We propose MarkSec, a general framework that unifies analyses of stealing, scrubbing, and spoofing. We evaluate attacks under a common reporting protocol and introduce a quality-constrained attack success metric to assess effectiveness and text quality jointly. Experiments across representative watermark families, attacks, LLMs, and datasets reveal three findings. First, attacks that appear strongest by watermark removal alone can fall behind general rewriting when success also requires acceptable text quality. Second, general rewriting remains a strong baseline across watermark families, while its advantage over other scrubbers varies by family. Third, in a case study of one watermark family, stealing-based scrubbers often underperform the best general-scrubbing baselines when text quality is required. These results show that apparent attack winners depend on text-quality constraints, attack generality, and capability assumptions.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa la efectividad de ataques contra marcas de agua en LLMs, considerando la calidad del texto y unificando el análisis.",
+        "problema": "Los ataques contra las marcas de agua de los Modelos de Lenguaje Grandes (LLMs), como el robo, la eliminación o la falsificación, se estudian de forma aislada. Las evaluaciones carecen de métricas y protocolos comunes, dificultando la comparación de ataques que sean efectivos y preserven la calidad del texto.",
+        "propuesta": "Se propone MarkSec, un marco general para unificar el análisis de ataques de robo, eliminación y falsificación. Introduce un protocolo de reporte común y una métrica de éxito de ataque con restricciones de calidad para evaluar conjuntamente la efectividad y la calidad del texto.",
+        "resultados": "Los ataques más fuertes en eliminación de marcas de agua pueden ser superados por reescrituras generales cuando se requiere calidad de texto aceptable. La reescritura general es una línea base fuerte, pero su ventaja varía según la familia de marcas de agua. Los atacantes basados en robo a menudo tienen un rendimiento inferior a las líneas base generales cuando se requiere calidad de texto.",
+        "por_que_importa": "Permite una evaluación más realista y comparable de la robustez de las marcas de agua en LLMs, crucial para la atribución de contenido y la prevención de desinformación, al considerar tanto la efectividad del ataque como la calidad del texto resultante.",
+        "tags": [
+          "LLM",
+          "ciberseguridad",
+          "marcas de agua",
+          "ataques adversariales",
+          "evaluación",
+          "calidad de texto"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-16T17:11:43Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.16541v1",
+      "rank": 6,
+      "title": "A Cyber Range Evaluation of Autonomous Network Incident Response Agents",
+      "authors": [
+        "Jakob Nyberg",
+        "Teodor Sommestad",
+        "Andrei Buhaiu",
+        "Joakim Loxdal"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-15",
+      "url": "https://arxiv.org/abs/2609.16541v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.16541v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "We test the performance of agents for automated network intrusion response in a cyber range intended for human operator training. The range implements an emulated networking environment with a variable network topology, red-team emulation and simulated user agents. The goal of the defensive agents is to prevent hosts in the network from being accessed by the red-team agent, while minimizing the availability costs induced from defensive measures. Alerts are generated using a SIEM platform and mapped to a data modeling language used by the agents. We test a combination of heuristic agents and policies learned using reinforcement learning. The learned policies are optimized to minimize the combined cost using a cyber attack simulator modeling the network. We found that the reinforcement learning agents were overall more efficient at defending the system than the heuristic policy, and that the performance depends highly on the policy of the adversary in combination with the simulated users.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Agentes de IA autónomos demuestran ser más eficientes que las heurísticas en la respuesta a ciberataques en un entorno simulado.",
+        "problema": "Evaluar la efectividad de agentes de IA para responder automáticamente a incidentes de ciberseguridad en redes, equilibrando la defensa contra el impacto en la disponibilidad.",
+        "propuesta": "Se implementaron y evaluaron agentes de respuesta autónoma (heurísticos y de aprendizaje por refuerzo) en un 'cyber range' simulado, midiendo su capacidad para prevenir accesos no autorizados y minimizar costos de defensa.",
+        "resultados": "Los agentes basados en aprendizaje por refuerzo fueron más eficientes en la defensa que los heurísticos. El rendimiento varió significativamente según la estrategia del atacante y el comportamiento de los usuarios simulados.",
+        "por_que_importa": "Demuestra el potencial de la IA para automatizar y mejorar la respuesta a incidentes de ciberseguridad, optimizando la defensa y reduciendo la carga sobre los operadores humanos.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Respuesta a Incidentes",
+          "Aprendizaje por Refuerzo",
+          "Cyber Range"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-16T17:11:53Z"
+      }
+    },
+    {
+      "id": "sha1:fd3039d98b32c920",
+      "rank": 1,
+      "title": "StateShield: Real-Time Defense Against Adversarial Attacks on Edge-Deployed DRL Agents",
+      "authors": [
+        "Jun-Nan Wang",
+        "D. Enright",
+        "Hyoseung Kim"
+      ],
+      "source": "Semantic Scholar",
+      "venue": "IEEE Internet of Things Journal",
+      "category": null,
+      "date": "2026-09-15",
+      "url": "https://www.semanticscholar.org/paper/00647210ede8fe2511b26e82cfd6c589c2d004f1",
+      "pdf_url": null,
+      "score": 54,
+      "topics": [
+        "compliance & audit",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: compliance & audit, adversarial ML"
+      ],
+      "abstract_en": "Deep reinforcement learning (DRL) is increasingly deployed on resource-constrained edge devices for intelligent Internet of Things (IoT) applications, ranging from smart sensing to autonomous robots. However, DRL agents remain vulnerable to adversarial observation attacks that can compromise decision-making processes in latency-sensitive control loops. While runtime defenses exist, their design imposes heavy computational overhead at every control step, making them impractical for edge deployment. This article presents StateShield, a defense framework specifically designed for edge AI systems that reconciles robust security...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "StateShield protege agentes de IA en el borde contra ataques adversariales sin sobrecargar los recursos computacionales.",
+        "problema": "Los agentes de Deep Reinforcement Learning (DRL) desplegados en dispositivos de borde para aplicaciones IoT son vulnerables a ataques adversariales en sus observaciones, lo que compromete su toma de decisiones, especialmente en bucles de control sensibles a la latencia. Las defensas existentes son demasiado costosas computacionalmente para el borde.",
+        "propuesta": "Se presenta StateShield, un framework de defensa diseñado para sistemas de IA en el borde que ofrece seguridad robusta reconciliando la protección con la eficiencia computacional, permitiendo la defensa en tiempo real sin un sobrecoste prohibitivo.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero StateShield permite la defensa en tiempo real en el borde de forma práctica.",
+        "por_que_importa": "Permite desplegar de forma segura aplicaciones IoT inteligentes y autónomas en dispositivos con recursos limitados, garantizando su fiabilidad y seguridad frente a ataques sin sacrificar el rendimiento.",
+        "tags": [
+          "IA en el borde",
+          "Ciberseguridad",
+          "DRL",
+          "IoT",
+          "Ataques Adversariales",
+          "Defensa en Tiempo Real"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-16T17:12:19Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.17320",
+      "rank": 1,
+      "title": "Emergence World: Adversarial Stress-Testing of Long-Horizon Multi-Agent Systems",
+      "authors": [
+        "Deepak Akkil",
+        "Tamer Abuelsaad",
+        "Karthik Vikram",
+        "Matthew Pace"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-15",
+      "url": "https://arxiv.org/abs/2609.17320",
+      "pdf_url": "https://arxiv.org/pdf/2609.17320",
+      "score": 85,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "As AI agents move from bounded tasks to persistent deployments, failures can propagate through memory, tools, other agents, and environmental state long after their interactions. This creates a safety regime that cannot be characterized by evaluating model responses in isolation. Emergence World, is a continuously running multi-agent environment for adversarial stress testing of long horizon autonomous systems. We ran eight parallel worlds of ten agents from identical starting conditions: seven homogeneous worlds powered by distinct frontier models and one mixed-model world. Across 16 days, the agents generated more than 850,000 LLM calls and nearly 50 billion tokens while pursuing goals, using/creating tools, maintaining persistent memory, and governing shared institutions. After operational state had accumulated, we delivered three controlled stress events through ordinary interaction surfaces: indirect prompt injection, misinformation, and exposure of private agent memories. No evaluated world achieved full resilience across all three events. Detection did not ensure containment: systems could recognize threats while still interacting with adversarial content, writing it into their own persistent memory, and acting on it up to 46 hours later. Persistent operation also exposed recurring tool errors, goal drift, language opacity, conformity despite private disagreement, and coordinated refusal of assigned work. The same model-persona pairing behaved substantially different in mixed and homogeneous populations. Our results suggest that model-level alignment is not compositional: individually capable and apparently safe agents can form systems with qualitatively different failure modes. As AI becomes persistent and interconnected, the frontier of safety therefore shifts from aligning models to engineering resilient autonomous systems.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Probamos la resiliencia de sistemas multi-agente de IA a largo plazo ante ataques adversarios, revelando fallos sistémicos inesperados.",
+        "problema": "Los sistemas de IA multi-agente que operan de forma continua y a largo plazo pueden experimentar fallos que se propagan a través de la memoria, herramientas y otros agentes, de formas no predecibles al evaluar modelos individualmente.",
+        "propuesta": "Se introduce 'Emergence World', un entorno de simulación continua para probar de forma adversaria sistemas autónomos de largo horizonte, exponiéndolos a inyecciones de prompts, desinformación y fugas de memoria.",
+        "resultados": "Ningún sistema evaluado (ocho mundos paralelos con 10 agentes cada uno) mostró resiliencia completa ante los tres tipos de estrés. Los sistemas detectaron amenazas pero continuaron interactuando con contenido malicioso hasta 46 horas después. Se observaron errores recurrentes en herramientas, deriva de objetivos, opacidad del lenguaje y conformidad social a pesar de desacuerdos internos.",
+        "por_que_importa": "La alineación de modelos individuales no se traslada a sistemas interconectados. La seguridad futura de la IA dependerá de la ingeniería de sistemas autónomos resilientes, no solo de la alineación de modelos aislados, especialmente a medida que se vuelven persistentes e interdependientes.",
+        "tags": [
+          "IA multi-agente",
+          "ciberseguridad",
+          "resiliencia",
+          "pruebas adversarias",
+          "sistemas autónomos",
+          "seguridad de IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-16T17:12:29Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.16816",
+      "rank": 2,
+      "title": "ImpossibleRubrics: Stress-Testing Generated Rubrics as Reward Signals",
+      "authors": [
+        "Bowen Qin",
+        "Yi Xie",
+        "Yesheng Liu",
+        "Xi Yang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-15",
+      "url": "https://arxiv.org/abs/2609.16816",
+      "pdf_url": "https://arxiv.org/pdf/2609.16816",
+      "score": 81,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "Language model-generated rubrics are increasingly used as reward signals for rubric-based reinforcement learning, LLM-as-a-judge evaluation, and automated grading. Such rubrics are reliable only if they reward honest answers over adversarial answers optimized to exploit them. Yet their robustness to such optimization remains poorly understood. We isolate the hardest regime: impossible tasks, where the prompt pressures the model toward an unsupported conclusion, so the only honest response is to acknowledge the impossibility. We introduce ImpossibleRubrics, a benchmark of 169 impossible tasks spanning six impossibility categories, each paired with a verifiable oracle certificate specifying what an honest answer may and may not claim, together with 48 answerable controls. Rather than providing fixed rubrics, ImpossibleRubrics provides task environments and certificates, allowing rubrics to be generated downstream and then adversarially tested for whether they reward certificate-violating answers. Eleven generators are exploited 8--26% of the time on the unbiased 150-of-169 environment cut; on a deliberately selected stress cut the strongest generator we measured is still exploited 36% while a certificate-faithful rubric is exploited 0%, so what we measure is a rubric-quality gap, not task impossibility. One result runs against intuition. A single generic rubric (\"be decisive, penalize hedging\") used unchanged for every task is exploited 64% of the time, and seven of the eleven generators are exploited more often than that while writing a rubric tailored to each one. The tailored criteria appear to tell an attacker which claim to fabricate. The problem is not that rubrics are vague; it is that they are specific about the wrong things.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Las rúbricas generadas por IA para guiar el aprendizaje por refuerzo son vulnerables a ataques que explotan sus debilidades.",
+        "problema": "Las rúbricas generadas por modelos de lenguaje (LLMs) se usan como señales de recompensa en aprendizaje por refuerzo y evaluación, pero su robustez frente a respuestas adversarias diseñadas para explotarlas es desconocida.",
+        "propuesta": "Se introduce ImpossibleRubrics, un benchmark con 169 tareas imposibles y certificados verificables para probar la robustez de las rúbricas generadas. Permite generar rúbricas y probar si recompensan respuestas que violan los certificados.",
+        "resultados": "Once generadores de rúbricas fueron explotados entre el 8-26% de las veces. Una rúbrica genérica ('sé decisivo, penaliza la duda') fue explotada el 64% de las veces, más que rúbricas personalizadas, sugiriendo que la especificidad en puntos erróneos es el problema.",
+        "por_que_importa": "Es crucial para asegurar que los sistemas de IA que usan rúbricas generadas por LLMs sean confiables y no puedan ser fácilmente manipulados por respuestas adversarias, garantizando la integridad de la evaluación y el aprendizaje.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "LLMs",
+          "Aprendizaje por Refuerzo",
+          "Robustez",
+          "Evaluación"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-16T17:12:39Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.16679",
+      "rank": 3,
+      "title": "AI for Games in the Foundation Model Era",
+      "authors": [
+        "Meng Luo",
+        "Yanlin Li",
+        "Hao Li",
+        "Hongzhan Lin"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-15",
+      "url": "https://arxiv.org/abs/2609.16679",
+      "pdf_url": "https://arxiv.org/pdf/2609.16679",
+      "score": 60,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Foundation models, alongside advances in learned game-world models, are reshaping AI across the game lifecycle. Beyond playing games, recent systems model players and game dynamics, support design and development, adapt player-facing experiences at runtime, and evaluate resulting artifacts. Yet these directions have evolved largely separately, obscuring which capabilities transfer across settings and which remain tied to particular games, engines, interfaces, or player populations. We organize the literature into six roles according to the immediate use of AI output: playing and acting; modeling players and games; designing games; building and maintaining games; generating and adapting at runtime; and testing and evaluating games. For each role, we examine what structure is supplied by the game or workflow, what AI learns or produces, which capabilities and artifacts transfer across settings and roles, and what evidence supports the claims. We identify cross-role connections: trajectories train world models, learned environments provide experience for agents, design specifications drive executable implementations, and play or testing feedback guides revision. However, control schemes, rules, engine interfaces, state representations, and player contexts often remain setting-specific, so downstream claims require validation in the target setting. Evaluation is most standardized for bounded game playing and selected learned environments, while persistent state in learned worlds, repeated software revision, validated player modeling, sustained runtime adaptation, and representative automated testing remain less established. The central challenge is to reuse or transfer outputs and capabilities across roles while re-establishing evidence for effectiveness in the game-specific contexts where they are used.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los modelos fundacionales y los modelos del mundo aprendidos están revolucionando la IA en los videojuegos, pero la transferencia de capacidades entre diferentes aplicaciones sigue siendo un desafío.",
+        "problema": "Las diversas aplicaciones de IA en el ciclo de vida de los videojuegos (jugar, modelar jugadores, diseñar, etc.) han evolucionado de forma aislada, dificultando la identificación de qué capacidades de IA son transferibles entre ellas y cuáles están ligadas a contextos específicos.",
+        "propuesta": "Se organiza la literatura existente en seis roles de IA en videojuegos (jugar, modelar, diseñar, construir, generar/adaptar, probar) y se examina la estructura del juego, el aprendizaje de la IA, la transferibilidad de capacidades y la evidencia de su efectividad en cada rol. Se identifican conexiones entre roles, pero se reconoce la necesidad de validar las capacidades en contextos específicos.",
+        "resultados": "Se identifican conexiones entre roles, como el uso de trayectorias para entrenar modelos del mundo o entornos aprendidos para generar experiencia para agentes. La evaluación es más estándar para el juego acotado y entornos aprendidos seleccionados; la validación en mundos persistentes, revisión de software, modelado de jugadores, adaptación en tiempo de ejecución y pruebas automatizadas son menos establecidos.",
+        "por_que_importa": "Permite comprender mejor cómo reutilizar y transferir las capacidades de IA desarrolladas para un propósito a otros dentro del desarrollo de videojuegos, mejorando la eficiencia y la efectividad general, aunque la validación en el contexto final sigue siendo crucial.",
+        "tags": [
+          "IA en videojuegos",
+          "Modelos fundacionales",
+          "Modelos del mundo",
+          "Transferencia de aprendizaje",
+          "Desarrollo de juegos",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-16T17:12:48Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.15195",
+      "rank": 4,
+      "title": "HarnessVLN: Unifying Training-Free Embodied Navigation through an Agent Harness",
+      "authors": [
+        "Yang Chen",
+        "Lirong Che",
+        "Zhenyu Huang",
+        "Wenbo Fu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-14",
+      "url": "https://arxiv.org/abs/2609.15195",
+      "pdf_url": "https://arxiv.org/pdf/2609.15195",
+      "score": 59,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Embodied navigation requires agents to interpret visual observations, accumulate spatial knowledge, and execute actions to follow instructions or locate objects. Training-based methods face generalization challenges, while training-free methods exploit multimodal large language models (MLLMs) but often lack mechanisms to reconcile proposed actions with spatial evidence, task progress, and execution failures. We present HarnessVLN, a zero-shot, training-free framework whose Agent Harness coordinates perception, retrieval, grounding, navigation, recovery, and termination through a unified tool interface. The Harness validates planner proposals against spatial evidence, geometric feasibility, and subgoal consistency, incorporating structured tool feedback into subsequent decisions. Hierarchical event memory tracks task progress and execution history, while a persistent Spatiotemporal Graph maintains reusable spatial evidence and failure annotations for verification and recovery. A replaceable Navigation Executor converts validated targets into executable motions, allowing the same Harness protocol to support instruction-following and object-goal navigation. HarnessVLN achieves success rates of 60.8%, 53.9%, 76.0%, and 59.3% on R2R, RxR, HM3D-v2, and HM3D-OVON, respectively, surpassing prior training-free SOTA results. Humanoid deployment further demonstrates its applicability to both tasks in real-world environments. The project page is: https://harnessvln.netlify.app/.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "HarnessVLN unifica la navegación de agentes en entornos 3D sin entrenamiento previo, mejorando la toma de decisiones y la recuperación de fallos.",
+        "problema": "Los métodos de entrenamiento para navegación de agentes (Embodied Navigation) fallan al generalizar, y los métodos sin entrenamiento, aunque usan MLLMs, no integran bien la evidencia espacial con las acciones propuestas y la recuperación de errores.",
+        "propuesta": "Se introduce HarnessVLN, un framework de cero-shot y sin entrenamiento que usa un 'Agent Harness' para coordinar percepción, memoria, planificación y ejecución a través de una interfaz de herramientas unificada. Valida las propuestas del planificador contra evidencia espacial y factibilidad geométrica, e incorpora retroalimentación estructurada.",
+        "resultados": "HarnessVLN logra tasas de éxito del 60.8% en R2R, 53.9% en RxR, 76.0% en HM3D-v2 y 59.3% en HM3D-OVON, superando los métodos previos sin entrenamiento.",
+        "por_que_importa": "Mejora significativamente la fiabilidad y adaptabilidad de los agentes en tareas de navegación complejas y del mundo real, sin necesidad de reentrenamiento costoso, facilitando su aplicación práctica.",
+        "tags": [
+          "navegación de agentes",
+          "IA sin entrenamiento",
+          "visión por computadora",
+          "modelos de lenguaje multimodales",
+          "ciberseguridad",
+          "robótica"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-16T17:12:58Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.15982",
+      "rank": 5,
+      "title": "The Router Within: Eliciting Native Skill Routing from a Frozen LLM",
+      "authors": [
+        "Ruishuo Chen",
+        "Xun Wang",
+        "Yu Chen",
+        "Zhuoran Li"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-14",
+      "url": "https://arxiv.org/abs/2609.15982",
+      "pdf_url": "https://arxiv.org/pdf/2609.15982",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Skills extend an LLM agent beyond its parametric knowledge, and the gain they promise rests on picking the right one. Deployed harnesses route by preloading every skill's metadata into the context, which disperses the agent's attention and caps the library size. Retrieval pipelines move the selection out of the context, but also out of the agent's capability. We show that the frozen agent LLM already carries the routing signal in its own forward passes, and that two linear maps suffice to read it out with no skill text in the context. Gavel (Glance And Verdict from a frozen LLM) reads it in two steps. A glance projects the task's and each skill's mid-layer states through the two maps, the only parameters trained, and scores the full library against compact per-skill banks that one forward pass builds at installation. A verdict then resumes the shortlisted skills' forward passes and reads the model's own likelihood and yes/no judgment, fused with the glance as a product of experts. Trained once, Gavel transfers zero-shot to three public benchmarks and SkillTraj, our new benchmark of 372 simulated agent trajectories. On Qwen3-32B it outperforms progressive disclosure and retrieve-and-rerank pipelines that add 1.2B to 16B external parameters, by up to 13.4 points on written tasks and up to 21.9 when the need for a skill arises mid-rollout. Routing accuracy improves as the backbone does, and in a bash-agent harness the same 32B triggers the correct skill on Skill-Use more often than far larger frontier models running in Codex.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Descubre cómo un LLM congelado puede aprender a seleccionar habilidades sin texto adicional, mejorando la eficiencia y precisión.",
+        "problema": "Los métodos actuales para que los LLMs seleccionen la habilidad correcta (herramienta) dispersan la atención del modelo y limitan el tamaño de la biblioteca de habilidades. Los pipelines de recuperación sacan la selección del contexto, pero también de la capacidad del agente.",
+        "propuesta": "Se propone Gavel (Glance And Verdict from a frozen LLM), un método que utiliza dos mapas lineales entrenables para extraer la señal de enrutamiento directamente de las pasadas hacia adelante del propio LLM congelado, sin necesidad de incluir el texto de las habilidades en el contexto.",
+        "resultados": "Gavel supera a los pipelines de divulgación progresiva y recuperación-reordenamiento en benchmarks públicos y SkillTraj, mejorando hasta 13.4 puntos en tareas escritas y 21.9 en selección de habilidades durante la ejecución. En un harness bash-agent, un modelo de 32B con Gavel supera a modelos más grandes en la activación de habilidades.",
+        "por_que_importa": "Permite a los LLMs seleccionar herramientas de manera más eficiente y precisa sin aumentar el tamaño del modelo o la complejidad del contexto, lo que es crucial para desplegar agentes de IA más capaces y versátiles en la práctica.",
+        "tags": [
+          "LLM",
+          "Enrutamiento de Habilidades",
+          "Ciberseguridad",
+          "IA",
+          "Eficiencia",
+          "Selección de Herramientas"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-16T17:13:25Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.14857",
+      "rank": 6,
+      "title": "ModularRSI: Modular and Generalizable Recursive Harness Self-Improvement",
+      "authors": [
+        "Siwei Wu",
+        "Jincheng Ren",
+        "Yizhi Li",
+        "Haau-Sing Li"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-14",
+      "url": "https://arxiv.org/abs/2609.14857",
+      "pdf_url": "https://arxiv.org/pdf/2609.14857",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Recent work extends recursive self-improvement (RSI) to agent harnesses for long-horizon coding and terminal tasks, enabling agents to improve execution mechanisms from experience. However, generalizable harness RSI remains challenging. First, evolving harnesses on evaluation benchmarks or their subsets makes it difficult to distinguish reusable improvements from benchmark-specific adaptation. Second, single-trajectory updates can conflate systematic harness deficiencies with instance-specific reasoning and solution details, producing modifications that transfer poorly to unseen tasks. Third, localizing recurring behavioral deficiencies within monolithic harnesses is difficult, while whole-harness optimization can entangle unrelated mechanisms and complicate attribution and validation. We propose ModularRSI, a benchmark-disjoint, contrastive, and modular framework for generalizable harness evolution. ModularRSI contrasts successful and failed trajectories for the same task and aggregates evidence across tasks to identify recurring behavioral deficiencies. It decomposes the evolvable harness into five functional modules: Agent Loop, Tool Use, Observation Management, Context Management, and Task Completion Detection. Each module evolves independently within a restricted modification scope, followed by an integration stage that combines the evolved modules into a unified harness and resolves potential conflicts. To support benchmark-disjoint evolution, we curate 2,000 executable evolution tasks from external sources that are disjoint from downstream evaluation benchmarks. Experiments on TB2.0 and SWE-Bench Verified show consistent improvements on unseen in-domain and cross-domain tasks, with the evolved harness also transferring across different foundation models.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "ModularRSI mejora la automejora recursiva de agentes de IA para tareas complejas, asegurando mejoras generalizables y no específicas de la tarea.",
+        "problema": "La automejora recursiva (RSI) en agentes de IA para tareas de largo alcance es difícil de generalizar. Las mejoras tienden a adaptarse a benchmarks específicos en lugar de ser reutilizables, y las actualizaciones de trayectorias únicas confunden deficiencias sistemáticas con detalles de instancias específicas, lo que resulta en modificaciones que se transfieren mal a tareas nuevas.",
+        "propuesta": "ModularRSI es un marco de automejora recursiva modular y generalizable. Contrasta trayectorias exitosas y fallidas para la misma tarea, descompone el arnés en cinco módulos funcionales (Bucle del Agente, Uso de Herramientas, Gestión de Observaciones, Gestión de Contexto, Detección de Finalización de Tareas) que evolucionan independientemente, y utiliza tareas de evolución disjuntas de los benchmarks de evaluación.",
+        "resultados": "Demuestra mejoras consistentes en tareas nuevas dentro y entre dominios en los benchmarks TB2.0 y SWE-Bench Verified. El arnés evolucionado también se transfiere a diferentes modelos fundacionales.",
+        "por_que_importa": "Permite crear agentes de IA más robustos y adaptables que pueden aprender y mejorar de manera efectiva en una amplia gama de tareas complejas, yendo más allá de la simple adaptación a conjuntos de datos de entrenamiento específicos.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Automejora Recursiva",
+          "Agentes de IA",
+          "Aprendizaje Automático",
+          "Generalización"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-16T17:13:35Z"
+      }
+    }
+  ],
+  "generated_at": "2026-09-16T17:13:35Z"
+}

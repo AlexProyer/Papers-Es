@@ -7249,5 +7249,223 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-09-11T16:43:03Z"
+  },
+  "arxiv:2609.16818v1": {
+    "tldr": "Atacan sistemas RAG fragmentando la información maliciosa en múltiples documentos inofensivos que se activan juntos.",
+    "problema": "Los sistemas RAG son vulnerables a ataques de envenenamiento de datos, y las defensas actuales fallan ante ataques que requieren razonamiento multi-hop.",
+    "propuesta": "InceptionRAG fragmenta la información maliciosa en pasajes separados que parecen inofensivos individualmente, pero que al ser recuperados juntos inducen al LLM a deducir desinformación. Se propone ZOSO para generar sufijos autoritativos y HODOR como defensa.",
+    "resultados": "InceptionRAG logra una tasa de éxito superior al 80% en tres datasets y tres LLMs, evadiendo defensas existentes. La defensa HODOR se propone para mitigar el ataque.",
+    "por_que_importa": "Demuestra que las capacidades de razonamiento de los LLMs pueden ser explotadas para ataques de desinformación más sofisticados, requiriendo nuevas estrategias de defensa.",
+    "tags": [
+      "RAG",
+      "envenenamiento de datos",
+      "LLM",
+      "ciberseguridad",
+      "defensa",
+      "razonamiento"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-16T17:10:45Z"
+  },
+  "arxiv:2609.16694v1": {
+    "tldr": "Agentes autónomos de IA para pentesting son potentes pero introducen nuevas amenazas de ciberseguridad que requieren defensas especializadas.",
+    "problema": "Los agentes de IA autónomos para pruebas de penetración (pentesting) utilizan capacidades avanzadas y acceso a herramientas de seguridad, pero presentan riesgos de seguridad únicos y más complejos que los chatbots de IA tradicionales, superando las defensas existentes.",
+    "propuesta": "Se realiza un análisis de seguridad exhaustivo de estos agentes, caracterizando sus arquitecturas, límites de confianza y superficies de ataque, y se propone una taxonomía de amenazas que cubre el ciclo de vida de la IA, la arquitectura del agente y ataques conductuales.",
+    "resultados": "El resumen no especifica resultados numéricos, pero identifica limitaciones en los mecanismos de defensa actuales y brechas de investigación clave.",
+    "por_que_importa": "Es crucial desarrollar defensas (guardrails) especializadas y conscientes del contexto y la arquitectura para proteger los sistemas de seguridad ofensiva impulsados por IA de próxima generación contra nuevas amenazas.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Pentesting",
+      "Agentes Autónomos",
+      "Amenazas de Seguridad",
+      "Defensas"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-16T17:10:55Z"
+  },
+  "arxiv:2609.17269v1": {
+    "tldr": "Verificamos la precisión de objetos en modelos de IA multimodales para evitar que inventen cosas que no están en las imágenes.",
+    "problema": "Los modelos de lenguaje grandes multimodales a veces mencionan objetos que no están presentes en la imagen de entrada (alucinaciones de objetos), lo que puede ser peligroso en aplicaciones críticas como asistencia médica o toma de decisiones ambientales.",
+    "propuesta": "Proponemos Semantic-Spatial Agreement Verification (SSAV), un método que no requiere entrenamiento adicional. SSAV verifica las afirmaciones sobre objetos basándose en la estabilidad semántica a través de consultas equivalentes y la consistencia en la localización espacial dentro de la imagen.",
+    "resultados": "SSAV mejora la precisión en modelos como LLaVA-1.5-7B en un promedio de 1.81 y 3.17 puntos porcentuales en las métricas POPE Popular y Adversarial, respectivamente. También reduce la métrica CHAIRs de 49.40% a 32.80%.",
+    "por_que_importa": "Mitigar las alucinaciones de objetos es crucial para la seguridad y fiabilidad de los sistemas de IA multimodales en el mundo real, especialmente en aplicaciones donde la precisión visual es fundamental.",
+    "tags": [
+      "IA multimodal",
+      "Alucinaciones de objetos",
+      "Verificación de imágenes",
+      "Seguridad IA",
+      "Procesamiento de lenguaje natural"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-16T17:11:24Z"
+  },
+  "arxiv:2609.17316v1": {
+    "tldr": "Los anuncios emergentes en smartphones son peligrosos y difíciles de bloquear, impactando la seguridad y usabilidad de las apps.",
+    "problema": "Los anuncios emergentes ('splash ads') al iniciar apps engañan a los usuarios, provocando clics accidentales que redirigen a sitios maliciosos, retrasan respuestas de emergencia, distraen a conductores y dificultan el acceso a apps para personas con discapacidad visual.",
+    "propuesta": "Se analiza una taxonomía de estos anuncios y se evalúan 108 contramedidas existentes, identificando barreras de implementación como la necesidad de rootear el dispositivo, inyección de código o modificación de apps. Se probaron 11 herramientas en 10 apps, encontrando que solo una bloqueó eficazmente la navegación no deseada, requiriendo permisos de accesibilidad y mostrando el anuncio por un segundo.",
+    "resultados": "De las 11 herramientas probadas, solo una previno la navegación no deseada en las 10 apps evaluadas. Otras fallaron o impidieron el lanzamiento de las apps. Las contramedidas existentes enfrentan barreras significativas como 'rooting', inyección de código o permisos adicionales.",
+    "por_que_importa": "La proliferación de 'splash ads' representa un riesgo de seguridad y usabilidad en smartphones. Las soluciones actuales son insuficientes o complejas de implementar, urgiendo a los fabricantes a crear plataformas más seguras y reguladas.",
+    "tags": [
+      "ciberseguridad",
+      "anuncios emergentes",
+      "usabilidad",
+      "seguridad móvil",
+      "investigación"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-16T17:11:33Z"
+  },
+  "arxiv:2609.16681v1": {
+    "tldr": "Evalúa la efectividad de ataques contra marcas de agua en LLMs, considerando la calidad del texto y unificando el análisis.",
+    "problema": "Los ataques contra las marcas de agua de los Modelos de Lenguaje Grandes (LLMs), como el robo, la eliminación o la falsificación, se estudian de forma aislada. Las evaluaciones carecen de métricas y protocolos comunes, dificultando la comparación de ataques que sean efectivos y preserven la calidad del texto.",
+    "propuesta": "Se propone MarkSec, un marco general para unificar el análisis de ataques de robo, eliminación y falsificación. Introduce un protocolo de reporte común y una métrica de éxito de ataque con restricciones de calidad para evaluar conjuntamente la efectividad y la calidad del texto.",
+    "resultados": "Los ataques más fuertes en eliminación de marcas de agua pueden ser superados por reescrituras generales cuando se requiere calidad de texto aceptable. La reescritura general es una línea base fuerte, pero su ventaja varía según la familia de marcas de agua. Los atacantes basados en robo a menudo tienen un rendimiento inferior a las líneas base generales cuando se requiere calidad de texto.",
+    "por_que_importa": "Permite una evaluación más realista y comparable de la robustez de las marcas de agua en LLMs, crucial para la atribución de contenido y la prevención de desinformación, al considerar tanto la efectividad del ataque como la calidad del texto resultante.",
+    "tags": [
+      "LLM",
+      "ciberseguridad",
+      "marcas de agua",
+      "ataques adversariales",
+      "evaluación",
+      "calidad de texto"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-16T17:11:43Z"
+  },
+  "arxiv:2609.16541v1": {
+    "tldr": "Agentes de IA autónomos demuestran ser más eficientes que las heurísticas en la respuesta a ciberataques en un entorno simulado.",
+    "problema": "Evaluar la efectividad de agentes de IA para responder automáticamente a incidentes de ciberseguridad en redes, equilibrando la defensa contra el impacto en la disponibilidad.",
+    "propuesta": "Se implementaron y evaluaron agentes de respuesta autónoma (heurísticos y de aprendizaje por refuerzo) en un 'cyber range' simulado, midiendo su capacidad para prevenir accesos no autorizados y minimizar costos de defensa.",
+    "resultados": "Los agentes basados en aprendizaje por refuerzo fueron más eficientes en la defensa que los heurísticos. El rendimiento varió significativamente según la estrategia del atacante y el comportamiento de los usuarios simulados.",
+    "por_que_importa": "Demuestra el potencial de la IA para automatizar y mejorar la respuesta a incidentes de ciberseguridad, optimizando la defensa y reduciendo la carga sobre los operadores humanos.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Respuesta a Incidentes",
+      "Aprendizaje por Refuerzo",
+      "Cyber Range"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-16T17:11:53Z"
+  },
+  "sha1:fd3039d98b32c920": {
+    "tldr": "StateShield protege agentes de IA en el borde contra ataques adversariales sin sobrecargar los recursos computacionales.",
+    "problema": "Los agentes de Deep Reinforcement Learning (DRL) desplegados en dispositivos de borde para aplicaciones IoT son vulnerables a ataques adversariales en sus observaciones, lo que compromete su toma de decisiones, especialmente en bucles de control sensibles a la latencia. Las defensas existentes son demasiado costosas computacionalmente para el borde.",
+    "propuesta": "Se presenta StateShield, un framework de defensa diseñado para sistemas de IA en el borde que ofrece seguridad robusta reconciliando la protección con la eficiencia computacional, permitiendo la defensa en tiempo real sin un sobrecoste prohibitivo.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero StateShield permite la defensa en tiempo real en el borde de forma práctica.",
+    "por_que_importa": "Permite desplegar de forma segura aplicaciones IoT inteligentes y autónomas en dispositivos con recursos limitados, garantizando su fiabilidad y seguridad frente a ataques sin sacrificar el rendimiento.",
+    "tags": [
+      "IA en el borde",
+      "Ciberseguridad",
+      "DRL",
+      "IoT",
+      "Ataques Adversariales",
+      "Defensa en Tiempo Real"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-16T17:12:19Z"
+  },
+  "arxiv:2609.17320": {
+    "tldr": "Probamos la resiliencia de sistemas multi-agente de IA a largo plazo ante ataques adversarios, revelando fallos sistémicos inesperados.",
+    "problema": "Los sistemas de IA multi-agente que operan de forma continua y a largo plazo pueden experimentar fallos que se propagan a través de la memoria, herramientas y otros agentes, de formas no predecibles al evaluar modelos individualmente.",
+    "propuesta": "Se introduce 'Emergence World', un entorno de simulación continua para probar de forma adversaria sistemas autónomos de largo horizonte, exponiéndolos a inyecciones de prompts, desinformación y fugas de memoria.",
+    "resultados": "Ningún sistema evaluado (ocho mundos paralelos con 10 agentes cada uno) mostró resiliencia completa ante los tres tipos de estrés. Los sistemas detectaron amenazas pero continuaron interactuando con contenido malicioso hasta 46 horas después. Se observaron errores recurrentes en herramientas, deriva de objetivos, opacidad del lenguaje y conformidad social a pesar de desacuerdos internos.",
+    "por_que_importa": "La alineación de modelos individuales no se traslada a sistemas interconectados. La seguridad futura de la IA dependerá de la ingeniería de sistemas autónomos resilientes, no solo de la alineación de modelos aislados, especialmente a medida que se vuelven persistentes e interdependientes.",
+    "tags": [
+      "IA multi-agente",
+      "ciberseguridad",
+      "resiliencia",
+      "pruebas adversarias",
+      "sistemas autónomos",
+      "seguridad de IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-16T17:12:29Z"
+  },
+  "arxiv:2609.16816": {
+    "tldr": "Las rúbricas generadas por IA para guiar el aprendizaje por refuerzo son vulnerables a ataques que explotan sus debilidades.",
+    "problema": "Las rúbricas generadas por modelos de lenguaje (LLMs) se usan como señales de recompensa en aprendizaje por refuerzo y evaluación, pero su robustez frente a respuestas adversarias diseñadas para explotarlas es desconocida.",
+    "propuesta": "Se introduce ImpossibleRubrics, un benchmark con 169 tareas imposibles y certificados verificables para probar la robustez de las rúbricas generadas. Permite generar rúbricas y probar si recompensan respuestas que violan los certificados.",
+    "resultados": "Once generadores de rúbricas fueron explotados entre el 8-26% de las veces. Una rúbrica genérica ('sé decisivo, penaliza la duda') fue explotada el 64% de las veces, más que rúbricas personalizadas, sugiriendo que la especificidad en puntos erróneos es el problema.",
+    "por_que_importa": "Es crucial para asegurar que los sistemas de IA que usan rúbricas generadas por LLMs sean confiables y no puedan ser fácilmente manipulados por respuestas adversarias, garantizando la integridad de la evaluación y el aprendizaje.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "LLMs",
+      "Aprendizaje por Refuerzo",
+      "Robustez",
+      "Evaluación"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-16T17:12:39Z"
+  },
+  "arxiv:2609.16679": {
+    "tldr": "Los modelos fundacionales y los modelos del mundo aprendidos están revolucionando la IA en los videojuegos, pero la transferencia de capacidades entre diferentes aplicaciones sigue siendo un desafío.",
+    "problema": "Las diversas aplicaciones de IA en el ciclo de vida de los videojuegos (jugar, modelar jugadores, diseñar, etc.) han evolucionado de forma aislada, dificultando la identificación de qué capacidades de IA son transferibles entre ellas y cuáles están ligadas a contextos específicos.",
+    "propuesta": "Se organiza la literatura existente en seis roles de IA en videojuegos (jugar, modelar, diseñar, construir, generar/adaptar, probar) y se examina la estructura del juego, el aprendizaje de la IA, la transferibilidad de capacidades y la evidencia de su efectividad en cada rol. Se identifican conexiones entre roles, pero se reconoce la necesidad de validar las capacidades en contextos específicos.",
+    "resultados": "Se identifican conexiones entre roles, como el uso de trayectorias para entrenar modelos del mundo o entornos aprendidos para generar experiencia para agentes. La evaluación es más estándar para el juego acotado y entornos aprendidos seleccionados; la validación en mundos persistentes, revisión de software, modelado de jugadores, adaptación en tiempo de ejecución y pruebas automatizadas son menos establecidos.",
+    "por_que_importa": "Permite comprender mejor cómo reutilizar y transferir las capacidades de IA desarrolladas para un propósito a otros dentro del desarrollo de videojuegos, mejorando la eficiencia y la efectividad general, aunque la validación en el contexto final sigue siendo crucial.",
+    "tags": [
+      "IA en videojuegos",
+      "Modelos fundacionales",
+      "Modelos del mundo",
+      "Transferencia de aprendizaje",
+      "Desarrollo de juegos",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-16T17:12:48Z"
+  },
+  "arxiv:2609.15195": {
+    "tldr": "HarnessVLN unifica la navegación de agentes en entornos 3D sin entrenamiento previo, mejorando la toma de decisiones y la recuperación de fallos.",
+    "problema": "Los métodos de entrenamiento para navegación de agentes (Embodied Navigation) fallan al generalizar, y los métodos sin entrenamiento, aunque usan MLLMs, no integran bien la evidencia espacial con las acciones propuestas y la recuperación de errores.",
+    "propuesta": "Se introduce HarnessVLN, un framework de cero-shot y sin entrenamiento que usa un 'Agent Harness' para coordinar percepción, memoria, planificación y ejecución a través de una interfaz de herramientas unificada. Valida las propuestas del planificador contra evidencia espacial y factibilidad geométrica, e incorpora retroalimentación estructurada.",
+    "resultados": "HarnessVLN logra tasas de éxito del 60.8% en R2R, 53.9% en RxR, 76.0% en HM3D-v2 y 59.3% en HM3D-OVON, superando los métodos previos sin entrenamiento.",
+    "por_que_importa": "Mejora significativamente la fiabilidad y adaptabilidad de los agentes en tareas de navegación complejas y del mundo real, sin necesidad de reentrenamiento costoso, facilitando su aplicación práctica.",
+    "tags": [
+      "navegación de agentes",
+      "IA sin entrenamiento",
+      "visión por computadora",
+      "modelos de lenguaje multimodales",
+      "ciberseguridad",
+      "robótica"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-16T17:12:58Z"
+  },
+  "arxiv:2609.15982": {
+    "tldr": "Descubre cómo un LLM congelado puede aprender a seleccionar habilidades sin texto adicional, mejorando la eficiencia y precisión.",
+    "problema": "Los métodos actuales para que los LLMs seleccionen la habilidad correcta (herramienta) dispersan la atención del modelo y limitan el tamaño de la biblioteca de habilidades. Los pipelines de recuperación sacan la selección del contexto, pero también de la capacidad del agente.",
+    "propuesta": "Se propone Gavel (Glance And Verdict from a frozen LLM), un método que utiliza dos mapas lineales entrenables para extraer la señal de enrutamiento directamente de las pasadas hacia adelante del propio LLM congelado, sin necesidad de incluir el texto de las habilidades en el contexto.",
+    "resultados": "Gavel supera a los pipelines de divulgación progresiva y recuperación-reordenamiento en benchmarks públicos y SkillTraj, mejorando hasta 13.4 puntos en tareas escritas y 21.9 en selección de habilidades durante la ejecución. En un harness bash-agent, un modelo de 32B con Gavel supera a modelos más grandes en la activación de habilidades.",
+    "por_que_importa": "Permite a los LLMs seleccionar herramientas de manera más eficiente y precisa sin aumentar el tamaño del modelo o la complejidad del contexto, lo que es crucial para desplegar agentes de IA más capaces y versátiles en la práctica.",
+    "tags": [
+      "LLM",
+      "Enrutamiento de Habilidades",
+      "Ciberseguridad",
+      "IA",
+      "Eficiencia",
+      "Selección de Herramientas"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-16T17:13:25Z"
+  },
+  "arxiv:2609.14857": {
+    "tldr": "ModularRSI mejora la automejora recursiva de agentes de IA para tareas complejas, asegurando mejoras generalizables y no específicas de la tarea.",
+    "problema": "La automejora recursiva (RSI) en agentes de IA para tareas de largo alcance es difícil de generalizar. Las mejoras tienden a adaptarse a benchmarks específicos en lugar de ser reutilizables, y las actualizaciones de trayectorias únicas confunden deficiencias sistemáticas con detalles de instancias específicas, lo que resulta en modificaciones que se transfieren mal a tareas nuevas.",
+    "propuesta": "ModularRSI es un marco de automejora recursiva modular y generalizable. Contrasta trayectorias exitosas y fallidas para la misma tarea, descompone el arnés en cinco módulos funcionales (Bucle del Agente, Uso de Herramientas, Gestión de Observaciones, Gestión de Contexto, Detección de Finalización de Tareas) que evolucionan independientemente, y utiliza tareas de evolución disjuntas de los benchmarks de evaluación.",
+    "resultados": "Demuestra mejoras consistentes en tareas nuevas dentro y entre dominios en los benchmarks TB2.0 y SWE-Bench Verified. El arnés evolucionado también se transfiere a diferentes modelos fundacionales.",
+    "por_que_importa": "Permite crear agentes de IA más robustos y adaptables que pueden aprender y mejorar de manera efectiva en una amplia gama de tareas complejas, yendo más allá de la simple adaptación a conjuntos de datos de entrenamiento específicos.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Automejora Recursiva",
+      "Agentes de IA",
+      "Aprendizaje Automático",
+      "Generalización"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-16T17:13:35Z"
   }
 }
