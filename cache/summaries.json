@@ -7467,5 +7467,71 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-09-16T17:13:35Z"
+  },
+  "arxiv:2609.18909v1": {
+    "tldr": "Comprime benchmarks de agentes de IA analizando trayectorias, no solo resultados finales.",
+    "problema": "Evaluar benchmarks de agentes de IA es costoso. Los métodos actuales de compresión se centran solo en los resultados finales, ignorando información valiosa del proceso.",
+    "propuesta": "Propone DualViewEval, un método de compresión que analiza señales del proceso (trayectorias) junto con los resultados finales para una evaluación más completa y eficiente.",
+    "resultados": "El resumen no especifica resultados numéricos, pero indica que se identificaron seis señales de proceso complementarias asociadas al rendimiento final del agente.",
+    "por_que_importa": "Permite reducir el costo de evaluación de benchmarks de agentes de IA sin perder información crucial sobre su rendimiento, haciendo la investigación y desarrollo más eficientes.",
+    "tags": [
+      "IA",
+      "Agentes",
+      "Benchmarks",
+      "Compresión",
+      "Evaluación",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-17T17:10:23Z"
+  },
+  "arxiv:2609.18708": {
+    "tldr": "El PPO en RL para LLMs sufre de 'Value Flattening', un fallo que distorsiona la estimación de valores y perjudica el aprendizaje.",
+    "problema": "Los críticos en Proximal Policy Optimization (PPO) para modelos de lenguaje grandes presentan un fallo sistemático llamado 'Value Flattening', donde las estimaciones de valor de estado son planas en estados intermedios, a pesar de que los valores reales varían drásticamente.",
+    "propuesta": "El paper investiga el fenómeno 'Value Flattening' en PPO, analizando cómo las continuaciones de Monte Carlo afectan las predicciones del crítico y cómo este problema se agrava con el número de estados.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero confirma la existencia y el agravamiento del 'Value Flattening' en entornos controlados como FrozenLake a medida que aumenta el número de estados.",
+    "por_que_importa": "Comprender y mitigar el 'Value Flattening' es crucial para mejorar la estabilidad y eficiencia del entrenamiento de modelos de lenguaje grandes mediante PPO, permitiendo un aprendizaje más robusto y predecible.",
+    "tags": [
+      "PPO",
+      "Reinforcement Learning",
+      "LLMs",
+      "Value Flattening",
+      "Ciberseguridad",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-17T17:10:32Z"
+  },
+  "arxiv:2609.19138": {
+    "tldr": "Los robots ahora pueden aprender tareas nuevas y complejas sobre la marcha usando modelos de lenguaje visual (VLMs) avanzados.",
+    "problema": "Los robots tienen dificultades para adaptarse a entornos desconocidos o tareas no vistas previamente, ya que las demostraciones finitas no pueden cubrir todas las eventualidades.",
+    "propuesta": "Se propone utilizar agentes basados en modelos de lenguaje visual (VLMs) para permitir el aprendizaje en contexto (ICL) en robots, permitiéndoles aprender de instrucciones y demostraciones en tiempo real.",
+    "resultados": "El resumen no especifica resultados numéricos, pero indica que los VLMs pueden aprender tareas complejas y adaptarse a nuevas situaciones.",
+    "por_que_importa": "Permite que los robots generalicen mejor y se adapten a situaciones imprevistas sin necesidad de reentrenamiento extensivo, acercándolos a la adaptabilidad humana.",
+    "tags": [
+      "Robótica",
+      "Inteligencia Artificial",
+      "Aprendizaje en Contexto",
+      "VLMs",
+      "Adaptabilidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-17T17:10:42Z"
+  },
+  "arxiv:2609.15938": {
+    "tldr": "Algoritmos genéticos permiten que LLMs multiagente descubran hipótesis científicas evolucionando colaboraciones.",
+    "problema": "Se desconoce cómo las diferentes formas de colaboración entre agentes LLM afectan la calidad de las hipótesis científicas descubiertas, y es difícil separar el efecto de las capacidades científicas de los agentes del efecto de su colaboración.",
+    "propuesta": "Se propone un marco que preserva los roles científicos de los agentes y permite reglas para combinar, revisar y retener hipótesis, utilizando algoritmos genéticos para guiar la evolución de las colaboraciones entre LLMs multiagente.",
+    "resultados": "El resumen no especifica resultados numéricos o cualitativos concretos del rendimiento del método.",
+    "por_que_importa": "Permite optimizar la colaboración entre LLMs para mejorar el descubrimiento de hipótesis científicas, avanzando la investigación automatizada.",
+    "tags": [
+      "IA",
+      "LLM",
+      "Descubrimiento Científico",
+      "Algoritmos Genéticos",
+      "Colaboración"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-17T17:10:51Z"
   }
 }

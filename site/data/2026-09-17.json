@@ -1,0 +1,190 @@
+{
+  "date": "2026-09-17",
+  "report_type": "filtrado",
+  "evaluated": 76,
+  "selected": 4,
+  "papers": [
+    {
+      "id": "arxiv:2609.18909v1",
+      "rank": 1,
+      "title": "Beyond Outcomes: Dual-View Relational Learning for Efficient Agent Benchmarking",
+      "authors": [
+        "Xinshuai Guo",
+        "Junjie Wu",
+        "Dolly Deng",
+        "Yinghui Li"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-09-16",
+      "url": "https://arxiv.org/abs/2609.18909v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.18909v1",
+      "score": 53,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Agent benchmarks are substantially more costly to evaluate than conventional LLM benchmarks. Benchmark compression is therefore a natural solution, yet existing methods primarily model redundancy in task--model final-score distributions, which is important in agentic evaluation. To address this limitation, we analyze large-scale trajectories and identify six complementary process signals that are systematically associated with final agent performance. To disentangle agent performance redundancy from a complete perspective, we propose DualViewEval, an agent benchmark compression method that jointly exploits outcome and process...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Comprime benchmarks de agentes de IA analizando trayectorias, no solo resultados finales.",
+        "problema": "Evaluar benchmarks de agentes de IA es costoso. Los métodos actuales de compresión se centran solo en los resultados finales, ignorando información valiosa del proceso.",
+        "propuesta": "Propone DualViewEval, un método de compresión que analiza señales del proceso (trayectorias) junto con los resultados finales para una evaluación más completa y eficiente.",
+        "resultados": "El resumen no especifica resultados numéricos, pero indica que se identificaron seis señales de proceso complementarias asociadas al rendimiento final del agente.",
+        "por_que_importa": "Permite reducir el costo de evaluación de benchmarks de agentes de IA sin perder información crucial sobre su rendimiento, haciendo la investigación y desarrollo más eficientes.",
+        "tags": [
+          "IA",
+          "Agentes",
+          "Benchmarks",
+          "Compresión",
+          "Evaluación",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-17T17:10:23Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.18708",
+      "rank": 1,
+      "title": "Rethinking Critic Learning in PPO: Understanding and Mitigating Value Flattening",
+      "authors": [
+        "Yizhuo Li",
+        "Jianhao Yan",
+        "Yun Luo",
+        "Zhi Wang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-16",
+      "url": "https://arxiv.org/abs/2609.18708",
+      "pdf_url": "https://arxiv.org/pdf/2609.18708",
+      "score": 57,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "In reinforcement learning for large language models, Proximal Policy Optimization (PPO) commonly uses a critic to estimate state values and reduce the variance of policy updates. However, we uncover a systematic failure mode in PPO critics, which we call Value Flattening: state values, estimated from multiple Monte Carlo continuations, change sharply across intermediate states while critic predictions remain comparatively flat. We further observe this phenomenon in a controlled FrozenLake environment and find that it becomes more pronounced as the state...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "El PPO en RL para LLMs sufre de 'Value Flattening', un fallo que distorsiona la estimación de valores y perjudica el aprendizaje.",
+        "problema": "Los críticos en Proximal Policy Optimization (PPO) para modelos de lenguaje grandes presentan un fallo sistemático llamado 'Value Flattening', donde las estimaciones de valor de estado son planas en estados intermedios, a pesar de que los valores reales varían drásticamente.",
+        "propuesta": "El paper investiga el fenómeno 'Value Flattening' en PPO, analizando cómo las continuaciones de Monte Carlo afectan las predicciones del crítico y cómo este problema se agrava con el número de estados.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero confirma la existencia y el agravamiento del 'Value Flattening' en entornos controlados como FrozenLake a medida que aumenta el número de estados.",
+        "por_que_importa": "Comprender y mitigar el 'Value Flattening' es crucial para mejorar la estabilidad y eficiencia del entrenamiento de modelos de lenguaje grandes mediante PPO, permitiendo un aprendizaje más robusto y predecible.",
+        "tags": [
+          "PPO",
+          "Reinforcement Learning",
+          "LLMs",
+          "Value Flattening",
+          "Ciberseguridad",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-17T17:10:32Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.19138",
+      "rank": 2,
+      "title": "In-Context Robot Learning with VLM Agents",
+      "authors": [
+        "Dongzhou Cheng",
+        "Taoran Yi",
+        "Ye Fang",
+        "Xingwu Zhang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-16",
+      "url": "https://arxiv.org/abs/2609.19138",
+      "pdf_url": "https://arxiv.org/pdf/2609.19138",
+      "score": 57,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "Enabling robots to adapt to unfamiliar environments as readily as humans remains a moonshot goal of embodied AI. No finite collection of demonstrations can cover every task and situation a robot will encounter, making the ability to learn from context at deployment essential for generalization. Such in-context learning (ICL), however, remains largely beyond the reach of existing robotic policies. The broad agentic capabilities of commercial vision-language models (VLMs), such as GPT-6 Astra, raise a compelling question: can these models learn...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Los robots ahora pueden aprender tareas nuevas y complejas sobre la marcha usando modelos de lenguaje visual (VLMs) avanzados.",
+        "problema": "Los robots tienen dificultades para adaptarse a entornos desconocidos o tareas no vistas previamente, ya que las demostraciones finitas no pueden cubrir todas las eventualidades.",
+        "propuesta": "Se propone utilizar agentes basados en modelos de lenguaje visual (VLMs) para permitir el aprendizaje en contexto (ICL) en robots, permitiéndoles aprender de instrucciones y demostraciones en tiempo real.",
+        "resultados": "El resumen no especifica resultados numéricos, pero indica que los VLMs pueden aprender tareas complejas y adaptarse a nuevas situaciones.",
+        "por_que_importa": "Permite que los robots generalicen mejor y se adapten a situaciones imprevistas sin necesidad de reentrenamiento extensivo, acercándolos a la adaptabilidad humana.",
+        "tags": [
+          "Robótica",
+          "Inteligencia Artificial",
+          "Aprendizaje en Contexto",
+          "VLMs",
+          "Adaptabilidad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-17T17:10:42Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.15938",
+      "rank": 3,
+      "title": "HypoEvolve: Genetic Algorithms Enable Multi-Agent LLMs to Discover Scientific Hypotheses",
+      "authors": [
+        "Jieyuan Liu",
+        "Mengzhou Hu",
+        "Jefferson Chen",
+        "JungHo Kong"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-14",
+      "url": "https://arxiv.org/abs/2609.15938",
+      "pdf_url": "https://arxiv.org/pdf/2609.15938",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Scientific agents contribute to hypothesis discovery by synthesizing evidence, assessing proposals, and developing new explanations. Recent systems combine scientific agents with evolutionary search through critique, comparison, and revision. However, how different forms of agent collaboration affect hypothesis quality remains an open question. Answering this question requires separating the effects of agents' scientific capabilities from those of their collaboration. A framework must therefore preserve agents' scientific roles and support rules for combining, revising, and retaining hypotheses. Building on this view, we...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Algoritmos genéticos permiten que LLMs multiagente descubran hipótesis científicas evolucionando colaboraciones.",
+        "problema": "Se desconoce cómo las diferentes formas de colaboración entre agentes LLM afectan la calidad de las hipótesis científicas descubiertas, y es difícil separar el efecto de las capacidades científicas de los agentes del efecto de su colaboración.",
+        "propuesta": "Se propone un marco que preserva los roles científicos de los agentes y permite reglas para combinar, revisar y retener hipótesis, utilizando algoritmos genéticos para guiar la evolución de las colaboraciones entre LLMs multiagente.",
+        "resultados": "El resumen no especifica resultados numéricos o cualitativos concretos del rendimiento del método.",
+        "por_que_importa": "Permite optimizar la colaboración entre LLMs para mejorar el descubrimiento de hipótesis científicas, avanzando la investigación automatizada.",
+        "tags": [
+          "IA",
+          "LLM",
+          "Descubrimiento Científico",
+          "Algoritmos Genéticos",
+          "Colaboración"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-17T17:10:51Z"
+      }
+    }
+  ],
+  "generated_at": "2026-09-17T17:10:51Z"
+}
