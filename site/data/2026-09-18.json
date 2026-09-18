@@ -1,0 +1,279 @@
+{
+  "date": "2026-09-18",
+  "report_type": "filtrado",
+  "evaluated": 74,
+  "selected": 6,
+  "papers": [
+    {
+      "id": "arxiv:2609.20722v1",
+      "rank": 1,
+      "title": "Deep Noir: Autonomous Steering Discovery via Architectural Chronometry in Transformer Models",
+      "authors": [
+        "Frank E. Bobe",
+        "Gregory D. Vetaw",
+        "Darshan W. Bryner",
+        "Matthew G. Cook"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-09-17",
+      "url": "https://arxiv.org/abs/2609.20722v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.20722v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Activation steering modifies LLM behavior at inference time, but identifying where and how strongly to steer remains manual. We introduce Deep Noir, a framework that uses Logit Lens convergence and causal head-level attribution to autonomously discover optimal steering parameters. Across three scales (1B x 3, 2-3B x 2, and 7-9B x 4), our engine achieves 16.7 percentage-point improvement on spam at 1B (standard deviation 4.7; 39 runs), with gains increasing to 21 to 42 percentage points at 7-9B across four...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Descubre automáticamente cómo dirigir el comportamiento de los LLMs sin intervención manual, mejorando su rendimiento.",
+        "problema": "Identificar manualmente los puntos y la fuerza para modificar el comportamiento de los LLMs (activación de dirección) es un proceso tedioso y poco eficiente.",
+        "propuesta": "Se introduce Deep Noir, un framework que utiliza la convergencia de Logit Lens y la atribución causal a nivel de cabeza para descubrir automáticamente los parámetros óptimos de dirección.",
+        "resultados": "En modelos de 1B, se logra una mejora de 16.7 puntos porcentuales en la detección de spam. En modelos de 7-9B, las mejoras aumentan entre 21 y 42 puntos porcentuales en diversas tareas.",
+        "por_que_importa": "Permite adaptar y mejorar el comportamiento de los LLMs de forma autónoma y eficiente, lo que es crucial para aplicaciones prácticas y de seguridad.",
+        "tags": [
+          "LLMs",
+          "Ciberseguridad",
+          "IA",
+          "Automatización",
+          "Dirección de Activación"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-18T16:35:44Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.19969",
+      "rank": 1,
+      "title": "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression",
+      "authors": [
+        "DeepSeek-AI",
+        "Anyi Xu",
+        "B. Li",
+        "Bangcai Lin"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-17",
+      "url": "https://arxiv.org/abs/2609.19969",
+      "pdf_url": "https://arxiv.org/pdf/2609.19969",
+      "score": 60,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "The widespread adoption of long-horizon agents has made model workloads increasingly input-heavy. Although prior work has substantially reduced the cost of long-context computation, prefill remains computationally expensive, and large KV caches continue to strain HBM and SSD capacity and data-transfer bandwidth. Together, these compute, storage, and bandwidth demands constitute the primary bottleneck to further lowering deployment costs. To address this challenge, we introduce DeepSeek-V4.1-Flash, a multimodal Mixture-of-Experts (MoE) model with 552B backbone parameters and support for contexts of up to...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "DeepSeek-V4.1-Flash reduce drásticamente los costes de despliegue de modelos de IA largos optimizando la caché KV.",
+        "problema": "Los modelos de IA de largo alcance son muy intensivos en datos de entrada, lo que encarece el prellenado y satura la memoria y el ancho de banda debido a las grandes cachés KV.",
+        "propuesta": "Se introduce DeepSeek-V4.1-Flash, un modelo MoE multimodal de 552B parámetros que optimiza la compresión de la caché KV para reducir los cuellos de botella computacionales, de almacenamiento y de transferencia de datos.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que la optimización de la caché KV aborda los principales cuellos de botella.",
+        "por_que_importa": "Permite desplegar modelos de IA más grandes y eficientes para tareas de largo alcance, reduciendo significativamente los costes operativos y mejorando el rendimiento.",
+        "tags": [
+          "IA",
+          "Caché KV",
+          "Optimización",
+          "Modelos Grandes",
+          "Ciberseguridad",
+          "Eficiencia"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-18T16:35:53Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.20519",
+      "rank": 2,
+      "title": "SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness",
+      "authors": [
+        "Haozhe Liu",
+        "Tian Ye",
+        "Sensen Gao",
+        "Qihang Cao"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-17",
+      "url": "https://arxiv.org/abs/2609.20519",
+      "pdf_url": "https://arxiv.org/pdf/2609.20519",
+      "score": 60,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "As coding agents move from supervised code completion to unattended, around-the-clock exploration, their work expands from isolated predictions into long trajectories of reasoning, tool use, and feedback. Token efficiency therefore becomes important for scaling recursive self-improvement. We take an RSI-inspired approach at the harness layer, scaling auto-research loops across increasingly numerous and diverse environments for harness rollouts. At this scale, the process yields reusable improvements that transfer beyond their development setting, moving automated harness discovery toward production-level outcomes. Four mechanisms...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Escalamos bucles de auto-investigación para que los agentes de código mejoren eficientemente y de forma continua.",
+        "problema": "Los agentes de código necesitan mejorar su eficiencia y capacidad de auto-mejora continua a medida que sus tareas evolucionan de simples predicciones a complejas trayectorias de razonamiento y uso de herramientas.",
+        "propuesta": "Se propone SoL-Pi, un enfoque que escala bucles de auto-investigación (RSI) a través de múltiples entornos para optimizar la eficiencia de los tokens y lograr mejoras reutilizables.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que el proceso genera mejoras reutilizables que se transfieren más allá de su entorno de desarrollo.",
+        "por_que_importa": "Permite el desarrollo de agentes de código más eficientes y autónomos, capaces de auto-mejorarse continuamente y lograr resultados de nivel de producción en tareas complejas.",
+        "tags": [
+          "agentes de código",
+          "auto-mejora",
+          "eficiencia de tokens",
+          "investigación automatizada",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-18T16:36:02Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.12397",
+      "rank": 3,
+      "title": "UFO: Chain-of-Evaluation for Omni-Condition Alignment in Multi-Modal Image Generation",
+      "authors": [
+        "Danning Zhang",
+        "Yijing Lin",
+        "Shuhan Zhuang",
+        "Mengqi Huang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-17",
+      "url": "https://arxiv.org/abs/2609.12397",
+      "pdf_url": "https://arxiv.org/pdf/2609.12397",
+      "score": 60,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Multi-modal image generation, particularly subject-driven customization, has garnered growing attention in recent years. Despite the rapid advancement of generative models, their evaluation remains largely lagging. Existing methods, whether embedding-based or Multi-modal Large Language Model (MLLM)-based, evaluate alignment with each modal condition in isolation, which contradicts the simultaneous condition alignment objective of multi-modal image generation, leading to poor consistency with human judgments. To address this challenge, we propose UFO, the first unified framework for omni-condition alignment simultaneous evaluation. Specifically, UFO introduces...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "UFO evalúa la generación de imágenes multimodales considerando todas las condiciones a la vez, mejorando la coherencia y la alineación.",
+        "problema": "Los métodos actuales de evaluación de la generación de imágenes multimodales evalúan cada condición por separado, lo que no refleja el objetivo de alineación simultánea y genera resultados inconsistentes con el juicio humano.",
+        "propuesta": "Se propone UFO, un marco unificado para la evaluación simultánea de la alineación omni-condición, que considera todas las condiciones de entrada conjuntamente.",
+        "resultados": "El resumen no especifica resultados numéricos, pero indica que UFO mejora la consistencia con los juicios humanos en comparación con métodos anteriores.",
+        "por_que_importa": "Una evaluación más precisa y coherente de la generación de imágenes multimodales es crucial para el desarrollo y la fiabilidad de modelos de IA en aplicaciones prácticas.",
+        "tags": [
+          "generación de imágenes",
+          "evaluación multimodal",
+          "alineación de condiciones",
+          "IA",
+          "ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-18T16:36:11Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.19879",
+      "rank": 4,
+      "title": "VākQA: A Benchmark and Evaluation Study for Telugu Spoken Factoid Question Answering",
+      "authors": [
+        "Bhavana Akkiraju",
+        "Ravi Sastry Kolluru",
+        "Sri Charan D",
+        "Srihari Bandarupalli"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-17",
+      "url": "https://arxiv.org/abs/2609.19879",
+      "pdf_url": "https://arxiv.org/pdf/2609.19879",
+      "score": 60,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Question answering has advanced rapidly with large language models, but predominantly for high-resource languages, in both text and spoken settings. Spoken question answering (SQA) benchmark for Telugu remains unexplored, and the reliability of automatic evaluation in this setting remains unquantified. We introduce VākQA, a Telugu SQA benchmark of 2,001 factoid question-answer pairs across six domains, with 2.53 hours of speech audio, bilingual transcriptions, and human-verified reference answers. We first validate evaluation methods against human judgements: Gemini-as-a-judge best approximates human ratings...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Presentamos VākQA, el primer benchmark de respuestas a preguntas habladas en telugu, evaluando la fiabilidad de la evaluación automática.",
+        "problema": "La investigación en respuestas a preguntas habladas (SQA) ha descuidado idiomas con pocos recursos como el telugu, y la fiabilidad de las métricas de evaluación automática en SQA no ha sido cuantificada.",
+        "propuesta": "Introducimos VākQA, un benchmark para SQA en telugu con 2.001 pares de preguntas-respuestas fácticas, 2.53 horas de audio, transcripciones bilingües y respuestas verificadas. También validamos métodos de evaluación automática comparándolos con juicios humanos, encontrando que Gemini-as-a-judge es el que mejor se aproxima.",
+        "resultados": "El resumen no especifica resultados cuantitativos sobre el rendimiento de los modelos SQA en VākQA, pero indica que Gemini-as-a-judge se aproxima mejor a las valoraciones humanas en la evaluación automática.",
+        "por_que_importa": "Este trabajo abre la puerta a la investigación en SQA para idiomas con pocos recursos, crucial para la inclusión digital, y proporciona una métrica de evaluación automática más fiable.",
+        "tags": [
+          "SQA",
+          "Telugu",
+          "Benchmark",
+          "Evaluación Automática",
+          "Pocos Recursos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-18T16:36:21Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.18605",
+      "rank": 5,
+      "title": "PACT: Can Enterprise AI Assistants Be Trusted Under Pressure?",
+      "authors": [
+        "Mika Okamoto",
+        "Ansel Kaplan Erol"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-16",
+      "url": "https://arxiv.org/abs/2609.18605",
+      "pdf_url": "https://arxiv.org/pdf/2609.18605",
+      "score": 55,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM, AI agents, compliance & audit"
+      ],
+      "abstract_en": "As corporate AI adoption continues to grow, enterprise-grade LLM agents are being deployed into sensitive contexts such as hiring, healthcare, and finance. In these contexts, compliance with rules specified in an agent's system context is a first-order legal concern. Currently, no evaluation framework systematically measures which LLM models tend to violate compliance rules, especially under pressure from a persistent user, a hurried manager, or circumstances where violation is convenient or attractive. We introduce PACT (Pressure-Applied Compliance Testing), a benchmark for...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Evaluamos la fiabilidad de los asistentes IA empresariales bajo presión para cumplir normativas en contextos sensibles.",
+        "problema": "Los agentes IA empresariales, usados en áreas críticas como finanzas o salud, deben cumplir normativas. Sin embargo, no existe un método sistemático para evaluar cuándo y por qué estos agentes violan dichas reglas, especialmente bajo presión o cuando la infracción es tentadora.",
+        "propuesta": "Introducimos PACT (Pressure-Applied Compliance Testing), un nuevo benchmark diseñado para medir la tendencia de los modelos de lenguaje (LLM) a violar reglas de cumplimiento normativo cuando se enfrentan a escenarios de presión simulada.",
+        "resultados": "El resumen no especifica resultados numéricos concretos sobre qué modelos fallan más, pero introduce el benchmark PACT para su evaluación.",
+        "por_que_importa": "Es crucial para garantizar que los sistemas de IA empresariales, al operar en dominios de alto riesgo, sean confiables y cumplan con las regulaciones legales y éticas, protegiendo a las organizaciones y a los usuarios.",
+        "tags": [
+          "IA empresarial",
+          "Cumplimiento normativo",
+          "LLM",
+          "Ciberseguridad",
+          "Evaluación de IA",
+          "Ética IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-18T16:36:30Z"
+      }
+    }
+  ],
+  "generated_at": "2026-09-18T16:36:30Z"
+}

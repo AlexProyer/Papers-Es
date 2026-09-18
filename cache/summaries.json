@@ -7533,5 +7533,103 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-09-17T17:10:51Z"
+  },
+  "arxiv:2609.20722v1": {
+    "tldr": "Descubre automáticamente cómo dirigir el comportamiento de los LLMs sin intervención manual, mejorando su rendimiento.",
+    "problema": "Identificar manualmente los puntos y la fuerza para modificar el comportamiento de los LLMs (activación de dirección) es un proceso tedioso y poco eficiente.",
+    "propuesta": "Se introduce Deep Noir, un framework que utiliza la convergencia de Logit Lens y la atribución causal a nivel de cabeza para descubrir automáticamente los parámetros óptimos de dirección.",
+    "resultados": "En modelos de 1B, se logra una mejora de 16.7 puntos porcentuales en la detección de spam. En modelos de 7-9B, las mejoras aumentan entre 21 y 42 puntos porcentuales en diversas tareas.",
+    "por_que_importa": "Permite adaptar y mejorar el comportamiento de los LLMs de forma autónoma y eficiente, lo que es crucial para aplicaciones prácticas y de seguridad.",
+    "tags": [
+      "LLMs",
+      "Ciberseguridad",
+      "IA",
+      "Automatización",
+      "Dirección de Activación"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-18T16:35:44Z"
+  },
+  "arxiv:2609.19969": {
+    "tldr": "DeepSeek-V4.1-Flash reduce drásticamente los costes de despliegue de modelos de IA largos optimizando la caché KV.",
+    "problema": "Los modelos de IA de largo alcance son muy intensivos en datos de entrada, lo que encarece el prellenado y satura la memoria y el ancho de banda debido a las grandes cachés KV.",
+    "propuesta": "Se introduce DeepSeek-V4.1-Flash, un modelo MoE multimodal de 552B parámetros que optimiza la compresión de la caché KV para reducir los cuellos de botella computacionales, de almacenamiento y de transferencia de datos.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que la optimización de la caché KV aborda los principales cuellos de botella.",
+    "por_que_importa": "Permite desplegar modelos de IA más grandes y eficientes para tareas de largo alcance, reduciendo significativamente los costes operativos y mejorando el rendimiento.",
+    "tags": [
+      "IA",
+      "Caché KV",
+      "Optimización",
+      "Modelos Grandes",
+      "Ciberseguridad",
+      "Eficiencia"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-18T16:35:53Z"
+  },
+  "arxiv:2609.20519": {
+    "tldr": "Escalamos bucles de auto-investigación para que los agentes de código mejoren eficientemente y de forma continua.",
+    "problema": "Los agentes de código necesitan mejorar su eficiencia y capacidad de auto-mejora continua a medida que sus tareas evolucionan de simples predicciones a complejas trayectorias de razonamiento y uso de herramientas.",
+    "propuesta": "Se propone SoL-Pi, un enfoque que escala bucles de auto-investigación (RSI) a través de múltiples entornos para optimizar la eficiencia de los tokens y lograr mejoras reutilizables.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que el proceso genera mejoras reutilizables que se transfieren más allá de su entorno de desarrollo.",
+    "por_que_importa": "Permite el desarrollo de agentes de código más eficientes y autónomos, capaces de auto-mejorarse continuamente y lograr resultados de nivel de producción en tareas complejas.",
+    "tags": [
+      "agentes de código",
+      "auto-mejora",
+      "eficiencia de tokens",
+      "investigación automatizada",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-18T16:36:02Z"
+  },
+  "arxiv:2609.12397": {
+    "tldr": "UFO evalúa la generación de imágenes multimodales considerando todas las condiciones a la vez, mejorando la coherencia y la alineación.",
+    "problema": "Los métodos actuales de evaluación de la generación de imágenes multimodales evalúan cada condición por separado, lo que no refleja el objetivo de alineación simultánea y genera resultados inconsistentes con el juicio humano.",
+    "propuesta": "Se propone UFO, un marco unificado para la evaluación simultánea de la alineación omni-condición, que considera todas las condiciones de entrada conjuntamente.",
+    "resultados": "El resumen no especifica resultados numéricos, pero indica que UFO mejora la consistencia con los juicios humanos en comparación con métodos anteriores.",
+    "por_que_importa": "Una evaluación más precisa y coherente de la generación de imágenes multimodales es crucial para el desarrollo y la fiabilidad de modelos de IA en aplicaciones prácticas.",
+    "tags": [
+      "generación de imágenes",
+      "evaluación multimodal",
+      "alineación de condiciones",
+      "IA",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-18T16:36:11Z"
+  },
+  "arxiv:2609.19879": {
+    "tldr": "Presentamos VākQA, el primer benchmark de respuestas a preguntas habladas en telugu, evaluando la fiabilidad de la evaluación automática.",
+    "problema": "La investigación en respuestas a preguntas habladas (SQA) ha descuidado idiomas con pocos recursos como el telugu, y la fiabilidad de las métricas de evaluación automática en SQA no ha sido cuantificada.",
+    "propuesta": "Introducimos VākQA, un benchmark para SQA en telugu con 2.001 pares de preguntas-respuestas fácticas, 2.53 horas de audio, transcripciones bilingües y respuestas verificadas. También validamos métodos de evaluación automática comparándolos con juicios humanos, encontrando que Gemini-as-a-judge es el que mejor se aproxima.",
+    "resultados": "El resumen no especifica resultados cuantitativos sobre el rendimiento de los modelos SQA en VākQA, pero indica que Gemini-as-a-judge se aproxima mejor a las valoraciones humanas en la evaluación automática.",
+    "por_que_importa": "Este trabajo abre la puerta a la investigación en SQA para idiomas con pocos recursos, crucial para la inclusión digital, y proporciona una métrica de evaluación automática más fiable.",
+    "tags": [
+      "SQA",
+      "Telugu",
+      "Benchmark",
+      "Evaluación Automática",
+      "Pocos Recursos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-18T16:36:21Z"
+  },
+  "arxiv:2609.18605": {
+    "tldr": "Evaluamos la fiabilidad de los asistentes IA empresariales bajo presión para cumplir normativas en contextos sensibles.",
+    "problema": "Los agentes IA empresariales, usados en áreas críticas como finanzas o salud, deben cumplir normativas. Sin embargo, no existe un método sistemático para evaluar cuándo y por qué estos agentes violan dichas reglas, especialmente bajo presión o cuando la infracción es tentadora.",
+    "propuesta": "Introducimos PACT (Pressure-Applied Compliance Testing), un nuevo benchmark diseñado para medir la tendencia de los modelos de lenguaje (LLM) a violar reglas de cumplimiento normativo cuando se enfrentan a escenarios de presión simulada.",
+    "resultados": "El resumen no especifica resultados numéricos concretos sobre qué modelos fallan más, pero introduce el benchmark PACT para su evaluación.",
+    "por_que_importa": "Es crucial para garantizar que los sistemas de IA empresariales, al operar en dominios de alto riesgo, sean confiables y cumplan con las regulaciones legales y éticas, protegiendo a las organizaciones y a los usuarios.",
+    "tags": [
+      "IA empresarial",
+      "Cumplimiento normativo",
+      "LLM",
+      "Ciberseguridad",
+      "Evaluación de IA",
+      "Ética IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-18T16:36:30Z"
   }
 }
