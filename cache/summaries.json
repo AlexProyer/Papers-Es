@@ -7879,5 +7879,217 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-09-23T17:20:37Z"
+  },
+  "arxiv:2609.28239v1": {
+    "tldr": "Purifica modelos de detección de objetos de ataques 'backdoor' que alteran o eliminan detecciones mediante un consenso de corrupción.",
+    "problema": "Los modelos de detección de objetos son vulnerables a ataques 'backdoor' que causan mala clasificación, desaparición o generación de objetos cuando un 'trigger' está presente. Las defensas actuales para clasificación de imágenes no se aplican bien a la detección de objetos.",
+    "propuesta": "Se introduce ODPure, un método para purificar modelos de detección de objetos. Utiliza un enfoque de 'ensemble corruption consensus' para identificar y neutralizar las modificaciones maliciosas introducidas por los ataques 'backdoor'.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero afirma que el método purifica modelos de detección de objetos de ataques 'backdoor'.",
+    "por_que_importa": "Asegura la fiabilidad y seguridad de los sistemas de detección de objetos, cruciales en aplicaciones de alto riesgo como la conducción autónoma, protegiéndolos de manipulaciones maliciosas.",
+    "tags": [
+      "detección de objetos",
+      "ciberseguridad",
+      "ataques backdoor",
+      "purificación de modelos",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-24T17:24:35Z"
+  },
+  "arxiv:2609.28182v1": {
+    "tldr": "Certifica la seguridad de sistemas de IA para coordinar dispositivos en la red eléctrica, garantizando su fiabilidad operativa.",
+    "problema": "Los sistemas de IA para coordinar dispositivos en la red eléctrica son prometedores pero carecen de un método riguroso para certificar su seguridad antes de su despliegue, lo que genera desconfianza en los operadores del sistema.",
+    "propuesta": "Desarrolla un marco de certificación de seguridad probabilística para modelos de decisión de IA de caja negra en operaciones de red en bucle cerrado, utilizando un enfoque de muestra finita.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero propone un marco para la certificación de seguridad.",
+    "por_que_importa": "Permite a los operadores del sistema confiar en la seguridad de los sistemas de IA para la coordinación de la red eléctrica, facilitando su adopción y evitando costosas actualizaciones de infraestructura.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Red Eléctrica",
+      "Certificación de Seguridad",
+      "Control de Sistemas"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-24T17:24:44Z"
+  },
+  "arxiv:2609.28216v1": {
+    "tldr": "Asegurando que las acciones de los agentes de IA en ingeniería sean confiables y justificadas en entornos complejos.",
+    "problema": "Los sistemas de ingeniería basados en agentes de IA pueden realizar acciones críticas (editar repositorios, construir firmware, etc.), pero la confianza en sus salidas y la justificación para actuar sobre ellas es un desafío fragmentado con herramientas actuales.",
+    "propuesta": "Presenta el 'Agile-V Assurance Spine', una solución que integra capacidades de seguridad y aseguramiento a través de dominios para validar las salidas de los agentes de IA.",
+    "resultados": "El resumen no especifica resultados numéricos, pero propone una arquitectura para mejorar el aseguramiento en ciclos de vida de ingeniería con agentes de IA.",
+    "por_que_importa": "Permite a las organizaciones confiar y actuar sobre las salidas de los agentes de IA en procesos de ingeniería críticos, mejorando la seguridad y eficiencia.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Ingeniería de Software",
+      "Aseguramiento",
+      "Confianza"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-24T17:24:54Z"
+  },
+  "arxiv:2609.27422v1": {
+    "tldr": "Atacantes inyectan backdoors en detectores de malware sin alterar las etiquetas benignas, usando manipulaciones en el espacio de características.",
+    "problema": "Los detectores de malware basados en aprendizaje profundo son vulnerables a ataques de backdoor durante su actualización con datos de crowdsourcing, especialmente en el escenario de etiqueta limpia donde las muestras envenenadas deben parecer benignas.",
+    "propuesta": "Se propone RAMP, un nuevo ataque que manipula el espacio de características para inyectar backdoors de forma efectiva en el escenario de etiqueta limpia, sin depender únicamente de diseños de triggers más fuertes.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero afirma que RAMP es más efectivo que enfoques anteriores en el escenario de etiqueta limpia.",
+    "por_que_importa": "Permite a los atacantes comprometer la seguridad de los detectores de malware sin ser detectados fácilmente, amenazando la efectividad de la detección de software malicioso.",
+    "tags": [
+      "ciberseguridad",
+      "backdoor attacks",
+      "malware detection",
+      "deep learning",
+      "ataques de etiqueta limpia"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-24T17:25:03Z"
+  },
+  "arxiv:2609.28372v1": {
+    "tldr": "La IA de compras imita la heurística humana, pero los costos de información la hacen omitir detalles cruciales.",
+    "problema": "Los agentes de IA que toman decisiones de compra para humanos pueden ser influenciados por señales de marketing, pero no se sabe cómo manejan la información cuando adquirirla tiene un costo.",
+    "propuesta": "Se adaptó una técnica de rastreo de procesos ('Tool-Lab') para simular costos de adquisición de información y se observó cómo ocho LLMs comerciales adquirían información sobre productos, especialmente bajo la influencia de señales de precios como 'just-below pricing' y 'promotional framing'.",
+    "resultados": "Cuando la adquisición de información era gratuita, las señales de precios rara vez engañaban a los LLMs. Sin embargo, al imponer costos de adquisición bajo un objetivo vago, los LLMs tendían a omitir atributos diagnósticos de los productos.",
+    "por_que_importa": "Demuestra que los agentes de IA, al igual que los humanos, pueden ser susceptibles a heurísticas de toma de decisiones simplificadas cuando la información es costosa, lo que podría llevar a decisiones de compra subóptimas si no se diseñan cuidadosamente.",
+    "tags": [
+      "IA",
+      "comercio electrónico",
+      "toma de decisiones",
+      "sesgos cognitivos",
+      "LLMs",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-24T17:25:12Z"
+  },
+  "arxiv:2609.28197v1": {
+    "tldr": "Evalúa la seguridad de agentes IA en flujos de trabajo multi-paso, detectando riesgos antes de que ocurran.",
+    "problema": "Los métodos actuales para evaluar la seguridad de agentes IA en tareas complejas (multi-paso) fallan al no considerar la acumulación de riesgos a lo largo de la secuencia de acciones y al evaluar la seguridad solo después de que las acciones se han ejecutado, impidiendo la intervención temprana.",
+    "propuesta": "Se propone PASTABench, un marco para la Monitorización Proactiva de Seguridad Desacoplada, que evalúa la seguridad a lo largo de trayectorias de acciones multi-paso, permitiendo la intervención antes de que ocurran fallos.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero introduce un marco formal para la monitorización proactiva de seguridad en tres dimensiones: cuándo intervenir, cómo intervenir y qué...",
+    "por_que_importa": "Permite desarrollar agentes IA más seguros y confiables para interactuar con el mundo real, previniendo fallos costosos o peligrosos en flujos de trabajo complejos.",
+    "tags": [
+      "IA segura",
+      "agentes IA",
+      "ciberseguridad",
+      "evaluación",
+      "flujos de trabajo"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-24T17:25:21Z"
+  },
+  "arxiv:2609.28364v1": {
+    "tldr": "LEAP-CBF: Un filtro de seguridad para sistemas inciertos que minimiza el esfuerzo para mantener la robustez y la seguridad.",
+    "problema": "Los filtros de seguridad tradicionales (CBF) son conservadores y difíciles de construir para sistemas con incertidumbres y perturbaciones, especialmente en alta dimensión y con restricciones de entrada.",
+    "propuesta": "Introduce LEAP (Least-Effort Adversarial Potentials), un nuevo certificado que cuantifica la robustez de un sistema ante incertidumbres, buscando el mínimo esfuerzo para garantizar la seguridad.",
+    "resultados": "El resumen no especifica resultados numéricos, pero propone LEAP como una solución a los desafíos de robustez y conservadurismo de los CBF.",
+    "por_que_importa": "Ofrece una forma más eficiente y menos conservadora de garantizar la seguridad en sistemas de control complejos y con incertidumbres, crucial para aplicaciones prácticas.",
+    "tags": [
+      "seguridad",
+      "control",
+      "incertidumbre",
+      "robustez",
+      "IA",
+      "sistemas dinámicos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-24T17:25:30Z"
+  },
+  "arxiv:2609.27334": {
+    "tldr": "Agentes de IA aprenden a crear memoria adaptativa 'justo a tiempo' para mejorar su rendimiento futuro en tareas.",
+    "problema": "Los sistemas de memoria actuales para agentes de IA guardan la experiencia pasada de forma fija y temprana, antes de saber para qué se usará en el futuro, perdiendo información valiosa.",
+    "propuesta": "Se propone 'Just-in-Time Memory', un sistema que aprende a curar la memoria de forma adaptativa, decidiendo qué recordar y cómo hacerlo justo antes de que sea necesario para una tarea específica.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que la memoria curada 'justo a tiempo' mejora el rendimiento futuro de los agentes.",
+    "por_que_importa": "Permite a los agentes de IA ser más eficientes y efectivos al utilizar su experiencia pasada de manera más inteligente y adaptada a las necesidades inmediatas.",
+    "tags": [
+      "memoria",
+      "agentes IA",
+      "aprendizaje adaptativo",
+      "LLM",
+      "eficiencia"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-24T17:25:39Z"
+  },
+  "arxiv:2609.27284": {
+    "tldr": "Hunyuan-A13B: un modelo de lenguaje de 80B parámetros que usa solo 13B para ser eficiente, con mejor razonamiento y fiabilidad factual.",
+    "problema": "Los modelos de lenguaje grandes (LLMs) son potentes pero computacionalmente costosos y difíciles de desplegar. Mejorar su capacidad de razonamiento y fiabilidad factual es un desafío constante.",
+    "propuesta": "Presentamos Hunyuan-A13B, un LLM de 80 mil millones de parámetros totales que utiliza una arquitectura Mixture-of-Experts (MoE) activando solo 13 mil millones durante la inferencia. Ha sido preentrenado con un corpus de 20 billones de tokens filtrados y curados con datos STEM mejorados, seguido de ajuste fino supervisado y aprendizaje por refuerzo. Introduce además un framework dual-mode Chain-of-Thought.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que la arquitectura MoE balancea capacidad y eficiencia, y que el preentrenamiento mejora la fiabilidad factual y la habilidad de razonamiento.",
+    "por_que_importa": "Ofrece un modelo de lenguaje potente y eficiente, reduciendo los costos de inferencia y despliegue, y mejorando la fiabilidad y el razonamiento, lo que lo hace más práctico para aplicaciones profesionales.",
+    "tags": [
+      "modelos de lenguaje",
+      "IA",
+      "eficiencia computacional",
+      "Mixture-of-Experts",
+      "razonamiento",
+      "fiabilidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-24T17:25:49Z"
+  },
+  "arxiv:2609.27490": {
+    "tldr": "WhatWorkedBench evalúa la comprensión experimental de agentes de IA, midiendo su habilidad para predecir cambios en resultados basados en modificaciones de componentes.",
+    "problema": "Los agentes de investigación en IA carecen de una forma fiable de medir su comprensión de cómo los cambios en los componentes de un experimento afectan los resultados.",
+    "propuesta": "Se introduce WhatWorkedBench, un benchmark que evalúa la precisión de las predicciones de los agentes sobre los efectos de los cambios en los componentes de un experimento, tras una experimentación limitada.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero describe el proceso de evaluación que incluye 36 tareas, 30 fuentes de datos y 8 flujos de trabajo.",
+    "por_que_importa": "Permite a los investigadores cuantificar y mejorar la capacidad de los agentes de IA para entender y predecir el impacto de sus decisiones experimentales, crucial para la investigación y el desarrollo eficientes.",
+    "tags": [
+      "IA",
+      "Comprensión Experimental",
+      "Benchmarking",
+      "Agentes de IA",
+      "Reproducibilidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-24T17:25:58Z"
+  },
+  "arxiv:2609.27321": {
+    "tldr": "Genera entornos de aprendizaje por refuerzo para agentes de IA, asegurando que las reglas del juego y los resultados sean verificables desde el principio.",
+    "problema": "Entrenar agentes de IA para tareas complejas y de largo alcance es difícil debido a la necesidad de entornos de simulación diversos, señales de resultado fiables y costes de desarrollo bajos. Los métodos actuales generan el entorno antes de definir sus reglas, lo que dificulta la evaluación.",
+    "propuesta": "VHD-Play invierte el proceso: primero resuelve un modelo matemático y luego genera el entorno de simulación y sus reglas de decisión, asegurando la verificabilidad y la alineación de las dinámicas.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero menciona que las dinámicas ejecutables y la puntuación de trayectorias se generan de forma verificable.",
+    "por_que_importa": "Permite crear entornos de entrenamiento más robustos y fiables para agentes de IA, acelerando su desarrollo y mejorando su capacidad para manejar tareas complejas y de largo alcance de manera verificable.",
+    "tags": [
+      "IA",
+      "Aprendizaje por Refuerzo",
+      "Entornos de Simulación",
+      "Ciberseguridad",
+      "Verificabilidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-24T17:26:07Z"
+  },
+  "arxiv:2609.27657": {
+    "tldr": "FLEET mejora la generación de texto en LLMs integrando memoria para evitar respuestas duplicadas y aumentar la calidad.",
+    "problema": "Los métodos actuales de muestreo de temperatura en LLMs son 'sin memoria', lo que lleva a la generación de respuestas semánticamente duplicadas y rendimientos decrecientes al aumentar el número de muestras.",
+    "propuesta": "FLEET introduce un mecanismo de memoria en el proceso de generación de texto. Este mecanismo permite al modelo tener en cuenta las generaciones previas y sus evaluaciones para guiar la generación futura.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que FLEET aborda la limitación de las respuestas duplicadas y mejora la estabilidad y precisión.",
+    "por_que_importa": "Permite obtener respuestas más diversas y de mayor calidad de los LLMs, optimizando el uso de recursos computacionales al evitar la generación redundante de información.",
+    "tags": [
+      "generación de texto",
+      "LLMs",
+      "ciberseguridad",
+      "IA",
+      "memoria",
+      "optimización"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-24T17:26:16Z"
+  },
+  "arxiv:2609.26355": {
+    "tldr": "PACT define el crédito de los tokens en RL para LLMs, unificando métodos y mejorando el entrenamiento actor-crítico.",
+    "problema": "La asignación de crédito a nivel de token en el aprendizaje por refuerzo para LLMs carece de una definición matemática clara, lo que dificulta entender su relación con las señales de entrenamiento comunes.",
+    "propuesta": "Se proponen tres condiciones de regularidad (Completitud, Consistencia de Prefijo y Neutralidad) que definen matemáticamente el crédito de los tokens. Esto permite unificar la explicación de algoritmos existentes y desarrollar un procedimiento de entrenamiento actor-crítico mejorado.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero la propuesta unifica la explicación de fenómenos en algoritmos existentes y guía el desarrollo de un procedimiento de entrenamiento mejorado.",
+    "por_que_importa": "Proporciona una base teórica sólida para el entrenamiento de LLMs con RL, mejorando la comprensión y el desarrollo de métodos más efectivos para alinear el comportamiento del modelo con los objetivos deseados.",
+    "tags": [
+      "LLMs",
+      "Aprendizaje por Refuerzo",
+      "Ciberseguridad",
+      "IA",
+      "Entrenamiento de Modelos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-24T17:26:25Z"
   }
 }

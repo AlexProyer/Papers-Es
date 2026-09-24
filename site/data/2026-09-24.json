@@ -1,0 +1,588 @@
+{
+  "date": "2026-09-24",
+  "report_type": "filtrado",
+  "evaluated": 110,
+  "selected": 13,
+  "papers": [
+    {
+      "id": "arxiv:2609.28239v1",
+      "rank": 1,
+      "title": "ODPure: Backdoor Purification for Object Detection via Ensemble Corruption Consensus",
+      "authors": [
+        "Li Zeng",
+        "Mingcheng Duan",
+        "Longfei Fan",
+        "Hangtao Zhang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-23",
+      "url": "https://arxiv.org/abs/2609.28239v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.28239v1",
+      "score": 53,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "With the development of applications like autonomous driving, object detection has gained significant attention, while also highlighting critical vulnerabilities like backdoor attacks that severely compromise model integrity. Specifically, such attacks involve altering the categories of objects (i.e., object misclassification), removing bounding boxes (i.e., object disappearance), or generating bounding box proposals for non-existent objects (i.e., object generation) when a predefined trigger is present in the input. Although backdoor defenses for image classification are well-established, the research for object detection remains comparatively...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Purifica modelos de detección de objetos de ataques 'backdoor' que alteran o eliminan detecciones mediante un consenso de corrupción.",
+        "problema": "Los modelos de detección de objetos son vulnerables a ataques 'backdoor' que causan mala clasificación, desaparición o generación de objetos cuando un 'trigger' está presente. Las defensas actuales para clasificación de imágenes no se aplican bien a la detección de objetos.",
+        "propuesta": "Se introduce ODPure, un método para purificar modelos de detección de objetos. Utiliza un enfoque de 'ensemble corruption consensus' para identificar y neutralizar las modificaciones maliciosas introducidas por los ataques 'backdoor'.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero afirma que el método purifica modelos de detección de objetos de ataques 'backdoor'.",
+        "por_que_importa": "Asegura la fiabilidad y seguridad de los sistemas de detección de objetos, cruciales en aplicaciones de alto riesgo como la conducción autónoma, protegiéndolos de manipulaciones maliciosas.",
+        "tags": [
+          "detección de objetos",
+          "ciberseguridad",
+          "ataques backdoor",
+          "purificación de modelos",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-24T17:24:35Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.28182v1",
+      "rank": 2,
+      "title": "Finite-Sample Probabilistic Safety Certification for AI-Based Grid-Edge Coordination",
+      "authors": [
+        "Yihong Zhou",
+        "Hanbin Yang",
+        "Thomas Morstyn"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-09-23",
+      "url": "https://arxiv.org/abs/2609.28182v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.28182v1",
+      "score": 53,
+      "topics": [
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: AI agents, adversarial ML"
+      ],
+      "abstract_en": "Coordinating large population of flexible grid-edge devices can alleviate the need for time-consuming and capital-intensive network upgrades, and AI-based control methods such as multi-agent reinforcement learning or imitation learning are promising in their real-time decision scalability. However, system operators still need an independent and rigorous way to decide whether a given AI system is safe enough for deployment. This paper develops a finite-sample probabilistic safety certification framework for black-box AI decision models in closed-loop grid operation. The central idea is...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Certifica la seguridad de sistemas de IA para coordinar dispositivos en la red eléctrica, garantizando su fiabilidad operativa.",
+        "problema": "Los sistemas de IA para coordinar dispositivos en la red eléctrica son prometedores pero carecen de un método riguroso para certificar su seguridad antes de su despliegue, lo que genera desconfianza en los operadores del sistema.",
+        "propuesta": "Desarrolla un marco de certificación de seguridad probabilística para modelos de decisión de IA de caja negra en operaciones de red en bucle cerrado, utilizando un enfoque de muestra finita.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero propone un marco para la certificación de seguridad.",
+        "por_que_importa": "Permite a los operadores del sistema confiar en la seguridad de los sistemas de IA para la coordinación de la red eléctrica, facilitando su adopción y evitando costosas actualizaciones de infraestructura.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Red Eléctrica",
+          "Certificación de Seguridad",
+          "Control de Sistemas"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-24T17:24:44Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.28216v1",
+      "rank": 3,
+      "title": "From Agent Output to Authorized Transition",
+      "authors": [
+        "Christopher Koch"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-09-23",
+      "url": "https://arxiv.org/abs/2609.28216v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.28216v1",
+      "score": 51,
+      "topics": [
+        "AI agents",
+        "compliance & audit",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+1)",
+        "🎯 temas: AI agents, compliance & audit, adversarial ML"
+      ],
+      "abstract_en": "Agentic engineering systems can edit repositories, run tools and tests, build firmware, synthesize schematics, and prepare deployable or manufacturable artifacts. The assurance problem is therefore shifting from whether an agent can produce an output to whether an engineering lifecycle is justified in acting on claims about that output. Current products and standards provide sandboxes, approvals, hooks, traces, policy enforcement, attestations, bills of materials, and assurance representations, but these capabilities remain fragmented. This paper presents the Agile-V Assurance Spine, a cross-domain...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Asegurando que las acciones de los agentes de IA en ingeniería sean confiables y justificadas en entornos complejos.",
+        "problema": "Los sistemas de ingeniería basados en agentes de IA pueden realizar acciones críticas (editar repositorios, construir firmware, etc.), pero la confianza en sus salidas y la justificación para actuar sobre ellas es un desafío fragmentado con herramientas actuales.",
+        "propuesta": "Presenta el 'Agile-V Assurance Spine', una solución que integra capacidades de seguridad y aseguramiento a través de dominios para validar las salidas de los agentes de IA.",
+        "resultados": "El resumen no especifica resultados numéricos, pero propone una arquitectura para mejorar el aseguramiento en ciclos de vida de ingeniería con agentes de IA.",
+        "por_que_importa": "Permite a las organizaciones confiar y actuar sobre las salidas de los agentes de IA en procesos de ingeniería críticos, mejorando la seguridad y eficiencia.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Ingeniería de Software",
+          "Aseguramiento",
+          "Confianza"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-24T17:24:54Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.27422v1",
+      "rank": 4,
+      "title": "RAMP: Reversing Adversarial Perturbations to Strengthen Clean-Label Backdoor Attacks against Malware Detectors",
+      "authors": [
+        "Jinwen Xin",
+        "Dongni Zhang",
+        "Chenyang Wang",
+        "Jianming Fu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-23",
+      "url": "https://arxiv.org/abs/2609.27422v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.27422v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Deep learning-based malware detectors are commonly updated by fine-tuning on newly collected samples, but this practical update pipeline also creates an attack surface for training-time backdoor attacks. In realistic crowdsourced data collection, however, strict label vetting typically restricts attackers to the clean-label setting, in which poisoned samples must retain benign labels and functionality, making effective backdoor injection substantially harder. We present a new attack perspective based on feature-space manipulation: instead of relying solely on stronger trigger designs or selecting benign...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Atacantes inyectan backdoors en detectores de malware sin alterar las etiquetas benignas, usando manipulaciones en el espacio de características.",
+        "problema": "Los detectores de malware basados en aprendizaje profundo son vulnerables a ataques de backdoor durante su actualización con datos de crowdsourcing, especialmente en el escenario de etiqueta limpia donde las muestras envenenadas deben parecer benignas.",
+        "propuesta": "Se propone RAMP, un nuevo ataque que manipula el espacio de características para inyectar backdoors de forma efectiva en el escenario de etiqueta limpia, sin depender únicamente de diseños de triggers más fuertes.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero afirma que RAMP es más efectivo que enfoques anteriores en el escenario de etiqueta limpia.",
+        "por_que_importa": "Permite a los atacantes comprometer la seguridad de los detectores de malware sin ser detectados fácilmente, amenazando la efectividad de la detección de software malicioso.",
+        "tags": [
+          "ciberseguridad",
+          "backdoor attacks",
+          "malware detection",
+          "deep learning",
+          "ataques de etiqueta limpia"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-24T17:25:03Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.28372v1",
+      "rank": 5,
+      "title": "Shopping by algorithm: How agentic AI deploys human heuristics as a surrogate consumer",
+      "authors": [
+        "Davood Wadi",
+        "Yu Ma"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-09-23",
+      "url": "https://arxiv.org/abs/2609.28372v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.28372v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Consumers increasingly delegate purchasing decisions to Large Language Models (LLMs) acting as surrogate consumers. Using \"Tool-Lab,\" an adaptation of information-board process tracing that places product attributes behind costly tool calls, we examine how marketing pricing cues (i.e., just-below pricing and promotional framing) influence AI shopping agents. Across eight commercially deployed LLMs from three providers, we trace pre-choice information acquisition. Under zero cost, pricing cues rarely mislead. Imposing acquisition costs under a vague goal prompt leads LLMs to omit diagnostic attributes...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "La IA de compras imita la heurística humana, pero los costos de información la hacen omitir detalles cruciales.",
+        "problema": "Los agentes de IA que toman decisiones de compra para humanos pueden ser influenciados por señales de marketing, pero no se sabe cómo manejan la información cuando adquirirla tiene un costo.",
+        "propuesta": "Se adaptó una técnica de rastreo de procesos ('Tool-Lab') para simular costos de adquisición de información y se observó cómo ocho LLMs comerciales adquirían información sobre productos, especialmente bajo la influencia de señales de precios como 'just-below pricing' y 'promotional framing'.",
+        "resultados": "Cuando la adquisición de información era gratuita, las señales de precios rara vez engañaban a los LLMs. Sin embargo, al imponer costos de adquisición bajo un objetivo vago, los LLMs tendían a omitir atributos diagnósticos de los productos.",
+        "por_que_importa": "Demuestra que los agentes de IA, al igual que los humanos, pueden ser susceptibles a heurísticas de toma de decisiones simplificadas cuando la información es costosa, lo que podría llevar a decisiones de compra subóptimas si no se diseñan cuidadosamente.",
+        "tags": [
+          "IA",
+          "comercio electrónico",
+          "toma de decisiones",
+          "sesgos cognitivos",
+          "LLMs",
+          "ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-24T17:25:12Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.28197v1",
+      "rank": 6,
+      "title": "PASTABench: Proactive Assessment of Sequential Trajectories for Agent Safety",
+      "authors": [
+        "Jiapeng Sun",
+        "Yujin Zhou",
+        "Han Zhu",
+        "Pengcheng Wen"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-09-23",
+      "url": "https://arxiv.org/abs/2609.28197v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.28197v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "As Large Language Models (LLMs) evolve into autonomous agents that alter real-world states, ensuring operational safety across multi-step workflows has become a critical challenge. While recent work has moved beyond single-turn evaluation toward multi-turn paradigms, key limitations persist: step-level methods treat actions in isolation, missing how risks accumulate, while trajectory-level evaluations operate post-hoc, offering no opportunity for timely intervention. To address these limitations, we formalize Decoupled Proactive Safety Monitoring along three dimensions: whether to intervene, when to intervene, and what...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Evalúa la seguridad de agentes IA en flujos de trabajo multi-paso, detectando riesgos antes de que ocurran.",
+        "problema": "Los métodos actuales para evaluar la seguridad de agentes IA en tareas complejas (multi-paso) fallan al no considerar la acumulación de riesgos a lo largo de la secuencia de acciones y al evaluar la seguridad solo después de que las acciones se han ejecutado, impidiendo la intervención temprana.",
+        "propuesta": "Se propone PASTABench, un marco para la Monitorización Proactiva de Seguridad Desacoplada, que evalúa la seguridad a lo largo de trayectorias de acciones multi-paso, permitiendo la intervención antes de que ocurran fallos.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero introduce un marco formal para la monitorización proactiva de seguridad en tres dimensiones: cuándo intervenir, cómo intervenir y qué...",
+        "por_que_importa": "Permite desarrollar agentes IA más seguros y confiables para interactuar con el mundo real, previniendo fallos costosos o peligrosos en flujos de trabajo complejos.",
+        "tags": [
+          "IA segura",
+          "agentes IA",
+          "ciberseguridad",
+          "evaluación",
+          "flujos de trabajo"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-24T17:25:21Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.28364v1",
+      "rank": 7,
+      "title": "LEAP-CBF: A Safety Filter for Uncertain Systems with Least-Effort Adversarial Potentials",
+      "authors": [
+        "Oswin So",
+        "Eric Yu",
+        "Chuchu Fan"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.LG]",
+      "category": "cs.LG",
+      "date": "2026-09-23",
+      "url": "https://arxiv.org/abs/2609.28364v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.28364v1",
+      "score": 50,
+      "topics": [
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: AI agents, adversarial ML"
+      ],
+      "abstract_en": "Control barrier functions (CBF) are a popular safety filter to ensure safety for nonlinear dynamical systems. However, when the system is subject to uncertainties and disturbances, this requires the use of robust variants of CBFs, which can be difficult to construct and can be overly conservative, especially for high-dimensional systems under input constraints. In this work, we propose a new approach to solve these challenges by introducing Least-Effort Adversarial Potentials (LEAP), a certificate that quantifies the robustness of a given...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "LEAP-CBF: Un filtro de seguridad para sistemas inciertos que minimiza el esfuerzo para mantener la robustez y la seguridad.",
+        "problema": "Los filtros de seguridad tradicionales (CBF) son conservadores y difíciles de construir para sistemas con incertidumbres y perturbaciones, especialmente en alta dimensión y con restricciones de entrada.",
+        "propuesta": "Introduce LEAP (Least-Effort Adversarial Potentials), un nuevo certificado que cuantifica la robustez de un sistema ante incertidumbres, buscando el mínimo esfuerzo para garantizar la seguridad.",
+        "resultados": "El resumen no especifica resultados numéricos, pero propone LEAP como una solución a los desafíos de robustez y conservadurismo de los CBF.",
+        "por_que_importa": "Ofrece una forma más eficiente y menos conservadora de garantizar la seguridad en sistemas de control complejos y con incertidumbres, crucial para aplicaciones prácticas.",
+        "tags": [
+          "seguridad",
+          "control",
+          "incertidumbre",
+          "robustez",
+          "IA",
+          "sistemas dinámicos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-24T17:25:30Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.27334",
+      "rank": 1,
+      "title": "Just-in-Time Memory: Learning to Curate Task-Adaptive Memory for LLM Agents",
+      "authors": [
+        "Yefan Zhou",
+        "Yang Li",
+        "Zeyu Leo Liu",
+        "Semih Yavuz"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-23",
+      "url": "https://arxiv.org/abs/2609.27334",
+      "pdf_url": "https://arxiv.org/pdf/2609.27334",
+      "score": 73,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+4)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Agentic memory systems reuse past experience to improve future performance, yet most existing designs curate memory at write time: once a task is completed, its trajectory is distilled into a fixed artifact, such as a reflection, workflow, skill, or reasoning strategy, that is later retrieved by similarity. This forces the system to decide what is worth remembering before the future query is known, irreversibly discarding information and producing a query-independent summary that must serve many possible downstream tasks. Learning such...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Agentes de IA aprenden a crear memoria adaptativa 'justo a tiempo' para mejorar su rendimiento futuro en tareas.",
+        "problema": "Los sistemas de memoria actuales para agentes de IA guardan la experiencia pasada de forma fija y temprana, antes de saber para qué se usará en el futuro, perdiendo información valiosa.",
+        "propuesta": "Se propone 'Just-in-Time Memory', un sistema que aprende a curar la memoria de forma adaptativa, decidiendo qué recordar y cómo hacerlo justo antes de que sea necesario para una tarea específica.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que la memoria curada 'justo a tiempo' mejora el rendimiento futuro de los agentes.",
+        "por_que_importa": "Permite a los agentes de IA ser más eficientes y efectivos al utilizar su experiencia pasada de manera más inteligente y adaptada a las necesidades inmediatas.",
+        "tags": [
+          "memoria",
+          "agentes IA",
+          "aprendizaje adaptativo",
+          "LLM",
+          "eficiencia"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-24T17:25:39Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.27284",
+      "rank": 2,
+      "title": "Hunyuan-A13B Technical Report",
+      "authors": [
+        "Tencent Hunyuan Team",
+        "Ao Liu",
+        "Botong Zhou",
+        "Can Xu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-23",
+      "url": "https://arxiv.org/abs/2609.27284",
+      "pdf_url": "https://arxiv.org/pdf/2609.27284",
+      "score": 62,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "We present Hunyuan-A13B, an open-source large language model based on a Mixture-of-Experts architecture. It contains 80 billion total parameters but activates only 13 billion during inference, balancing model capability, computational efficiency, and deployment cost. The model is pretrained on a rigorously filtered 20T-token corpus with enhanced STEM data curation, improving factual reliability and reasoning ability. High-quality supervised fine-tuning and large-scale reinforcement learning further enhance its overall performance. Hunyuan-A13B also introduces a dual-mode Chain-of-Thought framework that adapts reasoning depth to task...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Hunyuan-A13B: un modelo de lenguaje de 80B parámetros que usa solo 13B para ser eficiente, con mejor razonamiento y fiabilidad factual.",
+        "problema": "Los modelos de lenguaje grandes (LLMs) son potentes pero computacionalmente costosos y difíciles de desplegar. Mejorar su capacidad de razonamiento y fiabilidad factual es un desafío constante.",
+        "propuesta": "Presentamos Hunyuan-A13B, un LLM de 80 mil millones de parámetros totales que utiliza una arquitectura Mixture-of-Experts (MoE) activando solo 13 mil millones durante la inferencia. Ha sido preentrenado con un corpus de 20 billones de tokens filtrados y curados con datos STEM mejorados, seguido de ajuste fino supervisado y aprendizaje por refuerzo. Introduce además un framework dual-mode Chain-of-Thought.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que la arquitectura MoE balancea capacidad y eficiencia, y que el preentrenamiento mejora la fiabilidad factual y la habilidad de razonamiento.",
+        "por_que_importa": "Ofrece un modelo de lenguaje potente y eficiente, reduciendo los costos de inferencia y despliegue, y mejorando la fiabilidad y el razonamiento, lo que lo hace más práctico para aplicaciones profesionales.",
+        "tags": [
+          "modelos de lenguaje",
+          "IA",
+          "eficiencia computacional",
+          "Mixture-of-Experts",
+          "razonamiento",
+          "fiabilidad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-24T17:25:49Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.27490",
+      "rank": 3,
+      "title": "WhatWorkedBench: Benchmarking Experimental Understanding in AI Agents",
+      "authors": [
+        "Jingjie Ning",
+        "Xueqi Li",
+        "Yibo Kong",
+        "Dongting Li"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-23",
+      "url": "https://arxiv.org/abs/2609.27490",
+      "pdf_url": "https://arxiv.org/pdf/2609.27490",
+      "score": 57,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "AI research agents need reliable knowledge of how their experiments change outcomes. We introduce WhatWorkedBench to measure experimental understanding, the accuracy of predictions about component changes after budgeted experimentation. Agents inspect code, select measurements, and submit a response surface, a table predicting scores for every configuration of component settings. Exhaustive CPU execution supplies reference effects for changing each component while holding the others fixed. These effects capture combinations of changes across 36 tasks from 30 data sources and 8 workflow...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "WhatWorkedBench evalúa la comprensión experimental de agentes de IA, midiendo su habilidad para predecir cambios en resultados basados en modificaciones de componentes.",
+        "problema": "Los agentes de investigación en IA carecen de una forma fiable de medir su comprensión de cómo los cambios en los componentes de un experimento afectan los resultados.",
+        "propuesta": "Se introduce WhatWorkedBench, un benchmark que evalúa la precisión de las predicciones de los agentes sobre los efectos de los cambios en los componentes de un experimento, tras una experimentación limitada.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero describe el proceso de evaluación que incluye 36 tareas, 30 fuentes de datos y 8 flujos de trabajo.",
+        "por_que_importa": "Permite a los investigadores cuantificar y mejorar la capacidad de los agentes de IA para entender y predecir el impacto de sus decisiones experimentales, crucial para la investigación y el desarrollo eficientes.",
+        "tags": [
+          "IA",
+          "Comprensión Experimental",
+          "Benchmarking",
+          "Agentes de IA",
+          "Reproducibilidad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-24T17:25:58Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.27321",
+      "rank": 4,
+      "title": "Verifiable Hidden Dynamics Play: Generating Agentic RL Environments from Solved Mechanisms",
+      "authors": [
+        "Xinjie Shen",
+        "Wei Fan",
+        "Xudong Guo",
+        "Jianhong Tu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-23",
+      "url": "https://arxiv.org/abs/2609.27321",
+      "pdf_url": "https://arxiv.org/pdf/2609.27321",
+      "score": 57,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "Language-model agents increasingly face long-horizon tasks with evolving state, interdependent decisions, and delayed outcomes. Scaling their training requires diverse agentic environments, dependable outcome signals, and low extension cost. Existing generation pipelines commonly construct an environment before defining its outcome rule or annotating its trajectories, leaving dynamics and evaluation to be aligned post hoc. VHD-Play reverses this dependency by sampling and solving a mathematical model before a corpus-grounded setter renders its decision process as stateful tools. The executable dynamics and trajectory-scoring...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Genera entornos de aprendizaje por refuerzo para agentes de IA, asegurando que las reglas del juego y los resultados sean verificables desde el principio.",
+        "problema": "Entrenar agentes de IA para tareas complejas y de largo alcance es difícil debido a la necesidad de entornos de simulación diversos, señales de resultado fiables y costes de desarrollo bajos. Los métodos actuales generan el entorno antes de definir sus reglas, lo que dificulta la evaluación.",
+        "propuesta": "VHD-Play invierte el proceso: primero resuelve un modelo matemático y luego genera el entorno de simulación y sus reglas de decisión, asegurando la verificabilidad y la alineación de las dinámicas.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero menciona que las dinámicas ejecutables y la puntuación de trayectorias se generan de forma verificable.",
+        "por_que_importa": "Permite crear entornos de entrenamiento más robustos y fiables para agentes de IA, acelerando su desarrollo y mejorando su capacidad para manejar tareas complejas y de largo alcance de manera verificable.",
+        "tags": [
+          "IA",
+          "Aprendizaje por Refuerzo",
+          "Entornos de Simulación",
+          "Ciberseguridad",
+          "Verificabilidad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-24T17:26:07Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.27657",
+      "rank": 5,
+      "title": "FLEET: From Logits Entropy to Enhanced Trajectories in Text Generation",
+      "authors": [
+        "Oleksii Streltsov",
+        "Oleksandra Vitko"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-23",
+      "url": "https://arxiv.org/abs/2609.27657",
+      "pdf_url": "https://arxiv.org/pdf/2609.27657",
+      "score": 57,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Solutions based on large language models (LLMs) often rely on temperature sampling to improve accuracy and stability by aggregating multiple samples from the completion distribution. However, this memoryless approach is inherently suboptimal: because it lacks awareness of prior generations and their evaluations, it produces an increasing proportion of semantically duplicate answers as more samples are drawn, leading to diminishing returns. To address this limitation, we introduce FLEET, a novel method that integrates a memory mechanism into the generation process. FLEET...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "FLEET mejora la generación de texto en LLMs integrando memoria para evitar respuestas duplicadas y aumentar la calidad.",
+        "problema": "Los métodos actuales de muestreo de temperatura en LLMs son 'sin memoria', lo que lleva a la generación de respuestas semánticamente duplicadas y rendimientos decrecientes al aumentar el número de muestras.",
+        "propuesta": "FLEET introduce un mecanismo de memoria en el proceso de generación de texto. Este mecanismo permite al modelo tener en cuenta las generaciones previas y sus evaluaciones para guiar la generación futura.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que FLEET aborda la limitación de las respuestas duplicadas y mejora la estabilidad y precisión.",
+        "por_que_importa": "Permite obtener respuestas más diversas y de mayor calidad de los LLMs, optimizando el uso de recursos computacionales al evitar la generación redundante de información.",
+        "tags": [
+          "generación de texto",
+          "LLMs",
+          "ciberseguridad",
+          "IA",
+          "memoria",
+          "optimización"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-24T17:26:16Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.26355",
+      "rank": 6,
+      "title": "PACT: From Credit Assignment to Critic Alignment",
+      "authors": [
+        "Jiayan Fu",
+        "Hang Xu",
+        "Yong Zhang",
+        "Zhaokai Luo"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-22",
+      "url": "https://arxiv.org/abs/2609.26355",
+      "pdf_url": "https://arxiv.org/pdf/2609.26355",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Reinforcement learning has become a central component of large language model (LLM) post-training, yet token-level credit lacks a generally accepted mathematical definition, leaving its relationship to commonly used training signals unclear. We formulate three regularity conditions, namely Completeness, Prefix Consistency, and Neutrality, and prove that they uniquely determine token-level credit. This characterization provides a unified basis for explaining phenomena across existing algorithms and guides the development of an improved actor-critic training procedure. Through this lens, an ideal teacher in On-Policy...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "PACT define el crédito de los tokens en RL para LLMs, unificando métodos y mejorando el entrenamiento actor-crítico.",
+        "problema": "La asignación de crédito a nivel de token en el aprendizaje por refuerzo para LLMs carece de una definición matemática clara, lo que dificulta entender su relación con las señales de entrenamiento comunes.",
+        "propuesta": "Se proponen tres condiciones de regularidad (Completitud, Consistencia de Prefijo y Neutralidad) que definen matemáticamente el crédito de los tokens. Esto permite unificar la explicación de algoritmos existentes y desarrollar un procedimiento de entrenamiento actor-crítico mejorado.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero la propuesta unifica la explicación de fenómenos en algoritmos existentes y guía el desarrollo de un procedimiento de entrenamiento mejorado.",
+        "por_que_importa": "Proporciona una base teórica sólida para el entrenamiento de LLMs con RL, mejorando la comprensión y el desarrollo de métodos más efectivos para alinear el comportamiento del modelo con los objetivos deseados.",
+        "tags": [
+          "LLMs",
+          "Aprendizaje por Refuerzo",
+          "Ciberseguridad",
+          "IA",
+          "Entrenamiento de Modelos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-24T17:26:25Z"
+      }
+    }
+  ],
+  "generated_at": "2026-09-24T17:26:25Z"
+}
