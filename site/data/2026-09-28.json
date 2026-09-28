@@ -1,0 +1,101 @@
+{
+  "date": "2026-09-28",
+  "report_type": "filtrado",
+  "evaluated": 30,
+  "selected": 2,
+  "papers": [
+    {
+      "id": "arxiv:2609.31590",
+      "rank": 1,
+      "title": "AgentWorld: Benchmarking Long-Horizon Collaboration of Multi-agent LLMs",
+      "authors": [
+        "Raphael Shu",
+        "Yusen Zhang",
+        "Young Min Cho",
+        "Jin Mo Yang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-25",
+      "url": "https://arxiv.org/abs/2609.31590",
+      "pdf_url": "https://arxiv.org/pdf/2609.31590",
+      "score": 57,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Existing multi-agent benchmarks primarily test in competitive settings, short-horizon interactions under 20 steps, or simply aggregate individual performance, failing to isolate and highlight genuine collaboration capabilities of LLM-based agents. We introduce AgentWorld, a benchmark of 100 human-annotated tasks (with 100 augmented variants) for evaluating long-horizon, multi-agent collaboration. Tasks span 50+ interaction rounds across a rich MMORPG sandbox and require 3-20 agents with asymmetric roles and abilities to coordinate through communication, joint planning, and resource sharing under a blackbox setting where each agent acts independently without access to others' internal states. To quantify collaboration effectiveness in addition to conventional binary task success, we propose Causal Collaboration Effectiveness (CCE), a graph-based metric that traces causal dependencies between agent actions and measures what fraction of a team's effort actually contributed to the outcome. Experiments with Gemini 3 Flash, Claude Haiku 4.5, GPT-5 Mini, and DeepSeek R1-70B show that even the best model achieves only 52.0% task success, with systematic failure modes including communication breakdowns, role confusion, and inability to maintain shared plans across rounds. AgentWorld is fully open-source.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "AgentWorld evalúa la colaboración a largo plazo de múltiples LLMs en tareas complejas, revelando sus limitaciones actuales.",
+        "problema": "Los benchmarks actuales de agentes LLM fallan al evaluar la colaboración genuina, centrándose en interacciones cortas o agregando rendimiento individual.",
+        "propuesta": "Se introduce AgentWorld, un benchmark con 100 tareas de colaboración multi-agente (3-20 LLMs) en un sandbox MMORPG, evaluando la coordinación en 50+ rondas y usando una métrica CCE para medir la efectividad causal.",
+        "resultados": "Incluso el mejor modelo (Gemini 3 Flash, Claude Haiku 4.5, GPT-5 Mini, DeepSeek R1-70B) alcanza solo el 52.0% de éxito, mostrando fallos en comunicación, roles y planes compartidos.",
+        "por_que_importa": "Revela las debilidades actuales de los LLMs en colaboración compleja y a largo plazo, crucial para aplicaciones prácticas de agentes autónomos.",
+        "tags": [
+          "multi-agente",
+          "LLM",
+          "colaboración",
+          "benchmark",
+          "ciberseguridad",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-28T19:45:37Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.29167",
+      "rank": 2,
+      "title": "IndicBankBench: Evaluating Safety and Reliability of Language Model Assistants in Indian Retail Banking",
+      "authors": [
+        "Suvradip Paul",
+        "Chandra Bhushan",
+        "Harsh Sharma",
+        "Nitin Kukreja"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-24",
+      "url": "https://arxiv.org/abs/2609.29167",
+      "pdf_url": "https://arxiv.org/pdf/2609.29167",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Banking assistants must use account-specific information to answer requests and, in many cases, take actions through tools. Evaluating only the final response misses important errors. An assistant may ask for information it already has, rely on stale context, select the wrong account, or write an invalid value after stating the correct one. We introduce IndicBankBench, a 799-case benchmark for Indian retail banking spanning five operational domains, a capability/refusal domain, and twenty primary axes. Cases are evaluated at four stages: safety, action and tool use, response adequacy, and advisory quality. Tool use and most safety checks are deterministic. A narrow resolver handles only ambiguous confirmation-before-write cases, while a separate LLM judge evaluates semantic response adequacy. We run every case three times and report strict pass^3, which requires success on all trials. Across the eleven evaluated models, strict reliability ranges from 43.7% to 58.2%, whereas at-least-once success ranges from 60% to 74%. This gap shows that at-least-once success can overstate dependable banking behavior. The case-level diagnostics also distinguish systems that ask unnecessary questions from those that act but fail to reconcile customer context or fully resolve the request. We release the cases, mock environment, and evaluation harness.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa la seguridad y fiabilidad de asistentes de IA en banca minorista india, revelando brechas significativas entre el éxito aparente y el real.",
+        "problema": "Los asistentes de IA en banca minorista india a menudo fallan en tareas críticas como usar información específica de la cuenta, seleccionar la cuenta correcta o escribir valores válidos, y la evaluación de la respuesta final oculta estos errores.",
+        "propuesta": "Se introduce IndicBankBench, un benchmark con 799 casos para evaluar asistentes de IA en banca minorista india en cinco dominios operativos, un dominio de capacidad/rechazo y veinte ejes primarios, evaluando en cuatro etapas: seguridad, uso de acciones y herramientas, adecuación de la respuesta y calidad del asesoramiento.",
+        "resultados": "La fiabilidad estricta (éxito en todos los intentos) de los once modelos evaluados oscila entre el 43.7% y el 58.2%, mientras que el éxito al menos una vez varía del 60% al 74%, indicando que el éxito al menos una vez puede sobreestimar el comportamiento bancario fiable.",
+        "por_que_importa": "Demuestra que las métricas de éxito simples pueden ser engañosas en aplicaciones bancarias críticas, destacando la necesidad de evaluaciones rigurosas que capturen fallos sutiles para garantizar la seguridad y fiabilidad del cliente.",
+        "tags": [
+          "IA",
+          "Banca",
+          "Ciberseguridad",
+          "Fiabilidad",
+          "Evaluación",
+          "Modelos de Lenguaje"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-09-28T19:45:46Z"
+      }
+    }
+  ],
+  "generated_at": "2026-09-28T19:45:46Z"
+}

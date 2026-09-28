@@ -8317,5 +8317,39 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-09-25T17:26:01Z"
+  },
+  "arxiv:2609.31590": {
+    "tldr": "AgentWorld evalúa la colaboración a largo plazo de múltiples LLMs en tareas complejas, revelando sus limitaciones actuales.",
+    "problema": "Los benchmarks actuales de agentes LLM fallan al evaluar la colaboración genuina, centrándose en interacciones cortas o agregando rendimiento individual.",
+    "propuesta": "Se introduce AgentWorld, un benchmark con 100 tareas de colaboración multi-agente (3-20 LLMs) en un sandbox MMORPG, evaluando la coordinación en 50+ rondas y usando una métrica CCE para medir la efectividad causal.",
+    "resultados": "Incluso el mejor modelo (Gemini 3 Flash, Claude Haiku 4.5, GPT-5 Mini, DeepSeek R1-70B) alcanza solo el 52.0% de éxito, mostrando fallos en comunicación, roles y planes compartidos.",
+    "por_que_importa": "Revela las debilidades actuales de los LLMs en colaboración compleja y a largo plazo, crucial para aplicaciones prácticas de agentes autónomos.",
+    "tags": [
+      "multi-agente",
+      "LLM",
+      "colaboración",
+      "benchmark",
+      "ciberseguridad",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-28T19:45:37Z"
+  },
+  "arxiv:2609.29167": {
+    "tldr": "Evalúa la seguridad y fiabilidad de asistentes de IA en banca minorista india, revelando brechas significativas entre el éxito aparente y el real.",
+    "problema": "Los asistentes de IA en banca minorista india a menudo fallan en tareas críticas como usar información específica de la cuenta, seleccionar la cuenta correcta o escribir valores válidos, y la evaluación de la respuesta final oculta estos errores.",
+    "propuesta": "Se introduce IndicBankBench, un benchmark con 799 casos para evaluar asistentes de IA en banca minorista india en cinco dominios operativos, un dominio de capacidad/rechazo y veinte ejes primarios, evaluando en cuatro etapas: seguridad, uso de acciones y herramientas, adecuación de la respuesta y calidad del asesoramiento.",
+    "resultados": "La fiabilidad estricta (éxito en todos los intentos) de los once modelos evaluados oscila entre el 43.7% y el 58.2%, mientras que el éxito al menos una vez varía del 60% al 74%, indicando que el éxito al menos una vez puede sobreestimar el comportamiento bancario fiable.",
+    "por_que_importa": "Demuestra que las métricas de éxito simples pueden ser engañosas en aplicaciones bancarias críticas, destacando la necesidad de evaluaciones rigurosas que capturen fallos sutiles para garantizar la seguridad y fiabilidad del cliente.",
+    "tags": [
+      "IA",
+      "Banca",
+      "Ciberseguridad",
+      "Fiabilidad",
+      "Evaluación",
+      "Modelos de Lenguaje"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-09-28T19:45:46Z"
   }
 }
