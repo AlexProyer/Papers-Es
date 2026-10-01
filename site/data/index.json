@@ -1,7 +1,17 @@
 {
-  "generated_at": "2026-09-30T18:03:21Z",
-  "latest": "2026-09-29",
+  "generated_at": "2026-10-01T18:34:18Z",
+  "latest": "2026-10-01",
   "days": [
+    {
+      "date": "2026-10-01",
+      "paper_count": 15,
+      "sources": [
+        "HuggingFace Daily Papers",
+        "Semantic Scholar",
+        "arXiv"
+      ],
+      "file": "2026-10-01.json"
+    },
     {
       "date": "2026-09-29",
       "paper_count": 11,

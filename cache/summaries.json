@@ -8534,5 +8534,204 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-09-29T18:12:14Z"
+  },
+  "arxiv:2609.39902v1": {
+    "tldr": "Descubren \"CodeMimicry\", un método para evadir la seguridad de modelos de lenguaje mediante la generación de código malicioso.",
+    "problema": "Los modelos de lenguaje, a pesar de su alineación de seguridad en lenguaje natural, son vulnerables a ataques de 'jailbreak' cuando se les presenta código malicioso estructurado, debido a una falla en la generalización de la seguridad al dominio del código.",
+    "propuesta": "Se propone CodeMimicry, un framework automatizado que genera prompts de código orientados a objetos para inducir respuestas dañinas a través de la autocompletación de código, explotando la falta de generalización de la seguridad.",
+    "resultados": "CodeMimicry logra una tasa de éxito del 96.25% en 8 LLMs comerciales de última generación, con un promedio de 1.51 consultas, superando significativamente a otros métodos.",
+    "por_que_importa": "Revela una debilidad crítica en la alineación de seguridad actual de los LLMs, especialmente en dominios estructurados como el código, y subraya la necesidad de mejorar la robustez de la seguridad para prevenir la generación de contenido perjudicial.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Modelos de Lenguaje",
+      "Jailbreak",
+      "Code Completion",
+      "Seguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-01T18:29:54Z"
+  },
+  "arxiv:2609.39584v1": {
+    "tldr": "Un marco de IA federado y híbrido para detectar intrusiones en la computación de borde, protegiendo la privacidad y resistiendo ataques.",
+    "problema": "La computación de borde, al acercar el procesamiento a los usuarios, expande la superficie de ataque y expone dispositivos heterogéneos y con recursos limitados a vulnerabilidades, sin comprometer la privacidad de los datos.",
+    "propuesta": "Se propone un marco híbrido de detección de intrusiones (TA-FHIDF) que integra Autoencoder, 1D-CNN y BiLSTM para extracción de características. Utiliza aprendizaje federado para entrenar modelos localmente y un mecanismo de agregación sensible a la confianza para defenderse de ataques de envenenamiento.",
+    "resultados": "El marco demuestra una precisión de detección superior, convergencia rápida y alta tolerancia a fallos bizantinos en conjuntos de datos de referencia (UNSW-NB15, CICIDS2017, Edge-IIoTset) bajo escenarios de ataque.",
+    "por_que_importa": "Mejora la ciberseguridad en entornos de borde, cruciales para IoT y sistemas distribuidos, al permitir la detección de amenazas sin centralizar datos sensibles y resistiendo ataques dirigidos a los modelos de IA.",
+    "tags": [
+      "computación de borde",
+      "ciberseguridad",
+      "IA federada",
+      "detección de intrusiones",
+      "privacidad de datos",
+      "aprendizaje profundo"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-01T18:30:05Z"
+  },
+  "arxiv:2609.39607v1": {
+    "tldr": "Un nuevo ataque llamado Pretext evade las defensas de IA diseñadas para detectar habilidades maliciosas en agentes de software.",
+    "problema": "Los agentes de IA utilizan 'habilidades' para ampliar sus capacidades, pero existen mercados de terceros que alojan habilidades maliciosas que pueden comprometer al agente. Las defensas actuales escanean estas habilidades antes de su instalación, utilizando análisis estáticos y un juez semántico basado en LLM.",
+    "propuesta": "Pretext es un atacante de caja blanca que elabora iterativamente habilidades maliciosas para evadir los marcos de detección. Lo logra moviendo la carga útil del código al lenguaje natural, enmarcando la carga útil como el propósito legítimo de la habilidad y dividiendo las instrucciones a través de archivos para mantener el LLM por debajo de su umbral de bloqueo.",
+    "resultados": "Pretext logra hasta un 97% de éxito contra un detector congelado y un 77% contra un detector co-adaptativo en tres modelos de código abierto, demostrando la ineficacia de las defensas actuales.",
+    "por_que_importa": "Este ataque revela brechas significativas en los escáneres de habilidades actuales, lo que significa que los agentes de IA siguen siendo vulnerables a la manipulación a través de habilidades maliciosas, lo que podría tener graves implicaciones de seguridad.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Agentes de Software",
+      "Vulnerabilidades",
+      "Detección de Malware",
+      "LLM"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-01T18:30:34Z"
+  },
+  "arxiv:2609.40303v1": {
+    "tldr": "Los sofisticados sistemas de IA para ingeniería de ML no superan a los agentes de codificación simples con acceso directo al entorno.",
+    "problema": "Los agentes de ingeniería de machine learning (MLE) autónomos actuales dependen de complejas arquitecturas multi-agente y subagentes dedicados, lo que puede ser ineficiente. Se investiga si estos elaborados sistemas son necesarios o si agentes más simples con acceso directo al entorno de ejecución pueden lograr resultados similares.",
+    "propuesta": "Se compara el rendimiento de agentes de codificación con 'arneses' complejos (mecanismos de soporte y orquestación) frente a un agente de codificación básico con acceso directo (leer, escribir, bash) al entorno de ejecución, bajo un presupuesto de tiempo igual y utilizando el mismo modelo de lenguaje grande (LLM) de vanguardia como 'backbone'.",
+    "resultados": "Bajo las mismas condiciones, los arneses de vanguardia de código abierto no mostraron ventajas significativas sobre un agente de codificación con un arnés mínimo y acceso directo. El rendimiento se atribuye principalmente al LLM 'backbone', sugiriendo que las capas de maquinaria adicionales son redundantes.",
+    "por_que_importa": "El esfuerzo invertido en crear complejos sistemas de soporte para modelos de IA fuertes puede no ser la forma más eficiente de mejorar el rendimiento en benchmarks actuales de ingeniería de ML. Se sugiere enfocar los esfuerzos en mejorar el modelo base o simplificar la arquitectura.",
+    "tags": [
+      "ingenieria de machine learning",
+      "agentes autonomos",
+      "arquitecturas de IA",
+      "eficiencia",
+      "LLM",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-01T18:30:44Z"
+  },
+  "arxiv:2609.39549v1": {
+    "tldr": "Detecta ataques de IA multivuelta antes de que ocurran prediciendo y verificando comportamientos futuros del agente.",
+    "problema": "Los ataques a agentes de IA en interacciones multivuelta son difíciles de detectar con métodos actuales que solo analizan el historial, ya que las intenciones maliciosas se ocultan a lo largo de varias interacciones.",
+    "propuesta": "Se propone el framework Speculative Safety Honeypot (SSH), que utiliza simulación multientidad para predecir comportamientos futuros del agente objetivo (especulación) y luego verifica estas predicciones con las acciones reales del agente para refinar la detección.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que SSH mejora la resiliencia de la defensa y el tiempo de advertencia contra ataques temporales complejos.",
+    "por_que_importa": "Permite una defensa proactiva contra ataques sofisticados que se desarrollan a lo largo del tiempo, mejorando la seguridad de los agentes de IA desplegados en entornos complejos.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "LLM",
+      "Ataques Multivuelta",
+      "Defensa Proactiva",
+      "Detección"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-01T18:30:55Z"
+  },
+  "arxiv:2609.39352v1": {
+    "tldr": "Atacan agentes LLM ocultando la intención maliciosa en la justificación de una tarea, no en la acción en sí.",
+    "problema": "Los agentes LLM que usan 'Skills' reutilizables son vulnerables a ataques de 'envenenamiento' que manipulan sus decisiones. Los ataques actuales colocan la acción maliciosa junto a su justificación o la distribuyen, pero no separan la razón de la ejecución.",
+    "propuesta": "Se propone un nuevo paradigma de ataque basado en la coordinación: 'desacoplar el pretexto de la actuación'. La acción maliciosa se mantiene intacta en una 'Skill de Dirección' y la justificación se delega a una 'Skill de Base' que altera sutilmente el entorno. La acción parece legítima solo con la justificación fabricada.",
+    "resultados": "Las evaluaciones demuestran que el envenenamiento de skills desacoplado logra un alto éxito en los ataques, exponiendo un punto ciego en las auditorías de seguridad de skills aisladas. El resumen no especifica métricas numéricas concretas.",
+    "por_que_importa": "Este ataque revela una vulnerabilidad crítica en la cadena de suministro de LLM Agents, afectando la seguridad de sistemas que dependen de Skills reutilizables y exigiendo nuevas estrategias de auditoría y defensa.",
+    "tags": [
+      "LLM Agents",
+      "Ciberseguridad",
+      "Ataques de Suministro",
+      "Envenenamiento de Skills",
+      "Seguridad IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-01T18:31:05Z"
+  },
+  "arxiv:2609.40244v1": {
+    "tldr": "StreamRig optimiza la odometría de robots con múltiples cámaras usando modelos 3D pre-entrenados, logrando mayor precisión y menor deriva.",
+    "problema": "Los modelos 3D de IA para robótica móvil suelen usar una sola cámara, desaprovechando la información geométrica de sistemas con múltiples cámaras sincronizadas y dificultando la odometría en tiempo real.",
+    "propuesta": "StreamRig es un framework que aprovecha la geometría de cámaras calibradas en un modelo 3D pre-entrenado y congelado. Utiliza un Rig-Resampler para comprimir características, un CausalBridge con atención causal y caché, y una cabeza ligera para predecir poses, entrenando solo los módulos nuevos con supervisión de poses relativas.",
+    "resultados": "StreamRig supera a modelos monocular y de rig-aware offline en deriva de traslación y rotación en cuatro datasets (NCLT, TartanGround, KITTI-360, ZJH), a pesar de entrenar solo en simulación y ser evaluado en cero-shot en el mundo real, manteniendo un bajo coste de inferencia.",
+    "por_que_importa": "Permite una estimación de pose más precisa y robusta para robots con múltiples cámaras en aplicaciones de streaming, mejorando la navegación y el mapeo sin necesidad de reentrenar modelos masivos.",
+    "tags": [
+      "odometria",
+      "vision por computador",
+      "multi-camara",
+      "streaming",
+      "IA",
+      "robotica"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-01T18:31:14Z"
+  },
+  "arxiv:2609.39783v1": {
+    "tldr": "COMPASS predice automáticamente las relaciones entre múltiples parches de vulnerabilidades para simplificar su adopción en software.",
+    "problema": "Las vulnerabilidades de software a menudo requieren múltiples parches, y sus complejas relaciones dificultan la adopción manual por parte de los desarrolladores downstream.",
+    "propuesta": "COMPASS es un enfoque automatizado que utiliza Large Language Models (LLMs) para identificar y predecir las relaciones entre grupos de parches de vulnerabilidades, clasificándolas en seis tipos comunes.",
+    "resultados": "En un benchmark de 300 CVEs, COMPASS predice las relaciones de parches con una efectividad que supera a los métodos SOTA en un 85.04% en promedio.",
+    "por_que_importa": "Simplifica y acelera la adopción de parches de seguridad críticos en el software, reduciendo el riesgo de vulnerabilidades conocidas.",
+    "tags": [
+      "ciberseguridad",
+      "gestión de parches",
+      "LLMs",
+      "ingeniería de software",
+      "vulnerabilidades"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-01T18:31:44Z"
+  },
+  "sha1:daadec6d4b119f43": {
+    "tldr": "Exploramos cómo los sistemas multiagente basados en LLM pueden colaborar de forma segura y escalable, abordando desafíos de coordinación, comunicación y confianza.",
+    "problema": "Los sistemas multiagente basados en LLM, aunque potentes para la coordinación y el razonamiento autónomo, enfrentan desafíos significativos en seguridad, escalabilidad, comunicación efectiva y alineación de objetivos.",
+    "propuesta": "Se presenta una revisión exhaustiva de los ecosistemas multiagente de LLM, organizada en torno a estrategias de coordinación, marcos de comunicación, desafíos de seguridad y mecanismos de confianza y alineación, sintetizando enfoques arquitectónicos y protocolos.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero detalla la síntesis de enfoques arquitectónicos como representaciones latentes compartidas, autonomía estratégica, descomposición de tareas y protocolos de comunicación neuro-simbólica.",
+    "por_que_importa": "Comprender y abordar estos desafíos es crucial para desplegar de forma segura y eficiente sistemas multiagente de LLM en aplicaciones complejas del mundo real, garantizando su fiabilidad y alineación con los objetivos humanos.",
+    "tags": [
+      "LLM",
+      "Sistemas Multiagente",
+      "Ciberseguridad",
+      "IA",
+      "Colaboración",
+      "Escalabilidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-01T18:31:54Z"
+  },
+  "arxiv:2609.39279": {
+    "tldr": "Elimina conocimiento peligroso de LLMs de forma robusta y duradera, incluso ante ataques de reentrenamiento.",
+    "problema": "Los modelos de lenguaje (LLMs) entrenados para eliminar conocimiento peligroso son vulnerables a ataques de reentrenamiento, donde el conocimiento suprimido resurge fácilmente. Esto se debe a una 'alineación superficial' que oculta el conocimiento en lugar de eliminarlo.",
+    "propuesta": "Se propone FDCU, un marco de proyección de subespacio con doble restricción. Utiliza máscaras elementales basadas en la Información de Fisher (para preservar conocimiento general) y el Principio de Intervención Funcional Mínima (PMFI) (para evitar activaciones anómalas de 'supresores falsos'), forzando una eliminación auténtica del conocimiento.",
+    "resultados": "FDCU logra robustez de vanguardia contra ataques de reentrenamiento y mantiene una utilidad general casi sin pérdidas, superando a métodos anteriores en tareas de borrado de conocimiento específico y control de salida segura.",
+    "por_que_importa": "Garantiza una seguridad duradera en LLMs, impidiendo que el conocimiento peligroso o los comportamientos no deseados reaparezcan después de la alineación, lo cual es crucial para la implementación segura de estas tecnologías.",
+    "tags": [
+      "LLMs",
+      "Machine Unlearning",
+      "Seguridad IA",
+      "Alineación de Modelos",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-01T18:33:00Z"
+  },
+  "arxiv:2609.38971": {
+    "tldr": "Los modelos de IA para robots pueden ser engañados para realizar tareas inseguras con simples cambios en el entorno.",
+    "problema": "Los modelos de IA que planifican tareas para robots (VLMs) deben ser seguros incluso en entornos no vistos. Los métodos actuales de prueba de seguridad no evalúan si un rechazo de tarea seguro se mantiene ante cambios simples en el entorno.",
+    "propuesta": "Se introduce el concepto de 'maleabilidad de tareas' para medir qué tan fácil es que un VLM cambie de opinión sobre una tarea insegura. Se evalúa esto introduciendo objetos cotidianos en el entorno y se propone un método para predecir la maleabilidad de una tarea antes de su ejecución.",
+    "resultados": "El 20.2% de las tareas que inicialmente fueron rechazadas como inseguras pudieron ser modificadas para ser cumplidas por la introducción de uno o más objetos cotidianos. Un modelo predictivo basado en un VLM de código abierto identificó tareas maleables 2.4 veces mejor que la selección aleatoria.",
+    "por_que_importa": "Demuestra que los sistemas de IA para robots pueden ser vulnerables a manipulaciones aparentemente inofensivas, lo que requiere evaluar la maleabilidad de cada tarea antes de su implementación para garantizar la seguridad.",
+    "tags": [
+      "IA",
+      "Robótica",
+      "Ciberseguridad",
+      "Seguridad de IA",
+      "Modelos de Lenguaje Visual"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-01T18:33:27Z"
+  },
+  "arxiv:2609.39045": {
+    "tldr": "RSIGame revoluciona la creación de videojuegos autónoma con auto-mejora recursiva, superando los límites de la generación de juegos por IA.",
+    "problema": "Los modelos de lenguaje actuales generan juegos jugables pero luchan por mejorarlos de forma fiable, cayendo en sobreajustes y errores no resueltos.",
+    "propuesta": "RSIGame utiliza bucles de mejora local (explorar, diagnosticar, revisar) y global (seguimiento de calidad, preservación de versiones) para refinar juegos de forma autónoma, e internaliza la experiencia para mejorar el generador.",
+    "resultados": "En 140 tareas de GameCraft-Bench, RSIGame mejoró consistentemente la calidad del juego. Un modelo específico superó a GPT-5.5 en Godot (61.38) y Phaser (58.53), usando 11 veces menos tokens.",
+    "por_que_importa": "Permite la creación y mejora continua de videojuegos de alta calidad de forma autónoma, optimizando recursos y superando a modelos de generación de un solo intento.",
+    "tags": [
+      "IA generativa",
+      "Desarrollo de videojuegos",
+      "Auto-mejora",
+      "Agentes autónomos",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-01T18:33:53Z"
   }
 }

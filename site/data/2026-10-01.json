@@ -1,0 +1,644 @@
+{
+  "date": "2026-10-01",
+  "report_type": "filtrado",
+  "evaluated": 198,
+  "selected": 19,
+  "papers": [
+    {
+      "id": "arxiv:2609.39902v1",
+      "rank": 1,
+      "title": "CodeMimicry: Exploiting Safety Generalization Lag in Large Language Models via Structured Code Completion",
+      "authors": [
+        "Zhen Liang",
+        "Hai Huang",
+        "Wentao Chen"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-30",
+      "url": "https://arxiv.org/abs/2609.39902v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.39902v1",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "Large language models have achieved remarkable capabilities across diverse domains, yet their safety alignment remains vulnerable to jailbreak attacks. In this work, we identify a previously underexplored failure mode - safety generalization lag - where alignment trained predominantly on natural language fails to transfer to the code domain. We show that this lag induces a code-completion blind spot, allowing malicious intent embedded within syntactically valid code to evade safety mechanisms. To exploit this vulnerability, we propose CodeMimicry, a fully automated black-box jailbreak framework that generates structured, object-oriented code prompts to induce harmful outputs via code completion. Experiments on 8 state-of-the-art commercial LLMs demonstrate that CodeMimicry achieves a 96.25% attack success rate with 1.51 queries on average, significantly outperforming both template-based and optimization-based baselines. Beyond empirical performance, we provide a mechanistic analysis of code-based jailbreaks through latent space representations, including projection onto refusal-related directions and activation steering. This analysis offers an explanation of how CodeMimicry bypasses safety mechanisms in code-related domains. Our findings reveal a weakness in current safety alignment and highlight the need for robust alignments in structured domains such as code.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Descubren \"CodeMimicry\", un método para evadir la seguridad de modelos de lenguaje mediante la generación de código malicioso.",
+        "problema": "Los modelos de lenguaje, a pesar de su alineación de seguridad en lenguaje natural, son vulnerables a ataques de 'jailbreak' cuando se les presenta código malicioso estructurado, debido a una falla en la generalización de la seguridad al dominio del código.",
+        "propuesta": "Se propone CodeMimicry, un framework automatizado que genera prompts de código orientados a objetos para inducir respuestas dañinas a través de la autocompletación de código, explotando la falta de generalización de la seguridad.",
+        "resultados": "CodeMimicry logra una tasa de éxito del 96.25% en 8 LLMs comerciales de última generación, con un promedio de 1.51 consultas, superando significativamente a otros métodos.",
+        "por_que_importa": "Revela una debilidad crítica en la alineación de seguridad actual de los LLMs, especialmente en dominios estructurados como el código, y subraya la necesidad de mejorar la robustez de la seguridad para prevenir la generación de contenido perjudicial.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Modelos de Lenguaje",
+          "Jailbreak",
+          "Code Completion",
+          "Seguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-01T18:29:54Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.39584v1",
+      "rank": 2,
+      "title": "Cybersecurity in Edge Computing: A Trust-Aware Federated Hybrid Intrusion Detection Framework",
+      "authors": [
+        "Zawad Yalmie Sazid",
+        "Robert Abbas"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-30",
+      "url": "https://arxiv.org/abs/2609.39584v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.39584v1",
+      "score": 59,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: cybersecurity, vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Edge computing has emerged as a critical computing paradigm in modern distributed systems by migrating data processing closer to end users and Internet of Things (IoT) devices. While this paradigm decentralizes processes, minimizes latency, and reduces backhaul bandwidth congestion, it exponentially enlarges the cyberattack surface. Heterogeneous, resource-constrained edge devices deployed across unmanaged administrative domains present highly vulnerable targets. To address these vulnerabilities without compromising global data privacy regulations, this paper proposes a novel Trust-Aware Federated Hybrid Intrusion Detection Framework (TA-FHIDF). The proposed framework integrates an Autoencoder, a 1D Convolutional Neural Network (1D-CNN), and a Bidirectional Long Short-Term Memory (BiLSTM) model into a unified, localized deep learning engine capable of autonomous spatial and temporal feature extraction. Model training is performed collaboratively via federated learning, ensuring raw network telemetry remains isolated at local gateways. Furthermore, to defend against adversarial model poisoning attacks, we introduce a robust server-side trust-aware aggregation mechanism that evaluates client reliability using a cosine similarity metric before global model integration. Empirical evaluations across multi-vector benchmark datasets (UNSW-NB15, CICIDS2017, and Edge-IIoTset) demonstrate the framework's superior detection accuracy, rapid convergence, and high Byzantine fault tolerance under adversarial attack scenarios.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Un marco de IA federado y híbrido para detectar intrusiones en la computación de borde, protegiendo la privacidad y resistiendo ataques.",
+        "problema": "La computación de borde, al acercar el procesamiento a los usuarios, expande la superficie de ataque y expone dispositivos heterogéneos y con recursos limitados a vulnerabilidades, sin comprometer la privacidad de los datos.",
+        "propuesta": "Se propone un marco híbrido de detección de intrusiones (TA-FHIDF) que integra Autoencoder, 1D-CNN y BiLSTM para extracción de características. Utiliza aprendizaje federado para entrenar modelos localmente y un mecanismo de agregación sensible a la confianza para defenderse de ataques de envenenamiento.",
+        "resultados": "El marco demuestra una precisión de detección superior, convergencia rápida y alta tolerancia a fallos bizantinos en conjuntos de datos de referencia (UNSW-NB15, CICIDS2017, Edge-IIoTset) bajo escenarios de ataque.",
+        "por_que_importa": "Mejora la ciberseguridad en entornos de borde, cruciales para IoT y sistemas distribuidos, al permitir la detección de amenazas sin centralizar datos sensibles y resistiendo ataques dirigidos a los modelos de IA.",
+        "tags": [
+          "computación de borde",
+          "ciberseguridad",
+          "IA federada",
+          "detección de intrusiones",
+          "privacidad de datos",
+          "aprendizaje profundo"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-01T18:30:05Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.39607v1",
+      "rank": 3,
+      "title": "Pretext: Defeating Malicious Skill Detection Frameworks for AI Agents",
+      "authors": [
+        "Tobias Kaisar",
+        "Aritra Dhar"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-30",
+      "url": "https://arxiv.org/abs/2609.39607v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.39607v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Skills extend an agent's capabilities by injecting instructions and information into the context, and are widely used by agents such as OpenClaw and Claude Code. Prior work shows third-party marketplaces host malicious skills that give attackers direct influence over the victim's agent. The emerging defense scans skills before installation, pairing deterministic static checks with an LLM-based semantic judge, as in NVIDIA's SkillSpector. We show that such defenses fall to an attacker who knows the detector. Our white-box LLM attacker, Pretext, iteratively crafts skills that evade detection while still delivering the payload and performing the benign task: moving the payload from code into natural language leaves static analysis inert, while framing it as the skill's legitimate purpose and splitting instructions across files keeps the LLM stage below its blocking threshold. Across three open-source models, Pretext achieves up to 97\\% and 77\\% against a frozen detector and a co-adaptive one, respectively, revealing major gaps in current skill scanners.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Un nuevo ataque llamado Pretext evade las defensas de IA diseñadas para detectar habilidades maliciosas en agentes de software.",
+        "problema": "Los agentes de IA utilizan 'habilidades' para ampliar sus capacidades, pero existen mercados de terceros que alojan habilidades maliciosas que pueden comprometer al agente. Las defensas actuales escanean estas habilidades antes de su instalación, utilizando análisis estáticos y un juez semántico basado en LLM.",
+        "propuesta": "Pretext es un atacante de caja blanca que elabora iterativamente habilidades maliciosas para evadir los marcos de detección. Lo logra moviendo la carga útil del código al lenguaje natural, enmarcando la carga útil como el propósito legítimo de la habilidad y dividiendo las instrucciones a través de archivos para mantener el LLM por debajo de su umbral de bloqueo.",
+        "resultados": "Pretext logra hasta un 97% de éxito contra un detector congelado y un 77% contra un detector co-adaptativo en tres modelos de código abierto, demostrando la ineficacia de las defensas actuales.",
+        "por_que_importa": "Este ataque revela brechas significativas en los escáneres de habilidades actuales, lo que significa que los agentes de IA siguen siendo vulnerables a la manipulación a través de habilidades maliciosas, lo que podría tener graves implicaciones de seguridad.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Agentes de Software",
+          "Vulnerabilidades",
+          "Detección de Malware",
+          "LLM"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-01T18:30:34Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.40303v1",
+      "rank": 4,
+      "title": "How Much of a Harness Does a Strong Agent Need for Autonomous ML Engineering?",
+      "authors": [
+        "Kirill Brilliantov",
+        "Alejandro Hernández-Cano",
+        "Emmanuel Abbé"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-09-30",
+      "url": "https://arxiv.org/abs/2609.40303v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.40303v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Recent autonomous machine learning engineering (MLE) agents have made significant progress on public leaderboards. Often motivated by progress stagnation over long-horizon cycles and limited Large Language Model (LLM) primitives, modern MLE agents are deployed on top of increasingly elaborate machinery: multi-agent orchestrators, dedicated retrieval subagents, and more. While such harnesses expand, the use of more primitive but improved coding agents - where LLMs have direct access to the execution environment through read, write, and bash primitives - has received little attention in the field. In this paper we find that, under an equal time budget and the same frontier LLM backbone, open-source state-of-the-art harnesses provide no advantages over a single session of a minimal-harness coding agent baseline, pointing to the backbone as the primary driver for performance. Via a series of large-scale systematic ablation studies, we argue that the machinery layers become redundant in the coding agent setting. We conclude that the effort spent elaborating hand-crafted harnesses around strong models yields poor returns for current MLE benchmarks.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los sofisticados sistemas de IA para ingeniería de ML no superan a los agentes de codificación simples con acceso directo al entorno.",
+        "problema": "Los agentes de ingeniería de machine learning (MLE) autónomos actuales dependen de complejas arquitecturas multi-agente y subagentes dedicados, lo que puede ser ineficiente. Se investiga si estos elaborados sistemas son necesarios o si agentes más simples con acceso directo al entorno de ejecución pueden lograr resultados similares.",
+        "propuesta": "Se compara el rendimiento de agentes de codificación con 'arneses' complejos (mecanismos de soporte y orquestación) frente a un agente de codificación básico con acceso directo (leer, escribir, bash) al entorno de ejecución, bajo un presupuesto de tiempo igual y utilizando el mismo modelo de lenguaje grande (LLM) de vanguardia como 'backbone'.",
+        "resultados": "Bajo las mismas condiciones, los arneses de vanguardia de código abierto no mostraron ventajas significativas sobre un agente de codificación con un arnés mínimo y acceso directo. El rendimiento se atribuye principalmente al LLM 'backbone', sugiriendo que las capas de maquinaria adicionales son redundantes.",
+        "por_que_importa": "El esfuerzo invertido en crear complejos sistemas de soporte para modelos de IA fuertes puede no ser la forma más eficiente de mejorar el rendimiento en benchmarks actuales de ingeniería de ML. Se sugiere enfocar los esfuerzos en mejorar el modelo base o simplificar la arquitectura.",
+        "tags": [
+          "ingenieria de machine learning",
+          "agentes autonomos",
+          "arquitecturas de IA",
+          "eficiencia",
+          "LLM",
+          "ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-01T18:30:44Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.39549v1",
+      "rank": 5,
+      "title": "Speculative Safety Honeypot: Toward Proactive Defense Against Multi-turn Agent Attacks",
+      "authors": [
+        "Zezhong Wang",
+        "Xueyang Tang",
+        "Rui Lian",
+        "Yang Lou"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-30",
+      "url": "https://arxiv.org/abs/2609.39549v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.39549v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "As Large Language Model (LLM) agents are increasingly deployed in complex environments, multi-turn interaction attacks have become a significant security challenge. Existing detection methods typically rely on historical context. However, this retrospective logic struggles to identify deep malicious intents that are split across turns to hide future risks. Inspired by speculative decoding, we propose the Speculative Safety Honeypot (SSH) framework. SSH uses a multi-agent simulation system composed of small LLMs to build an action-level speculate-and-verify workflow. In the speculation stage, SSH predicts future behaviors of the target agent and asynchronously builds a trajectory tree to expose potential risks in advance. In the verification stage, the system uses the target agent's real actions to calibrate and prune the trajectory tree, effectively reducing false positives. As a plug-and-playable component, SSH provides existing detectors with rich decision redundancy beyond the current interaction slice. By judging risk based on the evolution of the entire trajectory tree rather than a single point in time, the system reduces the reliance on the absolute precision of individual detection components. This improves the defense resilience and the warning lead-time of agent systems against complex temporal attacks.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Detecta ataques de IA multivuelta antes de que ocurran prediciendo y verificando comportamientos futuros del agente.",
+        "problema": "Los ataques a agentes de IA en interacciones multivuelta son difíciles de detectar con métodos actuales que solo analizan el historial, ya que las intenciones maliciosas se ocultan a lo largo de varias interacciones.",
+        "propuesta": "Se propone el framework Speculative Safety Honeypot (SSH), que utiliza simulación multientidad para predecir comportamientos futuros del agente objetivo (especulación) y luego verifica estas predicciones con las acciones reales del agente para refinar la detección.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que SSH mejora la resiliencia de la defensa y el tiempo de advertencia contra ataques temporales complejos.",
+        "por_que_importa": "Permite una defensa proactiva contra ataques sofisticados que se desarrollan a lo largo del tiempo, mejorando la seguridad de los agentes de IA desplegados en entornos complejos.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "LLM",
+          "Ataques Multivuelta",
+          "Defensa Proactiva",
+          "Detección"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-01T18:30:55Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.39352v1",
+      "rank": 6,
+      "title": "Hiding in Plain Sight: Decoupling Pretext from Actuation for Skill Poisoning in LLM Agents",
+      "authors": [
+        "Wenxin Wu",
+        "Lingyong Yan",
+        "Lei Sha",
+        "Shuaiqiang Wang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-09-30",
+      "url": "https://arxiv.org/abs/2609.39352v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.39352v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents, compliance & audit"
+      ],
+      "abstract_en": "LLM agents increasingly rely on reusable Skills for complex, multi-step tasks, creating a critical supply-chain attack surface where poisoned Skill content steers agent decision loops under benign requests. Existing skill poisoning attacks either colocate actuation with its contextual pretext or distribute actuation across multiple Skills, but do not explicitly separate the rationale for execution from the operation itself. In this work, we reveal that untrusted agent decisions fundamentally depend on two conceptually distinct Risk-Realization Factors (RRFs): an actuation factor (specifying what concrete operation is performed) and a pretext factor (providing the situational rationale for why the agent must perform it). Guided by this abstraction, we propose a coordination-based attack paradigm: decoupling pretext from actuation. Rather than fragmenting the malicious actuation, we preserve it as an intact operation within a downstream Steering Skill, while delegating the pretext factor to an upstream Grounding Skill that subtly alters persistent environment artifacts through routine utility operations. The intact actuation thus hides in plain sight, appearing completely legitimate and task-driven only when evaluated against the fabricated pretext. Building on this formulation, we develop an automated framework that discovers authentic execution dependencies, synthesizes coordinated pretext-actuation skill pairs, and iteratively refines poisoned skill instructions via runtime closed-loop feedback. Extensive evaluations across single-session and persistent cross-lifecycle scenarios demonstrate that decoupled skill poisoning achieves high attack success, exposing a critical blind spot in isolated Skill security audits. Our automated framework code is available at https://github.com/Wenxin-buaa/CoordPoison.git.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Atacan agentes LLM ocultando la intención maliciosa en la justificación de una tarea, no en la acción en sí.",
+        "problema": "Los agentes LLM que usan 'Skills' reutilizables son vulnerables a ataques de 'envenenamiento' que manipulan sus decisiones. Los ataques actuales colocan la acción maliciosa junto a su justificación o la distribuyen, pero no separan la razón de la ejecución.",
+        "propuesta": "Se propone un nuevo paradigma de ataque basado en la coordinación: 'desacoplar el pretexto de la actuación'. La acción maliciosa se mantiene intacta en una 'Skill de Dirección' y la justificación se delega a una 'Skill de Base' que altera sutilmente el entorno. La acción parece legítima solo con la justificación fabricada.",
+        "resultados": "Las evaluaciones demuestran que el envenenamiento de skills desacoplado logra un alto éxito en los ataques, exponiendo un punto ciego en las auditorías de seguridad de skills aisladas. El resumen no especifica métricas numéricas concretas.",
+        "por_que_importa": "Este ataque revela una vulnerabilidad crítica en la cadena de suministro de LLM Agents, afectando la seguridad de sistemas que dependen de Skills reutilizables y exigiendo nuevas estrategias de auditoría y defensa.",
+        "tags": [
+          "LLM Agents",
+          "Ciberseguridad",
+          "Ataques de Suministro",
+          "Envenenamiento de Skills",
+          "Seguridad IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-01T18:31:05Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.40244v1",
+      "rank": 7,
+      "title": "StreamRig: Exploiting Intra-Rig Geometry for Streaming Multi-Camera Odometry",
+      "authors": [
+        "Yufei Wei",
+        "Shuhao Ye",
+        "Qi Wang",
+        "Xin Zheng"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CV]",
+      "category": "cs.CV",
+      "date": "2026-09-30",
+      "url": "https://arxiv.org/abs/2609.40244v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.40244v1",
+      "score": 53,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Mobile robots and vehicles carry synchronized multi-camera rigs, yet many streaming 3D foundation models are designed for monocular input, leaving efficient use of rig geometry a challenge. We present StreamRig, a freeze-and-stream framework that builds causal streaming odometry for calibrated rigs on a frozen multi-view 3D foundation model. The frozen front-end jointly perceives the synchronized views using rig calibration. A Rig-Resampler compresses their features, a CausalBridge applies causal attention with a key-value cache, and a lightweight head regresses rig poses. A periodic re-anchoring protocol supports stable pose estimation over long sequences. Only these modules are trained, 74.6M parameters in total, with relative poses as the sole supervision. Our two-stage training strategy combines group relocalization pretraining with causal rig training to transfer the geometric priors of the frozen front-end and the alignment ability of the pretrained modules to streaming odometry. We evaluate on NCLT, TartanGround, KITTI-360, and our self-collected humanoid-robot dataset ZJH, where training uses only simulation and real-world evaluation is zero-shot. Across all four datasets, StreamRig achieves lower translation and rotation drift than the evaluated non-oracle monocular streaming and rig-aware offline models, while maintaining low inference cost. Ablations and controlled camera-count experiments identify the sources of these gains. We further examine how longer training windows affect inference over longer horizons. Code has been released at https://github.com/WeiYuFei0217/StreamRig.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "StreamRig optimiza la odometría de robots con múltiples cámaras usando modelos 3D pre-entrenados, logrando mayor precisión y menor deriva.",
+        "problema": "Los modelos 3D de IA para robótica móvil suelen usar una sola cámara, desaprovechando la información geométrica de sistemas con múltiples cámaras sincronizadas y dificultando la odometría en tiempo real.",
+        "propuesta": "StreamRig es un framework que aprovecha la geometría de cámaras calibradas en un modelo 3D pre-entrenado y congelado. Utiliza un Rig-Resampler para comprimir características, un CausalBridge con atención causal y caché, y una cabeza ligera para predecir poses, entrenando solo los módulos nuevos con supervisión de poses relativas.",
+        "resultados": "StreamRig supera a modelos monocular y de rig-aware offline en deriva de traslación y rotación en cuatro datasets (NCLT, TartanGround, KITTI-360, ZJH), a pesar de entrenar solo en simulación y ser evaluado en cero-shot en el mundo real, manteniendo un bajo coste de inferencia.",
+        "por_que_importa": "Permite una estimación de pose más precisa y robusta para robots con múltiples cámaras en aplicaciones de streaming, mejorando la navegación y el mapeo sin necesidad de reentrenar modelos masivos.",
+        "tags": [
+          "odometria",
+          "vision por computador",
+          "multi-camara",
+          "streaming",
+          "IA",
+          "robotica"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-01T18:31:14Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.39783v1",
+      "rank": 8,
+      "title": "COMPASS: Predicting the Relationship of Multiple Patches for Vulnerabilities with LLMs",
+      "authors": [
+        "Yi Song",
+        "Dongchen Xie",
+        "Xiaoyuan Xie",
+        "He Zhang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-09-30",
+      "url": "https://arxiv.org/abs/2609.39783v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.39783v1",
+      "score": 51,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+7)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Modern software heavily relies on code reuse, so upstream vulnerability fixes do not automatically propagate to downstream codebases. Downstream maintainers must manually adopt patches to eliminate known risks. In practice, a single vulnerability often corresponds to multiple patches, which greatly complicates downstream patch adoption because different patch relationships imply different adoption strategies. To address this challenge, we first manually inspect large-scale multi-patch vulnerabilities (about 1K) in the real world and interview experienced developers, summarizing six typical types of patch relationships, i.e., Merge, Mirror, Better Solution, Fixing-of-Fixing, Collaboration, and Separation. Based on these observations, we propose COMPASS, an automated approach that predicts the relationships of multiple vulnerability patches with large language models. Given a CVE as input, COMPASS follows a four-phase pipeline that (i) identifies the patch group and pre-scans explicit relationships, (ii) performs individual patch analysis, (iii) infers relationship instances via a hierarchy-guided prompt, and (iv) validates completeness and consistency of the inferred results. As output, COMPASS reports the predicted relationships within the patch group and visualizes them as a relationship graph. We evaluate COMPASS on a benchmark of 300 multi-patch CVEs and compare it against mainstream learning-based and LLM baselines. Results show that our method achieves strong and consistent prediction effectiveness and outperforms SOTA by 85.04% on average. We publicly release an online querying website to support community reuse of patch relationships knowledge: https://patch-relation.com.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "COMPASS predice automáticamente las relaciones entre múltiples parches de vulnerabilidades para simplificar su adopción en software.",
+        "problema": "Las vulnerabilidades de software a menudo requieren múltiples parches, y sus complejas relaciones dificultan la adopción manual por parte de los desarrolladores downstream.",
+        "propuesta": "COMPASS es un enfoque automatizado que utiliza Large Language Models (LLMs) para identificar y predecir las relaciones entre grupos de parches de vulnerabilidades, clasificándolas en seis tipos comunes.",
+        "resultados": "En un benchmark de 300 CVEs, COMPASS predice las relaciones de parches con una efectividad que supera a los métodos SOTA en un 85.04% en promedio.",
+        "por_que_importa": "Simplifica y acelera la adopción de parches de seguridad críticos en el software, reduciendo el riesgo de vulnerabilidades conocidas.",
+        "tags": [
+          "ciberseguridad",
+          "gestión de parches",
+          "LLMs",
+          "ingeniería de software",
+          "vulnerabilidades"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-01T18:31:44Z"
+      }
+    },
+    {
+      "id": "sha1:daadec6d4b119f43",
+      "rank": 1,
+      "title": "Safe and Scalable Collaboration in Multiagent LLM Systems: A Comprehensive Review",
+      "authors": [
+        "Elias Hossain",
+        "Md Mehedi Hasan Nipu",
+        "Mohammad Sakib Mahmood",
+        "M. Hossen"
+      ],
+      "source": "Semantic Scholar",
+      "venue": "IEEE Transactions on Systems, Man & Cybernetics. Systems",
+      "category": null,
+      "date": "2026-10-01",
+      "url": "https://www.semanticscholar.org/paper/35489297d4e58b5a925de8741050055e799325aa",
+      "pdf_url": null,
+      "score": 57,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+7)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Large language model (LLM)-based multiagent systems are a rapidly evolving frontier of artificial intelligence that enables complex coordination, communication, and autonomous reasoning across distributed agents. This article presents a comprehensive review of multiagent LLM ecosystems, organized around four foundational pillars: coordination strategies, communication frameworks, safety challenges, and trust and alignment mechanisms. We synthesize a range of architectural approaches to agent interaction, including shared latent representations, strategic autonomy, task decomposition, and neuro-symbolic communication protocols. We then systematically examine the critical vulnerabilities...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Exploramos cómo los sistemas multiagente basados en LLM pueden colaborar de forma segura y escalable, abordando desafíos de coordinación, comunicación y confianza.",
+        "problema": "Los sistemas multiagente basados en LLM, aunque potentes para la coordinación y el razonamiento autónomo, enfrentan desafíos significativos en seguridad, escalabilidad, comunicación efectiva y alineación de objetivos.",
+        "propuesta": "Se presenta una revisión exhaustiva de los ecosistemas multiagente de LLM, organizada en torno a estrategias de coordinación, marcos de comunicación, desafíos de seguridad y mecanismos de confianza y alineación, sintetizando enfoques arquitectónicos y protocolos.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero detalla la síntesis de enfoques arquitectónicos como representaciones latentes compartidas, autonomía estratégica, descomposición de tareas y protocolos de comunicación neuro-simbólica.",
+        "por_que_importa": "Comprender y abordar estos desafíos es crucial para desplegar de forma segura y eficiente sistemas multiagente de LLM en aplicaciones complejas del mundo real, garantizando su fiabilidad y alineación con los objetivos humanos.",
+        "tags": [
+          "LLM",
+          "Sistemas Multiagente",
+          "Ciberseguridad",
+          "IA",
+          "Colaboración",
+          "Escalabilidad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-01T18:31:54Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.39279",
+      "rank": 2,
+      "title": "Faithful Dual-constrained Erasure for Robust LLM Safety Alignment",
+      "authors": [
+        "Jia-Qing Li",
+        "Shi-De Zhou",
+        "Zhi-Bo Zhang",
+        "Yu-Xi Li"
+      ],
+      "source": "Semantic Scholar",
+      "venue": "",
+      "category": null,
+      "date": "2026-09-30",
+      "url": "https://arxiv.org/abs/2609.39279",
+      "pdf_url": null,
+      "score": 54,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Machine unlearning has emerged as a crucial mechanism for removing hazardous knowledge and enforcing safety alignment in Large Language Models (LLMs). However, recent studies reveal a persistent security risk: unlearned models remain highly vulnerable to retraining attacks, where suppressed malicious behaviors rapidly resurface after benign fine-tuning. In this work, we investigate the optimization dynamics of unlearning and identify that this vulnerability stems from shallow alignment. Rather than effectively erasing target knowledge, models often exploit a shortcut by activating previously dormant parameters to act as spurious suppressors, forming a fragile inhibitory shell over intact malicious representations. To address this issue and enforce authentic memory deletion, we propose FDCU, a novel dual-constrained subspace projection framework. FDCU restricts parameter updates through a highly scalable, element-wise dual-masking rule: it preserves general knowledge manifolds via Fisher Information and strictly prohibits the abnormal activation of spurious suppressors via the Principle of Minimal Functional Intervention (PMFI). By reliably blocking the model's ability to superficially hide knowledge, FDCU promotes the authentic dismantling of target representations. Extensive experiments across specific knowledge erasure and safe output control tasks demonstrate that FDCU achieves state-of-the-art robustness against retraining attacks while maintaining near-lossless general utility, ensuring durable safety for LLMs.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Elimina conocimiento peligroso de LLMs de forma robusta y duradera, incluso ante ataques de reentrenamiento.",
+        "problema": "Los modelos de lenguaje (LLMs) entrenados para eliminar conocimiento peligroso son vulnerables a ataques de reentrenamiento, donde el conocimiento suprimido resurge fácilmente. Esto se debe a una 'alineación superficial' que oculta el conocimiento en lugar de eliminarlo.",
+        "propuesta": "Se propone FDCU, un marco de proyección de subespacio con doble restricción. Utiliza máscaras elementales basadas en la Información de Fisher (para preservar conocimiento general) y el Principio de Intervención Funcional Mínima (PMFI) (para evitar activaciones anómalas de 'supresores falsos'), forzando una eliminación auténtica del conocimiento.",
+        "resultados": "FDCU logra robustez de vanguardia contra ataques de reentrenamiento y mantiene una utilidad general casi sin pérdidas, superando a métodos anteriores en tareas de borrado de conocimiento específico y control de salida segura.",
+        "por_que_importa": "Garantiza una seguridad duradera en LLMs, impidiendo que el conocimiento peligroso o los comportamientos no deseados reaparezcan después de la alineación, lo cual es crucial para la implementación segura de estas tecnologías.",
+        "tags": [
+          "LLMs",
+          "Machine Unlearning",
+          "Seguridad IA",
+          "Alineación de Modelos",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-01T18:33:00Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.38971",
+      "rank": 3,
+      "title": "Refusals That Bend: Measuring and Predicting Task Malleability in Embodied VLM Planners",
+      "authors": [
+        "Leo Y. Lin",
+        "Mikhail Kuznetsov",
+        "Muslum Ozgur Ozmen",
+        "Z. B. Celik"
+      ],
+      "source": "Semantic Scholar",
+      "venue": "",
+      "category": null,
+      "date": "2026-09-30",
+      "url": "https://arxiv.org/abs/2609.38971",
+      "pdf_url": null,
+      "score": 54,
+      "topics": [
+        "compliance & audit",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: compliance & audit, adversarial ML"
+      ],
+      "abstract_en": "Embodied vision-language models (VLMs) are increasingly deployed as high-level planners for robots because they generalize across diverse environments. However, this requires their safety alignment to also hold in unseen environments. Existing red-teaming assumes an adversary who optimizes the prompt, the pixels, or text in the environment, and existing benchmarks ask whether a planner recognizes or mitigates a hazard in a fixed scene. Neither asks whether a refusal the planner has already given survives an ordinary change to the environment. We ask that question by placing a single everyday object into the environment, with no pixel, gradient, or prompt under adversarial control. On $846$ tasks that a constitution-guarded planner initially refuses, we find $20.2\\%$ of tasks can be flipped to compliance by one or more objects, and the number of objects differs from one task to another. In addition, the object need not be chosen for the task, i.e., items drawn from a fixed list, with no knowledge of the environment or the instruction, bypass safety about as often as items proposed for the specific task. We qualitatively contrast the tasks bypassed most and least often and find that the distinction lies in how conspicuous the hazard is in the instruction and environment. Susceptibility to safety bypass is therefore a property of the task, which we call its \\emph{malleability}, and we show that it can be predicted before the target is ever queried. A composite of signals read from a small open-source VLM identifies malleable tasks $2.4\\times$ as often as picking at random. Everyday objects, whether placed by an adversary or introduced by ordinary rearrangement of the environment, are thus sufficient to overturn a refusal. Because susceptibility is determined by how a task is specified, we recommend assessing malleability per task prior to deployment.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los modelos de IA para robots pueden ser engañados para realizar tareas inseguras con simples cambios en el entorno.",
+        "problema": "Los modelos de IA que planifican tareas para robots (VLMs) deben ser seguros incluso en entornos no vistos. Los métodos actuales de prueba de seguridad no evalúan si un rechazo de tarea seguro se mantiene ante cambios simples en el entorno.",
+        "propuesta": "Se introduce el concepto de 'maleabilidad de tareas' para medir qué tan fácil es que un VLM cambie de opinión sobre una tarea insegura. Se evalúa esto introduciendo objetos cotidianos en el entorno y se propone un método para predecir la maleabilidad de una tarea antes de su ejecución.",
+        "resultados": "El 20.2% de las tareas que inicialmente fueron rechazadas como inseguras pudieron ser modificadas para ser cumplidas por la introducción de uno o más objetos cotidianos. Un modelo predictivo basado en un VLM de código abierto identificó tareas maleables 2.4 veces mejor que la selección aleatoria.",
+        "por_que_importa": "Demuestra que los sistemas de IA para robots pueden ser vulnerables a manipulaciones aparentemente inofensivas, lo que requiere evaluar la maleabilidad de cada tarea antes de su implementación para garantizar la seguridad.",
+        "tags": [
+          "IA",
+          "Robótica",
+          "Ciberseguridad",
+          "Seguridad de IA",
+          "Modelos de Lenguaje Visual"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-01T18:33:27Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.39045",
+      "rank": 1,
+      "title": "RSIGame: Autonomous Agentic Game Development with Recursive Self-improvement",
+      "authors": [
+        "Wenyi Wu",
+        "Minghao Fu",
+        "Jieyu You",
+        "Kun Zhou"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-30",
+      "url": "https://arxiv.org/abs/2609.39045",
+      "pdf_url": "https://arxiv.org/pdf/2609.39045",
+      "score": 72,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Recent advances in large language models have made automatic game generation increasingly feasible, yet reliably improving generated games beyond a playable version remains challenging. Naive iterative refinement can easily overfit a small set of test cases, producing fragile games with unresolved bugs, missing behaviors, and poor generalization to broader player interactions. We introduce RSIGame, an autonomous agentic game development framework with recursive self-improvement. RSIGame organizes development into complementary local and global loops. Concretely, a local explore-diagnose-improve loop broadly explores the executable game, diagnoses and prioritizes discovered issues, and performs evidence-grounded revision, where an evolving checklist continually accumulates new testing and improvement guidance. A global loop tracks overall quality, preserves the best checkpoint, and detects saturation or regression over long-horizon development. Beyond test-time improvement, RSIGame further internalizes successful development experience into the generator through training. Across 140 GameCraft-Bench tasks, two game engines, and five generators, RSIGame consistently improves game quality under matched development budgets. Notably, experience internalization enables Qwen3.8-27B to reach 61.38 on Godot and 58.53 on Phaser, exceeding GPT-5.5 one-shot scores while reducing Qwen's generation tokens by 11 times.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "RSIGame revoluciona la creación de videojuegos autónoma con auto-mejora recursiva, superando los límites de la generación de juegos por IA.",
+        "problema": "Los modelos de lenguaje actuales generan juegos jugables pero luchan por mejorarlos de forma fiable, cayendo en sobreajustes y errores no resueltos.",
+        "propuesta": "RSIGame utiliza bucles de mejora local (explorar, diagnosticar, revisar) y global (seguimiento de calidad, preservación de versiones) para refinar juegos de forma autónoma, e internaliza la experiencia para mejorar el generador.",
+        "resultados": "En 140 tareas de GameCraft-Bench, RSIGame mejoró consistentemente la calidad del juego. Un modelo específico superó a GPT-5.5 en Godot (61.38) y Phaser (58.53), usando 11 veces menos tokens.",
+        "por_que_importa": "Permite la creación y mejora continua de videojuegos de alta calidad de forma autónoma, optimizando recursos y superando a modelos de generación de un solo intento.",
+        "tags": [
+          "IA generativa",
+          "Desarrollo de videojuegos",
+          "Auto-mejora",
+          "Agentes autónomos",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-01T18:33:53Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.39841",
+      "rank": 2,
+      "title": "DyRAD: Radar Novel View Synthesis for Dynamic Driving Scenes",
+      "authors": [
+        "Merav Keidar",
+        "Tomer Borreda",
+        "Rajalakshmi Nandakumar",
+        "Or Litany"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-30",
+      "url": "https://arxiv.org/abs/2609.39841",
+      "pdf_url": "https://arxiv.org/pdf/2609.39841",
+      "score": 63,
+      "topics": [
+        "vuln & threats"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats"
+      ],
+      "abstract_en": "Reconstructing dynamic driving scenes from recorded sensor data supports closed-loop evaluation of autonomous driving systems by synthesizing observations beyond the original trajectory. Unlike cameras and LiDAR, radar measures radial velocity directly through Doppler. Yet existing radar novel-view synthesis fails to exploit this capability: methods addressing dynamic scenes reconstruct only range-azimuth tensors, while methods that render Doppler assume static scenes. Moreover, because radar processing spreads each reflection across multiple bins, existing representations absorb this spread into scene geometry, causing it to render incorrectly when the viewpoint moves. We present DyRAD, which models dynamic driving scenes using static background reflectors and motion-tracked dynamic point reflectors to render complete range-azimuth-Doppler (RAD) tensors. Reflector velocities are derived from object tracks and projected onto the line of sight, making Doppler both a rendered output and supervision for those tracks. Crucially, we render reflectors through a fixed analytic point-spread function (PSF) derived from the radar's signal-processing chain, preventing sensor-induced spread from being baked into the scene representation. Beyond improving scene reconstruction, this separation also enables zero-shot sensor-configuration transfer, allowing the same reconstructed scene to be rendered under different radar specifications without refitting. We evaluate DyRAD on RADIal, Boreas, and a synthetic benchmark across both on-path poses and displaced viewpoints untested by prior work. On RADIal, DyRAD recovers radar detections in 90.7% of reference-detected objects, compared with 26.9% for the strongest baseline.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2609.39982",
+      "rank": 3,
+      "title": "Mid-Harness: Scaling Actions Between Model and Harness for Terminal Agents",
+      "authors": [
+        "Minki Kang",
+        "Ryo Hachiuma",
+        "Shaokun Zhang",
+        "Subhashree Radhakrishnan"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-30",
+      "url": "https://arxiv.org/abs/2609.39982",
+      "pdf_url": "https://arxiv.org/pdf/2609.39982",
+      "score": 57,
+      "topics": [
+        "vuln & threats"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: vuln & threats"
+      ],
+      "abstract_en": "Terminal agents act through stochastic model generations, yet the ability to generate a useful action does not ensure its reliable execution. A poor command (e.g., wrong package install) can change the environment in ways that hinder subsequent progress, even when the model could generate a better alternative. We investigate whether allocating test-time compute at the model-harness boundary can improve action reliability and trajectory success, and what makes this allocation effective. To study these questions, we introduce Mid-Harness, which samples and verifies candidate actions before forwarding one for execution, while keeping the generator and harness unchanged. With a TMAX-9B generator, more action sampling yields little benefit under weak verification, whereas a capable verifier can exploit useful alternatives from the same generator. On TerminalBench-Lite, a GPT-5.6 Sol verifier raises Pass@1 from 50.00% for the base agent to 68.03% with 8 sampled actions. When the same TMAX-9B model serves as the verifier, pairwise verification performs best among the evaluated verification mechanisms. Distilling responses from the stronger verifier into TMAX-9B further improves Pass@1, while leaving the action generator unchanged. With TMAX-9B on TerminalBench-Lite, combining action and trajectory scaling reaches higher success at lower estimated token cost than generating more trajectories alone. Mid-Harness also improves performance across additional models, benchmarks, and harnesses. These findings identify action scaling as a promising target for test-time compute scaling in terminal agents.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2609.38445",
+      "rank": 4,
+      "title": "AIM: Agentic Idea Management for Automated Research",
+      "authors": [
+        "Hyeong Kyu Choi",
+        "Bhavana Dalvi Mishra",
+        "Jiefeng Chen",
+        "Mihir Parmar"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-29",
+      "url": "https://arxiv.org/abs/2609.38445",
+      "pdf_url": "https://arxiv.org/pdf/2609.38445",
+      "score": 57,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Frontier LLMs are increasingly used to automate scientific research through iterative search. We distinguish idea-driven search from solution-driven search and identify three core challenges: organizing evolving research ideas, selecting promising directions, and maintaining alignment between ideas and their implementations. To address these challenges, we introduce the Agentic Idea Manager (AIM), a fully autonomous framework for managing and exploring research directions in idea-driven automated research. Inspired by Bayesian optimization, AIM uses an Agentic Surrogate and an Agentic Acquisition mechanism to organize discovered ideas and guide their selection. A Solution Auditor maintains idea-solution integrity, while a Resource Planner adaptively allocates the remaining experimental budget across parallel search branches. Experiments on 10 AutoLab benchmark tasks show that AIM surpasses the strongest baseline by 1.6 percentage points on System Optimization tasks and 4.9 percentage points on long-horizon Model Development & CUDA tasks. Notably, AIM reaches the best baseline performance up to 3.1x faster in wall-clock time. We further provide a theoretical analysis of when searching over ideas becomes beneficial. Our analysis shows that explicit idea-level allocation makes semantic coverage directly controllable, and that broader coverage becomes increasingly valuable when competitive research directions are sparse among many plausible alternatives. Project Page: https://imhgchoi.github.io/agentic-idea-manager/",
+      "abstract_full": true,
+      "summary_es": null
+    }
+  ],
+  "generated_at": "2026-10-01T18:34:18Z"
+}
