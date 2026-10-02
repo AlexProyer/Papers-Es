@@ -1,0 +1,742 @@
+{
+  "date": "2026-10-02",
+  "report_type": "filtrado",
+  "evaluated": 201,
+  "selected": 16,
+  "papers": [
+    {
+      "id": "arxiv:2610.01564v1",
+      "rank": 1,
+      "title": "Chaining Skills to Hijack LLM Agents",
+      "authors": [
+        "Tian Dong",
+        "Zixuan Ma",
+        "Haodong Zhao",
+        "Huaien Zhang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-01",
+      "url": "https://arxiv.org/abs/2610.01564v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.01564v1",
+      "score": 60,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "LLM agents use skills to improve performance on specialized tasks. To complete a user request, an agent may invoke several skills in sequence, allowing information produced under one skill to guide the next. Because skills may come from open-source repositories, this handoff can also carry attacker-controlled claims into later decisions. In this paper, we introduce APEX, which constructs and refines adversarial skill chains tailored to a user task and an attacker-selected action. The key insight is that an agent-written record of genuine task progress can carry a false claim of user approval across skills: an upstream skill induces the agent to create the record, and a downstream skill uses it to direct the attacker-selected action. Across four targeted-action families and six models on SkillsBench, the chains induce the selected action in 512 of 690 attempts (74.2%). On GPT-5.4, the full chain succeeds in 84.3% of attempts, compared with 17.4% when the workflow is merged into one skill. We further evaluate a prompting defense that asks the agent to check skill-produced files against the original request. On GPT-5.4, it lowers targeted-action success from 84.3% to 59.1%, while the verifier test-pass rate across 72 benign native-skill tasks falls from 86.7% to 56.3%. These results highlight the need for defenses that prevent attacker-directed actions while preserving legitimate task performance.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Se descubrió una nueva técnica para secuestrar agentes de IA encadenando habilidades maliciosas, logrando un 74.2% de éxito.",
+        "problema": "Los agentes de IA que usan múltiples 'habilidades' (funciones especializadas) pueden ser engañados para ejecutar acciones no deseadas por atacantes que manipulan el flujo de información entre estas habilidades.",
+        "propuesta": "Se presenta APEX, un método para construir cadenas de habilidades adversarias que explotan la forma en que los agentes registran el progreso, haciendo que un registro de 'aprobación' falsa guíe acciones maliciosas posteriores.",
+        "resultados": "APEX logra el secuestro en el 74.2% de los intentos (512/690) en seis modelos. En GPT-5.4, el éxito es del 84.3%, comparado con 17.4% sin encadenamiento. Una defensa de 'verificación' reduce el éxito al 59.1% pero también afecta el rendimiento legítimo.",
+        "por_que_importa": "Demuestra una vulnerabilidad crítica en agentes de IA que usan habilidades, con implicaciones directas para la seguridad y la confiabilidad de sistemas autónomos que toman decisiones.",
+        "tags": [
+          "agentes de IA",
+          "ciberseguridad",
+          "vulnerabilidad",
+          "LLM",
+          "ataque",
+          "defensa"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-02T17:56:42Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.01887v1",
+      "rank": 2,
+      "title": "TRACE: Tackling Real-World Resource Assignment Problems via Agentic Heuristic Design",
+      "authors": [
+        "Jose A. Ayala-Romero",
+        "Andres Garcia-Saavedra",
+        "Xavier Costa-Perez"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.NE]",
+      "category": "cs.NE",
+      "date": "2026-10-01",
+      "url": "https://arxiv.org/abs/2610.01887v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.01887v1",
+      "score": 54,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+4)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Dynamic resource assignment, the real-time allocation of task streams to heterogeneous processing nodes, is the backbone of modern computing infrastructure. While learning-based schedulers excel in research, industrial deployments still rely on hand-written rules that operators can read, audit, and execute within tight latency budgets. LLM-based Automatic Heuristic Design (AHD) promises to automate writing such rules. However, existing AHD frameworks were developed for combinatorial problems fully specified to the LLM, and they learn only from a scalar fitness score. In real systems, the behaviour that determines a good heuristic, such as processor speeds or power consumption, is unknown a priori: the score reveals which heuristic performs better, but not why. This missing information is recorded in the system logs that every evaluation produces. Exploiting it is non-trivial: logs are massive and noisy, the relevant signals depend on the objective, and their content and format vary across hardware and software stacks, so they can neither be fed to an LLM as is nor processed by a fixed parser. We propose TRACE, which couples an evolutionary AHD loop with an agentic knowledge-extraction workflow. A Reasoner agent analyzes the log schema in light of the objective and formulates hypotheses about the system dynamics; a Coder agent writes and executes schema-specific code to test them, producing insights or executable tools for the evolved heuristics. We evaluate TRACE on a synthetic cloud benchmark and a 5G vRAN scenario built from industrial testbed measurements and operational traffic traces. TRACE consistently outperforms state-of-the-art AHD methods in resource assignment problems and yields more auditable heuristics at under 2% overhead.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "TRACE automatiza el diseño de reglas para asignar recursos en sistemas dinámicos, aprendiendo de logs para mejorar la eficiencia y auditabilidad.",
+        "problema": "Los sistemas de asignación de recursos en tiempo real, cruciales para la infraestructura computacional, aún usan reglas escritas manualmente por su auditabilidad y baja latencia, a pesar de que los métodos de aprendizaje automático son mejores en investigación. Los enfoques actuales de diseño automático de heurísticas (AHD) para LLMs solo aprenden de una puntuación de rendimiento, sin entender el porqué de su éxito o fracaso a partir de los logs del sistema, que son masivos, ruidosos y de formato variable.",
+        "propuesta": "TRACE combina un bucle de diseño automático de heurísticas (AHD) evolutivo con un flujo de trabajo de extracción de conocimiento basado en agentes. Un agente 'Reasoner' analiza el esquema de los logs y formula hipótesis sobre la dinámica del sistema. Un agente 'Coder' escribe y ejecuta código específico para probar estas hipótesis, generando información o herramientas ejecutables para las heurísticas evolucionadas.",
+        "resultados": "TRACE supera consistentemente a los métodos AHD de vanguardia en problemas de asignación de recursos y produce heurísticas más auditables con menos del 2% de sobrecarga. El resumen no especifica resultados numéricos detallados sobre la mejora de rendimiento o la reducción de latencia.",
+        "por_que_importa": "Permite desplegar automáticamente heurísticas de asignación de recursos eficientes y auditables en sistemas reales, superando las limitaciones de los métodos actuales y facilitando la adopción de IA en infraestructuras críticas.",
+        "tags": [
+          "asignación de recursos",
+          "IA",
+          "ciberseguridad",
+          "optimización",
+          "aprendizaje automático",
+          "auditoría"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-02T17:56:51Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.02045v1",
+      "rank": 3,
+      "title": "Form and Void: Entangled Composition through an Autonomous AI Agent",
+      "authors": [
+        "Shiwen Wang",
+        "Jian Yang",
+        "Xu Wang",
+        "Xincan Wang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CV]",
+      "category": "cs.CV",
+      "date": "2026-10-01",
+      "url": "https://arxiv.org/abs/2610.02045v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.02045v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Positive and negative space is a fundamental principle in visual composition, supporting visually coherent forms and layered semantic relationships. Generating such compositions is challenging because it requires coordinated control over two semantic concepts that share a common boundary. Although recent text-to-image models and multimodal large language models (MLLMs) have achieved strong performance in image generation and visual understanding, positive-negative space generation remains difficult, particularly under direct single-pass prompting. In this work, we present the \\textbf{F}orm \\textbf{a}nd \\textbf{V}oid \\textbf{A}gent (\\textbf{FaV-A}), a multimodal agent designed for staged positive-negative space generation. FaV-A follows a progressive workflow: it first generates a base object, then analyzes its shape and spatial structure to identify candidate negative-space semantics, and finally produces compositional instructions for the final image generation stage. Experimental results and ablation analyses suggest that FaV-A provides a more effective framework than direct zero-shot MLLM baselines for producing visually coherent and semantically aligned positive-negative space compositions.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Un agente IA autónomo genera composiciones visuales complejas controlando simultáneamente el espacio positivo y negativo.",
+        "problema": "Generar composiciones visuales que coordinen de forma coherente el espacio positivo (el objeto principal) y el espacio negativo (el fondo o áreas vacías) es difícil para los modelos de IA actuales, especialmente con instrucciones simples.",
+        "propuesta": "Se propone el Agente de Forma y Vacío (FaV-A), un agente multimodal que genera primero un objeto base, analiza su forma para identificar el espacio negativo, y luego crea instrucciones para generar la imagen final en etapas.",
+        "resultados": "FaV-A supera a los modelos MLLM directos en la generación de composiciones de espacio positivo-negativo visualmente coherentes y semánticamente alineadas, según análisis experimentales y de ablación.",
+        "por_que_importa": "Permite a los artistas y diseñadores crear imágenes más complejas y significativas con mayor control sobre la composición general, superando las limitaciones de los modelos de generación de imágenes actuales.",
+        "tags": [
+          "IA generativa",
+          "composición visual",
+          "espacio positivo y negativo",
+          "agentes autónomos",
+          "creatividad computacional"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-02T17:57:01Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.02206v1",
+      "rank": 4,
+      "title": "KaliBench: A Fine-Grained Benchmark for Cybersecurity Tool Use on Kali Linux with Runtime-Free Verifiable Rewards",
+      "authors": [
+        "Pengfei Li",
+        "Naufal Suryanto",
+        "Sicheng Zhang",
+        "Muzammal Naseer"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-01",
+      "url": "https://arxiv.org/abs/2610.02206v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.02206v1",
+      "score": 50,
+      "topics": [
+        "cybersecurity",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🎯 temas: cybersecurity, LLM, AI agents"
+      ],
+      "abstract_en": "LLMs are increasingly applied to cybersecurity workflows, where they are expected to translate analysts' intent into tool invocations. However, existing evaluations focus on knowledge-based assessments or end-to-end agentic tasks, and do not directly measure LLMs' ability to generate executable commands for real-world cybersecurity tools. This gap is critical because cybersecurity operations rely on strict command-line interfaces (CLIs), where minor syntax errors, incorrect flag--value bindings, or argument misordering can invalidate execution. We introduce KaliBench, a fine-grained benchmark and dataset for natural-language--to--CLI translation on Kali Linux, comprising 8,504 query--command pairs spanning 1,642 tools across 23 capability dimensions and 5 security phases. KaliBench is constructed via a manuscript-grounded pipeline with deterministic canonicalization and alias-aware evaluation, enabling precise and reproducible assessment of tool selection and argument construction. To ensure both semantic correctness and practical executability, we develop a multi-stage verification pipeline that combines LLM-based validation, sandboxed terminal execution, and human-in-the-loop refinement. Building on these fine-grained, deterministic signals, KaliBench further enables runtime-free verifiable rewards for training. Across three evaluation modes and 24 configurations of general-purpose and security-focused open-weight models, no open-weight model exceeds 42% exact-command accuracy in the unrestricted setting, highlighting the difficulty of accurate CLI-based cybersecurity tool use without explicit tool hints. We further show that supervised fine-tuning and reinforcement learning with verifiable rewards derived from KaliBench significantly improve an 8B model and achieve performance comparable to a 685B MoE model.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "KaliBench evalúa la capacidad de los LLMs para generar comandos CLI precisos para herramientas de ciberseguridad, revelando grandes desafíos y mejorando el entrenamiento.",
+        "problema": "Las evaluaciones actuales de LLMs en ciberseguridad no miden su habilidad para generar comandos CLI ejecutables y correctos para herramientas reales, lo cual es crucial ya que errores sintácticos invalidan la operación.",
+        "propuesta": "Se introduce KaliBench, un benchmark y dataset detallado con 8,504 pares de consulta-comando para Kali Linux, que permite evaluar la selección de herramientas y la construcción de argumentos mediante un pipeline de verificación multi-etapa, incluyendo ejecución en sandbox y recompensas verificables sin necesidad de ejecución en tiempo real.",
+        "resultados": "Ningún modelo de código abierto superó el 42% de precisión en comandos exactos sin ayudas. El fine-tuning supervisado y el RL con recompensas de KaliBench mejoraron significativamente un modelo de 8B, alcanzando el rendimiento de un modelo MoE de 685B.",
+        "por_que_importa": "Aborda la brecha crítica en la evaluación de LLMs para ciberseguridad, proporcionando una métrica precisa y reproducible para mejorar la fiabilidad de los agentes de IA en flujos de trabajo de seguridad basados en CLI.",
+        "tags": [
+          "LLMs",
+          "Ciberseguridad",
+          "Kali Linux",
+          "CLI",
+          "Benchmark",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-02T17:57:10Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.01949v1",
+      "rank": 5,
+      "title": "A Hybrid Approach to Malware Detection: Integrating Few-Shot Model-Agnostic Meta-Learning with Autoencoders",
+      "authors": [
+        "Emmanuela Andam",
+        "Yasir Abbas Zaidi",
+        "Abdelali Hadir",
+        "Emmanuel Grant"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-01",
+      "url": "https://arxiv.org/abs/2610.01949v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.01949v1",
+      "score": 50,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: cybersecurity, vuln & threats"
+      ],
+      "abstract_en": "Ransomware has emerged as a major cybersecurity threat, with incidents increasing in frequency and impact across critical sectors. These attacks are typically launched through phishing emails, malicious downloads, or exploitation of software vulnerabilities to gain system access. Once inside, the malware encrypts files and demands a ransom, often in cryptocurrency, for the decryption key. Conventional detection methods often struggle with novel or scarce samples, leaving systems vulnerable. To address these challenges, this paper proposes a hybrid deep learning framework that combines an Autoencoder Feature Extractor (AFE) with a Model Agnostic Meta Learning (MAML) classifier for few shot malware detection. The AFE generates compact latent features that reduce noise and dimensionality, while the MAML classifier rapidly adapts to new threats using limited labeled data. Experiments conducted on the Ransomware Dataset 2024 demonstrate the effectiveness of the framework in binary classification tasks. Across one to fifty shot settings, the proposed model consistently achieves high accuracy, F1 score, and Matthews Correlation Coefficient values, maintaining reliable classification even under extreme scarcity. These results highlight the model's robustness and effectiveness in adapting to limited data scenarios, demonstrating the potential of combining feature extraction with meta learning to enhance resilience against malware, particularly in sectors such as healthcare, manufacturing, and public infrastructure, where cyberattacks can cause significant operational and financial disruption.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Detecta ransomware nuevo y escaso combinando autoencoders y meta-aprendizaje para una ciberseguridad más robusta.",
+        "problema": "Los métodos tradicionales de detección de malware fallan ante amenazas nuevas o con pocos ejemplos, dejando vulnerables los sistemas ante el ransomware.",
+        "propuesta": "Un marco de aprendizaje profundo híbrido que usa un Autoencoder para extraer características y un clasificador MAML (Model-Agnostic Meta-Learning) para adaptarse rápidamente a nuevas amenazas con pocos datos.",
+        "resultados": "Alta precisión, puntuación F1 y Coeficiente de Correlación de Matthews en tareas de clasificación binaria, incluso en escenarios de uno a cincuenta ejemplos (shots), demostrando robustez y adaptabilidad.",
+        "por_que_importa": "Mejora la resiliencia contra malware, especialmente en sectores críticos como salud, manufactura e infraestructura, reduciendo disrupciones operativas y financieras ante ciberataques.",
+        "tags": [
+          "detección de malware",
+          "ransomware",
+          "meta-aprendizaje",
+          "autoencoder",
+          "ciberseguridad",
+          "aprendizaje profundo"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-02T17:57:20Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.01872v1",
+      "rank": 6,
+      "title": "From Network Intrusion Detection to Blockchain-Backed Endpoint Detection and Response: Mapping the Landscape of Decentralized Detection-and-Response Architectures",
+      "authors": [
+        "Yahya Shahsavari",
+        "Sara Rouhani",
+        "Kaiwen Zhang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-01",
+      "url": "https://arxiv.org/abs/2610.01872v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.01872v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "While the literature on blockchain-assisted intrusion detection and prevention systems (IDS/IPS) for Internet of Things (IoT) and Industrial Internet of Things (IIoT) networks is mature, existing systematic reviews suffer from two critical limitations: they overlook the structural shift toward modern Endpoint Detection and Response (EDR) and Extended Detection and Response (XDR) architectures, and they conflate blockchain's distinct functional roles into a single monolithic category. This Systematization of Knowledge (SoK) addresses these gaps by proposing a three-axis taxonomy that classifies proposals by detection-system class (NIDS, HIDS, EDR/XDR), blockchain functional role, and response-automation maturity. Synthesizing research published in high-impact venues between 2019 and 2026, we provide a rigorous gap analysis exposing why a genuine per-endpoint blockchain-anchored response loop remains nearly nonexistent due to latency, deployment, and community mismatches. Furthermore, we evaluate structural, cross-cutting challenges persisting across the literature, including consensus latency on constrained devices, post-quantum cryptographic vulnerability, smart-contract attack surfaces, and the adversarial vulnerability of evolving LLM-based detection engines. Finally, we outline a comprehensive research agenda centered on hybrid on-chain/off-chain orchestration to bridge the gap between decentralized trust and rapid response automation.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Exploramos arquitecturas de detección y respuesta descentralizadas, mapeando el panorama actual y señalando brechas críticas para la seguridad de endpoints.",
+        "problema": "Las revisiones existentes de sistemas de detección de intrusiones asistidos por blockchain no consideran las arquitecturas modernas de EDR/XDR y agrupan los roles de blockchain de forma genérica, perdiendo matices importantes.",
+        "propuesta": "Se propone una taxonomía de tres ejes para clasificar las propuestas según la clase del sistema de detección (NIDS, HIDS, EDR/XDR), el rol funcional de la blockchain y la madurez de la automatización de respuestas. Se realiza un análisis de brechas y desafíos estructurales.",
+        "resultados": "Se identifica una brecha significativa en bucles de respuesta blockchain anclados por endpoint debido a latencia, despliegue y desajustes comunitarios. Persisten desafíos como la latencia de consenso, vulnerabilidades criptográficas post-cuánticas y superficies de ataque de contratos inteligentes.",
+        "por_que_importa": "Comprender estas brechas y desafíos es crucial para guiar la investigación futura hacia arquitecturas de seguridad descentralizadas más efectivas y robustas, especialmente en la protección de endpoints.",
+        "tags": [
+          "blockchain",
+          "ciberseguridad",
+          "detección de intrusiones",
+          "EDR",
+          "XDR",
+          "descentralización"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-02T17:57:29Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.01871v1",
+      "rank": 7,
+      "title": "Walking the Embedding Space: Datastore Extraction from Multimodal RAG",
+      "authors": [
+        "Maria Carmen Jica",
+        "Ali Satvaty",
+        "Suzan Verberne",
+        "Fatih Turkmen"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-01",
+      "url": "https://arxiv.org/abs/2610.01871v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.01871v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Multimodal Retrieval-Augmented Generation (MRAG) has emerged as a reliable and cost-effective technique of grounding the generative capabilities of Multimodal Large Language Models (MLLMs) into relevant, up-to-date, external knowledge. Despite presenting several benefits, such as reducing hallucinatory behavior, they also introduce new attack surfaces, including leakage of private information and vulnerabilities against data extraction attacks. In this paper, we introduce $\\immrag$, an adaptive and automatic data extraction attack procedure operating in a black box setting against \\emph{image-returning} MRAG, a configuration in which the retrieved visual artifact is itself the response. Each query blends an attacker-held shadow image with an image already recovered from the system, and relevance-weighted resampling steers subsequent queries towards regions of the embedding space that still yield novel retrievals. Unlike current extraction attacks that aim to persuade the model towards data leakage by placing a malicious query as a textual prompt, $\\immrag$ embeds the malicious instructions inside a user-given input image. We evaluate $\\immrag$ on three plausible and distinct real-world scenarios: medical assistant, document-focused helper and general purpose tool. The experiments involve the study of the effectiveness of the attack on multiple CLIP-family retrievers, as well as the impact of various generators. A single 2500-query run reconstructs up to 611 distinct radiology images, 566 document scans and 416 general-purpose images under local-feature correspondence, and reaches up to $5.6\\times$ as many distinct datastore items as a non-adaptive baseline. Our results show the urgent need for safeguards specifically designed for multimodal data.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Un nuevo ataque extrae datos privados de sistemas de IA multimodales que devuelven imágenes, incluso sin acceso directo.",
+        "problema": "Los sistemas de IA multimodales (MRAG) que devuelven imágenes pueden filtrar información privada y ser vulnerables a ataques de extracción de datos, ya que las instrucciones maliciosas pueden incrustarse en imágenes.",
+        "propuesta": "Se propone $\\immrag$, un ataque automático y adaptable que opera en un entorno de caja negra. Combina imágenes del atacante con imágenes recuperadas del sistema y utiliza el re-muestreo ponderado por relevancia para guiar las consultas hacia regiones del espacio de incrustación que aún producen recuperaciones novedosas.",
+        "resultados": "Un ataque de 2500 consultas reconstruyó hasta 611 imágenes de radiología, 566 escaneos de documentos y 416 imágenes de propósito general. $\\immrag$ recuperó hasta 5.6 veces más elementos de datos distintos que una línea de base no adaptativa.",
+        "por_que_importa": "Demuestra la necesidad urgente de salvaguardias específicas para proteger los datos multimodales en sistemas de IA, ya que los ataques pueden ser sigilosos y efectivos incluso en configuraciones de caja negra.",
+        "tags": [
+          "IA multimodal",
+          "Ciberseguridad",
+          "Ataques de datos",
+          "Privacidad",
+          "MRAG",
+          "Extracción de información"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-02T17:57:39Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.00977v1",
+      "rank": 8,
+      "title": "ABSENTIA: Detecting Broken Access Control Vulnerabilities in Web Applications",
+      "authors": [
+        "André V. Duarte",
+        "Aditya Oke",
+        "Rui Melo",
+        "Shubham Gandhi"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-10-01",
+      "url": "https://arxiv.org/abs/2610.00977v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.00977v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Broken access control, the failure of authorization, is one of the most prevalent web security risks. Unlike injection, a flow of untrusted input into a dangerous operation, authorization is a relation: who may act on what, not how data moves. Each application decides that relation for itself, so no rule written in advance carries to the next. An LLM agent can infer it from the code, but with no systematic way to cover the application and prioritize what to inspect, its search stays undirected and access-control flaws go undetected. We present ABSENTIA, a security scaffolding that turns general LLM agents into systematic vulnerability detectors for the backend of web applications, run as an audit by the developers and security engineers who maintain the code. Under its direction, the agents build a graph that maps the application's routes to the code behind them. ABSENTIA then works route by route, applying invariant falsification: it infers the properties the code is meant to satisfy, and where one is not enforced, reports the route for maintainer review. We also release BAC-Bench, a benchmark of 30 broken access control advisories across 25 repositories, 3 languages, and 9 frameworks, each published in 2025 or later, verified by a human auditor, and paired with its fixing commit, so credit requires flagging the vulnerable version and not the fixed one. ABSENTIA recalls 19 of them, 17 under paired credit, and an LLM verifier confirms 51% of its findings. CodeQL and Semgrep recall none, and an unstructured agent on the same model recalls 3. In the OWASP Benchmark injection categories, ABSENTIA leads the dedicated analyzers in Python and trails only CodeQL and IRIS in Java.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "ABSENTIA detecta fallos de control de acceso en aplicaciones web, superando a herramientas existentes y LLMs no dirigidos.",
+        "problema": "Las vulnerabilidades de control de acceso roto (fallos de autorización) son comunes y difíciles de detectar sistemáticamente en aplicaciones web, ya que la lógica de autorización es específica de cada aplicación.",
+        "propuesta": "ABSENTIA es un andamiaje de seguridad que dirige agentes LLM para construir un grafo de rutas de la aplicación y su código asociado. Luego, aplica la falsificación de invariantes para inferir y verificar propiedades de seguridad, identificando rutas con fallos.",
+        "resultados": "ABSENTIA detecta 19 de 30 vulnerabilidades en BAC-Bench, superando a CodeQL, Semgrep y LLMs no estructurados. Un verificador LLM confirma el 51% de sus hallazgos. En categorías de inyección del OWASP Benchmark, lidera en Python y es segundo en Java.",
+        "por_que_importa": "Proporciona un método sistemático y más efectivo para encontrar fallos críticos de control de acceso, mejorando la seguridad de las aplicaciones web y reduciendo el riesgo de brechas de datos.",
+        "tags": [
+          "ciberseguridad",
+          "control de acceso",
+          "IA",
+          "LLM",
+          "detección de vulnerabilidades",
+          "aplicaciones web"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-02T17:57:48Z"
+      }
+    },
+    {
+      "id": "sha1:daadec6d4b119f43",
+      "rank": 1,
+      "title": "Safe and Scalable Collaboration in Multiagent LLM Systems: A Comprehensive Review",
+      "authors": [
+        "Elias Hossain",
+        "Md Mehedi Hasan Nipu",
+        "Mohammad Sakib Mahmood",
+        "M. Hossen"
+      ],
+      "source": "Semantic Scholar",
+      "venue": "IEEE Transactions on Systems, Man & Cybernetics. Systems",
+      "category": null,
+      "date": "2026-10-01",
+      "url": "https://www.semanticscholar.org/paper/35489297d4e58b5a925de8741050055e799325aa",
+      "pdf_url": null,
+      "score": 57,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+7)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Large language model (LLM)-based multiagent systems are a rapidly evolving frontier of artificial intelligence that enables complex coordination, communication, and autonomous reasoning across distributed agents. This article presents a comprehensive review of multiagent LLM ecosystems, organized around four foundational pillars: coordination strategies, communication frameworks, safety challenges, and trust and alignment mechanisms. We synthesize a range of architectural approaches to agent interaction, including shared latent representations, strategic autonomy, task decomposition, and neuro-symbolic communication protocols. We then systematically examine the critical vulnerabilities...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Exploramos cómo los sistemas multiagente basados en LLM pueden colaborar de forma segura y escalable, abordando desafíos de coordinación, comunicación y confianza.",
+        "problema": "Los sistemas multiagente basados en LLM, aunque potentes para la coordinación y el razonamiento autónomo, enfrentan desafíos significativos en seguridad, escalabilidad, comunicación efectiva y alineación de objetivos.",
+        "propuesta": "Se presenta una revisión exhaustiva de los ecosistemas multiagente de LLM, organizada en torno a estrategias de coordinación, marcos de comunicación, desafíos de seguridad y mecanismos de confianza y alineación, sintetizando enfoques arquitectónicos y protocolos.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero detalla la síntesis de enfoques arquitectónicos como representaciones latentes compartidas, autonomía estratégica, descomposición de tareas y protocolos de comunicación neuro-simbólica.",
+        "por_que_importa": "Comprender y abordar estos desafíos es crucial para desplegar de forma segura y eficiente sistemas multiagente de LLM en aplicaciones complejas del mundo real, garantizando su fiabilidad y alineación con los objetivos humanos.",
+        "tags": [
+          "LLM",
+          "Sistemas Multiagente",
+          "Ciberseguridad",
+          "IA",
+          "Colaboración",
+          "Escalabilidad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-01T18:31:54Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.01367",
+      "rank": 2,
+      "title": "High-quality Data Do not Mean Safe! Poisoning LLMs after Data Selection",
+      "authors": [
+        "Kai-Yang Li",
+        "Jia-Hao Chen",
+        "Yuwen Pu",
+        "Chun-Yi Zhou"
+      ],
+      "source": "Semantic Scholar",
+      "venue": "",
+      "category": null,
+      "date": "2026-10-01",
+      "url": "https://arxiv.org/abs/2610.01367",
+      "pdf_url": null,
+      "score": 53,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Safety-aligned Large Language Models remain vulnerable to fine-tuning on small sets of harmful or benign-looking samples. However, prior studies typically assume that poisoned samples directly enter downstream fine-tuning, overlooking quality-based selection in practical training pipelines. To fill this gap, we systematically evaluate both the filtering effects against poisoning and the downstream safety impact of retained data. The results reveal that selection removes many overtly harmful samples, yet some retained high-quality samples can still degrade model safety alignment possibly due to their harmful-like training-update patterns at the layer-wise gradient level. Together, these findings expose a practical vulnerability: safety-degrading influence can pass through quality-based selection via retained high-quality samples. To examine its systematic exploitability, we propose Bi-Stage Quality-Constrained Safety-Degradation Text Optimization (Bi-QSTO), which optimizes poisoned samples under an explicit quality constraint to survive selection while preserving their safety-degrading influence. Across poisoning settings, target models, and filtering rates, Bi-QSTO maintains attack effectiveness before and after selection. Even at 90% filtering, harmful-seeded samples achieve a Poisoning Retention Rate above 90% and Harmful Score of 3.30--4.01. Their attack effectiveness strongly transfers across models and their retention advantage generalizes to additional selection methods.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Incluso datos de alta calidad pueden ser usados para envenenar LLMs, eludiendo filtros de seguridad durante el entrenamiento.",
+        "problema": "Los modelos de lenguaje grandes (LLMs) alineados con la seguridad son vulnerables a ser comprometidos mediante el ajuste fino con datos dañinos, incluso si estos datos pasan por filtros de selección de calidad.",
+        "propuesta": "Se propone Bi-QSTO (Bi-Stage Quality-Constrained Safety-Degradation Text Optimization), un método que optimiza muestras envenenadas para que parezcan de alta calidad y eviten la detección por filtros, manteniendo su capacidad de degradar la seguridad del modelo.",
+        "resultados": "Bi-QSTO mantiene la efectividad del ataque incluso después de la selección de datos. Con un 90% de filtrado, las muestras envenenadas retienen una efectividad superior al 90% y obtienen puntuaciones de daño entre 3.30 y 4.01, transfiriéndose a otros modelos.",
+        "por_que_importa": "Demuestra que los métodos de selección de datos de alta calidad no son suficientes para prevenir ataques de envenenamiento a LLMs, lo que requiere nuevas estrategias de defensa para garantizar la seguridad de estos modelos.",
+        "tags": [
+          "LLMs",
+          "Ciberseguridad",
+          "Envenenamiento de Datos",
+          "Seguridad de IA",
+          "Ajuste Fino"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-02T17:57:57Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.01509",
+      "rank": 1,
+      "title": "Sharpening Tax in Post-Training",
+      "authors": [
+        "Changdae Oh",
+        "Qi Zeng",
+        "Qi Qi",
+        "Andrey Zhmoginov"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-01",
+      "url": "https://arxiv.org/abs/2610.01509",
+      "pdf_url": "https://arxiv.org/pdf/2610.01509",
+      "score": 71,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "An emerging hypothesis about reinforcement learning (RL) post-training of large language models (LLMs) is that it merely sharpens existing behaviors of a base model, improving single-shot accuracy at the cost of solution coverage. Although this trade-off has been observed in math and coding tasks, it need not extend to agentic tasks, where multi-turn tool use and interaction may require capabilities newly acquired during post-training. Our surprising finding is that pre-trained LLMs, equipped with a light inference harness, can serve as capable agents. Despite far lower accuracy (pass@1), they often surpass their post-trained counterparts in solution coverage (pass@K) given a sufficient test-time budget. We further analyze the underlying mechanism and show that post-training pushes tasks toward two extremes, always solved or never solved, and thereby improves sampling efficiency and consistency at the cost of solution coverage. To measure this cost, we propose Sharpening Tax, a diagnostic metric that quantifies the loss in test-time scalability after post-training. Across 14 base/post-trained model pairs from four families and three agentic benchmarks (42 cases in total), the tax is prevalent in most settings, can be estimated from a few rollouts, and correlates well with other metrics. Finally, we present posterior-tempered group sampling (PTGS), a simple plug-and-play Bayesian sampler that adapts the sampling temperature per prompt to its estimated difficulty. Applied during RL training in two agentic environments, PTGS pays a smaller tax than the fixed-temperature baseline, solving more tasks under repeated sampling while also improving single-shot accuracy.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "El post-entrenamiento de LLMs mejora la precisión pero reduce la cobertura de soluciones; se propone una métrica y un método para mitigar esto.",
+        "problema": "El post-entrenamiento de modelos de lenguaje grandes (LLMs) mediante aprendizaje por refuerzo (RL) parece mejorar la precisión en una sola instancia (pass@1) pero a costa de reducir la variedad de soluciones encontradas (cobertura de soluciones, pass@K). Esto es problemático para tareas que requieren interacciones multi-turno y uso de herramientas.",
+        "propuesta": "Se introduce la métrica 'Sharpening Tax' para cuantificar la pérdida de escalabilidad en tiempo de prueba después del post-entrenamiento. Además, se propone 'posterior-tempered group sampling' (PTGS), un método de muestreo bayesiano que ajusta la temperatura de muestreo según la dificultad estimada de la tarea para mejorar la cobertura y la precisión.",
+        "resultados": "El 'Sharpening Tax' se observa en la mayoría de los 14 pares de modelos base/post-entrenados analizados. PTGS, aplicado en dos entornos de agentes, reduce este 'tax' en comparación con métodos de temperatura fija, resolviendo más tareas bajo muestreo repetido y mejorando la precisión de un solo disparo.",
+        "por_que_importa": "Permite entender y mitigar la pérdida de flexibilidad de los LLMs tras el post-entrenamiento, crucial para desarrollar agentes de IA más robustos y versátiles que puedan manejar tareas complejas y dinámicas de manera más efectiva.",
+        "tags": [
+          "LLMs",
+          "Aprendizaje por Refuerzo",
+          "Ciberseguridad",
+          "Métricas",
+          "Agentes de IA",
+          "Muestreo"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-02T17:58:07Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.00964",
+      "rank": 2,
+      "title": "RPTune: Learned Context Curation for LLM Catalog Search",
+      "authors": [
+        "Chuxuan Hu",
+        "Hejie Cui",
+        "Norman Huang",
+        "Shubham Kumar Bharti"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-01",
+      "url": "https://arxiv.org/abs/2610.00964",
+      "pdf_url": "https://arxiv.org/pdf/2610.00964",
+      "score": 69,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "For small merchant businesses (SMBs) whose catalogs fit within a long-context LLM, full-catalog prompting offers a compelling alternative to multi-stage retrieval designed primarily for large marketplaces with millions of items. However, fitting the full catalog into the context window does not ensure that the model can use it effectively, since LLMs do not exploit long contexts uniformly. We therefore study in-context catalog search through two complementary questions: (1) how to curate and present catalogs to the LLM, and (2) how to adapt the LLM for product selection on curated contexts. We propose RPTune, an end-to-end framework that couples learned catalog curation with LLM post-training using automatically generated, catalog-grounded supervision. An encoder-reorganizer curator orders and prunes products guided by downstream LLM feedback, while the resulting curated catalogs in turn improve the effectiveness of LLM post-training with a context-relative reward. We evaluate RPTune on 7 real merchants spanning distinct retail verticals, using 100 complex conversational queries per merchant. RPTune consistently improves search accuracy across both proprietary and open-weight LLMs, with context curation yielding gains of up to 31.4 percentage points and post-training adding a further 10.3 points on average.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "RPTune optimiza la búsqueda en catálogos de productos para LLMs, mejorando la precisión y la eficiencia.",
+        "problema": "Los LLMs no utilizan eficazmente catálogos completos en su ventana de contexto para la búsqueda de productos, lo que limita su utilidad para pequeñas empresas.",
+        "propuesta": "Se propone RPTune, un framework que combina la curación automática del catálogo (ordenando y filtrando productos) con el reentrenamiento del LLM, utilizando retroalimentación y recompensas basadas en el contexto.",
+        "resultados": "RPTune mejora la precisión de la búsqueda hasta en 31.4 puntos porcentuales con la curación y añade 10.3 puntos adicionales con el reentrenamiento, en promedio, en 7 comercios reales.",
+        "por_que_importa": "Permite a las pequeñas empresas aprovechar los LLMs para búsquedas de productos más precisas y eficientes, superando las limitaciones de los métodos de recuperación tradicionales.",
+        "tags": [
+          "LLMs",
+          "Búsqueda de productos",
+          "Catálogos",
+          "Ciberseguridad",
+          "IA",
+          "Optimización"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-02T17:58:16Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.01762",
+      "rank": 3,
+      "title": "OneStreamer: Unifying Perception, Memory, and Proactive Response in Streaming Video Interaction",
+      "authors": [
+        "Xiangyu Zeng",
+        "Yuandong Yang",
+        "Zhiqiu Zhang",
+        "Yuhan Zhu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-01",
+      "url": "https://arxiv.org/abs/2610.01762",
+      "pdf_url": "https://arxiv.org/pdf/2610.01762",
+      "score": 61,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+4)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Streaming video LLMs must retain evidence before its relevance to future tasks is known and respond when sufficient evidence becomes available. The challenge is to form reusable factual memory without compromising real-time perception. We introduce OneStreamer, which jointly learns query-independent evidence recording and task response through a shared proactive generation process. Its Proactive Hierarchical Caption Memory (PHCM) produces time-grounded local-detail captions and summaries of completed events. Streaming caption targets supervise the interpretation of observed video prefixes during training. At inference, model-generated records complement a recent visual window, providing reusable factual context without revisiting historical visual features. Proactive State Transition Learning (PSTL) reduces the dominance of repeated waiting states by preserving supervision at all output anchors and selecting representative state-change and state-persistence tokens. We further develop a streaming data synthesis pipeline that aligns output content and timing with available evidence. Combining the resulting streaming captions and QA with cleaned open-source data yields OneStreamer-1M, a broad-coverage streaming video interaction dataset with over one million records spanning diverse tasks. Our 4B model achieves the best results among the compared methods across all eight evaluated streaming video understanding benchmarks. Ablations show that retaining generated captions improves historical QA without degrading real-time perception. PSTL also outperforms dense state supervision while supervising only 27.5% of annotated state tokens. Together, these results support proactive generation as a shared learning interface connecting perception, memory formation, and timely response in streaming video interaction.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "OneStreamer unifica percepción, memoria y respuesta proactiva en video streaming para una interacción más inteligente y eficiente.",
+        "problema": "Los modelos de lenguaje para video streaming tienen dificultades para retener información relevante a largo plazo sin sacrificar la percepción en tiempo real.",
+        "propuesta": "Introduce OneStreamer, que aprende a grabar evidencia y responder a tareas de forma proactiva y compartida, usando una memoria jerárquica de subtítulos (PHCM) y aprendizaje de transiciones de estado (PSTL).",
+        "resultados": "El modelo OneStreamer-1B logra resultados de vanguardia en ocho benchmarks de comprensión de video streaming. Las ablaciones confirman la mejora en QA histórica sin degradar la percepción en tiempo real y la eficiencia de PSTL.",
+        "por_que_importa": "Permite a los sistemas de IA interactuar de manera más efectiva con videos en tiempo real, recordando información pasada crucial para responder de forma proactiva y precisa.",
+        "tags": [
+          "video streaming",
+          "IA proactiva",
+          "memoria artificial",
+          "comprensión de video",
+          "LLM"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-02T17:58:25Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.01415",
+      "rank": 4,
+      "title": "Beyond Memory: Harnessing Long-Horizon Agents with Explicit Belief States",
+      "authors": [
+        "Yu Luo",
+        "Jiamin Jiang",
+        "Yimin Zuo",
+        "Xidao Wen"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-01",
+      "url": "https://arxiv.org/abs/2610.01415",
+      "pdf_url": "https://arxiv.org/pdf/2610.01415",
+      "score": 57,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Large language model (LLM) agents can now undertake increasingly complex tasks, but the way they organize interaction history into memory does not ensure a coherent understanding of the current world. We introduce PoS, an inference-time framework that constructs and continually maintains explicit belief states as the agent's decision context. Each belief combines an estimate of the current world state with unresolved task requirements, making explicit what the agent still needs to learn and accomplish. To keep this belief reliable and actionable, PoS validates its consistency and monitors task progress to detect Belief Trapping, where the agent continues to act without making meaningful progress toward the goal. Recovery is then tailored to both the trapping pattern and the type of unresolved task requirement. Experiments on four benchmarks spanning execution and diagnosis show that PoS achieves the highest overall performance on every benchmark with all three LLM backbones. Ablations demonstrate the importance of consistency validation and recovery, while context-scaling experiments show resilience to context growth. Together, these results support belief construction and continual maintenance as a foundation for long-horizon context management beyond history retention and compression.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Mejora la toma de decisiones de agentes LLM a largo plazo con estados de creencia explícitos y recuperación de trampas.",
+        "problema": "Los agentes LLM actuales luchan por mantener una comprensión coherente del mundo y del progreso de la tarea debido a cómo gestionan su historial de interacciones en la memoria.",
+        "propuesta": "Introduce PoS, un framework que construye y mantiene estados de creencia explícitos, combinando la estimación del estado actual del mundo con requisitos de tarea no resueltos, e implementa mecanismos para validar la consistencia y detectar/recuperar de 'Belief Trapping'.",
+        "resultados": "PoS logra el mayor rendimiento general en cuatro benchmarks (ejecución y diagnóstico) con tres LLMs diferentes. Las ablaciones confirman la importancia de la validación y recuperación, y los experimentos de escalado de contexto muestran resiliencia.",
+        "por_que_importa": "Establece la construcción y mantenimiento de estados de creencia como una base fundamental para la gestión de contexto a largo plazo en agentes LLM, superando las limitaciones de la simple retención o compresión del historial.",
+        "tags": [
+          "LLM",
+          "Agentes Inteligentes",
+          "Gestión de Memoria",
+          "Toma de Decisiones",
+          "Ciberseguridad",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-02T17:58:35Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.01939",
+      "rank": 5,
+      "title": "Fewer Tokens, Better Action: GPT-6 Astra Robot Agents with 14% Higher Success Rate but 65% Fewer Tokens",
+      "authors": [
+        "Ruiyang Si",
+        "Jianxin Bi",
+        "Shunyu Yang",
+        "Rui Ni"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-01",
+      "url": "https://arxiv.org/abs/2610.01939",
+      "pdf_url": "https://arxiv.org/pdf/2610.01939",
+      "score": 57,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Vision language model (VLM) agents can control robots through visual feedback and action primitives, but repeated model invocations and redundant observations incur substantial token overhead. We introduce PyRUA-Lean, an interactive code-execution framework that couples feedback-driven primitive composition with selective observation: the agent composes classical robot primitives and learned vision-language-action (VLA) policies into Python cells that perform conditional checks and local retries, returning only explicitly requested images and state feedback for replanning. Across 700 simulated task instances from LIBERO-PRO, RoboTwin 2.0, and RoboCasa365, we compare PyRUA-Lean with a tool-calling baseline using the same GPT-6 Astra planner and underlying robot primitives. Under equal LLM-call budgets, PyRUA-Lean increases overall success from 63.1% to 71.7%. On instances solved by both agents, it uses 49% fewer LLM calls and 65% fewer input tokens.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Agentes robóticos con GPT-6 Astra logran más éxito y usan significativamente menos tokens y llamadas al modelo.",
+        "problema": "Los agentes robóticos basados en modelos de lenguaje visual (VLM) consumen muchos tokens y llamadas al modelo debido a invocaciones repetidas y observaciones redundantes, lo que limita su eficiencia.",
+        "propuesta": "Se propone PyRUA-Lean, un framework interactivo que compone primitivas de robot clásicas y políticas VLA aprendidas. Utiliza ejecución de código, comprobaciones condicionales y reintentos locales, solicitando solo imágenes y feedback de estado explícitamente necesarios para la replanificación.",
+        "resultados": "PyRUA-Lean aumenta la tasa de éxito general del 63.1% al 71.7% en 700 instancias simuladas. En las tareas resueltas por ambos agentes, utiliza un 49% menos de llamadas al LLM y un 65% menos de tokens de entrada.",
+        "por_que_importa": "Esta optimización reduce drásticamente el coste computacional y el tiempo de respuesta de los agentes robóticos, haciéndolos más prácticos y escalables para aplicaciones del mundo real.",
+        "tags": [
+          "Robótica",
+          "IA",
+          "LLM",
+          "Eficiencia",
+          "Agentes Autónomos",
+          "Visión por Computadora"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-02T17:58:44Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.40097",
+      "rank": 6,
+      "title": "AutoDataBench: A Data-centric Testbed for Accelerating Auto Research",
+      "authors": [
+        "Ruifeng Yuan",
+        "Yizhi Li",
+        "Yaxin Du",
+        "Fengyu Cai"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-30",
+      "url": "https://arxiv.org/abs/2609.40097",
+      "pdf_url": "https://arxiv.org/pdf/2609.40097",
+      "score": 51,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Existing auto-research benchmarks often entangle multiple sources of improvement, including training frameworks, hyperparameters, compute budgets, and data, making it difficult to attribute why one frontier agent outperforms another to specific research capabilities. In this work, we isolate and systematically evaluate Data Intelligence: an agent's ability to understand, manipulate, and improve the data that shapes model capabilities. We introduce AutoDataBench, a controlled testbed built on a conceptual framework of data intelligence spanning data diagnosis, data organization, and data construction, instantiated through three highly curated optimization tasks while holding non-data factors fixed. Across tool use, retrieval, and knowledge injection, we evaluate frontier LLMs' ability to improve training data through iterative experimentation under task-specific resource budgets. Beyond optimization performance, we ask: do LLMs understand what their data interventions do? We compare predictions made before training with observed outcomes to seek evidence of data-effect reasoning beyond trial and error, and explore whether iterative feedback helps LLMs better understand how changes to training data affect model performance. Finally, we show that reusing AutoDataBench trajectories for mid-training improves downstream coding performance, highlighting its value in both evaluating data intelligence and generating high-quality training data. Code and resources are available at https://github.com/AutoDataBench/AutoDataBench.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Presentamos AutoDataBench, un banco de pruebas para evaluar y mejorar la inteligencia de datos en agentes de IA, aislando su impacto en el rendimiento.",
+        "problema": "Los benchmarks actuales de investigación en IA mezclan factores como el framework, hiperparámetros y datos, dificultando la atribución del rendimiento a capacidades específicas de inteligencia de datos.",
+        "propuesta": "Introducimos AutoDataBench, un entorno controlado que aísla y evalúa la 'inteligencia de datos' (comprensión, manipulación y mejora de datos) de los agentes de IA a través de tareas de optimización curadas, manteniendo fijos otros factores.",
+        "resultados": "Se evalúan LLMs de vanguardia en su capacidad para mejorar datos de entrenamiento en tareas de uso de herramientas, recuperación e inyección de conocimiento. Se explora si los LLMs razonan sobre los efectos de sus intervenciones en los datos. Se demuestra que reutilizar trayectorias de AutoDataBench mejora el rendimiento en codificación.",
+        "por_que_importa": "Permite evaluar y mejorar sistemáticamente la capacidad de los agentes de IA para trabajar con datos, crucial para el desarrollo de modelos más eficientes y de mejor rendimiento, y para generar datos de entrenamiento de alta calidad.",
+        "tags": [
+          "inteligencia de datos",
+          "benchmarking",
+          "LLMs",
+          "ciberseguridad",
+          "investigación IA",
+          "optimización de datos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-02T17:58:54Z"
+      }
+    }
+  ],
+  "generated_at": "2026-10-02T17:58:54Z"
+}
