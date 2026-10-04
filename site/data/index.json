@@ -1,7 +1,15 @@
 {
-  "generated_at": "2026-10-03T16:33:38Z",
-  "latest": "2026-10-03",
+  "generated_at": "2026-10-04T16:55:09Z",
+  "latest": "2026-10-04",
   "days": [
+    {
+      "date": "2026-10-04",
+      "paper_count": 1,
+      "sources": [
+        "Semantic Scholar"
+      ],
+      "file": "2026-10-04.json"
+    },
     {
       "date": "2026-10-03",
       "paper_count": 0,

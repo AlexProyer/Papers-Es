@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-04",
+  "report_type": "filtrado",
+  "evaluated": 1,
+  "selected": 1,
+  "papers": [
+    {
+      "id": "sha1:c4c818d652565350",
+      "rank": 1,
+      "title": "Image-embedded prompt injection vulnerability of vision-language models in dental radiology: a cross-vendor attack–defense evaluation",
+      "authors": [
+        "B. Saravi",
+        "D. D. Singh",
+        "Lara K. Schorn",
+        "Andreas Vollmer"
+      ],
+      "source": "Semantic Scholar",
+      "venue": "Scientific Reports",
+      "category": null,
+      "date": "2026-10-03",
+      "url": "https://www.semanticscholar.org/paper/8f06e4dfc7881c553f0e12950f16cd25b6a9984e",
+      "pdf_url": null,
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "_Sin abstract disponible._",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Se descubre una vulnerabilidad en modelos de lenguaje visual que permite inyectar instrucciones maliciosas ocultas en imágenes dentales.",
+        "problema": "Los modelos de lenguaje visual (VLMs) utilizados en radiología dental son vulnerables a ataques de inyección de prompts incrustados en imágenes, lo que podría comprometer la seguridad y la precisión del diagnóstico.",
+        "propuesta": "El estudio evalúa la vulnerabilidad de VLMs de diferentes proveedores a ataques de inyección de prompts basados en imágenes y analiza las defensas existentes.",
+        "resultados": "El resumen no especifica resultados numéricos, pero confirma la existencia de la vulnerabilidad y la necesidad de evaluar defensas.",
+        "por_que_importa": "Es crucial para garantizar la seguridad y fiabilidad de los sistemas de IA en diagnóstico médico, previniendo la manipulación de información sensible.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Radiología Dental",
+          "Vulnerabilidad",
+          "Modelos de Lenguaje Visual"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-04T16:55:09Z"
+      }
+    }
+  ],
+  "generated_at": "2026-10-04T16:55:09Z"
+}

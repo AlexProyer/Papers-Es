@@ -8985,5 +8985,21 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-10-02T17:58:54Z"
+  },
+  "sha1:c4c818d652565350": {
+    "tldr": "Se descubre una vulnerabilidad en modelos de lenguaje visual que permite inyectar instrucciones maliciosas ocultas en imágenes dentales.",
+    "problema": "Los modelos de lenguaje visual (VLMs) utilizados en radiología dental son vulnerables a ataques de inyección de prompts incrustados en imágenes, lo que podría comprometer la seguridad y la precisión del diagnóstico.",
+    "propuesta": "El estudio evalúa la vulnerabilidad de VLMs de diferentes proveedores a ataques de inyección de prompts basados en imágenes y analiza las defensas existentes.",
+    "resultados": "El resumen no especifica resultados numéricos, pero confirma la existencia de la vulnerabilidad y la necesidad de evaluar defensas.",
+    "por_que_importa": "Es crucial para garantizar la seguridad y fiabilidad de los sistemas de IA en diagnóstico médico, previniendo la manipulación de información sensible.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Radiología Dental",
+      "Vulnerabilidad",
+      "Modelos de Lenguaje Visual"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-04T16:55:09Z"
   }
 }
