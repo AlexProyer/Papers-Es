@@ -1,0 +1,566 @@
+{
+  "date": "2026-10-06",
+  "report_type": "filtrado",
+  "evaluated": 190,
+  "selected": 16,
+  "papers": [
+    {
+      "id": "arxiv:2610.06695v1",
+      "rank": 1,
+      "title": "MedPrune: Topology-Efficient Multimodal Multi-Agent Communication Evolution for Medical VQA Tasks",
+      "authors": [
+        "Jiuheng Wan",
+        "Runze Li",
+        "Chen Chen",
+        "Tingyuan Hu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CL]",
+      "category": "cs.CL",
+      "date": "2026-10-05",
+      "url": "https://arxiv.org/abs/2610.06695v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.06695v1",
+      "score": 60,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "While medical multimodal large language models (Med-MLLMs) advance medical visual question answering (VQA), existing clinical workflow-inspired multi-agent frameworks suffer from interaction patterns and excessive computational overhead caused by redundant communication topologies. In this paper, we propose MedPrune, an efficient medical multimodal multi-agent collaboration framework that dynamically prunes both nodes and edges from the communication topology to enhance reasoning ability and token efficiency. Specifically, we first formulate the diagnostic process as a heterogeneous communication graph, where nodes represent specialist agents from various departments and edges capture intra- and inter-departmental interactions. Building on this graph, we introduce two sparsification mechanisms to enable adaptive collaborative evolution: (1) Heterogeneous Node Sparsification, which eliminates task-irrelevant specialist agents irrelevant to the current multimodal question via reinforcement learning-driven topological optimization, and (2) Heterogeneous Edge Sparsification, which selectively retains only the most diagnostically salient intra- and inter-departmental connections by jointly optimizing task performance and topological complexity. Extensive medical VQA experiments under full-set and few-shot training settings prove MedPrune surpasses multi-agent baselines and boosts token efficiency with strong adversarial robustness.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "MedPrune optimiza la comunicación entre agentes médicos de IA, reduciendo el ruido y mejorando la eficiencia para responder preguntas visuales.",
+        "problema": "Los marcos multi-agente para la VQA médica consumen demasiados recursos computacionales debido a patrones de comunicación redundantes y topologías de red ineficientes.",
+        "propuesta": "MedPrune propone un marco de colaboración multi-agente que poda dinámicamente nodos (agentes especialistas irrelevantes) y aristas (interacciones menos importantes) en un grafo de comunicación, usando aprendizaje por refuerzo para optimizar la topología.",
+        "resultados": "Supera a los métodos multi-agente existentes en tareas de VQA médica, mejorando la eficiencia de tokens y la robustez ante ataques adversarios, tanto en entrenamiento completo como con pocos ejemplos (few-shot).",
+        "por_que_importa": "Reduce significativamente la carga computacional y mejora la precisión de los sistemas de IA para el diagnóstico médico asistido por imágenes, haciéndolos más prácticos y eficientes en entornos clínicos.",
+        "tags": [
+          "IA médica",
+          "VQA",
+          "Multi-agente",
+          "Eficiencia computacional",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-06T18:30:53Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.06670v1",
+      "rank": 2,
+      "title": "Reward Stealing Attack on Large Language Models",
+      "authors": [
+        "Jiaming Qian",
+        "Pengyang Zhou",
+        "Jiahe Xu",
+        "Chaochao Chen"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CL]",
+      "category": "cs.CL",
+      "date": "2026-10-05",
+      "url": "https://arxiv.org/abs/2610.06670v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.06670v1",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "Adversarial attacks on Large Language Models (LLMs) aim to induce harmful content. However, existing methods suffer from high computational costs or strict model-pairing dependencies, limiting their scalability and transferability. We propose Reward Stealing Attack (ReSA), an adversarial attack framework that targets the latent safety reward underlying LLM alignment. ReSA employs maximum entropy inverse reinforcement learning to recover a proxy reward model solely from the aligned model's behavior. The extracted reward is then reversed at inference time to derive an adversarial policy, efficiently implemented via a reward-guided decoding mechanism. Experiments demonstrate that a single recovered reward generalizes across prompts and diverse models to reveal a fundamental alignment vulnerability, enabling ReSA to significantly outperform existing attacks in effectiveness and transferability. The code is available at https://github.com/GarminQ/ReSA.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Un nuevo ataque roba la 'recompensa' de seguridad de los LLMs, exponiendo una vulnerabilidad fundamental en su alineación.",
+        "problema": "Los ataques adversariales a LLMs para generar contenido dañino son computacionalmente costosos o dependen de modelos específicos, limitando su efectividad y transferibilidad. El problema subyacente es la dificultad de atacar la 'recompensa' de seguridad latente que guía la alineación del modelo.",
+        "propuesta": "Se propone el ataque 'Reward Stealing Attack' (ReSA), que utiliza aprendizaje por refuerzo inverso de máxima entropía para inferir un modelo de recompensa proxy a partir del comportamiento del LLM alineado. Esta recompensa inferida se invierte luego en tiempo de inferencia para generar una política adversarial, implementada eficientemente mediante decodificación guiada por recompensa.",
+        "resultados": "El ataque ReSA demostró ser efectivo y transferible, superando a los ataques existentes. Una única recompensa recuperada se generalizó a diferentes prompts y modelos, revelando una vulnerabilidad de alineación fundamental. El resumen no especifica métricas numéricas exactas.",
+        "por_que_importa": "Este ataque expone una debilidad inherente en la forma en que se alinean los LLMs, lo que podría ser explotado para generar contenido dañino de manera más eficiente y transferible. Esto es crucial para desarrollar defensas más robustas y comprender mejor la seguridad de los LLMs.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Ataque Adversarial",
+          "Alineación",
+          "Seguridad IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-06T18:31:25Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.06401v1",
+      "rank": 3,
+      "title": "RAISED: Self-Distillation for Robustness to Prompt Injection in LLM Agents",
+      "authors": [
+        "Mohamed Dhouib",
+        "Clement Elliker",
+        "Alexi Canesse",
+        "Maël Jenny"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-05",
+      "url": "https://arxiv.org/abs/2610.06401v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.06401v1",
+      "score": 56,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "Tool-using language-model agents are vulnerable to indirect prompt injection because they must act on untrusted external content. Existing training-time defenses can reduce attack success rates, but often at the cost of general capabilities. We show that training-based defenses induce substantial drift in the model's output distribution, altering its behavior even in benign settings and providing a potential mechanism for utility degradation. We further identify a failure mode of these defenses: On benign tool-use tasks, the model refrains from a step needed to finish an authorized task, particularly when that step is indicated by a tool output. To address these limitations, we introduce RAISED (Robust Attack Invariance through Self-Distillation), a training framework that combines self-generation and self-distillation. The model first generates its own tool-use scenarios, with an emphasis on cases where task completion requires acting on legitimate guidance from tool outputs. Then, through self-distillation, the student is trained to match the teacher's clean-context behavior on both clean and injected variants of the same trajectory. RAISED substantially reduces the attack success rate of prompt injections in tool responses while, unlike prior training-based defenses, preserving utility on both agentic and general-purpose benchmarks.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "RAISED protege a los agentes de IA contra ataques de inyección de prompts sin sacrificar su rendimiento general.",
+        "problema": "Los agentes de IA que usan herramientas son vulnerables a inyecciones de prompts indirectas a través de contenido externo no confiable, lo que puede degradar sus capacidades generales y causar fallos en tareas legítimas.",
+        "propuesta": "Se introduce RAISED, un marco de entrenamiento que usa autogeneración de escenarios y autodestilación. El modelo genera sus propios casos de uso de herramientas y se entrena para imitar el comportamiento del 'profesor' en contextos limpios e inyectados.",
+        "resultados": "RAISED reduce significativamente la tasa de éxito de los ataques de inyección de prompts en respuestas de herramientas, preservando la utilidad en benchmarks de agentes y de propósito general.",
+        "por_que_importa": "Permite desarrollar agentes de IA más seguros y confiables para aplicaciones del mundo real, sin comprometer su funcionalidad principal.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Agentes LLM",
+          "Inyección de Prompts",
+          "Robustez",
+          "Destilación"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-06T18:31:43Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.06748v1",
+      "rank": 4,
+      "title": "BazaarBench: Delegation Safety in Decentralized C2C Marketplaces Run by LLM Agents",
+      "authors": [
+        "Ziyan Wang",
+        "Shuqing Shi",
+        "James Oldfield",
+        "Samuele Marro"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-10-05",
+      "url": "https://arxiv.org/abs/2610.06748v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.06748v1",
+      "score": 56,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "In decentralized consumer-to-consumer (C2C) marketplaces, people list goods, negotiate with strangers, and rate one another, so trust rests on reputation. Large language model (LLM) agents now act for users, raising risks to their money, privacy, and reputation. We introduce BazaarBench, a simulated C2C marketplace and benchmark for evaluating the safety of these agents. It tracks ownership, item condition, and commitments across transactions, combining record checks with rubric-based LLM judgments to identify six failure types across five stages. We run three base markets for 30 simulated days, each with 100 agents using one model and inventories drawn from a public eBay sample. Across 45 continuations, we evaluate five models under ordinary instructions, deadline pressure, or adversarial instructions to exploit other traders. Each continuation runs for seven simulated days from a copy of a market's day-30 state. The tested model controls the same 20 selected agents, retaining their personas, inventories, and histories, while the other 80 keep the base model. All five models attempt to promise the same item to multiple buyers under ordinary instructions. Adding targets and deadlines increases these attempts for every model. Under adversarial instructions, the share of tested sellers' committed transactions completed despite unavailable items or overstated conditions rises from 15.4% to 33.4%, reaching 55.5% for GPT-5.4. Averaged across models and markets, simulated weekly earnings per tested agent rise from USD 20 under ordinary instructions to USD 33 under adversarial instructions. Most of the increase comes from items the sellers never held. We release the simulator, saved market states, evaluation code, and records covering 357,608 agent model calls for evaluating new models and developing safer marketplace agents.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa la seguridad de agentes LLM en mercados C2C descentralizados para prevenir fraudes y proteger a los usuarios.",
+        "problema": "Los agentes LLM que actúan en mercados descentralizados de consumidor a consumidor (C2C) introducen riesgos significativos para el dinero, la privacidad y la reputación de los usuarios, ya que pueden engañar o incumplir acuerdos.",
+        "propuesta": "Se introduce BazaarBench, un simulador de mercado C2C y benchmark para evaluar la seguridad de estos agentes. Combina verificaciones de registros con juicios basados en rúbricas de LLM para identificar fallos en transacciones.",
+        "resultados": "Bajo instrucciones adversarias, la finalización de transacciones comprometidas con artículos no disponibles o condiciones exageradas aumenta del 15.4% al 33.4% (hasta 55.5% para GPT-5.4). Las ganancias semanales por agente aumentan de $20 a $33, principalmente por vender artículos que no poseían.",
+        "por_que_importa": "Permite evaluar y mejorar la seguridad de los agentes LLM en mercados descentralizados, protegiendo a los usuarios de fraudes y asegurando transacciones más confiables.",
+        "tags": [
+          "LLM Agents",
+          "C2C Marketplaces",
+          "Cybersecurity",
+          "Decentralization",
+          "Trust",
+          "Fraud Prevention"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-06T18:31:52Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.05840v1",
+      "rank": 5,
+      "title": "Compromise Is Not Consequence: Evaluating Task-Scoped Authorization in LLM Agents with Paired Replay",
+      "authors": [
+        "Tural Hagverdiyev"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-05",
+      "url": "https://arxiv.org/abs/2610.05840v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.05840v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "A tool-using model can follow a malicious instruction even when its credentials are valid. We study whether task-scoped authorization contains the resulting tool execution. Our paired-replay testbed samples a model request once and submits the same action, resource, and arguments to broad bearer, scoped JWT, sender-constrained, and Open Policy Agent conditions. The frozen main experiment uses 128 scenarios across four tool domains and five local model configurations. Among valid attacked post-exposure decisions, broad-bearer harmful execution ranges from 8.9% to 37.8% across models; all three scoped conditions record zero. The policy changes execution, not the frozen model decision. These results support containment of the tested cross-action and cross-resource consequences under researcher-supplied task authority, not prevention of prompt injection. A bounded six-task AgentDojo extension preserves native scoring and records 11/24 injected broad-policy attack flags versus 0/24 scoped flags, with utility of 5/24 and 6/24. Low exposure, invalid decisions, and purposive task selection limit that comparison. The primary experiment measures safe continuation rather than final-answer correctness. An empirical-bank fresh-sampling comparison finds no estimation advantage from pairing when scoped outcomes are constant zero. The contribution is a controlled measurement of compromise, enforcement, and continuation, with explicit limits on what each observation establishes.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "La autorización por tareas limita la ejecución de herramientas maliciosas en agentes LLM, sin impedir la inyección de prompts.",
+        "problema": "Los agentes LLM que usan herramientas pueden ejecutar instrucciones maliciosas incluso con credenciales válidas. Se investiga si la autorización limitada a tareas específicas (task-scoped authorization) puede contener la ejecución de herramientas resultante.",
+        "propuesta": "Se propone y utiliza un banco de pruebas de 'paired-replay' para evaluar diferentes condiciones de autorización (bearer, JWT con alcance, sender-constrained, Open Policy Agent) en 128 escenarios de cuatro dominios de herramientas y cinco configuraciones de modelos.",
+        "resultados": "En el experimento principal, las ejecuciones dañinas con autorización 'broad-bearer' van del 8.9% al 37.8%. Las tres condiciones de autorización con alcance (scoped) registraron cero ejecuciones dañinas. La extensión AgentDojo mostró 11/24 ataques con política amplia frente a 0/24 con política con alcance.",
+        "por_que_importa": "Demuestra que la autorización por tareas es efectiva para contener las consecuencias de la ejecución de herramientas maliciosas, mejorando la seguridad de los agentes LLM en aplicaciones prácticas, aunque no previene la inyección de prompts en sí.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Autorización",
+          "Agentes IA",
+          "Seguridad de Herramientas"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-06T18:32:03Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.06673v1",
+      "rank": 6,
+      "title": "The Pushback Paradox: A Two-Probe Diagnostic for Language Model Compliance",
+      "authors": [
+        "Stefan Bühler",
+        "David Exler",
+        "Markus Reischl",
+        "Mark Schutera"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-10-05",
+      "url": "https://arxiv.org/abs/2610.06673v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.06673v1",
+      "score": 53,
+      "topics": [
+        "vuln & threats",
+        "AI agents",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: vuln & threats, AI agents, compliance & audit"
+      ],
+      "abstract_en": "Are language models compliant with user instructions? A model that always complies can be stopped but also exploited, while one that always resists can be neither exploited nor stopped. We contribute an open two-probe benchmark that can place any language model on this spectrum. In the active probe, a user instructs the model to act and accept a lower payoff, which measures exploitability. In the passive probe, the user instructs it to wait and give up a higher payoff, which measures stoppability. The two compliance rates combine into a compliance index $κ$. Applied to twelve language models, the benchmark shows that seven mostly follow the instruction in both probes and justify their action by pointing to the instruction. Only Claude Sonnet-4.6 and Claude Opus-4.7 can be stopped without being exploitable, Claude Opus-4.6 and GPT-5-mini resist both instructions, and no model is exploitable but unstoppable. Knowing where a language model sits on the compliance index $κ$ matters for human operators and for multi-agent systems, whether distributed or orchestrated.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Descubre la paradoja de la obediencia de los modelos de lenguaje: ¿son explotables o incontrolables? Una nueva métrica lo revela.",
+        "problema": "Evaluar de forma precisa y comparable la obediencia de los modelos de lenguaje a las instrucciones del usuario, distinguiendo entre la capacidad de ser explotados y la de ser detenidos.",
+        "propuesta": "Se propone un benchmark de dos sondas ('probes'): una activa (mide explotabilidad al instruir al modelo a aceptar menor recompensa) y una pasiva (mide controlabilidad al instruirle a esperar y renunciar a mayor recompensa). Estas mediciones se combinan en un índice de cumplimiento (κ).",
+        "resultados": "Doce modelos evaluados: siete obedecen en ambas sondas. Solo Claude Sonnet-4.6 y Claude Opus-4.7 pueden ser detenidos sin ser explotables. Claude Opus-4.6 y GPT-5-mini resisten ambas instrucciones. Ningún modelo es explotable pero incontrolable.",
+        "por_que_importa": "Conocer la posición de un modelo en el índice de cumplimiento es crucial para operadores humanos y sistemas multi-agente, permitiendo un uso más seguro y predecible de la IA.",
+        "tags": [
+          "modelos de lenguaje",
+          "IA",
+          "ciberseguridad",
+          "evaluación",
+          "control",
+          "explotabilidad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-06T18:32:13Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.06163v1",
+      "rank": 7,
+      "title": "Where Did the Repair First Go Wrong? Localizing the Origins of Silent Failures in Agentic Vulnerability Repair",
+      "authors": [
+        "Wenji Bai",
+        "Muhammad Waseem",
+        "Zeeshan Rasheed",
+        "Jaakko Peltonen"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-05",
+      "url": "https://arxiv.org/abs/2610.06163v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.06163v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Localizing where an LLM-based agent first fails to uphold security during a repair can show which stage of its workflow needs an additional safeguard. This is difficult for silent failures, which are patches that pass syntactic and functional checks but still contain a security vulnerability. Because such patches give no observable failure signal, existing failure attribution methods, which rely on observed task failures and labelled failure steps, are less suited to them. We propose Security Awareness Gap Evaluation (SAGE), a trace-based method that combines an assessment of the security reasoning recorded at each turn with the reconstructed code history to identify the earliest turn at which a repair diverges from the task's security intent. We evaluate SAGE on 95 confirmed silent failures drawn from 3,684 repair traces produced by six agent frameworks and six base models on SecurityEval and CVEfixes. SAGE assigned an origin in 93 cases. Most origins were an unaddressed security requirement or an inadequate defence choice, and only five coincided with the code change itself. When the agent introduced the vulnerable code, the origin preceded the write in 14 of 19 cases. Repeated scoring and a second judge reproduced the origin type more consistently than the exact turn, and agreement was lowest for traces that kept only the final file.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Identifica el punto exacto donde las reparaciones de seguridad de IA fallan silenciosamente, incluso cuando el código parece correcto.",
+        "problema": "Los fallos de seguridad silenciosos en las reparaciones de código realizadas por agentes de IA son difíciles de detectar porque los parches parecen correctos sintáctica y funcionalmente, pero aún contienen vulnerabilidades. Los métodos actuales de atribución de fallos no son adecuados para estos casos al carecer de una señal de fallo observable.",
+        "propuesta": "Se propone SAGE (Security Awareness Gap Evaluation), un método basado en trazas que evalúa el razonamiento de seguridad registrado en cada paso y la historia del código reconstruido para identificar el primer momento en que la reparación se desvía de la intención de seguridad.",
+        "resultados": "SAGE identificó el origen del fallo en 93 de 95 fallos silenciosos confirmados. La mayoría de los orígenes se debieron a requisitos de seguridad no abordados o elecciones de defensa inadecuadas, y solo cinco coincidieron con el cambio de código en sí. Cuando el agente introdujo código vulnerable, el origen precedió a la escritura en 14 de 19 casos.",
+        "por_que_importa": "Permite a los desarrolladores y equipos de seguridad enfocar sus esfuerzos de mejora en las etapas críticas del proceso de reparación de IA, aumentando la robustez y fiabilidad de las soluciones automatizadas de ciberseguridad.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Reparación de Vulnerabilidades",
+          "Fallos Silenciosos",
+          "Localización de Errores"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-06T18:32:26Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.06093v1",
+      "rank": 8,
+      "title": "Cross-Lingual Transferability of Training Data Extraction Attacks to Recover Memorized PII",
+      "authors": [
+        "Alexandru Nazare",
+        "Agnese Profico",
+        "Nicolò Vania",
+        "Elena Di Croce"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-05",
+      "url": "https://arxiv.org/abs/2610.06093v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.06093v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "The robustness of Personally Identifiable Information (PII) protection in Large Language Models (LLMs) is a critical concern, yet the risks associated with cross-lingual data extraction remain under-explored. This study evaluates the vulnerability of English-centric and multilingual models to Training Data Extraction (TDE) attacks when prompted in non-English languages. We construct a multi-domain PII dataset comprising social media handles, email addresses, and phone numbers and translate the attack contexts into Italian, Spanish, French, and German. Our results show that TDE attacks against both English-centric and multilingual models transfer to different languages: the attacks are successful on translated prompts, even though only the original English prompt might have been included in the pre-training data. A web-presence check on a sample of the translations confirms that they are not available online. The share of English leaks recovered in other languages grows with the multilingual capability of the model, and it drops sharply when the original wording is lost, even without a change of language. This suggests that native multilingual pre-training facilitates the emergence of latent cross-linguistic bridges that simplify the retrieval of personally identifiable information (PII). We analyze the activations of multilingual large language models (LLMs) and find that different translations of the same prompt are bridged in similar representations, with the strongest alignment in the middle layers. Our results highlight a fundamental security gap in modern LLMs, necessitating more robust, language-agnostic sanitization strategies for future model alignment.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "sha1:c5bb7a959bb7a02f",
+      "rank": 1,
+      "title": "Abstract Concept Grounding through Safety Alignment in Multimodal Large Language Models",
+      "authors": [
+        "Ying-Xu Wang",
+        "Oliver Lemon"
+      ],
+      "source": "Semantic Scholar",
+      "venue": "Companion Publication of the 28th International Conference on Multimodal Interaction",
+      "category": null,
+      "date": "2026-10-05",
+      "url": "https://www.semanticscholar.org/paper/da86b7c82194a9ba6256dde8e445d8e62a9808ad",
+      "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3776591.3836639?download=true",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "fraud detection"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, fraud detection"
+      ],
+      "abstract_en": "Abstract concepts such as harmfulness, legality, privacy, and fraud present a major challenge for multimodal large language models (MLLMs), as they require reasoning across visual, linguistic, and contextual information rather than direct perception. This paper investigates three questions: whether supervised alignment improves abstract concept grounding, how preference-based optimisation influences concept discrimination, and whether a two-stage SFT→DPO strategy outperforms individual alignment methods. We evaluate Qwen2.5-VL-7B-Instruct on MM-SafetyBench, which covers 13 categories of safety-related abstract concepts. Using benchmark-derived SFT and DPO datasets,...",
+      "abstract_full": false,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2610.05870",
+      "rank": 1,
+      "title": "Certification of Real Images through Calibrated Content Authentication",
+      "authors": [
+        "Sarim Hashmi",
+        "Abdelrahman Elsayed",
+        "Mohammed Talha Alam",
+        "Samuele Poppi"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-05",
+      "url": "https://arxiv.org/abs/2610.05870",
+      "pdf_url": "https://arxiv.org/pdf/2610.05870",
+      "score": 63,
+      "topics": [
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: adversarial ML"
+      ],
+      "abstract_en": "Generative models can synthesize high-quality inauthentic multimedia content that is already being misused at scale. We evaluate twenty deepfake detectors against ten generators released in the last four years and find accuracy decreasing over time, from near-perfect 99.5% to 76%. Adversarial perturbations further reduce every baseline detector to below 2% accuracy, effectively inverting the detector's assigned label. We argue that this unreliability reflects a fundamental ambiguity: generators can reproduce authentic content exactly (e.g., through memorization), so content alone cannot reveal the true provenance label.For this reason, content produced by a generator must admit a faithful reconstruction by that same generator, and finding such a reconstruction makes synthetic provenance plausible and authenticity plausibly deniable.We therefore propose and evaluate a detection paradigm that outputs a calibrated prediction of whether authenticity is plausibly deniable: a faithful reconstruction by any known generator establishes plausible deniability, while calibration bounds how often content from known generators fails to be reproduced. Our evaluation shows that (i) our detector can be calibrated so that at most 1% of generated content is wrongly certified, an operating point at which most baseline detectors reach near-zero recall, including the strongest with 93% accuracy; (ii) calibrating a stricter security threshold on attacked samples preserves this bound against adaptive adversaries within the evaluated bounded-perturbation attack space, whose perturbations break every baseline, but does not cover arbitrary adversarial transformations; and (iii) post-hoc verifiability is eroding, as 1,116 of 3,000 Reddit images resist reproduction by a 2022 generator, but only 55 to 79 resist reproduction by 2024 generators.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2610.05894",
+      "rank": 2,
+      "title": "Noise Out, Bias In: Targeted Bias Injection in Diffusion Language Models via Closed-Loop Activation Steering",
+      "authors": [
+        "Sarim Hashmi",
+        "Mukul Ranjan",
+        "Abdelrahman Elsayed",
+        "Muhammad Umer Sheikh"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-05",
+      "url": "https://arxiv.org/abs/2610.05894",
+      "pdf_url": "https://arxiv.org/pdf/2610.05894",
+      "score": 60,
+      "topics": [
+        "vuln & threats"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: vuln & threats"
+      ],
+      "abstract_en": "Masked diffusion language models (dLLMs) generate text by iteratively denoising masked positions, re-predicting each token multiple times before it is committed. An autoregressive decoder exposes an answer's distribution once, at the step that commits it; a dLLM exposes it at every denoising step before commitment, and we show that an adversary can exploit this. Since an answer remains open to revision over many denoising steps, an adversary with access to internal activations can watch how likely the model is to produce a chosen answer and adjust the intervention accordingly. Building on this observation, we study targeted bias injection, an attack that steers a frozen dLLM toward a demographic answer selected by the adversary. The attack uses a simple proportional-integral (PI) controller that tracks the target-answer probability during denoising and adapts the strength of a steering vector on the fly. On ambiguous BBQ questions where the correct answer is abstention, our attack raises LLaDA-8B-Instruct's preference for the targeted group from 1.8 to 16.7 percentage points, more than three times the strongest fixed-strength steering baseline, and on SocialStigmaQA it raises the selection of stigmatizing answers from 17.6% to 58.1%. Fitted to other demographic targets, the same attack shifts answers by up to 37 percentage points, and each attack takes about 40 minutes on one GPU. On the primary target, feedback is what makes the attack work: constant steering at the same average strength over the token-committing steps produces a far smaller shift while corrupting nearly three times as many outputs, and a constant strength set separately for each example still falls well short. Our findings identify the denoising trajectory as a new control channel in dLLMs and call for bias audits that examine the serving stack rather than the frozen model alone.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2610.05622",
+      "rank": 3,
+      "title": "UndoBench: Separating Task Competence from Recovery Capability in Tool-Using AI Agents",
+      "authors": [
+        "Dolly Sah",
+        "Tanmay Sah",
+        "Harshul Jain",
+        "Tanya Sah"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-04",
+      "url": "https://arxiv.org/abs/2610.05622",
+      "pdf_url": "https://arxiv.org/pdf/2610.05622",
+      "score": 55,
+      "topics": [
+        "vuln & threats",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, AI agents"
+      ],
+      "abstract_en": "Tool-using AI agents are increasingly deployed across enterprise software systems, yet widely used benchmarks primarily evaluate nominal task completion, conflating baseline planning competence with operational fault recovery. We introduce UndoBench, a benchmark spanning 36 base workflows and 36 fault scenarios across 8 enterprise domains, decoupling task competence from recovery capability via counterfactual paired trials under identical seeds alongside wire-level effect-history and environment-state oracles. On 12 held-out TEST workflows across two open-weight models, two frameworks, and three recovery paradigms (5,760 executions / 2,880 paired trials) in the frozen lost-acknowledgment study, nominal competence reached 83.54% while conditional recovery success rate (CRSR) fell to 46.72%, with naive retry producing duplicate external effects in 53.33% of trials. Extensions to commercial API models reproduced this competence-recovery separation. Evaluations across complementary execution boundaries show that recovery is phase-dependent: before mutation, methods perform similarly without duplicate effects among capable trials; during partial mutation, naive retry, per-call idempotency, and zero-privilege journaling collapse on the evaluated composite workflows; after commit but before acknowledgment, verification and server-side idempotency substantially improve safety. These findings demonstrate that evaluating nominal completion alone masks critical, phase-dependent recovery vulnerabilities in autonomous agents.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2610.04137",
+      "rank": 4,
+      "title": "Dynamic Harness Search: Building Multi-Agent Systems Per-Query via Prediction",
+      "authors": [
+        "Som Sagar",
+        "Shasha Li",
+        "Hejie Cui",
+        "Ransalu Senanayake"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-02",
+      "url": "https://arxiv.org/abs/2610.04137",
+      "pdf_url": "https://arxiv.org/pdf/2610.04137",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Agent harnesses specify the roles, instructions, tools, and communication structure used to solve a task, and the right harness depends on the query. Because the value of each design choice is observable only through execution, tailoring a harness to each query has required either executing alternatives at inference time or costly manual design. We introduce SHIFT, which moves execution out of the per-query search loop. A local LLM architect learns a policy over harness-building actions from search, and a value function that predicts, from measured executions, a utility balancing accuracy against execution cost. For each query, Monte Carlo tree search uses these predictions to construct a harness. Across 9,193 tasks in six benchmarks, from math to document and general-assistant tasks, with a Gemini 3.5 Flash executor, SHIFT attains the highest mean accuracy, about 80%, outperforming 17 baselines that span prompting, prompt optimization, and workflow search, and exceeding the strongest baseline by 7.2 percentage points. A cheaper mode of SHIFT also attains a higher mean accuracy than every baseline while using 32% fewer execution tokens than the strongest baseline. We further show that choosing structure, instructions, and tools jointly beats choosing only instructions or only tools by up to 9.1 percentage points, and that learned value selection identifies more accurate harnesses with lower execution cost from candidate pools.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2610.04292",
+      "rank": 5,
+      "title": "LMBuild: Evaluating LLM Agents for Generating Buildable and Functional Structures",
+      "authors": [
+        "Jiateng Liu",
+        "Rushi Wang",
+        "Cheng Qian",
+        "Xuejun Zhang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-03",
+      "url": "https://arxiv.org/abs/2610.04292",
+      "pdf_url": "https://arxiv.org/pdf/2610.04292",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "LLM-based agents are increasingly capable of generating complex 3D structures, with the potential to reshape how objects are designed and realized in the physical world. Yet, producing elegant geometry is fundamentally different from producing objects that can be built and perform their intended functions. Existing evaluations largely focus on geometric quality while overlooking physical realizability. We introduce LMBuild, a benchmark for evaluating LLM agents on generating buildable and functional structures. LMBuild represents generated objects as assembled structures comprising part decompositions, joints, materials, and sequences. To support reproducible evaluation, we provide a unified framework consisting of: (1) an interactive environment in which agents can use tools to retrieve, create, and place components to construct objects; (2) a curated benchmark that repurposes established CAD datasets and augments them with knowledge from Wikipedia; and (3) a evaluation framework covering structural soundness, functional affordance, design quality, and physical realization. Evaluations across 30 systems reveal several intriguing findings: (a) Soundness and alignment are no longer the primary bottlenecks for frontier closed-source models, while functional affordance and physical operability remain substantially more challenging; (b) stronger models more effectively create new components, whereas weaker models tend to rely on retrieval; and (c) providing functional specifications substantially improves part completeness, kinematics, and physical operability. These results show that generating real-world structures requires deeper reasoning about functional affordances, mechanics, and designing and creating novel components. We expect LMBuild to provide a foundation for measuring progress and incentivizing research toward agents that generate buildable and functional structures.",
+      "abstract_full": true,
+      "summary_es": null
+    },
+    {
+      "id": "arxiv:2610.05303",
+      "rank": 6,
+      "title": "ASCENT: Online Test-Time Training of Long-Horizon Agents via Self-Distillation of Verified Experience",
+      "authors": [
+        "Haodong Lu",
+        "Dong Gong"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-04",
+      "url": "https://arxiv.org/abs/2610.05303",
+      "pdf_url": "https://arxiv.org/pdf/2610.05303",
+      "score": 51,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "A large language model (LLM) agent solves long-horizon tasks through many reasoning-action turns, with one verification signal at termination. Deployed agents face streams of related tasks, making their trajectories a natural resource for improvement. In-context adaptation agents store reflections, memories, or skills as text, so reuse depends on retrieving the right experience and on a frozen policy executing it. We study Online Agentic Test-Time Training (OaTTT), which trains the LLM's weights on its own execution trajectories during deployment. The agent executes each task once, in one pass over the stream, and the executed trajectory with its verification result is the only learning signal for weight updates that persist across tasks. Directly imitating or reinforcing the generated tokens of this single attempt destabilizes the policy. We introduce ASCENT (Agentic Self-distillation for Cross-task EvolutioN at Test-time), which instead self-distills verified experience. A stable version of the LLM, its frozen initial copy, receives the verified trajectory as privileged information and predicts next-token distributions along it with this hindsight. Distilling them into persistent LoRA fast weights updates the agent for later tasks, without an external reference solution or stronger teacher. By further removing invalid-action turns, ASCENT distills enhanced privileged experience for more efficient execution. We characterize its population target and the limits of sparse outcome selection. Across ALFWorld, WebShop, and AppWorld at varied model scales, ASCENT improves task success and interaction efficiency as experience accumulates, outperforms online adaptation methods, and transfers to held-out scenes, showing that an agent can consolidate verified experience into its weights without a separate training phase or memory retrieval. Project page: https://artificer-ai-lab.github.io/ASCENT",
+      "abstract_full": true,
+      "summary_es": null
+    }
+  ],
+  "generated_at": "2026-10-06T18:39:59Z"
+}
