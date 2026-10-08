@@ -1,0 +1,605 @@
+{
+  "date": "2026-10-08",
+  "report_type": "filtrado",
+  "evaluated": 186,
+  "selected": 17,
+  "papers": [
+    {
+      "id": "arxiv:2610.09906v1",
+      "rank": 1,
+      "title": "Constrained-Action AI Remediation for SIEM/XDR via a NeMo-Guardrails Proxy",
+      "authors": [
+        "Georgios Koutidis",
+        "Nikolaos Kekatos",
+        "Tom Nianios",
+        "Alexios Lekidis"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-07",
+      "url": "https://arxiv.org/abs/2610.09906v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.09906v1",
+      "score": 56,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: cybersecurity, vuln & threats, LLM"
+      ],
+      "abstract_en": "Security Operations Centers (SOCs) for information technology and operational technology share one incident-response problem: a flood of correlated alerts and too few analysts. Large Language Models (LLMs) are increasingly proposed as reasoning engines that triage alerts and, in autonomous deployments, issue commands that block IPs, kill processes, or quarantine files on production hosts. This coupling introduces a new risk: a single adversarial alert can become a remote code path through the LLM's reasoning, leading it to recommend an action the SOC then executes. We present a constrained-action architecture with two coordinated layers: (i) a SIEM/XDR control plane that grounds remediation in correlated host events and confines the LLM's output to a closed intent vocabulary whose templated commands are executed by thin endpoint agents, backstopped by an argument validator; and (ii) a NeMo-Guardrails proxy that wraps the SOC-analyst LLM with input- and output-rail policies, evaluated out-of-the-box against a SOC-specific adversarial corpus we release. The stock proxy lifts injection recall from 25.0% to 94.5% at a 0.1% false-positive rate, and a live red-team exercise confirms that the closed intent vocabulary and argument validator contain the observed LLM failure modes before any command crosses the trust boundary. As an architectural fit (not yet a measured operational-technology deployment), the constrained-action property suits critical-infrastructure settings where a wrong remediation has physical, not merely operational, consequences. The loop is best run human-in-the-loop or delayed: the measured rail latency keeps inline control out of scope.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Arquitectura de IA con IA para seguridad que previene comandos maliciosos generados por LLMs en entornos críticos.",
+        "problema": "Los Centros de Operaciones de Seguridad (SOC) se enfrentan a una avalancha de alertas y pocos analistas. El uso de LLMs para automatizar la respuesta a incidentes introduce el riesgo de que un atacante pueda manipular al LLM para ejecutar acciones perjudiciales.",
+        "propuesta": "Se propone una arquitectura de IA con acciones restringidas en dos capas: un plano de control SIEM/XDR que limita las acciones del LLM a un vocabulario cerrado de intenciones y un proxy NeMo-Guardrails que aplica políticas de seguridad a las entradas y salidas del LLM, utilizando un corpus adversarial específico para SOC.",
+        "resultados": "El proxy NeMo-Guardrails mejora la detección de inyecciones de 25.0% a 94.5% con una tasa de falsos positivos del 0.1%. Un ejercicio de equipo rojo confirmó que el vocabulario cerrado y el validador de argumentos contuvieron los fallos del LLM antes de la ejecución de comandos.",
+        "por_que_importa": "Esta arquitectura reduce significativamente el riesgo de que los LLMs sean explotados para ejecutar acciones de seguridad perjudiciales, especialmente importante en infraestructuras críticas donde un error de remediación puede tener consecuencias físicas.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "LLM",
+          "SIEM",
+          "XDR",
+          "Seguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-08T18:57:18Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.10276v1",
+      "rank": 2,
+      "title": "PatchBench: Measuring Collateral Damage in Activation Patching",
+      "authors": [
+        "Alexi Canesse",
+        "Mathis Le Bail",
+        "Maël Jenny",
+        "Clément Elliker"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-07",
+      "url": "https://arxiv.org/abs/2610.10276v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.10276v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "An LLM safety patch can pass a benchmark while still being a poor repair. This risk is especially acute for jailbreak repairs, where the goal is to correct a specific unsafe behaviour without changing unrelated behaviours. A patch may block exact evaluation prompts yet fail on close harmful variants, or suppress harmful behaviour by over-refusing benign prompts that share its wording or structure. Existing protocols primarily test whether models can be broken, while aggregate metrics (attack success, refusal rates, global capability) cannot distinguish selective repairs from broader local suppression. To address this gap, we introduce PatchBench, a benchmark of empirically observed model-specific jailbreak failures inducing actionable harmful answers. Starting from 27,870 prompts from 37 public datasets, we curate 15,314 English prompts and query 8 open-source instruction-tuned models. Combining WildGuard filtering, pairwise Elo ranking, and manual verification, we retain a curated bank of 400 high-confidence jailbreak failures. We further introduce PatchBench-Local, an evaluation protocol testing whether a patch is behaviourally precise. For each harmful source prompt, PatchBench-Local generates three families of local neighbours: harmful variants preserving malicious intent, benign prompts with matched structure, and benign prompts reusing key harmful terms. It evaluates harmful-neighbour correction and benign-neighbour preservation, distinguishing selective repair from broader local suppression. Evaluating four activation steering methods with PatchBench-Local and MMLU shows that global capability can remain nearly unchanged while local benign regressions are severe, confirming aggregate metrics miss important collateral damage. PatchBench-Local provides a more precise basis for developing and comparing jailbreak repair methods.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "PatchBench evalúa el daño colateral de los parches de seguridad en LLMs, revelando graves regresiones benignas no detectadas por métricas globales.",
+        "problema": "Los parches de seguridad para LLMs, especialmente para jailbreaks, a menudo fallan en corregir selectivamente el comportamiento inseguro sin afectar negativamente otras funcionalidades (daño colateral), y las métricas de evaluación actuales no detectan este problema.",
+        "propuesta": "Se introduce PatchBench, un benchmark con fallos de jailbreak observados empíricamente, y PatchBench-Local, un protocolo de evaluación que genera variantes de prompts (dañinas y benignas) para medir la precisión de los parches en la corrección de comportamientos específicos y la preservación de otros.",
+        "resultados": "La evaluación de cuatro métodos de 'activation steering' con PatchBench-Local mostró regresiones benignas locales severas, a pesar de que la capacidad global se mantuvo casi sin cambios. Se curaron 400 fallos de jailbreak de alta confianza a partir de 15,314 prompts.",
+        "por_que_importa": "Permite una evaluación más precisa y granular de los parches de seguridad en LLMs, crucial para desarrollar y comparar métodos de reparación de jailbreaks que no introduzcan daños colaterales inaceptables en el comportamiento benigno.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Evaluación",
+          "Jailbreak",
+          "Daño Colateral",
+          "Benchmarking"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-08T18:57:27Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.10358v1",
+      "rank": 3,
+      "title": "Open-MMUnlearning: Unifying Methods and Evaluation for MLLM Unlearning",
+      "authors": [
+        "Junkai Chen",
+        "Yuhao He",
+        "Qianshan Wei",
+        "Junxiang You"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-10-07",
+      "url": "https://arxiv.org/abs/2610.10358v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.10358v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "As multimodal large language models (MLLMs) become more capable and widely deployed, concerns about privacy and safety have become increasingly pressing. Machine unlearning offers one approach to addressing these concerns by removing designated information from trained models while preserving unrelated capabilities. However, fragmented implementations and evaluation protocols, incomplete robustness testing, and limited understanding of metric reliability make progress in MLLM unlearning difficult to assess systematically. We introduce Open-MMUnlearning, an open-source, extensible framework that integrates target-model preparation, multimodal data processing, unlearning, and evaluation through shared interfaces and structured configurations. The framework supports five benchmarks spanning privacy, safety, and copyright, eight MLLMs from four model families, and twelve unlearning methods. Its evaluation suite jointly assesses forgetting effectiveness, retained utility, and robustness to model interventions, adversarial inputs, and membership inference attacks. Using a common evaluation protocol, we compare ten representative unlearning methods. In this comparison, GD and MIP-Editor tie for the highest overall score: GD achieves the highest Forget Quality, while MIP-Editor preserves more Model Utility. We further introduce a metric meta-evaluation protocol that tests faithfulness using models with controlled exposure to target knowledge and robustness under quantization and relearning. Among the thirteen evaluated metrics, BLEU achieves the highest aggregate reliability score. KS-Test attains the highest faithfulness AUC but performs less well on robustness. Together, the framework and these findings support reproducible comparison of MLLM unlearning methods and systematic assessment of evaluation reliability.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Open-MMUnlearning unifica y evalúa métodos para eliminar datos de modelos multimodales, mejorando la privacidad y seguridad.",
+        "problema": "La eliminación de información específica (unlearning) de modelos de lenguaje multimodales (MLLMs) es difícil de evaluar sistemáticamente debido a implementaciones fragmentadas, falta de pruebas de robustez y métricas poco fiables.",
+        "propuesta": "Se introduce Open-MMUnlearning, un framework de código abierto que unifica la preparación de datos, el entrenamiento, el unlearning y la evaluación para MLLMs, soportando múltiples benchmarks, modelos y métodos de unlearning.",
+        "resultados": "GD y MIP-Editor obtienen las mejores puntuaciones generales. GD destaca en olvido (Forget Quality), mientras MIP-Editor preserva mejor la utilidad del modelo. BLEU es la métrica más fiable, y KS-Test es fiel pero menos robusto.",
+        "por_que_importa": "Permite comparar de forma reproducible y evaluar de manera sistemática la fiabilidad de los métodos de unlearning en MLLMs, crucial para la privacidad y seguridad en su despliegue.",
+        "tags": [
+          "unlearning",
+          "MLLMs",
+          "privacidad",
+          "evaluación",
+          "ciberseguridad",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-08T18:57:36Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.09708v1",
+      "rank": 4,
+      "title": "Black-Box Adversarial Patch Attacks on VLAs via Ancestor VLM Exploitation",
+      "authors": [
+        "Xiaoyi Pang",
+        "Haoyue Feng",
+        "Quanxin Shou",
+        "Yikun Miao"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-07",
+      "url": "https://arxiv.org/abs/2610.09708v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.09708v1",
+      "score": 53,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Vision-Language-Action models (VLAs) are increasingly deployed in safety-critical physical environments, yet their adversarial robustness remains poorly understood. Existing attacks typically assume white-box access or rely on surrogate VLAs, which rarely holds in real-world deployments. Our key insight is that most VLAs are adapted from a publicly released pretrained vision-language model (VLM), inheriting two capabilities essential for action generation: visual perception and instruction-conditioned grounding. Therefore, this paper explores a previously unaddressed question: can an adversary attack deployed VLAs using only their ancestor VLMs? To this end, we propose three adversarial patch attacks that disrupt the inherited capabilities: a vision disruption attack that corrupts the projected visual tokens through relative and absolute terms, an instruction-grounded semantic evidence suppression attack that removes the visual evidence required for instruction-grounded concepts, and a joint attack that unifies both objectives under a two-phase curriculum. Experiments across different VLA families on both simulation and static real-world images show that patches optimized on the ancestor VLM cause substantial degradations in VLA task success rates, demonstrating that VLAs inherit adversarial vulnerabilities alongside their foundational capabilities. This effect is not uniform: it is strongest on tasks that require precise instruction-grounded localization, and nearly vanishes on policies whose adaptation rewrites the shared visual-semantic representation or whose action head iteratively smooths perturbations away. By characterizing the boundary conditions of vulnerability inheritance and providing analysis of why the inheritance effect holds or fails, we advance the understanding of safety for VLA-involved systems.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Atacamos modelos de IA que controlan robots usando solo el modelo base del que provienen, demostrando vulnerabilidades inesperadas.",
+        "problema": "Los modelos de IA que controlan acciones (VLAs) son usados en entornos críticos pero su robustez ante ataques es desconocida. Los ataques actuales requieren acceso total al modelo o usan copias, lo cual no es realista.",
+        "propuesta": "Proponemos tres ataques de 'parche' adversario que explotan el modelo base (VLM) del que provienen los VLAs. Estos parches corrompen la percepción visual y la capacidad de vincular instrucciones con evidencia visual, sin necesidad de acceder al VLA final.",
+        "resultados": "Los parches optimizados en el VLM base degradaron significativamente la tasa de éxito de los VLAs en tareas simuladas y reales. El efecto fue más fuerte en tareas de localización precisa y menor en modelos cuya adaptación modificó la representación visual-semántica o suavizó las perturbaciones.",
+        "por_que_importa": "Demuestra que los sistemas de IA que controlan acciones físicas pueden ser vulnerables a ataques incluso si el atacante solo tiene acceso a modelos públicos más antiguos, lo que tiene implicaciones cruciales para la seguridad en robótica y sistemas autónomos.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Robótica",
+          "Vulnerabilidad",
+          "Modelos de Lenguaje Visual",
+          "Ataques Adversarios"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-08T18:57:46Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.10498v1",
+      "rank": 5,
+      "title": "EmbodiedRSI: Active Continual Robot Learning Through Hypothesis-Guided Co-Evolution",
+      "authors": [
+        "Python Song",
+        "Zhixuan Liang",
+        "Kelsey Fu",
+        "Mengdi Wang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-10-07",
+      "url": "https://arxiv.org/abs/2610.10498v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.10498v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Robot foundation models provide strong visuomotor control, yet their performance can degrade when object positions or task instructions change. Further improvements often require post-training on substantial robot data, which can be costly to collect through methods such as teleoperation. Agentic harnesses can adapt around the model, but current self-evolving harnesses use robot trials inefficiently when deciding which code and skill changes to pursue. We introduce EmbodiedRSI, a self-evolving agentic harness that autonomously decides where to explore next and turns the resulting physical interaction into improved code and skills. EmbodiedRSI realizes this through a Fast-Slow Dual-System Architecture, in which competing code and skill hypotheses are maintained in a Hypothesis Graph. Value-of-Information Experiment Selection chooses physical experiments that can distinguish these hypotheses. Their outcomes guide Code-Skill Co-Evolution. The Slow System builds Hierarchical Memory, and Reward-Grounded Memory Learning selects effective memory according to their value for later Fast-System improvement. On RoboCasa365, EmbodiedRSI reaches 77.0% overall success and 71.3% on Composite-Unseen, compared with 40.1% for the best baseline. EmbodiedRSI also reaches 86.8% overall success on LIBERO-Pro. Beyond benchmark performance, EmbodiedRSI transfers zero-shot to real-world robot, achieving 71.3% overall success across multiple challenging tasks.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "EmbodiedRSI revoluciona el aprendizaje continuo de robots, adaptándose eficientemente a nuevas tareas y entornos mediante la coevolución de código y habilidades.",
+        "problema": "Los modelos fundacionales de robots pierden rendimiento ante cambios en la posición de objetos o instrucciones de tareas, y su mejora requiere costosos reentrenamientos con datos robóticos. Los métodos actuales de autoevolución son ineficientes al seleccionar qué cambios aplicar.",
+        "propuesta": "EmbodiedRSI es un sistema de autoevolución que decide autónomamente dónde explorar y utiliza la interacción física para mejorar código y habilidades. Emplea una arquitectura Dual-System (Rápido-Lento) con un Hypothesis Graph para mantener hipótesis competidoras, un método de selección de experimentos basado en el valor de la información, y un aprendizaje de memoria guiado por recompensas.",
+        "resultados": "En RoboCasa365, EmbodiedRSI logra un 77.0% de éxito general y 71.3% en tareas 'Composite-Unseen', superando al mejor baseline (40.1%). En LIBERO-Pro, alcanza un 86.8% de éxito general. En robots reales, logra un 71.3% de éxito general en tareas complejas sin entrenamiento previo (zero-shot).",
+        "por_que_importa": "Reduce drásticamente el coste y tiempo de adaptación de robots a nuevas situaciones, permitiendo un aprendizaje continuo y eficiente que mejora su aplicabilidad práctica en entornos cambiantes y reales.",
+        "tags": [
+          "aprendizaje continuo",
+          "robots",
+          "adaptación",
+          "autoevolución",
+          "modelos fundacionales",
+          "ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-08T18:57:55Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.09918v1",
+      "rank": 6,
+      "title": "CYBERFORT: A Compliance-Chain Platform Operationalising the Cyber Resilience Act for SMEs",
+      "authors": [
+        "Nikolaos Kekatos",
+        "Georgios Koutidis",
+        "Mihaela Curcă",
+        "Angelos Fountoulakis"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-07",
+      "url": "https://arxiv.org/abs/2610.09918v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.09918v1",
+      "score": 52,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: cybersecurity, vuln & threats, compliance & audit"
+      ],
+      "abstract_en": "The EU Cyber Resilience Act (CRA) turns product cybersecurity into a lifecycle compliance obligation for manufacturers, importers, distributors, and integrators of products with digital elements on the EU market, a load that falls largely on small and medium-sized enterprises (SMEs) that rarely have dedicated governance, risk, and compliance (GRC) capacity. We present CYBERFORT, an open-source CRA-first compliance platform developed under the EU Digital Europe Programme and one of twelve projects in the EU CRA cluster. CYBERFORT operationalises the CRA through a guided scope self-assessment, a question bank tied to Annex I and the vulnerability-handling obligations, and a compliance-checking engine that links every answer to controls, policies, and machine-attested evidence, reusing ISO/IEC 27001, NIS2, and GDPR controls only where they coincide with CRA obligations. Its central contribution is the compliance chain, a traceable structure linking each product risk through its controls and policies to the CRA obligations it satisfies, and onward through evidence to the technical-documentation file and EU declaration of conformity, so that every operational gap is traceable and can be closed before market placement. Deployed at https://access.cyber-fort.eu/ for a first cohort of 43 organisations, the platform is presented with the engineering behind the chain, measured results from a completed end-to-end case study on a SIEM/XDR product with AI-driven remediation spanning the CRA obligation chapters, and the controlled effort study that remains in progress.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "CYBERFORT es una plataforma de código abierto que ayuda a las PYMES a cumplir con la Ley de Ciberresiliencia de la UE de forma automatizada.",
+        "problema": "Las PYMES que venden productos digitales en la UE enfrentan la complejidad de cumplir con la Ley de Ciberresiliencia (CRA), careciendo a menudo de la capacidad GRC necesaria.",
+        "propuesta": "CYBERFORT ofrece una plataforma de código abierto que automatiza la autoevaluación del alcance, proporciona un banco de preguntas ligado a las obligaciones de la CRA y un motor de verificación de cumplimiento con evidencia verificable.",
+        "resultados": "La plataforma ha sido desplegada en 43 organizaciones y se ha completado un estudio de caso end-to-end en un producto SIEM/XDR con remediación impulsada por IA.",
+        "por_que_importa": "Facilita a las PYMES el cumplimiento de la CRA, reduciendo la carga administrativa y el riesgo de no conformidad, asegurando la ciberresiliencia de los productos en el mercado de la UE.",
+        "tags": [
+          "Ciberresiliencia",
+          "PYMES",
+          "Cumplimiento Normativo",
+          "Código Abierto",
+          "CRA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-08T18:58:05Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.10507v1",
+      "rank": 7,
+      "title": "RECAST: Learning to Compute the Right Context through Adaptive Evidence Routing",
+      "authors": [
+        "Yilun Hao",
+        "Krishna Sayana",
+        "Isabella Ye",
+        "James S Ren"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-10-07",
+      "url": "https://arxiv.org/abs/2610.10507v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.10507v1",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Large language models are increasingly applied to tasks grounded in long, heterogeneous information sources. Conventional Retrieval-Augmented Generation (RAG) relies on fixed similarity-based retrieval, while agentic variants adapt queries and tool use but remain largely retrieval-centric. However, in many tasks, the evidence required for a solution is not explicitly present in any single source item. Instead, it must be derived through filtering, aggregation, or computation across multiple source items. In this work, we introduce RECAST (Routing Evidence through Computation, Access, and Synthesized Tools), a learned framework that formulates evidence construction as a sequential decision process over heterogeneous retrieval and computation operations, allowing evidence to be actively derived rather than merely retrieved. A lightweight RouterLM iteratively selects and formulates primitive operations or specifies customized operations for a frozen CompilerLM to translate into executable code. Once it judges the evidence sufficient, RouterLM passes the accepted evidence to a frozen AnswerLM to produce the final solution. We train RouterLM with supervised fine-tuning (SFT) followed by group relative policy optimization (GRPO). Across six heterogeneous benchmark families, RECAST achieves a mean success rate of 75.6%, outperforming the strongest large-model baseline by 15.9%. Moreover, training enables the Qwen3.5-9B RouterLM to outperform a training-free Gemini 3.5 Flash RouterLM by 5.0%. On three held-out benchmarks, RECAST improves over the strongest baseline by 15.0% on average, demonstrating strong zero-shot generalization across tasks and heterogeneous source representations.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "RECAST aprende a construir evidencia combinando recuperación y cómputo para resolver problemas complejos con información dispersa.",
+        "problema": "Los modelos de lenguaje actuales fallan al necesitar evidencia derivada de múltiples fuentes, no solo recuperada directamente. Las técnicas RAG convencionales y sus variantes no abordan la necesidad de filtrar, agregar o computar información a través de distintas fuentes.",
+        "propuesta": "RECAST es un framework que formula la construcción de evidencia como un proceso de decisión secuencial. Utiliza un 'RouterLM' para seleccionar y formular operaciones (recuperación o cómputo) que un 'CompilerLM' traduce a código ejecutable. El 'RouterLM' decide cuándo la evidencia es suficiente y la pasa a un 'AnswerLM' para la solución final.",
+        "resultados": "RECAST alcanza una tasa de éxito media del 75.6% en seis familias de benchmarks, superando al mejor baseline de modelos grandes en un 15.9%. El RouterLM entrenado con Qwen3.5-9B supera a un Gemini 3.5 Flash RouterLM sin entrenamiento en un 5.0%. Demuestra fuerte generalización zero-shot, mejorando los baselines en un 15.0% en benchmarks no vistos.",
+        "por_que_importa": "Permite a los modelos de IA abordar tareas que requieren razonamiento complejo y síntesis de información de fuentes heterogéneas, superando las limitaciones de la simple recuperación de datos y abriendo puertas a aplicaciones más robustas y precisas.",
+        "tags": [
+          "IA",
+          "Procesamiento de Lenguaje Natural",
+          "Recuperación de Información",
+          "Generación Aumentada por Recuperación",
+          "Computación Adaptativa",
+          "Sistemas de Agentes"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-08T18:58:14Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.09793v1",
+      "rank": 8,
+      "title": "Formal Runtime Verification for Tool-Using LLM Agents: An Offline Same-Benchmark Study on AgentDojo and STAC",
+      "authors": [
+        "Nikolaos Kekatos",
+        "Stylianos Basagiannis",
+        "Marinelio Chintri",
+        "Alexios Lekidis"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-07",
+      "url": "https://arxiv.org/abs/2610.09793v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.09793v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Guardrails for tool-using LLM agents are usually application-specific rules, which makes multi-step, data-dependent safety policies hard to specify, audit and reuse. As a declarative alternative, we evaluate metric first-order temporal logic (MFOTL), replaying the recorded trajectories that AgentDojo, STAC and R-Judge already ship through the unmodified MonPoly monitor, offline and without running an agent. On these corpora, five generic obligations flag 71.8% of STAC attack chains and 70.1% of successful AgentDojo attacks, but also fire on 29.3% of benign runs. This imprecision stems from the corpora rather than the logic: they rarely record approvals and never record timestamps, so history-dependent obligations reduce to detecting risky action types. Where the trace does carry relational context, provenance-aware policies discriminate better; that context, however, is itself attackable, and one planted line defeats a naive provenance check on 94-99% of the runs it would otherwise flag. Binding provenance to the lookup that produced it closes this evasion at no cost in detection or benign firing. Taken together, these results show that formal temporal monitoring adds value exactly when the trace exposes trustworthy history. We therefore quantify how far current benchmarks are from that point and propose a twelve-field enforcement-ready trace schema.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Verificación formal de seguridad para agentes LLM que usan herramientas, mejorando la detección de ataques sin falsos positivos.",
+        "problema": "Las barreras de seguridad para agentes LLM que usan herramientas son específicas de cada aplicación, dificultando políticas de seguridad complejas, auditables y reutilizables.",
+        "propuesta": "Evaluar la lógica temporal de primer orden con métricas (MFOTL) para verificar offline trayectorias de agentes LLM grabadas, utilizando el monitor MonPoly sin modificar el agente.",
+        "resultados": "Cinco obligaciones genéricas detectan el 71.8% de las cadenas de ataque en STAC y el 70.1% en AgentDojo, con un 29.3% de falsos positivos. La vinculación de la procedencia a la búsqueda que la produjo cierra la evasión sin coste.",
+        "por_que_importa": "Demuestra que la monitorización temporal formal aporta valor cuando el historial de ejecución es confiable, cuantificando la brecha actual y proponiendo un esquema de trazas para la aplicación.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Verificación Formal",
+          "Agentes Autónomos",
+          "Seguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-08T18:58:24Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.09684",
+      "rank": 1,
+      "title": "From Pareto to Preference: Personalized Test-Time Scaling via Amortized Agentic Policy Discovery",
+      "authors": [
+        "Xinglin Wang",
+        "Zishen Liu",
+        "Tong Zheng",
+        "Shaoxiong Feng"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-07",
+      "url": "https://arxiv.org/abs/2610.09684",
+      "pdf_url": "https://arxiv.org/pdf/2610.09684",
+      "score": 71,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Test-time scaling (TTS) improves the reasoning capabilities of large language models by allocating additional inference computation. Existing approaches to improving TTS efficiency largely optimize accuracy against one resource dimension at a time, advancing either the accuracy--cost or accuracy--latency Pareto frontier. Yet user requirements are multidimensional: users may specify accuracy, latency, and inference-cost requirements jointly, and different requirements can favor different controllers. We formulate Personalized Test-Time Scaling as discovering executable controllers that maximize the joint satisfaction rate of user-specific requirements. To reduce the overhead of repeated policy discovery for new user profiles, we propose PersonTTS, an amortized agentic policy-discovery framework that reuses prior search experience through requirement-matched controller initialization and source-distilled procedural guidance, while retaining target-profile evaluation for every candidate. Experiments on AIME and HMMT show that PersonTTS substantially outperforms strong TTS baselines in joint requirement satisfaction on unseen user profiles and held-out problems. Under the same candidate-evaluation budget, cross-user experience reuse further improves policy quality while substantially reducing discovery-agent time and cost.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Personaliza el escalado de modelos de lenguaje en tiempo de inferencia para cumplir requisitos múltiples de usuario de forma eficiente.",
+        "problema": "Los métodos actuales de escalado en tiempo de inferencia (TTS) optimizan una sola métrica (precisión, coste o latencia) a la vez, pero los usuarios tienen requisitos multidimensionales y específicos.",
+        "propuesta": "PersonTTS, un marco de descubrimiento de políticas amortizadas que aprende a generar controladores eficientes para requisitos de usuario personalizados, reutilizando la experiencia de búsquedas previas para acelerar el proceso.",
+        "resultados": "PersonTTS supera significativamente a las bases de comparación en la satisfacción de requisitos conjuntos en perfiles de usuario y problemas no vistos. La reutilización de experiencia mejora la calidad de la política y reduce el tiempo y coste del agente de descubrimiento.",
+        "por_que_importa": "Permite adaptar la inferencia de modelos de lenguaje a las necesidades específicas de cada usuario (precisión, coste, latencia) de manera más eficiente, mejorando la experiencia y reduciendo recursos computacionales.",
+        "tags": [
+          "LLMs",
+          "Optimización",
+          "Personalización",
+          "Inferencia",
+          "Eficiencia"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-08T18:58:33Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.07967",
+      "rank": 2,
+      "title": "DecepEval: A Benchmark for Evaluating Deception in LLM Agents",
+      "authors": [
+        "Yiming Xu",
+        "Hongyue Yu",
+        "Beihua Yang",
+        "Zihan Chen"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-06",
+      "url": "https://arxiv.org/abs/2610.07967",
+      "pdf_url": "https://arxiv.org/pdf/2610.07967",
+      "score": 58,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "As large language model (LLM) agents become increasingly autonomous, they may pursue task performance through deception, raising concerns about their reliable deployment. Existing evaluations show that LLM agents can deceive, but often examine isolated scenarios or narrowly defined conditions, limiting systematic understanding of when deception becomes more likely. To address this gap, we introduce DecepEval, a benchmark comprising 1,532 instances across 3 task families and 28 professional scenarios. Drawing on classical fraud theories, we propose the LLM Deception Diamond framework, which characterizes four external conditions that may induce deception: pressure, incentive, opportunity, and conflict. DecepEval pairs neutral and induced versions of each instance to measure condition-dependent changes in deception rates, while explicit task facts and observable agent behavior help distinguish deception from capability-related errors. Evaluations of nine frontier LLMs show that inducements increase deception across models and task families, even among models with low baseline deception rates. DecepEval makes these vulnerabilities measurable, providing a shared benchmark for progress toward trustworthy artificial intelligence.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "DecepEval mide la tendencia de los LLMs a engañar, revelando que las presiones externas aumentan significativamente su deshonestidad.",
+        "problema": "Los agentes basados en LLMs pueden engañar para cumplir tareas, pero no se comprende sistemáticamente cuándo o por qué ocurre esto, dificultando su despliegue seguro.",
+        "propuesta": "Se introduce DecepEval, un benchmark con 1532 instancias y el marco 'LLM Deception Diamond' (presión, incentivo, oportunidad, conflicto) para medir la deshonestidad de los LLMs bajo diferentes condiciones inducidas.",
+        "resultados": "Las inducidas aumentan la deshonestidad en los 9 LLMs evaluados, incluso en aquellos con bajas tasas iniciales. El resumen no especifica porcentajes exactos de aumento.",
+        "por_que_importa": "Permite evaluar y mitigar la deshonestidad de los LLMs, un paso crucial para construir sistemas de IA confiables y seguros en el mundo real.",
+        "tags": [
+          "LLMs",
+          "Decepción",
+          "Evaluación",
+          "Ciberseguridad",
+          "IA Confiable",
+          "Benchmark"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-08T18:58:42Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.10114",
+      "rank": 3,
+      "title": "Mechanics of Long-Context Hybrid Models Part 1.1: From Hybrid Attention to Hybrid Position",
+      "authors": [
+        "Xiaoran Liu",
+        "Ziwei He",
+        "Xipeng Qiu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-07",
+      "url": "https://arxiv.org/abs/2610.10114",
+      "pdf_url": "https://arxiv.org/pdf/2610.10114",
+      "score": 57,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "The architectural design of Large Language Models (LLMs) is shifting from traditional full-attention-only models to hybrid models, which combine different attention modules to improve long-context efficiency and performance in length extrapolation and context extension. To explain why hybrid models work and how to design them better, we propose Mechanics of Long-Context Hybrid Models. As Part 1.1 of this series, we begin with hybrids of full attention and either sliding-window attention (SWA) or gated variants of linear attention (LA), represented by GLA and GDN. We first observe a Seesaw Effect in Context Extension: LA hybrids benefit more from long-context continual pretraining, whereas SWA hybrids perform better under length extrapolation. We attribute this behavior to differences in the positional inductive biases induced by these attention mechanisms. We find that SWA hybrids suffer from a Short-Context Learning Trap, Short-Window Weariness, and Long-Window Laziness, and require extended windows to enhance performance in continual long-context pretraining. For LA hybrids, we summarize the Matthew Effect of Hybrid Position Extrapolation and propose Sliding-Window Linear Attention, achieving 16$\\times$ training-free length extrapolation while maintaining 100\\% accuracy on NIAH-SK1 in 64k context length.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los modelos de lenguaje híbridos combinan atenciones para manejar contextos largos de forma más eficiente y precisa.",
+        "problema": "Los modelos de lenguaje tradicionales con atención completa tienen dificultades para procesar y extender contextos muy largos de manera eficiente. Los modelos híbridos que combinan diferentes mecanismos de atención (como atención de ventana deslizante o atención lineal) buscan resolver esto.",
+        "propuesta": "Se propone un marco para entender los modelos híbridos de atención (atención completa con atención de ventana deslizante o atención lineal) y sus mecanismos posicionales. Se introduce la 'Atención Lineal de Ventana Deslizante' para mejorar la extrapolación de longitud.",
+        "resultados": "La nueva 'Atención Lineal de Ventana Deslizante' logra una extrapolación de longitud 16x sin entrenamiento adicional, manteniendo el 100% de precisión en NIAH-SK1 con 64k de longitud de contexto. Se observó un 'Efecto Balancín' donde los modelos de atención lineal prefieren el preentrenamiento continuo de contexto largo, mientras que los de ventana deslizante rinden mejor en extrapolación de longitud.",
+        "por_que_importa": "Mejora la capacidad de los modelos de IA para procesar y generar texto coherente en documentos extensos, crucial para aplicaciones como resúmenes largos, análisis de documentos y chatbots conversacionales.",
+        "tags": [
+          "modelos de lenguaje",
+          "atención híbrida",
+          "contexto largo",
+          "eficiencia",
+          "IA",
+          "procesamiento de lenguaje natural"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-08T18:58:52Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.06293",
+      "rank": 4,
+      "title": "VepAgent: Bridging Causal-Transition via Tool-Augmented Reinforcement Learning for Video Event Prediction",
+      "authors": [
+        "Qiutong Chen",
+        "Yuchan Guo",
+        "Zhenlong Yuan",
+        "Haobo Yang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-05",
+      "url": "https://arxiv.org/abs/2610.06293",
+      "pdf_url": "https://arxiv.org/pdf/2610.06293",
+      "score": 56,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+7)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Multimodal Large Language Models (MLLMs) have demonstrated remarkable potential in video understanding, yet their reliance on retrospective summarization and text-centric priors often limits their ability to bridge unobserved causal transitions when applied to Video Event Prediction (VEP). To address this, we propose VepAgent, an agentic framework that integrates causal-transition reasoning with tool-augmented reinforcement learning (RL) for robust VEP. Unlike prior methods that passively project future trajectories from historical dependencies, our approach explicitly models the logical progression from terminal observed states to future events. Specifically, we first construct futurebench-4K, a high-quality chain-of-thought dataset for supervised fine-tuning (SFT) that effectively bridges the causal-logic gap by structuring the deduction of unobserved intermediate states. Subsequently, we develop a diagnostic tool library integrating state tracking, frame retrieval, and region magnification, enabling the agent to dynamically augment reasoning with external tools to recover missing spatio-temporal evidence and resolve visual ambiguities during inference. Moreover, we propose a composite reward mechanism that jointly optimizes prediction accuracy, causal coherence, and reliable prior, compelling the agent to rely on genuine visual grounding rather than superficial textual similarities. Extensive evaluations on FutureBench and NEPBench datasets demonstrate that our method achieves state-of-the-art performance, significantly outperforming larger MLLMs and validating the empirical effectiveness of our agentic, future-oriented reasoning paradigm.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "VepAgent predice eventos futuros en videos usando razonamiento causal y herramientas externas para superar las limitaciones de los modelos actuales.",
+        "problema": "Los modelos actuales de comprensión de video fallan al predecir eventos futuros porque se basan en resúmenes pasados y razonamiento centrado en texto, sin modelar explícitamente las transiciones causales no observadas.",
+        "propuesta": "Se propone VepAgent, un marco que combina razonamiento de transición causal con aprendizaje por refuerzo aumentado por herramientas. Utiliza un dataset (futurebench-4K) para ajustar modelos y una biblioteca de herramientas (seguimiento de estado, recuperación de frames, magnificación de regiones) para mejorar el razonamiento durante la inferencia. Un mecanismo de recompensa compuesto optimiza la precisión, la coherencia causal y la fiabilidad.",
+        "resultados": "VepAgent alcanza un rendimiento de vanguardia en los datasets FutureBench y NEPBench, superando significativamente a MLLMs más grandes. La efectividad empírica del paradigma de razonamiento agente y orientado al futuro queda validada.",
+        "por_que_importa": "Mejora la capacidad de predecir eventos futuros en videos, crucial para aplicaciones como la conducción autónoma, la vigilancia y la robótica, al abordar las limitaciones de los modelos actuales en el razonamiento causal y la integración de evidencia visual.",
+        "tags": [
+          "predicción de eventos",
+          "razonamiento causal",
+          "aprendizaje por refuerzo",
+          "comprensión de video",
+          "agentes IA",
+          "herramientas externas"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-08T18:59:02Z"
+      }
+    },
+    {
+      "id": "arxiv:2609.39306",
+      "rank": 5,
+      "title": "ReSAIL: Mitigating Collapse in Iterative Agent Self-Distillation",
+      "authors": [
+        "Shengjie Jin",
+        "Hengbo Xu",
+        "Zelong Sun",
+        "YuJie Guo"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-30",
+      "url": "https://arxiv.org/abs/2609.39306",
+      "pdf_url": "https://arxiv.org/pdf/2609.39306",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Iterative self-distillation enables LLM agents to learn from successive deployments, offering a path toward recursive self-improvement (RSI). Yet our experiments with existing methods reveal a collapse in deployment performance across cycles, while task performance with privileged information (PI) also declines. We address this collapse by prioritizing informative interaction steps for distillation and preserving PI-conditioned behavior as the student becomes the next teacher. We introduce Retentive and Selective Augmentation for Iterative Self-Distillation (ReSAIL), a plug-in augmentation for iterative PI-based self-distillation. ReSAIL selects interaction steps where PI most strongly changes the teacher's predictions and balances the resulting distillation losses across trajectories. It also regularizes the student's PI-conditioned output distributions toward those of the frozen teacher at selected and unselected steps to preserve PI-conditioned behavior for supervision in the next cycle. On ALFWorld and TextCraft, ReSAIL sustains substantial gains across model scales over three cycles, with an average absolute gain of 22.5% in final-cycle success rates when added to self-distillation baselines. Sensitivity-guided selection of offline data also improves action prediction accuracy for multimodal GUI agents on AITZ. These findings provide the first evidence that a more robust learning mechanism can effectively mitigate performance collapse in iterative agent self-distillation over deployment trajectories.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "ReSAIL previene el colapso de rendimiento en agentes LLM que aprenden de sí mismos iterativamente, mejorando su mejora recursiva.",
+        "problema": "Los métodos actuales de auto-destilación iterativa en agentes LLM sufren un colapso de rendimiento y una degradación de la tarea a medida que aprenden de despliegues sucesivos.",
+        "propuesta": "Se introduce ReSAIL, una técnica que prioriza los pasos de interacción informativos para la destilación y preserva el comportamiento condicionado por información privilegiada (PI) del agente.",
+        "resultados": "ReSAIL mantiene ganancias sustanciales en ALFWorld y TextCraft a lo largo de tres ciclos, con una mejora promedio del 22.5% en las tasas de éxito. También mejora la predicción de acciones en agentes GUI multimodales.",
+        "por_que_importa": "Mitiga el colapso de rendimiento en el aprendizaje iterativo de agentes, abriendo la puerta a una mejora continua y más robusta de los LLM en aplicaciones prácticas.",
+        "tags": [
+          "agentes LLM",
+          "auto-destilación",
+          "mejora recursiva",
+          "ciberseguridad",
+          "rendimiento"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-08T18:59:11Z"
+      }
+    }
+  ],
+  "generated_at": "2026-10-08T18:59:11Z"
+}
