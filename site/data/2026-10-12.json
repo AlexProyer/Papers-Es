@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-12",
+  "report_type": "filtrado",
+  "evaluated": 30,
+  "selected": 2,
+  "papers": [
+    {
+      "id": "arxiv:2609.39566",
+      "rank": 1,
+      "title": "From Given to Gathered Evidence: Agentic Learning for Longitudinal Medical Reasoning",
+      "authors": [
+        "Minye Shao",
+        "Chaohui Yu",
+        "Yixuan Wu",
+        "Fan Wang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-09-30",
+      "url": "https://arxiv.org/abs/2609.39566",
+      "pdf_url": "https://arxiv.org/pdf/2609.39566",
+      "score": 59,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Foundation models can serve as clinical agents through tool-use harnesses. However, conventional medical benchmarks assess reasoning over preselected evidence rather than the ability to seek it across clinical records and longitudinal imaging. We propose CASE: a series of role-specific Clinical Agents for Seeking Evidence, together with a tool-use harness and an agentic post-training framework for compact vision-language policy models. We further introduce a longitudinal multimodal benchmark built on UK Biobank, comprising 50,401 clinical questions derived from real-world ICD-10-coded diagnoses of 4,739 participants. Each question links to a patient-specific environment containing clinical context and multi-sequence MRI from baseline and follow-up visits, where agents autonomously select which visits, organs, modalities, slices, and specialist tools to inspect and compare. Supervised fine-tuning transfers evidence-seeking workflows from 14,734 frontier-model interaction trajectories, followed by agentic reinforcement learning on the learner's own environment interactions. Privileged on-policy self-distillation and rubric-based LLM feedback refine evidence-to-conclusion reasoning without prescribing tool sequences. Experiments show that CASE moves beyond question-answer imitation toward transferable investigation policies, strengthening evidence-grounded longitudinal reasoning. Under matched evaluation conditions, our Qwen3-VL-8B based agent achieves over 16% and 10% relative improvements in answer accuracy over GPT-5.4 and Claude Opus 4.8. Code will be available at https://github.com/VinyehShaw/CASE.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Nuevos agentes IA aprenden a buscar y analizar evidencia médica longitudinal para mejorar el razonamiento clínico.",
+        "problema": "Los modelos de IA actuales para medicina evalúan el razonamiento sobre evidencia preseleccionada, no la habilidad de buscarla activamente en registros clínicos e imágenes a lo largo del tiempo.",
+        "propuesta": "Se propone CASE, un marco de agentes de IA que aprenden a buscar evidencia médica de forma autónoma en registros longitudinales y multimodales (clínicos, MRI) usando un 'harness' de herramientas y un entrenamiento post-supervisado y por refuerzo.",
+        "resultados": "El agente basado en Qwen3-VL-8B, entrenado con CASE, mejora la precisión de las respuestas en más de un 16% y 10% comparado con GPT-5.4 y Claude Opus 4.8, respectivamente, demostrando políticas de investigación transferibles.",
+        "por_que_importa": "Permite a los modelos de IA no solo responder preguntas médicas, sino también investigar activamente y razonar sobre datos de pacientes a lo largo del tiempo, acercándose a la práctica clínica real.",
+        "tags": [
+          "IA médica",
+          "razonamiento longitudinal",
+          "búsqueda de evidencia",
+          "modelos fundacionales",
+          "ciberseguridad clínica",
+          "aprendizaje por refuerzo"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-12T21:20:24Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.12341",
+      "rank": 2,
+      "title": "Can AI Agents Learn Their Way to the Top? Evaluating Heuristic Learning in a Long-Running Game Agent Competition",
+      "authors": [
+        "Kaisen Yang",
+        "Qingle Liu",
+        "Kejin Wang",
+        "Yicheng Zhao"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-08",
+      "url": "https://arxiv.org/abs/2610.12341",
+      "pdf_url": "https://arxiv.org/pdf/2610.12341",
+      "score": 55,
+      "topics": [
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: AI agents, adversarial ML"
+      ],
+      "abstract_en": "Adversarial games have driven advances from heuristic search to reinforcement learning, yet learning and adapting strategies from limited samples remain challenging. AI agents offer an alternative by turning game experience into revisions of executable policies. Building on heuristic learning (HL), we formalize Adversarial Heuristic Learning (AHL), a paradigm that uses AI agents as learning engines to refine game policies and supporting software while keeping model weights fixed. We introduce AAArena, a benchmark comprising 12 authentic adversarial games and 1,920 archived human programs, with an evaluation protocol modeled on real-world game competitions. Agents interpret rules, choose opponents, analyze replays, and revise game agents to achieve their highest ranking within fixed match and evaluation budgets. We evaluate \\val{completedmodels} model and harness configurations: Opus5.5 with Claude Code earns 6 gold medals, while no evaluated configuration tops the remaining 6 human ladders. Performance is generally weaker in games with more complex rule specifications. Further experiments show that opponent selection and dense feedback support policy improvement, and that agents learn from both on-policy replays of their own matches and off-policy replays of other players' matches. These results highlight HL's potential in adversarial games and identify persistent challenges in game understanding, strategy implementation, and long-horizon policy development.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Agentes de IA aprenden y mejoran estrategias en juegos competitivos, refinando políticas sin modificar modelos base.",
+        "problema": "Desafío de que los agentes de IA aprendan y adapten estrategias de forma eficiente en juegos adversariales con muestras limitadas, a pesar de los avances en búsqueda heurística y aprendizaje por refuerzo.",
+        "propuesta": "Se formaliza el Aprendizaje Heurístico Adversarial (AHL), utilizando agentes de IA para refinar políticas de juego y software de soporte, manteniendo fijos los pesos del modelo. Se introduce AAArena, un benchmark con 12 juegos y 1.920 programas humanos archivados, evaluando agentes que interpretan reglas, eligen oponentes, analizan repeticiones y revisan sus propias políticas.",
+        "resultados": "Opus5.5 con Claude Code obtuvo 6 medallas de oro. El rendimiento fue generalmente menor en juegos con reglas más complejas. La selección de oponentes y la retroalimentación densa mejoraron las políticas. Los agentes aprendieron de repeticiones propias (on-policy) y de otros jugadores (off-policy).",
+        "por_que_importa": "Demuestra el potencial del aprendizaje heurístico en juegos adversariales y señala áreas clave para futuras mejoras en comprensión de juegos, implementación de estrategias y desarrollo de políticas a largo plazo.",
+        "tags": [
+          "IA",
+          "Aprendizaje Automático",
+          "Juegos Adversariales",
+          "Ciberseguridad",
+          "Estrategia"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-12T21:20:33Z"
+      }
+    }
+  ],
+  "generated_at": "2026-10-12T21:20:33Z"
+}

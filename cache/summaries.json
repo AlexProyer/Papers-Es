@@ -9806,5 +9806,38 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-10-09T18:29:24Z"
+  },
+  "arxiv:2609.39566": {
+    "tldr": "Nuevos agentes IA aprenden a buscar y analizar evidencia médica longitudinal para mejorar el razonamiento clínico.",
+    "problema": "Los modelos de IA actuales para medicina evalúan el razonamiento sobre evidencia preseleccionada, no la habilidad de buscarla activamente en registros clínicos e imágenes a lo largo del tiempo.",
+    "propuesta": "Se propone CASE, un marco de agentes de IA que aprenden a buscar evidencia médica de forma autónoma en registros longitudinales y multimodales (clínicos, MRI) usando un 'harness' de herramientas y un entrenamiento post-supervisado y por refuerzo.",
+    "resultados": "El agente basado en Qwen3-VL-8B, entrenado con CASE, mejora la precisión de las respuestas en más de un 16% y 10% comparado con GPT-5.4 y Claude Opus 4.8, respectivamente, demostrando políticas de investigación transferibles.",
+    "por_que_importa": "Permite a los modelos de IA no solo responder preguntas médicas, sino también investigar activamente y razonar sobre datos de pacientes a lo largo del tiempo, acercándose a la práctica clínica real.",
+    "tags": [
+      "IA médica",
+      "razonamiento longitudinal",
+      "búsqueda de evidencia",
+      "modelos fundacionales",
+      "ciberseguridad clínica",
+      "aprendizaje por refuerzo"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-12T21:20:24Z"
+  },
+  "arxiv:2610.12341": {
+    "tldr": "Agentes de IA aprenden y mejoran estrategias en juegos competitivos, refinando políticas sin modificar modelos base.",
+    "problema": "Desafío de que los agentes de IA aprendan y adapten estrategias de forma eficiente en juegos adversariales con muestras limitadas, a pesar de los avances en búsqueda heurística y aprendizaje por refuerzo.",
+    "propuesta": "Se formaliza el Aprendizaje Heurístico Adversarial (AHL), utilizando agentes de IA para refinar políticas de juego y software de soporte, manteniendo fijos los pesos del modelo. Se introduce AAArena, un benchmark con 12 juegos y 1.920 programas humanos archivados, evaluando agentes que interpretan reglas, eligen oponentes, analizan repeticiones y revisan sus propias políticas.",
+    "resultados": "Opus5.5 con Claude Code obtuvo 6 medallas de oro. El rendimiento fue generalmente menor en juegos con reglas más complejas. La selección de oponentes y la retroalimentación densa mejoraron las políticas. Los agentes aprendieron de repeticiones propias (on-policy) y de otros jugadores (off-policy).",
+    "por_que_importa": "Demuestra el potencial del aprendizaje heurístico en juegos adversariales y señala áreas clave para futuras mejoras en comprensión de juegos, implementación de estrategias y desarrollo de políticas a largo plazo.",
+    "tags": [
+      "IA",
+      "Aprendizaje Automático",
+      "Juegos Adversariales",
+      "Ciberseguridad",
+      "Estrategia"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-12T21:20:33Z"
   }
 }
