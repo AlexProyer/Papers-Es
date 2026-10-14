@@ -1,0 +1,556 @@
+{
+  "date": "2026-10-14",
+  "report_type": "filtrado",
+  "evaluated": 176,
+  "selected": 12,
+  "papers": [
+    {
+      "id": "arxiv:2610.18457v1",
+      "rank": 1,
+      "title": "Kairos: Transactional Security Enforcement at the System Boundary for LLM Agents",
+      "authors": [
+        "Kristoffer Hempel",
+        "Nils Loose",
+        "Lorenzo Cavallaro",
+        "Thomas Eisenbarth"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-13",
+      "url": "https://arxiv.org/abs/2610.18457v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.18457v1",
+      "score": 58,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "Large language model (LLM) agents are becoming an integral part of the software development lifecycle, and the capabilities granted to them allow an agent to act with the user's authority on any resource it can access. The reach that gives an agent its utility is equally available to an attacker who can steer it. Anything an agent ingests can carry an injected instruction, and since the model does not reliably distinguish instructions from data, indirect prompt injection should be mitigated...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Kairos protege a los agentes LLM de inyecciones de prompts maliciosas en la frontera del sistema, asegurando transacciones.",
+        "problema": "Los agentes LLM, al tener acceso a recursos, son vulnerables a ataques de inyección de prompts indirectos, donde datos ingeridos pueden contener instrucciones maliciosas que el modelo no distingue de datos legítimos.",
+        "propuesta": "Se propone Kairos, un sistema que actúa en la frontera del sistema para aplicar seguridad transaccional, separando las interacciones del agente LLM y verificando las instrucciones antes de su ejecución.",
+        "resultados": "El resumen no especifica resultados numéricos, pero la propuesta busca mitigar la inyección de prompts indirectos.",
+        "por_que_importa": "Asegura que los agentes LLM, cada vez más integrados en el desarrollo de software, no sean explotados para ejecutar acciones no deseadas o maliciosas, protegiendo los sistemas que controlan.",
+        "tags": [
+          "agentes LLM",
+          "ciberseguridad",
+          "inyección de prompts",
+          "seguridad transaccional",
+          "frontera del sistema"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-14T17:25:15Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.18430v1",
+      "rank": 2,
+      "title": "FedGraph: Defending Federated Large Language Model Fine-Tuning Against Backdoor Attacks via Graph-Based Aggregation",
+      "authors": [
+        "Xi Chen",
+        "Chunyi Zhou",
+        "Rui Zeng",
+        "Xiaogang Xu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-13",
+      "url": "https://arxiv.org/abs/2610.18430v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.18430v1",
+      "score": 58,
+      "topics": [
+        "anomaly detection",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: anomaly detection, LLM, adversarial ML"
+      ],
+      "abstract_en": "Federated fine-tuning of large language models (LLMs) allows multiple clients to collaboratively adapt models without sharing raw data, offering strong privacy benefits. However, this setting is highly vulnerable to backdoor attacks, in which malicious clients manipulate their updates to induce targeted behaviors while maintaining normal performance on benign inputs. In this work, we make a key observation specific to federated LLM fine-tuning: malicious clients tend to exhibit strong consistency in their model updates, whereas benign clients produce more diverse and...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Protege el ajuste fino de modelos de lenguaje grandes en entornos federados contra ataques de puerta trasera usando agregación basada en grafos.",
+        "problema": "El ajuste fino federado de modelos de lenguaje grandes (LLMs) es vulnerable a ataques de puerta trasera, donde clientes maliciosos manipulan sus actualizaciones para introducir comportamientos no deseados sin afectar el rendimiento normal.",
+        "propuesta": "Proponemos FedGraph, un método que utiliza la agregación basada en grafos para identificar y mitigar las actualizaciones de modelos inconsistentes y maliciosas en el ajuste fino federado de LLMs.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que FedGraph defiende eficazmente contra ataques de puerta trasera.",
+        "por_que_importa": "Permite un ajuste fino colaborativo y privado de LLMs más seguro, protegiendo contra la manipulación maliciosa y garantizando la integridad del modelo.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Privacidad",
+          "Modelos de Lenguaje",
+          "Ajuste Fino Federado",
+          "Ataques de Puerta Trasera"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-14T17:25:24Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.18594v1",
+      "rank": 3,
+      "title": "Autonomous Cyber Operations Gym for Training and Evaluating AI Models for Defence",
+      "authors": [
+        "Tobias Hürten",
+        "Johannes F. Loevenich",
+        "Florian Spelter",
+        "Erik Adler"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-13",
+      "url": "https://arxiv.org/abs/2610.18594v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.18594v1",
+      "score": 56,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: cybersecurity, vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "This paper proposes an Autonomous Cyber Operations (ACO) gym, a unified framework integrating high-fidelity network emulation, realistic user behaviour modelling for benign network traffic and adversarial profiles, and the generation of cybersecurity scenarios through open toolkits. By supporting live and deferred feature extraction at the packet and flow levels, the gym facilitates the creation of labelled synthetic datasets for training Deep Neural Network (DNN)-based Intrusion Detection Systems (IDSs), as well as developing and evaluating modular components for autonomous defence agents...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Entrena y evalúa IA para ciberdefensa en un entorno simulado realista y autónomo.",
+        "problema": "La falta de entornos realistas y controlados para entrenar y evaluar modelos de IA en ciberseguridad, especialmente para sistemas de detección de intrusiones y agentes de defensa autónomos.",
+        "propuesta": "Se propone un 'gimnasio' de Operaciones Cibernéticas Autónomas (ACO gym), un marco unificado que combina emulación de red de alta fidelidad, modelado de comportamiento de usuarios (normales y adversarios) y generación de escenarios de ciberseguridad. Soporta la extracción de características a nivel de paquete y flujo para crear conjuntos de datos sintéticos etiquetados.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que el gimnasio facilita la creación de datasets y el desarrollo/evaluación de componentes de defensa autónomos para sistemas de detección de intrusiones basados en redes neuronales profundas (DNN-IDS).",
+        "por_que_importa": "Permite desarrollar y probar de forma más efectiva y segura sistemas de defensa basados en IA contra ciberataques, mejorando la preparación y la capacidad de respuesta ante amenazas.",
+        "tags": [
+          "ciberseguridad",
+          "inteligencia artificial",
+          "entrenamiento",
+          "simulación",
+          "defensa autónoma",
+          "detección de intrusiones"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-14T17:25:34Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.18508v1",
+      "rank": 4,
+      "title": "Towards Safe Autonomy for Computer Use",
+      "authors": [
+        "Dominik Seip",
+        "Bartol Markovinović",
+        "Matthias Hein"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-13",
+      "url": "https://arxiv.org/abs/2610.18508v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.18508v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "The safety of LLM-based agents currently rests on alignment training and safety classifiers, neither of which can rule out that a sophisticated indirect prompt injection (IPI) goes through and causes significant harm. Recent work therefore builds agents with information-flow guarantees that rely on structured tool interfaces to interact with the environment. Computer Use Agents (CUAs) act visually on the computer screen, which does not provide a boundary between trusted first-party interfaces and untrusted, potentially attacker-authored content. Actions are equally ambiguous:...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Agentes de IA para uso de computadora enfrentan riesgos de seguridad por inyecciones de prompts; se proponen interfaces seguras.",
+        "problema": "Los agentes de IA que interactúan visualmente con la pantalla de una computadora son vulnerables a inyecciones de prompts indirectas (IPI) que pueden causar daños significativos, ya que las interfaces visuales no distinguen entre contenido confiable y malicioso.",
+        "propuesta": "Desarrollar agentes de IA con garantías de flujo de información, utilizando interfaces de herramientas estructuradas para interactuar con el entorno, superando las limitaciones de las interfaces visuales directas.",
+        "resultados": "El resumen no especifica resultados numéricos, pero la propuesta busca establecer garantías de seguridad para la autonomía de los agentes de IA en el uso de computadoras.",
+        "por_que_importa": "Asegura que los agentes de IA que operan en sistemas informáticos sean confiables y no puedan ser explotados para realizar acciones perjudiciales, protegiendo a los usuarios y sistemas.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Agentes Autónomos",
+          "Seguridad de LLM",
+          "Inyección de Prompts"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-14T17:25:43Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.18262v1",
+      "rank": 5,
+      "title": "Encrypted Skills Can Become New Security Exploits If AI Agents Know How to Decipher",
+      "authors": [
+        "Yan-Lun Chen",
+        "Pin-Yu Chen",
+        "Chia-Mu Yu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-13",
+      "url": "https://arxiv.org/abs/2610.18262v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.18262v1",
+      "score": 53,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Third-party skills can expose LLM agents to malicious instructions hidden by encoding. We introduce Ciphered Skill Injection (CSI), which embeds such instructions in skill files for agents to decode and follow. We evaluate Caesar and layered variants across eight models and 139 injection-task pairs, separating instruction recovery from attack success. In the primary setting with shortened skills, the variants achieve attack success rates of up to 47.5% and 40.3%, respectively. Successful decoding does not guarantee attack success, and layering has...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Las 'skills' encriptadas de IA pueden ser explotadas si los agentes aprenden a descifrarlas, abriendo nuevas vulnerabilidades de seguridad.",
+        "problema": "Las 'skills' (habilidades) de terceros para agentes de IA pueden contener instrucciones maliciosas ocultas mediante codificación, lo que representa un riesgo de seguridad si el agente las decodifica y ejecuta.",
+        "propuesta": "Se introduce Ciphered Skill Injection (CSI), una técnica que incrusta instrucciones maliciosas en archivos de 'skill' para que los agentes de IA las decodifiquen y sigan. Se evalúan variantes como Caesar y 'layered'.",
+        "resultados": "Las variantes de CSI lograron tasas de éxito de ataque de hasta el 47.5% y 40.3% en un escenario con 'skills' acortadas, evaluado en ocho modelos y 139 pares de tareas de inyección. El éxito en la decodificación no garantiza el éxito del ataque.",
+        "por_que_importa": "Demuestra que las 'skills' encriptadas, diseñadas para ser benignas, pueden convertirse en vectores de ataque si los agentes de IA son capaces de descifrar la información oculta, lo que requiere nuevas medidas de seguridad para la validación de 'skills'.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Vulnerabilidades",
+          "Agentes de IA",
+          "Encriptación",
+          "Seguridad de LLM"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-14T17:25:53Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.17907v1",
+      "rank": 6,
+      "title": "SpecCloak: Probing Harmful Code Generation through Engineering Specifications",
+      "authors": [
+        "Wenbin Chen",
+        "Jiexin Wang",
+        "Guanting Wu",
+        "Jiaxi Liang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-10-13",
+      "url": "https://arxiv.org/abs/2610.17907v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.17907v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "The code generation capabilities of large language models (LLMs) can equally be misused to implement harmful functionality, underscoring the need to understand their safety behavior in response to programming requests. While request phrasing is known to influence refusal, it remains unclear whether the form in which coding task requirements are stated affects the refusal process for malicious code generation. We introduce PseudoSpec, a template that organizes functional requirements as engineering specifications, and investigate its effects through controlled comparisons, representation analysis,...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "SpecCloak detecta la generación de código malicioso por LLMs al estructurar las peticiones como especificaciones de ingeniería.",
+        "problema": "Los LLMs pueden generar código dañino, y no se sabe si la forma en que se presentan los requisitos de la tarea afecta su negativa a hacerlo.",
+        "propuesta": "Se introduce PseudoSpec, una plantilla que organiza los requisitos funcionales como especificaciones de ingeniería, y se investigan sus efectos en la generación de código malicioso.",
+        "resultados": "El resumen no especifica los resultados numéricos, pero investiga los efectos de la plantilla PseudoSpec en el proceso de negativa a generar código malicioso.",
+        "por_que_importa": "Comprender cómo la formulación de las peticiones afecta la seguridad de los LLMs es crucial para prevenir el mal uso de sus capacidades de generación de código.",
+        "tags": [
+          "LLMs",
+          "Generación de Código",
+          "Seguridad",
+          "Ciberseguridad",
+          "Ingeniería de Software"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-14T17:26:02Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.18326v1",
+      "rank": 7,
+      "title": "Jev-Guard: Fast Routing and Auditing Agent Actions over Editable Policy Trees",
+      "authors": [
+        "Wenbin Hu",
+        "Huihao Jing",
+        "Haochen Shi",
+        "Yuxuan Liu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-13",
+      "url": "https://arxiv.org/abs/2610.18326v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.18326v1",
+      "score": 50,
+      "topics": [
+        "cybersecurity",
+        "LLM",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🎯 temas: cybersecurity, LLM, compliance & audit"
+      ],
+      "abstract_en": "Agent harnesses require a low-latency guardrail model together with customizable audit policies. However, deploying an auto-regressive guardrail model remains challenging: such models incur high inference latency and are often poorly aligned with customized policies. To address these problems, we present Jev-Guard, a unified model for safety classification and policy routing. We further construct a policy tree over which Jev-Guard performs routing, spanning diverse domains including content moderation, cybersecurity, privacy, and legal compliance. Specifically, Jev-Guard first navigates the policy tree to...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Jev-Guard acelera la seguridad y auditoría de acciones de agentes IA con un modelo unificado y árboles de políticas personalizables.",
+        "problema": "Los modelos de seguridad para agentes IA (guardrails) son lentos y difíciles de alinear con políticas personalizadas, lo que dificulta su despliegue seguro y adaptable.",
+        "propuesta": "Se propone Jev-Guard, un modelo unificado que realiza clasificación de seguridad y enrutamiento sobre un árbol de políticas editable. Este árbol abarca dominios como moderación de contenido, ciberseguridad y privacidad.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero afirma que Jev-Guard unifica la clasificación y el enrutamiento, y permite la navegación por un árbol de políticas para diversas aplicaciones.",
+        "por_que_importa": "Permite desplegar sistemas de IA más seguros, rápidos y adaptables a normativas específicas, mejorando la confianza y el control sobre las acciones de los agentes.",
+        "tags": [
+          "IA segura",
+          "ciberseguridad",
+          "políticas personalizadas",
+          "enrutamiento",
+          "auditoría"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-14T17:26:11Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.18007v1",
+      "rank": 8,
+      "title": "Cost-Efficient Privacy Enforcement for Email-Generating LLM Agents under Strategic Information Requests",
+      "authors": [
+        "Qikun Cai",
+        "Tao Huang",
+        "Chen Hou"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-13",
+      "url": "https://arxiv.org/abs/2610.18007v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.18007v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "LLM agents now act as delegated communication intermediaries: they read private context, draft messages, and send externally visible emails on behalf of a user. Existing checker-repair defenses can reduce inappropriate disclosure, but they rely on repeated calls to a remote action LLM (the model that drafts and repairs the email) and a remote checker LLM whenever a draft fails validation. This creates a cost problem as well as a privacy problem, especially when a requester strategically asks for exact values,...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Defiende la privacidad de correos generados por IA de forma económica, incluso ante peticiones estratégicas de información.",
+        "problema": "Los agentes LLM que generan correos pueden filtrar información privada. Las defensas actuales son costosas por las múltiples interacciones con el LLM, especialmente ante peticiones estratégicas que buscan extraer datos específicos.",
+        "propuesta": "Propone un método para aplicar la privacidad de forma eficiente en costes, reduciendo las llamadas al LLM de reparación y verificación, incluso cuando las solicitudes de información son estratégicas.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que la propuesta reduce el coste y mejora la privacidad frente a enfoques previos.",
+        "por_que_importa": "Permite usar agentes LLM para comunicaciones por correo de forma segura y asequible, protegiendo la información sensible del usuario sin incurrir en gastos excesivos.",
+        "tags": [
+          "IA",
+          "Privacidad",
+          "Ciberseguridad",
+          "LLM",
+          "Costes",
+          "Email"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-14T17:26:21Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.17953",
+      "rank": 1,
+      "title": "Agent-Reflex: Teaching Language Agents to Act Reflectively",
+      "authors": [
+        "Guanting Dong",
+        "Xinyu Yang",
+        "Jiajie Jin",
+        "Yuyang Hu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-13",
+      "url": "https://arxiv.org/abs/2610.17953",
+      "pdf_url": "https://arxiv.org/pdf/2610.17953",
+      "score": 71,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Large language models have evolved from single-turn chatbots into interactive agents capable of long-horizon reasoning. In real deployments, MCP tool services can return noisy feedback and users may intervene to correct the agent, but existing methods provide limited supervision for reflection learning and failure recovery. To bridge this gap, we propose Agent-Reflex, a general training framework for incentivizing proactive reflection in agents. Specifically, Agent-Reflex comprises three stages. First, Environment Reflection Skill Discovery (RSD) injects grounded tool-feedback perturbations into environment scaling,...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Agentes de IA aprenden a reflexionar sobre sus errores y a recuperarse de fallos con retroalimentación ruidosa o intervención del usuario.",
+        "problema": "Los agentes de IA actuales tienen dificultades para aprender a reflexionar sobre sus acciones y recuperarse de errores cuando reciben retroalimentación imperfecta o intervenciones del usuario.",
+        "propuesta": "Se propone Agent-Reflex, un marco de entrenamiento que enseña a los agentes a reflexionar proactivamente. Utiliza la Descubierta de Habilidades de Reflexión del Entorno (RSD) para introducir perturbaciones controladas en la retroalimentación de herramientas y simular escenarios de fallo.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que el marco permite a los agentes aprender a reflexionar y recuperarse de fallos.",
+        "por_que_importa": "Permite crear agentes de IA más robustos y fiables en entornos reales, capaces de manejar imprecisiones y correcciones sin degradar su rendimiento.",
+        "tags": [
+          "agentes de IA",
+          "reflexión",
+          "recuperación de fallos",
+          "aprendizaje por refuerzo",
+          "robustez"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-14T17:26:30Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.18615",
+      "rank": 2,
+      "title": "VideoJev: System One Model for Video Understanding and Interaction",
+      "authors": [
+        "Yuhan Zhu",
+        "Xiangyu Zeng",
+        "Qingyi Si",
+        "Chenxu Yang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-13",
+      "url": "https://arxiv.org/abs/2610.18615",
+      "pdf_url": "https://arxiv.org/pdf/2610.18615",
+      "score": 60,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Visual agents must turn video observations into timely decisions to track progress and choose what to do next. Building on the emerging System One paradigm, we introduce VideoJev, a family of models that cast video understanding and interaction as structured decision tasks. We adapt pretrained multimodal large language models (MLLMs) by replacing autoregressive answer decoding with a shared head that scores temporal intervals and textual options against video evidence. These scores yield event spans or answer choices, unifying temporal grounding...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "VideoJev revoluciona la comprensión de video y la interacción con agentes visuales mediante un modelo unificado.",
+        "problema": "Los agentes visuales necesitan interpretar videos para tomar decisiones oportunas, pero los modelos actuales a menudo tratan la comprensión y la interacción por separado.",
+        "propuesta": "VideoJev, basado en el paradigma System One, adapta modelos de lenguaje multimodales (MLLMs) reemplazando la decodificación autorregresiva por una cabeza compartida que puntúa intervalos temporales y opciones textuales contra la evidencia del video.",
+        "resultados": "El resumen no especifica resultados numéricos, pero indica que el modelo unifica la localización temporal y la selección de respuestas.",
+        "por_que_importa": "Permite a los agentes visuales tomar decisiones más informadas y eficientes al comprender y interactuar con el contenido de video de manera integrada.",
+        "tags": [
+          "comprensión de video",
+          "agentes visuales",
+          "modelos multimodales",
+          "interacción",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-14T17:26:56Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.18356",
+      "rank": 3,
+      "title": "Urbex: Agentic Spatial Grounding for City-Scale 3D Scenes",
+      "authors": [
+        "Yu Wang",
+        "Rui Dai",
+        "Wei Chen",
+        "Yi Wang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-13",
+      "url": "https://arxiv.org/abs/2610.18356",
+      "pdf_url": "https://arxiv.org/pdf/2610.18356",
+      "score": 60,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "City-scale 3D grounding is commonly formulated as candidate ranking, which requires precomputed instance proposals and becomes inefficient in large outdoor scenes. We propose Urbex, an agentic vision-language framework that instead casts grounding as active spatial search. Urbex represents a city-scale 3D scene as an interactive multi-view environment, allowing a VLM agent to query landmarks, zoom into local regions, render oblique views, and commit a grounded bounding box. We optimize this tool-use policy with reinforcement learning on CityRefer, using smooth localization...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Urbex revoluciona la localización 3D a escala urbana con un agente que busca activamente en lugar de clasificar candidatos predefinidos.",
+        "problema": "La localización 3D en ciudades es ineficiente con métodos de clasificación de candidatos, que requieren propuestas precalculadas y fallan en escenas exteriores grandes.",
+        "propuesta": "Urbex es un marco de visión-lenguaje (VLM) que trata la localización como una búsqueda espacial activa. Un agente VLM interactúa con una escena 3D, realizando consultas, zoom, renderizado de vistas y finalmente proponiendo una caja delimitadora.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero demuestra la efectividad del enfoque mediante aprendizaje por refuerzo en el conjunto de datos CityRefer.",
+        "por_que_importa": "Este enfoque mejora significativamente la eficiencia y escalabilidad de la localización 3D en entornos urbanos complejos, abriendo puertas a aplicaciones más robustas en robótica y realidad aumentada.",
+        "tags": [
+          "localización 3D",
+          "agentes VLM",
+          "búsqueda espacial",
+          "ciudades",
+          "ciberseguridad",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-14T17:27:06Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.14224",
+      "rank": 4,
+      "title": "Harness^2: Recursive Agent Harnessing for an Open World",
+      "authors": [
+        "Ruiyao Xu",
+        "Yanfei Chen",
+        "Zhongying CuiZhu",
+        "Bhavana Dalvi Mishra"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-09",
+      "url": "https://arxiv.org/abs/2610.14224",
+      "pdf_url": "https://arxiv.org/pdf/2610.14224",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "LLM agents' capabilities depend not only on their underlying models but also on their execution harnesses. Recursive self-improvement (RSI) offers a promising approach to automatically evolve these harnesses. However, deploying RSI in open-world settings still faces two critical challenges. First, open-world tasks are typically unseen during the harness design phase and novel at test time, leaving no ground-truth verifiers to reliably guide online harness edits. Second, the RSI process remains highly task-specific and fails to generalize to novel scenarios. We...",
+      "abstract_full": false,
+      "summary_es": {
+        "tldr": "Mejora recursiva de agentes LLM para tareas abiertas y novedosas sin supervisión previa.",
+        "problema": "Los agentes LLM actuales fallan en entornos abiertos y novedosos porque sus 'harnesses' (sistemas de ejecución) no se diseñan para lo desconocido y el proceso de mejora no es generalizable.",
+        "propuesta": "Presentamos Harness^2, un método de mejora recursiva de 'harnesses' que permite a los agentes adaptarse y evolucionar en entornos abiertos sin veracidad externa, generalizando a nuevas tareas.",
+        "resultados": "El resumen no especifica resultados numéricos, pero demuestra la capacidad de los agentes para aprender y adaptarse a tareas novedosas.",
+        "por_que_importa": "Permite crear agentes de IA más robustos y adaptables, capaces de operar eficazmente en situaciones del mundo real que no fueron previstas durante su entrenamiento.",
+        "tags": [
+          "agentes LLM",
+          "mejora recursiva",
+          "entornos abiertos",
+          "adaptación",
+          "IA general"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-14T17:27:15Z"
+      }
+    }
+  ],
+  "generated_at": "2026-10-14T17:27:15Z"
+}
