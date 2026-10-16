@@ -10272,5 +10272,88 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-10-15T17:16:01Z"
+  },
+  "arxiv:2610.22292v1": {
+    "tldr": "Entrena LLMs para ser honestos de forma continua, incluso ante preguntas engañosas, mejorando su fiabilidad.",
+    "problema": "Los LLMs, a pesar del entrenamiento, a menudo generan información falsa o no respaldada por el contexto, incluso en situaciones críticas.",
+    "propuesta": "Se introduce CATCH (Continuous Adversarial Training for Consistent Honesty), un método de entrenamiento adversarial continuo que enseña al LLM a dar respuestas honestas y a evitar las deshonestas, preservando sus capacidades generales.",
+    "resultados": "El resumen no especifica resultados numéricos, pero indica que CATCH entrena al modelo hacia la honestidad y lejos de la deshonestidad.",
+    "por_que_importa": "Mejora la fiabilidad de los LLMs en aplicaciones sensibles donde la veracidad de la información es crucial, reduciendo la propagación de desinformación.",
+    "tags": [
+      "LLMs",
+      "Honestidad",
+      "Entrenamiento Adversarial",
+      "Ciberseguridad",
+      "IA Confiable"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-16T16:50:02Z"
+  },
+  "arxiv:2610.22273v1": {
+    "tldr": "Agentes bibliotecarios entrenan LLMs para organizar proactivamente documentos y anticipar futuras consultas de información.",
+    "problema": "Los LLMs tienen dificultades para razonar sobre grandes volúmenes de documentos y los métodos de recuperación actuales son reactivos, creando cuellos de botella en la inferencia.",
+    "propuesta": "Se propone un enfoque de 'curación dirigida anticipatoria' donde los agentes LLM aprenden a reorganizar proactivamente corpus de documentos no estructurados antes de la inferencia para servir eficientemente consultas futuras.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero la propuesta busca mejorar la eficiencia en el servicio de diversas consultas futuras.",
+    "por_que_importa": "Permite a los agentes de IA manejar de manera más eficiente y proactiva grandes cantidades de información, anticipando las necesidades del usuario y mejorando la recuperación de conocimiento.",
+    "tags": [
+      "LLMs",
+      "Agentes IA",
+      "Recuperación de Información",
+      "Gestión de Conocimiento",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-16T16:50:11Z"
+  },
+  "arxiv:2610.21394v1": {
+    "tldr": "Matoi mejora la autorización de agentes IA separando la evidencia reutilizable de la autoridad de ejecución actual y el historial.",
+    "problema": "La autorización de agentes en sistemas distribuidos es compleja, especialmente al reutilizar evidencia de decisiones pasadas sin comprometer la seguridad o la eficiencia.",
+    "propuesta": "Matoi propone un marco para separar la evidencia de consecuencias reutilizable de la autoridad de ejecución y el historial de ocurrencias. Utiliza un contrato consciente de consultas finitas que maneja diversas estructuras de datos y condiciones, permitiendo a los consumidores reutilizar evidencia verificada cuyas observaciones sigan siendo válidas.",
+    "resultados": "Un estudio con 1,440 celdas replicó 144 entradas, demostrando la reutilización de evidencia con bytes de entrada idénticos. El resumen no especifica otros resultados numéricos detallados.",
+    "por_que_importa": "Permite una autorización de agentes más eficiente y segura en sistemas distribuidos al optimizar la reutilización de evidencia verificada, reduciendo la sobrecarga computacional y mejorando la confianza en las decisiones.",
+    "tags": [
+      "autorización de agentes",
+      "evidencia reutilizable",
+      "sistemas distribuidos",
+      "IA",
+      "ciberseguridad",
+      "contratos inteligentes"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-16T16:50:21Z"
+  },
+  "arxiv:2610.21935": {
+    "tldr": "Filtros de defensa para aprender sistemas dinámicos parcialmente observados ante ataques adversarios de forma robusta.",
+    "problema": "Estimar de forma robusta la dinámica de sistemas desconocidos, parcialmente observados y bajo ataque adversario (envenenamiento de datos), un desafío crítico en redes multiagente.",
+    "propuesta": "Un marco de defensa-filtrado que utiliza el conocimiento del diseñador del sistema para identificar sistemas dinámicos lineales parcialmente observados bajo ataques adversarios con una probabilidad de ataque $p<0.5$ en cada instante.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero propone un marco de defensa-filtrado.",
+    "por_que_importa": "Mejora la robustez de los sistemas de control y aprendizaje en redes multiagente frente a ataques de datos, un problema creciente en ciberseguridad.",
+    "tags": [
+      "ciberseguridad",
+      "IA",
+      "sistemas dinámicos",
+      "aprendizaje robusto",
+      "ataques adversarios",
+      "control"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-16T16:50:30Z"
+  },
+  "arxiv:2610.21656": {
+    "tldr": "Data World revoluciona el entrenamiento de agentes de datos creando entornos sintéticos verificables y escalables.",
+    "problema": "El entrenamiento de agentes de datos se ve obstaculizado por la costosa curación de entornos, restricciones de privacidad y la dificultad de verificar hallazgos abiertos sin una verdad generativa conocida.",
+    "propuesta": "Se introduce Data World, un motor multi-agente que sintetiza entornos, tareas y rúbricas a partir de mecanismos explícitos, permitiendo la auditoría independiente y la evaluación basada en preferencias humanas.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero destaca la capacidad de generar entornos, tareas y rúbricas, y la verificación de la recuperabilidad de objetivos.",
+    "por_que_importa": "Permite escalar el entrenamiento de agentes de datos de manera más eficiente y segura, superando las limitaciones de los datos del mundo real y garantizando la fiabilidad de los resultados.",
+    "tags": [
+      "agentes de datos",
+      "entornos sintéticos",
+      "escalabilidad",
+      "verificación",
+      "IA",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-16T16:50:41Z"
   }
 }
