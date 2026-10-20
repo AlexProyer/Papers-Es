@@ -10355,5 +10355,205 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-10-16T16:50:41Z"
+  },
+  "arxiv:2610.25916v1": {
+    "tldr": "Verifica la seguridad del código generado por IA de forma más fiable, evitando vulnerabilidades ocultas.",
+    "problema": "Los modelos de IA que generan código son cada vez más potentes, pero la verificación de su seguridad es un cuello de botella. Los métodos actuales pueden ser engañados por optimizadores que mejoran la métrica de seguridad sin arreglar la vulnerabilidad real.",
+    "propuesta": "Se introduce \\falcon{}, un marco de verificación basado en contraejemplos. Separa la exploración de ataques de la verificación del comportamiento, conectándolos a través de trazas de ejecución del programa.",
+    "resultados": "En la reparación en tiempo de prueba, \\falcon{} logra mejoras sustanciales en seguridad funcional (held-out) frente a otras señales de seguridad. Como recompensa de RL, supera al análisis estático y a las recompensas aprendidas. La combinación con recompensas proxy mejora aún más el rendimiento.",
+    "por_que_importa": "Permite generar código más seguro y fiable, mitigando el riesgo de vulnerabilidades explotables en software desarrollado con IA, sin sacrificar la funcionalidad.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Generación de Código",
+      "Verificación de Software",
+      "Seguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-20T17:23:51Z"
+  },
+  "arxiv:2610.25705v1": {
+    "tldr": "Las habilidades de seguridad en agentes de código con LLM mejoran la detección de vulnerabilidades en el kernel de Linux, pero la evolución guiada por fallos es clave.",
+    "problema": "La efectividad de los agentes de código basados en LLM para detectar vulnerabilidades reales en el kernel de Linux, utilizando habilidades de seguridad predefinidas, es incierta y sus fallos no se comprenden bien.",
+    "propuesta": "Se realiza un estudio empírico a gran escala de 37 habilidades de seguridad con Claude Code y cuatro LLMs subyacentes en 100 vulnerabilidades del kernel de Linux. Se propone SKILL-SIF, un framework que mejora iterativamente las habilidades de seguridad aprendiendo de las vulnerabilidades omitidas y los patrones de fallo.",
+    "resultados": "Solo el 24.4% de las ejecuciones localizan la función correcta, el 18.3% identifican función y sentencia responsable, y el 15.7% clasifican correctamente la vulnerabilidad. SKILL-SIF mejora la detección completa de vulnerabilidades hasta 8 veces (del 2% al 16%) en vulnerabilidades no vistas, y la precisión agregada aumenta 1.85 veces (del 6.05% al 11.20%).",
+    "por_que_importa": "Demuestra las limitaciones actuales de las habilidades de seguridad en agentes de código y el potencial de un enfoque de auto-mejora basado en fallos para mejorar significativamente la detección de vulnerabilidades en software crítico como el kernel de Linux.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Detección de Vulnerabilidades",
+      "Kernel de Linux",
+      "Ingeniería de Software",
+      "Auditoría de Código"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-20T17:24:00Z"
+  },
+  "arxiv:2610.26799v1": {
+    "tldr": "Los sistemas de IA delegada crean nuevos riesgos de seguridad; proponemos la 'comprensión parcial responsable' (APU) para gestionarlos.",
+    "problema": "Los sistemas de IA que actúan autónomamente (leen, escriben, autorizan) generan una 'superficie de ataque epistémico' debido a la comprensión parcial humana, que se agrava con la autoridad delegada.",
+    "propuesta": "Define y especifica la 'comprensión parcial responsable' (APU) con seis condiciones necesarias (alcance limitado, evidencia inspeccionable, responsabilidad asignada, etc.) y cinco principios de diseño (delegación acotada, evidencia desacoplada, etc.).",
+    "resultados": "El resumen no especifica resultados numéricos o empíricos concretos, pero define condiciones y principios medibles para evaluar la rendición de cuentas de la IA.",
+    "por_que_importa": "Permite asegurar sistemas de IA que ya operan con comprensión parcial, haciendo explícita la responsabilidad y gestionando los riesgos inherentes a la delegación de autoridad a software.",
+    "tags": [
+      "IA responsable",
+      "Ciberseguridad",
+      "Sistemas de IA",
+      "Rendición de cuentas",
+      "Seguridad de software"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-20T17:24:10Z"
+  },
+  "arxiv:2610.26240v1": {
+    "tldr": "Detecta malware usando IA cuántica, pero la robustez ante ataques adversarios es un desafío clave.",
+    "problema": "La robustez de los modelos de aprendizaje automático cuántico (QML) frente a ataques adversarios en la detección de malware es poco conocida, limitando su aplicación práctica.",
+    "propuesta": "Presenta Q-MALDetect, un detector híbrido cuántico-clásico que analiza imágenes de bytes de binarios ELF, y lo evalúa contra ataques de evasión en el espacio de características y ataques conscientes de ejecutables guiados por Grad-CAM.",
+    "resultados": "Q-MALDetect alcanza 97.2% de precisión de entrenamiento. Los ataques adversarios reducen la robustez, con una tasa de éxito del 78.7% para ataques en el espacio de características y 32.9% para inserción de NOPs. El entrenamiento adversarial dinámico reduce el ASR a 5.0% (espacio de características) y 7.7% (consciente de ejecutables).",
+    "por_que_importa": "Demuestra que la efectividad de los ataques y defensas depende de las restricciones de perturbación. Los detectores QML requieren evaluación contra ataques diversos, no solo precisión limpia, para un despliegue fiable.",
+    "tags": [
+      "IA cuántica",
+      "detección de malware",
+      "ciberseguridad",
+      "ataques adversarios",
+      "robustez",
+      "QML"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-20T17:24:19Z"
+  },
+  "arxiv:2610.25897v1": {
+    "tldr": "Optimiza la evaluación de seguridad de LLMs priorizando ataques de 'jailbreak' bajo presupuesto limitado.",
+    "problema": "Evaluar la robustez de los Modelos de Lenguaje Grandes (LLMs) contra ataques de 'jailbreak' es costoso y requiere probar muchas estrategias de ataque, cuya efectividad varía según la defensa del LLM.",
+    "propuesta": "Se formaliza el problema como 'budgeted attack scheduling' y se investigan tres señales (tasas de éxito históricas, guía semántica de LLMs y retroalimentación online) para priorizar ataques bajo un presupuesto limitado.",
+    "resultados": "Se diseñaron cuatro estrategias de programación de ataques. La guía semántica y la retroalimentación online mejoran o igualan la programación basada en priors históricos, especialmente cuando estos se vuelven obsoletos o faltan. La retroalimentación online es valiosa cuando los priors transferidos se desactualizan.",
+    "por_que_importa": "Permite una evaluación de seguridad de LLMs más eficiente y rentable, identificando las vulnerabilidades más críticas con menos recursos computacionales y económicos.",
+    "tags": [
+      "LLMs",
+      "Ciberseguridad",
+      "Red-Teaming",
+      "Optimización",
+      "Ataques de IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-20T17:24:29Z"
+  },
+  "arxiv:2610.26589v1": {
+    "tldr": "Nueva métrica evalúa jailbreaks de LLMs considerando el costo de cada intento, no solo el éxito final.",
+    "problema": "La métrica tradicional de tasa de éxito de ataque (ASR) para jailbreaks en LLMs ignora el costo y las oportunidades de detección que surgen de llamadas repetidas al modelo.",
+    "propuesta": "Introducir la métrica ASR_STEP, que penaliza las llamadas adicionales al modelo víctima, manteniendo un juicio binario de éxito, y aplicarla a métodos como GCG, PAIR y PAP.",
+    "resultados": "La puntuación de GCG disminuye entre 7.0 y 8.7 puntos porcentuales al considerar los pasos, mientras que PAP no cambia. PAIR muestra una reducción de 3.4 a 12 puntos porcentuales, evidenciando diferencias entre estrategias.",
+    "por_que_importa": "Permite una evaluación más realista de la seguridad de los LLMs frente a ataques iterativos, reflejando mejor el riesgo práctico al considerar el costo y la detección.",
+    "tags": [
+      "LLMs",
+      "Ciberseguridad",
+      "Jailbreaking",
+      "Métricas",
+      "Evaluación de Modelos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-20T17:24:38Z"
+  },
+  "arxiv:2610.26438v1": {
+    "tldr": "Noticias falsas pueden hacer que agentes de trading basados en LLM pierdan dinero real, atacando la evidencia que usan para operar.",
+    "problema": "Los agentes de trading basados en LLM confían en noticias para tomar decisiones, pero son vulnerables a noticias falsas (información inyectada) que pueden manipular sus operaciones y causar pérdidas financieras.",
+    "propuesta": "Se presenta un benchmark sistemático para evaluar ataques de inyección de información contra agentes de trading LLM, abarcando cinco vectores de ataque y siete categorías de eventos, y se analizan las vulnerabilidades específicas de estos agentes.",
+    "resultados": "Los ataques de inyección de información logran una tasa de éxito del 62%, superando la inyección de prompts (14%). Dos plantillas de 30 palabras alcanzaron el 100% de éxito en 15 acciones. La credibilidad superficial (fuente nombrada, etiqueta 'BREAKING') es más importante que el contenido. El éxito varía según el estado del agente y los ataques generalizan entre modelos y evaden defensas comunes.",
+    "por_que_importa": "Demuestra una vulnerabilidad crítica en sistemas financieros automatizados que usan LLMs, con implicaciones directas para la estabilidad del mercado y la seguridad financiera, requiriendo nuevas defensas específicas.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Noticias Falsas",
+      "Trading Algorítmico",
+      "Inyección de Información",
+      "Riesgo Financiero"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-20T17:24:47Z"
+  },
+  "arxiv:2610.26013v1": {
+    "tldr": "SpanGuard desacopla la localización de instrucciones de la autorización para una defensa ligera contra inyecciones indirectas en LLMs.",
+    "problema": "Los sistemas de defensa contra inyecciones indirectas (IPI) basados en LLMs grandes son efectivos pero costosos. Los modelos más pequeños o débiles pierden mucha capacidad de detección, lo que limita su uso práctico.",
+    "propuesta": "Se propone SpanGuard, un sistema que desacopla la detección de IPI en dos fases: 1) localización de instrucciones potencialmente inyectadas mediante segmentación no supervisada y ligera, y 2) juicio de autorización de esas instrucciones con un LLM pequeño. Esto separa 'dónde buscar' de 'qué decidir'.",
+    "resultados": "SpanGuard logra una tasa de éxito de ataque del 0.32% con una pérdida mínima en la utilidad benigna, manteniendo la efectividad incluso con modelos LLM considerablemente más pequeños.",
+    "por_que_importa": "Permite construir defensas robustas contra IPI con modelos LLM más pequeños y eficientes, reduciendo costos computacionales y haciendo la ciberseguridad de LLMs más accesible y escalable.",
+    "tags": [
+      "ciberseguridad",
+      "LLM",
+      "inyección indirecta",
+      "SpanGuard",
+      "defensa ligera",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-20T17:24:57Z"
+  },
+  "arxiv:2610.25950": {
+    "tldr": "Evaluamos la capacidad de los agentes LLM para explorar y adaptarse proactivamente a entornos cambiantes, revelando desafíos significativos.",
+    "problema": "Los agentes LLM actuales luchan por explorar entornos desconocidos, descubrir sus reglas ocultas y adaptarse cuando estas cambian sin previo aviso.",
+    "propuesta": "Introducimos AdaExploreBench, un nuevo benchmark que simula entornos con reglas ocultas y cambios implícitos, forzando a los agentes a explorar y adaptarse proactivamente.",
+    "resultados": "Los principales LLMs muestran dificultades; GPT-6 Sol alcanza solo un 61.9% de precisión calibrada. Proporcionar evidencia suficiente o eliminar el cambio de reglas mejora el rendimiento en casi un 10%.",
+    "por_que_importa": "Es crucial para desplegar agentes LLM robustos en el mundo real, asegurando que puedan operar y adaptarse de manera fiable en entornos dinámicos y desconocidos.",
+    "tags": [
+      "LLM Agents",
+      "Adaptación",
+      "Exploración",
+      "Benchmarks",
+      "Entornos Evolutivos",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-20T17:25:06Z"
+  },
+  "arxiv:2610.23986": {
+    "tldr": "Presentamos BlenderWorld, el primer benchmark para evaluar agentes de IA en la creación de modelos 3D realistas a partir de referencias del mundo real.",
+    "problema": "Los modelos de IA actuales tienen dificultades para crear y editar modelos 3D complejos y realistas a partir de diversas referencias, siguiendo instrucciones precisas en flujos de trabajo prácticos.",
+    "propuesta": "Se introduce BlenderWorld, un benchmark con 223 tareas de creación 3D (arquitectura, productos, etc.) usando referencias multimodales (texto, imagen, video). Se evalúa la calidad de los proyectos de Blender generados por los modelos.",
+    "resultados": "GPT-6-Astra lidera con un puntaje fusionado de 79.9, seguido por Opus-5 (73.0) y GPT-5.6-Sol (67.7). Los modelos actuales fallan en la coherencia espacial fina y la reproducción estructural precisa en Blender.",
+    "por_que_importa": "Este benchmark es crucial para medir el progreso real de los agentes de IA en la creación 3D, identificando las limitaciones actuales y guiando el desarrollo futuro hacia una mayor precisión y coherencia espacial.",
+    "tags": [
+      "IA generativa",
+      "Modelado 3D",
+      "Benchmarking",
+      "Ciberseguridad",
+      "Agentes autónomos",
+      "Visión por computadora"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-20T17:25:15Z"
+  },
+  "arxiv:2610.24087": {
+    "tldr": "Los LLM pueden resolver problemas de investigación de operaciones, pero aún no igualan la calidad y viabilidad de los expertos humanos.",
+    "problema": "Evaluar si los agentes de LLM pueden resolver problemas de investigación de operaciones (OR) del mundo real directamente a partir de materiales originales de clientes, sin reformulación experta previa, y compararlos con soluciones de expertos humanos.",
+    "propuesta": "Introducen OR-License, un benchmark de 31 instancias de compromisos de OR pagados (USD 3.68M) que preserva los requisitos originales, datos y formatos. También presentan ORSim, un simulador de cliente para estudiar la adquisición de información. Evalúan 11 LLMs de vanguardia.",
+    "resultados": "Varios LLMs superan la calidad objetiva condicional de los expertos, pero ninguno iguala la Calidad Ajustada al Despliegue (DAQ) de los expertos. La mejor configuración de Claude Code alcanza un 88.39% de viabilidad y un DAQ de 0.87. Las tasas de resolución de problemas en etapas posteriores son altas. Las tasas de finalización de cadenas de investigación varían entre el 24% y el 45%.",
+    "por_que_importa": "Demuestra el potencial de los LLM en OR práctico, pero resalta la necesidad de mejorar la viabilidad, la adquisición de información y la formulación de problemas para su despliegue confiable en tareas complejas y de largo plazo.",
+    "tags": [
+      "LLM",
+      "Investigación de Operaciones",
+      "Ciberseguridad",
+      "IA",
+      "Evaluación de Modelos",
+      "Agentes Inteligentes"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-20T17:25:25Z"
+  },
+  "arxiv:2610.06830": {
+    "tldr": "MemPilot optimiza la memoria de los agentes LLM, adaptando la curación de información multimodal para equilibrar rendimiento, coste y latencia.",
+    "problema": "Los sistemas de memoria actuales para agentes LLM son genéricos, costosos y descartan información útil. Las adaptaciones existentes son limitadas y no ofrecen control flexible sobre el rendimiento, coste y latencia.",
+    "propuesta": "MemPilot es un framework flexible que orquesta la curación de memoria multimodal bajo demanda. Utiliza una política de LLM optimizada por aprendizaje por refuerzo para decidir entre recuperar memoria preexistente o delegar la curación específica de la consulta a LLMs y VLMs heterogéneos, controlando la cantidad de evidencia, instrucciones, selección de modelo y acceso visual.",
+    "resultados": "MemPilot demuestra un equilibrio favorable entre rendimiento, coste y latencia en cinco benchmarks de agentes-memoria multimodales, superando a las bases de comparación existentes en la optimización de estos trade-offs.",
+    "por_que_importa": "Permite a los desarrolladores de agentes LLM ajustar con precisión el uso de la memoria para satisfacer necesidades específicas de rendimiento, coste y latencia, mejorando la eficiencia y efectividad de las aplicaciones de IA.",
+    "tags": [
+      "memoria LLM",
+      "agentes IA",
+      "multimodal",
+      "optimización",
+      "ciberseguridad",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-20T17:25:34Z"
   }
 }

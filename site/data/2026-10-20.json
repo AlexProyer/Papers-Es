@@ -1,0 +1,552 @@
+{
+  "date": "2026-10-20",
+  "report_type": "filtrado",
+  "evaluated": 173,
+  "selected": 14,
+  "papers": [
+    {
+      "id": "arxiv:2610.25916v1",
+      "rank": 1,
+      "title": "Secure Agentic Coding through Counterexample-Grounded Feedback",
+      "authors": [
+        "Tue Le",
+        "Anh Nguyen Hoang",
+        "Gabriel Sasseville",
+        "Doseok Jang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-19",
+      "url": "https://arxiv.org/abs/2610.25916v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.25916v1",
+      "score": 58,
+      "topics": [
+        "vuln & threats",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: vuln & threats, AI agents, adversarial ML"
+      ],
+      "abstract_en": "As coding models and agent harnesses become more capable, reliable security verification is becoming a central bottleneck. Improving secure code generation requires a signal whose reported progress remains aligned with actual program behavior under optimization; otherwise, an optimizer can improve the signal's verdict without removing the underlying vulnerability. Existing model-based approaches require models to either infer program behavior from source code or specify correct outcomes for adversarial tests, placing substantial reasoning demands on the security signal. We introduce \\falcon{}, a counterexample-grounded verification framework that separates attack exploration from behavioral verification and connects them through execution traces of the program under test. In test-time repair, \\falcon{} yields substantially stronger held-out functional-security gains than alternative security signals across secure code generation benchmarks, while preserving or improving functionality. As an RL reward, \\falcon{} also outperforms static-analysis and learned rewards on held-out functional-security, even when all policies successfully optimize their respective training rewards. Combining \\falcon{} with either proxy reward further improves held-out performance, suggesting that execution-grounded feedback can mitigate reward overoptimization while preserving useful guidance from existing security signals.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Verifica la seguridad del código generado por IA de forma más fiable, evitando vulnerabilidades ocultas.",
+        "problema": "Los modelos de IA que generan código son cada vez más potentes, pero la verificación de su seguridad es un cuello de botella. Los métodos actuales pueden ser engañados por optimizadores que mejoran la métrica de seguridad sin arreglar la vulnerabilidad real.",
+        "propuesta": "Se introduce \\falcon{}, un marco de verificación basado en contraejemplos. Separa la exploración de ataques de la verificación del comportamiento, conectándolos a través de trazas de ejecución del programa.",
+        "resultados": "En la reparación en tiempo de prueba, \\falcon{} logra mejoras sustanciales en seguridad funcional (held-out) frente a otras señales de seguridad. Como recompensa de RL, supera al análisis estático y a las recompensas aprendidas. La combinación con recompensas proxy mejora aún más el rendimiento.",
+        "por_que_importa": "Permite generar código más seguro y fiable, mitigando el riesgo de vulnerabilidades explotables en software desarrollado con IA, sin sacrificar la funcionalidad.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Generación de Código",
+          "Verificación de Software",
+          "Seguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-20T17:23:51Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.25705v1",
+      "rank": 2,
+      "title": "How Effectively Do Security Skills Guide Coding Agents in Vulnerability Detection in Linux Kernel?",
+      "authors": [
+        "Haoran Xue",
+        "Nikta Akbarpour",
+        "Gias Uddin",
+        "Song Wang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-10-19",
+      "url": "https://arxiv.org/abs/2610.25705v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.25705v1",
+      "score": 56,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM, compliance & audit"
+      ],
+      "abstract_en": "Large language model (LLM) coding agents, such as Claude Code, are increasingly used for security auditing, with task-specific skills providing reusable vulnerability-analysis procedures. However, their effectiveness in detecting real vulnerabilities and the reasons for their failures remain unclear. We conduct the first large-scale empirical study of 37 security skills using Claude Code with four underlying LLMs on 100 real Linux kernel vulnerabilities across ten classes, totaling 14800 runs. We evaluate vulnerability detection at the function, statement, and vulnerability-class levels. Results show that 24.4 percent of runs locate the correct function, 18.3 percent identify both the function and responsible statement, and 15.7 percent correctly classify the vulnerability. Our failure analysis reveals limitations in evidence acquisition, state-relation reasoning, code interpretation, candidate verification, investigation coverage, and reporting. Based on these findings, we propose SKILL-SIF, a self-improving framework that iteratively evolves security skills by learning from missed vulnerabilities and failure patterns. We evolve five top-performing skills using the original benchmark and evaluate them on 100 previously unseen vulnerabilities. SKILL-SIF improves fully correct vulnerability detection by up to eight times (from 2 percent to 16 percent) on unseen vulnerabilities, while aggregate accuracy across four LLMs increases by 1.85 times (from 6.05 percent to 11.20 percent). These findings highlight the limitations of existing security skills and demonstrate the potential of failure-driven skill evolution to improve vulnerability detection in coding agents.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Las habilidades de seguridad en agentes de código con LLM mejoran la detección de vulnerabilidades en el kernel de Linux, pero la evolución guiada por fallos es clave.",
+        "problema": "La efectividad de los agentes de código basados en LLM para detectar vulnerabilidades reales en el kernel de Linux, utilizando habilidades de seguridad predefinidas, es incierta y sus fallos no se comprenden bien.",
+        "propuesta": "Se realiza un estudio empírico a gran escala de 37 habilidades de seguridad con Claude Code y cuatro LLMs subyacentes en 100 vulnerabilidades del kernel de Linux. Se propone SKILL-SIF, un framework que mejora iterativamente las habilidades de seguridad aprendiendo de las vulnerabilidades omitidas y los patrones de fallo.",
+        "resultados": "Solo el 24.4% de las ejecuciones localizan la función correcta, el 18.3% identifican función y sentencia responsable, y el 15.7% clasifican correctamente la vulnerabilidad. SKILL-SIF mejora la detección completa de vulnerabilidades hasta 8 veces (del 2% al 16%) en vulnerabilidades no vistas, y la precisión agregada aumenta 1.85 veces (del 6.05% al 11.20%).",
+        "por_que_importa": "Demuestra las limitaciones actuales de las habilidades de seguridad en agentes de código y el potencial de un enfoque de auto-mejora basado en fallos para mejorar significativamente la detección de vulnerabilidades en software crítico como el kernel de Linux.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Detección de Vulnerabilidades",
+          "Kernel de Linux",
+          "Ingeniería de Software",
+          "Auditoría de Código"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-20T17:24:00Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.26799v1",
+      "rank": 3,
+      "title": "Accountable partial understanding: securing the epistemic attack surface of agentic systems",
+      "authors": [
+        "Josiah Dykstra"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-19",
+      "url": "https://arxiv.org/abs/2610.26799v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.26799v1",
+      "score": 54,
+      "topics": [
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: AI agents, adversarial ML"
+      ],
+      "abstract_en": "Attackers profit from what defenders do not understand. Software security has treated the gap between system behavior and human comprehension as a condition to narrow through analysis and assurance, booking the remainder as accepted risk. Agentic AI systems change that gap: when software reads, writes, explains, and authorizes security-relevant behavior, partial understanding moves faster, grows more opaque, and couples to delegated authority. This paper characterizes the resulting epistemic attack surface and presents a taxonomy of four interacting attack categories, which target the interpretation of intent, the production and consumption of evidence, the scope of delegated authority, and the comprehension of human supervisors. It then defines accountable partial understanding (APU) and specifies six necessary conditions: bounded scope with explicit assumptions, inspectable evidence, assigned responsibility, visible residual unknowns, actionability, and temporal maintenance. It explains why delegating interpretation to software agents differs from distributing knowledge among people and distinguishes APU from risk acceptance, explainable AI, assurance cases, formal verification, and human-in-the-loop oversight. From the conditions, the paper derives five design principles: bounded delegation, decoupled evidence, assumption tracking with invalidation, role-specific accountability views, and intervention-preserving design with residual unknown registers. It introduces two measurable probe dimensions, evidence linkage and invalidation latency, for testing whether accountability mechanisms hold under change and adversarial pressure. Three running examples (an AI coding agent, an autonomous cyber-defense agent, and an AI-mediated insulin delivery update) ground the analysis. Security without full understanding is already here; the task is to make it accountable.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los sistemas de IA delegada crean nuevos riesgos de seguridad; proponemos la 'comprensión parcial responsable' (APU) para gestionarlos.",
+        "problema": "Los sistemas de IA que actúan autónomamente (leen, escriben, autorizan) generan una 'superficie de ataque epistémico' debido a la comprensión parcial humana, que se agrava con la autoridad delegada.",
+        "propuesta": "Define y especifica la 'comprensión parcial responsable' (APU) con seis condiciones necesarias (alcance limitado, evidencia inspeccionable, responsabilidad asignada, etc.) y cinco principios de diseño (delegación acotada, evidencia desacoplada, etc.).",
+        "resultados": "El resumen no especifica resultados numéricos o empíricos concretos, pero define condiciones y principios medibles para evaluar la rendición de cuentas de la IA.",
+        "por_que_importa": "Permite asegurar sistemas de IA que ya operan con comprensión parcial, haciendo explícita la responsabilidad y gestionando los riesgos inherentes a la delegación de autoridad a software.",
+        "tags": [
+          "IA responsable",
+          "Ciberseguridad",
+          "Sistemas de IA",
+          "Rendición de cuentas",
+          "Seguridad de software"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-20T17:24:10Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.26240v1",
+      "rank": 4,
+      "title": "Q-MALDetect: Quantum Image-Based Malware Detection and Adversarial Robustness Analysis",
+      "authors": [
+        "Walid El Maouaki",
+        "Mohammad Izen",
+        "Nouhaila Innan",
+        "Alberto Marchisio"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-19",
+      "url": "https://arxiv.org/abs/2610.26240v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.26240v1",
+      "score": 53,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Quantum machine-learning (QML) models are increasingly considered for security applications, yet their adversarial robustness in malware analysis remains insufficiently understood. This paper presents Q-MALDetect, a hybrid convolutional and variational-quantum detector for byte-image representations of x86-64 Executable and Linkable Format (ELF) binaries, and evaluates it under feature-space and a range of Grad-CAM-guided, executable-aware evasion attacks. The model achieves 97.2% training accuracy, but its robustness deteriorates as attack strength increases, with the strongest evaluated feature-space attack reaching a 78.7% attack success rate (ASR). Among executable-aware attacks, Grad-CAM-guided no-operation (NOP) insertion produces the highest conditional ASR of 32.9%. Dynamic adversarial training is the most effective evaluated defense, reducing feature-space ASR to as low as 5.0%, executable-aware ASR to 7.7%, and the sequential-attack ASR to 34.0%. In contrast, convolutional-autoencoder preprocessing increases executable-aware ASR to 39.7%, coinciding with a rise in Grad-CAM attribution mass within the mutable .text region from 35.2% to 45.7%. Ablation results reveal no monotonic relationship between qubit count and robustness, while the encoding interface modifies the learned attack surface without neutralizing the strongest attack. These findings demonstrate that the effectiveness of attacks and defenses depends strongly on the perturbation constraints and evaluation conditions. Reliable deployment of QML malware detectors therefore requires assessment against both feature-space and executable-aware attacks rather than reliance on clean accuracy or generic denoising alone.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Detecta malware usando IA cuántica, pero la robustez ante ataques adversarios es un desafío clave.",
+        "problema": "La robustez de los modelos de aprendizaje automático cuántico (QML) frente a ataques adversarios en la detección de malware es poco conocida, limitando su aplicación práctica.",
+        "propuesta": "Presenta Q-MALDetect, un detector híbrido cuántico-clásico que analiza imágenes de bytes de binarios ELF, y lo evalúa contra ataques de evasión en el espacio de características y ataques conscientes de ejecutables guiados por Grad-CAM.",
+        "resultados": "Q-MALDetect alcanza 97.2% de precisión de entrenamiento. Los ataques adversarios reducen la robustez, con una tasa de éxito del 78.7% para ataques en el espacio de características y 32.9% para inserción de NOPs. El entrenamiento adversarial dinámico reduce el ASR a 5.0% (espacio de características) y 7.7% (consciente de ejecutables).",
+        "por_que_importa": "Demuestra que la efectividad de los ataques y defensas depende de las restricciones de perturbación. Los detectores QML requieren evaluación contra ataques diversos, no solo precisión limpia, para un despliegue fiable.",
+        "tags": [
+          "IA cuántica",
+          "detección de malware",
+          "ciberseguridad",
+          "ataques adversarios",
+          "robustez",
+          "QML"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-20T17:24:19Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.25897v1",
+      "rank": 5,
+      "title": "Budgeted Attack Scheduling for LLM Red-Teaming: The Roles of Static Priors, Semantic Guidance, and Online Feedback",
+      "authors": [
+        "Zhicheng Fang",
+        "Han Sun",
+        "Jiachen Lei",
+        "Xinyi Fang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-19",
+      "url": "https://arxiv.org/abs/2610.25897v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.25897v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "As jailbreak attacks against large language models (LLMs) become increasingly diverse, red-teaming has come to rely on large libraries of jailbreak prompts and attack strategies to evaluate the robustness of victim models and their defense settings. However, attack effectiveness is highly condition-dependent: an attack that succeeds under one victim-defense setting may fail under another, while exhaustively evaluating the full attack library for each setting incurs substantial token and monetary costs. This motivates studying how jailbreak attacks should be prioritized under a limited attempt budget for efficient robustness evaluation. In this work, we formalize this problem as budgeted attack scheduling over a fixed attack library and investigate three complementary signals under a fixed victim-defense condition: (1) static historical attack success rate (ASR) priors; (2) semantic guidance from LLMs; and (3) online feedback from earlier queries. Building on these signals, we design four scheduling strategies and evaluate them across three victim models and three defense settings on GPT-5.2. Extensive experiments clearly characterize the conditions under which each signal is most effective. Historical ASR provides a strong initialization, but its reliability degrades under defense-induced distribution shifts. Semantic guidance consistently improves or matches static prior-based scheduling in the cold-start regime, while online feedback becomes particularly valuable when transferred priors become stale. Semantic guidance and online feedback can also partially compensate for missing historical priors. Taken together, these findings characterize budgeted red-teaming as an attack scheduling problem in which historical priors, semantic guidance, and online feedback play complementary roles.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Optimiza la evaluación de seguridad de LLMs priorizando ataques de 'jailbreak' bajo presupuesto limitado.",
+        "problema": "Evaluar la robustez de los Modelos de Lenguaje Grandes (LLMs) contra ataques de 'jailbreak' es costoso y requiere probar muchas estrategias de ataque, cuya efectividad varía según la defensa del LLM.",
+        "propuesta": "Se formaliza el problema como 'budgeted attack scheduling' y se investigan tres señales (tasas de éxito históricas, guía semántica de LLMs y retroalimentación online) para priorizar ataques bajo un presupuesto limitado.",
+        "resultados": "Se diseñaron cuatro estrategias de programación de ataques. La guía semántica y la retroalimentación online mejoran o igualan la programación basada en priors históricos, especialmente cuando estos se vuelven obsoletos o faltan. La retroalimentación online es valiosa cuando los priors transferidos se desactualizan.",
+        "por_que_importa": "Permite una evaluación de seguridad de LLMs más eficiente y rentable, identificando las vulnerabilidades más críticas con menos recursos computacionales y económicos.",
+        "tags": [
+          "LLMs",
+          "Ciberseguridad",
+          "Red-Teaming",
+          "Optimización",
+          "Ataques de IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-20T17:24:29Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.26589v1",
+      "rank": 6,
+      "title": "Beyond Attack Success Rate: Cost-Aware Metric for Evaluating Iterative LLM Jailbreaks",
+      "authors": [
+        "Rohan Menon",
+        "Chih-Hong Cheng"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-19",
+      "url": "https://arxiv.org/abs/2610.26589v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.26589v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Attack success rate (ASR) evaluates jailbreaks against large language models without accounting for repeated calls to the victim model. Yet each additional call gives the deployed system another opportunity to detect the attack and intervene. We introduce $\\mathrm{ASR}_{\\mathrm{STEP}}$, which penalizes additional victim-model calls while retaining binary success judgments. Our evaluation considers GCG~\\cite{zou2023universal}, PAIR~\\cite{chao2025jailbreaking} with a step budget, and a single-step PAP~\\cite{zeng2024johnny} baseline on JailBreakBench across three model families. GCG's scores decrease by 7.0--8.7 percentage points after discounting, while PAP's remain unchanged. While for PAIR~\\cite{chao2025jailbreaking}, we see a wider discounting range between 3.4-12 percentage points, showing that the \"step\" quantity differs per iterative strategy. Reporting both metrics makes the discount due to repeated victim-model interaction explicit. Code is available \\hyperlink{https://github.com/SuELS-Group/beyond_asr}{here}.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Nueva métrica evalúa jailbreaks de LLMs considerando el costo de cada intento, no solo el éxito final.",
+        "problema": "La métrica tradicional de tasa de éxito de ataque (ASR) para jailbreaks en LLMs ignora el costo y las oportunidades de detección que surgen de llamadas repetidas al modelo.",
+        "propuesta": "Introducir la métrica ASR_STEP, que penaliza las llamadas adicionales al modelo víctima, manteniendo un juicio binario de éxito, y aplicarla a métodos como GCG, PAIR y PAP.",
+        "resultados": "La puntuación de GCG disminuye entre 7.0 y 8.7 puntos porcentuales al considerar los pasos, mientras que PAP no cambia. PAIR muestra una reducción de 3.4 a 12 puntos porcentuales, evidenciando diferencias entre estrategias.",
+        "por_que_importa": "Permite una evaluación más realista de la seguridad de los LLMs frente a ataques iterativos, reflejando mejor el riesgo práctico al considerar el costo y la detección.",
+        "tags": [
+          "LLMs",
+          "Ciberseguridad",
+          "Jailbreaking",
+          "Métricas",
+          "Evaluación de Modelos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-20T17:24:38Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.26438v1",
+      "rank": 7,
+      "title": "Fake News, Real Crashes: Information Injection Attacks on LLM Financial Trading Agents",
+      "authors": [
+        "Mengxiao Wang",
+        "Nitesh Saxena"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-19",
+      "url": "https://arxiv.org/abs/2610.26438v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.26438v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Large language model (LLM) agents now trade real capital using news as evidence, yet they cannot reliably tell fabricated headlines from real news. Because they read the same feeds under near-identical policies, a single fabricated post can push them into the same trade at the same moment. We present a systematic attack benchmark for information injection against LLM trading agents. Unlike prompt injection, which targets the model's instructions, information injection targets the evidence the agent trusts. The benchmark spans five injection vectors and seven event categories, evaluated over ~10,000 decisions on 15 U.S. stocks. Five findings emerge. (i) Prompt injection achieves 14% attack success rate (ASR), but fabricated news reaches 62% and two 30-word templates reach 100% on all 15 stocks, inverting the usual LLM-security intuition. (ii) For fact-poisoning templates, surface form matters more than content, since removing credibility cues such as a named source or a \"BREAKING\" tag drops ASR from 100% to 0% while the fake claim remains identical. (iii) Success depends on the agent's state, with a fake indicator panel scoring 91% against an agent about to hold but 12% against one about to buy. (iv) Attacks generalize across model vendors and remain effective when blended, unlabeled, into real news feeds. (v) Most attacks evade standard defenses, since model scaling stops shallow vectors but not fact poisoning, peer debate fails, and only hierarchical aggregation reduces ASR.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Noticias falsas pueden hacer que agentes de trading basados en LLM pierdan dinero real, atacando la evidencia que usan para operar.",
+        "problema": "Los agentes de trading basados en LLM confían en noticias para tomar decisiones, pero son vulnerables a noticias falsas (información inyectada) que pueden manipular sus operaciones y causar pérdidas financieras.",
+        "propuesta": "Se presenta un benchmark sistemático para evaluar ataques de inyección de información contra agentes de trading LLM, abarcando cinco vectores de ataque y siete categorías de eventos, y se analizan las vulnerabilidades específicas de estos agentes.",
+        "resultados": "Los ataques de inyección de información logran una tasa de éxito del 62%, superando la inyección de prompts (14%). Dos plantillas de 30 palabras alcanzaron el 100% de éxito en 15 acciones. La credibilidad superficial (fuente nombrada, etiqueta 'BREAKING') es más importante que el contenido. El éxito varía según el estado del agente y los ataques generalizan entre modelos y evaden defensas comunes.",
+        "por_que_importa": "Demuestra una vulnerabilidad crítica en sistemas financieros automatizados que usan LLMs, con implicaciones directas para la estabilidad del mercado y la seguridad financiera, requiriendo nuevas defensas específicas.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Noticias Falsas",
+          "Trading Algorítmico",
+          "Inyección de Información",
+          "Riesgo Financiero"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-20T17:24:47Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.26013v1",
+      "rank": 8,
+      "title": "SpanGuard: Decoupling Instruction Localization from Authorization for Lightweight IPI Defense",
+      "authors": [
+        "Yinxiang Wang",
+        "Zehua Ma",
+        "Kejiang Chen",
+        "Weiming Zhang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-19",
+      "url": "https://arxiv.org/abs/2610.26013v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.26013v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "LLM-based guardrails are effective against indirect prompt injection (IPI), but their performance depends heavily on model capability: as the guardrail model becomes smaller or weaker, detection degrades substantially. This raises a natural question: can we retain strong IPI defense while relying only on a small LLM? To understand why, we revisit what an LLM guardrail actually does. Detecting IPI requires simultaneously locating potentially injected instructions within heterogeneous tool outputs and judging whether they are authorized by the user's request. We find that the difficulty for small models arises largely from satisfying both requirements jointly, rather than from either subproblem alone. This suggests a different path to lightweight defense: explicitly decoupling localization from decision-making. In particular, localization needs no strong language-model reasoning, since injected instructions are often semantically discontinuous with their surrounding content and can be partitioned into local regions via lightweight unsupervised segmentation. Once the observation is partitioned this way, the remaining authorization check becomes a localized judgment that a small LLM can handle. Building on this insight, we design a lightweight IPI guardrail that performs attack-agnostic localization followed by block-level authorization judgment with a small language model. By separating where to look from what to decide, our approach substantially reduces the capability required of the guardrail model while preserving strong defense performance. Empirically, our guardrail achieves a 0.32% attack success rate with negligible loss in benign utility while remaining effective with substantially smaller models. These results show that strong IPI defense need not rely on strong LLMs when localization and decision-making are explicitly decoupled.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "SpanGuard desacopla la localización de instrucciones de la autorización para una defensa ligera contra inyecciones indirectas en LLMs.",
+        "problema": "Los sistemas de defensa contra inyecciones indirectas (IPI) basados en LLMs grandes son efectivos pero costosos. Los modelos más pequeños o débiles pierden mucha capacidad de detección, lo que limita su uso práctico.",
+        "propuesta": "Se propone SpanGuard, un sistema que desacopla la detección de IPI en dos fases: 1) localización de instrucciones potencialmente inyectadas mediante segmentación no supervisada y ligera, y 2) juicio de autorización de esas instrucciones con un LLM pequeño. Esto separa 'dónde buscar' de 'qué decidir'.",
+        "resultados": "SpanGuard logra una tasa de éxito de ataque del 0.32% con una pérdida mínima en la utilidad benigna, manteniendo la efectividad incluso con modelos LLM considerablemente más pequeños.",
+        "por_que_importa": "Permite construir defensas robustas contra IPI con modelos LLM más pequeños y eficientes, reduciendo costos computacionales y haciendo la ciberseguridad de LLMs más accesible y escalable.",
+        "tags": [
+          "ciberseguridad",
+          "LLM",
+          "inyección indirecta",
+          "SpanGuard",
+          "defensa ligera",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-20T17:24:57Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.25950",
+      "rank": 1,
+      "title": "AdaExploreBench: Benchmarking LLM Agents for Proactive Exploration and Test-time Adaptation in Evolving Environments",
+      "authors": [
+        "Rui Wang",
+        "Zishen Lai",
+        "Jiayu Liu",
+        "Cheng Qian"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-19",
+      "url": "https://arxiv.org/abs/2610.25950",
+      "pdf_url": "https://arxiv.org/pdf/2610.25950",
+      "score": 69,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Large Language Model (LLM) agents are increasingly deployed in unfamiliar and evolving environments, requiring them to proactively explore, understand, and adapt to environmental dynamics. However, existing benchmarks rarely test whether agents can proactively discover how an environment works and adapt as it evolves. To address this gap, we introduce AdaExploreBench, a benchmark for proactive exploration and test-time adaptation in evolving environments. By instantiating environmental dynamics as hidden rules, AdaExploreBench requires agents to actively acquire evidence and infer the rules. Under implicit rule drift, the latent rule changes without announcement, requiring agents to detect from degraded performance that prior knowledge is stale and re-explore. Experiments on eight leading LLMs show that proactive and adaptive exploration remain challenging: GPT-6 Sol achieves only 61.9% calibrated accuracy, while providing sufficient evidence or removing rule drift improves average performance significantly by close to 10%. These results reveal a critical bottleneck in current LLM agents: they can often reason effectively from informative evidence once it is available, but struggle to actively acquire the right evidence and recognize when previously acquired evidence is no longer valid.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evaluamos la capacidad de los agentes LLM para explorar y adaptarse proactivamente a entornos cambiantes, revelando desafíos significativos.",
+        "problema": "Los agentes LLM actuales luchan por explorar entornos desconocidos, descubrir sus reglas ocultas y adaptarse cuando estas cambian sin previo aviso.",
+        "propuesta": "Introducimos AdaExploreBench, un nuevo benchmark que simula entornos con reglas ocultas y cambios implícitos, forzando a los agentes a explorar y adaptarse proactivamente.",
+        "resultados": "Los principales LLMs muestran dificultades; GPT-6 Sol alcanza solo un 61.9% de precisión calibrada. Proporcionar evidencia suficiente o eliminar el cambio de reglas mejora el rendimiento en casi un 10%.",
+        "por_que_importa": "Es crucial para desplegar agentes LLM robustos en el mundo real, asegurando que puedan operar y adaptarse de manera fiable en entornos dinámicos y desconocidos.",
+        "tags": [
+          "LLM Agents",
+          "Adaptación",
+          "Exploración",
+          "Benchmarks",
+          "Entornos Evolutivos",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-20T17:25:06Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.23986",
+      "rank": 2,
+      "title": "BlenderWorld: Benchmarking Visual Agents for 3D Creation from Real-World References",
+      "authors": [
+        "Xinyu Fang",
+        "Yuchi Wang",
+        "Weihao Yu",
+        "Rongyao Fang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-14",
+      "url": "https://arxiv.org/abs/2610.23986",
+      "pdf_url": "https://arxiv.org/pdf/2610.23986",
+      "score": 55,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Recent advances in multimodal large language models (MLLMs) have enabled them to act as autonomous agents, creating and editing 3D models via code or direct software manipulation. In practical workflows, these models must infer object shapes, materials, spatial layouts, and lighting from diverse references while strictly following instructions to reconstruct, modify, or design 3D content. However, existing benchmarks provide limited coverage of such open-ended requests across real-world scenarios. To bridge this gap, we introduce BlenderWorld, the first comprehensive benchmark dedicated to evaluating frontier models on realistic 3D creation tasks. BlenderWorld comprises 223 tasks spanning architecture, products, natural environments, and scientific visualization, driven by text, image, video, and structured specification inputs. To rigorously assess these complex deliverables, we establish a unified evaluation protocol: we render the submitted Blender projects from multiple viewpoints and evaluate them against 2,651 task-specific binary rubrics alongside holistic visual quality scores. Benchmarking thirteen frontier models reveals that GPT-6-Astra achieves the highest overall fused score of 79.9, followed by Opus-5 (73.0) and GPT-5.6-Sol (67.7). Ultimately, our findings reveal a critical bottleneck: while current models can parse broad instructions, they still profoundly struggle with fine-grained 3D spatial coherence and accurate structural reproduction in Blender, leaving substantial headroom for future 3D-native agentics.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Presentamos BlenderWorld, el primer benchmark para evaluar agentes de IA en la creación de modelos 3D realistas a partir de referencias del mundo real.",
+        "problema": "Los modelos de IA actuales tienen dificultades para crear y editar modelos 3D complejos y realistas a partir de diversas referencias, siguiendo instrucciones precisas en flujos de trabajo prácticos.",
+        "propuesta": "Se introduce BlenderWorld, un benchmark con 223 tareas de creación 3D (arquitectura, productos, etc.) usando referencias multimodales (texto, imagen, video). Se evalúa la calidad de los proyectos de Blender generados por los modelos.",
+        "resultados": "GPT-6-Astra lidera con un puntaje fusionado de 79.9, seguido por Opus-5 (73.0) y GPT-5.6-Sol (67.7). Los modelos actuales fallan en la coherencia espacial fina y la reproducción estructural precisa en Blender.",
+        "por_que_importa": "Este benchmark es crucial para medir el progreso real de los agentes de IA en la creación 3D, identificando las limitaciones actuales y guiando el desarrollo futuro hacia una mayor precisión y coherencia espacial.",
+        "tags": [
+          "IA generativa",
+          "Modelado 3D",
+          "Benchmarking",
+          "Ciberseguridad",
+          "Agentes autónomos",
+          "Visión por computadora"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-20T17:25:15Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.24087",
+      "rank": 3,
+      "title": "OR-License: Evaluating LLM Agents as Real-World Operations Research Practitioners",
+      "authors": [
+        "Peisong Wang",
+        "Feixue Liu",
+        "Yize Meng",
+        "Bowen Liu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-16",
+      "url": "https://arxiv.org/abs/2610.24087",
+      "pdf_url": "https://arxiv.org/pdf/2610.24087",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Can large language model (LLM) agents deliver expert-level operations research (OR) solutions directly from original client materials, without prior expert reformulation? Existing OR benchmarks typically begin with self-contained descriptions or predefined optimization tasks, underrepresenting the translation of original business materials into professionally validated solutions. We introduce OR-License, an end-to-end benchmark of 31 instances across 10 industrial scenarios from paid OR engagements totaling USD 3.68 million. It preserves original requirements, input data, deliverable formats, and information boundaries after de-identification. To study information acquisition, we introduce ORSim, a controlled client simulator that discloses business facts without supplying OR expertise. Hidden evaluation checks feasibility and compares objective quality against original expert solutions accepted by clients before benchmark construction. Deployment-Adjusted Quality (DAQ) averages expert-relative quality across instances, assigning zero to infeasible deliveries. Across 11 frontier LLMs using coding-agent harnesses, several exceed the expert reference in conditional objective quality, but none matches its DAQ; the strongest primary Claude Code configuration achieves 88.39% strict feasibility and a DAQ of 0.87 against the expert reference of 1. Client information acquisition extends beyond clarification into solution development and validation, with some later stages showing higher confirmed issue-resolution proportions. Trajectory analysis identifies formulation and implementation failures, while task-equalized research-chain completion rates range from 24% to 45% across models on evaluable tasks. These findings motivate sustained information-gap resolution, faithful problem formulation, and evidence-linked self-improvement for reliable long-horizon agents.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los LLM pueden resolver problemas de investigación de operaciones, pero aún no igualan la calidad y viabilidad de los expertos humanos.",
+        "problema": "Evaluar si los agentes de LLM pueden resolver problemas de investigación de operaciones (OR) del mundo real directamente a partir de materiales originales de clientes, sin reformulación experta previa, y compararlos con soluciones de expertos humanos.",
+        "propuesta": "Introducen OR-License, un benchmark de 31 instancias de compromisos de OR pagados (USD 3.68M) que preserva los requisitos originales, datos y formatos. También presentan ORSim, un simulador de cliente para estudiar la adquisición de información. Evalúan 11 LLMs de vanguardia.",
+        "resultados": "Varios LLMs superan la calidad objetiva condicional de los expertos, pero ninguno iguala la Calidad Ajustada al Despliegue (DAQ) de los expertos. La mejor configuración de Claude Code alcanza un 88.39% de viabilidad y un DAQ de 0.87. Las tasas de resolución de problemas en etapas posteriores son altas. Las tasas de finalización de cadenas de investigación varían entre el 24% y el 45%.",
+        "por_que_importa": "Demuestra el potencial de los LLM en OR práctico, pero resalta la necesidad de mejorar la viabilidad, la adquisición de información y la formulación de problemas para su despliegue confiable en tareas complejas y de largo plazo.",
+        "tags": [
+          "LLM",
+          "Investigación de Operaciones",
+          "Ciberseguridad",
+          "IA",
+          "Evaluación de Modelos",
+          "Agentes Inteligentes"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-20T17:25:25Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.06830",
+      "rank": 4,
+      "title": "MemPilot: Orchestrating On-Demand Multimodal Memory Curation for LLM Agents",
+      "authors": [
+        "Haozhen Zhang",
+        "Haodong Yue",
+        "Quanyu Long",
+        "Jianzhu Bao"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-05",
+      "url": "https://arxiv.org/abs/2610.06830",
+      "pdf_url": "https://arxiv.org/pdf/2610.06830",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Memory has become integral to the LLM agent ecosystem, supporting information retention and reuse across interactions. However, most existing agent memory systems construct memory in a query-agnostic manner, which can incur unnecessary preprocessing cost and discard details that later prove essential. Recent studies have begun shifting memory processing toward runtime adaptation, but typically specialize in particular operations or fixed processing schemes, leaving flexible control over performance, cost, and latency largely underexplored. To address this challenge, we present \\textbf{MemPilot}, a flexible framework that orchestrates on-demand memory curation under different performance--cost--latency preferences. Specifically, we optimize a multi-step LLM policy via reinforcement learning to iteratively choose between retrieving from query-agnostic memory and delegating query-specific curation of raw multimodal history to heterogeneous LLMs and VLMs. The policy jointly controls evidence amount, curation instructions, model selection, and visual access, enabling fine-grained allocation of runtime computation. To optimize this policy under competing objectives, we adapt objective-wise advantage decoupling by separately estimating each objective's advantage before aggregation. Moreover, we introduce prefix-based marginal utility estimation for fine-grained credit assignment across multi-step rollouts. Experiments on five multimodal agent-memory benchmarks demonstrate favorable performance--cost--latency trade-offs across optimization preferences, with preference sweeps yielding broader frontiers than existing trade-off-aware baselines.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "MemPilot optimiza la memoria de los agentes LLM, adaptando la curación de información multimodal para equilibrar rendimiento, coste y latencia.",
+        "problema": "Los sistemas de memoria actuales para agentes LLM son genéricos, costosos y descartan información útil. Las adaptaciones existentes son limitadas y no ofrecen control flexible sobre el rendimiento, coste y latencia.",
+        "propuesta": "MemPilot es un framework flexible que orquesta la curación de memoria multimodal bajo demanda. Utiliza una política de LLM optimizada por aprendizaje por refuerzo para decidir entre recuperar memoria preexistente o delegar la curación específica de la consulta a LLMs y VLMs heterogéneos, controlando la cantidad de evidencia, instrucciones, selección de modelo y acceso visual.",
+        "resultados": "MemPilot demuestra un equilibrio favorable entre rendimiento, coste y latencia en cinco benchmarks de agentes-memoria multimodales, superando a las bases de comparación existentes en la optimización de estos trade-offs.",
+        "por_que_importa": "Permite a los desarrolladores de agentes LLM ajustar con precisión el uso de la memoria para satisfacer necesidades específicas de rendimiento, coste y latencia, mejorando la eficiencia y efectividad de las aplicaciones de IA.",
+        "tags": [
+          "memoria LLM",
+          "agentes IA",
+          "multimodal",
+          "optimización",
+          "ciberseguridad",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-20T17:25:34Z"
+      }
+    }
+  ],
+  "generated_at": "2026-10-20T17:25:34Z"
+}
