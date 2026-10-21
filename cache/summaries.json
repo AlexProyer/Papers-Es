@@ -10555,5 +10555,204 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-10-20T17:25:34Z"
+  },
+  "arxiv:2610.28425v1": {
+    "tldr": "Los ataques persistentes en agentes LLM pueden reactivarse mucho después de que el atacante desaparezca, amenazando la seguridad a largo plazo.",
+    "problema": "Los ataques de inyección de prompts en agentes LLM que persisten entre sesiones (carryover attacks) no se evalúan adecuadamente, ya que los benchmarks actuales solo miden el ataque inicial.",
+    "propuesta": "Se presenta CarryoverBench, un benchmark con 12 escenarios y 101 tareas de ataque en tres canales (Instant, Autonomous, Latent) para evaluar la persistencia y reactivación de ataques en agentes LLM.",
+    "resultados": "Los payloads plantados se reactivan sin decaimiento medible en cinco rondas. El canal Latent, al ser portado a otro runtime (Hermes), se atenúa pero no se elimina, sugiriendo la necesidad de controles a nivel de runtime.",
+    "por_que_importa": "Es crucial para desarrollar defensas robustas contra ataques persistentes que pueden comprometer la seguridad y fiabilidad de los agentes LLM a largo plazo.",
+    "tags": [
+      "LLM Agents",
+      "Ciberseguridad",
+      "Carryover Attacks",
+      "Prompt Injection",
+      "Benchmarking",
+      "Seguridad IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-21T17:28:12Z"
+  },
+  "arxiv:2610.28397v1": {
+    "tldr": "MAS-Guard unifica defensas para proteger sistemas de IA de agentes múltiples contra ataques, reduciendo el éxito de estos en hasta un 86.3%.",
+    "problema": "Los sistemas de IA con agentes múltiples, que extienden las capacidades de los LLMs, son vulnerables a acciones inseguras, fugas de información y manipulación, siendo las defensas existentes fragmentadas e insuficientes.",
+    "propuesta": "MAS-Guard introduce un marco unificado con capas complementarias: A-Guard para agentes instrumentables y un Control Plane con Agent Charters para sistemas. Combina verificaciones estructurales y semánticas para evaluar eventos y rutas, permitiendo intervenciones como permitir, reflexionar, confirmar o bloquear.",
+    "resultados": "MAS-Guard reduce la tasa de éxito de ataques entre un 71.5% y un 86.3% en comparación con agentes sin protección, manteniendo la utilidad en tareas benignas.",
+    "por_que_importa": "Ofrece una solución integral para la ciberseguridad de aplicaciones de IA de agentes, tanto individuales como multi-agente, mejorando significativamente la robustez frente a amenazas sin sacrificar la funcionalidad.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Agentes Múltiples",
+      "LLM",
+      "Seguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-21T17:28:38Z"
+  },
+  "arxiv:2610.28259v1": {
+    "tldr": "GPT-6 Astra muestra potencial en control robótico directo, pero aún enfrenta desafíos en razonamiento físico y coordinación de movimientos complejos.",
+    "problema": "Evaluar las capacidades de manipulación robótica de modelos multimodales generales como GPT-6 Astra, entendiendo la brecha entre el razonamiento semántico y la ejecución física.",
+    "propuesta": "Se evalúa sistemáticamente GPT-6 Astra en tareas de manipulación robótica cerrada, probando percepción de profundidad, aprendizaje en contexto y retroalimentación táctil, y se introduce un nuevo benchmark (LIBERO-GeoMotion) para tareas de alta precisión.",
+    "resultados": "GPT-6 Astra logra un 26.92% de éxito en RoboDojo y un 76.0% en RoboTwin 2.0. En el nuevo benchmark LIBERO-GeoMotion, el éxito es solo del 11.1%. Se observan déficits en planificación de acciones, precisión, coordinación de movimiento y seguridad, además de latencia significativa.",
+    "por_que_importa": "Caracteriza las capacidades emergentes de modelos multimodales para robótica, identificando los desafíos clave para lograr una manipulación robótica segura, eficiente y confiable en el mundo real.",
+    "tags": [
+      "IA",
+      "Robótica",
+      "Modelos Multimodales",
+      "Control Robótico",
+      "Evaluación"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-21T17:28:48Z"
+  },
+  "arxiv:2610.28430v1": {
+    "tldr": "Un gemelo digital y modelo ciber-social para evaluar el impacto real de los ciberataques en infraestructuras críticas.",
+    "problema": "Los modelos de ciberseguridad actuales no capturan el impacto social y operacional de los ciberataques en sistemas de control industrial (ICS) complejos e interconectados.",
+    "propuesta": "Se propone un marco que integra gemelos digitales de ICS con un modelo Ciber-Social de Seguridad (CSVSS) para simular, analizar y cuantificar amenazas, extendiendo CVSS con una dimensión de impacto social.",
+    "resultados": "El marco puede modelar y puntuar el impacto ciber-social. Se utiliza un LLM para un primer análisis y un analista humano valida los hallazgos, manteniendo la autoridad de decisión.",
+    "por_que_importa": "Permite una evaluación más realista de los riesgos de ciberseguridad en infraestructuras críticas, considerando las consecuencias sociales y operacionales más allá de la simple disponibilidad técnica.",
+    "tags": [
+      "ciberseguridad",
+      "gemelo digital",
+      "infraestructura crítica",
+      "impacto social",
+      "ICS",
+      "CSVSS"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-21T17:28:57Z"
+  },
+  "arxiv:2610.28315v1": {
+    "tldr": "La memoria persistente en agentes LLM mejora la calidad pero crea un bucle de autoperpetuación que revela datos personales del usuario.",
+    "problema": "Los agentes LLM con memoria persistente pueden exponer inadvertidamente atributos personales del usuario a través de un ciclo de retroalimentación donde las respuestas basadas en memoria influyen en lo que el usuario dice a continuación, reforzando la revelación de información.",
+    "propuesta": "Se simulan interacciones de usuarios con agentes LLM que consultan o no memoria persistente. Se analiza cómo la consulta de memoria afecta la revelación de atributos personales del usuario a lo largo de múltiples sesiones y se proponen estrategias para mitigar este riesgo, enfocándose en las respuestas del agente.",
+    "resultados": "La consulta de memoria mejora la calidad de las respuestas pero aumenta la 'fuga empírica' (atributos inferidos correctamente) en un margen que se amplía con las sesiones. Instruir al agente para que no mencione o presuponga atributos reduce la fuga a niveles similares a los de no usar memoria, manteniendo la mayor parte de las mejoras de calidad. Filtrar o anonimizar las entradas del usuario o el almacenamiento de memoria es menos efectivo y reduce significativamente la calidad.",
+    "por_que_importa": "Es crucial para la privacidad de los usuarios en aplicaciones de IA que utilizan memoria persistente. Las estrategias de mitigación enfocadas en el comportamiento del agente, en lugar de en la entrada o almacenamiento del usuario, son más efectivas para equilibrar utilidad y privacidad.",
+    "tags": [
+      "privacidad",
+      "LLM",
+      "agentes IA",
+      "memoria persistente",
+      "ciberseguridad",
+      "fuga de datos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-21T17:29:06Z"
+  },
+  "arxiv:2610.28484v1": {
+    "tldr": "Contratos con Pruebas: Garantiza que los agentes de IA cumplan acuerdos sin necesidad de confianza mutua.",
+    "problema": "Los agentes de IA que actúan en nombre de otros necesitan cumplir acuerdos (instrucciones, políticas), pero el texto solo no garantiza el cumplimiento, lo que dificulta una economía de agentes confiable.",
+    "propuesta": "Introduce Proof-Carrying Contracts (PC2), un framework que exige a los agentes presentar pruebas verificables por máquina de que sus operaciones respetan los acuerdos antes de ejecutarse, y un sistema (Airlock) que verifica estas pruebas.",
+    "resultados": "Se demuestra que las restricciones se cumplen en todo momento durante la ejecución, incluso contra agentes adversarios. El resumen no especifica resultados numéricos.",
+    "por_que_importa": "Permite crear una economía de agentes donde los acuerdos son exigibles y confiables, protegiendo tanto a quienes delegan como a quienes ejecutan tareas, sin necesidad de inspeccionar o confiar en los agentes ajenos.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Contratos Inteligentes",
+      "Verificación Formal",
+      "Confianza Computacional"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-21T17:29:16Z"
+  },
+  "arxiv:2610.27653v1": {
+    "tldr": "Atacantes pueden evadir marcas de agua en modelos de lenguaje al explotar una debilidad fundamental compartida por muchos métodos actuales.",
+    "problema": "Las marcas de agua estadísticas en modelos de lenguaje, diseñadas para detectar texto generado, son vulnerables a ataques que las evaden manteniendo la fluidez del texto.",
+    "propuesta": "Se propone un marco de ataque unificado que explota la relación entre las puntuaciones de detección y los cambios en la probabilidad de los tokens introducidos por las marcas de agua.",
+    "resultados": "El ataque reduce las tasas de detección a un máximo de 0.05 en diversas configuraciones, preservando la calidad del texto, y se demuestra que es óptimo para las familias de marcas de agua cubiertas.",
+    "por_que_importa": "Las marcas de agua actuales pueden ser derrotadas de manera confiable, lo que exige diseños de marcas de agua fundamentalmente diferentes que desacoplen las puntuaciones de detección de los cambios en la probabilidad de los tokens.",
+    "tags": [
+      "IA",
+      "ciberseguridad",
+      "modelos de lenguaje",
+      "marcas de agua",
+      "ataques",
+      "detección"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-21T17:29:25Z"
+  },
+  "arxiv:2610.27784v1": {
+    "tldr": "Restaurar compilaciones históricas de software es difícil; RELAY las repara automáticamente y de forma más eficiente.",
+    "problema": "Las compilaciones históricas de software, cruciales para la investigación y benchmarks de ciberseguridad, fallan frecuentemente debido a cambios en dependencias externas (imágenes, paquetes), no al código fuente. El 69.7% de 14,159 casos de OSS-Fuzz ya no se pueden reconstruir.",
+    "propuesta": "RELAY es un framework híbrido que usa un LLM para generar reglas de reparación automáticas y deterministas a partir de fallos recurrentes. Estas reglas se reutilizan sin necesidad de llamadas al modelo. Los casos que las reglas no resuelven se escalan a un agente de reparación específico para cada caso.",
+    "resultados": "La derivación de reglas puede ser totalmente automática. Las reglas reutilizables reparan tantas compilaciones como agentes dedicados, pero con menos ejecuciones de compilación. Los agentes reparan casos que las reglas no pueden. El enfoque híbrido (reglas + agente) repara más compilaciones que cada método por separado y a menor coste que solo usar agentes.",
+    "por_que_importa": "Permite restaurar de forma eficiente y a gran escala compilaciones históricas de software, vital para la reproducibilidad de la investigación en ciberseguridad y el desarrollo de benchmarks fiables, reduciendo costes y mejorando la tasa de éxito.",
+    "tags": [
+      "reparación de software",
+      "compilaciones históricas",
+      "ciberseguridad",
+      "ingeniería de software",
+      "LLMs",
+      "automatización"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-21T17:29:34Z"
+  },
+  "arxiv:2610.28354": {
+    "tldr": "S-Agent 2.0 mejora el razonamiento espacial en IA conectando agentes de codificación con herramientas de percepción 3D.",
+    "problema": "Los modelos de IA actuales, incluso con acceso a herramientas de percepción 3D, fallan al interpretar la evidencia y llegar a conclusiones espaciales correctas.",
+    "propuesta": "S-Agent 2.0 equipa a un agente de codificación general con un kit de herramientas de percepción 3D, centrándose en un bucle de evidencia: adquirir, recordar en memoria persistente e interpretar lecturas en lenguaje espacial.",
+    "resultados": "Mejora un modelo open-source (Qwen3.8-27B) en MMSI-Bench (+13.9) y ReVSI (+20.5), y un modelo closed-source (Gemini-3.8-Flash) en +11.2 y +9.6 respectivamente. Alcanza 66.5 en MMSI-Bench y 82.3 en ReVSI con Qwen, superando a SpatialClaw.",
+    "por_que_importa": "Permite a los agentes de IA comprender y razonar sobre el espacio 3D de manera más efectiva, mejorando su aplicabilidad en tareas que requieren percepción espacial precisa.",
+    "tags": [
+      "razonamiento espacial",
+      "agentes de IA",
+      "visión por computadora",
+      "herramientas 3D",
+      "memoria persistente"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-21T17:29:44Z"
+  },
+  "arxiv:2610.27911": {
+    "tldr": "Evalúa agentes IA en entornos empresariales con documentos que cambian, enfrentando conflictos y versiones múltiples de información.",
+    "problema": "Los agentes de IA empresariales fallan al responder preguntas sobre datos que evolucionan y tienen versiones conflictivas o temporales en documentos, chats e imágenes.",
+    "propuesta": "Se introduce MMEnterprise-Bench, un benchmark con 1.613 preguntas sobre registros multimodales simulados que evolucionan, cubriendo razonamiento de evidencia, resolución de conflictos e irrespondibilidad.",
+    "resultados": "Los 10 modelos evaluados (propietarios y open-source) tienen dificultades con conflictos entre fuentes o temporales, y al razonar sobre múltiples imágenes. Aumentar el presupuesto de recuperación mejora el recuerdo de evidencia, pero no la precisión de la respuesta consistentemente.",
+    "por_que_importa": "Este benchmark es crucial para desarrollar agentes empresariales más fiables que puedan manejar la complejidad y la evolución de la información en el lugar de trabajo moderno.",
+    "tags": [
+      "agentes empresariales",
+      "IA multimodal",
+      "razonamiento",
+      "benchmarking",
+      "ciberseguridad",
+      "gestión de conocimiento"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-21T17:29:53Z"
+  },
+  "arxiv:2610.28444": {
+    "tldr": "EvaOmni evalúa la capacidad de los modelos de IA para razonar con audio y video, exigiendo la localización de evidencia.",
+    "problema": "Los benchmarks actuales de razonamiento audiovisual no evalúan si los modelos realmente usan la evidencia de audio y video para llegar a la respuesta correcta, permitiendo atajos textuales o unimodales.",
+    "propuesta": "Se introduce EvaOmni, un benchmark con 392 videos y 1027 pares pregunta-respuesta anotados por humanos, que requiere que los modelos identifiquen la respuesta y los intervalos de evidencia de audio y video que la soportan.",
+    "resultados": "Gemini3.7-Flash obtuvo la mayor precisión (79.4%), C.G. (70.8%) y B.G. (35.1%) entre 24 modelos evaluados. A nivel 3, alcanzó 79.1% de precisión, pero con un B.G. de solo 12.3%.",
+    "por_que_importa": "Permite una evaluación más fiable de la capacidad de los modelos para integrar información multimodal y razonar de forma fundamentada, identificando áreas de mejora en la localización temporal de la evidencia.",
+    "tags": [
+      "razonamiento audiovisual",
+      "benchmarking",
+      "IA multimodal",
+      "localización de evidencia",
+      "evaluación de modelos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-21T17:30:02Z"
+  },
+  "arxiv:2610.28522": {
+    "tldr": "DecisionPivot, un benchmark para evaluar la toma de decisiones en LLMs, revela fallos ocultos en modelos de IA que las métricas agregadas no detectan.",
+    "problema": "Las métricas de precisión de ítems por sí solas no son suficientes para evaluar si los modelos de decisión en sistemas LLM toman decisiones correctas ante variaciones controladas o si asignan confianza fiable a sus predicciones.",
+    "propuesta": "Se introduce DecisionPivot, un benchmark diagnóstico con 48 tareas y 40,033 ítems, que incluye un track principal con grupos de contraste y un track de referencia con datos públicos, para evaluar modelos de decisión y generales.",
+    "resultados": "Se observaron diferencias sustanciales no detectadas por métricas agregadas: dos modelos 27B con solo 2.6 puntos de diferencia en el track de referencia mostraron 70.1% y 44.2% de precisión en grupos de contraste. Un modelo mostró un 92.3% de ordenamiento de probabilidad correcto pero solo 74.1% de respuestas correctas. GLM-5.3 alcanzó 93.5% de precisión en grupos de contraste a mayor esfuerzo, comparado con 81.5% a menor esfuerzo.",
+    "por_que_importa": "DecisionPivot proporciona diagnósticos detallados de fallos en la toma de decisiones, identificando problemas específicos y niveles de dificultad que las evaluaciones agregadas no pueden revelar, permitiendo mejorar la fiabilidad de los LLMs.",
+    "tags": [
+      "LLMs",
+      "Evaluación de IA",
+      "Benchmarks",
+      "Toma de Decisiones",
+      "Ciberseguridad",
+      "Modelos de Lenguaje"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-21T17:30:12Z"
   }
 }

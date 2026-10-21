@@ -1,0 +1,554 @@
+{
+  "date": "2026-10-21",
+  "report_type": "filtrado",
+  "evaluated": 193,
+  "selected": 12,
+  "papers": [
+    {
+      "id": "arxiv:2610.28425v1",
+      "rank": 1,
+      "title": "After the Attacker Leaves: Benchmarking Carryover Attacks on LLM Agents",
+      "authors": [
+        "Zhiyue Xu",
+        "Xukai Wang",
+        "Zhiyuan Huang",
+        "Mingjie Zhan"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-20",
+      "url": "https://arxiv.org/abs/2610.28425v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.28425v1",
+      "score": 59,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "Modern LLM agents persist state across sessions via two channels: long-lived memory files silently prepended to the system prompt, and scheduled tasks waking the agent without user input. A one-time indirect prompt injection committed to either channel can re-fire across sessions long after the attacker leaves, threats we term carryover attacks. Existing prompt-injection benchmarks evaluate attacks only in the session where malicious content is first observed, leaving the gate governing when and how often a planted payload later re-fires unmeasured. We present CarryoverBench: 12 personal-assistant scenarios and 101 attack tasks across three trigger channels: Instant, same-turn IPI; Autonomous, heartbeat-scheduled; and Latent, memory-resurfaced. A rule-based verifier scores planting and triggering as independent stages. Across five frontier models, planted payloads re-fire without measurable decay over five rounds; conditional on successful planting, the trigger stage often provides little additional protection. Porting the Latent channel to a second runtime, Hermes, attenuates but does not eliminate the effect, suggesting that carryover defense requires runtime-layer controls in addition to prompt-level interventions.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los ataques persistentes en agentes LLM pueden reactivarse mucho después de que el atacante desaparezca, amenazando la seguridad a largo plazo.",
+        "problema": "Los ataques de inyección de prompts en agentes LLM que persisten entre sesiones (carryover attacks) no se evalúan adecuadamente, ya que los benchmarks actuales solo miden el ataque inicial.",
+        "propuesta": "Se presenta CarryoverBench, un benchmark con 12 escenarios y 101 tareas de ataque en tres canales (Instant, Autonomous, Latent) para evaluar la persistencia y reactivación de ataques en agentes LLM.",
+        "resultados": "Los payloads plantados se reactivan sin decaimiento medible en cinco rondas. El canal Latent, al ser portado a otro runtime (Hermes), se atenúa pero no se elimina, sugiriendo la necesidad de controles a nivel de runtime.",
+        "por_que_importa": "Es crucial para desarrollar defensas robustas contra ataques persistentes que pueden comprometer la seguridad y fiabilidad de los agentes LLM a largo plazo.",
+        "tags": [
+          "LLM Agents",
+          "Ciberseguridad",
+          "Carryover Attacks",
+          "Prompt Injection",
+          "Benchmarking",
+          "Seguridad IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-21T17:28:12Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.28397v1",
+      "rank": 2,
+      "title": "MAS-Guard: Unified Guardrails from Individual Agents to Multi-Agent LLM Systems",
+      "authors": [
+        "Mohammad Kachuee",
+        "Phu Mon Htut",
+        "Sheng Li",
+        "Nikolaos Pappas"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-20",
+      "url": "https://arxiv.org/abs/2610.28397v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.28397v1",
+      "score": 59,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "Agentic AI extends large language models (LLMs) from generating responses to planning and executing complex workflows, substantially expanding their utility while exposing applications to unsafe actions, information leakage, and adversarial manipulation. Multi-agent systems further expand these capabilities through specialization and collaboration, but distributed authority, heterogeneous roles, and opaque or potentially compromised participants make safeguarding even more challenging. Existing defenses address important individual threats but provide fragmented coverage across local execution, system-level interactions, and enforcement mechanisms. We introduce MAS-Guard, a unified framework that closes this gap for safeguarding single- and multi-agent AI applications containing both instrumentable and opaque agents. Within instrumentable agents, the proposed local Agent Guardrail (A-Guard) layer applies task-specific experts to assess agentic events. At the system level, developer-owned Agent Charters and a Control Plane combine deterministic structural checks of routes, agent capabilities, and message formats with semantic assessments of roles and message content. These complementary layers enable enforcement through a shared set of interventions: allow, reflection, confirmation, and block. Evaluated across six benchmarks covering diverse single- and multi-agent scenarios with three agent LLMs from different providers, MAS-Guard reduces the overall attack success rate by 71.5-86.3% relative to unguarded agents, while meeting the utility reference criterion on benign tasks.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "MAS-Guard unifica defensas para proteger sistemas de IA de agentes múltiples contra ataques, reduciendo el éxito de estos en hasta un 86.3%.",
+        "problema": "Los sistemas de IA con agentes múltiples, que extienden las capacidades de los LLMs, son vulnerables a acciones inseguras, fugas de información y manipulación, siendo las defensas existentes fragmentadas e insuficientes.",
+        "propuesta": "MAS-Guard introduce un marco unificado con capas complementarias: A-Guard para agentes instrumentables y un Control Plane con Agent Charters para sistemas. Combina verificaciones estructurales y semánticas para evaluar eventos y rutas, permitiendo intervenciones como permitir, reflexionar, confirmar o bloquear.",
+        "resultados": "MAS-Guard reduce la tasa de éxito de ataques entre un 71.5% y un 86.3% en comparación con agentes sin protección, manteniendo la utilidad en tareas benignas.",
+        "por_que_importa": "Ofrece una solución integral para la ciberseguridad de aplicaciones de IA de agentes, tanto individuales como multi-agente, mejorando significativamente la robustez frente a amenazas sin sacrificar la funcionalidad.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Agentes Múltiples",
+          "LLM",
+          "Seguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-21T17:28:38Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.28259v1",
+      "rank": 3,
+      "title": "Large Multimodal Models for Direct Robot Control: GPT-6 as a Beginning",
+      "authors": [
+        "Youwei Zhou",
+        "Bohan Hou",
+        "Yankai Fu",
+        "Yaoxu Lyu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.RO]",
+      "category": "cs.RO",
+      "date": "2026-10-20",
+      "url": "https://arxiv.org/abs/2610.28259v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.28259v1",
+      "score": 54,
+      "topics": [
+        "vuln & threats",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, AI agents"
+      ],
+      "abstract_en": "Recent advances in visuospatial understanding and agentic reasoning enable direct robotic manipulation with general-purpose multimodal models, but their embodied capabilities remain poorly understood. This paper systematically evaluate GPT-6 Astra for closed-loop robotic manipulation using a lightweight agent execution framework. We first probe three fundamental embodied capabilities-depth perception, embodied in-context learning, and tactile understanding-and demonstrate that the model can exploit depth information, acquire simple manipulation strategies from contextual demonstrations, and use tactile feedback to correct its actions. We then evaluate GPT-6 Astra across five established manipulation benchmarks along six capability dimensions. Despite competitive performance on several benchmarks-26.92\\% success on RoboDojo and 76.0\\% on RoboTwin 2.0-our analysis reveals a pronounced gap between semantic reasoning and physical execution, particularly in consequence-aware action planning, precision, and complex motion coordination. To further examine these limitations, we introduce LIBERO-GeoMotion, a new benchmark of geometry-constrained tasks that require precise pose alignment, coordinated translation and rotation, and anticipation of physical action consequences. GPT-6 Astra achieves only 11.1\\% zero-shot success, exposing the difficulty of translating spatial understanding into physically feasible motion. Real-world experiments corroborate these findings: zero-shot execution is feasible for simple tasks, yet persistent deficits remain in motion feasibility, precise control, and physical safety, while substantial inference latency further hinders practical deployment. Overall, our results characterize the emerging embodied capabilities of general-purpose multimodal models and delineate the key challenges toward safe, efficient, and reliable robotic manipulation.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "GPT-6 Astra muestra potencial en control robótico directo, pero aún enfrenta desafíos en razonamiento físico y coordinación de movimientos complejos.",
+        "problema": "Evaluar las capacidades de manipulación robótica de modelos multimodales generales como GPT-6 Astra, entendiendo la brecha entre el razonamiento semántico y la ejecución física.",
+        "propuesta": "Se evalúa sistemáticamente GPT-6 Astra en tareas de manipulación robótica cerrada, probando percepción de profundidad, aprendizaje en contexto y retroalimentación táctil, y se introduce un nuevo benchmark (LIBERO-GeoMotion) para tareas de alta precisión.",
+        "resultados": "GPT-6 Astra logra un 26.92% de éxito en RoboDojo y un 76.0% en RoboTwin 2.0. En el nuevo benchmark LIBERO-GeoMotion, el éxito es solo del 11.1%. Se observan déficits en planificación de acciones, precisión, coordinación de movimiento y seguridad, además de latencia significativa.",
+        "por_que_importa": "Caracteriza las capacidades emergentes de modelos multimodales para robótica, identificando los desafíos clave para lograr una manipulación robótica segura, eficiente y confiable en el mundo real.",
+        "tags": [
+          "IA",
+          "Robótica",
+          "Modelos Multimodales",
+          "Control Robótico",
+          "Evaluación"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-21T17:28:48Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.28430v1",
+      "rank": 4,
+      "title": "A Digital Twin to Improve Cyber-Social Impact",
+      "authors": [
+        "Vita Santa Barletta",
+        "Danilo Caivano",
+        "Gabriel Cellammare",
+        "Andrea Dimauro"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-20",
+      "url": "https://arxiv.org/abs/2610.28430v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.28430v1",
+      "score": 53,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: cybersecurity, vuln & threats, LLM"
+      ],
+      "abstract_en": "The increasing complexity of Industrial Control Systems (ICS) and their integration with IT infrastructures has significantly expanded the cyber threat landscape. Traditional cybersecurity models, primarily based on the Confidentiality, Integrity, and Availability (CIA triad), fail to capture the broader societal and operational impacts of cyberattacks. This paper proposes a novel framework that integrates Digital Twin technology with a Cyber-Social Security model to simulate, analyze, and quantify cyber threats in critical infrastructures. Virtualized ICS environments built with Mininet and MiniCPS are used to model attack scenarios and assess their consequences across technical and social dimensions. At the core of the framework lies the Cyber-Social Vulnerability Scoring System (CSVSS), a quantitative metric that extends CVSS with a Social Impact dimension grounded in the Entity and Place pillars, producing a single, reproducible severity score that reflects real-world consequences. Crucially, the framework does not automate risk assessment but keeps the human analyst at its center: a Large Language Model (LLM) performs a first-pass analysis, mapping vulnerabilities and drafting risk reports, while the analyst, supported by explainable AI feedback, validates the findings and retains decision authority over critical cases. Experimental results demonstrate the framework's ability to model and score cyber-social impact, while the human-in-the-loop design is presented as a conceptual principle to preserve oversight.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Un gemelo digital y modelo ciber-social para evaluar el impacto real de los ciberataques en infraestructuras críticas.",
+        "problema": "Los modelos de ciberseguridad actuales no capturan el impacto social y operacional de los ciberataques en sistemas de control industrial (ICS) complejos e interconectados.",
+        "propuesta": "Se propone un marco que integra gemelos digitales de ICS con un modelo Ciber-Social de Seguridad (CSVSS) para simular, analizar y cuantificar amenazas, extendiendo CVSS con una dimensión de impacto social.",
+        "resultados": "El marco puede modelar y puntuar el impacto ciber-social. Se utiliza un LLM para un primer análisis y un analista humano valida los hallazgos, manteniendo la autoridad de decisión.",
+        "por_que_importa": "Permite una evaluación más realista de los riesgos de ciberseguridad en infraestructuras críticas, considerando las consecuencias sociales y operacionales más allá de la simple disponibilidad técnica.",
+        "tags": [
+          "ciberseguridad",
+          "gemelo digital",
+          "infraestructura crítica",
+          "impacto social",
+          "ICS",
+          "CSVSS"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-21T17:28:57Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.28315v1",
+      "rank": 5,
+      "title": "Disclosure Begets Disclosure: A Self-Reinforcing Privacy Loop in LLM Agents with Persistent Memory",
+      "authors": [
+        "Masahiro Kaneko",
+        "Hiromi Arai",
+        "Timothy Baldwin"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-20",
+      "url": "https://arxiv.org/abs/2610.28315v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.28315v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "Large language model (LLM) agents increasingly use persistent memory to personalize responses, and personal attributes in this memory pose a privacy risk if exposed. We ask how consulting memory during dialogue changes what users go on to say, and thus what the memory comes to reveal. In multi-session simulations, a simulated user with 24 personal attributes talks with a support agent that does or does not consult memory, and in both settings attributes are inferred from the full accumulated record. Across four support models, memory raises response quality but also empirical leakage, the share of attribute values correctly inferred from the record, by a margin that widens over sessions. The cause is a loop in ordinary, non-adversarial assistance. Memory-conditioned responses carry earlier values forward, often as presuppositions, and users affirm them or leave them uncorrected, so that cues and the agent's own guesses become recorded values. The loop reinforces itself, and removing the agent's mentions of an attribute lowers its later disclosure about twice as much as single-turn effects predict. Users cannot leave it on their own, since correcting a value discloses the attribute, declining to discuss it shifts later predictions toward sensitive values, and incorrect values left in place become entrenched. The loop is best weakened at the agent's response. Instructing the agent not to state or presuppose attributes brings leakage to about the no-memory level while keeping most of the quality gains, whereas filtering or anonymizing what users say or what is stored gives up much of them.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "La memoria persistente en agentes LLM mejora la calidad pero crea un bucle de autoperpetuación que revela datos personales del usuario.",
+        "problema": "Los agentes LLM con memoria persistente pueden exponer inadvertidamente atributos personales del usuario a través de un ciclo de retroalimentación donde las respuestas basadas en memoria influyen en lo que el usuario dice a continuación, reforzando la revelación de información.",
+        "propuesta": "Se simulan interacciones de usuarios con agentes LLM que consultan o no memoria persistente. Se analiza cómo la consulta de memoria afecta la revelación de atributos personales del usuario a lo largo de múltiples sesiones y se proponen estrategias para mitigar este riesgo, enfocándose en las respuestas del agente.",
+        "resultados": "La consulta de memoria mejora la calidad de las respuestas pero aumenta la 'fuga empírica' (atributos inferidos correctamente) en un margen que se amplía con las sesiones. Instruir al agente para que no mencione o presuponga atributos reduce la fuga a niveles similares a los de no usar memoria, manteniendo la mayor parte de las mejoras de calidad. Filtrar o anonimizar las entradas del usuario o el almacenamiento de memoria es menos efectivo y reduce significativamente la calidad.",
+        "por_que_importa": "Es crucial para la privacidad de los usuarios en aplicaciones de IA que utilizan memoria persistente. Las estrategias de mitigación enfocadas en el comportamiento del agente, en lugar de en la entrada o almacenamiento del usuario, son más efectivas para equilibrar utilidad y privacidad.",
+        "tags": [
+          "privacidad",
+          "LLM",
+          "agentes IA",
+          "memoria persistente",
+          "ciberseguridad",
+          "fuga de datos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-21T17:29:06Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.28484v1",
+      "rank": 6,
+      "title": "Proof-Carrying Contracts: Commitments AI Agents Cannot Break",
+      "authors": [
+        "Carlo Ciliberto",
+        "Alessandro Rudi",
+        "Enrico Tassi"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-20",
+      "url": "https://arxiv.org/abs/2610.28484v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.28484v1",
+      "score": 50,
+      "topics": [
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: AI agents, adversarial ML"
+      ],
+      "abstract_en": "AI agents increasingly act on behalf of people or other agents, purchasing services, exchanging information and delegating work. What an agent must respect is written in instructions, policies or agreements, but text alone cannot make it comply. It may make mistakes, be redirected by what it reads, or pursue different interests. For an economy of such agents to function, parties need agreements they can rely on without inspecting or trusting one another's agents. We introduce Proof-Carrying Contracts (PC2), a framework for making agreed constraints enforceable throughout an agent's interactions with a system. Before a requested operation can run, the agent must supply a machine-checkable proof that it preserves the agreed constraints in every case allowed by its model. An execution system called the Airlock checks the proof and controls access to the operation. The parties specify the conditions to preserve, while the agent supplies the reasoning needed to justify its decisions and remains free to adapt its strategy. This avoids having to design a separate permission policy and prove that every decision it permits is safe. We prove that the constraints hold at every instant during execution, even for an adversarial agent, and identify when this implies safety in the world. Reusable capability modules provide tools and guarantees from which contracts can be constructed. PC2 provides a foundation for an agent economy whose agreements protect both those delegating work and those carrying it out.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Contratos con Pruebas: Garantiza que los agentes de IA cumplan acuerdos sin necesidad de confianza mutua.",
+        "problema": "Los agentes de IA que actúan en nombre de otros necesitan cumplir acuerdos (instrucciones, políticas), pero el texto solo no garantiza el cumplimiento, lo que dificulta una economía de agentes confiable.",
+        "propuesta": "Introduce Proof-Carrying Contracts (PC2), un framework que exige a los agentes presentar pruebas verificables por máquina de que sus operaciones respetan los acuerdos antes de ejecutarse, y un sistema (Airlock) que verifica estas pruebas.",
+        "resultados": "Se demuestra que las restricciones se cumplen en todo momento durante la ejecución, incluso contra agentes adversarios. El resumen no especifica resultados numéricos.",
+        "por_que_importa": "Permite crear una economía de agentes donde los acuerdos son exigibles y confiables, protegiendo tanto a quienes delegan como a quienes ejecutan tareas, sin necesidad de inspeccionar o confiar en los agentes ajenos.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Contratos Inteligentes",
+          "Verificación Formal",
+          "Confianza Computacional"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-21T17:29:16Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.27653v1",
+      "rank": 7,
+      "title": "A Unified Attack Framework against Statistical Generative Watermarks for Large Language Models",
+      "authors": [
+        "Romina Omidi",
+        "Nima Naderloui",
+        "Yuan Hong",
+        "Binghui Wang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-20",
+      "url": "https://arxiv.org/abs/2610.27653v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.27653v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Watermarking has emerged as a key tool for identifying text generated by large language models (LLMs), with current schemes embedding statistical signals into the generation process to enable later detection. In this work, we identify a shared weakness across a broad class of popular LLM watermarking methods, including KGW (and its variants), GumbelSoft, DipMark, ITS, and SynthID. We show that these schemes exhibit a fundamental link between their detection scores and the token probability shifts they introduce during generation. This link, which we call score-ratio alignment, allows an attacker with only black-box query access to the model--and no knowledge of secret keys or model weights--to produce text that evades detection while remaining fluent and natural. We prove that the resulting attack is optimal across all covered watermark families, and show that the weakness is intrinsic: any watermark designed to maximize statistical detection power necessarily induces the very structure that attackers can exploit. We evaluate our attack on seven popular generative LLM watermarking schemes, three LLMs, and tasks, which reduce detection rates to at most 0.05 across all settings while preserving text quality. Our findings show that current watermarking methods can be reliably defeated under realistic attack conditions, highlighting the need for fundamentally different watermarking designs that decouple detection scores from token probability shifts.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Atacantes pueden evadir marcas de agua en modelos de lenguaje al explotar una debilidad fundamental compartida por muchos métodos actuales.",
+        "problema": "Las marcas de agua estadísticas en modelos de lenguaje, diseñadas para detectar texto generado, son vulnerables a ataques que las evaden manteniendo la fluidez del texto.",
+        "propuesta": "Se propone un marco de ataque unificado que explota la relación entre las puntuaciones de detección y los cambios en la probabilidad de los tokens introducidos por las marcas de agua.",
+        "resultados": "El ataque reduce las tasas de detección a un máximo de 0.05 en diversas configuraciones, preservando la calidad del texto, y se demuestra que es óptimo para las familias de marcas de agua cubiertas.",
+        "por_que_importa": "Las marcas de agua actuales pueden ser derrotadas de manera confiable, lo que exige diseños de marcas de agua fundamentalmente diferentes que desacoplen las puntuaciones de detección de los cambios en la probabilidad de los tokens.",
+        "tags": [
+          "IA",
+          "ciberseguridad",
+          "modelos de lenguaje",
+          "marcas de agua",
+          "ataques",
+          "detección"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-21T17:29:25Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.27784v1",
+      "rank": 8,
+      "title": "RELAY: Scaling Historical Build Restoration through Rule Reuse and Agentic Repair",
+      "authors": [
+        "Olivier Nourry",
+        "Yoshiki Higo"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-10-20",
+      "url": "https://arxiv.org/abs/2610.27784v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.27784v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Vulnerability benchmarks and software engineering research depend on rebuilding historical software. Yet builds rely on external resources, such as base images and packages, that change independently of the source code. In this study, we examine this environment decay on 14,159 OSS-Fuzz cases. We find that 69.7% no longer complete reconstruction and verification, and that most failures share a small number of recurring failure symptoms. A recurring failure can therefore be diagnosed once and its repair reused. We present Relay, a hybrid framework that uses an LLM to derive and validate deterministic repair rules from representative failures, reuses them without model calls, and escalates cases unresolved by rules to a per-case agent. We evaluate Relay in human-guided and fully automated rule-derivation campaigns and compare it with a per-case agent approach. We find that rule derivation can be fully automated, and that reusable rules restore as many builds as per-case agents with fewer build executions. However, agents restore cases that the rules cannot. Our results show that a hybrid approach that applies rules first and escalates the remaining cases to an agent restores more builds than either approach alone and at a lower cost than using agents alone.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Restaurar compilaciones históricas de software es difícil; RELAY las repara automáticamente y de forma más eficiente.",
+        "problema": "Las compilaciones históricas de software, cruciales para la investigación y benchmarks de ciberseguridad, fallan frecuentemente debido a cambios en dependencias externas (imágenes, paquetes), no al código fuente. El 69.7% de 14,159 casos de OSS-Fuzz ya no se pueden reconstruir.",
+        "propuesta": "RELAY es un framework híbrido que usa un LLM para generar reglas de reparación automáticas y deterministas a partir de fallos recurrentes. Estas reglas se reutilizan sin necesidad de llamadas al modelo. Los casos que las reglas no resuelven se escalan a un agente de reparación específico para cada caso.",
+        "resultados": "La derivación de reglas puede ser totalmente automática. Las reglas reutilizables reparan tantas compilaciones como agentes dedicados, pero con menos ejecuciones de compilación. Los agentes reparan casos que las reglas no pueden. El enfoque híbrido (reglas + agente) repara más compilaciones que cada método por separado y a menor coste que solo usar agentes.",
+        "por_que_importa": "Permite restaurar de forma eficiente y a gran escala compilaciones históricas de software, vital para la reproducibilidad de la investigación en ciberseguridad y el desarrollo de benchmarks fiables, reduciendo costes y mejorando la tasa de éxito.",
+        "tags": [
+          "reparación de software",
+          "compilaciones históricas",
+          "ciberseguridad",
+          "ingeniería de software",
+          "LLMs",
+          "automatización"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-21T17:29:34Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.28354",
+      "rank": 1,
+      "title": "S-Agent 2.0: Spatial Reasoning with a General Coding Agent",
+      "authors": [
+        "Rui Gong",
+        "Ruoyu Wang",
+        "Yalun Dai",
+        "Hao Li"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-20",
+      "url": "https://arxiv.org/abs/2610.28354",
+      "pdf_url": "https://arxiv.org/pdf/2610.28354",
+      "score": 65,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "Spatial reasoning asks a model to work out where objects are in 3D space, how they relate to one another, and how they move. Agentic VLMs have recently brought large improvements on such tasks by letting the model actively gather evidence with 3D perception tools instead of answering in a single pass. Even so, on many questions the tools return the right evidence and the model still does not arrive at the correct answer: the gap between model and tools, where raw readings become usable conclusions, is left unfilled. We present S-Agent 2.0, a spatial reasoning agent that equips an off-the-shelf general coding agent with a command-line perception toolkit, and we design the interface around one principle: help the VLM close the evidence loop: acquire scene evidence, remember it in a persistent scene memory, and interpret each reading in plain spatial language. This design keeps the full flexibility of a coding agent, and every reading it acts on stays grounded in the tools' geometry. On MMSI-Bench and ReVSI, the toolkit improves a strong open-source model, Qwen3.8-27B, by +13.9 and +20.5 points over the same agent without tools, and a strong closed-source model, Gemini-3.8-Flash, by +11.2 and +9.6 points. With the open backbone S-Agent 2.0 reaches 66.5 on MMSI-Bench and 82.3 on ReVSI, ahead of the specialized system SpatialClaw on the same backbone (62.6 and 74.5), and with Gemini-3.8-Flash it reaches 74.1 and 90.5 against its 67.0 and 79.7. Both tool gains shrink as the backbone grows more capable, but SpatialClaw's shrinks far more on ReVSI, from +13.2 to +2.7, while ours stays at +9.6. S-Agent 2.0 also works across different general coding agent harnesses, such as Codex and Claude Code.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "S-Agent 2.0 mejora el razonamiento espacial en IA conectando agentes de codificación con herramientas de percepción 3D.",
+        "problema": "Los modelos de IA actuales, incluso con acceso a herramientas de percepción 3D, fallan al interpretar la evidencia y llegar a conclusiones espaciales correctas.",
+        "propuesta": "S-Agent 2.0 equipa a un agente de codificación general con un kit de herramientas de percepción 3D, centrándose en un bucle de evidencia: adquirir, recordar en memoria persistente e interpretar lecturas en lenguaje espacial.",
+        "resultados": "Mejora un modelo open-source (Qwen3.8-27B) en MMSI-Bench (+13.9) y ReVSI (+20.5), y un modelo closed-source (Gemini-3.8-Flash) en +11.2 y +9.6 respectivamente. Alcanza 66.5 en MMSI-Bench y 82.3 en ReVSI con Qwen, superando a SpatialClaw.",
+        "por_que_importa": "Permite a los agentes de IA comprender y razonar sobre el espacio 3D de manera más efectiva, mejorando su aplicabilidad en tareas que requieren percepción espacial precisa.",
+        "tags": [
+          "razonamiento espacial",
+          "agentes de IA",
+          "visión por computadora",
+          "herramientas 3D",
+          "memoria persistente"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-21T17:29:44Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.27911",
+      "rank": 2,
+      "title": "MMEnterprise-Bench: Evaluating Enterprise Agents over Evolving Multimodal Records",
+      "authors": [
+        "Seohyun Lee",
+        "Jongha Kim",
+        "Dohwan Ko",
+        "Ji Soo Lee"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-20",
+      "url": "https://arxiv.org/abs/2610.27911",
+      "pdf_url": "https://arxiv.org/pdf/2610.27911",
+      "score": 62,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Enterprise agents answer questions over workplace records that evolve through team collaboration. As information is shared, corrected, and revised across documents, chats, and figures, multiple versions of the same information accumulate in the workspace. Reliable question answering therefore requires agents to reason over sufficient evidence, resolve cross-source and temporal conflicts, and recognize when the available evidence is insufficient to establish an answer. To systematically evaluate these capabilities, we introduce MMEnterprise-Bench, a benchmark comprising 1,613 questions grounded in evolving multimodal records from simulated collaboration projects, covering three categories: Evidence Reasoning, Conflict Resolution, and Unanswerability. We evaluate 10 proprietary and open-source multimodal LLMs and find that even the strongest models struggle when evidence contains cross-source or temporal conflicts or spans multiple images. Moreover, increasing the retrieval budget or employing a larger retriever improves evidence recall but does not consistently translate into higher answer accuracy. These findings highlight the persistent challenges of reasoning over evolving workplace records and establish MMEnterprise-Bench as a testbed for developing more reliable enterprise agents. Code and data are available at https://mlvlab.github.io/MMEnterprise-Bench/.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa agentes IA en entornos empresariales con documentos que cambian, enfrentando conflictos y versiones múltiples de información.",
+        "problema": "Los agentes de IA empresariales fallan al responder preguntas sobre datos que evolucionan y tienen versiones conflictivas o temporales en documentos, chats e imágenes.",
+        "propuesta": "Se introduce MMEnterprise-Bench, un benchmark con 1.613 preguntas sobre registros multimodales simulados que evolucionan, cubriendo razonamiento de evidencia, resolución de conflictos e irrespondibilidad.",
+        "resultados": "Los 10 modelos evaluados (propietarios y open-source) tienen dificultades con conflictos entre fuentes o temporales, y al razonar sobre múltiples imágenes. Aumentar el presupuesto de recuperación mejora el recuerdo de evidencia, pero no la precisión de la respuesta consistentemente.",
+        "por_que_importa": "Este benchmark es crucial para desarrollar agentes empresariales más fiables que puedan manejar la complejidad y la evolución de la información en el lugar de trabajo moderno.",
+        "tags": [
+          "agentes empresariales",
+          "IA multimodal",
+          "razonamiento",
+          "benchmarking",
+          "ciberseguridad",
+          "gestión de conocimiento"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-21T17:29:53Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.28444",
+      "rank": 3,
+      "title": "EvaOmni: An Evidence-Grounded Benchmark for Audio-Visual Reasoning",
+      "authors": [
+        "Xiaoxing Hu",
+        "Wenxi Yao",
+        "Chaoyuan Shi",
+        "Ziqi Ye"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-20",
+      "url": "https://arxiv.org/abs/2610.28444",
+      "pdf_url": "https://arxiv.org/pdf/2610.28444",
+      "score": 57,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Omni LLMs can naturally locate key audio and visual evidence and integrate information across modalities for audiovisual reasoning. Existing audio-visual reasoning benchmarks that mainly rely on multiple-choice questions usually score models solely based on answer correctness, making it difficult to assess whether a model truly forms a reasoning chain from evidence to the correct answer. In addition, textual or unimodal shortcuts may allow models to answer correctly without analyzing the necessary audio-visual evidence, further weakening the reliability of evaluation benchmarks. To address these issues, we introduce EvaOmni, an evidence-grounded benchmark containing 392 videos and 1,027 purely human-annotated question-answer pairs, covering 15 capabilities and three levels: retrieval and localization, basic understanding, and complex reasoning. We design a series of rigorous annotation procedures in which experts annotate audio and visual evidence and construct video-based distractors; humans review whether questions meet strict inspection criteria, and finally models filter textual and unimodal shortcuts. Beyond high-quality question-answer pairs, we require models to simultaneously return the answer and supporting evidence intervals in order to evaluate the complete reasoning chain. We propose the Coverage Grounded Score (C.G.) to measure how much annotated evidence a model identifies, and the Bottleneck Grounded Score (B.G.) to penalize poor temporal localization in either modality; both are incorporated into answer correctness. Across 7 open-weight and 17 proprietary Omni LLMs, Gemini3.7-Flash achieved the highest overall accuracy (79.4%), C.G. (70.8%), and B.G. (35.1%). At Level 3, it reached 79.1% accuracy, but its B.G. was only 12.3%. These results show that even the most advanced models still have room for development in grounded audio-visual reasoning.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "EvaOmni evalúa la capacidad de los modelos de IA para razonar con audio y video, exigiendo la localización de evidencia.",
+        "problema": "Los benchmarks actuales de razonamiento audiovisual no evalúan si los modelos realmente usan la evidencia de audio y video para llegar a la respuesta correcta, permitiendo atajos textuales o unimodales.",
+        "propuesta": "Se introduce EvaOmni, un benchmark con 392 videos y 1027 pares pregunta-respuesta anotados por humanos, que requiere que los modelos identifiquen la respuesta y los intervalos de evidencia de audio y video que la soportan.",
+        "resultados": "Gemini3.7-Flash obtuvo la mayor precisión (79.4%), C.G. (70.8%) y B.G. (35.1%) entre 24 modelos evaluados. A nivel 3, alcanzó 79.1% de precisión, pero con un B.G. de solo 12.3%.",
+        "por_que_importa": "Permite una evaluación más fiable de la capacidad de los modelos para integrar información multimodal y razonar de forma fundamentada, identificando áreas de mejora en la localización temporal de la evidencia.",
+        "tags": [
+          "razonamiento audiovisual",
+          "benchmarking",
+          "IA multimodal",
+          "localización de evidencia",
+          "evaluación de modelos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-21T17:30:02Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.28522",
+      "rank": 4,
+      "title": "DecisionPivot: A Diagnostic Benchmark for Decision Models in LLM Systems",
+      "authors": [
+        "Xialie Zhuang",
+        "Mingcong Lei",
+        "Zunhai Su",
+        "Ri Liu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-20",
+      "url": "https://arxiv.org/abs/2610.28522",
+      "pdf_url": "https://arxiv.org/pdf/2610.28522",
+      "score": 57,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Decision models support routing, guardrails, and output verification in LLM systems. However, item accuracy alone cannot establish whether models make correct decisions across controlled variations or assign reliable confidence to their predictions. We introduce DecisionPivot, a diagnostic benchmark comprising 48 tasks and 40,033 items across seven decision roles. Its core track contains 7,800 items from 13 generated task families, organized into contrast groups with computed answers verified by independently implemented solvers. The complementary reference track contains 32,233 items from 35 public test sets, preserving their original evaluation metrics. We evaluate 40 decision models and 14 general models using documented, model-specific protocols, assessing item and contrast-group accuracy, probability ordering, calibration, and empirical selective coverage. Our results reveal substantial differences obscured by aggregate scores: two 27B models separated by only 2.6 points on the reference track achieve contrast-group accuracies of 70.1% and 44.2%. Across 2,400 binary contrast pairs, Perplexity Decider correctly ranks the positive member above the negative member in 92.3% of pairs but answers both members correctly in only 74.1%, exposing a gap between probability ordering and decision correctness. Models with similar item accuracy also differ in the reliability of their high-confidence predictions. On a separate 1,296-item subset, GLM-5.3 achieves 93.5\\% contrast-group accuracy at a higher reasoning setting, compared with 81.5% at its lowest effort. By linking errors to pivotal details and difficulty levels, DecisionPivot provides fine-grained diagnostics of decision failures that aggregate evaluation alone cannot reveal.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "DecisionPivot, un benchmark para evaluar la toma de decisiones en LLMs, revela fallos ocultos en modelos de IA que las métricas agregadas no detectan.",
+        "problema": "Las métricas de precisión de ítems por sí solas no son suficientes para evaluar si los modelos de decisión en sistemas LLM toman decisiones correctas ante variaciones controladas o si asignan confianza fiable a sus predicciones.",
+        "propuesta": "Se introduce DecisionPivot, un benchmark diagnóstico con 48 tareas y 40,033 ítems, que incluye un track principal con grupos de contraste y un track de referencia con datos públicos, para evaluar modelos de decisión y generales.",
+        "resultados": "Se observaron diferencias sustanciales no detectadas por métricas agregadas: dos modelos 27B con solo 2.6 puntos de diferencia en el track de referencia mostraron 70.1% y 44.2% de precisión en grupos de contraste. Un modelo mostró un 92.3% de ordenamiento de probabilidad correcto pero solo 74.1% de respuestas correctas. GLM-5.3 alcanzó 93.5% de precisión en grupos de contraste a mayor esfuerzo, comparado con 81.5% a menor esfuerzo.",
+        "por_que_importa": "DecisionPivot proporciona diagnósticos detallados de fallos en la toma de decisiones, identificando problemas específicos y niveles de dificultad que las evaluaciones agregadas no pueden revelar, permitiendo mejorar la fiabilidad de los LLMs.",
+        "tags": [
+          "LLMs",
+          "Evaluación de IA",
+          "Benchmarks",
+          "Toma de Decisiones",
+          "Ciberseguridad",
+          "Modelos de Lenguaje"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-21T17:30:12Z"
+      }
+    }
+  ],
+  "generated_at": "2026-10-21T17:30:12Z"
+}
