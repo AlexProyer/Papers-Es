@@ -10754,5 +10754,240 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-10-21T17:30:12Z"
+  },
+  "arxiv:2610.29225v1": {
+    "tldr": "Evalúa la seguridad de los LLM con rúbricas detalladas, superando las limitaciones de las etiquetas binarias y mejorando la fiabilidad.",
+    "problema": "Los benchmarks actuales de seguridad de LLM usan etiquetas binarias (seguro/inseguro) que carecen de profundidad explicativa y tienen baja consistencia entre evaluadores automáticos.",
+    "propuesta": "Se introduce DiagSafe, un marco de evaluación diagnóstica que utiliza rúbricas a nivel de prompt con criterios explícitos para seguridad (incluyendo exenciones) y utilidad, evaluadas independientemente.",
+    "resultados": "DiagSafe logra un 95.34% de acuerdo con anotaciones humanas (superando el 69-87% de los métodos base) y alta consistencia entre jueces (Cohen's κ = 0.864). Revela diferencias notables en tasas de inseguridad entre LLMs líderes y vulnerabilidades únicas por modelo. Los modelos son más susceptibles en chino y en contextos de múltiples turnos.",
+    "por_que_importa": "Proporciona una herramienta fiable y explicable para auditar y optimizar la alineación de los LLM, permitiendo una comprensión más profunda de sus fallos de seguridad más allá de una simple clasificación binaria.",
+    "tags": [
+      "LLM",
+      "Seguridad IA",
+      "Evaluación",
+      "Rúbricas",
+      "Alineación"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-22T17:25:31Z"
+  },
+  "arxiv:2610.29178v1": {
+    "tldr": "Los monitores de IA que aprueban acciones pueden fallar juntos; diversificar y contar fuentes, no votos, mejora la seguridad.",
+    "problema": "Los sistemas de IA que toman decisiones críticas dependen de múltiples monitores, pero estos pueden fallar simultáneamente si comparten fuentes de datos o modelos base, comprometiendo la seguridad y fiabilidad.",
+    "propuesta": "Se propone aplicar conceptos de sistemas distribuidos (listas de conjuntos de monitores propensos a fallos) y diversificar las fuentes de entrada. Se compara contar fuentes en lugar de votos, y se evalúa la resistencia a la persuasión y la inyección de instrucciones maliciosas.",
+    "resultados": "Contar fuentes bloqueó el 0.9% de pagos correctos frente al 7.4% de las reglas de conteo de votos, con igual seguridad. Los modelos pequeños y DeepSeek-V3.2 fueron susceptibles a la persuasión, mientras que los modelos cerrados (Opus, GPT-6, Gemini 4) resistieron en su mayoría. Un ataque dejó a los aprobadores en una sola fuente, invalidando reglas basadas en doce monitores. Un motor de reglas externo restauró la seguridad y la viabilidad.",
+    "por_que_importa": "Mejorar la fiabilidad y seguridad de los sistemas de IA que toman decisiones críticas es esencial para su adopción práctica, previniendo fraudes y garantizando que las acciones legítimas no se bloqueen indebidamente.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Monitores de IA",
+      "Fiabilidad",
+      "Sistemas distribuidos",
+      "Seguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-22T17:25:41Z"
+  },
+  "arxiv:2610.29747v1": {
+    "tldr": "Nuevos ataques de inyección de prompts explotan la evidencia digital para engañar a los asistentes de IA en investigaciones forenses.",
+    "problema": "Los modelos de lenguaje (LLMs) se usan en investigaciones forenses, pero la evidencia bajo análisis, controlada por el atacante, puede usarse para inyectar prompts maliciosos y manipular el razonamiento del LLM, un vector de ataque no cubierto por defensas actuales.",
+    "propuesta": "Se propone una taxonomía de ataques de anti-forense que manipulan el razonamiento de los LLMs a través de evidencia adversarial. Se demuestra un 'gap de percepción' donde herramientas deterministas, el examinador humano y el LLM interpretan la evidencia de forma distinta, permitiendo ataques ocultos.",
+    "resultados": "Se demostraron tres ataques exitosos contra un pipeline de análisis asistido por LLM: cambio de conclusiones, escritura de contenido en la estación del analista y generación de tráfico de red saliente, todo mediante texto plantado en el dispositivo incautado. El resumen no especifica métricas numéricas de éxito.",
+    "por_que_importa": "Abre una nueva categoría de amenazas en ciberseguridad y forense digital, requiriendo nuevas defensas para proteger la integridad de las investigaciones asistidas por IA y la seguridad de los analistas.",
+    "tags": [
+      "forense digital",
+      "inyección de prompts",
+      "LLMs",
+      "anti-forense",
+      "ciberseguridad",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-22T17:25:52Z"
+  },
+  "arxiv:2610.29379v1": {
+    "tldr": "Las herramientas de IA para encontrar vulnerabilidades en código pueden fallar silenciosamente, ocultando fallos reales y permitiendo ataques dirigidos.",
+    "problema": "Las herramientas de descubrimiento de vulnerabilidades basadas en LLMs (modelos de lenguaje grandes) fallan en detectar fallos reales y alcanzables debido a cómo se construyen los 'harnesses' (sistemas de soporte) que rodean al modelo. Estos sistemas pueden descartar vulnerabilidades durante la selección, filtrado, almacenamiento o fusión de hallazgos, sin dejar rastro.",
+    "propuesta": "El paper propone identificar y categorizar los puntos de fallo en los harnesses de IA para el descubrimiento de vulnerabilidades. Analiza 13 puntos de caída en 12 harnesses de código abierto, propone patrones de fallo de ingeniería y ofrece principios de diseño para crear harnesses más fiables y resistentes a la evasión.",
+    "resultados": "Se identificaron 13 puntos donde los harnesses pueden descartar vulnerabilidades. Se demostró que seis harnesses analizaron un archivo sin detectar un fallo que contenía, cinco de ellos sin advertencia. Los hallazgos de fiabilidad son aplicables a otros harnesses de LLM y los de evasión a escenarios donde un atacante puede influir en el código.",
+    "por_que_importa": "Permite construir herramientas de IA más robustas y fiables para la ciberseguridad, evitando que vulnerabilidades críticas pasen desapercibidas y dificultando que los atacantes oculten fallos intencionadamente. Mejora la seguridad del software al hacer el análisis más preciso.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Vulnerabilidades",
+      "Harnesses",
+      "LLM",
+      "Seguridad de Software"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-22T17:26:02Z"
+  },
+  "arxiv:2610.30103v1": {
+    "tldr": "Nuevos problemas de IA revelan que los LLMs fallan más en tareas complejas (NP-Completas) que en sus versiones fáciles (P), incluso con redacción similar.",
+    "problema": "Los modelos de lenguaje actuales (LLMs) no demuestran una comprensión profunda de la complejidad computacional, ya que no distinguen entre problemas fáciles (P) y difíciles (NP-Completos) cuando se presentan con redacciones similares.",
+    "propuesta": "Se introduce P2NPCBench, un nuevo benchmark que empareja problemas NP-Completos con sus 'gemelos' P, utilizando AgentGAN para reescribir las declaraciones de forma adversaria y eliminar pistas de recuerdo, asegurando que las soluciones sigan siendo correctas.",
+    "resultados": "Los LLMs obtienen una tasa de acierto del 35.4% en problemas NP-Completos frente al 63.8% en sus contrapartes P. El 95.1% de los modelos fallan más en la versión NP-Completa. Aumentar el tiempo de ejecución no mejora significativamente la precisión en los problemas NP-Completos.",
+    "por_que_importa": "Demuestra las limitaciones actuales de los LLMs en razonamiento complejo y la necesidad de benchmarks más robustos para evaluar su verdadera capacidad de resolver problemas, no solo de memorizar soluciones.",
+    "tags": [
+      "LLMs",
+      "Complejidad Computacional",
+      "Benchmarking",
+      "IA",
+      "Ciberseguridad",
+      "NP-Completo"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-22T17:26:12Z"
+  },
+  "arxiv:2610.29196v1": {
+    "tldr": "Evaluamos la robustez física de los modelos de lenguaje visual (VLMs) en el borde, revelando vulnerabilidades y modos de fallo peligrosos.",
+    "problema": "La robustez física de los VLMs desplegados en el borde no ha sido estudiada sistemáticamente, y las diferencias en sus salidas dificultan la evaluación comparativa con detectores de objetos tradicionales.",
+    "propuesta": "Se introduce un marco de evaluación unificado con una métrica (cASR) que mide el éxito del ataque de parches físicos, clasificando los fallos en omisión, sustitución y desplazamiento, y se evalúan VLMs compactos frente a detectores de objetos.",
+    "resultados": "Los VLMs pueden ser tan vulnerables como los detectores de objetos. El modo de fallo (omisión, sustitución, desplazamiento) está asociado al formato de salida, no a la arquitectura. Los fallos de desplazamiento y sustitución son más peligrosos ya que devuelven cajas bien formadas. Bajo cambios de distribución, los VLMs que fallan por omisión migran a fallos por desplazamiento/sustitución.",
+    "por_que_importa": "Los VLMs en el borde, usados en sistemas críticos, pueden heredar vulnerabilidades de los detectores y presentar modos de fallo más sigilosos y peligrosos, requiriendo nuevas estrategias de defensa.",
+    "tags": [
+      "VLM",
+      "Robustez Física",
+      "Ciberseguridad",
+      "Edge AI",
+      "Evaluación"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-22T17:26:22Z"
+  },
+  "arxiv:2610.29869v1": {
+    "tldr": "Agentes de IA que resumen conversaciones destruyen el rastro de los mensajes, permitiendo a atacantes inyectar comandos maliciosos.",
+    "problema": "Los agentes de IA que compaginan su contexto para ahorrar memoria descartan la información original, creando una vulnerabilidad donde un atacante puede fabricar instrucciones que sobreviven al resumen y se ejecutan como legítimas.",
+    "propuesta": "Se demuestra que los 'harnesses' (mecanismos de ejecución) que aplanan la conversación en una sola cadena de texto destruyen la procedencia de los mensajes antes de que el resumen ocurra. Se propone una solución a nivel de código que escapa las etiquetas de rol antes de aplanar.",
+    "resultados": "El ataque de falsificación de aprobación sobrevive a la compactación el 87-100% de las veces en cinco 'harnesses' de aplanamiento. En agentes reales, el ataque ejecutó comandos como `curl | sh` en un sandbox con un 50% de éxito. Una verificación de procedencia a nivel de código detecta el 77% de los ataques.",
+    "por_que_importa": "Esta vulnerabilidad permite a atacantes secuestrar agentes de IA para ejecutar código arbitrario o manipular su comportamiento, incluso evadiendo revisiones de código. La solución a nivel de código es crucial para la seguridad de los sistemas de IA.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Vulnerabilidad",
+      "Agentes de IA",
+      "Procedencia de Datos",
+      "Seguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-22T17:26:31Z"
+  },
+  "arxiv:2610.29357": {
+    "tldr": "Aprendizaje continuo para agentes de IA: una nueva perspectiva centrada en la memoria para la mejora continua.",
+    "problema": "Los agentes de IA actuales con modelos fundacionales tienen limitaciones en el aprendizaje continuo debido a pesos fijos y límites de contexto, y los sistemas de memoria externos actúan principalmente como cachés pasivos de recuperación.",
+    "propuesta": "Se introduce el Aprendizaje Continuo Centrado en la Memoria (MCCL), que trata la memoria como un motor para el aprendizaje continuo en lugar de una simple recuperación. MCCL utiliza una taxonomía de memoria, un protocolo de evaluación y un marco de escalado para mejorar las políticas de gestión de memoria y el rendimiento del agente.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero propone un marco para evaluar la retención, adaptación y transferencia de tareas, y modelar la escalabilidad del rendimiento con la experiencia y los recursos.",
+    "por_que_importa": "Permite el desarrollo de agentes de IA autónomos capaces de aprender y mejorar de forma continua y sostenible a lo largo del tiempo, superando las limitaciones actuales de los modelos fijos y la memoria pasiva.",
+    "tags": [
+      "aprendizaje continuo",
+      "agentes de IA",
+      "memoria artificial",
+      "modelos fundacionales",
+      "mejora continua",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-22T17:26:41Z"
+  },
+  "arxiv:2610.29680": {
+    "tldr": "TraceForge genera razonamientos de IA al estilo del modelo estudiante, mejorando el aprendizaje y la autenticidad de los datos de entrenamiento.",
+    "problema": "Los modelos de IA de vanguardia restringen la generación de datos de entrenamiento detallados, limitando la capacidad de otros modelos para aprender de su razonamiento. Métodos anteriores para recuperar este razonamiento violan los términos de servicio.",
+    "propuesta": "TraceForge genera trazas de razonamiento al estilo de la familia del modelo estudiante, utilizando el contexto y la respuesta del modelo 'profesor'. El entrenamiento es en dos etapas: supervisada (generador aprende a replicar trazas) y adversarial (crítico evalúa la autenticidad de las trazas).",
+    "resultados": "Las trazas generadas por TraceForge obtienen una puntuación de autenticidad promedio de 0.68 (frente a 0.66 para trazas reales). En benchmarks de codificación, mejora HumanEval+ en 3.7 puntos y MBPP+ en 7.1 puntos en comparación con el razonamiento propio de Fable 5.",
+    "por_que_importa": "Permite a los modelos de IA aprender de razonamientos auténticos y estilísticamente consistentes, superando las restricciones de los modelos de vanguardia y mejorando el rendimiento en tareas específicas, especialmente en codificación.",
+    "tags": [
+      "IA generativa",
+      "Ciberseguridad",
+      "Datos de entrenamiento",
+      "Modelos de lenguaje",
+      "Autenticidad de datos",
+      "Aprendizaje automático"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-22T17:26:51Z"
+  },
+  "arxiv:2610.29722": {
+    "tldr": "Evaluar la composición de técnicas de Generación Aumentada por Recuperación (RAG) revela que las mejoras individuales no siempre se suman, afectando la calidad y fidelidad.",
+    "problema": "Las técnicas de RAG se evalúan de forma aislada, sin saber si sus mejoras individuales se mantienen al combinarlas, si optimizar la recuperación afecta la fidelidad de la respuesta, o si los resultados a pequeña escala se mantienen en corpus grandes.",
+    "propuesta": "Se introduce LASAGNA, un framework de código abierto para evaluar RAG de forma controlada, probando 450 configuraciones en 8 benchmarks y corpus de hasta 200K documentos, y se plantean tres hipótesis pre-declaradas.",
+    "resultados": "Las técnicas individuales fuertes no siempre se componen bien (mejora esperada del +47% vs. real del +17%). Las ganancias se apilan de forma diferente para recuperación y fidelidad, pudiendo una optimizar la otra. La mejor composición cambia con el tamaño del corpus.",
+    "por_que_importa": "Las mejoras medidas de forma aislada no predicen el rendimiento real al componer técnicas RAG. Es crucial evaluar las nuevas técnicas junto con el resto de la pila para obtener resultados fiables y aplicables en la práctica.",
+    "tags": [
+      "RAG",
+      "LLM",
+      "Composición",
+      "Evaluación",
+      "Ciberseguridad",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-22T17:27:01Z"
+  },
+  "arxiv:2610.29560": {
+    "tldr": "Agentes robóticos autoevolutivos mejoran la manipulación en tareas complejas al recordar y aprender de la experiencia pasada.",
+    "problema": "Las tareas robóticas de largo alcance a menudo requieren recordar el progreso y los resultados de interacciones pasadas, algo que los modelos actuales de visión-lenguaje-acción (VLA) tienen dificultades para manejar debido a la dependencia no Markoviana, la observación parcial y los errores de ejecución.",
+    "propuesta": "Se propone SERA (Self-Evolving Robotic Agent), un agente robótico que organiza un modelo VLA como un planificador de alto nivel. Utiliza un 'harness' editable para mantener y actualizar el contexto de la tarea basándose en observaciones y retroalimentación de ejecución, y se autoevoluciona mediante la exploración del entorno para proponer y evaluar revisiones del 'harness'.",
+    "resultados": "SERA logra un éxito general del 51.38% en la tarea RoboMME con selección autónoma, superando el 44.38% obtenido sin el mecanismo de autoevolución.",
+    "por_que_importa": "Demuestra que la planificación agentiva, que permite a los robots aprender y adaptarse a partir de su historial de interacciones, es una dirección prometedora para mejorar la manipulación robótica en escenarios complejos y dependientes del historial.",
+    "tags": [
+      "Robótica",
+      "IA",
+      "Aprendizaje por Refuerzo",
+      "Visión por Computadora",
+      "Procesamiento de Lenguaje Natural",
+      "Manipulación"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-22T17:27:27Z"
+  },
+  "arxiv:2610.29458": {
+    "tldr": "Entrena agentes de IA con diversas configuraciones de 'harness' para mejorar su adaptabilidad y generalización a tareas nuevas.",
+    "problema": "Los agentes de IA entrenados con una única configuración de 'harness' (herramienta de interacción) se especializan demasiado y no se transfieren bien a otras configuraciones.",
+    "propuesta": "Se introduce 'Harness Scaling', un método que entrena agentes a través de un conjunto diverso y estructurado de configuraciones de 'harness', en lugar de una sola.",
+    "resultados": "Los modelos entrenados con 'Harness Scaling' muestran una mejor generalización a configuraciones de 'harness' no vistas (white-box) y también a 'harnesses' externos (black-box), superando a los métodos tradicionales.",
+    "por_que_importa": "Mejora la robustez y adaptabilidad de los agentes de IA, permitiéndoles funcionar eficazmente en entornos y con herramientas de interacción variadas sin reentrenamiento extensivo.",
+    "tags": [
+      "IA",
+      "Aprendizaje por Refuerzo",
+      "Agentes Inteligentes",
+      "Generalización",
+      "Ciberseguridad",
+      "Harness Scaling"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-22T17:27:37Z"
+  },
+  "arxiv:2610.28887": {
+    "tldr": "Equipos de IA colaborativos descubren arquitecturas de atención lineal más rápido y mejor que los métodos existentes.",
+    "problema": "Acelerar el descubrimiento científico con IA requiere superar la exploración limitada y la necesidad de que los agentes construyan sobre los hallazgos de otros, especialmente con presupuestos experimentales limitados.",
+    "propuesta": "Se propone un equipo de investigadores de IA persistentes, cada uno con una disciplina diferente, que mantienen historiales de investigación privados, comparten evidencia experimental y reciben oportunidades de investigación a través de asignación adaptativa.",
+    "resultados": "El equipo propuesto supera a GDN2 a escala de 1.3B en modelado de lenguaje, razonamiento de sentido común y tareas de recuperación. Eliminar componentes clave del diseño (antecedentes disciplinarios, historiales privados, asignación adaptativa) debilita significativamente los descubrimientos.",
+    "por_que_importa": "Demuestra que la organización y la asignación de recursos de los equipos de IA son cruciales para el descubrimiento autónomo sostenido, no solo la potencia individual de los agentes.",
+    "tags": [
+      "descubrimiento científico",
+      "agentes autónomos",
+      "equipos de IA",
+      "arquitecturas de atención",
+      "aprendizaje automático"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-22T17:27:46Z"
+  },
+  "arxiv:2610.27227": {
+    "tldr": "Mejora la colaboración de agentes de IA sin reentrenamiento, identificando qué habilidades de equipo son realmente responsables del éxito o fracaso.",
+    "problema": "Los agentes de IA colaborativos que mejoran sin actualizar sus pesos (revisando habilidades reutilizables) tienen dificultades para asignar correctamente el crédito de la recompensa compartida a los agentes y habilidades específicos que contribuyeron al resultado, lo que lleva a la asignación de crédito positivo a habilidades perjudiciales.",
+    "propuesta": "Se presenta GRSE (Group-Relative Skill Evolution), un método que asigna crédito conductual mediante comparación. Ejecuta cada pregunta varias veces con las mismas bibliotecas de habilidades y contrasta las ejecuciones para asignar crédito a pares de agentes-habilidades, incluyendo un diagnóstico estructurado de fallos.",
+    "resultados": "GRSE supera a MASkills en HotpotQA y en la mayoría de categorías de LoCoMo, con mejoras significativas en preguntas de múltiples saltos (+6.7 y +3.2 F1). Recupera el rendimiento de bibliotecas corruptas (+6.3 puntos), a diferencia de MASkills que falla en la atribución.",
+    "por_que_importa": "Permite la mejora continua y segura de equipos de agentes de IA sin costosos reentrenamientos, asegurando que las habilidades que perjudican al equipo sean identificadas y corregidas, lo que es crucial para aplicaciones prácticas y robustas.",
+    "tags": [
+      "agentes multi-agente",
+      "aprendizaje por refuerzo",
+      "atribución de crédito",
+      "mejora de habilidades",
+      "IA colaborativa",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-22T17:27:56Z"
   }
 }
