@@ -1,0 +1,690 @@
+{
+  "date": "2026-10-23",
+  "report_type": "filtrado",
+  "evaluated": 194,
+  "selected": 15,
+  "papers": [
+    {
+      "id": "arxiv:2610.31404v1",
+      "rank": 1,
+      "title": "AgentPhishing: A Benchmark of LLM Email Agents Under Adaptive Attack",
+      "authors": [
+        "Justin Tan",
+        "Miao Li",
+        "Ding Zhao"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-22",
+      "url": "https://arxiv.org/abs/2610.31404v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.31404v1",
+      "score": 56,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM, compliance & audit"
+      ],
+      "abstract_en": "Computer-use agents increasingly handle private information and act on users' behalf across desktop and web applications, including email. Phishing therefore poses privacy and security risks that depend not only on whether agents recognize malicious messages, but also on how they respond. Existing phishing datasets were developed primarily for conventional detection, leaving agent susceptibility to persuasive malicious requests insufficiently characterized. To expose vulnerabilities that pre-existing datasets may miss, we introduce AgentPhishing, a benchmark for evaluating whether persuasive phishing attacks can evade detection and induce LLM email agents to comply with malicious requests. We develop PhishOpt, which optimizes reusable email-generation skills against individual agents under fixed benchmark constraints and a realism constraint. We analyze the generated emails using Cialdini's persuasion principles to identify strategies associated with agent failures and use these findings to construct a universal generation skill. Our evaluation shows that agents can handle pre-existing phishing emails safely yet remain susceptible to attacks adapted to agent behavior, while in an AgentPhishing evaluation of nine agents, four exhibit phishing-detection rates below $10\\%$ and malicious-request compliance rates above $45\\%$. These results highlight the limits of inferring agent safety from conventional phishing evaluations and the need to assess how agents respond to persuasive malicious requests.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los agentes de IA que manejan tu email son vulnerables a ataques de phishing adaptados, incluso si detectan correos genéricos.",
+        "problema": "Los agentes de IA que actúan en nombre de los usuarios (ej. gestionando emails) son susceptibles a ataques de phishing persuasivos que los datasets actuales no caracterizan adecuadamente, llevando a posibles incumplimientos de seguridad y privacidad.",
+        "propuesta": "Se introduce AgentPhishing, un benchmark para evaluar la susceptibilidad de agentes de IA a ataques de phishing adaptados, y PhishOpt, una herramienta para optimizar la generación de correos maliciosos contra agentes específicos.",
+        "resultados": "En una evaluación de nueve agentes, cuatro mostraron tasas de detección de phishing inferiores al 10% y tasas de cumplimiento de solicitudes maliciosas superiores al 45%, a pesar de manejar bien correos de phishing preexistentes.",
+        "por_que_importa": "Demuestra que la seguridad inferida de evaluaciones de phishing convencionales es insuficiente para agentes de IA, destacando la necesidad crítica de evaluar su respuesta a solicitudes maliciosas persuasivas y adaptadas.",
+        "tags": [
+          "phishing",
+          "agentes IA",
+          "ciberseguridad",
+          "LLM",
+          "benchmarking",
+          "vulnerabilidad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-23T17:19:48Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.30666v1",
+      "rank": 2,
+      "title": "Your Token Is Gone: A Token-Consumption Countermeasure for Disrupting LLM-Based Scam Systems",
+      "authors": [
+        "Fudu Xing",
+        "Kailong Wang",
+        "Tianlong Yu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-22",
+      "url": "https://arxiv.org/abs/2610.30666v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.30666v1",
+      "score": 56,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "LLM-based scam systems increasingly combine adaptive dialogue, persistent context, external tools, and multi-agent coordination to automate personalized fraud. These capabilities also create a resource dependency: every reasoning step, model call, and coordination round incurs inference cost. We present TokenTrap, a resource-oriented defense that redirects suspected scam systems toward benign, low-value computation while withholding credentials, payments, and other exploitable information. TokenTrap combines three components: an architecture-specific token-task library, a router that selects among single-agent, hierarchical, and flat multi-agent workflows, and a bounded anti-guardrail strategy that varies task presentation while enforcing token, round, time, and safety limits. Across 50-round traces, TokenTrap amplifies token consumption by $2{,}487.0\\times$, $1{,}616.0\\times$, and $567.8\\times$ relative to a no-token-task baseline for the three workflows. Its router achieves 85.67% accuracy on 300 architecture-labeled prompts. These results demonstrate that short, non-sensitive requests can impose substantial context-processing and coordination costs, motivating resource-aware defense as a complement to scam detection.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "TokenTrap interrumpe estafas de LLM agotando sus recursos computacionales, haciéndolas costosas e ineficientes.",
+        "problema": "Los sistemas de estafa basados en LLM son cada vez más sofisticados, utilizando diálogo adaptativo, contexto persistente y herramientas externas para automatizar fraudes personalizados, lo que genera costos de inferencia significativos.",
+        "propuesta": "TokenTrap es una defensa orientada a recursos que redirige a los sistemas de estafa sospechosos hacia tareas de bajo valor y computación benigna. Combina una biblioteca de tareas específicas de arquitectura, un enrutador para diferentes flujos de trabajo multi-agente y una estrategia anti-guardarraíl que impone límites de tokens, rondas, tiempo y seguridad.",
+        "resultados": "TokenTrap amplifica el consumo de tokens entre 567.8x y 2487.0x en comparación con una línea base sin tareas de token. Su enrutador alcanza una precisión del 85.67% en la clasificación de prompts de arquitectura.",
+        "por_que_importa": "Demuestra que las solicitudes cortas y no sensibles pueden generar costos sustanciales de procesamiento de contexto y coordinación, lo que valida la defensa consciente de los recursos como un complemento a la detección de estafas.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Defensa",
+          "Estafas",
+          "Consumo de Tokens",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-23T17:19:58Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.31573v1",
+      "rank": 3,
+      "title": "Social-HUMINT: An LLM-Augmented Unified Framework for Measuring Social Media Exposure",
+      "authors": [
+        "Pellegrino Casoria",
+        "Simon Pietro Romano"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-22",
+      "url": "https://arxiv.org/abs/2610.31573v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.31573v1",
+      "score": 53,
+      "topics": [
+        "cybersecurity",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: cybersecurity, LLM, AI agents"
+      ],
+      "abstract_en": "In the post-API landscape, social-media profiling has become inexpensive and automated: Large Language Models (LLMs) can extract structured information from unstructured content and deduce attributes users never disclosed. A person's true exposure is not what they post but what can be inferred from it. As these practices become routine, exposure to social engineering attacks becomes an operational certainty, demanding a shared framework for assessment and mitigation. We make this exposure measurable by quantifying how accurately a target can be profiled, and how far that profile enables social engineering attacks. Because no existing model fully spans this continuum, we unify Social Media Intelligence (SOCMINT) and Cyber Human Intelligence (Cyber-HUMINT), two individual-focused disciplines that evolved separately, into a single doctrine-grounded taxonomy of 38 capabilities across the Cyber Threat Intelligence lifecycle, where user profiling bridges passive collection and active engagement. Domain experts validated the taxonomy (Fleiss' $κ$ = 0.92). We operationalize its core path (extraction, inference, and susceptibility assessment) as an LLM-augmented multi-agent pipeline, evaluated on real participants' public data. Susceptibility is assessed indirectly: the pipeline predicts how each target would rank personalized engagement options, matching their actual choices significantly above chance. This ranking capacity captures the personalization on which tailored attacks depend. The underlying profiles are accurate: extraction reaches F1 = 97.3%, and inferred attributes score 4.73/5, both far above rule-based and NER-based baselines at negligible cost. The framework augments security analysts' tradecraft rather than replacing it and enables defenders to gauge their own exposure before an adversary does.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Social-HUMINT usa LLMs para medir la exposición de usuarios en redes sociales a ataques de ingeniería social.",
+        "problema": "La exposición real de un usuario en redes sociales es lo que se puede inferir de su contenido, no solo lo que publica, lo que facilita ataques de ingeniería social automatizados. No existe un marco unificado para medir esta exposición.",
+        "propuesta": "Se propone Social-HUMINT, un marco unificado que combina SOCMINT y Cyber-HUMINT, utilizando LLMs para extraer y inferir atributos de usuarios a partir de datos públicos. Evalúa la susceptibilidad a ataques mediante la predicción de la idoneidad de opciones de interacción personalizadas.",
+        "resultados": "La extracción de información alcanza un F1 de 97.3%, y los atributos inferidos se valoran en 4.73/5. El sistema predice las elecciones de interacción de los usuarios por encima del azar.",
+        "por_que_importa": "Permite a los profesionales de seguridad cuantificar la exposición de los usuarios a ataques de ingeniería social, mejorando la defensa proactiva y el 'tradecraft' del analista.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Ingeniería Social",
+          "Redes Sociales",
+          "Inteligencia de Amenazas",
+          "Privacidad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-23T17:20:07Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.30914v1",
+      "rank": 4,
+      "title": "MIG-COW: Transferable Adversarial Attacks on Deepfake Detectors via Gradient Decomposition",
+      "authors": [
+        "Wonjune Seo",
+        "Joonhyuk Baek",
+        "Yeseong Jung",
+        "Saerom Park"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-22",
+      "url": "https://arxiv.org/abs/2610.30914v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.30914v1",
+      "score": 52,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Despite recent advances, deepfake detectors remain vulnerable to adversarial examples, particularly in diverse, real-world settings. We propose MIG-COW, a novel adversarial attack framework that generates highly generalizable and visually imperceptible adversarial examples. By combining momentum-integrated gradients with a consensus-orthogonal decomposition, MIG-COW captures both shared and model-specific vulnerabilities across heterogeneous CNN and ViT detectors. On the AADD-2025 Challenge benchmarks, MIG-COW achieves a 99.96% white-box attack success rate (ASR) with high perceptual similarity (SSIM), significantly outperforming existing baselines. However, its limited 7.16% ASR against official black-box targets - despite achieving the best overall score - highlights the ongoing challenge of transferability. We also demonstrate that incorporating low-performing but diverse models in the ensemble can degrade attack effectiveness, underscoring the need for careful surrogate model selection in real-world adversarial settings.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "MIG-COW genera ataques adversariales transferibles y visualmente imperceptibles contra detectores de deepfakes.",
+        "problema": "Los detectores de deepfakes actuales son vulnerables a ataques adversariales, especialmente en entornos del mundo real y diversos, donde los ataques no siempre se transfieren bien entre modelos diferentes.",
+        "propuesta": "Se propone MIG-COW, un framework que combina gradientes integrados con momento y descomposición ortogonal de consenso para generar ejemplos adversariales que explotan vulnerabilidades compartidas y específicas de modelos heterogéneos (CNNs y ViTs).",
+        "resultados": "MIG-COW logra un 99.96% de tasa de éxito de ataque (ASR) en modo white-box con alta similitud perceptual (SSIM) en benchmarks del desafío AADD-2025, superando a los métodos existentes. Sin embargo, su ASR es solo del 7.16% contra objetivos black-box oficiales, indicando limitaciones en la transferibilidad.",
+        "por_que_importa": "Demuestra la persistente vulnerabilidad de los detectores de deepfakes y la necesidad de desarrollar defensas más robustas y estrategias de ataque más efectivas para entornos del mundo real, destacando la importancia de la selección de modelos sustitutos.",
+        "tags": [
+          "deepfakes",
+          "ataques adversariales",
+          "ciberseguridad",
+          "IA",
+          "transferibilidad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-23T17:20:16Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.31483v1",
+      "rank": 5,
+      "title": "Training Small Language Models for Transferable Tool Selection",
+      "authors": [
+        "Zhaoyi Zhou",
+        "Akshayaa Magesh",
+        "Jeongyeol Kwon",
+        "Artem Kuriksha"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-10-22",
+      "url": "https://arxiv.org/abs/2610.31483v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.31483v1",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "As LLM agents operate over corpora of more than ten thousand tools, selecting the right tool for a complex multi-step user instruction becomes a central bottleneck. Tool descriptions cannot all fit in context, and relevance-based retrievers only rank tools without knowing which are actually needed. Recent work instead leverages proprietary commercial LLMs like Claude or ChatGPT to drive a retriever, decomposing the instruction and selecting over retrieved candidates. We show that a small, open model can be trained via reinforcement learning to perform the same functionality. On ToolBench, a Qwen3-8B model post-trained with our recipe outperforms Llama-4-Maverick (402B). In addition, the trained model transfers directly to different retrievers and generalizes to new tool corpora in different domains.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Entrena modelos pequeños de IA para seleccionar herramientas de forma eficiente, superando a modelos mucho más grandes.",
+        "problema": "Los agentes de IA con miles de herramientas tienen dificultades para seleccionar la herramienta correcta para instrucciones complejas, ya que las descripciones no caben en el contexto y los sistemas de recuperación solo clasifican sin saber la necesidad real.",
+        "propuesta": "Se propone entrenar un modelo pequeño y abierto mediante aprendizaje por refuerzo para realizar la selección de herramientas, imitando la funcionalidad de LLMs comerciales.",
+        "resultados": "Un modelo Qwen3-8B entrenado con esta técnica supera a un modelo Llama-4-402B en ToolBench, y el modelo entrenado se transfiere a otros sistemas de recuperación y generaliza a nuevos conjuntos de herramientas.",
+        "por_que_importa": "Permite a los agentes de IA manejar un gran número de herramientas de manera más eficiente y económica, utilizando modelos más pequeños y accesibles que demuestran un rendimiento superior y mayor flexibilidad.",
+        "tags": [
+          "IA",
+          "Selección de Herramientas",
+          "Modelos Pequeños",
+          "Aprendizaje por Refuerzo",
+          "Eficiencia"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-23T17:20:26Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.30798v1",
+      "rank": 6,
+      "title": "Amplifying Latency and Cost of LLM Inference via Rowhammer Attack",
+      "authors": [
+        "Mrityunjay Shukla",
+        "Shubham Roy",
+        "Biswabandan Panda"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-22",
+      "url": "https://arxiv.org/abs/2610.30798v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.30798v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Large language models (LLMs) achieve high inference efficiency using optimized GPU kernels generated by just-in-time (JIT) compilation frameworks such as Triton. Triton compiles GPU kernels through an MLIR/LLVM-based pipeline. We investigate whether a Rowhammer-induced bit-flip in the CPU's DRAM can degrade GPU-based LLM inference performance while preserving output correctness. We present LLVMhammer, the first Rowhammer attack that causes LLM inference slowdown by inducing a bit-flip in Triton's compilation pipeline. A bit-flip in a performance-critical optimization pass causes Triton to generate a functionally identical but suboptimal GPU kernel. Since Triton caches the generated kernel on disk, a single successful bit-flip causes persistent slowdown across subsequent inference executions. Triton's target-independent stages are shared across GPU vendors, which makes our attack GPU vendor-agnostic. To identify exploitable bit-flip locations without manual inspection, we build Karnage, a tool that isolates useful bit-flip locations in Triton's target-independent compilation pipeline. We evaluate LLVMHammer across a diverse set of LLMs, including Qwen2.5-7B-Instruct, Llama-3.1-8B-Instruct, Mistral-7B-Instruct-v0.3, and Deepseek-llm-7B-chat, across NVIDIA RTX 4090 and AMD RX 7900 XTX GPUs. LLVMhammer increases inference latency of an LLM inference server running on a single GPU by 4-16\\%, which, in turn, can translate into additional annual operating costs at the scale of multi-GPU deployments. We further show that LLVMhammer can also corrupt LLM outputs across different GPU vendors, reducing BERTScore to as low as 25\\%, illustrating the broader security implications of bit-flips in Triton's compilation pipeline.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Un ataque Rowhammer en la compilación de LLMs puede ralentizar su inferencia y aumentar costos, incluso corrompiendo sus resultados.",
+        "problema": "Los ataques de seguridad tradicionales en LLMs se centran en la manipulación de entradas o la extracción de datos. Este trabajo explora un nuevo vector de ataque que afecta la eficiencia y la seguridad de la inferencia de LLMs a través de fallos de hardware (bit-flips) durante su compilación.",
+        "propuesta": "Se presenta LLVMhammer, un ataque de Rowhammer que induce un bit-flip en la compilación de kernels de GPU para LLMs usando el framework Triton. Esto fuerza a Triton a generar kernels subóptimos pero funcionalmente idénticos, que se cachean y causan una ralentización persistente. Se desarrolló Karnage para identificar ubicaciones de bit-flips explotables automáticamente.",
+        "resultados": "LLVMhammer incrementa la latencia de inferencia de LLMs en un servidor de GPU entre un 4% y un 16%. También se demostró que puede corromper las salidas de los LLMs, reduciendo el BERTScore hasta un 25%.",
+        "por_que_importa": "Este ataque demuestra una nueva vulnerabilidad que puede ser explotada para degradar el rendimiento y la fiabilidad de los LLMs en producción, aumentando los costos operativos y planteando riesgos de seguridad al corromper las respuestas generadas, afectando a múltiples proveedores de GPU.",
+        "tags": [
+          "Rowhammer",
+          "LLM",
+          "Ciberseguridad",
+          "Compilación",
+          "Rendimiento",
+          "Vulnerabilidad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-23T17:20:36Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.30713v1",
+      "rank": 7,
+      "title": "AIRO: A Streaming-Based Machine Learning Framework for Threat Detection and Security in Industrial Internet of Things",
+      "authors": [
+        "Raima Deb",
+        "Pranav M Pawar",
+        "Mithun Mukherjee",
+        "Raja Muthalagu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-22",
+      "url": "https://arxiv.org/abs/2610.30713v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.30713v1",
+      "score": 50,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: cybersecurity, vuln & threats"
+      ],
+      "abstract_en": "Modern Industrial Internet of Things (IIoT) im- plementations now connect edge gateways, cloud dashboards and business applications. This improves visibility and remote monitoring. However it simultaneously exposes industrial traffic to various cyber threats including scanning, web attacks and Structured Query Language (SQL) injection (SQLi), phishing- driven credential theft, and command-and-control (C2) activity. Although rule-based tools remain useful for detecting known signatures, their efficacy decreases with minimally altered attacks or when alerts require manual investigation. This paper presents AIRO (Autonomous Intelligence-Driven Cybersecurity Risk Re- duction System), an efficient framework for IIoT monitoring and response. AIRO combines Apache Kafka streaming, attack- specific feature extraction, machine learning (ML) inference, confidence-based decision logic and risk reduction measures such as Internet Protocol (IP) blocking, account suspension and traffic limiting. We developed four specialized datasets for C2 beaconing, reconnaissance, SQLi, and phishing to evaluate AIRO. These datasets include noisy and overlapping characteristic distribu- tions to minimize label leakage. The best-performing models, primarily Gradient Boosting and LightGBM, achieve F1-scores up to 0.9229 while ensuring low-latency from event input to mitigation",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "AIRO, un sistema de IA en streaming, detecta y mitiga amenazas en el IIoT industrial con alta precisión y baja latencia.",
+        "problema": "Las redes IIoT son vulnerables a ciberataques (escaneo, SQLi, phishing, C2) que las herramientas basadas en reglas no detectan eficazmente, especialmente las variantes o ataques desconocidos.",
+        "propuesta": "AIRO utiliza Apache Kafka para procesar flujos de datos, extrae características específicas de ataques, aplica modelos de Machine Learning (ML) y emplea lógica de decisión basada en confianza para aplicar medidas de mitigación como bloqueo de IP o suspensión de cuentas.",
+        "resultados": "Los modelos de ML (Gradient Boosting, LightGBM) alcanzan F1-scores de hasta 0.9229 en la detección de C2, reconocimiento, SQLi y phishing, garantizando baja latencia desde la detección hasta la mitigación.",
+        "por_que_importa": "Mejora la ciberseguridad en entornos IIoT críticos al detectar y responder automáticamente a amenazas emergentes, protegiendo la continuidad operativa y los datos industriales.",
+        "tags": [
+          "IIoT",
+          "Ciberseguridad",
+          "Inteligencia Artificial",
+          "Streaming",
+          "Detección de Amenazas",
+          "Mitigación"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-23T17:20:45Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.30924v1",
+      "rank": 8,
+      "title": "REGATTA: A Cross-Domain Measurement Framework and Fault-Injection Harness for Enterprise AI Agents",
+      "authors": [
+        "Luong Tuan Thanh",
+        "Abhijit Sanyal"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-10-22",
+      "url": "https://arxiv.org/abs/2610.30924v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.30924v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🎯 temas: LLM, AI agents, compliance & audit"
+      ],
+      "abstract_en": "Enterprise AI-agent evaluation needs evidence about whether test suites expose specified faults and whether their reference rules are trustworthy. We introduce REGATTA (Regulatory Evaluation of Agents via Two-stage Testing and Assurance), a measurement framework with three instruments. A 125-item source-cited checklist spans five industry-by-jurisdiction cells across the United States and Vietnam. A 25-fault corpus covers five categories, and a harness scores suite-level fault detection at the design and execution stages. We examine four measurement diagnostics on 180 generated suites (5,400 scenarios) from three LLM generators. A source audit finds 24 items misstating the rule in force, 46 additional citation defects, 31 items with only non-binding, unidentifiable, or unverifiable sources, and 24 verified clean. Only initially substance-flagged items received author review; all 24 clean rows received AI review only. Results therefore describe the instruments as written, not legal compliance. Item coverage varies, execution-stage fault profiles are stable across generators, and the historical stages agree on $66$--$69\\%$ of fault--suite pairs. A current-model US-insurance retest finds stage disagreement above repeated-execution variation, but stage agreement $.536$ falls below pooled chance $.549$, failing V3's lower inequality. Blind adjudication by one expert supports the design-stage judging protocol ($κ=.72$, 95% interval $[.52,.88]$); 40 current-model execution probes give $κ=.75$. The instruments, audit, and reusable code are released.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "REGATTA es un marco para evaluar la fiabilidad y seguridad de agentes de IA empresariales mediante pruebas y análisis de fallos.",
+        "problema": "La evaluación de agentes de IA empresariales carece de métodos para verificar si las pruebas exponen fallos específicos y si las reglas de referencia son fiables.",
+        "propuesta": "Se introduce REGATTA, un marco de medición con una lista de verificación de 125 elementos, un corpus de 25 fallos y un sistema de evaluación que mide la detección de fallos en las etapas de diseño y ejecución.",
+        "resultados": "Se encontraron defectos en las fuentes de las reglas (24 mal citadas, 46 adicionales, 31 sin fuentes válidas), y la cobertura de elementos varía. La concordancia entre etapas de diseño y ejecución varía entre 66-69%. Un re-test de seguros en EE.UU. mostró desacuerdo entre etapas.",
+        "por_que_importa": "Permite a las empresas evaluar rigurosamente la seguridad y fiabilidad de sus agentes de IA, asegurando que cumplen con las normativas y no introducen riesgos inesperados.",
+        "tags": [
+          "IA empresarial",
+          "Ciberseguridad",
+          "Evaluación de IA",
+          "Fiabilidad",
+          "Pruebas de fallos",
+          "Regulación"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-23T17:20:54Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.31062",
+      "rank": 1,
+      "title": "SCOPE: Compiling Natural-Language Policies into Neurosymbolic Predicate Programs",
+      "authors": [
+        "Arnon Mazza",
+        "Elad Levi"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-22",
+      "url": "https://arxiv.org/abs/2610.31062",
+      "pdf_url": "https://arxiv.org/pdf/2610.31062",
+      "score": 78,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "Policy enforcement for LLM agents has shifted from single-turn content moderation to compound, application-specific policies evaluated over multi-turn transcripts and tool-call trajectories. Fine-tuned guardrail models are efficient but degrade on compound policies, and while LLM-as-a-judge approaches achieve higher accuracy, they incur high inference cost and tend to produce unstable predictions. Neurosymbolic methods offer a natural alternative, decomposing the policy into narrow neural decisions composed under explicit logic. However, existing symbolic layers lack the required expressiveness and are optimized against fixed data rather than the policy itself. To address this, we introduce SCOPE, which compiles a policy into an executable program of neural predicates executed by small models, deterministic extractors, and code that composes their outputs. The program is optimized jointly with its training data, using adversarial generation of counterexamples that target where the program deviates from the policy. We evaluate SCOPE on a benchmark of real-world policy tasks against prompt optimization, task decomposition, and workflow generation methods, achieving the highest average accuracy across tasks and models. Programs optimized with the weakest executor transfer to other models without further optimization. This allows them to be deployed in production on inexpensive models, where they reach accuracy comparable to frontier reasoning models. Unlike these monolithic models, SCOPE produces substantially more stable predictions, and each verdict is interpretable through the predicate outputs that produced it. Additionally, we validate the key components of our method through an ablation study. SCOPE thus enables reliable, interpretable, and efficient policy enforcement at production scale.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "SCOPE compila políticas de lenguaje natural en programas neurosimbólicos para una aplicación de IA más fiable, interpretable y eficiente.",
+        "problema": "Las políticas de seguridad para agentes de IA, especialmente las complejas y específicas de cada aplicación, son difíciles de aplicar de manera eficiente y fiable. Los métodos actuales como el ajuste fino de modelos o el uso de LLMs como jueces tienen limitaciones de precisión, coste o estabilidad.",
+        "propuesta": "SCOPE es un método que compila políticas expresadas en lenguaje natural en programas ejecutables. Estos programas combinan predicados neuronales (pequeños modelos o extractores) con lógica determinista, optimizándose conjuntamente con los datos de entrenamiento mediante la generación adversarial de contraejemplos.",
+        "resultados": "SCOPE logra la mayor precisión media en un benchmark de tareas de políticas reales, superando a otros métodos. Los programas optimizados con el ejecutor más débil se transfieren a otros modelos sin reoptimización, alcanzando precisión comparable a modelos de frontera con costes de inferencia mucho menores y predicciones más estables e interpretables.",
+        "por_que_importa": "Permite la implementación de políticas de seguridad complejas y fiables en sistemas de IA a escala de producción, de forma interpretable y con costes computacionales reducidos, lo que es crucial para la adopción segura de IA.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "LLM",
+          "Neurosimbólico",
+          "Políticas de Seguridad",
+          "Interpretación"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-23T17:21:04Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.30949",
+      "rank": 2,
+      "title": "IQuest-Q1: Advancing Foundation Capabilities for Agentic CLI Systems",
+      "authors": [
+        "A. Jian Yang",
+        "An Huang",
+        "Bo Dan",
+        "Chen Mu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-22",
+      "url": "https://arxiv.org/abs/2610.30949",
+      "pdf_url": "https://arxiv.org/pdf/2610.30949",
+      "score": 74,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "We present IQuest-Q1, a sparse Mixture-of-Experts (MoE) agentic foundation model with 320B total parameters (15B activated). IQuest-Q1 is developed through a three-stage process: (1) stable and efficient pre-training, combining Stable SplitNorm, Muon, and muP with a two-stage curriculum whose second stage increases the coding-data mixture, preserving a wide stability margin between safe and optimal learning rates; (2) fine-grained mid-training, expanding the data mixture across domains and formats and progressively extending the context; and (3) multi-scaffold with multi-version post-training, combining SFT, domain-specialized RL, and MOPD across various scaffolds to integrate complementary training signals and strengthen agentic coding capabilities. Furthermore, model merging combines different experts and checkpoints from different stages while mitigating conflicts among their parameter updates. The resulting IQuest-Q1 demonstrates capabilities in both coding and general tasks. We release IQuest-Q1 as an open-source model to support community research and development.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Presentamos IQuest-Q1, un modelo fundacional de IA para sistemas de línea de comandos, entrenado eficientemente con técnicas avanzadas.",
+        "problema": "La necesidad de modelos fundacionales potentes y eficientes para sistemas de agentes que interactúen con la línea de comandos (CLI) y realicen tareas de codificación complejas.",
+        "propuesta": "Se propone IQuest-Q1, un modelo MoE disperso de 320B parámetros (15B activados), entrenado en tres etapas: pre-entrenamiento estable y eficiente, ajuste de datos a mitad del entrenamiento y post-entrenamiento multi-scaffold. Se utiliza la fusión de modelos para combinar expertos y puntos de control.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero indica que IQuest-Q1 demuestra capacidades avanzadas tanto en codificación como en tareas generales.",
+        "por_que_importa": "Este modelo de código abierto avanza las capacidades de los sistemas de agentes en CLI, facilitando la investigación y el desarrollo en IA y ciberseguridad, y permitiendo la automatización de tareas de codificación.",
+        "tags": [
+          "IA",
+          "Agentes",
+          "CLI",
+          "Modelos Fundacionales",
+          "Ciberseguridad",
+          "Codificación"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-23T17:21:14Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.30755",
+      "rank": 3,
+      "title": "Is Complex Agentic Memory Always Needed? Naive RAG Is Stronger Than We Thought",
+      "authors": [
+        "Zhengye Bao",
+        "Shengtao Zhang",
+        "Haokai Zhang",
+        "Shiqi Lou"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-22",
+      "url": "https://arxiv.org/abs/2610.30755",
+      "pdf_url": "https://arxiv.org/pdf/2610.30755",
+      "score": 71,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "LLM memory is widely used in long-term conversation understanding. Agentic memory systems often use mutation, structural organization, learned retrieval strategies, or other complex operations. Is this complexity always necessary? We study Raw-RAG, a naive RAG baseline using dense retrieval and reranking over raw history to supply evidence to a reader LLM. Across LoCoMo, LongMemEval, MEME, and MemoryAgentBench, Raw-RAG ranks first among the compared memory systems in six of seven benchmark-model settings, outperforming the strongest compared agentic memory system by 0.13-5.53 points. We investigate why raw-history retrieval remains competitive. Evidence analysis shows that its higher coverage of necessary evidence can offset lower utilization. Useful evidence includes both answer values and the relations and dependency paths needed to derive them. Even complete access to transformed memory stores leaves an accuracy gap relative to raw evidence, highlighting the importance of preserving raw information. These findings challenge the necessity of complex agentic memory for the evaluated conversation tasks and establish naive RAG as an essential baseline.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "La memoria de IA en conversaciones largas no siempre necesita ser compleja; un RAG simple puede ser sorprendentemente efectivo.",
+        "problema": "Los sistemas de memoria para LLMs en conversaciones largas suelen ser complejos, utilizando mutación, organización estructural o estrategias de recuperación aprendidas. Se cuestiona si esta complejidad es siempre necesaria.",
+        "propuesta": "Se estudia Raw-RAG, una línea base de RAG simple que utiliza recuperación densa y reordenamiento sobre el historial crudo para proporcionar evidencia a un LLM lector, sin operaciones complejas.",
+        "resultados": "Raw-RAG se posiciona primero en seis de siete configuraciones de benchmark-modelo, superando al sistema de memoria agentic más fuerte comparado por 0.13-5.53 puntos. El análisis de evidencia muestra que su mayor cobertura de información necesaria compensa una menor utilización.",
+        "por_que_importa": "Los hallazgos desafían la necesidad de memorias agentic complejas para tareas de conversación evaluadas y establecen el RAG ingenuo como una línea base esencial, sugiriendo que preservar la información cruda es crucial.",
+        "tags": [
+          "IA conversacional",
+          "Memoria LLM",
+          "RAG",
+          "Ciberseguridad",
+          "Procesamiento de Lenguaje Natural"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-23T17:21:23Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.30926",
+      "rank": 4,
+      "title": "Making MLLM Latents Matter: Factor-Aware Predictive Learning for Cinematic Video Generation",
+      "authors": [
+        "Songlin Yang",
+        "Zhe Wang",
+        "Xiaotong Zhao",
+        "Xi Wang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-22",
+      "url": "https://arxiv.org/abs/2610.30926",
+      "pdf_url": "https://arxiv.org/pdf/2610.30926",
+      "score": 60,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Cinematic video generation requires both temporal inference from limited inputs (i.e., sparse rather than frame-by-frame guidance) and factor-aware control of character, scene, action, and camera. Multimodal large language models (MLLMs) offer useful priors for both capabilities, but their representations are not automatically actionable for video generation: a Video Diffusion Transformer (DiT) may bypass them through native conditioning pathways, and using them does not ensure either factor-aware control or generation-compatible temporal prediction. We propose Factor-Aware Predictive Learning (FAPL), which establishes effective MLLM latent use as a shared prerequisite and then targets the two capabilities with complementary learning signals. First, latent-only generator grounding trains the DiT with a frozen MLLM and connector, strengthening the DiT's use of MLLM latents for generation. Second, for factor-aware control, paired videos specify a target-factor change and non-target preservation, and factor-span replacement trains the DiT to realize this relationship in its output. Third, for temporal inference, text-only and text-plus-complete-video observations share a video target, and the trained DiT is then frozen while the MLLM and connector are optimized through it. This final stage trains limited-input representations for generation while retaining complete-observation reconstruction as a complementary training mode. Extensive experiments demonstrate our consistently better performance on three cinematic video generation tasks (i.e., sparse-to-video, factor-aware editing, and multi-shot generation) over baselines and validate FAPL's contributions to MLLM feature use, temporal control, and factor coordination.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Aprendizaje predictivo con factores para generar videos cinematográficos de alta calidad a partir de indicaciones limitadas.",
+        "problema": "Los modelos de lenguaje multimodales (MLLMs) tienen conocimiento previo útil para la generación de video, pero sus representaciones no se utilizan de forma óptima, lo que dificulta el control de factores (personaje, escena, acción, cámara) y la inferencia temporal a partir de entradas escasas.",
+        "propuesta": "Se propone Factor-Aware Predictive Learning (FAPL), que entrena un generador de video (DiT) para usar representaciones MLLM, controlar factores específicos y realizar inferencia temporal a partir de entradas limitadas mediante señales de aprendizaje complementarias.",
+        "resultados": "FAPL demuestra un rendimiento consistentemente mejor en tres tareas de generación de video cinematográfico (sparse-to-video, edición factor-aware, generación multi-shot) en comparación con los métodos de referencia.",
+        "por_que_importa": "Permite una generación de video más controlada y coherente, especialmente con indicaciones limitadas, abriendo puertas a aplicaciones más sofisticadas en cine y medios.",
+        "tags": [
+          "generación de video",
+          "IA multimodales",
+          "control de factores",
+          "inferencia temporal",
+          "ciberseguridad",
+          "aprendizaje profundo"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-23T17:21:33Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.30753",
+      "rank": 5,
+      "title": "FilmFlow: Agentic System for 3D Virtual Film Cinematography",
+      "authors": [
+        "Yiming Zhang",
+        "Jiarui Guo",
+        "Haojia Wei",
+        "Yifei Liu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-22",
+      "url": "https://arxiv.org/abs/2610.30753",
+      "pdf_url": "https://arxiv.org/pdf/2610.30753",
+      "score": 57,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "Complex camera motion is central to visual storytelling, yet translating cinematographic intent into controllable, executable camera trajectories remains challenging. We introduce FilmFlow, an agentic framework that converts natural-language instructions or reference videos into explicit camera trajectories for dynamic 3D environments. To generate these trajectories, a Director agent constructs executable camera plans by composing high-level motions from concurrent atomic operations that jointly control translation, rotation, and framing. The Director is supported by three specialized agents: an Interpreter that extracts scene-grounded cinematographic intent, a Scout that selects initial viewpoints, and a Critic that evaluates rendered results and provides visual feedback for iterative plan refinement. We also introduce CinemaBench, comprising 150 Blender scenes from self-created and licensed sources, with five camera instructions per scene for 750 text-directed tasks and 60 reference videos associated with a subset of scenes. CinemaBench supports evaluation of both text-directed camera generation and video reference-directed camera generation. Across a diverse set of evaluated baselines, FilmFlow achieves the strongest benchmark performance and the highest user preference, demonstrating effective spatial reasoning, temporal coordination, and visual composition for executable 3D cinematography.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "FilmFlow automatiza la cinematografía 3D generando trayectorias de cámara complejas a partir de instrucciones en lenguaje natural o videos de referencia.",
+        "problema": "Traducir la intención cinematográfica en trayectorias de cámara controlables y ejecutables en entornos 3D es un desafío complejo.",
+        "propuesta": "FilmFlow, un sistema agentico con un agente 'Director' que compone planes de cámara ejecutables combinando operaciones atómicas, apoyado por agentes 'Interpreter', 'Scout' y 'Critic' para la interpretación de intenciones, selección de puntos de vista y refinamiento iterativo.",
+        "resultados": "FilmFlow demuestra el mejor rendimiento en CinemaBench (un nuevo benchmark con 150 escenas y 750 tareas) y la mayor preferencia del usuario frente a otros métodos, mostrando razonamiento espacial, coordinación temporal y composición visual efectivas.",
+        "por_que_importa": "Facilita la creación de contenido visual dinámico y cinematográfico en 3D, democratizando la generación de tomas complejas para cineastas y desarrolladores.",
+        "tags": [
+          "cinematografía 3D",
+          "IA generativa",
+          "agentes autónomos",
+          "producción virtual",
+          "visualización"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-23T17:22:02Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.30882",
+      "rank": 6,
+      "title": "Inherited, Not Invented: Tracing the Provenance of Wait in Reasoning Models",
+      "authors": [
+        "Zhizhuo Kou",
+        "Sizai Hou",
+        "Long Chen",
+        "Jian Yang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-22",
+      "url": "https://arxiv.org/abs/2610.30882",
+      "pdf_url": "https://arxiv.org/pdf/2610.30882",
+      "score": 57,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Reinforcement learning (RL) is credited with teaching reasoning models to write {wait} before reconsidering a step, yet large RL accuracy gains do not require the word. This view can confuse what RL discovers with what a model inherits from its training data. We trace the word through open models' training histories, reading it with label-free indices of frequency, position, form and usage and an injected-error test, all computed from sampled outputs. We find that zero-RL almost never coins the marker: on bases that lack the word, RL raises MATH-500 accuracy substantially while {wait} stays near absent. It arrives with training data: mid-training in OLMo-3, and fine-tuning on reasoning traces installs it in most models whose base lacks it. Where the base already uses it, both released RL-Zero recipes (OLMo-3, MiMo) multiply it, whereas KL-free GRPO from the same base does not; OLMo-3's recipe wears down its form and makes it a more sensitive but more liberal alarm; RL after supervised fine-tuning barely changes it, and our GRPO recipe erases a marker seeded by fine-tuning. Finally, we show that marker frequency alone does not indicate RL-induced reasoning and caution against LLM-as-a-judge revision metrics, as automated judges can reverse human-labelled trends.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "El 'wait' en modelos de IA no es un descubrimiento de RL, sino una herencia de los datos de entrenamiento.",
+        "problema": "Se asume erróneamente que el 'wait' en modelos de IA es un descubrimiento del aprendizaje por refuerzo (RL), cuando en realidad proviene de los datos de entrenamiento.",
+        "propuesta": "Se rastrea la aparición del marcador '{wait}' en el historial de entrenamiento de modelos de IA, analizando su frecuencia, posición, forma y uso, y mediante pruebas de error inyectado, para determinar su origen.",
+        "resultados": "El RL por sí solo casi nunca introduce el marcador '{wait}'. El marcador aparece principalmente a través de los datos de entrenamiento (mediante fine-tuning) o se amplifica si ya está presente en el modelo base. Las métricas de jueces automatizados pueden contradecir las tendencias humanas.",
+        "por_que_importa": "Entender el origen del marcador '{wait}' es crucial para interpretar correctamente las capacidades de los modelos de IA, evitar atribuir erróneamente descubrimientos al RL y diseñar mejores métodos de evaluación.",
+        "tags": [
+          "IA",
+          "Explicabilidad",
+          "Aprendizaje por Refuerzo",
+          "Datos de Entrenamiento",
+          "Modelos de Lenguaje"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-23T17:22:12Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.19705",
+      "rank": 7,
+      "title": "RouteWeaver: Weaving Mode Selection and Execution into Unified LLM Routing",
+      "authors": [
+        "Xiaohan Wang",
+        "Haozhen Zhang",
+        "Qingyuan Liu",
+        "Tao Feng"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-19",
+      "url": "https://arxiv.org/abs/2610.19705",
+      "pdf_url": "https://arxiv.org/pdf/2610.19705",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "LLM routing dynamically selects and coordinates heterogeneous language models across diverse tasks. However, existing approaches are largely built around a predefined execution paradigm, such as single-round, multi-round, or agentic routing, which fixes how model calls are organized and limits adaptation to different query needs. We propose RouteWeaver, a unified routing framework that integrates these routing modes within a single LLM policy, jointly learning which mode to use and how to select models within that mode. To jointly optimize mode selection and within-mode execution, we develop COMET-GRPO (COordinated Mode-Execution Training), which decouples the trajectory-level advantage into separate signals for mode selection and within-mode execution, enabling more targeted credit assignment to each decision level. We further introduce progressive exploration, which gradually shifts training from externally assigned modes to autonomous selection, so that the router first learns how to execute each mode before deciding when to use it. We evaluate RouteWeaver across mathematics, coding, knowledge, logical reasoning, and factual recall. RouteWeaver achieves an average accuracy of 61.4%, an 11.03% relative improvement over the strongest baseline, and outperforms all compared baselines in each of the five domains. Ablations show that both COMET-GRPO and progressive exploration are important for adaptive routing; without progressive exploration, the routing policy collapses entirely to single-round execution.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "RouteWeaver unifica la selección y ejecución de modelos de lenguaje, adaptándose dinámicamente a las necesidades de cada consulta.",
+        "problema": "Los sistemas de enrutamiento de LLMs actuales utilizan paradigmas de ejecución fijos (una o varias rondas, agente), lo que limita su adaptabilidad a diferentes tipos de consultas y la forma en que se organizan las llamadas a los modelos.",
+        "propuesta": "RouteWeaver propone un marco de enrutamiento unificado que integra varios modos de enrutamiento (selección de modo y ejecución dentro del modo) en una única política de LLM, aprendiendo conjuntamente cuándo usar cada modo y cómo seleccionar los modelos dentro de él. Utiliza COMET-GRPO para optimizar la selección de modo y la ejecución, y la exploración progresiva para entrenar la política de enrutamiento.",
+        "resultados": "RouteWeaver logra una precisión promedio del 61.4%, un 11.03% de mejora relativa sobre la mejor línea base, y supera a todas las líneas base comparadas en matemáticas, codificación, conocimiento, razonamiento lógico y recuperación factual.",
+        "por_que_importa": "Permite a los sistemas de LLMs ser más flexibles y eficientes al seleccionar la estrategia de ejecución más adecuada para cada consulta específica, mejorando el rendimiento general en diversas tareas.",
+        "tags": [
+          "enrutamiento LLM",
+          "modelos de lenguaje",
+          "adaptabilidad",
+          "inteligencia artificial",
+          "ciberseguridad",
+          "optimización"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-23T17:22:22Z"
+      }
+    }
+  ],
+  "generated_at": "2026-10-23T17:22:22Z"
+}
