@@ -1,7 +1,13 @@
 {
-  "generated_at": "2026-10-23T17:22:22Z",
-  "latest": "2026-10-23",
+  "generated_at": "2026-10-24T16:08:11Z",
+  "latest": "2026-10-24",
   "days": [
+    {
+      "date": "2026-10-24",
+      "paper_count": 0,
+      "sources": [],
+      "file": "2026-10-24.json"
+    },
     {
       "date": "2026-10-23",
       "paper_count": 15,
