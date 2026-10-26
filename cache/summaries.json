@@ -11239,5 +11239,38 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-10-23T17:22:22Z"
+  },
+  "arxiv:2610.32250": {
+    "tldr": "Easy-3Dfy crea escenas 3D detalladas a partir de una sola imagen, combinando generadores de objetos especializados con modelos de comprensión espacial.",
+    "problema": "Los métodos actuales para reconstruir escenas 3D a partir de una sola imagen tienen dificultades para generar geometrías finas y de alta calidad en los objetos y en la escena completa.",
+    "propuesta": "Easy-3Dfy propone un flujo de trabajo que separa la generación de objetos de la estimación de la disposición de la escena. Utiliza un alineador basado en RPF para establecer correspondencia geométrica entre mallas de objetos y mapas de puntos de la escena, permitiendo componer la escena.",
+    "resultados": "Supera consistentemente a SAM-3Dfy en métricas geométricas en los datasets Scene-Maker y 3D-FUTURE200, sin necesidad de supervisión completa a nivel de escena.",
+    "por_que_importa": "Demuestra que la composición geométrica explícita mejora la calidad de las escenas 3D generadas a partir de una sola imagen, aprovechando los avances en generación de objetos y modelos fundacionales de IA.",
+    "tags": [
+      "visión 3D",
+      "reconstrucción de escenas",
+      "generación de objetos",
+      "composición",
+      "inteligencia artificial"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-26T18:44:44Z"
+  },
+  "arxiv:2610.32002": {
+    "tldr": "DraMaze genera guiones de microdramas más creativos y coherentes usando agentes y memoria predictiva.",
+    "problema": "La generación de guiones de microdramas largos con LLMs sufre de poca diversidad y pérdida de coherencia narrativa a largo plazo, ya que los modelos tienden a repetir tropos y olvidar información histórica crucial.",
+    "propuesta": "Se propone DraMaze, un sistema multi-agente que utiliza un árbol de búsqueda evolutiva guiado por memoria de tropos y un árbol de dependencias narrativas inversas para organizar y recuperar información histórica basándose en objetivos narrativos futuros.",
+    "resultados": "Para guiones de 60 episodios (hasta 60k palabras), DraMaze reduce la repetición de patrones causales en un 32.1% y alcanza una puntuación de Lógica de 82.5, superando al mejor baseline en 8.5 puntos.",
+    "por_que_importa": "Mejora significativamente la calidad, diversidad y coherencia de los guiones generados por IA para la creciente industria de los microdramas, permitiendo la creación de historias más ricas y menos repetitivas.",
+    "tags": [
+      "generación de guiones",
+      "microdramas",
+      "IA multi-agente",
+      "memoria predictiva",
+      "coherencia narrativa",
+      "diversidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-26T18:44:53Z"
   }
 }

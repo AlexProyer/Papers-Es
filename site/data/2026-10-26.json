@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-26",
+  "report_type": "filtrado",
+  "evaluated": 30,
+  "selected": 2,
+  "papers": [
+    {
+      "id": "arxiv:2610.32250",
+      "rank": 1,
+      "title": "Easy-3Dfy: Object-Level Geometric Composition for Single-Image 3D Scene Construction",
+      "authors": [
+        "Ziang Zhang",
+        "Wenyou Yi",
+        "Zehan Wang",
+        "Jiachen Xu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-23",
+      "url": "https://arxiv.org/abs/2610.32250",
+      "pdf_url": "https://arxiv.org/pdf/2610.32250",
+      "score": 54,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Single-image 3D scene construction is a fundamental problem in 3D vision. Recent methods such as SAM-3Dfy enable end-to-end reconstruction of 3D assets and their scene layouts, but still struggle with fine-grained scene geometry and asset quality. Meanwhile, specialized 3D object generators provide detailed object geometry, while 3D foundation models offer strong and generalizable spatial understanding. We propose Easy-3Dfy, a compositional workflow that decouples object generation from scene layout estimation, allowing specialized models to fully exploit their respective strengths. An RPF-based aligner then bridges these capabilities by establishing geometric correspondence between object-local meshes and partial scene pointmaps, recovering object layout for scene composition. Without requiring complete scene-level supervision, the proposed workflow consistently outperforms SAM-3Dfy across multiple geometric metrics on Scene-Maker and 3D-FUTURE200. Our results demonstrate that explicit geometric composition can effectively combine high-quality object generation with strong spatial understanding, while enabling the workflow to benefit independently from advances in both 3D object generation and foundation models.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Easy-3Dfy crea escenas 3D detalladas a partir de una sola imagen, combinando generadores de objetos especializados con modelos de comprensión espacial.",
+        "problema": "Los métodos actuales para reconstruir escenas 3D a partir de una sola imagen tienen dificultades para generar geometrías finas y de alta calidad en los objetos y en la escena completa.",
+        "propuesta": "Easy-3Dfy propone un flujo de trabajo que separa la generación de objetos de la estimación de la disposición de la escena. Utiliza un alineador basado en RPF para establecer correspondencia geométrica entre mallas de objetos y mapas de puntos de la escena, permitiendo componer la escena.",
+        "resultados": "Supera consistentemente a SAM-3Dfy en métricas geométricas en los datasets Scene-Maker y 3D-FUTURE200, sin necesidad de supervisión completa a nivel de escena.",
+        "por_que_importa": "Demuestra que la composición geométrica explícita mejora la calidad de las escenas 3D generadas a partir de una sola imagen, aprovechando los avances en generación de objetos y modelos fundacionales de IA.",
+        "tags": [
+          "visión 3D",
+          "reconstrucción de escenas",
+          "generación de objetos",
+          "composición",
+          "inteligencia artificial"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-26T18:44:44Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.32002",
+      "rank": 2,
+      "title": "DraMaze: A Multi-Agent Pipeline with Future-Aware Memory for Diverse Microdrama Script Generation",
+      "authors": [
+        "Siyang He",
+        "Qiqi Wang",
+        "Fan Liu",
+        "Yuncheng Huang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-22",
+      "url": "https://arxiv.org/abs/2610.32002",
+      "pdf_url": "https://arxiv.org/pdf/2610.32002",
+      "score": 51,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "The rapid growth of microdramas has increased demand for high-quality script production. Long-form microdrama script generation with LLMs requires both diverse plot progression and long-range narrative coherence. Our observations reveal that candidate continuations increasingly concentrate on fewer narrative mechanisms as generation progresses, while conventional retrieval may reinforce trope reuse and overlook historical information essential to future plots. To address these challenges, we propose DraMaze, a multi-agent pipeline that explores diverse causal paths through trope memory-guided evolutionary tree search and mutation. It further constructs a Backward Narrative Dependency Tree to organize, retain, and retrieve historical memories based on future narrative goals. We also introduce MiDramaBench, a bilingual benchmark for evaluating script logic and creative quality across different script lengths, together with causal-pattern metrics for narrative repetition and diversity. Experiments show consistent improvements across three backbone LLMs. For 60-episode scripts of up to 60k words, DraMaze reduces causal-pattern repetition by 32.1% and achieves a Logic score of 82.5, outperforming the best-performing baseline by 8.5 points.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "DraMaze genera guiones de microdramas más creativos y coherentes usando agentes y memoria predictiva.",
+        "problema": "La generación de guiones de microdramas largos con LLMs sufre de poca diversidad y pérdida de coherencia narrativa a largo plazo, ya que los modelos tienden a repetir tropos y olvidar información histórica crucial.",
+        "propuesta": "Se propone DraMaze, un sistema multi-agente que utiliza un árbol de búsqueda evolutiva guiado por memoria de tropos y un árbol de dependencias narrativas inversas para organizar y recuperar información histórica basándose en objetivos narrativos futuros.",
+        "resultados": "Para guiones de 60 episodios (hasta 60k palabras), DraMaze reduce la repetición de patrones causales en un 32.1% y alcanza una puntuación de Lógica de 82.5, superando al mejor baseline en 8.5 puntos.",
+        "por_que_importa": "Mejora significativamente la calidad, diversidad y coherencia de los guiones generados por IA para la creciente industria de los microdramas, permitiendo la creación de historias más ricas y menos repetitivas.",
+        "tags": [
+          "generación de guiones",
+          "microdramas",
+          "IA multi-agente",
+          "memoria predictiva",
+          "coherencia narrativa",
+          "diversidad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-26T18:44:53Z"
+      }
+    }
+  ],
+  "generated_at": "2026-10-26T18:44:53Z"
+}

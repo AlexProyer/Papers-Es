@@ -1,7 +1,15 @@
 {
-  "generated_at": "2026-10-25T16:38:18Z",
-  "latest": "2026-10-25",
+  "generated_at": "2026-10-26T18:44:53Z",
+  "latest": "2026-10-26",
   "days": [
+    {
+      "date": "2026-10-26",
+      "paper_count": 2,
+      "sources": [
+        "HuggingFace Daily Papers"
+      ],
+      "file": "2026-10-26.json"
+    },
     {
       "date": "2026-10-25",
       "paper_count": 0,
