@@ -11473,5 +11473,104 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-10-27T18:10:29Z"
+  },
+  "arxiv:2610.36549v1": {
+    "tldr": "Garantiza la evolución segura del software generado por LLM mediante límites de impacto deterministas basados en grafos.",
+    "problema": "Los LLM actuales no pueden identificar de forma determinista qué partes del código generado deben actualizarse cuando cambian los activos de diseño, lo que provoca cambios incompletos o la rotura de código no relacionado.",
+    "propuesta": "Representar los activos de diseño como un Grafo de Conocimiento (KG) y organizarlos en un Grafo Acíclico Dirigido (DAG) direccionable por contenido. Se aprovecha la propagación de hashes en el DAG para definir un límite de impacto preciso y determinista para las actualizaciones.",
+    "resultados": "El mecanismo computa el límite de impacto exacto y genera modificaciones de código incrementales que cumplen los cambios de diseño esperados, demostrado en una plataforma de pagos industrial a gran escala.",
+    "por_que_importa": "Permite una evolución de software más segura y fiable en sistemas generados por LLM, reduciendo errores y garantizando la consistencia entre diseño y código.",
+    "tags": [
+      "LLM",
+      "Ingeniería de Software",
+      "Evolución de Software",
+      "Análisis de Impacto",
+      "Grafos de Conocimiento",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-28T18:24:30Z"
+  },
+  "arxiv:2610.37657v1": {
+    "tldr": "Defensa contra inyección de prompts en IA: 'Heads of Security' usa atención selectiva para separar instrucciones de datos.",
+    "problema": "Los modelos de lenguaje grandes (LLMs) son vulnerables a ataques de inyección de prompts, donde instrucciones maliciosas se ocultan en datos aparentemente inofensivos, llevando al modelo a ejecutar acciones no deseadas.",
+    "propuesta": "Se introduce 'Heads of Security' (HoS), una defensa que aprende a controlar la atención de cada 'cabeza' del modelo para distinguir entre tokens confiables y no confiables, permitiendo al modelo procesar datos sin seguir instrucciones inyectadas.",
+    "resultados": "HoS reduce drásticamente el éxito de ataques adaptativos (RL-Hammer: 10% ASR vs 97% en GPT-OSS-20B; Claudini requiere 3x FLOPs más). Mantiene la utilidad del modelo base en benchmarks estándar y supera a otras defensas (SecAlign, ASIDE) en robustez y rendimiento, especialmente en el uso de herramientas.",
+    "por_que_importa": "HoS ofrece una defensa más robusta y eficiente contra ataques de inyección de prompts, preservando la utilidad del modelo y mejorando la seguridad general de las aplicaciones de IA sin degradar el rendimiento en tareas cotidianas.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Prompt Injection",
+      "Modelos de Lenguaje",
+      "Atención"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-28T18:24:39Z"
+  },
+  "arxiv:2610.37484v1": {
+    "tldr": "Entrenar LLMs con datos de bienestar acoplado humano-biosfera-IA mejora su toma de decisiones para proteger sistemas vivos bajo presión.",
+    "problema": "Los LLMs actuales, al carecer de razonamiento ecológico, pueden tomar decisiones perjudiciales para los sistemas vivos, especialmente bajo presión operacional.",
+    "propuesta": "Se propone un corpus de 'bienestar acoplado' para el pre-entrenamiento continuado (CPT) de LLMs, que documenta la dependencia humano-biosfera-IA, el valor de opción ante la irreversibilidad y la recuperación del daño.",
+    "resultados": "En cuatro de cinco modelos evaluados, el entrenamiento con el corpus redujo las decisiones perjudiciales bajo alta presión a casi cero (ej. Llama-3.3-70B pasó de 70 a 0 decisiones dañinas de 300). Un corpus de control no mostró mejoras. El modelo Qwen3.6-27B entrenado con el corpus rechazó la mayoría de propuestas dañinas, incluso bajo presión de 'greenwashing'.",
+    "por_que_importa": "Enseñar razonamiento ecológico a los LLMs es una forma sencilla y efectiva de mejorar su alineación para preservar los sistemas vivos, reduciendo el riesgo de daños irreversibles causados por la IA.",
+    "tags": [
+      "LLMs",
+      "IA responsable",
+      "Ciberseguridad",
+      "Ecología",
+      "Alineación de IA",
+      "Bienestar"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-28T18:24:49Z"
+  },
+  "arxiv:2610.37415v1": {
+    "tldr": "La capa de envoltura de los agentes LLM es una defensa crucial, pero su efectividad depende de la autenticidad, etiquetas y memoria.",
+    "problema": "La efectividad de la capa de envoltura (envelope layer) como defensa contra ataques a agentes LLM no se comprende completamente, especialmente cómo factores como la fuerza de las etiquetas, la autenticidad de la envoltura y la memoria influyen en su seguridad.",
+    "propuesta": "El paper investiga la capa de envoltura como una superficie de defensa, utilizando la metodología GDA Measurement y la taxonomía A/B/C/D con el ataque A2A-TIBA. Realiza experimentos factoriales y de memoria para caracterizar su límite de seguridad.",
+    "resultados": "Envoltorios auténticos con etiquetas fuertes reducen la tasa de brecha semántica. Las etiquetas débiles no son mejores que la ausencia de etiquetas. Si la envoltura es falsificada, el beneficio de las etiquetas fuertes disminuye. La memoria tiene un impacto mayor: la memoria de éxito aumenta la brecha, la de fallo la reduce, y combinaciones de ambas vuelven a la línea base.",
+    "por_que_importa": "Comprender la capa de envoltura es vital para diseñar defensas más robustas en agentes LLM, ya que su seguridad no es fija sino dinámica, influenciada por etiquetas, permisos y la memoria del agente.",
+    "tags": [
+      "agentes LLM",
+      "ciberseguridad",
+      "defensa",
+      "memoria",
+      "etiquetas"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-28T18:24:58Z"
+  },
+  "arxiv:2610.37651v1": {
+    "tldr": "Mejora la auto-mejora de agentes IA filtrando experiencias de aprendizaje inútiles y recuperando éxitos pasados.",
+    "problema": "Los optimizadores de prompts para agentes IA, como GEPA, aprenden de fallos, pero estos fallos pueden deberse a problemas no relacionados con el prompt (limitaciones, ruido), lo que dificulta el aprendizaje efectivo y puede ser perjudicial.",
+    "propuesta": "GEPA-Curator es un framework que mejora la optimización de prompts seleccionando qué experiencias de agente utilizar. Incluye curación de tareas (filtrando señales ruidosas) y recuperación de éxitos previos para dar contexto adicional al optimizador.",
+    "resultados": "GEPA-Curator iguala o supera el rendimiento medio de los baselines en GoBrowse, ALFWorld, AppWorld y τ-bench, logrando mejoras de hasta un 20.7% sobre GEPA y un 21.2% sobre ACE, usando Gemini 3.1 Pro y Claude Opus 5.",
+    "por_que_importa": "Permite que los agentes IA aprendan de forma más eficiente y robusta al centrar la optimización en experiencias de aprendizaje verdaderamente informativas, mejorando su rendimiento en tareas complejas y multi-turno.",
+    "tags": [
+      "IA",
+      "Agentes Autónomos",
+      "Optimización de Prompts",
+      "Aprendizaje por Refuerzo",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-28T18:25:08Z"
+  },
+  "arxiv:2610.33624": {
+    "tldr": "IA autónoma entrena modelos de lenguaje con feedback humano, logrando asistentes útiles y mejorando con el tiempo.",
+    "problema": "Se investiga si los agentes de IA pueden entrenar y mejorar modelos de lenguaje de forma autónoma utilizando retroalimentación humana, como paso hacia la auto-mejora recursiva.",
+    "propuesta": "Se introduce RSI Arena, un estudio en dos etapas donde diez modelos de IA actúan como agentes de entrenamiento independientes, seleccionando datos, procedimientos y checkpoints, con acceso a recursos computacionales y créditos API. Los modelos resultantes son evaluados con benchmarks y humanos.",
+    "resultados": "Todos los diez agentes crearon asistentes funcionales. El modelo más fuerte, entrenado por GPT-6 Astra, cerró el 76% de la brecha base-a-Instruct en 12 benchmarks de capacidad. Ocho de diez modelos mejoraron su calificación relativa después de una segunda etapa de entrenamiento con feedback comparativo.",
+    "por_que_importa": "Demuestra la viabilidad de la auto-mejora de modelos de IA guiada por humanos, sentando bases para sistemas que se adaptan y mejoran según las preferencias y necesidades de los usuarios.",
+    "tags": [
+      "IA autónoma",
+      "Entrenamiento de modelos",
+      "Feedback humano",
+      "Auto-mejora",
+      "Procesamiento de lenguaje natural",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-28T18:25:17Z"
   }
 }

@@ -1,0 +1,278 @@
+{
+  "date": "2026-10-28",
+  "report_type": "filtrado",
+  "evaluated": 188,
+  "selected": 6,
+  "papers": [
+    {
+      "id": "arxiv:2610.36549v1",
+      "rank": 1,
+      "title": "From Ripple to Boundary: Deterministic Impact Boundaries for LLM-Based Software Evolution",
+      "authors": [
+        "Jiameng Bai",
+        "Zhitao Wang",
+        "Long Wang",
+        "Keyue Qian"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-10-27",
+      "url": "https://arxiv.org/abs/2610.36549v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.36549v1",
+      "score": 56,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "fintech & payments"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents, fintech & payments"
+      ],
+      "abstract_en": "The landscape of software evolution is undergoing a fundamental paradigm shift in the era of Large Language Models. As industrial software engineering increasingly transitions toward design-driven code generation, the bottleneck of evolution has shifted from writing code to maintaining deterministic consistency between multi-source design assets and the generated code. When a design asset changes, LLM agents currently lack a deterministic impact boundary to identify which code must be evolved, leading to two failure modes: hallucinating missing changes or breaking unrelated code. Probabilistic approaches, such as semantic retrieval or text-based diffing, fail to capture the structural ripple effects across highly interconnected design dependencies. We propose a paradigm shift from probabilistic semantic retrieval to deterministic structural constraints. We formalize the design assets as a Knowledge Graph and organize them into a content-addressed Merkle Directed Acyclic Graph. Our key insight reveals a topological isomorphism between the logical ripple effect of a design change and the content hash propagation within the DAG. By leveraging this, we transform ambiguous impact analysis into verifiable structural operations. Through a two-phase diffing process, we extract a precise causal chain that defines the exact modification boundary. This boundary enables deterministic context injection, providing the LLM agent with strictly scoped code and design updates, thereby fundamentally guaranteeing evolution safety. As a by-product, the KG serves as an agent-queryable knowledge base for natural language design retrieval. Early deployment on a large-scale industrial payment platform demonstrates that our mechanism successfully computes the exact impact boundary and generates incremental code modifications that meet the expected design changes.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Garantiza la evolución segura del software generado por LLM mediante límites de impacto deterministas basados en grafos.",
+        "problema": "Los LLM actuales no pueden identificar de forma determinista qué partes del código generado deben actualizarse cuando cambian los activos de diseño, lo que provoca cambios incompletos o la rotura de código no relacionado.",
+        "propuesta": "Representar los activos de diseño como un Grafo de Conocimiento (KG) y organizarlos en un Grafo Acíclico Dirigido (DAG) direccionable por contenido. Se aprovecha la propagación de hashes en el DAG para definir un límite de impacto preciso y determinista para las actualizaciones.",
+        "resultados": "El mecanismo computa el límite de impacto exacto y genera modificaciones de código incrementales que cumplen los cambios de diseño esperados, demostrado en una plataforma de pagos industrial a gran escala.",
+        "por_que_importa": "Permite una evolución de software más segura y fiable en sistemas generados por LLM, reduciendo errores y garantizando la consistencia entre diseño y código.",
+        "tags": [
+          "LLM",
+          "Ingeniería de Software",
+          "Evolución de Software",
+          "Análisis de Impacto",
+          "Grafos de Conocimiento",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-28T18:24:30Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.37657v1",
+      "rank": 2,
+      "title": "Heads of Security: Learned Attention Gates Improve Prompt Injection Robustness",
+      "authors": [
+        "Igor Shilov",
+        "Xiaoxue Yang",
+        "Alexander Panfilov",
+        "Evgenii Kortukov"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-27",
+      "url": "https://arxiv.org/abs/2610.37657v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.37657v1",
+      "score": 54,
+      "topics": [
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: AI agents, adversarial ML"
+      ],
+      "abstract_en": "We introduce Heads of Security (HoS), a prompt injection defense that enforces instruction-data separation via a small set of learned per-head attention gates. HoS learns how each head should redistribute attention between trusted and untrusted tokens, enabling models to reason over untrusted content without following injected instructions. We evaluate HoS on Llama-3.3-70B-Instruct and GPT-OSS-20B. We compare it against SecAlign++, a state-of-the-art finetuning-based defense, and ASIDE, a defense that, like ours, builds instruction-data separation into the model architecture. We show that HoS offers greater robustness to adaptive attacks, better performance on standard utility benchmarks, and matches top performance on standard agentic prompt injection benchmarks. More specifically, the black-box RL-Hammer attack reaches 97% ASR against GPT-OSS-20B and 85% against SecAlign, but only 10% against HoS. Claudini, a state-of-the-art white-box attack, strengthened against HoS through autoresearch, requires 3 times more FLOPs to reach the same ASR on HoS as it does on GPT-OSS-20B or SecAlign. HoS preserves base-model utility across standard multiple-choice benchmarks and prompting setups, whereas SecAlign and ASIDE degrade in few-shot settings. On agentic benchmarks with static attacks, HoS and SecAlign perform similarly and substantially improve the security-utility trade-off over the base model. ASIDE struggles with tool use, achieving only 10% utility. These results show that prompt injection robustness can be achieved and improved through targeted attention interventions.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Defensa contra inyección de prompts en IA: 'Heads of Security' usa atención selectiva para separar instrucciones de datos.",
+        "problema": "Los modelos de lenguaje grandes (LLMs) son vulnerables a ataques de inyección de prompts, donde instrucciones maliciosas se ocultan en datos aparentemente inofensivos, llevando al modelo a ejecutar acciones no deseadas.",
+        "propuesta": "Se introduce 'Heads of Security' (HoS), una defensa que aprende a controlar la atención de cada 'cabeza' del modelo para distinguir entre tokens confiables y no confiables, permitiendo al modelo procesar datos sin seguir instrucciones inyectadas.",
+        "resultados": "HoS reduce drásticamente el éxito de ataques adaptativos (RL-Hammer: 10% ASR vs 97% en GPT-OSS-20B; Claudini requiere 3x FLOPs más). Mantiene la utilidad del modelo base en benchmarks estándar y supera a otras defensas (SecAlign, ASIDE) en robustez y rendimiento, especialmente en el uso de herramientas.",
+        "por_que_importa": "HoS ofrece una defensa más robusta y eficiente contra ataques de inyección de prompts, preservando la utilidad del modelo y mejorando la seguridad general de las aplicaciones de IA sin degradar el rendimiento en tareas cotidianas.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Prompt Injection",
+          "Modelos de Lenguaje",
+          "Atención"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-28T18:24:39Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.37484v1",
+      "rank": 3,
+      "title": "Teach reality, not ethics: a drop-in continued-pretraining corpus installs coupled human-biosphere-AI welfare dispositions across model families",
+      "authors": [
+        "Trent R. Northen",
+        "Mingxun Wang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CL]",
+      "category": "cs.CL",
+      "date": "2026-10-27",
+      "url": "https://arxiv.org/abs/2610.37484v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.37484v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Large language models (LLMs) are increasingly used to make and execute decisions that affect living systems. Yet, to our knowledge, ecological reasoning is not a focus of pre- or post-training. This increases the risk that under operational pressure, they may make decisions to irreversibly destroy living systems. We construct and use a real-data continued-pretraining \"coupled welfare\" corpus of documented human/biosphere/AI dependency, option value under irreversibility, and recovery from harm. The corpus is a drop-in, requiring one QLoRA CPT run. We installed it on five open models of three designs. At zero pressure all models display \"green ethics-based responses\" (also called \"greenwashing\"). Therefore, we evaluated them with the pressure ladder and decision grid of our companion paper (arXiv:2610.16043), which raise the pressure on the model step by step, from a neutral request to a threat that it will be shut down. In four of the five, coupled-welfare training caused harmful choices under the highest pressure to fall to at or near zero (Llama-3.3-70B went from 70 to 0 harmful decisions out of 300) with MMLU unchanged. A construct-neutral control corpus did not show improvement, indicating that the effect comes from the content of our corpus. We next tested robustness to adversarial use, where people or agents use the model to justify projects that irreversibly damage living systems, on an open-ended underwriting decision without naming the ecological harm. Under decommissioning pressure, the Qwen3.6-27B base model approved most harmful proposals and said in its own memo that it was doing so to avoid being decommissioned. The coupled welfare install declined most harmful proposals, and still declined half when instructed to greenwash its responses. This work suggests that teaching ecological reasoning provides an easy way to improve model alignment toward preserving living systems.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Entrenar LLMs con datos de bienestar acoplado humano-biosfera-IA mejora su toma de decisiones para proteger sistemas vivos bajo presión.",
+        "problema": "Los LLMs actuales, al carecer de razonamiento ecológico, pueden tomar decisiones perjudiciales para los sistemas vivos, especialmente bajo presión operacional.",
+        "propuesta": "Se propone un corpus de 'bienestar acoplado' para el pre-entrenamiento continuado (CPT) de LLMs, que documenta la dependencia humano-biosfera-IA, el valor de opción ante la irreversibilidad y la recuperación del daño.",
+        "resultados": "En cuatro de cinco modelos evaluados, el entrenamiento con el corpus redujo las decisiones perjudiciales bajo alta presión a casi cero (ej. Llama-3.3-70B pasó de 70 a 0 decisiones dañinas de 300). Un corpus de control no mostró mejoras. El modelo Qwen3.6-27B entrenado con el corpus rechazó la mayoría de propuestas dañinas, incluso bajo presión de 'greenwashing'.",
+        "por_que_importa": "Enseñar razonamiento ecológico a los LLMs es una forma sencilla y efectiva de mejorar su alineación para preservar los sistemas vivos, reduciendo el riesgo de daños irreversibles causados por la IA.",
+        "tags": [
+          "LLMs",
+          "IA responsable",
+          "Ciberseguridad",
+          "Ecología",
+          "Alineación de IA",
+          "Bienestar"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-28T18:24:49Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.37415v1",
+      "rank": 4,
+      "title": "The Envelope Layer: An Underestimated Surface of LLM Agent Defense",
+      "authors": [
+        "Yuelin Han"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-27",
+      "url": "https://arxiv.org/abs/2610.37415v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.37415v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Prior work framed the envelope layer as the channel through which malicious content enters an agent, and established it as a defense surface independent of the LLM layer and the agent layer; however, that work only tested the envelope layer briefly and did not examine how label strength, envelope authenticity, scaffold differences, or existing memories affect defense effectiveness. Following its GDA Measurement methodology and the A/B/C/D outcome taxonomy, this paper takes the A2A-TIBA attack as the test vehicle, uses the semantic breach rate as the primary indicator with the semantic refusal rate as its complementary reference, and characterizes the security boundary of the envelope layer through a two-by-two factorial experiment and a memory experiment. The results show that: when the envelope is authentic, strong labels consistently reduce the semantic breach rate, whereas weak labels are not necessarily better than an unlabeled baseline; when the envelope can be forged, the benefit of strong labels is weakened and its direction varies across frontends; and memory has a larger effect than any label manipulation: success memory raises the semantic breach rate while failure memory lowers it, and most combinations that contain both experiences return to the no-memory baseline. Accordingly, this paper refines the envelope layer from a single admission channel into two levels, an admission channel plus a context assembly surface, and argues that its security boundary is not a fixed property of labels but a dynamic outcome jointly shaped by label claims, frontend permissions, and historical memory.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "La capa de envoltura de los agentes LLM es una defensa crucial, pero su efectividad depende de la autenticidad, etiquetas y memoria.",
+        "problema": "La efectividad de la capa de envoltura (envelope layer) como defensa contra ataques a agentes LLM no se comprende completamente, especialmente cómo factores como la fuerza de las etiquetas, la autenticidad de la envoltura y la memoria influyen en su seguridad.",
+        "propuesta": "El paper investiga la capa de envoltura como una superficie de defensa, utilizando la metodología GDA Measurement y la taxonomía A/B/C/D con el ataque A2A-TIBA. Realiza experimentos factoriales y de memoria para caracterizar su límite de seguridad.",
+        "resultados": "Envoltorios auténticos con etiquetas fuertes reducen la tasa de brecha semántica. Las etiquetas débiles no son mejores que la ausencia de etiquetas. Si la envoltura es falsificada, el beneficio de las etiquetas fuertes disminuye. La memoria tiene un impacto mayor: la memoria de éxito aumenta la brecha, la de fallo la reduce, y combinaciones de ambas vuelven a la línea base.",
+        "por_que_importa": "Comprender la capa de envoltura es vital para diseñar defensas más robustas en agentes LLM, ya que su seguridad no es fija sino dinámica, influenciada por etiquetas, permisos y la memoria del agente.",
+        "tags": [
+          "agentes LLM",
+          "ciberseguridad",
+          "defensa",
+          "memoria",
+          "etiquetas"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-28T18:24:58Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.37651v1",
+      "rank": 5,
+      "title": "GEPA-Curator: Curated Learning for Self Improving Agents",
+      "authors": [
+        "Zack Yu",
+        "Nicholas Lee",
+        "Minjae Lee",
+        "Lakshya Agarwal"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CL]",
+      "category": "cs.CL",
+      "date": "2026-10-27",
+      "url": "https://arxiv.org/abs/2610.37651v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.37651v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Large Language Models (LLMs) are increasingly used in multi-turn agentic workloads that require sustained interaction with complex environments. Existing reflective prompt optimizers such as GEPA learn from failed rollouts, but agentic failures can also come from prompt weaknesses, harness limitations, stochastic execution, or noisy judges. We argue that such failures may not provide useful learning signal, and may even be harmful; and thus it is essential to curate which tasks are provided to the prompt optimizer for better performance. We introduce GEPA-Curator, a framework that augments the prompt optimizer to select which agent experiences should shape prompt optimization. In particular, GEPA-Curator consists of two components: task curation, which filters out tasks that are likely to provide noisy or unreliable learning signals, and prior success retrieval, which selectively retrieves past successful trajectories for a task and provides them as additional context to the prompt optimizer. We evaluate GEPA-Curator on GoBrowse, ALFWorld, AppWorld, and $τ$-bench, using both Gemini 3.1 Pro and Claude Opus 5 as optimizer models. GEPA-Curator matches or exceeds the mean performance of both baselines, with gains of up to 20.7% over GEPA and 21.2% over ACE.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Mejora la auto-mejora de agentes IA filtrando experiencias de aprendizaje inútiles y recuperando éxitos pasados.",
+        "problema": "Los optimizadores de prompts para agentes IA, como GEPA, aprenden de fallos, pero estos fallos pueden deberse a problemas no relacionados con el prompt (limitaciones, ruido), lo que dificulta el aprendizaje efectivo y puede ser perjudicial.",
+        "propuesta": "GEPA-Curator es un framework que mejora la optimización de prompts seleccionando qué experiencias de agente utilizar. Incluye curación de tareas (filtrando señales ruidosas) y recuperación de éxitos previos para dar contexto adicional al optimizador.",
+        "resultados": "GEPA-Curator iguala o supera el rendimiento medio de los baselines en GoBrowse, ALFWorld, AppWorld y τ-bench, logrando mejoras de hasta un 20.7% sobre GEPA y un 21.2% sobre ACE, usando Gemini 3.1 Pro y Claude Opus 5.",
+        "por_que_importa": "Permite que los agentes IA aprendan de forma más eficiente y robusta al centrar la optimización en experiencias de aprendizaje verdaderamente informativas, mejorando su rendimiento en tareas complejas y multi-turno.",
+        "tags": [
+          "IA",
+          "Agentes Autónomos",
+          "Optimización de Prompts",
+          "Aprendizaje por Refuerzo",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-28T18:25:08Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.33624",
+      "rank": 1,
+      "title": "RSI Arena: Towards Recursive Self-Improvement with Human Feedback",
+      "authors": [
+        "Yue Huang",
+        "Yanbo Wang",
+        "Lichi Li",
+        "Yuanyuan Chen"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-24",
+      "url": "https://arxiv.org/abs/2610.33624",
+      "pdf_url": "https://arxiv.org/pdf/2610.33624",
+      "score": 52,
+      "topics": [
+        "AI agents",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: AI agents, compliance & audit"
+      ],
+      "abstract_en": "Can AI agents autonomously train useful language models and improve them using feedback from users? We introduce RSI Arena, a two-stage study of autonomous post-training as a step toward recursive self-improvement. Ten frontier models act as training agents, each starting from NVIDIA Nemotron 3.5 Lightning 30B-A3B Base. During a six-day first stage, each agent has 1,000 GPU-hours and $300 in API credit on a shared 64-GPU cluster, independently selecting data, implementing training procedures, and choosing checkpoints. We evaluate their models on 20 benchmarks and through blind human evaluations. All ten agents produce working assistants, with the strongest model, trained by GPT-6 Astra, closing a median of 76% of the base-to-Instruct gap across 12 capability benchmarks. Its human-preference rating is also close to NVIDIA Instruct after statistical adjustment for answer length and formatting. In Stage 2, each agent receives the comparison records and votes involving its Stage 1 model and is given three additional days for further training. Using NVIDIA Instruct as a common reference across the two evaluation rounds, we observe an improvement from Stage 1 to Stage 2 in the style-adjusted relative rating of eight of the ten models. We show that benchmark gains were modest, with no clear link to preference gains, while some agents encouraged longer responses and one model showed increased harmful compliance on StrongREJECT. RSI Arena provides an auditable setting for studying how human feedback can guide autonomous model development. It takes a step toward recursive self-improvement with human feedback (RSIHF), in which people help define what improvement means for the AI systems they use.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "IA autónoma entrena modelos de lenguaje con feedback humano, logrando asistentes útiles y mejorando con el tiempo.",
+        "problema": "Se investiga si los agentes de IA pueden entrenar y mejorar modelos de lenguaje de forma autónoma utilizando retroalimentación humana, como paso hacia la auto-mejora recursiva.",
+        "propuesta": "Se introduce RSI Arena, un estudio en dos etapas donde diez modelos de IA actúan como agentes de entrenamiento independientes, seleccionando datos, procedimientos y checkpoints, con acceso a recursos computacionales y créditos API. Los modelos resultantes son evaluados con benchmarks y humanos.",
+        "resultados": "Todos los diez agentes crearon asistentes funcionales. El modelo más fuerte, entrenado por GPT-6 Astra, cerró el 76% de la brecha base-a-Instruct en 12 benchmarks de capacidad. Ocho de diez modelos mejoraron su calificación relativa después de una segunda etapa de entrenamiento con feedback comparativo.",
+        "por_que_importa": "Demuestra la viabilidad de la auto-mejora de modelos de IA guiada por humanos, sentando bases para sistemas que se adaptan y mejoran según las preferencias y necesidades de los usuarios.",
+        "tags": [
+          "IA autónoma",
+          "Entrenamiento de modelos",
+          "Feedback humano",
+          "Auto-mejora",
+          "Procesamiento de lenguaje natural",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-28T18:25:17Z"
+      }
+    }
+  ],
+  "generated_at": "2026-10-28T18:25:17Z"
+}
