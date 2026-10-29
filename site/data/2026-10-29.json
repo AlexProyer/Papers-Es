@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-29",
+  "report_type": "filtrado",
+  "evaluated": 13,
+  "selected": 1,
+  "papers": [
+    {
+      "id": "arxiv:2610.37230",
+      "rank": 1,
+      "title": "TAO: Tool-Aware Joint Scheduling for LLM-Based Agentic Serving",
+      "authors": [
+        "Shuhuai Li",
+        "Shengdong Ye",
+        "Dongdong Ge",
+        "Yinyu Ye"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-27",
+      "url": "https://arxiv.org/abs/2610.37230",
+      "pdf_url": "https://arxiv.org/pdf/2610.37230",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+4)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Agentic services alternate between model inference on clustered GPUs and external tools on distributed CPUs. In this scenario, existing systems (1) overlook tool-return readiness in service evaluation, wasting limited resources, and (2) use heuristic strategies to decide admission and placement on GPUs, resulting in suboptimal scheduling decisions. To bridge this gap, we present TAO, a tool-aware joint scheduling framework for LLM-based agentic serving. Its value interface combines near-term tool readiness, node-specific cache credit with time-aware decay, and token footprint; a dynamic program jointly selects and places waiting sessions under capacity constraints. Across the 12 reported model-workload-concurrency settings, TAO reduces latency by up to 26.8%, reduces mean time to first token (TTFT) by up to 36.3%, and increases decode throughput by up to 29.5% relative to the best evaluated state-of-the-art baseline for each metric.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "TAO optimiza el servicio de agentes LLM combinando GPU y CPU, reduciendo latencia y mejorando el rendimiento.",
+        "problema": "Los sistemas actuales de servicios basados en LLM que usan tanto GPUs (para inferencia) como CPUs (para herramientas externas) son ineficientes porque no consideran la disponibilidad de las herramientas al programar las tareas y usan estrategias heurísticas para asignar recursos, lo que lleva a decisiones de programación subóptimas y desperdicio de recursos.",
+        "propuesta": "Se propone TAO, un framework de programación conjunta consciente de las herramientas. Utiliza una interfaz de valor que combina la preparación de herramientas a corto plazo, créditos de caché específicos del nodo con decaimiento temporal y la huella de tokens. Un programa dinámico selecciona y coloca las sesiones en espera bajo restricciones de capacidad.",
+        "resultados": "TAO reduce la latencia hasta en un 26.8%, disminuye el tiempo medio hasta el primer token (TTFT) hasta en un 36.3% y aumenta el rendimiento de decodificación hasta en un 29.5% en comparación con los mejores sistemas de referencia evaluados.",
+        "por_que_importa": "Mejora significativamente la eficiencia y el rendimiento de los servicios de agentes LLM, cruciales para aplicaciones que requieren interacciones complejas con herramientas externas, lo que se traduce en una mejor experiencia de usuario y un uso más rentable de los recursos computacionales.",
+        "tags": [
+          "LLM",
+          "Agentes",
+          "Programación",
+          "Optimización",
+          "Ciberseguridad",
+          "Rendimiento"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-29T18:34:29Z"
+      }
+    }
+  ],
+  "generated_at": "2026-10-29T18:34:29Z"
+}
