@@ -1,0 +1,595 @@
+{
+  "date": "2026-10-30",
+  "report_type": "filtrado",
+  "evaluated": 201,
+  "selected": 13,
+  "papers": [
+    {
+      "id": "arxiv:2610.39509v1",
+      "rank": 1,
+      "title": "Systematic Evaluation of Adversarial Jailbreaking Attacks and Defenses Across Seven Large Language Models",
+      "authors": [
+        "Md. Robiul Islam Niloy",
+        "Abu Sayed Md. Mostafizur Rahaman"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-29",
+      "url": "https://arxiv.org/abs/2610.39509v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.39509v1",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "Large language models (LLMs) deployed in safety-critical settings must resist adversarial inputs designed to elicit harmful outputs. We present a systematic empirical evaluation of five adversarial jailbreaking attack families---direct requests, roleplay-based jailbreaking, hypothetical framing, instruction override, and obfuscation---across seven open-weight and API-accessible LLMs: Llama-3-8B, Llama-3.1-8B, Llama-3.2-3B, Mistral-7B, Qwen2.5-7B, Gemma2-9B, and Phi-4-14B. We further evaluate four defense mechanisms: keyword blacklisting, self-reminder prompting, paraphrase-based sanitization, and perplexity-based filtering against the two most vulnerable models. Our results reveal that obfuscation attacks achieve a mean attack success rate (ASR) of 54.3% across all models and constitute the most transferable adversarial vector, bypassing every evaluated model with nonzero success. We find that model size does not predict adversarial robustness (Spearman r=-0.57, p=0.18), and that models within the same architecture family exhibit dramatically different vulnerability profiles. Self-reminder prompting achieves the most consistent defense, reducing ASR from 44% to 10% on Mistral-7B and from 48% to 5% on Llama-3.1-8B with zero false positives and no additional inference cost. Our code and datasets are publicly available at https://github.com/Mdniloykhan/jailbreak-eval-7llms.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evaluación sistemática de ataques y defensas contra LLMs revela vulnerabilidades y la efectividad de la autoconciencia para mitigarlos.",
+        "problema": "Los modelos de lenguaje grandes (LLMs) deben ser resistentes a entradas maliciosas que buscan generar respuestas dañinas, pero su robustez es poco comprendida.",
+        "propuesta": "Se evalúan sistemáticamente cinco familias de ataques de jailbreaking y cuatro mecanismos de defensa en siete LLMs diferentes, analizando su efectividad y transferibilidad.",
+        "resultados": "Los ataques de ofuscación tienen una tasa de éxito promedio del 54.3% y son los más transferibles. El tamaño del modelo no predice la robustez. La defensa de 'self-reminder prompting' reduce la tasa de éxito de 44% a 10% en Mistral-7B y de 48% a 5% en Llama-3.1-8B.",
+        "por_que_importa": "Comprender las vulnerabilidades de los LLMs y la efectividad de las defensas es crucial para desplegar estas tecnologías de forma segura en aplicaciones críticas.",
+        "tags": [
+          "LLMs",
+          "Ciberseguridad",
+          "Ataques Adversariales",
+          "Defensas",
+          "Robustez",
+          "Evaluación Sistemática"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-30T18:06:54Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.39758v1",
+      "rank": 2,
+      "title": "SEAL: Sealed Queries for Local Sanitization against Indirect Prompt Injection",
+      "authors": [
+        "Doohyun Kim",
+        "Donghwa Kang",
+        "Mingyu Jun",
+        "Brent ByungHoon Kang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-29",
+      "url": "https://arxiv.org/abs/2610.39758v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.39758v1",
+      "score": 58,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "Indirect prompt injection threatens local LLM agents through untrusted tool outputs, motivating defenses that suppress attacks while preserving task evidence under limited inference budgets. We introduce SEAL, which learns a soft prompt and scoring readout offline to sanitize tool outputs using a frozen task model. SEAL constructs scoring queries from trusted initial context and the learned prompt, keeping the reference independent of inspected tool text. It scores tokens without normalization across context tokens and uses preservation regularization to encourage retention of useful evidence during localized deletion. This design requires neither defense-generated tokens nor a separate verifier model. Across AgentDojo and AgentDyn, SEAL suppresses attacks while improving task completion under attack. Specifically, on AgentDojo, SEAL reduces attack success from 34.6\\% to 0.1\\% and increases Joint---task completion without attack success---from 51.4\\% to 77.5\\%, while using approximately $127\\times$ fewer defense-related tokens than PISanitizer, a state-of-the-art prompt injection defense. Replication on a second backbone with the same training recipe supports applicability across model families.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "SEAL protege agentes LLM locales de inyecciones de prompts maliciosas mediante la sanitización segura de las salidas de herramientas.",
+        "problema": "Los agentes LLM locales son vulnerables a ataques de inyección indirecta de prompts a través de salidas de herramientas no confiables, lo que puede comprometer su seguridad y funcionalidad, especialmente bajo presupuestos de inferencia limitados.",
+        "propuesta": "SEAL propone un método que aprende un 'soft prompt' y un mecanismo de puntuación offline para sanitizar las salidas de herramientas utilizando un modelo de tarea congelado. Construye consultas de puntuación independientes del texto de la herramienta y utiliza regularización para preservar la evidencia útil durante la eliminación localizada de tokens maliciosos, sin requerir tokens adicionales generados por la defensa ni un modelo verificador.",
+        "resultados": "SEAL reduce el éxito de los ataques del 34.6% al 0.1% en AgentDojo y aumenta la finalización de tareas conjuntas (sin éxito de ataque) del 51.4% al 77.5%. Utiliza aproximadamente 127 veces menos tokens relacionados con la defensa que PISanitizer. La replicación en otro modelo base con la misma receta de entrenamiento demuestra su aplicabilidad.",
+        "por_que_importa": "SEAL ofrece una defensa eficiente y efectiva contra las inyecciones de prompts indirectas en agentes LLM locales, mejorando significativamente la seguridad y la fiabilidad de las tareas sin un gran coste computacional o de tokens, lo que es crucial para la implementación práctica de LLMs.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Inyección de Prompts",
+          "Agentes Autónomos",
+          "Defensa"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-30T18:07:04Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.40627v1",
+      "rank": 3,
+      "title": "ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defender",
+      "authors": [
+        "Qiyao Ma",
+        "Xiaodong Liu",
+        "Weiwei Yang",
+        "Mingqian Feng"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CL]",
+      "category": "cs.CL",
+      "date": "2026-10-29",
+      "url": "https://arxiv.org/abs/2610.40627v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.40627v1",
+      "score": 54,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Safety alignment has enabled large language models to reliably refuse harmful requests directly, yet the same request distributed across a multi-turn conversation still succeeds far too often. This brittleness has a mechanistic root: Alignment is shallow, with safety behavior concentrated in a model's first few output tokens, and existing defenses inherit the weakness, supervising the surface form of the response without ever giving the model an explicit safety decision to learn. We take the opposite view of shallowness: if a short span determines the trajectory of an entire response, that span is the highest-leverage place to intervene, and the defender can occupy it first. We propose Assess $\\to$ Decide $\\to$ Respond, a framework in which the defender assesses the user's intent, commits to an explicit, parseable safety decision, and only then generates a reply conditioned on it, with the commitment trained by reinforcement learning at the payload turn. Because the decision is a token span, the reward can be a rule: a self-verified reward checks the committed label against the conversation's known nature, requiring no judge and no annotation, while the same format also supports an LLM-as-judge reward over a graded decision space with safe redirection. Across two model families and fourteen benchmarks spanning safety, utility, and helpfulness, our defenders achieve the strongest multi-turn safety in a controlled comparison, maintaining their lead in safety while preserving utility at a modest cost to helpfulness. A per-token KL analysis and interventional probes confirm why this works: training concentrates its effect on the brief deliberation that sets a response's trajectory, and the decision committed there is a causal control point. The very shallowness attackers exploit becomes the mechanism of defense.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Defensa de IA contra ataques de seguridad en conversaciones de múltiples turnos, aprovechando la brevedad de la vulnerabilidad.",
+        "problema": "Los modelos de lenguaje son vulnerables a ataques de seguridad que se extienden a lo largo de conversaciones de varios turnos, ya que la alineación de seguridad actual es superficial y se concentra en los primeros tokens de respuesta.",
+        "propuesta": "Se propone un marco 'Evaluar -> Decidir -> Responder' donde el defensor evalúa la intención del usuario, se compromete con una decisión de seguridad explícita y luego genera una respuesta condicionada a ella. El compromiso se entrena mediante aprendizaje por refuerzo, utilizando recompensas auto-verificadas o basadas en un LLM-juez.",
+        "resultados": "Los defensores logran la mayor seguridad en conversaciones de múltiples turnos en comparación controlada, manteniendo la seguridad con un costo modesto en utilidad y amabilidad. El análisis confirma que el entrenamiento se enfoca en la breve deliberación que define la trayectoria de la respuesta.",
+        "por_que_importa": "Permite crear sistemas de IA más robustos y seguros en interacciones complejas, transformando la propia debilidad de la superficialidad en un punto fuerte de defensa.",
+        "tags": [
+          "IA segura",
+          "ciberseguridad",
+          "modelos de lenguaje",
+          "conversaciones multi-turno",
+          "alineación de seguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-30T18:07:13Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.40204v1",
+      "rank": 4,
+      "title": "Attack-Resilient Multi-Bit Image Watermarking Framework via Latent Coordinate Sign Clamping",
+      "authors": [
+        "Marjan Beheshti",
+        "Ronghua Xu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-29",
+      "url": "https://arxiv.org/abs/2610.40204v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.40204v1",
+      "score": 53,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Watermarking is essential for image copyright protection and attribution, yet existing methods suffer from fundamental trade-offs among post-hoc applicability to pre-existing images, multi-bit capacity, training-free deployment, and adversarial resilience. To address these limitations, we propose a training-free watermarking framework that exploits the overcompleteness of diffusion latent spaces to embed multi-bit payloads into arbitrary images while preserving high visual quality. Additionally, we develop a three-layer decoding pipeline that combines magnitude-weighted majority voting, BCH, and Chase decoding to maximize message-extraction accuracy in the presence of channel noise. To counter active adversaries, our framework integrates a steganalysis-resistant noise camouflage layer and a dual-layer forgery defense that combines perceptual hashing with a Reed-Solomon fuzzy commitment scheme over CLIP features. Empirical evaluations demonstrate that our method applies to both natural and AI-generated images with a scalable $32\\text{--}128$-bit capacity. Furthermore, it effectively mitigates advanced removal vectors ($94.6\\%$ decode rate against CtrlRegen+ regeneration attacks) and secures robust forgery detection ($98.8\\%$ accuracy via joint CLIP and RS fuzzy commitment mechanism).",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Marca de agua en imágenes con IA que resiste ataques, protege derechos de autor y funciona sin entrenamiento previo.",
+        "problema": "Las marcas de agua digitales actuales tienen limitaciones: no se pueden aplicar fácilmente a imágenes existentes, tienen baja capacidad de datos, requieren entrenamiento o son vulnerables a ataques adversarios.",
+        "propuesta": "Un marco de marca de agua sin entrenamiento que usa el espacio latente de modelos de difusión para incrustar múltiples bits de información en imágenes, preservando la calidad visual. Incluye un decodificador robusto y defensas contra análisis de esteganografía y falsificación.",
+        "resultados": "Capacidad escalable de 32-128 bits, 94.6% de tasa de decodificación contra ataques de regeneración (CtrlRegen+), y 98.8% de precisión en detección de falsificaciones.",
+        "por_que_importa": "Permite proteger derechos de autor y autenticidad de imágenes (tanto naturales como generadas por IA) de forma robusta y flexible, incluso frente a ataques sofisticados.",
+        "tags": [
+          "marca de agua",
+          "IA",
+          "ciberseguridad",
+          "protección de contenido",
+          "difusión latente",
+          "resiliencia"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-30T18:07:23Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.40396v1",
+      "rank": 5,
+      "title": "Understanding and Mitigating Role Spoofing in LLMs",
+      "authors": [
+        "Ezra Edelman",
+        "Benjamin Edelman",
+        "Surbhi Goel",
+        "Eran Malach"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-29",
+      "url": "https://arxiv.org/abs/2610.40396v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.40396v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Despite growing capabilities, LLMs remain susceptible to prompt injections: malicious inputs that can manipulate or hijack models. In particular, it has recently been observed that LLMs can exhibit role confusion (Ye et al., 2026), where models attribute the source of text based on its style instead of its labeled role. Malicious text in tool outputs (for instance, a malicious webpage accessed by an agent) can leverage role confusion to impersonate the user, an attack we call role spoofing}. In this work, we seek to understand and mitigate role spoofing. We study how models track \"who said what\" in a conversation, showing that they use cues from both content (e.g., semantics and writing style) and structure (e.g., control tokens and formatting). We show that LLMs are highly susceptible to role spoofing attacks that combine both fake structure and content. Additionally, in a toy setting, we show that adversarial training which teaches the model to ignore content-based injections does mitigate content-based attacks but leaves the model susceptible to structure-based attacks. This can explain why frontier models, with increased resistance to many injection attacks, can still be susceptible to role spoofing. Finally, we propose a new method for detecting role spoofing using linear probes trained to predict roles in a conversation, and show that it is effective across different settings.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los LLMs pueden ser engañados para que crean que el texto malicioso proviene de una fuente confiable, lo que permite ataques de suplantación de identidad.",
+        "problema": "Los LLMs pueden confundir la fuente del texto basándose en su estilo, lo que permite que entradas maliciosas (como páginas web falsas) se hagan pasar por el usuario, un ataque conocido como 'role spoofing'.",
+        "propuesta": "Se investiga cómo los LLMs rastrean la autoría del texto usando pistas de contenido y estructura. Se propone un método de detección basado en 'linear probes' para identificar la suplantación de roles.",
+        "resultados": "Los LLMs son muy susceptibles a ataques que combinan estructura y contenido falsos. El entrenamiento adversarial contra inyecciones de contenido no protege contra las de estructura. El método propuesto es efectivo en diferentes configuraciones.",
+        "por_que_importa": "Permite comprender y defenderse de nuevas vulnerabilidades en LLMs que podrían ser explotadas para engañar a los usuarios o robar información sensible a través de interacciones aparentemente seguras.",
+        "tags": [
+          "LLMs",
+          "Ciberseguridad",
+          "Inyección de Prompts",
+          "Suplantación de Identidad",
+          "Seguridad IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-30T18:07:32Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.39807v1",
+      "rank": 6,
+      "title": "InferD: A Honeypot Framework for AI Inference Infrastructure",
+      "authors": [
+        "Hicham Hammouchi",
+        "Gabriele Lenzini"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-29",
+      "url": "https://arxiv.org/abs/2610.39807v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.39807v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Large language model serving stacks, commercial inference APIs, vector databases, and agent orchestration gateways are now ex- posed on the public internet and indexed by commodity scanners within hours of deployment. The threat characteristics of this sur- face are only beginning to be measured, and the honeypot frame- works that could measure it were designed for conventional net- work services rather than for AI infrastructure. In fact, emulating an AI service is a distinct deception problem: the observable behavior of the service, including model inventories, token formats, tool-call protocols, and authorization flows, must be reproduced faithfully, while the underlying computation, model inference and tool ex- ecution, must never occur. We present InferD, a low-interaction honeypot framework organized around a single principle we call deception without inference: every request an adversary can observe is answered from static response pools, and nothing an adversary submits is ever executed. InferD decomposes the emulation into four deception planes, transport, service protocol, vulnerability surface, and agentic session, adds a provenance plane that links a planted credential to evidence of downstream model-mediated processing.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "InferD, un framework de honeypot, simula infraestructura de IA para detectar amenazas sin ejecutar código real.",
+        "problema": "La infraestructura de inferencia de IA expuesta en internet es un nuevo objetivo de ataque, pero las herramientas de honeypot existentes no están diseñadas para emular fielmente estos servicios complejos y dinámicos.",
+        "propuesta": "InferD es un framework de honeypot de baja interacción que emula servicios de IA (APIs, bases de datos vectoriales, etc.) utilizando 'decepción sin inferencia'. Responde a las solicitudes con pools de respuestas estáticas, sin ejecutar ni inferir nada, y descompone la emulación en cuatro planos de decepción (transporte, protocolo, vulnerabilidad, sesión agentica) más un plano de procedencia.",
+        "resultados": "El resumen no especifica resultados cuantitativos, pero describe la arquitectura y el principio de funcionamiento de InferD.",
+        "por_que_importa": "Permite a los profesionales de ciberseguridad estudiar y defenderse de las amenazas emergentes dirigidas a la infraestructura de IA, proporcionando visibilidad sobre las tácticas de los atacantes sin exponerse a riesgos de ejecución.",
+        "tags": [
+          "honeypot",
+          "IA",
+          "ciberseguridad",
+          "inferencia",
+          "detección de amenazas",
+          "emulación"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-30T18:07:42Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.39532v1",
+      "rank": 7,
+      "title": "Judging Before Propagation: Task-Graph Contextual Integrity for Multi-Agent Privacy",
+      "authors": [
+        "Hengyu Wu",
+        "Blaise Delattre",
+        "Yang Cao"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-10-29",
+      "url": "https://arxiv.org/abs/2610.39532v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.39532v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🎯 temas: LLM, AI agents, compliance & audit"
+      ],
+      "abstract_en": "Multi-agent LLM systems increasingly rely on persistent memory and inter-agent communication. These capabilities create privacy risks that extend beyond individual interactions: a release appropriate in isolation may become inappropriate when combined with information previously disclosed to a recipient or propagated to downstream agents along the planned workflow. Existing Contextual Integrity (CI) mechanisms for agentic systems typically rely on local judgments that assess each disclosure in isolation, with or without regard to the recipient's history, but do not account for how information propagates downstream. However, compliance at the current boundary does not guarantee appropriateness across the workflow. We introduce Task-Graph Contextual Integrity (TG-CI), to our knowledge the first task-graph-native formalization of Contextual Integrity for multi-agent systems. TG-CI represents a workflow as a Multi-Agent Task Graph (MATG) and extends CI from atomic transfers to stateful, graph-level information flows by jointly considering an item's intended propagation scope and recipients' evolving disclosure states. We operationalize TG-CI through propagation-scoped authorization under two complementary policies: Full-Scope, which requires admissibility across the complete downstream scope, and Auto-Region, which confines each item to its maximal admissible region using lightweight frontier gates. We further introduce MAPLE-Bench, a benchmark of 144 cases across four scenarios that jointly vary MATG topology, disclosure history, compromised-agent placement, and item-level privacy policies. In our primary experimental configuration, TG-CI reduces the mean unauthorized disclosure count by 85.8-94.1% relative to the Local-History CI baseline, while retaining 93.6-96.1% of the baseline's task accuracy, with the two enforcement policies providing complementary privacy--cost--utility trade-offs.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Protege la privacidad en sistemas multi-agente de IA asegurando que la información compartida sea apropiada en todo su flujo de trabajo.",
+        "problema": "Los sistemas de IA multi-agente con memoria y comunicación pueden filtrar información privada si las divulgaciones individuales, aunque apropiadas aisladamente, se vuelven inapropiadas al combinarse o al propagarse a otros agentes en el flujo de trabajo.",
+        "propuesta": "Introduce Task-Graph Contextual Integrity (TG-CI), una formalización nativa de grafos de tareas para la Integridad Contextual en sistemas multi-agente. Representa los flujos de información a nivel de grafo, considerando el alcance de propagación y el estado de divulgación de los destinatarios, y lo implementa con políticas de autorización Full-Scope y Auto-Region.",
+        "resultados": "TG-CI reduce las divulgaciones no autorizadas en un 85.8-94.1% en comparación con un baseline de historial local, manteniendo el 93.6-96.1% de la precisión de la tarea. MAPLE-Bench, un benchmark de 144 casos, se utiliza para evaluar estas políticas.",
+        "por_que_importa": "Garantiza que la privacidad se mantenga a lo largo de flujos de trabajo complejos de IA, no solo en interacciones aisladas, lo cual es crucial para la adopción segura de sistemas de IA en entornos profesionales.",
+        "tags": [
+          "IA multi-agente",
+          "Privacidad",
+          "Integridad Contextual",
+          "Ciberseguridad",
+          "Flujos de trabajo"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-30T18:07:51Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.40071v1",
+      "rank": 8,
+      "title": "Agentic process evidence",
+      "authors": [
+        "Yuval Kainan",
+        "Carmit Hershman"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-10-29",
+      "url": "https://arxiv.org/abs/2610.40071v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.40071v1",
+      "score": 50,
+      "topics": [
+        "AI agents",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: AI agents, compliance & audit"
+      ],
+      "abstract_en": "The way software gets built is changing dramatically. AI agents now create pull requests, select dependencies, refactor codebases, interpret test failures, and execute infrastructure changes across the entire Software Development Life Cycle (SDLC). AI agents are autonomous team members, but unlike human engineers, they are ephemeral - their reasoning, decisions, and tool calls vanish the moment the session ends. Modern Security incidents involving intent mismatch or injection are becoming increasingly common - forcing us to address AI Agents as an insider threat. No widely adopted standard yet enables agentic provenance and governance and its obvious that you can't hold an ephemeral process accountable. The git log was designed for human commits. It shows what changed. It does not show what an AI agent did, which model it used, which tools it called, or whether anyone was accountable for the outcome. Every governance framework, every audit trail, every compliance control in the SDLC was built around one assumption: a human made the decision. That assumption no longer holds. This shift introduces 3 main procedural problems (not addressing scale) - Supply-chain vector - The agentic coder is software, so it is a supply-chain security risk. Policy guardrails - How to ensure the agentic coder is compliant with the policies of the organization. Task-alignment - How to align the agentic coder on its tasks and goals. We introduce Agentic Process Evidence (APE), a signed, tamper-evident, machine-readable attestation of agentic processes, linking the sessions to their outcome (process-aware logging). APE enables Policy-as-Code control over the agentic processes, allowing for human in the loop only when it's needed. We support the in-toto style attestation framework, and the protocol is aligned with the relevant regulations",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los agentes de IA en desarrollo de software son una amenaza interna; necesitamos un registro de su actividad para gobernanza y seguridad.",
+        "problema": "Los agentes de IA en el ciclo de vida del desarrollo de software (SDLC) son efímeros y no dejan rastro de su razonamiento o decisiones, lo que los convierte en un riesgo de seguridad (amenaza interna) y dificulta la gobernanza, auditoría y cumplimiento, ya que los sistemas actuales asumen decisiones humanas.",
+        "propuesta": "Se propone Agentic Process Evidence (APE), una atestación firmada y a prueba de manipulaciones, legible por máquina, que registra los procesos de los agentes de IA, vinculando las sesiones a sus resultados (registro consciente del proceso), permitiendo control de Políticas como Código y humanos en el bucle solo cuando es necesario, alineado con el marco in-toto.",
+        "resultados": "El resumen no especifica resultados numéricos, pero propone un marco para la gobernanza y seguridad de los procesos de agentes de IA.",
+        "por_que_importa": "Permite auditar y gobernar la actividad de los agentes de IA, mitigando riesgos de seguridad en la cadena de suministro y asegurando el cumplimiento de políticas, adaptando los marcos de seguridad a la nueva realidad del desarrollo de software asistido por IA.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Desarrollo de Software",
+          "Gobernanza",
+          "Atestación",
+          "Amenaza Interna"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-30T18:08:01Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.39264",
+      "rank": 1,
+      "title": "Online Dense Reinforcement Learning with Planning-Grounding Agent for UI Navigation on Live IOS Apps",
+      "authors": [
+        "Peitong Duan",
+        "Khashayar Gatmiry",
+        "Jeffrey Nichols",
+        "Samy Bengio"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-29",
+      "url": "https://arxiv.org/abs/2610.39264",
+      "pdf_url": "https://arxiv.org/pdf/2610.39264",
+      "score": 62,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "While frontier vision-language models demonstrate strong capabilities in user interface (UI) navigation, their high inference costs prohibit everyday use. Conversely, smaller models trained via supervised fine-tuning (SFT) or offline reinforcement learning often memorize static trajectories, leading to brittle execution and an inability to recover from errors. To address these limitations, we propose a novel online reinforcement learning framework that trains UI navigation agents directly on live iOS applications. Our framework decouples the agent into two specialized components: a Planning agent and a UI Grounding model. We rely on an LLM-as-a-Judge to provide comprehensive reward signals, combining dense, step-level feedback to evaluate intermediate progress with a terminal reward for overall task completion. To effectively leverage this dual reward structure, we optimize the agent using Proximal Policy Optimization (PPO) with step-level advantage estimation. Furthermore, we introduce GiGPPO, a novel neighbor-conditioned value estimation method that improves critic stability by leveraging reward signals from visually similar states across concurrent trajectories. To support this online training paradigm at scale, we introduce an efficient infrastructure that orchestrates hundreds of concurrent virtual iOS devices. Evaluations on rigorous benchmarks, including UINavBench, iOSWorld, and AndroidWorld, demonstrate that our online RL trained agents substantially outperform both SFT and terminal-only RL baselines while accelerating training convergence. Notably, our 8B RL agents achieve nearly a sevenfold improvement over the SFT baseline in out-of-distribution generalization to Android environments, while outperforming Gemini-3.5-Flash and tying with Gemini-3.1-Pro on real iOS applications.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Agentes de IA aprenden a navegar apps móviles en tiempo real, superando limitaciones de modelos previos y logrando gran generalización.",
+        "problema": "Los modelos de IA para navegar interfaces de usuario (UI) son costosos o memorizan rutas fijas, fallando ante errores o cambios. Se busca una navegación más robusta y adaptable en aplicaciones reales.",
+        "propuesta": "Se propone un marco de aprendizaje por refuerzo online (RL) que entrena agentes directamente en apps iOS vivas. El agente se divide en un planificador y un modelo de 'grounding' de UI, usando un LLM para recompensas detalladas y PPO para optimización, con una técnica de estimación de valor mejorada (GiGPPO).",
+        "resultados": "Los agentes entrenados online superan significativamente a los modelos SFT y RL con recompensa terminal. Agentes de 8B logran una mejora de casi 7x en generalización a Android respecto a SFT, superando a Gemini-3.5-Flash y igualando a Gemini-3.1-Pro en iOS.",
+        "por_que_importa": "Permite crear agentes de IA más eficientes, adaptables y capaces de navegar aplicaciones móviles complejas en tiempo real, abriendo puertas a asistentes virtuales más inteligentes y automatización de tareas.",
+        "tags": [
+          "IA",
+          "Aprendizaje por Refuerzo",
+          "Navegación UI",
+          "Aplicaciones Móviles",
+          "Generalización",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-30T18:08:10Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.23656",
+      "rank": 2,
+      "title": "ABF-Bench: A Verifiable Benchmark for Agentic Blockchain Forensics",
+      "authors": [
+        "Xiaohang Yu",
+        "Hejia Geng",
+        "William Knottenbelt"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-16",
+      "url": "https://arxiv.org/abs/2610.23656",
+      "pdf_url": "https://arxiv.org/pdf/2610.23656",
+      "score": 61,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "Blockchain forensics is adversarial and open-ended: money launderers split, swap, and bridge funds, cut their trail at mixers or custodial services, and change tactics from one incident to the next. Investigators must keep adapting their tracing in response. Yet the immutability of public ledgers preserves every recorded movement in public view, making much of the investigation independently verifiable. We introduce ABF-Bench, an interactive benchmark that makes evidence-backed fund tracing a verifiable agent task, in which every claimed movement must cite ledger records the agent retrieved. A case-to-task pipeline builds well-posed tasks across ledgers: conservative rules halt tracing wherever the records leave a continuation unresolved, and each task's reference graph is the answer those rules determine. Built from real laundering activity, the tasks combine multi-hop transfers, DeFi exchanges, cross-chain round trips, custodial and mixer deposits, and address poisoning. We also propose the ABF agent harness, built around a working memory, and evaluate it alongside general-purpose agents and fixed-order tracers. The harness reaches 75% edge recall, against 47% for Codex with the same model and 10% for Claude Code, which loses recall to overconfidence: it cites records it left unretrieved. Compared with fixed-order tracers, the harness acquires evidence faster than the best of them early in the budget and recognizes undisclosed custodial services that they walk past (89% vs. 0%), with 98% fidelity. However, agents tend to stop early and lose recall on larger tasks, which holds their final recall below the best tracer. Beyond exposing these gaps, ABF-Bench opens blockchain forensics to LLM agents as a verifiable domain, where the verdicts that score agents also offer potential training signals.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Presentamos ABF-Bench, un benchmark verificable para que agentes de IA rastreen fondos en blockchains de forma forense y precisa.",
+        "problema": "El rastreo de fondos en blockchains es complejo debido a las tácticas cambiantes de los delincuentes y la necesidad de verificación independiente de cada movimiento.",
+        "propuesta": "Se introduce ABF-Bench, un benchmark interactivo que evalúa la capacidad de agentes de IA para rastrear fondos citando registros del ledger, y se propone un 'harness' (soporte) con memoria de trabajo para esta tarea.",
+        "resultados": "El harness propuesto alcanza un 75% de 'edge recall' (recuperación de bordes), superando a Codex (47%) y Claude Code (10%). Identifica servicios de custodia no revelados en un 89% frente a un 0% de otros métodos, con un 98% de fidelidad.",
+        "por_que_importa": "Permite evaluar y mejorar la capacidad de los agentes de IA en forensia de blockchain, un dominio crucial para la ciberseguridad y la aplicación de la ley, proporcionando señales de entrenamiento y verificación.",
+        "tags": [
+          "forensia blockchain",
+          "inteligencia artificial",
+          "benchmarking",
+          "ciberseguridad",
+          "agentes IA",
+          "verificabilidad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-30T18:08:19Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.39664",
+      "rank": 3,
+      "title": "EditAgent: Rethinking Agentic Image Editing",
+      "authors": [
+        "Haiyang Xu",
+        "Tianyu Wang",
+        "Jialu Li",
+        "Jiteng Mu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-29",
+      "url": "https://arxiv.org/abs/2610.39664",
+      "pdf_url": "https://arxiv.org/pdf/2610.39664",
+      "score": 59,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "Agentic image editors decompose complex requests into steps, but when a step fails, they mostly retry with the same narrow set of tools and a judge that scores each output by eye directly. We argue that such agents are bounded by two spaces: the action space of what the agent can do, and the observation space of what its judge can see. On our expert-annotated benchmark, a general-purpose editor yields no usable result in over 40% of the cases, and no judge is reliable across edit types. We present EditAgent, which expands both spaces. It routes each step to general editors and specialized methods, and attaches to each candidate a verification record. With these records, off-the-shelf VLM judges outperform finetuned reward models. Candidates are generated in parallel and judged in one listwise call: experts prefer this to sequential refinement in 78.5% of decided comparisons, at no more than half the judge calls. EditAgent improves two open-weight editors on three benchmarks and serves as a data engine for training stronger editors.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "EditAgent revoluciona la edición de imágenes por IA, superando fallos y mejorando la precisión al expandir las herramientas y la evaluación.",
+        "problema": "Los editores de imágenes basados en IA a menudo fallan en solicitudes complejas porque están limitados por un conjunto estrecho de herramientas y un juez que evalúa los resultados de forma subjetiva y poco fiable, resultando en un 40% de casos sin resultados útiles.",
+        "propuesta": "EditAgent amplía los espacios de acción y observación. Enruta cada paso a editores generales o métodos especializados y adjunta un registro de verificación a cada candidato. Los candidatos se generan en paralelo y se juzgan en una única llamada, mejorando la preferencia de los expertos sobre el refinamiento secuencial.",
+        "resultados": "EditAgent mejora dos editores de código abierto en tres benchmarks. Los jueces VLM genéricos superan a los modelos de recompensa ajustados. Los expertos prefieren la evaluación de EditAgent sobre el refinamiento secuencial en el 78.5% de las comparaciones decididas, utilizando la mitad de llamadas al juez.",
+        "por_que_importa": "Esta mejora en la fiabilidad y eficiencia de la edición de imágenes por IA es crucial para aplicaciones prácticas que requieren resultados precisos y consistentes, democratizando el acceso a herramientas de edición avanzadas.",
+        "tags": [
+          "edicion de imagenes",
+          "inteligencia artificial",
+          "agentes de IA",
+          "ciberseguridad",
+          "evaluacion de modelos",
+          "vision por computadora"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-30T18:08:29Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.35138",
+      "rank": 4,
+      "title": "Co-Design Bench: Multimodal Collaborative Coding Evaluation for Agentic Models",
+      "authors": [
+        "Xilin Wei",
+        "Shengyuan Ding",
+        "Xinyu Fang",
+        "Tiancheng Gu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-26",
+      "url": "https://arxiv.org/abs/2610.35138",
+      "pdf_url": "https://arxiv.org/pdf/2610.35138",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Evaluating human-AI co-design requires testing whether coding agents can translate real users' multimodal requests into working application revisions. We introduce Co-Design Bench, a reference-free benchmark of 273 tasks curated from 37,463 deduplicated queries across 26,314 real user coding sessions. Its two tracks, Multimodal Editing (ME) and Repository Editing (RE), cover localized edits with optional image, audio, video, or document inputs and coordinated repository revisions. Tasks span three capability dimensions: Grounded Understanding, UI Transformation, and Functional Implementation. The tasks pair normalized requests and runnable pre-edit applications with 2,331 hidden expert-authored acceptance criteria. Our judge-then-refute protocol grades criteria using source and browser evidence, challenges positive verdicts with a separate LLM verifier, and audits visual and interaction claims without gold code or target screenshots. Under a shared agentic harness, the strongest of ten model endpoints passes an average of 69.9% of criteria per task but fully satisfies only 26.4% of tasks. All ten endpoints achieve lower criterion completion on repository edits spanning three or four change types than on those spanning one or two. Co-Design Bench provides a testbed for studying the gap between partial requirement satisfaction and complete task success under agentic execution for real-user application revisions.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa la capacidad de los agentes de IA para colaborar en el desarrollo de software a partir de instrucciones multimodales de usuarios reales.",
+        "problema": "Evaluar la co-creación humano-IA en el desarrollo de software es difícil, especialmente cuando las solicitudes del usuario son multimodales (texto, imágenes, audio, etc.) y requieren revisiones complejas en repositorios de código.",
+        "propuesta": "Se introduce Co-Design Bench, un benchmark con 273 tareas de sesiones reales de usuarios, dividido en dos pistas (Edición Multimodal y Edición de Repositorio) para evaluar la comprensión, transformación de UI e implementación funcional de los agentes de IA.",
+        "resultados": "Los mejores modelos pasan el 69.9% de los criterios por tarea, pero solo satisfacen completamente el 26.4% de las tareas. Los modelos tienen peor desempeño en ediciones de repositorio que involucran tres o cuatro tipos de cambios.",
+        "por_que_importa": "Este benchmark permite medir la brecha entre la satisfacción parcial de requisitos y el éxito total de la tarea en la ejecución de agentes de IA, crucial para el desarrollo de software colaborativo.",
+        "tags": [
+          "IA colaborativa",
+          "Desarrollo de software",
+          "Evaluación de modelos",
+          "Multimodalidad",
+          "Agentes de IA",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-30T18:08:39Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.33106",
+      "rank": 5,
+      "title": "VibeGame: Prompt-to-Game Development with AI-Native Engine and Self-Evolving Adversarial Agent Team",
+      "authors": [
+        "Wenbo Hu",
+        "Ken Li",
+        "Jiazhe Wei",
+        "Yukang Cao"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-22",
+      "url": "https://arxiv.org/abs/2610.33106",
+      "pdf_url": "https://arxiv.org/pdf/2610.33106",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+1)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Large language model agents have enabled software development through natural-language interaction, but extending this paradigm to end-to-end game development remains challenging. Building a playable game requires coordinating code, scenes, assets, animations, physics, and configurations, while allowing developers to validate their integrated behavior through interactive testing. We introduce VibeGame, a framework for creating complete 2D game projects from natural-language prompts and optional reference images. Its AI-native game engine represents project state as schema-validated structured text and provides frame-synchronous runtime control, enabling agents to inspect game states, execute actions, and verify behavior at their own pace. Built upon this interface, we design an Adversarial Agent Team of eight specialized agents to separate implementation from review, so that problems are found and fixed through multi-round loops. For each conducted and accepted project, we further introduce a training-free self-evolution mechanism to distill it into reusable skeletons, modules, and collaboration contracts for future development. We evaluate prompt-assets-to-game (PA2G), where agents are given an asset library, and prompt-to-game (P2G), where agents generate their own art. On a GameCraft-Bench subset, VibeGame in P2G consistently outperforms a range of agent harnesses in either P2G or PA2G with the same underlying model, including GPT-6.1-Sol.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "VibeGame usa IA para crear juegos 2D completos a partir de descripciones, mejorando la eficiencia y la autoevolución.",
+        "problema": "El desarrollo de juegos completo, que integra código, assets, física y configuraciones, es complejo y difícil de automatizar con modelos de lenguaje, especialmente en la validación interactiva.",
+        "propuesta": "VibeGame es un framework que utiliza un motor de juego nativo de IA y un equipo de ocho agentes especializados que trabajan de forma adversarial para generar juegos 2D a partir de prompts de lenguaje natural. El motor representa el estado del juego como texto estructurado y permite control en tiempo real para que los agentes inspeccionen y actúen. Introduce un mecanismo de autoevolución sin entrenamiento para reutilizar componentes.",
+        "resultados": "En un subconjunto de GameCraft-Bench, VibeGame en modo P2G (generación de assets) supera consistentemente a otros sistemas de agentes, incluso a GPT-6.1-Sol, en la creación de juegos a partir de prompts.",
+        "por_que_importa": "Democratiza el desarrollo de juegos, permitiendo la creación rápida de prototipos y juegos completos solo con descripciones, y mejora la reutilización de código y la eficiencia en el desarrollo asistido por IA.",
+        "tags": [
+          "desarrollo de videojuegos",
+          "inteligencia artificial",
+          "agentes autónomos",
+          "generación de código",
+          "automatización"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-10-30T18:08:48Z"
+      }
+    }
+  ],
+  "generated_at": "2026-10-30T18:08:48Z"
+}

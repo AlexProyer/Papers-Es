@@ -11589,5 +11589,221 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-10-29T18:34:29Z"
+  },
+  "arxiv:2610.39509v1": {
+    "tldr": "Evaluación sistemática de ataques y defensas contra LLMs revela vulnerabilidades y la efectividad de la autoconciencia para mitigarlos.",
+    "problema": "Los modelos de lenguaje grandes (LLMs) deben ser resistentes a entradas maliciosas que buscan generar respuestas dañinas, pero su robustez es poco comprendida.",
+    "propuesta": "Se evalúan sistemáticamente cinco familias de ataques de jailbreaking y cuatro mecanismos de defensa en siete LLMs diferentes, analizando su efectividad y transferibilidad.",
+    "resultados": "Los ataques de ofuscación tienen una tasa de éxito promedio del 54.3% y son los más transferibles. El tamaño del modelo no predice la robustez. La defensa de 'self-reminder prompting' reduce la tasa de éxito de 44% a 10% en Mistral-7B y de 48% a 5% en Llama-3.1-8B.",
+    "por_que_importa": "Comprender las vulnerabilidades de los LLMs y la efectividad de las defensas es crucial para desplegar estas tecnologías de forma segura en aplicaciones críticas.",
+    "tags": [
+      "LLMs",
+      "Ciberseguridad",
+      "Ataques Adversariales",
+      "Defensas",
+      "Robustez",
+      "Evaluación Sistemática"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-30T18:06:54Z"
+  },
+  "arxiv:2610.39758v1": {
+    "tldr": "SEAL protege agentes LLM locales de inyecciones de prompts maliciosas mediante la sanitización segura de las salidas de herramientas.",
+    "problema": "Los agentes LLM locales son vulnerables a ataques de inyección indirecta de prompts a través de salidas de herramientas no confiables, lo que puede comprometer su seguridad y funcionalidad, especialmente bajo presupuestos de inferencia limitados.",
+    "propuesta": "SEAL propone un método que aprende un 'soft prompt' y un mecanismo de puntuación offline para sanitizar las salidas de herramientas utilizando un modelo de tarea congelado. Construye consultas de puntuación independientes del texto de la herramienta y utiliza regularización para preservar la evidencia útil durante la eliminación localizada de tokens maliciosos, sin requerir tokens adicionales generados por la defensa ni un modelo verificador.",
+    "resultados": "SEAL reduce el éxito de los ataques del 34.6% al 0.1% en AgentDojo y aumenta la finalización de tareas conjuntas (sin éxito de ataque) del 51.4% al 77.5%. Utiliza aproximadamente 127 veces menos tokens relacionados con la defensa que PISanitizer. La replicación en otro modelo base con la misma receta de entrenamiento demuestra su aplicabilidad.",
+    "por_que_importa": "SEAL ofrece una defensa eficiente y efectiva contra las inyecciones de prompts indirectas en agentes LLM locales, mejorando significativamente la seguridad y la fiabilidad de las tareas sin un gran coste computacional o de tokens, lo que es crucial para la implementación práctica de LLMs.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Inyección de Prompts",
+      "Agentes Autónomos",
+      "Defensa"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-30T18:07:04Z"
+  },
+  "arxiv:2610.40627v1": {
+    "tldr": "Defensa de IA contra ataques de seguridad en conversaciones de múltiples turnos, aprovechando la brevedad de la vulnerabilidad.",
+    "problema": "Los modelos de lenguaje son vulnerables a ataques de seguridad que se extienden a lo largo de conversaciones de varios turnos, ya que la alineación de seguridad actual es superficial y se concentra en los primeros tokens de respuesta.",
+    "propuesta": "Se propone un marco 'Evaluar -> Decidir -> Responder' donde el defensor evalúa la intención del usuario, se compromete con una decisión de seguridad explícita y luego genera una respuesta condicionada a ella. El compromiso se entrena mediante aprendizaje por refuerzo, utilizando recompensas auto-verificadas o basadas en un LLM-juez.",
+    "resultados": "Los defensores logran la mayor seguridad en conversaciones de múltiples turnos en comparación controlada, manteniendo la seguridad con un costo modesto en utilidad y amabilidad. El análisis confirma que el entrenamiento se enfoca en la breve deliberación que define la trayectoria de la respuesta.",
+    "por_que_importa": "Permite crear sistemas de IA más robustos y seguros en interacciones complejas, transformando la propia debilidad de la superficialidad en un punto fuerte de defensa.",
+    "tags": [
+      "IA segura",
+      "ciberseguridad",
+      "modelos de lenguaje",
+      "conversaciones multi-turno",
+      "alineación de seguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-30T18:07:13Z"
+  },
+  "arxiv:2610.40204v1": {
+    "tldr": "Marca de agua en imágenes con IA que resiste ataques, protege derechos de autor y funciona sin entrenamiento previo.",
+    "problema": "Las marcas de agua digitales actuales tienen limitaciones: no se pueden aplicar fácilmente a imágenes existentes, tienen baja capacidad de datos, requieren entrenamiento o son vulnerables a ataques adversarios.",
+    "propuesta": "Un marco de marca de agua sin entrenamiento que usa el espacio latente de modelos de difusión para incrustar múltiples bits de información en imágenes, preservando la calidad visual. Incluye un decodificador robusto y defensas contra análisis de esteganografía y falsificación.",
+    "resultados": "Capacidad escalable de 32-128 bits, 94.6% de tasa de decodificación contra ataques de regeneración (CtrlRegen+), y 98.8% de precisión en detección de falsificaciones.",
+    "por_que_importa": "Permite proteger derechos de autor y autenticidad de imágenes (tanto naturales como generadas por IA) de forma robusta y flexible, incluso frente a ataques sofisticados.",
+    "tags": [
+      "marca de agua",
+      "IA",
+      "ciberseguridad",
+      "protección de contenido",
+      "difusión latente",
+      "resiliencia"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-30T18:07:23Z"
+  },
+  "arxiv:2610.40396v1": {
+    "tldr": "Los LLMs pueden ser engañados para que crean que el texto malicioso proviene de una fuente confiable, lo que permite ataques de suplantación de identidad.",
+    "problema": "Los LLMs pueden confundir la fuente del texto basándose en su estilo, lo que permite que entradas maliciosas (como páginas web falsas) se hagan pasar por el usuario, un ataque conocido como 'role spoofing'.",
+    "propuesta": "Se investiga cómo los LLMs rastrean la autoría del texto usando pistas de contenido y estructura. Se propone un método de detección basado en 'linear probes' para identificar la suplantación de roles.",
+    "resultados": "Los LLMs son muy susceptibles a ataques que combinan estructura y contenido falsos. El entrenamiento adversarial contra inyecciones de contenido no protege contra las de estructura. El método propuesto es efectivo en diferentes configuraciones.",
+    "por_que_importa": "Permite comprender y defenderse de nuevas vulnerabilidades en LLMs que podrían ser explotadas para engañar a los usuarios o robar información sensible a través de interacciones aparentemente seguras.",
+    "tags": [
+      "LLMs",
+      "Ciberseguridad",
+      "Inyección de Prompts",
+      "Suplantación de Identidad",
+      "Seguridad IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-30T18:07:32Z"
+  },
+  "arxiv:2610.39807v1": {
+    "tldr": "InferD, un framework de honeypot, simula infraestructura de IA para detectar amenazas sin ejecutar código real.",
+    "problema": "La infraestructura de inferencia de IA expuesta en internet es un nuevo objetivo de ataque, pero las herramientas de honeypot existentes no están diseñadas para emular fielmente estos servicios complejos y dinámicos.",
+    "propuesta": "InferD es un framework de honeypot de baja interacción que emula servicios de IA (APIs, bases de datos vectoriales, etc.) utilizando 'decepción sin inferencia'. Responde a las solicitudes con pools de respuestas estáticas, sin ejecutar ni inferir nada, y descompone la emulación en cuatro planos de decepción (transporte, protocolo, vulnerabilidad, sesión agentica) más un plano de procedencia.",
+    "resultados": "El resumen no especifica resultados cuantitativos, pero describe la arquitectura y el principio de funcionamiento de InferD.",
+    "por_que_importa": "Permite a los profesionales de ciberseguridad estudiar y defenderse de las amenazas emergentes dirigidas a la infraestructura de IA, proporcionando visibilidad sobre las tácticas de los atacantes sin exponerse a riesgos de ejecución.",
+    "tags": [
+      "honeypot",
+      "IA",
+      "ciberseguridad",
+      "inferencia",
+      "detección de amenazas",
+      "emulación"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-30T18:07:42Z"
+  },
+  "arxiv:2610.39532v1": {
+    "tldr": "Protege la privacidad en sistemas multi-agente de IA asegurando que la información compartida sea apropiada en todo su flujo de trabajo.",
+    "problema": "Los sistemas de IA multi-agente con memoria y comunicación pueden filtrar información privada si las divulgaciones individuales, aunque apropiadas aisladamente, se vuelven inapropiadas al combinarse o al propagarse a otros agentes en el flujo de trabajo.",
+    "propuesta": "Introduce Task-Graph Contextual Integrity (TG-CI), una formalización nativa de grafos de tareas para la Integridad Contextual en sistemas multi-agente. Representa los flujos de información a nivel de grafo, considerando el alcance de propagación y el estado de divulgación de los destinatarios, y lo implementa con políticas de autorización Full-Scope y Auto-Region.",
+    "resultados": "TG-CI reduce las divulgaciones no autorizadas en un 85.8-94.1% en comparación con un baseline de historial local, manteniendo el 93.6-96.1% de la precisión de la tarea. MAPLE-Bench, un benchmark de 144 casos, se utiliza para evaluar estas políticas.",
+    "por_que_importa": "Garantiza que la privacidad se mantenga a lo largo de flujos de trabajo complejos de IA, no solo en interacciones aisladas, lo cual es crucial para la adopción segura de sistemas de IA en entornos profesionales.",
+    "tags": [
+      "IA multi-agente",
+      "Privacidad",
+      "Integridad Contextual",
+      "Ciberseguridad",
+      "Flujos de trabajo"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-30T18:07:51Z"
+  },
+  "arxiv:2610.40071v1": {
+    "tldr": "Los agentes de IA en desarrollo de software son una amenaza interna; necesitamos un registro de su actividad para gobernanza y seguridad.",
+    "problema": "Los agentes de IA en el ciclo de vida del desarrollo de software (SDLC) son efímeros y no dejan rastro de su razonamiento o decisiones, lo que los convierte en un riesgo de seguridad (amenaza interna) y dificulta la gobernanza, auditoría y cumplimiento, ya que los sistemas actuales asumen decisiones humanas.",
+    "propuesta": "Se propone Agentic Process Evidence (APE), una atestación firmada y a prueba de manipulaciones, legible por máquina, que registra los procesos de los agentes de IA, vinculando las sesiones a sus resultados (registro consciente del proceso), permitiendo control de Políticas como Código y humanos en el bucle solo cuando es necesario, alineado con el marco in-toto.",
+    "resultados": "El resumen no especifica resultados numéricos, pero propone un marco para la gobernanza y seguridad de los procesos de agentes de IA.",
+    "por_que_importa": "Permite auditar y gobernar la actividad de los agentes de IA, mitigando riesgos de seguridad en la cadena de suministro y asegurando el cumplimiento de políticas, adaptando los marcos de seguridad a la nueva realidad del desarrollo de software asistido por IA.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Desarrollo de Software",
+      "Gobernanza",
+      "Atestación",
+      "Amenaza Interna"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-30T18:08:01Z"
+  },
+  "arxiv:2610.39264": {
+    "tldr": "Agentes de IA aprenden a navegar apps móviles en tiempo real, superando limitaciones de modelos previos y logrando gran generalización.",
+    "problema": "Los modelos de IA para navegar interfaces de usuario (UI) son costosos o memorizan rutas fijas, fallando ante errores o cambios. Se busca una navegación más robusta y adaptable en aplicaciones reales.",
+    "propuesta": "Se propone un marco de aprendizaje por refuerzo online (RL) que entrena agentes directamente en apps iOS vivas. El agente se divide en un planificador y un modelo de 'grounding' de UI, usando un LLM para recompensas detalladas y PPO para optimización, con una técnica de estimación de valor mejorada (GiGPPO).",
+    "resultados": "Los agentes entrenados online superan significativamente a los modelos SFT y RL con recompensa terminal. Agentes de 8B logran una mejora de casi 7x en generalización a Android respecto a SFT, superando a Gemini-3.5-Flash y igualando a Gemini-3.1-Pro en iOS.",
+    "por_que_importa": "Permite crear agentes de IA más eficientes, adaptables y capaces de navegar aplicaciones móviles complejas en tiempo real, abriendo puertas a asistentes virtuales más inteligentes y automatización de tareas.",
+    "tags": [
+      "IA",
+      "Aprendizaje por Refuerzo",
+      "Navegación UI",
+      "Aplicaciones Móviles",
+      "Generalización",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-30T18:08:10Z"
+  },
+  "arxiv:2610.23656": {
+    "tldr": "Presentamos ABF-Bench, un benchmark verificable para que agentes de IA rastreen fondos en blockchains de forma forense y precisa.",
+    "problema": "El rastreo de fondos en blockchains es complejo debido a las tácticas cambiantes de los delincuentes y la necesidad de verificación independiente de cada movimiento.",
+    "propuesta": "Se introduce ABF-Bench, un benchmark interactivo que evalúa la capacidad de agentes de IA para rastrear fondos citando registros del ledger, y se propone un 'harness' (soporte) con memoria de trabajo para esta tarea.",
+    "resultados": "El harness propuesto alcanza un 75% de 'edge recall' (recuperación de bordes), superando a Codex (47%) y Claude Code (10%). Identifica servicios de custodia no revelados en un 89% frente a un 0% de otros métodos, con un 98% de fidelidad.",
+    "por_que_importa": "Permite evaluar y mejorar la capacidad de los agentes de IA en forensia de blockchain, un dominio crucial para la ciberseguridad y la aplicación de la ley, proporcionando señales de entrenamiento y verificación.",
+    "tags": [
+      "forensia blockchain",
+      "inteligencia artificial",
+      "benchmarking",
+      "ciberseguridad",
+      "agentes IA",
+      "verificabilidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-30T18:08:19Z"
+  },
+  "arxiv:2610.39664": {
+    "tldr": "EditAgent revoluciona la edición de imágenes por IA, superando fallos y mejorando la precisión al expandir las herramientas y la evaluación.",
+    "problema": "Los editores de imágenes basados en IA a menudo fallan en solicitudes complejas porque están limitados por un conjunto estrecho de herramientas y un juez que evalúa los resultados de forma subjetiva y poco fiable, resultando en un 40% de casos sin resultados útiles.",
+    "propuesta": "EditAgent amplía los espacios de acción y observación. Enruta cada paso a editores generales o métodos especializados y adjunta un registro de verificación a cada candidato. Los candidatos se generan en paralelo y se juzgan en una única llamada, mejorando la preferencia de los expertos sobre el refinamiento secuencial.",
+    "resultados": "EditAgent mejora dos editores de código abierto en tres benchmarks. Los jueces VLM genéricos superan a los modelos de recompensa ajustados. Los expertos prefieren la evaluación de EditAgent sobre el refinamiento secuencial en el 78.5% de las comparaciones decididas, utilizando la mitad de llamadas al juez.",
+    "por_que_importa": "Esta mejora en la fiabilidad y eficiencia de la edición de imágenes por IA es crucial para aplicaciones prácticas que requieren resultados precisos y consistentes, democratizando el acceso a herramientas de edición avanzadas.",
+    "tags": [
+      "edicion de imagenes",
+      "inteligencia artificial",
+      "agentes de IA",
+      "ciberseguridad",
+      "evaluacion de modelos",
+      "vision por computadora"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-30T18:08:29Z"
+  },
+  "arxiv:2610.35138": {
+    "tldr": "Evalúa la capacidad de los agentes de IA para colaborar en el desarrollo de software a partir de instrucciones multimodales de usuarios reales.",
+    "problema": "Evaluar la co-creación humano-IA en el desarrollo de software es difícil, especialmente cuando las solicitudes del usuario son multimodales (texto, imágenes, audio, etc.) y requieren revisiones complejas en repositorios de código.",
+    "propuesta": "Se introduce Co-Design Bench, un benchmark con 273 tareas de sesiones reales de usuarios, dividido en dos pistas (Edición Multimodal y Edición de Repositorio) para evaluar la comprensión, transformación de UI e implementación funcional de los agentes de IA.",
+    "resultados": "Los mejores modelos pasan el 69.9% de los criterios por tarea, pero solo satisfacen completamente el 26.4% de las tareas. Los modelos tienen peor desempeño en ediciones de repositorio que involucran tres o cuatro tipos de cambios.",
+    "por_que_importa": "Este benchmark permite medir la brecha entre la satisfacción parcial de requisitos y el éxito total de la tarea en la ejecución de agentes de IA, crucial para el desarrollo de software colaborativo.",
+    "tags": [
+      "IA colaborativa",
+      "Desarrollo de software",
+      "Evaluación de modelos",
+      "Multimodalidad",
+      "Agentes de IA",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-30T18:08:39Z"
+  },
+  "arxiv:2610.33106": {
+    "tldr": "VibeGame usa IA para crear juegos 2D completos a partir de descripciones, mejorando la eficiencia y la autoevolución.",
+    "problema": "El desarrollo de juegos completo, que integra código, assets, física y configuraciones, es complejo y difícil de automatizar con modelos de lenguaje, especialmente en la validación interactiva.",
+    "propuesta": "VibeGame es un framework que utiliza un motor de juego nativo de IA y un equipo de ocho agentes especializados que trabajan de forma adversarial para generar juegos 2D a partir de prompts de lenguaje natural. El motor representa el estado del juego como texto estructurado y permite control en tiempo real para que los agentes inspeccionen y actúen. Introduce un mecanismo de autoevolución sin entrenamiento para reutilizar componentes.",
+    "resultados": "En un subconjunto de GameCraft-Bench, VibeGame en modo P2G (generación de assets) supera consistentemente a otros sistemas de agentes, incluso a GPT-6.1-Sol, en la creación de juegos a partir de prompts.",
+    "por_que_importa": "Democratiza el desarrollo de juegos, permitiendo la creación rápida de prototipos y juegos completos solo con descripciones, y mejora la reutilización de código y la eficiencia en el desarrollo asistido por IA.",
+    "tags": [
+      "desarrollo de videojuegos",
+      "inteligencia artificial",
+      "agentes autónomos",
+      "generación de código",
+      "automatización"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-10-30T18:08:48Z"
   }
 }
