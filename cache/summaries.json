@@ -11805,5 +11805,22 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-10-30T18:08:48Z"
+  },
+  "arxiv:2610.42053": {
+    "tldr": "REA unifica control cerebral y de cerebelo para agentes corporales, logrando mayor éxito y eficiencia.",
+    "problema": "Los modelos fundacionales son lentos para control fino, mientras que las políticas rápidas no generalizan bien. Su coordinación asíncrona es difícil, causando bloqueos o fallos repetidos.",
+    "propuesta": "REA (Routed Embodied Agent) es un runtime unificado que coordina un 'cerebro' deliberativo (System 2) con un 'router' y políticas reactivas (System 0/1), asegurando que ninguna política espere al cerebro y usando memoria de rutas y un sistema de escalada de presupuesto.",
+    "resultados": "En LIBERO-Pro (3000 episodios, 60 tareas), REA logra 95.9% de éxito, superando al mejor baseline (94.7%), reduciendo pasos de control en 25% y tiempo en 17%. En RoboTwin 2.0, REA alcanza 84-86% de éxito vs 80% del baseline.",
+    "por_que_importa": "Permite que políticas de alto nivel y bajo nivel operen juntas eficientemente en agentes corporales, mejorando el rendimiento y la generalización en robótica y simulación.",
+    "tags": [
+      "agentes corporales",
+      "control asíncrono",
+      "modelos fundacionales",
+      "robótica",
+      "IA reactiva",
+      "runtime unificado"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-02T21:50:16Z"
   }
 }
