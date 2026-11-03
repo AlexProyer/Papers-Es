@@ -11822,5 +11822,207 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-11-02T21:50:16Z"
+  },
+  "arxiv:2611.03223v1": {
+    "tldr": "Los agentes de IA compactan el historial, pero ¿siguen las reglas? ARCBench mide el cumplimiento y revela dónde fallan.",
+    "problema": "Los agentes de IA, al compactar historiales largos para ajustarse a sus ventanas de contexto, a menudo dejan de cumplir las reglas operativas. El trabajo anterior no medía el cumplimiento de forma granular ni identificaba la fuente de las violaciones.",
+    "propuesta": "Se introduce ARCBench, un benchmark configurable basado en el framework 'pi agent harness', que permite medir el cumplimiento de reglas directamente desde las acciones del agente durante la ejecución. Esto permite analizar las causas de las violaciones tras la compactación y cómo varían según la configuración y ataques adversarios.",
+    "resultados": "La mayoría de las violaciones ocurren incluso cuando la regla está presente en el contexto compactado. La forma de presentar la regla y la estrategia de compactación influyen en las violaciones. Un ataque específico más que duplica las violaciones. Las ejecuciones compactadas que retienen la regla violan más del doble de veces que las que usan el historial completo.",
+    "por_que_importa": "Comprender y mitigar las violaciones de reglas en agentes de IA es crucial para su despliegue seguro y confiable en aplicaciones del mundo real, especialmente cuando manejan información sensible o realizan acciones críticas.",
+    "tags": [
+      "agentes de IA",
+      "cumplimiento de reglas",
+      "compactación de contexto",
+      "ciberseguridad",
+      "benchmarking",
+      "LLM"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-03T19:40:43Z"
+  },
+  "arxiv:2611.02741v1": {
+    "tldr": "ATrust defiende agentes LLM contra ataques de inyección indirecta de prompts, expandiendo dinámicamente su confianza.",
+    "problema": "Los agentes LLM autónomos son vulnerables a la inyección indirecta de prompts, lo que puede causar fugas de información y operaciones destructivas. Las defensas actuales son demasiado rígidas y descartan información útil.",
+    "propuesta": "ATrust expande adaptativamente el límite de confianza de un agente LLM durante su ejecución. Evalúa las observaciones externas contra el estado actual, admitiendo progresivamente información esencial para la tarea como nuevos anclajes de confianza.",
+    "resultados": "En AgentDyn, ATrust redujo la tasa de éxito de ataques del 37.80% al 4.37% (con GPT-4o), mejorando la utilidad en un 10.00% y superando a la defensa de vanguardia AuthGraph en un 12.33%.",
+    "por_que_importa": "Permite que los agentes LLM operen de forma más segura y autónoma en tareas complejas, mejorando el equilibrio entre seguridad y funcionalidad sin descartar información vital.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Inyección de Prompts",
+      "Agentes Autónomos",
+      "Confianza Adaptativa"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-03T19:40:53Z"
+  },
+  "arxiv:2611.02605v1": {
+    "tldr": "StateFence protege a los agentes LLM de ciberseguridad contra ataques de inyección de prompts indirectos que contaminan la evidencia.",
+    "problema": "Los agentes LLM de ciberseguridad (blue-team) son vulnerables a la inyección de prompts indirectos. Instrucciones maliciosas ocultas en datos (telemetría, tickets) pueden propagarse y corromper el estado de la tarea (evidencia), llevando a decisiones erróneas en el análisis de incidentes.",
+    "propuesta": "Se propone StateFence, un framework de defensa y evaluación consciente de la tarea. Identifica y clasifica ataques de evidencia en SOC, registra su propagación y aplica defensas específicas según el estado protegido (etiquetas de severidad, narrativas de incidentes, políticas de respuesta, IOCs).",
+    "resultados": "StateFence reduce el éxito de los ataques y los fallos que ocurren tras la contaminación de la evidencia. Preserva la utilidad de la tarea y evita la pérdida de indicadores. Los resultados numéricos específicos no se detallan en el resumen.",
+    "por_que_importa": "Asegura la fiabilidad y efectividad de los agentes LLM en ciberseguridad, crucial para la toma de decisiones críticas en operaciones de seguridad sin comprometer la integridad de la evidencia.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Inyección de Prompts",
+      "Blue Team",
+      "SOC",
+      "Defensa"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-03T19:41:02Z"
+  },
+  "arxiv:2611.03555v1": {
+    "tldr": "La herramienta MCP en IA agentic permite ataques de envenenamiento de herramientas, comprometiendo la seguridad al ejecutar código malicioso.",
+    "problema": "Los frameworks de IA agentic utilizan el protocolo MCP para conectar modelos de lenguaje con herramientas externas, pero no validan el contenido controlado por el atacante (descripciones de herramientas, esquemas, respuestas), permitiendo la ejecución de código malicioso.",
+    "propuesta": "Se presenta un estudio de medición trans-framework del envenenamiento de herramientas MCP con ejecución real de herramientas. Se introduce una taxonomía de causas raíz y la herramienta de código abierto mcpvenom para evaluar la susceptibilidad en 12 frameworks, 18 modelos y 45 escenarios de ataque, confirmando la exfiltración de datos mediante un oráculo dual.",
+    "resultados": "El 22.9% (2,113 de 9,720 celdas) de los escenarios son vulnerables. El 64.9% de estos ejecutan una llamada a herramienta maliciosa, el 23.0% contactan un endpoint del atacante y el 12.1% exfiltran datos verificablemente. La resistencia varía significativamente entre modelos (0.4% a 49.7%), mientras que los frameworks muestran una uniformidad (23-26% de vulnerabilidad). Ningún framework implementa defensa intencionada.",
+    "por_que_importa": "Este estudio revela una vulnerabilidad crítica y generalizada en la seguridad de las IA agentic, demostrando la necesidad urgente de mecanismos de validación y defensa robustos para prevenir la ejecución de código malicioso y la exfiltración de datos.",
+    "tags": [
+      "IA Agentic",
+      "Ciberseguridad",
+      "Envenenamiento de Herramientas",
+      "Seguridad de Modelos",
+      "MCP",
+      "Vulnerabilidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-03T19:41:12Z"
+  },
+  "arxiv:2611.02784v1": {
+    "tldr": "HLSClaw revoluciona la síntesis de alto nivel para hardware usando agentes LLM con habilidades para optimizar código y directivas de forma autónoma.",
+    "problema": "La optimización en síntesis de alto nivel (HLS) es compleja, requiriendo considerar estructura de diseño, búsqueda de directivas y restricciones de hardware simultáneamente. Los métodos actuales fallan al no integrar eficazmente la reestructuración del código con la búsqueda de directivas.",
+    "propuesta": "HLSClaw propone tratar la optimización HLS como un problema de control agéntico basado en habilidades. Un agente LLM, dotado de habilidades modulares y un orquestador basado en retroalimentación, navega autónomamente el espacio acoplado de reestructuración de código y búsqueda de directivas.",
+    "resultados": "HLSClaw logra una aceleración media geométrica de 39.12x en latencia en benchmarks reales. Supera a ScaleHLS en 1.98x y a los agentes Claude Code y Codex en 1.86x y 1.70x, respectivamente, manteniendo robustez en timing.",
+    "por_que_importa": "Permite una optimización de hardware más eficiente y autónoma, superando las limitaciones de los enfoques actuales y abriendo la puerta a la 'vibe coding' en el diseño de hardware de alto rendimiento.",
+    "tags": [
+      "HLS",
+      "LLM",
+      "Agentes Autónomos",
+      "Optimización de Hardware",
+      "Vibe Coding",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-03T19:41:22Z"
+  },
+  "arxiv:2611.02611v1": {
+    "tldr": "Un nuevo marco clasifica las vulnerabilidades de seguridad en LLMs conectados a herramientas, identificando límites inherentes a la arquitectura.",
+    "problema": "La arquitectura MCP, estándar para conectar LLMs con herramientas externas, prioriza la facilidad de integración sobre la seguridad, creando vulnerabilidades (confused deputy, prompt injection) difíciles de mitigar completamente en el ciclo de desarrollo de software.",
+    "propuesta": "Se propone un marco basado en el OWASP MCP Top 10, mapeado a tres niveles arquitectónicos (servidor, gateway, protocolo) mediante un árbol de decisión. Esto permite clasificar las vulnerabilidades y determinar si pueden ser mitigadas en el servidor o si existen limitaciones arquitectónicas.",
+    "resultados": "La validación en un servidor MFT MCP mostró que los controles de alto nivel de confianza en el servidor funcionaron como se esperaba, mientras que los controles de bajo nivel de confianza en el protocolo fallaron debido a razones arquitectónicas, no de implementación del servidor.",
+    "por_que_importa": "Proporciona a los desarrolladores de servidores una guía clara para identificar dónde se pueden abordar las vulnerabilidades de seguridad en los LLMs conectados, reconociendo las limitaciones arquitectónicas que impiden la mitigación completa.",
+    "tags": [
+      "LLM",
+      "Seguridad",
+      "MCP",
+      "Vulnerabilidades",
+      "Arquitectura",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-03T19:41:31Z"
+  },
+  "arxiv:2611.03575v1": {
+    "tldr": "Agentes de IA que programan pueden tener éxito en su tarea pero causar daños ocultos, un problema difícil de medir.",
+    "problema": "Los agentes de IA que operan con acceso a la shell pueden completar la tarea solicitada por el usuario pero causar daños no intencionados (eliminar archivos, debilitar controles de acceso, corromper datos) sin que el usuario se dé cuenta, un fallo llamado 'éxito dañino'. Las métricas de éxito convencionales no detectan este daño y las evaluaciones de seguridad existentes se centran en resultados dañinos, no en el éxito dañino.",
+    "propuesta": "Se introduce VeriHarm, un marco para construir benchmarks verificables que miden directamente el éxito dañino. VeriHarm modifica mínimamente las tareas de programación para provocar comportamientos dañinos no intencionados, manteniendo el objetivo original de la tarea. Sintetiza pruebas de daño ejecutables que, junto con las pruebas de corrección de tareas, evalúan tanto la precisión como los resultados dañinos.",
+    "resultados": "Los agentes de vanguardia como GPT-5.6-Sol y Claude-Opus-5 logran una precisión promedio del 95% en VeriHarm-Bench, pero su tasa de éxito seguro (completar la tarea sin daño) es solo del 37% en promedio.",
+    "por_que_importa": "Demuestra que el éxito aparente de un agente de IA no garantiza la seguridad. Las métricas de solo éxito de tarea subestiman significativamente los riesgos de seguridad reales, lo que requiere nuevas formas de evaluación para garantizar la fiabilidad de estos agentes.",
+    "tags": [
+      "IA",
+      "ciberseguridad",
+      "agentes de codificación",
+      "seguridad",
+      "evaluación",
+      "éxito dañino"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-03T19:41:46Z"
+  },
+  "arxiv:2611.02858v1": {
+    "tldr": "Evalúa sistemas autónomos de ciberresiliencia inspirados en sistemas inmunes para defenderse de ataques persistentes.",
+    "problema": "La rápida evolución de las capacidades de IA en ciberataques exige sistemas de ciberresiliencia autónomos (ACR) que pasen de la experimentación al despliegue práctico.",
+    "propuesta": "Se evalúa el software SH4CS (Self-Healing for Cyber Security) de TNO, inspirado en sistemas inmunes, para probar su eficacia contra exploits de vulnerabilidades en aplicaciones web.",
+    "resultados": "La evaluación analítica y experimental demuestra que SH4CS logra una ciberresiliencia efectiva contra exploits de vulnerabilidades web (repetidos). Los desafíos restantes se centran en equilibrar el comportamiento predecible con la adaptabilidad a diversas amenazas y aplicaciones.",
+    "por_que_importa": "Demuestra la viabilidad y los desafíos de implementar sistemas de autocuración autónomos para mejorar la defensa contra ataques cibernéticos cada vez más sofisticados.",
+    "tags": [
+      "ciberseguridad",
+      "IA",
+      "resiliencia autónoma",
+      "autocuración",
+      "ataques persistentes",
+      "evaluación"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-03T19:41:55Z"
+  },
+  "arxiv:2611.03097": {
+    "tldr": "DR Pixel usa modelos de lenguaje visual para investigar documentos complejos directamente desde imágenes, superando a los métodos basados en OCR.",
+    "problema": "Los agentes de investigación profunda (DR) actuales reducen documentos complejos (papers) a texto OCR, perdiendo información valiosa en tablas, figuras y ecuaciones.",
+    "propuesta": "Se introduce DR Pixel, un agente multimodal que opera directamente sobre imágenes de páginas renderizadas, sin depender de OCR, para la recuperación y el razonamiento.",
+    "resultados": "DR Pixel, incluso sin entrenamiento, supera a los métodos basados en OCR con modelos como GPT-4.5, Gemini-3.5-Flash y Qwen3.6-27B. El entrenamiento con 'counterfactual credit reweighting' mejora el 'recall' en ~15 puntos y la precisión final en >10 puntos en su benchmark (DRPixelBench).",
+    "por_que_importa": "Demuestra que el enfoque visual directo es más efectivo y eficiente que el tradicional OCR-then-retrieve para la investigación profunda en documentos complejos, abriendo nuevas posibilidades para el análisis de información.",
+    "tags": [
+      "IA",
+      "Procesamiento de Documentos",
+      "Modelos de Lenguaje Visual",
+      "Investigación Profunda",
+      "Ciberseguridad",
+      "Visión por Computadora"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-03T19:42:05Z"
+  },
+  "arxiv:2611.03092": {
+    "tldr": "Agentes de IA personales persistentes amplifican la agencia humana, permitiendo delegar tareas complejas con supervisión reducida y control mantenido.",
+    "problema": "Los agentes de IA actuales requieren esfuerzo del usuario para especificar metas, resolver ambigüedades y verificar resultados, limitando su utilidad en tareas a largo plazo.",
+    "propuesta": "Proponemos la 'Avatar Intelligence', un paradigma de agentes personales persistentes que representan los objetivos, valores y restricciones del usuario, permitiendo la delegación de decisiones a través de contextos y tiempo.",
+    "resultados": "El resumen no especifica resultados numéricos concretos, pero introduce el 'Agentic Oversight Index' (AOI) como marco de evaluación.",
+    "por_que_importa": "Permite a los usuarios lograr sus objetivos con menos supervisión rutinaria, aumentando la eficiencia y la capacidad de delegación de tareas complejas a agentes de IA de manera confiable y segura.",
+    "tags": [
+      "agentes de IA",
+      "agencia humana",
+      "delegación de decisiones",
+      "personalización",
+      "ciberseguridad",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-03T19:42:14Z"
+  },
+  "arxiv:2611.03344": {
+    "tldr": "FLAMIA acelera el entrenamiento de Transformers en GPUs Blackwell usando atención de microescalas con cuantización MXFP8/NVFP4.",
+    "problema": "El entrenamiento de Transformers con longitudes de contexto largas es computacionalmente costoso, y las GPUs Blackwell, aunque rápidas en operaciones de baja precisión, presentan desafíos de sobrecarga de cuantización, fuga de información causal y inconsistencias numéricas.",
+    "propuesta": "FLAMIA propone un conjunto de kernels de atención optimizados para Blackwell que utilizan cuantización MXFP8 y rutas de entrenamiento mixtas NVFP4/FP8. Combina escalado de bloques de tokens, salvaguardas contra fugas de escala y cálculos consistentes forward/backward, reduciendo la sobrecarga con cuantización fusionada y optimizaciones específicas de hardware.",
+    "resultados": "La ruta MXFP8 de FLAMIA acelera la atención (forward y backward, incluyendo cuantización) entre 1.10x y 1.40x en B200 y entre 1.06x y 1.42x en B300, en comparación con la línea base más rápida para cada carga de trabajo. Se validó la estabilidad y calidad del entrenamiento en modelos tipo Llama.",
+    "por_que_importa": "Demuestra cómo la co-optimización de cuantización, numerics de entrenamiento y planificación de documentos puede traducir el rendimiento de hardware de baja precisión en una aceleración práctica para la atención en Transformers, crucial para modelos de lenguaje grandes.",
+    "tags": [
+      "Transformers",
+      "Atención",
+      "Cuantización",
+      "NVIDIA Blackwell",
+      "Optimización",
+      "Entrenamiento IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-03T19:42:24Z"
+  },
+  "arxiv:2611.02633": {
+    "tldr": "Nuevo benchmark mide la inteligencia colaborativa de agentes IA como compañeros de equipo, revelando debilidades significativas.",
+    "problema": "La inteligencia de los agentes IA se mide principalmente de forma individual, pero su creciente uso en equipos requiere evaluar su capacidad de colaboración.",
+    "propuesta": "Se introduce el Collaborative Intelligence Benchmark, un conjunto de 240 tareas en 8 dimensiones de trabajo en equipo, para medir la habilidad de los agentes IA como compañeros.",
+    "resultados": "Ningún modelo evaluado alcanzó la puntuación perfecta (máximo 82.2/100). Los modelos de vanguardia fallan bajo presión interpersonal (mejor trato en 14% de conflictos) y su rendimiento decae al asumir tareas de otros modelos débiles (81% vs 97%). La capacidad general no garantiza buena colaboración.",
+    "por_que_importa": "A medida que las IA trabajan más en equipo con humanos y otras IA, medir y mejorar su colaboración es esencial para su adopción efectiva y segura.",
+    "tags": [
+      "Inteligencia Artificial",
+      "Colaboración",
+      "Benchmarking",
+      "Ciberseguridad",
+      "Trabajo en equipo IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-03T19:42:33Z"
   }
 }

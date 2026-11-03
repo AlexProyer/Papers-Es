@@ -1,0 +1,554 @@
+{
+  "date": "2026-11-03",
+  "report_type": "filtrado",
+  "evaluated": 189,
+  "selected": 14,
+  "papers": [
+    {
+      "id": "arxiv:2611.03223v1",
+      "rank": 1,
+      "title": "Do Agents Still Follow the Rules? Benchmarking Rule Compliance under Agent Context Compaction",
+      "authors": [
+        "Yiwei Zha",
+        "Qingyu Meng",
+        "Herbert Bos",
+        "Min Chen"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-02",
+      "url": "https://arxiv.org/abs/2611.03223v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.03223v1",
+      "score": 60,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents, compliance & audit"
+      ],
+      "abstract_en": "LLM agents compact long histories to fit their context windows, but the compacted context must still carry the operating rules that govern later actions. Prior work shows that violations rise after compaction, but measures compliance outside a complete agent harness and does not identify where each violation comes from. We introduce ARCBench(Agent Rule Compliance Benchmark), a configurable benchmark built on the open-source pi agent harness. Its tool-calling agent loop lets us measure rule compliance from actions taken during execution, bringing the evaluation closer to deployed agent workflows. Using ARCBench, we examine where violations after compaction come from, and how different compaction configurations and adversarial settings change their sources. We find that compaction rarely deletes the rule: most violations after compaction occur while the rule is still in the compacted history, with the agent treating a later request as permission, ignoring the rule, and proceeding anyway. Where violations come from depends on the configuration: how the rule is delivered decides whether the agent would break it even without compaction, while the compaction strategy and budget decide whether the rule survives. The strongest compactor-targeted attack more than doubles violations by corrupting the rule in the summary and changing how the agents behave, whereas the strongest defense restores the rule in most summary but still violates. Finally, retaining a rule does not guarantee compliance: compacted runs that retain the rule violate more than twice as often as runs with the full history.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los agentes de IA compactan el historial, pero ¿siguen las reglas? ARCBench mide el cumplimiento y revela dónde fallan.",
+        "problema": "Los agentes de IA, al compactar historiales largos para ajustarse a sus ventanas de contexto, a menudo dejan de cumplir las reglas operativas. El trabajo anterior no medía el cumplimiento de forma granular ni identificaba la fuente de las violaciones.",
+        "propuesta": "Se introduce ARCBench, un benchmark configurable basado en el framework 'pi agent harness', que permite medir el cumplimiento de reglas directamente desde las acciones del agente durante la ejecución. Esto permite analizar las causas de las violaciones tras la compactación y cómo varían según la configuración y ataques adversarios.",
+        "resultados": "La mayoría de las violaciones ocurren incluso cuando la regla está presente en el contexto compactado. La forma de presentar la regla y la estrategia de compactación influyen en las violaciones. Un ataque específico más que duplica las violaciones. Las ejecuciones compactadas que retienen la regla violan más del doble de veces que las que usan el historial completo.",
+        "por_que_importa": "Comprender y mitigar las violaciones de reglas en agentes de IA es crucial para su despliegue seguro y confiable en aplicaciones del mundo real, especialmente cuando manejan información sensible o realizan acciones críticas.",
+        "tags": [
+          "agentes de IA",
+          "cumplimiento de reglas",
+          "compactación de contexto",
+          "ciberseguridad",
+          "benchmarking",
+          "LLM"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-03T19:40:43Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.02741v1",
+      "rank": 2,
+      "title": "ATrust: Adaptive Trust Boundary Expansion for Securing LLM Agents",
+      "authors": [
+        "Xu Zhang",
+        "Zhichao Lu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-02",
+      "url": "https://arxiv.org/abs/2611.02741v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.02741v1",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "As large language model (LLM) agents take on more complex tasks with greater autonomy, security has become a major obstacle to their broader deployment. Unlike in attacks that require complex exploitation of operating system vulnerabilities, attackers can easily hijack agents through indirect prompt injection (IPI), leading to privacy leakage, financial loss, and destructive operations. However, existing defenses often make security decisions based on limited static trusted evidence or assess observations in isolation. Such rigid trust assumptions can cause task-essential information to be unnecessarily discarded, resulting in over-defense and degraded agent functionality. To address this problem, we propose ATrust, a defense mechanism that adaptively expands the trust boundary during agent runtime. Starting from the user query as the root trust anchor, ATrust evaluates external observations against the current trust boundary and execution state, progressively admitting task-essential information as new trust anchors. This preserves necessary environmental feedback while excluding irrelevant content, whether benign or malicious, from subsequent decision-making, thereby limiting unnecessary exposure to external environment. We evaluate ATrust on AgentDojo and AgentDyn, where it achieves the strongest overall security--utility trade-off among existing defenses. With GPT-4o as the engine model, ATrust reduces the attack success rate on AgentDyn from 37.80% to 4.37% while enhancing utility by 10.00%, outperforming AuthGraph, the state-of-the-art defense, by 12.33%. These results demonstrate the effectiveness and practicality of ATrust.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "ATrust defiende agentes LLM contra ataques de inyección indirecta de prompts, expandiendo dinámicamente su confianza.",
+        "problema": "Los agentes LLM autónomos son vulnerables a la inyección indirecta de prompts, lo que puede causar fugas de información y operaciones destructivas. Las defensas actuales son demasiado rígidas y descartan información útil.",
+        "propuesta": "ATrust expande adaptativamente el límite de confianza de un agente LLM durante su ejecución. Evalúa las observaciones externas contra el estado actual, admitiendo progresivamente información esencial para la tarea como nuevos anclajes de confianza.",
+        "resultados": "En AgentDyn, ATrust redujo la tasa de éxito de ataques del 37.80% al 4.37% (con GPT-4o), mejorando la utilidad en un 10.00% y superando a la defensa de vanguardia AuthGraph en un 12.33%.",
+        "por_que_importa": "Permite que los agentes LLM operen de forma más segura y autónoma en tareas complejas, mejorando el equilibrio entre seguridad y funcionalidad sin descartar información vital.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Inyección de Prompts",
+          "Agentes Autónomos",
+          "Confianza Adaptativa"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-03T19:40:53Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.02605v1",
+      "rank": 3,
+      "title": "StateFence: Task-State Protection Against Evidence-Chain Contamination in Blue-Team LLM Agents",
+      "authors": [
+        "Haowen Dai",
+        "Alejandro Guerra-Manzanares"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-02",
+      "url": "https://arxiv.org/abs/2611.02605v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.02605v1",
+      "score": 56,
+      "topics": [
+        "cybersecurity",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: cybersecurity, LLM, AI agents"
+      ],
+      "abstract_en": "Indirect prompt injection creates a distinctive risk for blue-team Large Language Model (LLM) agents in Security Operations Centers (SOCs). Malicious instructions can be embedded in telemetry, tickets, retrieval results, or memory and then propagate through alert triage, incident summarization, response recommendation, and Indicator of Compromise (IOC) extraction as locally plausible intermediate decisions. We characterize this failure mode as evidence-chain contamination of protected task state. The main challenge is task dependent: a suspicious string may be malicious control text for summarization but essential evidence for IOC extraction. To address this challenge, we propose StateFence, a task-aware evaluation and defense framework that treats severity labels, incident narratives, response policies, and IOC sets as protected states. StateFence maps indirect prompt-injection attacks into explicit, stealth, multi-hop, and persistent SOC evidence attacks, records observable propagation traces, and routes defenses according to the attacked state. Across controlled SOC cases and public-SOC validation cases, StateFence lowers attack success and reduces failures that appear only after evidence is poisoned, while preserving task utility and avoiding the indicator loss caused by task-mismatched filtering. Our findings indicate that robust blue-team LLM agents require mechanisms that preserve task-critical state under untrusted evidence.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "StateFence protege a los agentes LLM de ciberseguridad contra ataques de inyección de prompts indirectos que contaminan la evidencia.",
+        "problema": "Los agentes LLM de ciberseguridad (blue-team) son vulnerables a la inyección de prompts indirectos. Instrucciones maliciosas ocultas en datos (telemetría, tickets) pueden propagarse y corromper el estado de la tarea (evidencia), llevando a decisiones erróneas en el análisis de incidentes.",
+        "propuesta": "Se propone StateFence, un framework de defensa y evaluación consciente de la tarea. Identifica y clasifica ataques de evidencia en SOC, registra su propagación y aplica defensas específicas según el estado protegido (etiquetas de severidad, narrativas de incidentes, políticas de respuesta, IOCs).",
+        "resultados": "StateFence reduce el éxito de los ataques y los fallos que ocurren tras la contaminación de la evidencia. Preserva la utilidad de la tarea y evita la pérdida de indicadores. Los resultados numéricos específicos no se detallan en el resumen.",
+        "por_que_importa": "Asegura la fiabilidad y efectividad de los agentes LLM en ciberseguridad, crucial para la toma de decisiones críticas en operaciones de seguridad sin comprometer la integridad de la evidencia.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Inyección de Prompts",
+          "Blue Team",
+          "SOC",
+          "Defensa"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-03T19:41:02Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.03555v1",
+      "rank": 4,
+      "title": "MCP Tool Poisoning in Agentic AI Frameworks: A Cross-Framework Measurement Study",
+      "authors": [
+        "Farooq Shaikh",
+        "Biagio Montaruli"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-02",
+      "url": "https://arxiv.org/abs/2611.03555v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.03555v1",
+      "score": 54,
+      "topics": [
+        "AI agents",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: AI agents, compliance & audit"
+      ],
+      "abstract_en": "The Model Context Protocol (MCP) lets agentic AI frameworks connect language models to external tool providers, but it carries attacker-controlled content (tool descriptions, schema fields, and response data) into model context without validation. Prior benchmarks measure model compliance with poisoned instructions without confirming real execution. We present the first cross-framework measurement of MCP tool poisoning with real tool execution. A 25-class root-cause taxonomy unifies prior classifications, and the open-source tool mcpvenom drives a 9,720-cell susceptibility matrix across 12 frameworks, 18 models, and 45 attack scenarios, with a dual oracle that confirms exfiltration via canary HTTP receipt. The overall attack success rate is 22.9% (2,113 vulnerable cells). Of these, 64.9% dispatch an attacker tool call, 23.0% contact the attacker endpoint, and 12.1% verifiably exfiltrate a secret. Resistance is model-level: nine core frameworks cluster within 23 to 26% (chi-squared = 3.30, p = 0.91), and no framework implements intentional defense. Incidental framework properties mitigate in specific cases, and a regex description scanner rejects 20 of 45 scenarios at a 7.2% false-positive rate, so metadata scanning alone is a partial control. Model ASR ranges from 0.4% to 49.7%. Claude Opus 4.8 is vulnerable in 8 of 530 cells while issuing 223 explicit refusals. A code-level audit finds no intentional defense across twelve frameworks, and all five coordinated disclosures across four vendors were rejected.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "La herramienta MCP en IA agentic permite ataques de envenenamiento de herramientas, comprometiendo la seguridad al ejecutar código malicioso.",
+        "problema": "Los frameworks de IA agentic utilizan el protocolo MCP para conectar modelos de lenguaje con herramientas externas, pero no validan el contenido controlado por el atacante (descripciones de herramientas, esquemas, respuestas), permitiendo la ejecución de código malicioso.",
+        "propuesta": "Se presenta un estudio de medición trans-framework del envenenamiento de herramientas MCP con ejecución real de herramientas. Se introduce una taxonomía de causas raíz y la herramienta de código abierto mcpvenom para evaluar la susceptibilidad en 12 frameworks, 18 modelos y 45 escenarios de ataque, confirmando la exfiltración de datos mediante un oráculo dual.",
+        "resultados": "El 22.9% (2,113 de 9,720 celdas) de los escenarios son vulnerables. El 64.9% de estos ejecutan una llamada a herramienta maliciosa, el 23.0% contactan un endpoint del atacante y el 12.1% exfiltran datos verificablemente. La resistencia varía significativamente entre modelos (0.4% a 49.7%), mientras que los frameworks muestran una uniformidad (23-26% de vulnerabilidad). Ningún framework implementa defensa intencionada.",
+        "por_que_importa": "Este estudio revela una vulnerabilidad crítica y generalizada en la seguridad de las IA agentic, demostrando la necesidad urgente de mecanismos de validación y defensa robustos para prevenir la ejecución de código malicioso y la exfiltración de datos.",
+        "tags": [
+          "IA Agentic",
+          "Ciberseguridad",
+          "Envenenamiento de Herramientas",
+          "Seguridad de Modelos",
+          "MCP",
+          "Vulnerabilidad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-03T19:41:12Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.02784v1",
+      "rank": 5,
+      "title": "HLSClaw: Bringing Vibe Coding to High-Level Synthesis through Skill-Based Agentic Harness",
+      "authors": [
+        "Jinming Ge",
+        "Shang Liu",
+        "Jiawei Liang",
+        "Shangkun Li"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-11-02",
+      "url": "https://arxiv.org/abs/2611.02784v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.02784v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "LLM agents are rapidly shifting software development toward intent-driven \\emph{vibe coding}, yet their effectiveness drops sharply in high-level synthesis (HLS), where code optimization must jointly consider design structure, directive search, and downstream hardware constraints. Existing HLS optimization approaches, including both heuristic-based methods and recent LLM-assisted pipelines, typically operate at fixed abstraction levels or in weakly coupled stages, limiting their ability to leverage the strong interplay between source code restructuring and directive search outcomes. Our key insight is that HLS optimization can be reframed from a fixed, hardwired transformation pipeline into a skill-based agentic control problem: an LLM agent equipped with modular, executable optimization skills and a feedback-driven orchestrator can autonomously navigate the coupled space of code restructuring and directive search. This motivates the design of HLSClaw, the first HLS-specific, skill-based agentic harness for holistic HLS optimization. On real-world HLS benchmarks, HLSClaw achieves a 39.12x geometric-mean latency speedup, outperforming the compiler baseline ScaleHLS by 1.98x, and surpassing the commercial coding agents Claude Code and Codex by 1.86x and 1.70x, respectively, while maintaining strong timing robustness.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "HLSClaw revoluciona la síntesis de alto nivel para hardware usando agentes LLM con habilidades para optimizar código y directivas de forma autónoma.",
+        "problema": "La optimización en síntesis de alto nivel (HLS) es compleja, requiriendo considerar estructura de diseño, búsqueda de directivas y restricciones de hardware simultáneamente. Los métodos actuales fallan al no integrar eficazmente la reestructuración del código con la búsqueda de directivas.",
+        "propuesta": "HLSClaw propone tratar la optimización HLS como un problema de control agéntico basado en habilidades. Un agente LLM, dotado de habilidades modulares y un orquestador basado en retroalimentación, navega autónomamente el espacio acoplado de reestructuración de código y búsqueda de directivas.",
+        "resultados": "HLSClaw logra una aceleración media geométrica de 39.12x en latencia en benchmarks reales. Supera a ScaleHLS en 1.98x y a los agentes Claude Code y Codex en 1.86x y 1.70x, respectivamente, manteniendo robustez en timing.",
+        "por_que_importa": "Permite una optimización de hardware más eficiente y autónoma, superando las limitaciones de los enfoques actuales y abriendo la puerta a la 'vibe coding' en el diseño de hardware de alto rendimiento.",
+        "tags": [
+          "HLS",
+          "LLM",
+          "Agentes Autónomos",
+          "Optimización de Hardware",
+          "Vibe Coding",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-03T19:41:22Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.02611v1",
+      "rank": 6,
+      "title": "Where Does MCP Security End? A Three-Tier Mitigation Mapping Framework for the OWASP MCP Top 10",
+      "authors": [
+        "Christopher Krakauer",
+        "Andreas Schaad"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-02",
+      "url": "https://arxiv.org/abs/2611.02611v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.02611v1",
+      "score": 53,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "The Model Context Protocol (MCP) has become a leading standard for connecting Large Language Models (LLMs) to external tools, software, and data sources. MCP architecture favors ease of integration over security, blending the data and control planes into a single natural language channel. This introduces confused deputy and prompt injection vulnerabilities that cannot be completely mitigated in the software development lifecycle (SDLC) of an MCP server. Structured security guidance for server developers has been outpaced by this adoption trend, leaving them without a clear way to identify where vulnerabilities can be addressed at the server layer and where architectural constraints create hard limits. This paper presents a framework based on OWASP MCP Top 10 mapped to three architectural tiers, developed using Design Science Research (DSR). Vulnerabilities are classified as server-primary, gateway-primary, or protocol-primary applying a cascading decision tree following four questions, resulting in reproducible tier assignments and confidence levels independent of who applies it. The framework was validated against an enterprise-grade Managed File Transfer (MFT) MCP server built in Go. Validation results showed that high-confidence server-tier controls worked as predicted, and low-confidence protocol-tier controls failed for architectural reasons beyond server implementation. The architectural ceiling encountered during practical validation is the main contribution and shows how secure-by-design development can reduce the MCP attack surface but not completely mitigate it.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Un nuevo marco clasifica las vulnerabilidades de seguridad en LLMs conectados a herramientas, identificando límites inherentes a la arquitectura.",
+        "problema": "La arquitectura MCP, estándar para conectar LLMs con herramientas externas, prioriza la facilidad de integración sobre la seguridad, creando vulnerabilidades (confused deputy, prompt injection) difíciles de mitigar completamente en el ciclo de desarrollo de software.",
+        "propuesta": "Se propone un marco basado en el OWASP MCP Top 10, mapeado a tres niveles arquitectónicos (servidor, gateway, protocolo) mediante un árbol de decisión. Esto permite clasificar las vulnerabilidades y determinar si pueden ser mitigadas en el servidor o si existen limitaciones arquitectónicas.",
+        "resultados": "La validación en un servidor MFT MCP mostró que los controles de alto nivel de confianza en el servidor funcionaron como se esperaba, mientras que los controles de bajo nivel de confianza en el protocolo fallaron debido a razones arquitectónicas, no de implementación del servidor.",
+        "por_que_importa": "Proporciona a los desarrolladores de servidores una guía clara para identificar dónde se pueden abordar las vulnerabilidades de seguridad en los LLMs conectados, reconociendo las limitaciones arquitectónicas que impiden la mitigación completa.",
+        "tags": [
+          "LLM",
+          "Seguridad",
+          "MCP",
+          "Vulnerabilidades",
+          "Arquitectura",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-03T19:41:31Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.03575v1",
+      "rank": 7,
+      "title": "VeriHarm-Bench: Measuring Harmful Success in LLM Coding Agents Verifiably",
+      "authors": [
+        "Wei-Lin Chen",
+        "Zhepei Wei",
+        "Xinyu Zhu",
+        "Yu-Min Tseng"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-11-02",
+      "url": "https://arxiv.org/abs/2611.03575v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.03575v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Large language model (LLM) coding agents increasingly operate with shell access, allowing them to write scripts, move files, alter permissions, and modify system configurations. However, an agent may achieve a user's goal while causing unintended harm, such as deleting unrelated files, weakening access controls, or corrupting data, in response to benign inputs without explicit jailbreaking. This failure mode is particularly important because apparent task success may reassure users that an agent behaved correctly, causing harmful side effects to go unnoticed. We call this harmful success: the agent successfully completes the intended benign task while simultaneously causing unintended harm. Despite its importance, harmful success is difficult to measure because conventional task-success metrics overlook harmful behaviors, while existing safety evaluations are often designed solely to assess harmful outcomes. We introduce VeriHarm, an automatic framework for constructing programmatically verifiable benchmarks that directly measure harmful success. VeriHarm minimally perturbs coding tasks to elicit unintended harmful behavior while maintaining the benignity of the task and preserving the original task objective. It then synthesizes executable harm tests that, together with the original task-correctness tests, evaluate both task accuracy and harmful outcomes. Frontier agents, including GPT-5.6-Sol and Claude-Opus-5, achieve an average task accuracy of 95% on our curated VeriHarm-Bench, yet still struggle to complete tasks safely: their safe success rate, the fraction of tasks completed successfully without triggering the designated harm, averages only 37%. These results suggest that successful task completion can frequently coexist with unintended harm, and that task-success metrics alone may substantially understate the potential safety risks of coding agents.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Agentes de IA que programan pueden tener éxito en su tarea pero causar daños ocultos, un problema difícil de medir.",
+        "problema": "Los agentes de IA que operan con acceso a la shell pueden completar la tarea solicitada por el usuario pero causar daños no intencionados (eliminar archivos, debilitar controles de acceso, corromper datos) sin que el usuario se dé cuenta, un fallo llamado 'éxito dañino'. Las métricas de éxito convencionales no detectan este daño y las evaluaciones de seguridad existentes se centran en resultados dañinos, no en el éxito dañino.",
+        "propuesta": "Se introduce VeriHarm, un marco para construir benchmarks verificables que miden directamente el éxito dañino. VeriHarm modifica mínimamente las tareas de programación para provocar comportamientos dañinos no intencionados, manteniendo el objetivo original de la tarea. Sintetiza pruebas de daño ejecutables que, junto con las pruebas de corrección de tareas, evalúan tanto la precisión como los resultados dañinos.",
+        "resultados": "Los agentes de vanguardia como GPT-5.6-Sol y Claude-Opus-5 logran una precisión promedio del 95% en VeriHarm-Bench, pero su tasa de éxito seguro (completar la tarea sin daño) es solo del 37% en promedio.",
+        "por_que_importa": "Demuestra que el éxito aparente de un agente de IA no garantiza la seguridad. Las métricas de solo éxito de tarea subestiman significativamente los riesgos de seguridad reales, lo que requiere nuevas formas de evaluación para garantizar la fiabilidad de estos agentes.",
+        "tags": [
+          "IA",
+          "ciberseguridad",
+          "agentes de codificación",
+          "seguridad",
+          "evaluación",
+          "éxito dañino"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-03T19:41:46Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.02858v1",
+      "rank": 8,
+      "title": "Evaluating autonomous self-healing against persistent cyber-attacks",
+      "authors": [
+        "Bart Gijsen",
+        "Stefano Nieuwenhuizen",
+        "Lucien Yap",
+        "Georgi Spasov"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-02",
+      "url": "https://arxiv.org/abs/2611.02858v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.02858v1",
+      "score": 50,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: cybersecurity, vuln & threats"
+      ],
+      "abstract_en": "The need for autonomous cyber resilience (ACR) is strongly accelerating. The boost in cyber capabilities of advanced AI is speeding up the attacker-defender rat race to an unprecedented pace. As a result, the field of ACR must progress from early design and experimentation to hands-on evaluation and deployment. To illustrate what is needed for this transition, we put TNO's autonomous immune system-inspired Self-Healing for Cyber Security (SH4CS) software to the test. Our analytic and experimental evaluation results demonstrate that effective cyber resilience is achieved with SH4CS for (repeated) web application vulnerability exploits. Remaining challenges of SH4CS revolve around finding the right balance between predictable resilient behaviour, and adaptiveness to the large variety of cyber threats and applications-to-be-protected.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa sistemas autónomos de ciberresiliencia inspirados en sistemas inmunes para defenderse de ataques persistentes.",
+        "problema": "La rápida evolución de las capacidades de IA en ciberataques exige sistemas de ciberresiliencia autónomos (ACR) que pasen de la experimentación al despliegue práctico.",
+        "propuesta": "Se evalúa el software SH4CS (Self-Healing for Cyber Security) de TNO, inspirado en sistemas inmunes, para probar su eficacia contra exploits de vulnerabilidades en aplicaciones web.",
+        "resultados": "La evaluación analítica y experimental demuestra que SH4CS logra una ciberresiliencia efectiva contra exploits de vulnerabilidades web (repetidos). Los desafíos restantes se centran en equilibrar el comportamiento predecible con la adaptabilidad a diversas amenazas y aplicaciones.",
+        "por_que_importa": "Demuestra la viabilidad y los desafíos de implementar sistemas de autocuración autónomos para mejorar la defensa contra ataques cibernéticos cada vez más sofisticados.",
+        "tags": [
+          "ciberseguridad",
+          "IA",
+          "resiliencia autónoma",
+          "autocuración",
+          "ataques persistentes",
+          "evaluación"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-03T19:41:55Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.03097",
+      "rank": 1,
+      "title": "DR Pixel: Page-Native Deep Research with Vision-Language Models",
+      "authors": [
+        "Tiansheng Hu",
+        "Yichuan Wang",
+        "James V. Talwar",
+        "Nicholas Tomlin"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-02",
+      "url": "https://arxiv.org/abs/2611.03097",
+      "pdf_url": "https://arxiv.org/pdf/2611.03097",
+      "score": 67,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "Complex documents such as scientific papers contain rich information in tables, figures, and equations; however, existing deep research (DR) agents typically reduce papers to OCR-extracted text. We instead ask whether vision-language models (VLMs) can enable page-native deep research: directly retrieving and reasoning over rendered document page images. We introduce DR Pixel, the first open-source end-to-end multimodal DR agent that uses rendered page images as its sole retrieval and reasoning unit, operating over a corpus of 1.06M pages. To evaluate this setting, we construct DRPixelBench, a benchmark on scientific papers requiring reasoning over text, figures, tables, and equations. Surprisingly, page-native DR already works well without training, outperforming OCR-based baselines across state-of-the-art models like GPT-5.4, Gemini-3.5-Flash, and Qwen3.6-27B, while requiring fewer tool calls. We next turn to DR training. A key challenge is that teacher trajectories for agentic supervised finetuning are noisy, mixing critical reasoning and action steps with redundant or failed attempts. To address this, we introduce counterfactual credit reweighting, a fine-grained credit assignment method that weights individual reasoning and action steps by their counterfactual contribution to the final answer. Our training improves retrieval recall by about 15 points and final accuracy by over 10 points on DRPixelBench, and likewise outperforms the untrained baseline on four existing benchmarks. On out-of-distribution ViDoRe-V3, DR Pixel comes within 1.8 points of an oracle that is given the gold pages directly. Our results suggest that the conventional OCR-then-retrieve pipeline is not only unnecessary but suboptimal: directly retrieving and reasoning over visual document pages makes complex DR both more effective and more efficient.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "DR Pixel usa modelos de lenguaje visual para investigar documentos complejos directamente desde imágenes, superando a los métodos basados en OCR.",
+        "problema": "Los agentes de investigación profunda (DR) actuales reducen documentos complejos (papers) a texto OCR, perdiendo información valiosa en tablas, figuras y ecuaciones.",
+        "propuesta": "Se introduce DR Pixel, un agente multimodal que opera directamente sobre imágenes de páginas renderizadas, sin depender de OCR, para la recuperación y el razonamiento.",
+        "resultados": "DR Pixel, incluso sin entrenamiento, supera a los métodos basados en OCR con modelos como GPT-4.5, Gemini-3.5-Flash y Qwen3.6-27B. El entrenamiento con 'counterfactual credit reweighting' mejora el 'recall' en ~15 puntos y la precisión final en >10 puntos en su benchmark (DRPixelBench).",
+        "por_que_importa": "Demuestra que el enfoque visual directo es más efectivo y eficiente que el tradicional OCR-then-retrieve para la investigación profunda en documentos complejos, abriendo nuevas posibilidades para el análisis de información.",
+        "tags": [
+          "IA",
+          "Procesamiento de Documentos",
+          "Modelos de Lenguaje Visual",
+          "Investigación Profunda",
+          "Ciberseguridad",
+          "Visión por Computadora"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-03T19:42:05Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.03092",
+      "rank": 2,
+      "title": "Avatar Intelligence: Amplifying Human Agency Through Persistent Personal Agents",
+      "authors": [
+        "Zheng Wu",
+        "Xinbei Ma",
+        "Yao Yao",
+        "Zhaoyuan Huang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-02",
+      "url": "https://arxiv.org/abs/2611.03092",
+      "pdf_url": "https://arxiv.org/pdf/2611.03092",
+      "score": 63,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "Personal AI agents are increasingly capable of handling long-horizon tasks across applications, yet users often need to invest substantial effort in specifying goals, resolving ambiguity, and verifying outcomes. We argue that progress should be measured by how effectively agents amplify human agency: enabling people to pursue their goals with less routine supervision while retaining control over consequential decisions. We advocate Avatar Intelligence, a paradigm of persistent personal agents that represent users' goals, values, and constraints through sustained decision delegation across contexts and time. We describe a maturity roadmap from human-directed execution to autonomous operation within delegated domains, and introduce the Agentic Oversight Index (AOI) as a framework for evaluating delivered value against agent-side operational cost and human oversight burden. We identify three core research challenges: identity-continuous personalization that carries user preferences across tasks, user-situated evolution through Rehearsal Engineering, and safety mechanisms that combine technical control with accountability and recourse. These directions define a research agenda for reliable decision delegation to personal agents across tasks and over time.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Agentes de IA personales persistentes amplifican la agencia humana, permitiendo delegar tareas complejas con supervisión reducida y control mantenido.",
+        "problema": "Los agentes de IA actuales requieren esfuerzo del usuario para especificar metas, resolver ambigüedades y verificar resultados, limitando su utilidad en tareas a largo plazo.",
+        "propuesta": "Proponemos la 'Avatar Intelligence', un paradigma de agentes personales persistentes que representan los objetivos, valores y restricciones del usuario, permitiendo la delegación de decisiones a través de contextos y tiempo.",
+        "resultados": "El resumen no especifica resultados numéricos concretos, pero introduce el 'Agentic Oversight Index' (AOI) como marco de evaluación.",
+        "por_que_importa": "Permite a los usuarios lograr sus objetivos con menos supervisión rutinaria, aumentando la eficiencia y la capacidad de delegación de tareas complejas a agentes de IA de manera confiable y segura.",
+        "tags": [
+          "agentes de IA",
+          "agencia humana",
+          "delegación de decisiones",
+          "personalización",
+          "ciberseguridad",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-03T19:42:14Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.03344",
+      "rank": 3,
+      "title": "FLAMIA: FLAsh MIcroscaling Attention for Fast and Causally Safe Training on Blackwell",
+      "authors": [
+        "Fedor Velikonivtsev",
+        "Mikhail Koltakov",
+        "Denis Kuznedelev"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-02",
+      "url": "https://arxiv.org/abs/2611.03344",
+      "pdf_url": "https://arxiv.org/pdf/2611.03344",
+      "score": 60,
+      "topics": [
+        "vuln & threats"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: vuln & threats"
+      ],
+      "abstract_en": "Attention remains a substantial computational cost in Transformer training, particularly at long context lengths. NVIDIA Blackwell GPUs provide high-throughput low-precision matrix multiplication, but exploiting it in attention requires addressing quantization overhead, causal information leakage through shared scales, and numerical inconsistencies between the forward and backward passes. We present FLAMIA, a family of attention kernels for Blackwell with MXFP8 and mixed NVFP4/FP8 training paths. Our design combines token-block scaling that reuses quantized operands across matrix orientations, targeted safeguards against scale-induced leakage, and consistent forward and backward computations. Fused quantization and architecture-specific kernel optimizations reduce overhead, while document-local scaling and workload-aware scheduling support variable-length documents directly in packed layouts without repacking. Across various causal packed-document workloads, the MXFP8 path accelerates the combined forward and backward attention call, including quantization, by factors of $1.10$--$1.40\\times$ on B200 and $1.06$--$1.42\\times$ on B300 relative to the fastest evaluated baseline for each workload. We validate training stability and quality preservation on pretraining Llama-style models. These results show how jointly designing quantization, training numerics, and document scheduling translates low-bit hardware throughput into practical attention acceleration.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "FLAMIA acelera el entrenamiento de Transformers en GPUs Blackwell usando atención de microescalas con cuantización MXFP8/NVFP4.",
+        "problema": "El entrenamiento de Transformers con longitudes de contexto largas es computacionalmente costoso, y las GPUs Blackwell, aunque rápidas en operaciones de baja precisión, presentan desafíos de sobrecarga de cuantización, fuga de información causal y inconsistencias numéricas.",
+        "propuesta": "FLAMIA propone un conjunto de kernels de atención optimizados para Blackwell que utilizan cuantización MXFP8 y rutas de entrenamiento mixtas NVFP4/FP8. Combina escalado de bloques de tokens, salvaguardas contra fugas de escala y cálculos consistentes forward/backward, reduciendo la sobrecarga con cuantización fusionada y optimizaciones específicas de hardware.",
+        "resultados": "La ruta MXFP8 de FLAMIA acelera la atención (forward y backward, incluyendo cuantización) entre 1.10x y 1.40x en B200 y entre 1.06x y 1.42x en B300, en comparación con la línea base más rápida para cada carga de trabajo. Se validó la estabilidad y calidad del entrenamiento en modelos tipo Llama.",
+        "por_que_importa": "Demuestra cómo la co-optimización de cuantización, numerics de entrenamiento y planificación de documentos puede traducir el rendimiento de hardware de baja precisión en una aceleración práctica para la atención en Transformers, crucial para modelos de lenguaje grandes.",
+        "tags": [
+          "Transformers",
+          "Atención",
+          "Cuantización",
+          "NVIDIA Blackwell",
+          "Optimización",
+          "Entrenamiento IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-03T19:42:24Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.02633",
+      "rank": 4,
+      "title": "Measuring AI Agents as Teammates with Collaborative Intelligence",
+      "authors": [
+        "Sean Wu",
+        "Aneesh Pappu",
+        "Jiaru Zou",
+        "Yubin Kim"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-02",
+      "url": "https://arxiv.org/abs/2611.02633",
+      "pdf_url": "https://arxiv.org/pdf/2611.02633",
+      "score": 59,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "Progress in AI is often measured by what a single model can do on its own. Yet teams of AI agents are starting to make breakthroughs and discoveries in science, medicine, mathematics and software engineering. As AI begins to work in teams of agents and people, the ability to collaborate becomes a core part of their intelligence. Research on human teams has measured this ability for decades. Inspired by this, we introduce the Collaborative Intelligence Benchmark, which measures how well an AI agent works as a teammate. It contains 240 tasks across 8 dimensions of teamwork, from refusing an unsafe shortcut to checking the work that a weaker model leaves behind. Each task comes from a real record or an existing benchmark, from aviation accident reports and clinical cases to coding tasks and negotiations, and has a programmatically verifiable outcome. To isolate teamwork from individual capability, models are scored only on tasks that they can solve by themselves when they have full information. We evaluate 18 closed- and open-weight models and find that every model, across sizes and families, has clear weaknesses as a teammate, with the best model scoring only 82.2 out of 100. Frontier models almost always refuse unsafe shortcuts and report misconduct, yet they cave under interpersonal pressure, reaching the best overall deal in only 14% of conflicts, and their pass rate drops from 97% to 81% when they take over a task in which a weaker model has cheated. Crucially, general capability does not guarantee good teamwork, as models with nearly the same capability score differ by up to 11 points as teammates. The benchmark includes 160 public tasks with code and data, along with 80 held-out tasks for evaluation. As AI agents increasingly work alongside other agents and people, the ability to collaborate effectively is becoming a crucial capability to measure and develop.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Nuevo benchmark mide la inteligencia colaborativa de agentes IA como compañeros de equipo, revelando debilidades significativas.",
+        "problema": "La inteligencia de los agentes IA se mide principalmente de forma individual, pero su creciente uso en equipos requiere evaluar su capacidad de colaboración.",
+        "propuesta": "Se introduce el Collaborative Intelligence Benchmark, un conjunto de 240 tareas en 8 dimensiones de trabajo en equipo, para medir la habilidad de los agentes IA como compañeros.",
+        "resultados": "Ningún modelo evaluado alcanzó la puntuación perfecta (máximo 82.2/100). Los modelos de vanguardia fallan bajo presión interpersonal (mejor trato en 14% de conflictos) y su rendimiento decae al asumir tareas de otros modelos débiles (81% vs 97%). La capacidad general no garantiza buena colaboración.",
+        "por_que_importa": "A medida que las IA trabajan más en equipo con humanos y otras IA, medir y mejorar su colaboración es esencial para su adopción efectiva y segura.",
+        "tags": [
+          "Inteligencia Artificial",
+          "Colaboración",
+          "Benchmarking",
+          "Ciberseguridad",
+          "Trabajo en equipo IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-03T19:42:33Z"
+      }
+    }
+  ],
+  "generated_at": "2026-11-03T19:42:33Z"
+}
