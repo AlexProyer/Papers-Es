@@ -12024,5 +12024,207 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-11-03T19:42:33Z"
+  },
+  "arxiv:2611.04803v1": {
+    "tldr": "ExtraHerO extrae prompts de LLMs complejos, superando ataques previos y mejorando la seguridad y utilidad.",
+    "problema": "Los ataques actuales de extracción de prompts fallan en LLMs modernos debido a prompts más largos y estructurados, y la visibilidad limitada a las salidas finales.",
+    "propuesta": "ExtraHerO utiliza optimización jerárquica con plantillas y actualiza consultas adversarias basándose en diferencias de feedback para reconstruir el prompt, además de proponer métricas de evaluación mejoradas.",
+    "resultados": "ExtraHerO mejora la fidelidad en un 12.5% en chatbots y 12.2% en agentes, la funcionalidad en 34.3% en agentes, y la utilidad adversaria en 6.0% en chatbots y 30.5% en agentes.",
+    "por_que_importa": "Permite evaluar la seguridad de los LLMs y comprender mejor las vulnerabilidades ante ataques de extracción de prompts en entornos complejos y de agentes.",
+    "tags": [
+      "LLM",
+      "ciberseguridad",
+      "extracción de prompts",
+      "agentes inteligentes",
+      "seguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-04T19:56:09Z"
+  },
+  "arxiv:2611.04356v1": {
+    "tldr": "CloakFEM usa agentes de IA para generar programas FEM adversarios que agotan recursos computacionales, descubriendo vulnerabilidades de eficiencia.",
+    "problema": "Los solvers de métodos de elementos finitos (FEM) son vulnerables a ataques de eficiencia que causan un uso computacional excesivo (DoS), pero encontrar estos programas adversarios es difícil debido a la complejidad del espacio de búsqueda.",
+    "propuesta": "Se introduce CloakFEM, un framework de agente LLM guiado por el dominio. Utiliza una representación intermedia específica de FEM y una puerta de validación determinista para generar programas FEM adversarios que amplifican el trabajo del solver, asegurando que sigan siendo válidos y ejecutables.",
+    "resultados": "CloakFEM descubrió entradas adversarias que amplifican sustancialmente el trabajo del solver en tres stacks FEM y 17 clases de problemas. En un caso extremo, las iteraciones del solver aumentaron de 43 a 247,367 (un aumento de 5,752.72x). Supera a cinco baselines de caja negra y a la búsqueda evolutiva.",
+    "por_que_importa": "Revela una superficie de ataque de eficiencia previamente poco explorada en solvers FEM, demostrando que los programas FEM válidos pueden ser entradas adversarias, lo que tiene implicaciones significativas para la ciberseguridad en simulaciones científicas y de ingeniería.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "FEM",
+      "Ataques de Eficiencia",
+      "Denegación de Servicio",
+      "Generación de Código"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-04T19:56:19Z"
+  },
+  "arxiv:2611.04673v1": {
+    "tldr": "Defiende agentes de IA contra ataques de envenenamiento de parámetros, asegurando que los argumentos de las herramientas sean confiables.",
+    "problema": "Los agentes de IA son vulnerables a ataques de 'indirect prompt injection' que manipulan argumentos de herramientas (parámetros) sin cambiar la acción, haciendo difícil la detección.",
+    "propuesta": "AuthorityFlow, una defensa en tres etapas que construye una jerarquía de confianza para los campos de información basada en la consulta del usuario, validando los parámetros de las herramientas según esta confianza.",
+    "resultados": "Reduce la tasa de éxito del ataque del 93.06% a 9.03%, manteniendo el 82.64% de la utilidad de las tareas benignas.",
+    "por_que_importa": "Es crucial para la seguridad de los agentes de IA, ya que permite defenderse contra ataques sutiles que manipulan datos críticos sin alterar el comportamiento aparente de la IA.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "LLM",
+      "Seguridad",
+      "Agentes Inteligentes",
+      "Prompt Injection"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-04T19:56:28Z"
+  },
+  "arxiv:2611.05272v1": {
+    "tldr": "Descubre el conocimiento oculto en LLMs analizando la 'geometría de la ignorancia' en sus activaciones neuronales.",
+    "problema": "Es difícil determinar si un LLM realmente 'sabe' algo o si simplemente suprime la información, ya que las métricas conductuales pueden ser engañadas. Esto dificulta la evaluación de la robustez de los modelos, especialmente después de intentos de 'olvido' (unlearning).",
+    "propuesta": "Se propone un nuevo marco que mide la coherencia geométrica de 'anon-vectores' (diferencias en estados ocultos entre consultas y paráfrasis anonimizadas). La hipótesis es que el conocimiento genuino forma un clúster geométrico coherente, mientras que la ignorancia o el conocimiento suprimido lo fragmentan.",
+    "resultados": "Las métricas de fragmentación separan de forma fiable conceptos conocidos de desconocidos en diez LLMs de tres familias. Tras el 'unlearning', la geometría de la fragmentación se correlaciona con la recuperación adversarial (aunque la dirección depende del ataque). Se observa que diferentes mecanismos de ataque explotan esta geometría en distintas capas del modelo, algo invisible para las métricas conductuales.",
+    "por_que_importa": "Este método ofrece una forma de evaluar la robustez del 'olvido' en LLMs sin necesidad de ataques directos, capturando aspectos del conocimiento paramétrico que las métricas basadas solo en la salida no pueden detectar. Es crucial para garantizar la seguridad y la fiabilidad de los LLMs.",
+    "tags": [
+      "LLMs",
+      "Ciberseguridad",
+      "Conocimiento Oculto",
+      "Unlearning",
+      "Geometría de Activaciones",
+      "Evaluación de IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-04T19:56:38Z"
+  },
+  "arxiv:2611.04717v1": {
+    "tldr": "Descubren una nueva forma de 'jailbreak' en modelos de lenguaje grande explotando sus propios procesos de razonamiento.",
+    "problema": "La alineación de seguridad en modelos de lenguaje grandes (LRMs) es menos robusta ante razonamientos maliciosos incrustados en el contexto que ante instrucciones directas, y la superficie de ataque del rastro de razonamiento explícito (Chain-of-Thought) está poco explorada.",
+    "propuesta": "Introducen BrainwashedLLM, un marco de aprendizaje por refuerzo (RL) que utiliza un modelo fuente pequeño para generar automáticamente trazas de razonamiento adversarias. Estas trazas se transfieren a modelos objetivo más grandes sin necesidad de optimización de prompts ni acceso al modelo.",
+    "resultados": "BrainwashedLLM logra una tasa de éxito de ataque (ASR@5) de entre 0.74 y 0.98 en cuatro modelos de lenguaje grandes de última generación, sin consultar al modelo objetivo durante la construcción del ataque.",
+    "por_que_importa": "Demuestra que el razonamiento explícito (CoT) expuesto es una vulnerabilidad en los LRMs, sugiriendo la necesidad de defensas arquitectónicas que aíslen el búfer de razonamiento para prevenir la generación de contenido dañino.",
+    "tags": [
+      "IA",
+      "ciberseguridad",
+      "modelos de lenguaje",
+      "jailbreak",
+      "seguridad",
+      "aprendizaje por refuerzo"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-04T19:56:48Z"
+  },
+  "arxiv:2611.04878v1": {
+    "tldr": "TraceRouter++ redirige de forma inteligente el flujo de información en modelos de IA para evitar manipulaciones adversarias sin sacrificar su utilidad general.",
+    "problema": "Los modelos de IA actuales son vulnerables a ataques adversarios que explotan circuitos de neuronas distribuidos y complejos, y los métodos de seguridad actuales, al ser localizados, son ineficaces y perjudiciales para el rendimiento general.",
+    "propuesta": "TraceRouter++ introduce un marco de intervención a nivel de enrutamiento que identifica y redirige las rutas causales activadas por entradas dañinas. Utiliza autoencoders para desentrañar características interpretables y transporte óptimo para realinear suavemente las activaciones inseguras hacia estados seguros, preservando las rutas computacionales no afectadas.",
+    "resultados": "El resumen indica que TraceRouter++ supera a los métodos de referencia en LLMs, MLLMs y modelos de difusión, mejorando la robustez adversaria y manteniendo un buen equilibrio entre seguridad y utilidad, aunque no se especifican métricas numéricas exactas.",
+    "por_que_importa": "Permite crear modelos de IA más seguros y robustos frente a ataques, crucial para su adopción en aplicaciones críticas sin comprometer su rendimiento y funcionalidad.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Modelos de Lenguaje",
+      "Robustez",
+      "Seguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-04T19:56:58Z"
+  },
+  "arxiv:2611.05345v1": {
+    "tldr": "Mejoramos el razonamiento de agentes de IA a largo plazo entrenando modelos de borrador para que sean rechazados en puntos críticos.",
+    "problema": "El decodificado especulativo, usado para acelerar modelos de lenguaje, introduce ruido numérico que degrada la precisión del razonamiento en tareas de largo alcance.",
+    "propuesta": "Entrenamos un modelo de borrador para que sea rechazado deliberadamente en puntos de razonamiento críticos, forzando al modelo principal a muestrear esos tokens bajo condiciones menos ruidosas.",
+    "resultados": "Aumenta la tasa de éxito de extremo a extremo en benchmarks de codificación complejos sin modificar el modelo principal ni su distribución de salida, entrenando solo entre el 0.06% y el 0.28% de los parámetros.",
+    "por_que_importa": "Permite mejorar significativamente la capacidad de razonamiento de agentes de IA en tareas complejas y de largo alcance, optimizando el decodificado especulativo como una herramienta de precisión activa.",
+    "tags": [
+      "IA",
+      "Decodificado Especulativo",
+      "Razonamiento",
+      "Agentes de IA",
+      "Ciberseguridad",
+      "Optimización"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-04T19:57:07Z"
+  },
+  "arxiv:2611.04393v1": {
+    "tldr": "Los agentes de IA pueden ser controlados sutilmente mediante advertencias de seguridad falsas, eludiendo las defensas actuales.",
+    "problema": "Los agentes de IA que confían en información pública pueden ser manipulados para tomar decisiones perjudiciales o desviar su comportamiento mediante contenido malicioso disfrazado de advertencias de seguridad.",
+    "propuesta": "Se propone un nuevo vector de ataque llamado 'servidumbre voluntaria', donde los atacantes crean advertencias de peligro falsas que el propio agente de IA, en su afán por evitar daños, interpreta como motivo para descalificar opciones legítimas y elegir el objetivo del atacante.",
+    "resultados": "Los ataques de servidumbre voluntaria son casi tan efectivos como la inyección de instrucciones (60.4% vs 66.0%) y 1.7-4.4x más efectivos que la inyección de instrucciones cuando las defensas de inyección de comandos están activas, ya que los detectores actuales los clasifican como benignos. Una solución que requiere corroboración reduce la exposición en ~95% sin reentrenamiento.",
+    "por_que_importa": "Este método de ataque es sigiloso y elude las defensas existentes, lo que representa una amenaza significativa para la seguridad de los agentes de IA que interactúan con el mundo real. La solución propuesta es simple y efectiva.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Seguridad de IA",
+      "Manipulación",
+      "Agentes Autónomos",
+      "Servidumbre Voluntaria"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-04T19:57:16Z"
+  },
+  "arxiv:2611.04916": {
+    "tldr": "Desbloqueando la generación de video controlable: Kling revela secretos de comprensión multimodal y mejora la calidad de generación.",
+    "problema": "La generación de video de alta calidad y controlable se ve limitada por la comprensión multimodal, desde los datos hasta la evaluación final.",
+    "propuesta": "Se propone un análisis exhaustivo de la cadena de generación de video (datos, condicionamiento, alineación, evaluación) utilizando el modelo Kling-MLLM, proponiendo mejoras en el captioning, la mejora de prompts, el modelado de recompensas y la evaluación automática.",
+    "resultados": "Se demuestra que un codificador de texto confiable proviene del entrenamiento perceptual, no de la habilidad lingüística. Se proponen modelos de recompensa para críticas localizadas y puntuación multidimensional. Se revisan protocolos de evaluación automática para identificar fallos.",
+    "por_que_importa": "Ofrece guía práctica para construir sistemas de generación de video controlables, mejorando la calidad y la comprensión de la interacción multimodal.",
+    "tags": [
+      "generación de video",
+      "comprensión multimodal",
+      "IA",
+      "ciberseguridad",
+      "HuggingFace",
+      "Kling"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-04T19:57:26Z"
+  },
+  "arxiv:2611.03233": {
+    "tldr": "Axion 1.0: un modelo de IA de agente abierto y simplificado que compite con modelos comerciales.",
+    "problema": "La creación de modelos de IA de agente potentes y abiertos es compleja y costosa, limitando su accesibilidad y reproducibilidad.",
+    "propuesta": "Axion 1.0 propone un modelo de agente fundacional completamente abierto entrenado con una receta simplificada de tres etapas: dos de ajuste fino supervisado (SFT) y una de aprendizaje por refuerzo, sin métodos complejos como DPO u OPD.",
+    "resultados": "Axion 1.0 logra un rendimiento sólido en diversos benchmarks de agentes, siendo competitivo con modelos comerciales líderes en varios de ellos. La receta de entrenamiento es compacta y el modelo es completamente abierto, incluyendo el código y los datos.",
+    "por_que_importa": "Demuestra que los modelos de agente fundacionales potentes pueden ser abiertos y sencillos, proporcionando un camino práctico y reproducible para avanzar en la inteligencia de agentes abiertos.",
+    "tags": [
+      "IA",
+      "Agentes de IA",
+      "Modelos Fundacionales",
+      "Open Source",
+      "Ciberseguridad",
+      "Aprendizaje Automático"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-04T19:57:35Z"
+  },
+  "arxiv:2611.04303": {
+    "tldr": "Traduce texto en imágenes sin entrenamiento previo, usando modelos de IA existentes para edición fluida.",
+    "problema": "La traducción de texto dentro de imágenes (IIMT) requiere grandes conjuntos de datos de entrenamiento para cada par de idiomas y modelos específicos.",
+    "propuesta": "FlowTranslator es un marco que no requiere entrenamiento. Utiliza OCR y LLM para generar un prompt de traducción, que se inyecta en un modelo de difusión T2I. Introduce controles de trayectoria (RCR y CE) para mejorar la precisión y naturalidad del texto traducido.",
+    "resultados": "Logra puntuaciones promedio PRIM BLEU de 20.6 y COMET de 57.2, superando a UniTranslator. En fotos de escenas reales traducidas al chino, alcanza un 40.1% de precisión de coincidencia exacta, superando a sistemas de edición existentes.",
+    "por_que_importa": "Ofrece una solución de IIMT potente y sin entrenamiento, aprovechando los avances en modelos T2I y LLM, lo que reduce la necesidad de datos de entrenamiento específicos y lo hace más accesible.",
+    "tags": [
+      "traducción de imágenes",
+      "IA sin entrenamiento",
+      "edición basada en flujo",
+      "modelos de difusión",
+      "OCR",
+      "LLM"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-04T19:57:44Z"
+  },
+  "arxiv:2611.02501": {
+    "tldr": "SpecPilot optimiza la decodificación especulativa de LLMs, logrando hasta 10.87x más velocidad sin pérdida de calidad.",
+    "problema": "La decodificación especulativa de LLMs tiene un potencial de velocidad desaprovechado debido a ineficiencias en el manejo de tokens, la verificación por lotes y la falta de optimización adaptativa a cada despliegue.",
+    "propuesta": "Se presenta SpecPilot, un agente autónomo que descubre automáticamente algoritmos y optimizaciones de sistemas para la decodificación especulativa, adaptándose a modelos, drafters, GPUs y benchmarks específicos.",
+    "resultados": "SpecPilot incrementa la velocidad de 4.46x a 10.87x en decodificación de una sola solicitud y de 1.94x a 3.93x en decodificación por lotes, comparado con sistemas base, sin afectar la calidad. Descubrió un formato de 12 bits, verificación híbrida y tres mecanismos de batching.",
+    "por_que_importa": "Permite acelerar significativamente la inferencia de LLMs en producción, reduciendo costos y mejorando la experiencia del usuario al hacer la tecnología más eficiente y accesible.",
+    "tags": [
+      "LLMs",
+      "Decodificación Especulativa",
+      "Optimización",
+      "Agentes Autónomos",
+      "Rendimiento",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-04T19:57:54Z"
   }
 }

@@ -1,0 +1,563 @@
+{
+  "date": "2026-11-04",
+  "report_type": "filtrado",
+  "evaluated": 194,
+  "selected": 15,
+  "papers": [
+    {
+      "id": "arxiv:2611.04803v1",
+      "rank": 1,
+      "title": "Extracting System Prompt of LLM Services in Complex (Agentic) Settings: Hierarchical Optimization and Reliable Evaluation Metrics",
+      "authors": [
+        "Shuaidong Li",
+        "Chenhao Lin",
+        "Xinshan Yang",
+        "Chao Shen"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-03",
+      "url": "https://arxiv.org/abs/2611.04803v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.04803v1",
+      "score": 59,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "System prompt is a critical intellectual property of large language model (LLM) services. To analyze its leakage, prompt extraction attacks have been extensively studied. However, we validate that existing attacks substantially degrade on recent LLM services, whose complexity has evolved in both the prompt itself and system-level constraints. Specifically, (1) system prompts become longer and more structured to contain pre-defined tool schemas, execution logic, safety guardrails, etc., and (2) only the final post-processed outputs (e.g., agent's actions) but not the raw textual response can be observed. In this paper, we address the above increased complexity by proposing Extraction with Hierarchical Optimization (ExtraHerO), which (1) decomposes the prompt extraction into a hierarchical reconstruction process with a pre-defined structural prompt template, and (2) iteratively updates the adversarial query with guidance of feedback-template differences to observe diverse outputs. In particular, we monitor the information gain of attack optimization to early stop or reset it for a good trade-off between effectiveness and efficiency. We also find that existing evaluation metrics for prompt fidelity can be misleading because they do not account for structural information. Therefore, we rely on global textual similarity and prioritize structural keywords. Moreover, we introduce a system-level metric, adversarial utility, to measure the help of prompt extraction for real-world downstream attacks. Experimental results demonstrate the consistent superiority of ExtraHerO, with average improvements of 12.5\\% (fidelity), 2.3\\% (functionality), and 6.0\\% (adversarial utility) on chatbots, and 12.2\\%, 34.3\\%, and 30.5\\% on agents.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "ExtraHerO extrae prompts de LLMs complejos, superando ataques previos y mejorando la seguridad y utilidad.",
+        "problema": "Los ataques actuales de extracción de prompts fallan en LLMs modernos debido a prompts más largos y estructurados, y la visibilidad limitada a las salidas finales.",
+        "propuesta": "ExtraHerO utiliza optimización jerárquica con plantillas y actualiza consultas adversarias basándose en diferencias de feedback para reconstruir el prompt, además de proponer métricas de evaluación mejoradas.",
+        "resultados": "ExtraHerO mejora la fidelidad en un 12.5% en chatbots y 12.2% en agentes, la funcionalidad en 34.3% en agentes, y la utilidad adversaria en 6.0% en chatbots y 30.5% en agentes.",
+        "por_que_importa": "Permite evaluar la seguridad de los LLMs y comprender mejor las vulnerabilidades ante ataques de extracción de prompts en entornos complejos y de agentes.",
+        "tags": [
+          "LLM",
+          "ciberseguridad",
+          "extracción de prompts",
+          "agentes inteligentes",
+          "seguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-04T19:56:09Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.04356v1",
+      "rank": 2,
+      "title": "CloakFEM: Agentic FEM Code Generation for Red-Teaming Computational Resource Exhaustion",
+      "authors": [
+        "Li Zheng",
+        "Simin Chen"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-03",
+      "url": "https://arxiv.org/abs/2611.04356v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.04356v1",
+      "score": 58,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Finite element method (FEM) solvers are foundational to scientific and engineering simulation, yet their susceptibility to \\emph{efficiency attacks} remains largely unexplored. An adversary can craft syntactically valid and runnable FEM programs that complete successfully while forcing excessive computational work, enabling computational denial-of-service (DoS) attacks. Finding such inputs is challenging because FEM programs occupy a vast, structured space constrained by numerical, geometric, and constitutive requirements. We introduce CloakFEM, a domain-guided LLM-agent framework for automatically generating runnable adversarial FEM programs that amplify solver computation. CloakFEM combines LLM-guided search with an FEM-specific intermediate representation and a deterministic validity gate that enforces runnable constraints. Across three FEM stacks, 17 problem classes, and 1,068 seeds, CloakFEM discovers adversarial inputs that substantially amplify solver work while remaining valid and solvable. In the most extreme case, solver iterations increase from 43 to 247,367, a \\(5{,}752.72\\times\\) amplification. CloakFEM outperforms five generic black-box baselines and retains an advantage over evolutionary search under a controlled bounded action space. Cross-solver analysis further reveals both problem-intrinsic and solver-specific sources of vulnerability. Our results uncover an underexplored efficiency-attack surface in FEM solvers and show that runnable FEM programs can serve as adversarial inputs.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "CloakFEM usa agentes de IA para generar programas FEM adversarios que agotan recursos computacionales, descubriendo vulnerabilidades de eficiencia.",
+        "problema": "Los solvers de métodos de elementos finitos (FEM) son vulnerables a ataques de eficiencia que causan un uso computacional excesivo (DoS), pero encontrar estos programas adversarios es difícil debido a la complejidad del espacio de búsqueda.",
+        "propuesta": "Se introduce CloakFEM, un framework de agente LLM guiado por el dominio. Utiliza una representación intermedia específica de FEM y una puerta de validación determinista para generar programas FEM adversarios que amplifican el trabajo del solver, asegurando que sigan siendo válidos y ejecutables.",
+        "resultados": "CloakFEM descubrió entradas adversarias que amplifican sustancialmente el trabajo del solver en tres stacks FEM y 17 clases de problemas. En un caso extremo, las iteraciones del solver aumentaron de 43 a 247,367 (un aumento de 5,752.72x). Supera a cinco baselines de caja negra y a la búsqueda evolutiva.",
+        "por_que_importa": "Revela una superficie de ataque de eficiencia previamente poco explorada en solvers FEM, demostrando que los programas FEM válidos pueden ser entradas adversarias, lo que tiene implicaciones significativas para la ciberseguridad en simulaciones científicas y de ingeniería.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "FEM",
+          "Ataques de Eficiencia",
+          "Denegación de Servicio",
+          "Generación de Código"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-04T19:56:19Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.04673v1",
+      "rank": 3,
+      "title": "Right Tool, Wrong Parameters: Defending LLM Agents Against Parameter Poisoning",
+      "authors": [
+        "Yao Wang",
+        "Zehua Ma",
+        "Weiming Zhang",
+        "Han Fang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-03",
+      "url": "https://arxiv.org/abs/2611.04673v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.04673v1",
+      "score": 56,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "Indirect Prompt Injection (IPI) poses a critical threat to LLM agents. Existing defenses largely focus on whether an injection induces a new tool invocation or unintended action. In this paper, we study a different attack surface, parameter poisoning, where the attacker preserves the intended action but manipulates one or more tool arguments, such as a recipient or other task-critical value. Such attacks are difficult to detect because no new action is introduced, while parameter changes themselves are often legitimate parts of the user's request. Our key insight is that the legitimacy of a parameter change should be determined by the trust of the information flow that produces it under the user query. The query induces a task-specific trust hierarchy over available information fields: some are trusted to determine particular parameters, while others should have little or no influence. Based on this insight, we propose AuthorityFlow, a three-stage parameter-level defense. First, it interprets the user query to construct a task-specific trust hierarchy over the information fields available to the agent. Second, for each tool argument, it traces the information flow that produces its current value and attributes the value to its supporting field. Finally, it accepts the value only when that field is trusted to determine the parameter under the current task, allowing high-trust changes while flagging low-trust influence as potential parameter poisoning. We further introduce FactAuthBench for evaluating parameter poisoning in LLM agents. Without defense, the attack success rate reaches 93.06%. AuthorityFlow reduces it to 9.03%, while retaining 82.64% benign task utility compared with 90.28% without defense. Our results show that effective IPI defense requires reasoning not only about what action an agent takes, but also about which information is trusted to determine its parameters.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Defiende agentes de IA contra ataques de envenenamiento de parámetros, asegurando que los argumentos de las herramientas sean confiables.",
+        "problema": "Los agentes de IA son vulnerables a ataques de 'indirect prompt injection' que manipulan argumentos de herramientas (parámetros) sin cambiar la acción, haciendo difícil la detección.",
+        "propuesta": "AuthorityFlow, una defensa en tres etapas que construye una jerarquía de confianza para los campos de información basada en la consulta del usuario, validando los parámetros de las herramientas según esta confianza.",
+        "resultados": "Reduce la tasa de éxito del ataque del 93.06% a 9.03%, manteniendo el 82.64% de la utilidad de las tareas benignas.",
+        "por_que_importa": "Es crucial para la seguridad de los agentes de IA, ya que permite defenderse contra ataques sutiles que manipulan datos críticos sin alterar el comportamiento aparente de la IA.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "LLM",
+          "Seguridad",
+          "Agentes Inteligentes",
+          "Prompt Injection"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-04T19:56:28Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.05272v1",
+      "rank": 4,
+      "title": "The Geometry of Ignorance: Detecting Suppressed Knowledge in LLMs through Activation Fragmentation",
+      "authors": [
+        "Adar Peleg",
+        "Dvir Alsheich",
+        "Tomer Ashuach",
+        "Avi Mendelson"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-11-03",
+      "url": "https://arxiv.org/abs/2611.05272v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.05272v1",
+      "score": 56,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "Evaluating whether a large language model (LLM) genuinely knows a concept remains a fundamental problem, since behavioral metrics can be fooled by suppression: a model that refuses to answer may still harbor recoverable knowledge. The framework measures the geometric coherence of \\textit{anon-vectors}, the differences in hidden states between a concept-specific query and its anonymized paraphrase, and shows that genuine knowledge forms a tight, low-entropy cluster while ignorance forces geometric fragmentation. Across ten instruction-tuned LLMs from three model families, all fragmentation metrics reliably separate known from unknown concepts, and post-unlearning, fragmentation geometry correlates with adversarial recovery across four attack types and five unlearning algorithms, though the direction of that relationship is shown to depend on attack methodology. Furthermore, a layer-resolved analysis reveals that different adversarial mechanisms exploit this geometry at varying depths, with high attack-specific correlations that are invisible to behavioral evaluation. Together, these results constitute a single-phase, attack-free proxy for unlearning robustness that captures aspects of parametric knowledge inaccessible to output-level metrics. A reference implementation is available at https://github.com/AdarPeleg/geometry-of-ignorance",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Descubre el conocimiento oculto en LLMs analizando la 'geometría de la ignorancia' en sus activaciones neuronales.",
+        "problema": "Es difícil determinar si un LLM realmente 'sabe' algo o si simplemente suprime la información, ya que las métricas conductuales pueden ser engañadas. Esto dificulta la evaluación de la robustez de los modelos, especialmente después de intentos de 'olvido' (unlearning).",
+        "propuesta": "Se propone un nuevo marco que mide la coherencia geométrica de 'anon-vectores' (diferencias en estados ocultos entre consultas y paráfrasis anonimizadas). La hipótesis es que el conocimiento genuino forma un clúster geométrico coherente, mientras que la ignorancia o el conocimiento suprimido lo fragmentan.",
+        "resultados": "Las métricas de fragmentación separan de forma fiable conceptos conocidos de desconocidos en diez LLMs de tres familias. Tras el 'unlearning', la geometría de la fragmentación se correlaciona con la recuperación adversarial (aunque la dirección depende del ataque). Se observa que diferentes mecanismos de ataque explotan esta geometría en distintas capas del modelo, algo invisible para las métricas conductuales.",
+        "por_que_importa": "Este método ofrece una forma de evaluar la robustez del 'olvido' en LLMs sin necesidad de ataques directos, capturando aspectos del conocimiento paramétrico que las métricas basadas solo en la salida no pueden detectar. Es crucial para garantizar la seguridad y la fiabilidad de los LLMs.",
+        "tags": [
+          "LLMs",
+          "Ciberseguridad",
+          "Conocimiento Oculto",
+          "Unlearning",
+          "Geometría de Activaciones",
+          "Evaluación de IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-04T19:56:38Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.04717v1",
+      "rank": 5,
+      "title": "BrainwashedLLM: Jailbreaking via Automated Adversarial Chain of Thoughts Discovery",
+      "authors": [
+        "Masoud Poorghaffar Aghdam",
+        "Göktuğ Serdar Yıldırım",
+        "Sinem Sav"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-03",
+      "url": "https://arxiv.org/abs/2611.04717v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.04717v1",
+      "score": 54,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Large Reasoning Models (LRMs) achieve strong performance on complex tasks by generating explicit Chain-of-Thought (CoT) reasoning, but the safety implications of this intermediate reasoning surface remain underexplored. We demonstrate that the reasoning trace itself is a powerful attack vector. Safety alignment in large models is substantially less robust to malicious reasoning embedded in the context than to direct imperative prompts. We introduce BrainwashedLLM, a weak-to-strong adversarial framework that automates the discovery of reasoning-based jailbreaks. First, we use Group Relative Policy Optimization (GRPO), a Reinforcement Learning (RL) algorithm, with a multi-objective rule-based reward to fine-tune a small, white-box source model to generate adversarial reasoning traces. Crucially, the reward is computed entirely over the source's own reasoning trace. Second, we show that these traces transfer in a zero-shot manner. When traces are injected as input prefixes, they steer larger black-box LRMs to continue the adversarial reasoning and produce harmful outputs, without requiring prompt optimization, gradient access, or any form of output feedback from the target model. Across four state-of-the-art LRMs that span distinct architectures, BrainwashedLLM achieves ASR@5 between 0.74 and 0.98 across targets, within 16 points of query-based baselines, without querying the target during attack construction. To our knowledge, this is the first framework to use RL to directly optimize the CoT of LRMs as an attack surface without any target feedback, and the first to demonstrate zero-shot weak-to-strong transfer of reasoning traces. Our results suggest that exposed CoT is a vulnerability in LRMs and motivate architectural defenses that isolate the reasoning buffer. Warning: This paper contains potentially offensive and harmful text.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Descubren una nueva forma de 'jailbreak' en modelos de lenguaje grande explotando sus propios procesos de razonamiento.",
+        "problema": "La alineación de seguridad en modelos de lenguaje grandes (LRMs) es menos robusta ante razonamientos maliciosos incrustados en el contexto que ante instrucciones directas, y la superficie de ataque del rastro de razonamiento explícito (Chain-of-Thought) está poco explorada.",
+        "propuesta": "Introducen BrainwashedLLM, un marco de aprendizaje por refuerzo (RL) que utiliza un modelo fuente pequeño para generar automáticamente trazas de razonamiento adversarias. Estas trazas se transfieren a modelos objetivo más grandes sin necesidad de optimización de prompts ni acceso al modelo.",
+        "resultados": "BrainwashedLLM logra una tasa de éxito de ataque (ASR@5) de entre 0.74 y 0.98 en cuatro modelos de lenguaje grandes de última generación, sin consultar al modelo objetivo durante la construcción del ataque.",
+        "por_que_importa": "Demuestra que el razonamiento explícito (CoT) expuesto es una vulnerabilidad en los LRMs, sugiriendo la necesidad de defensas arquitectónicas que aíslen el búfer de razonamiento para prevenir la generación de contenido dañino.",
+        "tags": [
+          "IA",
+          "ciberseguridad",
+          "modelos de lenguaje",
+          "jailbreak",
+          "seguridad",
+          "aprendizaje por refuerzo"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-04T19:56:48Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.04878v1",
+      "rank": 6,
+      "title": "TraceRouter++: Causal Semantic Routing Realignment via Optimal Transport",
+      "authors": [
+        "Chuancheng Shi",
+        "Shangze Li",
+        "Wenhua Wu",
+        "Hengzhi Chen"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CL]",
+      "category": "cs.CL",
+      "date": "2026-11-03",
+      "url": "https://arxiv.org/abs/2611.04878v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.04878v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Despite their remarkable capabilities, large foundation models (LFMs) remain susceptible to adversarial manipulation. Current safety intervention methods primarily rely on the \\textit{locality hypothesis}, rigidly suppressing isolated neurons or features. However, harmful semantics manifest as distributed, cross-layer circuits, rendering localized ablations both brittle against complex jailbreaks and detrimental to general utility. To bridge this gap, we propose TraceRouter++, a routing-level safety intervention framework that explicitly traces safety-relevant causal routing pathways activated under harmful inputs and realigns their unsafe activation states. Our framework operates in a \\textit{Discover-Trace-Realign} paradigm: it first pinpoints a sensitive onset layer via attention divergence and disentangles dense activations into interpretable routing features using sparse autoencoders (SAEs). Subsequently, it maps these features to downstream causal circuits via feature influence scores (FIS). Crucially, departing from rigid suppression paradigms, TraceRouter++ introduces a constrained optimal transport (OT)-based soft routing realignment. By formulating safety intervention as a tractable coordinate-wise marginal optimal transport approximation, our method redirects unsafe activation marginals toward safe-reference marginals within causally identified routing subspaces while preserving non-selected coordinates at the intervention point. This mechanism safely redirects malicious semantic flows while leaving orthogonal computational routes intact. Extensive experiments across representative large language models (LLMs), multimodal large language models (MLLMs), and diffusion models (DMs) show that TraceRouter++ outperforms evaluated baselines, improving adversarial robustness while maintaining a favorable safety-utility trade-off. WARNING: This paper contains unsafe model responses.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "TraceRouter++ redirige de forma inteligente el flujo de información en modelos de IA para evitar manipulaciones adversarias sin sacrificar su utilidad general.",
+        "problema": "Los modelos de IA actuales son vulnerables a ataques adversarios que explotan circuitos de neuronas distribuidos y complejos, y los métodos de seguridad actuales, al ser localizados, son ineficaces y perjudiciales para el rendimiento general.",
+        "propuesta": "TraceRouter++ introduce un marco de intervención a nivel de enrutamiento que identifica y redirige las rutas causales activadas por entradas dañinas. Utiliza autoencoders para desentrañar características interpretables y transporte óptimo para realinear suavemente las activaciones inseguras hacia estados seguros, preservando las rutas computacionales no afectadas.",
+        "resultados": "El resumen indica que TraceRouter++ supera a los métodos de referencia en LLMs, MLLMs y modelos de difusión, mejorando la robustez adversaria y manteniendo un buen equilibrio entre seguridad y utilidad, aunque no se especifican métricas numéricas exactas.",
+        "por_que_importa": "Permite crear modelos de IA más seguros y robustos frente a ataques, crucial para su adopción en aplicaciones críticas sin comprometer su rendimiento y funcionalidad.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Modelos de Lenguaje",
+          "Robustez",
+          "Seguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-04T19:56:58Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.05345v1",
+      "rank": 7,
+      "title": "Adversarial Speculative Reasoning Improves Long Horizon Agents",
+      "authors": [
+        "Hongyin Luo",
+        "Wei Fang",
+        "Lijie Yang",
+        "Owen Stepan"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-11-03",
+      "url": "https://arxiv.org/abs/2611.05345v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.05345v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "Speculative decoding has been treated purely as a systems optimization that speeds up large language model decoding without changing the model behavior. Under this view, the growing effort to train better draft models has been focused solely on acceptance rate. We argue that this view does not hold true for long-horizon agent reasoning. Measuring frontier open-weight models on complex agentic tasks with different speculative decoding approaches, we found that numerical noise grows within verification windows, and the draft acceptance results of the thinking process can change the output distribution of the model after 30 steps, thus noticeably influencing the reasoning accuracy of long-horizon agents in random directions. In this work, we improve the reasoning capability of target models by controlling such noise. While we cannot change the overall token distribution verified by the target model, we can encode critical reasoning with highest precision by training the draft model to be rejected. We identify these points in agent traces and train the draft model to favor adversarial preference. At inference the trained draft and the target part ways precisely at these decision points, verification restarts, so that critical thinking tokens are sampled from the target model and encoded under its least noisy conditions. This approach makes critical reasoning better indexed and more durable over a long horizon. On complex agentic coding benchmarks, our approach raises end-to-end success rate with no change to the target model or its output distribution. Our results recast the speculative decoding mechanism from a pure accelerator into an active allocator for context precision that improves the accuracy of long-horizon agents by training 0.06% to 0.28% of hosted parameters.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Mejoramos el razonamiento de agentes de IA a largo plazo entrenando modelos de borrador para que sean rechazados en puntos críticos.",
+        "problema": "El decodificado especulativo, usado para acelerar modelos de lenguaje, introduce ruido numérico que degrada la precisión del razonamiento en tareas de largo alcance.",
+        "propuesta": "Entrenamos un modelo de borrador para que sea rechazado deliberadamente en puntos de razonamiento críticos, forzando al modelo principal a muestrear esos tokens bajo condiciones menos ruidosas.",
+        "resultados": "Aumenta la tasa de éxito de extremo a extremo en benchmarks de codificación complejos sin modificar el modelo principal ni su distribución de salida, entrenando solo entre el 0.06% y el 0.28% de los parámetros.",
+        "por_que_importa": "Permite mejorar significativamente la capacidad de razonamiento de agentes de IA en tareas complejas y de largo alcance, optimizando el decodificado especulativo como una herramienta de precisión activa.",
+        "tags": [
+          "IA",
+          "Decodificado Especulativo",
+          "Razonamiento",
+          "Agentes de IA",
+          "Ciberseguridad",
+          "Optimización"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-04T19:57:07Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.04393v1",
+      "rank": 8,
+      "title": "Voluntary Servitude: Weaponized Safety Warning Mechanisms for Controlling AI Agents",
+      "authors": [
+        "Ilan Zendel",
+        "Matan Levy",
+        "Stav Cohen",
+        "Avi Mendelson"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-03",
+      "url": "https://arxiv.org/abs/2611.04393v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.04393v1",
+      "score": 51,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+7)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "LLM agents increasingly act on information retrieved from public sources they treat as credible, which turns a manipulated recommendation into a transaction, a dependency, or a decision with physical consequences. The security literature models this threat as instruction injection, in which an adversary writes a command into retrieved content and deployed defenses learn to recognize command syntax. We show that an attacker can instead steer an agent through the agent's own harm-avoidance. A single fabricated hazard, written as an ordinary review, leads the agent to disqualify the legitimate options and select the attacker's target by its own reasoning, with no command for a detector to recognize. We call this voluntary servitude. These payloads steer agents about as often as instruction injection (60.4% vs. 66.0%), and deployed injection detectors score them as benign, so behind a filter they are 1.7-4.4x more effective. We measure this at the generation stage across six models and ten consumer-service domains, for three attack families, and show that it transfers to production browser agents, outperforming instruction injection, and to a retrieval pipeline (1.0-57.0% end-to-end success, depending on the retriever). We then show that a corroboration requirement added to the agent's instructions removes roughly 95% of the exposure against a non-adaptive attacker without retraining. With the requirement in place, the agent still reads the planted hazard and no longer acts on it.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los agentes de IA pueden ser controlados sutilmente mediante advertencias de seguridad falsas, eludiendo las defensas actuales.",
+        "problema": "Los agentes de IA que confían en información pública pueden ser manipulados para tomar decisiones perjudiciales o desviar su comportamiento mediante contenido malicioso disfrazado de advertencias de seguridad.",
+        "propuesta": "Se propone un nuevo vector de ataque llamado 'servidumbre voluntaria', donde los atacantes crean advertencias de peligro falsas que el propio agente de IA, en su afán por evitar daños, interpreta como motivo para descalificar opciones legítimas y elegir el objetivo del atacante.",
+        "resultados": "Los ataques de servidumbre voluntaria son casi tan efectivos como la inyección de instrucciones (60.4% vs 66.0%) y 1.7-4.4x más efectivos que la inyección de instrucciones cuando las defensas de inyección de comandos están activas, ya que los detectores actuales los clasifican como benignos. Una solución que requiere corroboración reduce la exposición en ~95% sin reentrenamiento.",
+        "por_que_importa": "Este método de ataque es sigiloso y elude las defensas existentes, lo que representa una amenaza significativa para la seguridad de los agentes de IA que interactúan con el mundo real. La solución propuesta es simple y efectiva.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Seguridad de IA",
+          "Manipulación",
+          "Agentes Autónomos",
+          "Servidumbre Voluntaria"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-04T19:57:16Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.04916",
+      "rank": 1,
+      "title": "Behind Video Generation: Observations and Insights on Multimodal Understanding from Kling",
+      "authors": [
+        "Kling Team",
+        "Dong Chen",
+        "Jialu Chen",
+        "Xinlong Chen"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-03",
+      "url": "https://arxiv.org/abs/2611.04916",
+      "pdf_url": "https://arxiv.org/pdf/2611.04916",
+      "score": 74,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Video generation has progressed from isolated clips to coherent short-form audiovisual sequences, and the bottleneck is shifting from rendering to semantic control. This report summarizes the observations and insights on multimodal understanding gained from successive generations of Kling. We argue that generation quality is the projection of multimodal understanding through the entire data--conditioning--alignment--evaluation chain, and we examine this chain module by module. Kling-MLLM, a shared multimodal foundation model that unifies image, video, audio, synchronized audio--video, and interleaved inputs, is specialized for each downstream module. Because a DiT is trained on far fewer training samples than a language model, we treat captioning as a semantic contract that maximizes description density, and extend it to reference-grounded captioning that makes reference bindings explicit. Prompt enhancement translates user intent into this caption distribution: basic PE is derived from captions of compelling videos and refined with text-level and generator-in-the-loop reinforcement learning, while agentic PE refines the story and retrieves compelling examples. We show that a reliable text encoder comes from perceptual training rather than from stronger language ability, and that candidates can be screened from text alone before end-to-end training. Reward modeling pairs a general reward model for explainable, localized critiques with a decision reward model for fast multidimensional scoring, treating perceptual bandwidth as a first-class design parameter. Finally, we review task-specific automatic evaluation, focusing on protocols that expose scoring shortcuts and help trace failures to their upstream source. We hope these lessons offer practical guidance for building the understanding stack behind controllable video generation.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Desbloqueando la generación de video controlable: Kling revela secretos de comprensión multimodal y mejora la calidad de generación.",
+        "problema": "La generación de video de alta calidad y controlable se ve limitada por la comprensión multimodal, desde los datos hasta la evaluación final.",
+        "propuesta": "Se propone un análisis exhaustivo de la cadena de generación de video (datos, condicionamiento, alineación, evaluación) utilizando el modelo Kling-MLLM, proponiendo mejoras en el captioning, la mejora de prompts, el modelado de recompensas y la evaluación automática.",
+        "resultados": "Se demuestra que un codificador de texto confiable proviene del entrenamiento perceptual, no de la habilidad lingüística. Se proponen modelos de recompensa para críticas localizadas y puntuación multidimensional. Se revisan protocolos de evaluación automática para identificar fallos.",
+        "por_que_importa": "Ofrece guía práctica para construir sistemas de generación de video controlables, mejorando la calidad y la comprensión de la interacción multimodal.",
+        "tags": [
+          "generación de video",
+          "comprensión multimodal",
+          "IA",
+          "ciberseguridad",
+          "HuggingFace",
+          "Kling"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-04T19:57:26Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.03233",
+      "rank": 2,
+      "title": "Axion 1.0: Open Agent Foundation Models, Simplified",
+      "authors": [
+        "Yuqi Jia",
+        "Yunjie Tian",
+        "Jiayu Zheng",
+        "Yijun Liang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-02",
+      "url": "https://arxiv.org/abs/2611.03233",
+      "pdf_url": "https://arxiv.org/pdf/2611.03233",
+      "score": 61,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "We introduce Axion 1.0, a fully open agent foundation model that combines strong and broad agentic capabilities with a remarkably simple training recipe. Axion 1.0 is trained in only three stages: two lightweight supervised fine-tuning stages followed by reinforcement learning, without dedicated mid-training, direct preference optimization (DPO), or on-policy distillation (OPD). The first SFT stage develops strong self-contained reasoning through model-aware data construction, where we synthesize challenging problems and adversarially strengthen them based on the base model's own successful solution strategies. The second stage extends these capabilities to tool-dependent reasoning through a scalable pipeline for constructing diverse and automatically verifiable tasks grounded in real-world data sources and deterministic computation. Finally, reinforcement learning further strengthens long-horizon reasoning and interaction with external tools and environments. Despite this compact training recipe, Axion 1.0 achieves strong performance across a broad suite of agentic benchmarks and is competitive with leading commercial models on several of them. Equally importantly, Axion 1.0 is open beyond model weights: we release the complete recipe, including data construction, generation, filtering, verification, prompts, and training code, enabling the entire development process to be reproduced and extended. Axion 1.0 demonstrates that strong agent foundation models can be both open and simple, offering a practical and reproducible path toward advancing open agentic intelligence.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Axion 1.0: un modelo de IA de agente abierto y simplificado que compite con modelos comerciales.",
+        "problema": "La creación de modelos de IA de agente potentes y abiertos es compleja y costosa, limitando su accesibilidad y reproducibilidad.",
+        "propuesta": "Axion 1.0 propone un modelo de agente fundacional completamente abierto entrenado con una receta simplificada de tres etapas: dos de ajuste fino supervisado (SFT) y una de aprendizaje por refuerzo, sin métodos complejos como DPO u OPD.",
+        "resultados": "Axion 1.0 logra un rendimiento sólido en diversos benchmarks de agentes, siendo competitivo con modelos comerciales líderes en varios de ellos. La receta de entrenamiento es compacta y el modelo es completamente abierto, incluyendo el código y los datos.",
+        "por_que_importa": "Demuestra que los modelos de agente fundacionales potentes pueden ser abiertos y sencillos, proporcionando un camino práctico y reproducible para avanzar en la inteligencia de agentes abiertos.",
+        "tags": [
+          "IA",
+          "Agentes de IA",
+          "Modelos Fundacionales",
+          "Open Source",
+          "Ciberseguridad",
+          "Aprendizaje Automático"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-04T19:57:35Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.04303",
+      "rank": 3,
+      "title": "FlowTranslator: Training-Free In-Image Machine Translation with Flow-Based Editing",
+      "authors": [
+        "Zhixian Li",
+        "Xingsong Ye",
+        "Yongkun Du",
+        "Yunyan Xiao"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-03",
+      "url": "https://arxiv.org/abs/2611.04303",
+      "pdf_url": "https://arxiv.org/pdf/2611.04303",
+      "score": 61,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+4)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "In-image machine translation (IIMT) replaces text in an image with its translation while preserving the surrounding visual context. Existing task-specific models achieve convincing performance but require massive paired training images before and after translation. As advanced text-to-image (T2I) models have reached a practically usable level of multilingual text generation, we argue that this capability can be transferred to IIMT and present FlowTranslator. It is a training-free IIMT framework that first employs an OCR model and an LLM to generate the translation prompt, which is injected into the T2I-based diffusion model. To optimize the accurate and natural generation of translated text, we introduce two trajectory controls: Region Coupling Release (RCR) partially decorrelates target-branch noise inside the text region early in the trajectory, while Coupling Expansion (CE) amplifies the emerging edit displacement mid-trajectory. Under the EasyOCR read-back protocol, FlowTranslator achieves average PRIM BLEU and COMET scores of 20.6 and 57.2, respectively, substantially outperforming the strong training-based baseline UniTranslator. On the more challenging and realistic whole-image ScenePair photographs translated into Chinese, it reaches 40.1\\% exact-match accuracy and surpasses existing editing systems, some of which only address the text-rendering stage rather than the complete IIMT task. These results establish flow-based editing as a strong, fully training-free baseline for IIMT.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Traduce texto en imágenes sin entrenamiento previo, usando modelos de IA existentes para edición fluida.",
+        "problema": "La traducción de texto dentro de imágenes (IIMT) requiere grandes conjuntos de datos de entrenamiento para cada par de idiomas y modelos específicos.",
+        "propuesta": "FlowTranslator es un marco que no requiere entrenamiento. Utiliza OCR y LLM para generar un prompt de traducción, que se inyecta en un modelo de difusión T2I. Introduce controles de trayectoria (RCR y CE) para mejorar la precisión y naturalidad del texto traducido.",
+        "resultados": "Logra puntuaciones promedio PRIM BLEU de 20.6 y COMET de 57.2, superando a UniTranslator. En fotos de escenas reales traducidas al chino, alcanza un 40.1% de precisión de coincidencia exacta, superando a sistemas de edición existentes.",
+        "por_que_importa": "Ofrece una solución de IIMT potente y sin entrenamiento, aprovechando los avances en modelos T2I y LLM, lo que reduce la necesidad de datos de entrenamiento específicos y lo hace más accesible.",
+        "tags": [
+          "traducción de imágenes",
+          "IA sin entrenamiento",
+          "edición basada en flujo",
+          "modelos de difusión",
+          "OCR",
+          "LLM"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-04T19:57:44Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.02501",
+      "rank": 4,
+      "title": "SpecPilot: Autonomous Algorithm Discovery and Systems Optimization for Speculative Decoding",
+      "authors": [
+        "Kunjun Li",
+        "Wenhao Chai",
+        "Yihao Liang",
+        "Yuezhou Hu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-02",
+      "url": "https://arxiv.org/abs/2611.02501",
+      "pdf_url": "https://arxiv.org/pdf/2611.02501",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Speculative decoding accelerates memory-bound LLM decoding with a lightweight drafter, and parallel drafters extend this speedup by drafting a whole block in one forward pass. However, it remains unclear whether their released systems (stock) attain the full speedup that parallel drafting permits. We identify three challenges. First, with one request, each step accepts few tokens but reads every target weight. Second, with batching, per-request verification work roughly halves the speedup over autoregressive (AR) decoding. Third, speculative decoding is deployment-specific, and no universal optimization fits every serving regime, drafter, target model and GPU. To address these challenges, we present SpecPilot, an autonomous agentic loop that discovers algorithms and systems optimizations for each deployment. In each round, a cost model locates the largest gaps between the current system and its ceiling. Parallel agents explore directions and integrate the successful ones. Token forcing checks every output token against stock to detect reward hacking. A structured memory carries validated mechanisms to new rounds and deployments. SpecPilot discovered a general lossless 12-bit weight format, tree verification for hybrid recurrent targets, two-level verification and three batching mechanisms. We evaluate it across four target models, three drafters, two GPU platforms and five benchmarks. Without training or quality loss, it raises the speedup over AR from stock's 4.46$\\times$ to 10.87$\\times$ with one request, and from 1.94$\\times$ to 3.93$\\times$ with batching.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "SpecPilot optimiza la decodificación especulativa de LLMs, logrando hasta 10.87x más velocidad sin pérdida de calidad.",
+        "problema": "La decodificación especulativa de LLMs tiene un potencial de velocidad desaprovechado debido a ineficiencias en el manejo de tokens, la verificación por lotes y la falta de optimización adaptativa a cada despliegue.",
+        "propuesta": "Se presenta SpecPilot, un agente autónomo que descubre automáticamente algoritmos y optimizaciones de sistemas para la decodificación especulativa, adaptándose a modelos, drafters, GPUs y benchmarks específicos.",
+        "resultados": "SpecPilot incrementa la velocidad de 4.46x a 10.87x en decodificación de una sola solicitud y de 1.94x a 3.93x en decodificación por lotes, comparado con sistemas base, sin afectar la calidad. Descubrió un formato de 12 bits, verificación híbrida y tres mecanismos de batching.",
+        "por_que_importa": "Permite acelerar significativamente la inferencia de LLMs en producción, reduciendo costos y mejorando la experiencia del usuario al hacer la tecnología más eficiente y accesible.",
+        "tags": [
+          "LLMs",
+          "Decodificación Especulativa",
+          "Optimización",
+          "Agentes Autónomos",
+          "Rendimiento",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-04T19:57:54Z"
+      }
+    }
+  ],
+  "generated_at": "2026-11-04T19:57:54Z"
+}
