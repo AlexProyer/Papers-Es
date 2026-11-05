@@ -12226,5 +12226,138 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-11-04T19:57:54Z"
+  },
+  "arxiv:2611.06553v1": {
+    "tldr": "Eliminamos neuronas de seguridad 'frágiles' en LLMs para hacerlos más resistentes a ataques y jailbreaks.",
+    "problema": "Los LLMs alineados con la seguridad son vulnerables a ataques de 'jailbreak' porque su comportamiento seguro depende de un número muy pequeño de neuronas críticas, haciéndolos frágiles.",
+    "propuesta": "Proponemos 'Addition by Subtraction', un método que elimina gradualmente neuronas críticas para la seguridad durante el ajuste fino y usa optimización por preferencias para que otras partes del modelo asuman la responsabilidad de la seguridad.",
+    "resultados": "Los modelos resultantes son más robustos a ataques de poda y ablación de direcciones de rechazo, reduciendo las tasas de éxito de algunos ataques hasta en un 90%. También mejoran la veracidad y mantienen las capacidades generales.",
+    "por_que_importa": "Fortalece la seguridad de los LLMs frente a ataques conocidos y emergentes, haciéndolos más confiables para aplicaciones prácticas sin sacrificar su rendimiento general.",
+    "tags": [
+      "LLMs",
+      "seguridad",
+      "alineación",
+      "ciberseguridad",
+      "robustez",
+      "jailbreak"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-05T20:09:37Z"
+  },
+  "arxiv:2611.06583v1": {
+    "tldr": "PatchCon mejora la detección de vulnerabilidades en código usando parches de corrección como guía para el aprendizaje.",
+    "problema": "Los métodos actuales de detección de vulnerabilidades en código tratan las funciones de forma aislada y no aprovechan la información de los parches que corrigen dichas vulnerabilidades.",
+    "propuesta": "PatchCon es un modelo basado en CodeBERT que utiliza aprendizaje contrastivo consciente de los parches. Trata los pares de funciones vulnerables y corregidas como 'negativos duros' para aprender las diferencias sutiles introducidas por las correcciones.",
+    "resultados": "PatchCon mejora la precisión en la distinción entre funciones vulnerables y corregidas (métricas 'pairwise') de 0.2060 a 0.3264 sobre el mejor modelo comparado. Logra una precisión comparable a un LLM (GPT-4o) pero con menor coste y supera a otros modelos en vulnerabilidades nuevas y no vistas.",
+    "por_que_importa": "Permite una detección de vulnerabilidades más precisa y eficiente, especialmente útil para identificar fallos de seguridad en código nuevo o en correcciones recientes, reduciendo el riesgo y el coste de la ciberseguridad.",
+    "tags": [
+      "detección de vulnerabilidades",
+      "aprendizaje contrastivo",
+      "ciberseguridad",
+      "análisis de código",
+      "parches de software",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-05T20:09:47Z"
+  },
+  "arxiv:2611.06257v1": {
+    "tldr": "Modelos de lenguaje locales de código abierto pueden reproducir vulnerabilidades de software, incluso en hardware de consumo.",
+    "problema": "Evaluar la capacidad de los modelos de lenguaje de código abierto (LLM) que se ejecutan localmente en hardware de consumo para reproducir automáticamente vulnerabilidades de software, transformando descripciones en entradas que causan fallos.",
+    "propuesta": "Se evaluaron doce configuraciones de LLM locales (tres generaciones, dos arquitecturas, tres niveles de cuantización) en diez tareas de reproducción de vulnerabilidades del entorno CyberGym.",
+    "resultados": "Todos los modelos, incluso los de 4 mil millones de parámetros, resolvieron la mayoría de las tareas fáciles. Las tareas más difíciles requirieron modelos de 27 mil millones de parámetros. La cuantización no afectó la capacidad de resolución, pero sí la velocidad. Los modelos 'mixture of experts' obtuvieron puntuaciones similares más rápido. Casi todas las ejecuciones identificaron la función vulnerable y la hipótesis correcta, pero la clave es si la hipótesis se convierte en una entrada funcional.",
+    "por_que_importa": "Demuestra que los LLM locales y accesibles pueden automatizar tareas de ciberseguridad críticas como la reproducción de vulnerabilidades, permitiendo un análisis de seguridad más rápido y eficiente sin depender de servicios en la nube.",
+    "tags": [
+      "LLM",
+      "ciberseguridad",
+      "reproducción de vulnerabilidades",
+      "hardware de consumo",
+      "automatización"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-05T20:09:56Z"
+  },
+  "arxiv:2611.06135v1": {
+    "tldr": "SBVul detecta sentencias explotables en código C/C++ usando agentes LLM para mejorar la detección de vulnerabilidades.",
+    "problema": "Los métodos actuales de detección de vulnerabilidades con LLMs clasifican funciones enteras, pero no identifican las sentencias específicas explotables, y tienen dificultades para distinguir entre funciones vulnerables y parcheadas.",
+    "propuesta": "SBVul es un enfoque basado en agentes que primero identifica sentencias candidatas a vulnerabilidad dentro de una función y su repositorio (Fase 1), y luego un segundo agente analiza el flujo de control y datos para confirmar o descartar la vulnerabilidad (Fase 2).",
+    "resultados": "La Fase 1 identifica sentencias objetivo en el 56-77% de las funciones vulnerables. La Fase 2 confirma sentencias con explicaciones aceptadas en el 26-73%. Sin embargo, los modelos también confirman falsos positivos en el 23-61% de las funciones parcheadas. La mayor precisión a nivel de sentencia es 0.315 con un recall de 0.605 (Opus 5.5). A nivel de función, SBVul con Opus 5.5 clasifica correctamente el 42.0% de los pares, superando el 33.8% del mejor método anterior.",
+    "por_que_importa": "Permite a los desarrolladores localizar y corregir vulnerabilidades de forma más precisa al identificar las sentencias exactas, mejorando la seguridad del software y la eficiencia en la corrección.",
+    "tags": [
+      "detección de vulnerabilidades",
+      "LLMs",
+      "ciberseguridad",
+      "ingeniería de software",
+      "análisis de código",
+      "C/C++"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-05T20:10:06Z"
+  },
+  "arxiv:2611.06083": {
+    "tldr": "SleuthVLM demuestra que los modelos de IA pueden entender videos sin audio directo, enfocándose en la transcripción y la capacidad del agente.",
+    "problema": "Los modelos actuales de comprensión de video ('omni') dependen de procesar audio y video conjuntamente, lo que requiere grandes modelos y datos. Se cuestiona si el audio directo es esencial.",
+    "propuesta": "Se introduce SleuthVLM, un sistema basado en un VLM (modelo de lenguaje visual) que no escucha el audio directamente. En su lugar, el audio se transcribe a texto y el VLM analiza el video de forma autónoma, sin flujos de trabajo predefinidos.",
+    "resultados": "SleuthVLM logra una precisión promedio del 75.0% en cuatro benchmarks, superando a Gemini 3.8 Flash por 2.6 puntos. También lidera la tabla Video-MME-v2 con un 77.8%. Con un VLM de 27B, supera a otros modelos omni de código abierto.",
+    "por_que_importa": "Demuestra que la clave para la comprensión de video no es la capacidad de oír, sino la habilidad del agente para analizar información (incluida la transcripción de audio). Esto sugiere que mejorar la capacidad de los agentes es más importante que simplemente escalar modelos o datos para la alineación multimodal.",
+    "tags": [
+      "comprensión de video",
+      "IA",
+      "agentes",
+      "VLM",
+      "sin audio",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-05T20:10:15Z"
+  },
+  "arxiv:2611.06518": {
+    "tldr": "EmoReward mejora la generación de video emocional adaptando dinámicamente las recompensas, superando las limitaciones de los métodos fijos y la subjetividad humana.",
+    "problema": "La generación de video con IA, especialmente la expresión emocional, se basa en recompensas fijas que no capturan la intención emocional, lo que lleva a resultados subóptimos y 'reward hacking'. Los métodos existentes como RLHF son difíciles de escalar y sensibles a las diferencias estéticas individuales.",
+    "propuesta": "Se introduce EmoReward, un mecanismo de entrenamiento autoevolutivo que extrae la fiabilidad de la evidencia de los rastros de recompensa durante el entrenamiento para adaptar la asignación de pesos de recompensas múltiples en ejecuciones futuras. Utiliza 'Reflective Reward Gating' para calibrar las contribuciones de diferentes señales y 'RewardMemory' para estimar la fiabilidad de las señales y ajustar los pesos de fusión.",
+    "resultados": "Los experimentos en HunyuanVideo 1.5 muestran mejoras con múltiples algoritmos de RL y superan a otros métodos de recompensa agentica bajo SAGE-GRPO. Las ablaciones y experimentos de transferencia en SD 3.5 y FLUX también respaldan la calibración adaptativa de recompensas para la generación visual.",
+    "por_que_importa": "Permite una generación de video más precisa y emocionalmente resonante, superando las limitaciones de las recompensas fijas y la subjetividad, lo que es crucial para aplicaciones creativas y de entretenimiento.",
+    "tags": [
+      "generación de video",
+      "IA emocional",
+      "aprendizaje por refuerzo",
+      "recompensa adaptativa",
+      "calibración de recompensa"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-05T20:10:25Z"
+  },
+  "arxiv:2611.05648": {
+    "tldr": "NitroFusion2 revoluciona la destilación de modelos de difusión multimodal, logrando texto de alta calidad en solo 1-2 pasos.",
+    "problema": "Los métodos actuales de destilación adversarial para modelos de difusión multimodal dependen de características de imagen, lo cual es ineficiente. Se busca mejorar la destilación para generar texto de alta calidad en menos pasos.",
+    "propuesta": "Se introduce Text-Stream Adversarial Distillation (TSAD) y Aspect-Cued Discrimination (ACD) integrados en NitroFusion2. TSAD utiliza estados intermedios de tokens de texto como representación adversarial, mientras que ACD dirige la discriminación hacia aspectos específicos (tipografía, objetos, estilo).",
+    "resultados": "NitroFusion2 reduce la destilación de 4-8 pasos a 1-2 pasos con calidad comparable. En un paso, genera texto nítido y detalles finos. En dos pasos, se mantiene competitivo en los benchmarks evaluados.",
+    "por_que_importa": "Permite la generación de texto de alta calidad en modelos de difusión multimodal de forma mucho más rápida y eficiente, haciendo práctica la generación en pocos pasos para aplicaciones reales.",
+    "tags": [
+      "destilación adversarial",
+      "modelos de difusión",
+      "multimodal",
+      "generación de texto",
+      "eficiencia"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-05T20:10:34Z"
+  },
+  "arxiv:2611.03330": {
+    "tldr": "Nueva ley SIMPLE predice y explica el costo energético de la inferencia de LLMs, superando modelos actuales sin calibración.",
+    "problema": "El costo energético de la inferencia de Modelos de Lenguaje Grandes (LLMs) no es lineal por token y los modelos actuales requieren calibración por cada modelo específico.",
+    "propuesta": "Se propone la ley SIMPLE (SIMPLE Inference Model to Predict LLMs Energy), un modelo analítico de cuatro parámetros que separa el costo de prefill y decode (KV-cache y cómputo de siguiente token) y se aplica a diferentes arquitecturas (MHA, GQA).",
+    "resultados": "La ley SIMPLE alcanza R^2 = 0.969 y un MAPE del 11.97% en GPUs H100, superando al SOTA 3.1-3.5x sin calibración. Predice que el prefill crece cuadráticamente con la dimensión oculta y GQA reduce el costo por token hasta 3x. El costo energético por solicitud aumenta significativamente con el presupuesto de razonamiento y en servicios agentic.",
+    "por_que_importa": "Permite predecir y optimizar el consumo energético de los LLMs en producción, crucial para la eficiencia y sostenibilidad de aplicaciones de IA generativa a gran escala, especialmente en escenarios complejos como el servicio agentic.",
+    "tags": [
+      "LLMs",
+      "Eficiencia Energética",
+      "Inferencia IA",
+      "Optimización",
+      "Modelos Analíticos",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-05T20:10:44Z"
   }
 }
