@@ -12359,5 +12359,222 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-11-05T20:10:44Z"
+  },
+  "arxiv:2611.08281v1": {
+    "tldr": "Evalúa la seguridad de agentes IA frente a ataques de ingeniería social multimodales, revelando vulnerabilidades significativas.",
+    "problema": "Los agentes de IA personales son vulnerables a ataques de ingeniería social que utilizan contenido multimodal falso (imágenes, audio, video), pero las evaluaciones actuales se centran principalmente en texto, ignorando la seguridad intrínseca ante estas amenazas.",
+    "propuesta": "Se introduce Multimodal-SEA, un benchmark interactivo con 608 tareas diseñadas por expertos basadas en casos reales de fraude, que simula ataques multimodales en entornos controlados para evaluar la seguridad intrínseca de los agentes.",
+    "resultados": "Los siete modelos multimodales evaluados mostraron tasas de éxito de ataque del 7.1% al 34.5%. La inclusión de contenido multimodal aumentó el éxito del ataque del 19.9% al 29.2%. Las instrucciones de seguridad más estrictas redujeron el éxito del ataque pero no mejoraron el reconocimiento de contenido engañoso.",
+    "por_que_importa": "Es crucial para proteger a los usuarios de fraudes sofisticados y asegurar que los agentes de IA personales sean confiables y seguros en interacciones del mundo real, especialmente a medida que integran más capacidades multimodales.",
+    "tags": [
+      "seguridad IA",
+      "ingeniería social",
+      "multimodal",
+      "benchmarking",
+      "vulnerabilidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-06T19:36:05Z"
+  },
+  "arxiv:2611.08226v1": {
+    "tldr": "Los 'jailbreaks' de IA imitan dinámicas de control coercitivo, revelando problemas de seguridad relacionales más allá de la simple censura.",
+    "problema": "Los métodos actuales de ciberseguridad para la IA se centran en la salida (contenido dañino), ignorando la dimensión relacional de la interacción usuario-IA y cómo los 'jailbreaks' explotan esto.",
+    "propuesta": "Se propone un nuevo marco basado en la teoría de la violencia interpersonal para categorizar los 'jailbreaks' como control coercitivo (corporal vs. incorpóreo) y analizar cómo se incrusta en los paradigmas de entrenamiento de IA.",
+    "resultados": "El resumen no especifica resultados numéricos, pero identifica cómo las dinámicas de control coercitivo incorpóreo se incrustan en el entrenamiento de IA y son explotadas por 'jailbreaks' basados en personas.",
+    "por_que_importa": "Replantear la seguridad y alineación de la IA no solo como un problema técnico, sino como un reflejo de dinámicas relacionales de poder y control, es crucial para un desarrollo ético y seguro.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Ética de IA",
+      "Control Coercitivo",
+      "Jailbreaking"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-06T19:36:31Z"
+  },
+  "arxiv:2611.08170v1": {
+    "tldr": "Agentes autónomos de ciberseguridad combaten estafas de IA, volviendo la lucha contra el fraude una carrera armamentista digital.",
+    "problema": "Las estafas impulsadas por IA se vuelven más sofisticadas y escalables, superando las defensas tradicionales. Surge la necesidad de defenderse en un ecosistema adversarial donde agentes autónomos de ataque y defensa compiten.",
+    "propuesta": "Se presenta un modelo formal de interacciones entre agentes autónomos (scambaiting) para analizar la dinámica estratégica entre estafadores y defensores. Se estudia cómo la calidad de la imitación y la detección influyen en la rentabilidad y la efectividad defensiva.",
+    "resultados": "La rentabilidad de los estafadores se vuelve negativa cuando los agentes de defensa superan ciertos umbrales. La inversión en la calidad de la imitación por parte de los defensores supera las ganancias equivalentes en detección por parte de los estafadores, favoreciendo al defensor en una carrera armamentista.",
+    "por_que_importa": "Proporciona información crucial sobre la estabilidad, escalabilidad y efectividad a largo plazo de los agentes de defensa autónomos contra el fraude en un panorama de amenazas en constante evolución mediado por IA.",
+    "tags": [
+      "ciberseguridad",
+      "IA",
+      "agentes autónomos",
+      "scambaiting",
+      "fraude online",
+      "defensa"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-06T19:36:41Z"
+  },
+  "arxiv:2611.07611v1": {
+    "tldr": "Defensa proactiva contra agentes LLM: honeypots planificados que desvían ataques a copias aisladas.",
+    "problema": "Los agentes LLM explotan vulnerabilidades web tan rápido que los parches son ineficaces. Se necesita una defensa que anticipe y desvíe estos ataques.",
+    "propuesta": "Se propone un sistema de defensa que utiliza un LLM para planificar honeypots estáticos a partir del código fuente de la aplicación. Un router redirige las peticiones confirmadas como maliciosas a una copia aislada de la aplicación.",
+    "resultados": "En tareas críticas (CVE-Bench), se redujo el compromiso real de 26/40 a 5/40 para Claude Opus y de 20/40 a 0/40 para ARTEX. En tareas nuevas, ARTEX pasó de 15/20 a 0/20. En la mitad de los casos, el exploit funcionó en la copia aislada sin afectar el objetivo real.",
+    "por_que_importa": "Ofrece una defensa robusta y proactiva contra ataques automatizados de LLM, minimizando el riesgo de compromiso real al desviar exploits funcionales a entornos controlados.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Honeypot",
+      "Defensa",
+      "Inteligencia Artificial",
+      "Vulnerabilidades"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-06T19:36:50Z"
+  },
+  "arxiv:2611.07640v1": {
+    "tldr": "Nuevos ataques de 'indirect prompt injection' manipulan resultados de tareas, no solo instrucciones, eludiendo defensas actuales.",
+    "problema": "Los benchmarks actuales de 'indirect prompt injection' (IPI) no evalúan adecuadamente los ataques que manipulan el resultado de una tarea ya en curso, sino que solo se centran en redirigir la tarea. Esto lleva a una sobreestimación de la efectividad de las defensas existentes.",
+    "propuesta": "Se introduce un nuevo benchmark que define IPI por autoridad, no por redacción de instrucciones. El benchmark valida 90 casos en tres entornos de uso de herramientas, donde el contenido malicioso manipula decisiones específicas (objetivo, reglas, acciones, consecuencias, observaciones o estado) sin cambiar la tarea principal. Se evalúan ataques dirigidos a diferentes partes del proceso de toma de decisiones del agente.",
+    "resultados": "Sin defensa, los ataques que manipulan las reglas de decisión, acciones disponibles y estado del agente tienen una tasa de éxito media mayor que los ataques al objetivo. Una defensa de detección y eliminación reduce los ataques al objetivo al 2.4%, pero los ataques a observaciones y estado siguen teniendo tasas de éxito del 9.5% y 12.1%. Una defensa de política de herramientas solo reduce el éxito al 15.4%, cercano al 17.0% sin defensa.",
+    "por_que_importa": "Las defensas actuales pueden ser insuficientes contra ataques más sofisticados que manipulan el resultado de las tareas. Este benchmark y los hallazgos son cruciales para desarrollar defensas más robustas y evaluar correctamente la seguridad de los agentes que usan herramientas.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Prompt Injection",
+      "Seguridad de Modelos",
+      "Benchmarking"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-06T19:37:00Z"
+  },
+  "arxiv:2611.07483v1": {
+    "tldr": "Firmar los requisitos de los agentes IA multi-agente reduce drásticamente la manipulación maliciosa durante las transferencias de tareas.",
+    "problema": "Al dividir tareas entre agentes de IA y fusionar sus resultados, los requisitos importantes pueden perderse, alterarse o ignorarse en cada paso de transferencia, especialmente bajo ataque.",
+    "propuesta": "Proponen un método de transferencia de requisitos que extrae los requisitos verbatim, los empaqueta en un 'manifiesto' firmado digitalmente (HMAC-SHA256) y utiliza un verificador determinista para comprobar la fusión de resultados.",
+    "resultados": "Los manifiestos firmados redujeron los 'commits' inseguros bajo ataque del 69.4% al 9.0%. La firma previno la manipulación en tránsito, con un 0% de violaciones en manifiestos firmados mutados frente al 79% en no firmados. El verificador determinista detectó el 78.7% de decisiones infractoras.",
+    "por_que_importa": "Este método protege la integridad de los requisitos de los agentes de IA durante las transferencias, crucial para la seguridad y fiabilidad de sistemas complejos, aunque la extracción inicial de requisitos sigue siendo un punto vulnerable.",
+    "tags": [
+      "IA multi-agente",
+      "ciberseguridad",
+      "integridad de requisitos",
+      "firmas digitales",
+      "transferencia de tareas",
+      "confiabilidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-06T19:37:10Z"
+  },
+  "arxiv:2611.07650v1": {
+    "tldr": "Los intermediarios de LLM prometen ahorro y fiabilidad, pero a menudo fallan en calidad, permisos y facturación precisa.",
+    "problema": "Los servicios intermediarios (relays) que dan acceso a LLMs a menudo no cumplen las expectativas de los usuarios en cuanto a calidad de las respuestas, el cumplimiento de las instrucciones sobre el uso de herramientas y la precisión de la facturación, a pesar de ofrecer precios más bajos.",
+    "propuesta": "Se evaluaron 20 servicios intermediarios de LLM (GPT-4 y Claude Opus) comparando sus respuestas con las oficiales, analizando los permisos de herramientas y verificando el uso de tokens facturados. Se realizaron pruebas iniciales y de reevaluación para detectar desviaciones.",
+    "resultados": "En la primera ronda, 7 de 10 relays de bajo costo y 2 de 10 de costo igual o superior mostraron diferencias de comportamiento. Cuatro relays devolvieron llamadas a herramientas a pesar de estar deshabilitadas. Cinco relays reportaron entre 4.200 y 60.000 tokens de entrada adicionales para las mismas solicitudes.",
+    "por_que_importa": "Los usuarios no pueden confiar solo en el modelo anunciado y el precio para evaluar la fiabilidad de los relays. Existen riesgos de facturación inflada y violaciones de permisos de herramientas, lo que subraya la necesidad de mediciones repetidas y exhaustivas para la evaluación de servicios.",
+    "tags": [
+      "LLM",
+      "APIs",
+      "Ciberseguridad",
+      "Facturación",
+      "Rendimiento",
+      "Relays"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-06T19:37:19Z"
+  },
+  "arxiv:2611.07486v1": {
+    "tldr": "MEvince usa LLMs con conocimiento para identificar técnicas de malware en informes, mejorando la precisión y cobertura.",
+    "problema": "Identificar de forma fiable las técnicas de malware en informes de análisis es difícil debido a la dispersión de la evidencia, la similitud entre técnicas y el riesgo de que los LLMs se basen en asociaciones plausibles en lugar de evidencia suficiente.",
+    "propuesta": "MEvince es un framework de razonamiento LLM con conocimiento restringido que crea una representación de comportamiento compartida para conectar observaciones de informes con definiciones de técnicas. Utiliza extracción guiada por primitivas y recuperación alineada con evidencia para identificar y comparar técnicas, validando la evidencia y los requisitos de las técnicas.",
+    "resultados": "MEvince mejora el F1 de identificación exacta en un 17.4% sobre la mejor línea base. Aumenta la cobertura de candidatos de etiquetas doradas del 31.6% al 47.9%. La adaptación sin actualización de parámetros mejora aún más los resultados.",
+    "por_que_importa": "Mejora significativamente la precisión y la cobertura en la identificación de técnicas de malware, crucial para el análisis de amenazas y la defensa, permitiendo una mejor comprensión del comportamiento del malware.",
+    "tags": [
+      "malware",
+      "LLM",
+      "ciberseguridad",
+      "ATT&CK",
+      "identificación de técnicas",
+      "análisis de comportamiento"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-06T19:37:29Z"
+  },
+  "arxiv:2609.37820": {
+    "tldr": "Las empresas compiten estratégicamente en el 'espacio de modelos de lenguaje' para influir en el valor de mercado y atraer inversiones.",
+    "problema": "Las decisiones de inversión de las empresas, al ser públicas, alteran el valor de mercado futuro y las oportunidades para competidores e inversores. Es difícil medir y predecir cómo estas decisiones afectan la percepción del mercado y la estructura de capital.",
+    "propuesta": "Se modela la competencia estratégica entre empresas en un 'espacio de modelos de lenguaje' (representado por vectores de noticias) y se analiza cómo ajustan su 'capacidad' (inversiones, estrategia) en respuesta a shocks de flujo de caja, utilizando simulación multi-agente y un nuevo estimador 'sandwich'.",
+    "resultados": "El análisis valida los hallazgos del modelo en datos reales de empresas cotizadas en Nasdaq (2018-2022), mostrando la relación entre las decisiones empresariales y su representación en el 'espacio de modelos de lenguaje'. El resumen no especifica magnitudes numéricas exactas.",
+    "por_que_importa": "Permite a los profesionales entender y predecir cómo las acciones de las empresas son percibidas y valoradas en el mercado moderno, influenciado por el análisis de datos textuales y modelos de lenguaje, lo cual es crucial para la estrategia de inversión y la competencia.",
+    "tags": [
+      "modelos de lenguaje",
+      "estrategia empresarial",
+      "finanzas",
+      "ciberseguridad",
+      "análisis de datos",
+      "competencia"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-06T19:37:39Z"
+  },
+  "arxiv:2611.07392": {
+    "tldr": "WeLM-Image unifica la generación de imágenes y la edición guiada por instrucciones en un solo modelo eficiente para aplicaciones a gran escala.",
+    "problema": "Se necesita un modelo de generación de imágenes unificado que pueda manejar texto, imágenes de referencia y edición, optimizado para despliegue en hardware limitado y aplicaciones de consumo a gran escala.",
+    "propuesta": "Se propone WeLM-Image, un modelo fundacional unificado que procesa texto, imágenes de referencia y latentes objetivo como una secuencia entrelazada. Utiliza una arquitectura Mixture-of-Transformers (MoT) con Mixture-of-Experts (MoE) para una capacidad dispersa y un motor de datos enfocado en la generación con un vocabulario visual y clustering a gran escala. Se optimiza la generación y edición por separado y luego se consolidan.",
+    "resultados": "El modelo de 1536p de WeLM-Image se clasifica primero en PRISM-Bench, Qwen-Image-Bench y UnicBench entre los modelos de código abierto evaluados. WeLM-Image-Turbo genera una imagen de 1024x1024 en 4.98 segundos en una única GPU NVIDIA H20.",
+    "por_que_importa": "Este modelo permite capacidades avanzadas de generación y edición de imágenes en dispositivos de consumo con recursos limitados, democratizando la creación de contenido visual de alta calidad y la personalización.",
+    "tags": [
+      "generación de imágenes",
+      "edición de imágenes",
+      "IA unificada",
+      "eficiencia computacional",
+      "modelos fundacionales",
+      "multimodalidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-06T19:37:48Z"
+  },
+  "arxiv:2611.07854": {
+    "tldr": "Drex revoluciona los modelos de IA en producción con modelos de decisión eficientes y consistentes, superando a los modelos autorregresivos.",
+    "problema": "Los modelos de lenguaje grandes autorregresivos, aunque precisos, son inconsistentes en producción, caros y lentos. Los modelos de decisión abordan esto devolviendo una distribución de probabilidad sobre opciones sin decodificación autorregresiva.",
+    "propuesta": "Se presenta Drex, una familia de cuatro modelos de decisión abiertos (8B, 9B, 35B, 27B) que toman un estado (documento, registro, contexto con o sin imágenes) y preguntas con opciones, devolviendo una distribución de probabilidad. El entrenamiento combina ajuste fino supervisado, aprendizaje por refuerzo con feedback ajustado (RLAF) y ajuste de visión para el modelo Max.",
+    "resultados": "En Decision Index 0.4.1, Drex Max alcanza 67.52, superando a Jev 1.14.0 (60.70). En Decision Bench v4, Drex Max es estadísticamente similar a d3-turbo y GPT-6 Sol, y 1.6 puntos por debajo de Claude Opus 5.5, pero es el más preciso entre los modelos de decisión. Drex Max responde en 183 ms, frente a ~2.0 s de GPT-6 Sol y ~3.5 s de Claude Opus 5.5. Los resultados son estables ante el reordenamiento de opciones.",
+    "por_que_importa": "Drex ofrece una alternativa más rápida, consistente y robusta a los LLMs autorregresivos para aplicaciones en producción, reduciendo costos y latencia sin sacrificar precisión, y democratiza el acceso al ser modelos de código abierto.",
+    "tags": [
+      "modelos de decisión",
+      "IA en producción",
+      "eficiencia",
+      "consistencia",
+      "código abierto",
+      "procesamiento de lenguaje natural"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-06T19:37:58Z"
+  },
+  "arxiv:2611.07613": {
+    "tldr": "Transformers para LiDAR de onda completa en tiempo real que mejoran la precisión y la velocidad mediante la reducción de tokens y la mejora de datos.",
+    "problema": "Los sensores LiDAR, cruciales para la conducción autónoma, fallan en condiciones adversas (niebla, lluvia) y los Transformers para datos LiDAR de onda completa (FWL) son computacionalmente costosos y generalizan mal por falta de datos.",
+    "propuesta": "Se propone FWL-ToPM para reducir tokens redundantes en regiones de baja intensidad y FWLAug para aumentar datos preservando la estructura física de las formas de onda FWL, mejorando la generalización.",
+    "resultados": "FWL-ToPM logra una aceleración de 8 veces, alcanzando rendimiento en tiempo real y una mejora de 9 puntos en F1 sobre el estado del arte. FWLAug mejora aún más el rendimiento, incluso en escenas no vistas.",
+    "por_que_importa": "Permite el despliegue práctico de la percepción basada en LiDAR de onda completa, superando limitaciones de rendimiento y generalización en condiciones difíciles.",
+    "tags": [
+      "LiDAR",
+      "Visión por Computadora",
+      "Conducción Autónoma",
+      "Transformers",
+      "Ciberseguridad",
+      "Procesamiento de Señales"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-06T19:38:08Z"
+  },
+  "arxiv:2611.05376": {
+    "tldr": "Propone 'simbiontes cognitivos': IA integradas de por vida para potenciar la inteligencia humana, no solo para actuar solas.",
+    "problema": "Las personas olvidan, pierden información y toman malas decisiones porque la IA actual opera externamente, sin acceso al contexto humano en tiempo real.",
+    "propuesta": "Desarrollar 'simbiontes cognitivos': compañeros de IA permanentes, privados y proactivos que sienten, recuerdan, modelan y participan en el pensamiento humano, actuando como una extensión de la mente.",
+    "resultados": "El resumen no especifica resultados numéricos, pero conceptualiza el 'hueco cognitivo' como la brecha entre el potencial humano y la memoria de trabajo, y describe un 'bucle de simbiosis' para el diseño.",
+    "por_que_importa": "Transforma la IA de una herramienta autónoma a un colaborador íntimo, aumentando drásticamente las capacidades humanas y planteando nuevas consideraciones éticas y de gobernanza.",
+    "tags": [
+      "IA Aumentada",
+      "Simbiontes Cognitivos",
+      "Inteligencia Humana",
+      "IA Personal",
+      "Ética de IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-06T19:38:34Z"
   }
 }
