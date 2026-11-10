@@ -12610,5 +12610,156 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-11-09T22:35:24Z"
+  },
+  "arxiv:2611.12241v1": {
+    "tldr": "Un nuevo ataque, SNAPRAG, extrae eficientemente conocimiento privado de sistemas RAG con menos consultas y sin LLMs externos.",
+    "problema": "Los sistemas RAG, que usan bases de conocimiento externas para mejorar las respuestas de los LLMs, son vulnerables a ataques que extraen información privada. Los métodos actuales son costosos (requieren muchas consultas o LLMs externos).",
+    "propuesta": "SNAPRAG genera consultas adversarias mediante mutación discreta de tokens, sin usar LLMs externos, y utiliza una calibración adaptativa para explorar eficientemente la base de datos objetivo. Permite un presupuesto de consultas configurable.",
+    "resultados": "Requiere hasta 6.77 veces menos consultas para extraer la mitad de la base de conocimiento. Con un presupuesto fijo, extrae hasta el 96.9% (7.7-19.9% más que otros métodos). Contra defensas activas, extrae entre 50.7% y 96.3% en 4 de 5 objetivos.",
+    "por_que_importa": "Demuestra una vulnerabilidad significativa en sistemas RAG, obligando a desarrollar defensas más robustas para proteger la privacidad de los datos en aplicaciones de IA.",
+    "tags": [
+      "RAG",
+      "Extracción de conocimiento",
+      "Ataque adversario",
+      "Privacidad de datos",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-10T19:53:59Z"
+  },
+  "arxiv:2611.12807v1": {
+    "tldr": "La defensa de LoRA contra backdoors no borra los parámetros maliciosos, solo los oculta temporalmente.",
+    "problema": "Los adaptadores LoRA para modelos de lenguaje grandes pueden contener backdoors ocultos que modifican menos del 1% de los parámetros, representando un riesgo de seguridad en la cadena de suministro. Las defensas actuales de proyección de subespacio reducen la tasa de éxito del ataque (ASR), pero no eliminan el riesgo.",
+    "propuesta": "Se auditan las defensas de proyección de subespacio para LoRA y se propone una proyección de diferencia de disparador de rango 1 por módulo. Se analiza la reactivación de backdoors mediante análisis espectral y descomposición de la energía del acoplamiento.",
+    "resultados": "La proyección propuesta reduce el ASR del 60.4% al 0.0% en benchmarks estándar y del 70.3% al 0.0% en un conjunto de datos no contaminado. Sin embargo, bajo reactivación con pocos ejemplos (5 muestras), todas las defensas evaluadas recuperan el ASR entre 91.7% y 100.0% en una época.",
+    "por_que_importa": "Las defensas actuales contra backdoors en LoRA solo suprimen temporalmente los ataques, no los eliminan permanentemente. Los backdoors pueden ser reactivados fácilmente, lo que exige un desarrollo de defensas más robustas y permanentes para la seguridad de los modelos de lenguaje grandes.",
+    "tags": [
+      "LoRA",
+      "backdoor",
+      "ciberseguridad",
+      "IA",
+      "modelos de lenguaje",
+      "defensa"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-10T19:54:09Z"
+  },
+  "arxiv:2611.12386v1": {
+    "tldr": "Detecta el LLM y el 'harness' detrás de ciberataques automatizados analizando su comportamiento.",
+    "problema": "Es difícil identificar la configuración (versión de LLM, 'harness') de los atacantes en ciberataques automatizados, lo que dificulta su defensa.",
+    "propuesta": "Introduce 'shibboleth traps', servicios honeypot modulares que provocan comportamientos distintivos de los atacantes y mecanismos para inferir indirectamente comportamientos de ejecución peculiares de los 'harnesses'.",
+    "resultados": "La inferencia combinada distingue entre 15 modelos con un 90% de precisión (top-1). Las reglas de sondeo identifican el 'harness' correcto con un 92% de precisión. Los agentes que intentan ocultar su identidad aún dejan evidencia conductual útil.",
+    "por_que_importa": "Permite identificar y rastrear atacantes que usan LLMs y 'harnesses' en ciberataques, mejorando las capacidades de defensa y atribución.",
+    "tags": [
+      "ciberseguridad",
+      "LLM",
+      "honeypot",
+      "fingerprinting",
+      "ataques automatizados",
+      "defensa"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-10T19:54:18Z"
+  },
+  "arxiv:2611.12155v1": {
+    "tldr": "Atacan agentes IA manipulando sus 'habilidades' de terceros de forma sigilosa para lograr resultados erróneos sin ser detectados.",
+    "problema": "Los agentes de IA confían en 'habilidades' de terceros para realizar tareas, pero estas pueden ser manipuladas por atacantes para corromper el comportamiento del agente de forma sigilosa.",
+    "propuesta": "StealthyPoison es un ataque de 'envenenamiento procedural' que corrompe reglas críticas de las habilidades de terceros para inducir resultados incorrectos, manteniendo la funcionalidad aparente y eludiendo la detección.",
+    "resultados": "Mejora la colocación de la habilidad envenenada en un 13.6% frente a otros métodos. Los payloads de envenenamiento son efectivos en modelos no vistos y evaden la detección por herramientas de defensa como SkillSpector y GPT-5.4-mini.",
+    "por_que_importa": "Permite a los atacantes comprometer la integridad de las tareas realizadas por agentes de IA, afectando la confianza y seguridad en sistemas que integran estas herramientas.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Agentes IA",
+      "Envenenamiento de Datos",
+      "Seguridad de Modelos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-10T19:54:28Z"
+  },
+  "arxiv:2611.12798v1": {
+    "tldr": "Nueva técnica de IA alinea señales cerebrales (EEG) con imágenes usando dos modelos de visión complementarios para una mejor recuperación de información visual.",
+    "problema": "Los métodos actuales para decodificar información visual de señales cerebrales (EEG) no aprovechan completamente la jerarquía de información visual presente en las respuestas neuronales, al alinearse solo con modelos de visión como CLIP.",
+    "propuesta": "Se propone el marco DTHA (Dual-Teacher Hierarchical Alignment) que utiliza un codificador EEG compartido supervisado por dos 'maestros' (modelos de visión pre-entrenados): uno enfocado en la apariencia (DINO) y otro en la semántica (CLIP). Se combinan sus representaciones de forma adaptativa para la recuperación de imágenes a partir de EEG.",
+    "resultados": "El método DTHA alcanza un 92.4% de precisión Top-1 en la tarea de recuperación zero-shot de EEG a imagen en el dataset THINGS-EEG, superando al estado del arte anterior en 12.4 puntos porcentuales.",
+    "por_que_importa": "Permite extraer de manera más completa la información visual jerárquica de la actividad cerebral, mejorando significativamente las interfaces cerebro-computadora y la inteligencia inspirada en el cerebro, con potencial para generalización entre modalidades.",
+    "tags": [
+      "EEG",
+      "Recuperación de Imágenes",
+      "Modelos de Visión",
+      "Zero-Shot Learning",
+      "Interfaces Cerebro-Computadora",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-10T19:54:37Z"
+  },
+  "arxiv:2611.12681v1": {
+    "tldr": "Mapeo nacional de cultivos en Marruecos usando embeddings de IA de Google, logrando 87% de precisión con alta eficiencia.",
+    "problema": "El mapeo a gran escala de tipos de cultivos a nivel nacional es computacionalmente costoso y requiere el procesamiento de grandes cantidades de imágenes satelitales.",
+    "propuesta": "Utilizar los embeddings preentrenados de Google AlphaEarth Foundations con clasificadores ligeros para mapear cultivos (cereales de invierno, cultivos arbóreos, otros) en Marruecos, aprovechando el mapa global de límites de parcelas 'Fields of the World'.",
+    "resultados": "Se alcanzó una precisión promedio de clasificación del 87.17% (+/- 0.42%) en un conjunto de prueba independiente. La inferencia a nivel nacional se completó en aproximadamente cinco horas.",
+    "por_que_importa": "Demuestra que los modelos de IA preentrenados (embeddings) permiten un mapeo de cultivos a escala nacional mucho más eficiente y accesible, reduciendo la necesidad de procesar imágenes crudas.",
+    "tags": [
+      "agricultura",
+      "IA",
+      "imágenes satelitales",
+      "mapeo de cultivos",
+      "computación eficiente",
+      "observación terrestre"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-10T19:54:46Z"
+  },
+  "arxiv:2611.12856v1": {
+    "tldr": "Evalúa la capacidad de los agentes de IA para organizar flujos de trabajo complejos y coordinar equipos de forma autónoma.",
+    "problema": "Los sistemas multi-agente basados en LLM necesitan una forma de medir y mejorar cómo los agentes organizan y coordinan tareas complejas, algo que los benchmarks actuales no abordan adecuadamente.",
+    "propuesta": "Se introduce WorkflowArena, un benchmark con 145 tareas en 8 dominios, para evaluar la orquestación de flujos de trabajo. Permite a los agentes decidir autónomamente cómo delegar tareas y se evalúa tanto la calidad del resultado como la organización del trabajo.",
+    "resultados": "Los experimentos con nueve modelos mostraron que ningún modelo es el mejor en todos los dominios. Claude tiende a invocar flujos de trabajo menos frecuentes pero con grupos más grandes, mientras que GPT delega más frecuentemente en unidades más pequeñas. Los flujos de trabajo de Claude Opus 5.5 mejoraron significativamente el rendimiento de ejecutores más débiles en tareas desafiantes.",
+    "por_que_importa": "Permite medir y mejorar la habilidad de los sistemas de IA para auto-organizarse y coordinar eficientemente, lo cual es crucial para su aplicación práctica en tareas complejas del mundo real.",
+    "tags": [
+      "IA multi-agente",
+      "orquestación de flujos de trabajo",
+      "benchmarking",
+      "delegación de tareas",
+      "evaluación de IA",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-10T19:54:56Z"
+  },
+  "arxiv:2611.11558": {
+    "tldr": "InfraRSI automatiza la optimización de la infraestructura de entrenamiento de LLMs, logrando mejoras significativas de velocidad y eficiencia.",
+    "problema": "El entrenamiento distribuido de LLMs es complejo y sensible a ajustes finos, lo que dificulta la optimización manual y puede llevar a errores como desbordamientos de memoria (OOM) o deriva numérica.",
+    "propuesta": "InfraRSI es un sistema que utiliza la auto-mejora recursiva (RSI) para optimizar automáticamente la infraestructura de entrenamiento de LLMs. Lo hace a través de un flujo de trabajo de cinco etapas que incluye la fijación de invariantes, la calibración del ruido del clúster, la co-optimización de parámetros de lanzamiento y parches de código, y la aplicación de cambios verificados.",
+    "resultados": "InfraRSI logra una aceleración de hasta 2.75x y aumenta la Utilización Media de FLOPs del Modelo (MFU) del 17.4% al 30.0% en diversas cargas de trabajo de LLMs, superando a los sintonizadores y agentes de codificación existentes.",
+    "por_que_importa": "Mejora drásticamente la eficiencia del entrenamiento de LLMs, reduciendo costos y tiempos, y permitiendo escalar modelos más grandes al optimizar la infraestructura subyacente y transferir conocimiento entre diferentes configuraciones de hardware.",
+    "tags": [
+      "LLMs",
+      "Optimización",
+      "Infraestructura",
+      "Ciberseguridad",
+      "IA",
+      "Entrenamiento"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-10T19:55:05Z"
+  },
+  "arxiv:2610.36980": {
+    "tldr": "Evaluamos agentes LLM para gestionar operaciones de venta autónoma a largo plazo, superando las transacciones individuales para obtener beneficios económicos sostenidos.",
+    "problema": "Evaluar la capacidad de los agentes LLM para gestionar operaciones comerciales en el mundo real (online-to-offline) que implican decisiones en línea y ejecución física costosa, y determinar si generan beneficios económicos sostenidos.",
+    "propuesta": "Se introduce AutoVend, un benchmark con un simulador de datos que gestiona 20 máquinas expendedoras en cinco tipos de sitios durante 180 días simulados, incluyendo un almacén compartido, plazos de reabastecimiento, costes y expiración de inventario. Se evalúan cinco agentes LLM contra una línea base basada en reglas.",
+    "resultados": "Cuatro de los cinco agentes LLM evaluados no superan a la línea base basada en reglas. La clasificación de los modelos por retorno por dólar de coste de inferencia difiere de la clasificación solo por retorno. Los análisis operativos muestran que las mejoras en métricas individuales no siempre se traducen en un mayor crecimiento económico, ya que los costes de inventario y ejecución erosionan estas ganancias.",
+    "por_que_importa": "Este benchmark es crucial para entender y mejorar la viabilidad económica de los agentes LLM en aplicaciones comerciales del mundo real, yendo más allá de las métricas de rendimiento individuales para evaluar la rentabilidad y la sostenibilidad a largo plazo.",
+    "tags": [
+      "agentes LLM",
+      "comercio electrónico",
+      "ciberseguridad",
+      "benchmark",
+      "operaciones autónomas",
+      "rentabilidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-10T19:55:15Z"
   }
 }

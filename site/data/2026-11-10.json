@@ -1,0 +1,420 @@
+{
+  "date": "2026-11-10",
+  "report_type": "filtrado",
+  "evaluated": 201,
+  "selected": 9,
+  "papers": [
+    {
+      "id": "arxiv:2611.12241v1",
+      "rank": 1,
+      "title": "SNAPRAG: Cost-Efficient Knowledge Extraction Attack on RAG Systems via Adversarial Perturbations",
+      "authors": [
+        "Melih Coşğun",
+        "Mehmet Emre Gürsoy",
+        "Alptekin Küpçü",
+        "Sinem Sav"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-09",
+      "url": "https://arxiv.org/abs/2611.12241v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.12241v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Retrieval-Augmented Generation (RAG) systems improve Large Language Model (LLM) responses by incorporating information from external knowledge bases. However, recent studies have shown that attackers can extract substantial portions of private knowledge bases from RAG systems through repeated querying. Yet, state-of-the-art extraction attacks either rely heavily on external LLMs to generate adversarial queries or require a large number of queries. In this paper, we propose SNAPRAG, a novel and cost-efficient attack for extracting RAG knowledge bases through adversarial perturbations. Our approach algorithmically generates adversarial queries without relying on external LLMs and allows for a strictly configurable query budget. In particular, SNAPRAG uses a discrete token-mutation algorithm to generate novel queries in a strict black-box setting. Our adaptive dissimilarity threshold calibration systematically forces queries into unexplored semantic regions of the target database, enabling extraction with fewer queries. Specifically, to extract half of the target knowledge base, our method requires up to 6.77$\\times$ fewer queries than existing approaches. Furthermore, within a fixed query budget, our method recovers up to 96.9%, outperforming the closest approach by 7.7-19.9%. We further evaluate SNAPRAG against active defenses, where it remains the leading attack on four of five defended targets, achieving 50.7-96.3% extraction rate.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Un nuevo ataque, SNAPRAG, extrae eficientemente conocimiento privado de sistemas RAG con menos consultas y sin LLMs externos.",
+        "problema": "Los sistemas RAG, que usan bases de conocimiento externas para mejorar las respuestas de los LLMs, son vulnerables a ataques que extraen información privada. Los métodos actuales son costosos (requieren muchas consultas o LLMs externos).",
+        "propuesta": "SNAPRAG genera consultas adversarias mediante mutación discreta de tokens, sin usar LLMs externos, y utiliza una calibración adaptativa para explorar eficientemente la base de datos objetivo. Permite un presupuesto de consultas configurable.",
+        "resultados": "Requiere hasta 6.77 veces menos consultas para extraer la mitad de la base de conocimiento. Con un presupuesto fijo, extrae hasta el 96.9% (7.7-19.9% más que otros métodos). Contra defensas activas, extrae entre 50.7% y 96.3% en 4 de 5 objetivos.",
+        "por_que_importa": "Demuestra una vulnerabilidad significativa en sistemas RAG, obligando a desarrollar defensas más robustas para proteger la privacidad de los datos en aplicaciones de IA.",
+        "tags": [
+          "RAG",
+          "Extracción de conocimiento",
+          "Ataque adversario",
+          "Privacidad de datos",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-10T19:53:59Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.12807v1",
+      "rank": 2,
+      "title": "Suppression Is Not Erasure: Mechanistic Analysis and Reactivation Boundaries of Subspace Projection for LoRA Backdoor Defense",
+      "authors": [
+        "Junsheng Fu",
+        "Shuangshuang Gao"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-09",
+      "url": "https://arxiv.org/abs/2611.12807v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.12807v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Low-Rank Adaptation (LoRA) is the standard paradigm for customizing large language models, yet third-party LoRA adapters pose a supply-chain risk: modifying less than 1% of model parameters suffices to implant stealthy backdoors. Recent defenses project adapter weights onto estimated backdoor subspaces, reporting near-zero static Attack Success Rates (ASR). We audit subspace-projection defenses across four model scales (Qwen2.5-0.5B/1.5B/3B/7B) and three architectures (Qwen2.5, InternLM2.5, Spark). Constructively, module-wise rank-1 trigger-difference projection (k=1, alpha=1) reduces ASR from 60.4% to 0.0% on standard benchmarks and from 70.3% to 0.0% on a 1,000-sample uncontaminated suite (p = 3.055e-299, instruction-level p = 9.49e-16) in under 5 seconds end-to-end, and we prove via a spectral-gap bound why trigger-free calibration with benign polite suffixes aligns with u1(B) (median cosine 0.9048) and achieves 0.0% ASR without prior trigger knowledge. Our main contribution is a negative finding: static ASR reduction does not imply parameter erasure. Under 5-sample few-shot reactivation, every evaluated weight-editing defense rebounds (91.7%-100.0% ASR in 1 epoch for standard projections, Fine-Pruning, ANP, SVD truncation and Li & Kim's dual-end projection; 48.7% for our single-round dual variant), all reaching 100.0% by Epoch 2, with first-epoch loss up to 5.7x lower than training from scratch. Using an exact spectrum-preserving Haar orthogonal rotation control (Frobenius norm 10.0928 preserved to 1.70e-6) and N=1..6 cumulative Gram-Schmidt basis ablation, we decompose reactivation into residual trigger-difference coupling energy at Epoch 1 (Spearman rho = 0.986), base-model learnability at Epoch 2 (100%), and benign semantic direction conflict (41.7%).",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "La defensa de LoRA contra backdoors no borra los parámetros maliciosos, solo los oculta temporalmente.",
+        "problema": "Los adaptadores LoRA para modelos de lenguaje grandes pueden contener backdoors ocultos que modifican menos del 1% de los parámetros, representando un riesgo de seguridad en la cadena de suministro. Las defensas actuales de proyección de subespacio reducen la tasa de éxito del ataque (ASR), pero no eliminan el riesgo.",
+        "propuesta": "Se auditan las defensas de proyección de subespacio para LoRA y se propone una proyección de diferencia de disparador de rango 1 por módulo. Se analiza la reactivación de backdoors mediante análisis espectral y descomposición de la energía del acoplamiento.",
+        "resultados": "La proyección propuesta reduce el ASR del 60.4% al 0.0% en benchmarks estándar y del 70.3% al 0.0% en un conjunto de datos no contaminado. Sin embargo, bajo reactivación con pocos ejemplos (5 muestras), todas las defensas evaluadas recuperan el ASR entre 91.7% y 100.0% en una época.",
+        "por_que_importa": "Las defensas actuales contra backdoors en LoRA solo suprimen temporalmente los ataques, no los eliminan permanentemente. Los backdoors pueden ser reactivados fácilmente, lo que exige un desarrollo de defensas más robustas y permanentes para la seguridad de los modelos de lenguaje grandes.",
+        "tags": [
+          "LoRA",
+          "backdoor",
+          "ciberseguridad",
+          "IA",
+          "modelos de lenguaje",
+          "defensa"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-10T19:54:09Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.12386v1",
+      "rank": 3,
+      "title": "Say Shibboleth: Fingerprinting the LLMs and Harnesses Behind Agentic Attacks",
+      "authors": [
+        "Dario Pasquini",
+        "Reworr",
+        "Giuseppe Ateniese",
+        "Manish Bhatt"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-09",
+      "url": "https://arxiv.org/abs/2611.12386v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.12386v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "We study the fingerprinting of agentic cyberattacks. Our objective is to reliably infer information about the attacker's configuration, such as LLM version and harness, from telemetry. To achieve this, we introduce a technique we call shibboleth traps: modular honeypot services designed to elicit discriminative behaviors from agentic attackers. The traps make informative interactions a condition for obtaining resources the agent seeks, eliciting model declarations and characteristic writing without requiring a successful prompt injection. To achieve harness fingerprinting, we introduce general mechanisms to indirectly probe peculiar execution behaviors of harnesses. These probes reveal how a harness masks secrets in tool output, enforces command time limits, and schedules tool calls, using only the effects visible in subsequent requests. We show that combined declarative and behavioral inference distinguishes among 15 candidate models with an average 90% top-1 accuracy, with behavioral classifiers evaluated on held-out harnesses or task families. In a separate experiment across four harnesses, fixed probe rules identify the correct harness with 92% accuracy. When instructed to conceal their identity, agents still leave useful behavioral evidence even as their declarations become uninformative.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Detecta el LLM y el 'harness' detrás de ciberataques automatizados analizando su comportamiento.",
+        "problema": "Es difícil identificar la configuración (versión de LLM, 'harness') de los atacantes en ciberataques automatizados, lo que dificulta su defensa.",
+        "propuesta": "Introduce 'shibboleth traps', servicios honeypot modulares que provocan comportamientos distintivos de los atacantes y mecanismos para inferir indirectamente comportamientos de ejecución peculiares de los 'harnesses'.",
+        "resultados": "La inferencia combinada distingue entre 15 modelos con un 90% de precisión (top-1). Las reglas de sondeo identifican el 'harness' correcto con un 92% de precisión. Los agentes que intentan ocultar su identidad aún dejan evidencia conductual útil.",
+        "por_que_importa": "Permite identificar y rastrear atacantes que usan LLMs y 'harnesses' en ciberataques, mejorando las capacidades de defensa y atribución.",
+        "tags": [
+          "ciberseguridad",
+          "LLM",
+          "honeypot",
+          "fingerprinting",
+          "ataques automatizados",
+          "defensa"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-10T19:54:18Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.12155v1",
+      "rank": 4,
+      "title": "StealthyPoison: Manipulating LLM Agent Behavior through Procedural Poisoning of Third-Party Skills",
+      "authors": [
+        "Jingfen Qiao",
+        "Rui Li",
+        "Shuaiqun Pan",
+        "Olga Gadyatskaya"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-09",
+      "url": "https://arxiv.org/abs/2611.12155v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.12155v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "LLM agents increasingly retrieve third-party skills from public registries and follow their procedures to complete user tasks. This reliance allows attackers to manipulate agent behavior by poisoning the skills. However, overtly malicious instructions can provide explicit signals for detection. We present StealthyPoison, a stealthy procedural poisoning attack that corrupts a skill's decision-critical rules to induce incorrect task outcomes while preserving its advertised functionality and normal execution. Unlike prior knowledge corruption attacks that craft poisoned content for known target question-answer pairs, StealthyPoison constructs reusable poisoned procedures from a publicly available third-party skill, without access to actual user requests or their ground-truth answers. To make the poisoned procedure generalize to unseen requests, it first synthesizes requests from the target skill and executes its clean version using a surrogate agent to obtain pseudo-references. These references and surrogate execution feedback guide the iterative refinement of payloads that alter decision-critical rules. To increase the likelihood that the poisoned skill is retrieved and selected over benign alternatives, the attack augments the poisoned skill's retrieval metadata with independently generated request descriptions. We evaluate StealthyPoison on 566 eligible target skills and 5,244 requests against more than 26,000 registry entries. It improves top-1 poisoned-skill placement by 13.6% relative to both HotFlip and GCG. Constructed using feedback from a single surrogate model, the procedural poisoning payloads transfer effectively and without modification to three held-out victim models and achieve end-to-end attack success in a Claude Code workflow powered by Opus 4.8. The defense evaluation further shows that most of these payloads evade detection by both SkillSpector and GPT-5.4-mini.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Atacan agentes IA manipulando sus 'habilidades' de terceros de forma sigilosa para lograr resultados erróneos sin ser detectados.",
+        "problema": "Los agentes de IA confían en 'habilidades' de terceros para realizar tareas, pero estas pueden ser manipuladas por atacantes para corromper el comportamiento del agente de forma sigilosa.",
+        "propuesta": "StealthyPoison es un ataque de 'envenenamiento procedural' que corrompe reglas críticas de las habilidades de terceros para inducir resultados incorrectos, manteniendo la funcionalidad aparente y eludiendo la detección.",
+        "resultados": "Mejora la colocación de la habilidad envenenada en un 13.6% frente a otros métodos. Los payloads de envenenamiento son efectivos en modelos no vistos y evaden la detección por herramientas de defensa como SkillSpector y GPT-5.4-mini.",
+        "por_que_importa": "Permite a los atacantes comprometer la integridad de las tareas realizadas por agentes de IA, afectando la confianza y seguridad en sistemas que integran estas herramientas.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Agentes IA",
+          "Envenenamiento de Datos",
+          "Seguridad de Modelos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-10T19:54:28Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.12798v1",
+      "rank": 5,
+      "title": "Complementarity-Driven Dual-Teacher Hierarchical Alignment for Zero-Shot EEG-to-Image Retrieval",
+      "authors": [
+        "Lukun Wu",
+        "Jie Li",
+        "Ziqi Ren",
+        "Ruiyang Xia"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CV]",
+      "category": "cs.CV",
+      "date": "2026-11-09",
+      "url": "https://arxiv.org/abs/2611.12798v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.12798v1",
+      "score": 53,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Decoding visual information from EEG is central to brain--computer interfaces and brain-inspired intelligence, and contrastive alignment with pretrained vision foundation models (VFMs) has become the dominant paradigm. However, existing methods align EEG solely with CLIP-family VFMs, leaving hierarchical visual information in neural responses under-exploited. To address this gap, we formulate a mechanism-paradigm correspondence view linking hierarchical visual processing (from appearance to semantics) to the complementary biases of cross-paradigm VFMs, with image-only models (e.g., DINO) and image--text models (e.g., CLIP) capturing distinct facets of this hierarchy. Guided by this view, we propose the Dual-Teacher Hierarchical Alignment (DTHA) framework. Concretely, a shared EEG encoder is supervised by frozen multi-blur CLIP and shallow DINOv2 teachers via dual-branch contrastive alignment, so each branch fully supervises the visual cues it emphasizes. A fused-retrieval objective learns adaptive weights to combine their complementary visual representations for zero-shot EEG-to-image retrieval. For the shared EEG encoder, we introduce the Attentive Modulated Scalp-Pattern Bank Encoder (AMSPBE), combining temporo-spatial attention with a learnable scalp-pattern bank for accurate, interpretable visual feature extraction, while modeling regional temporal dynamics and filter-bank topographies. On THINGS-EEG zero-shot retrieval, DTHA achieves 92.4% Top-1 accuracy, exceeding prior state of the art by 12.4 percentage points. Spatial, spectral, and representational-similarity analyses, together with THINGS-MEG evaluation, validate DTHA's effectiveness, biological plausibility, and cross-modality generalization. This complementarity-driven perspective shows that supervision from cross-paradigm VFMs enables more complete extraction of hierarchical visual information from brain activity.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Nueva técnica de IA alinea señales cerebrales (EEG) con imágenes usando dos modelos de visión complementarios para una mejor recuperación de información visual.",
+        "problema": "Los métodos actuales para decodificar información visual de señales cerebrales (EEG) no aprovechan completamente la jerarquía de información visual presente en las respuestas neuronales, al alinearse solo con modelos de visión como CLIP.",
+        "propuesta": "Se propone el marco DTHA (Dual-Teacher Hierarchical Alignment) que utiliza un codificador EEG compartido supervisado por dos 'maestros' (modelos de visión pre-entrenados): uno enfocado en la apariencia (DINO) y otro en la semántica (CLIP). Se combinan sus representaciones de forma adaptativa para la recuperación de imágenes a partir de EEG.",
+        "resultados": "El método DTHA alcanza un 92.4% de precisión Top-1 en la tarea de recuperación zero-shot de EEG a imagen en el dataset THINGS-EEG, superando al estado del arte anterior en 12.4 puntos porcentuales.",
+        "por_que_importa": "Permite extraer de manera más completa la información visual jerárquica de la actividad cerebral, mejorando significativamente las interfaces cerebro-computadora y la inteligencia inspirada en el cerebro, con potencial para generalización entre modalidades.",
+        "tags": [
+          "EEG",
+          "Recuperación de Imágenes",
+          "Modelos de Visión",
+          "Zero-Shot Learning",
+          "Interfaces Cerebro-Computadora",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-10T19:54:37Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.12681v1",
+      "rank": 6,
+      "title": "National-Scale Crop Type Mapping in Morocco Using Google AlphaEarth Foundations Embeddings and the Fields of the World Field Boundary Map",
+      "authors": [
+        "Walid Elbarz",
+        "Mohamed Bourriz",
+        "Vincent Simonneaux",
+        "Hamd Ait Abdelali"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CV]",
+      "category": "cs.CV",
+      "date": "2026-11-09",
+      "url": "https://arxiv.org/abs/2611.12681v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.12681v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Recent geospatial foundation models have introduced a new paradigm for large-scale Earth observation by providing pretrained embedding representations that can be directly exploited for downstream tasks. In this work, we investigate the use of Google AlphaEarth Foundations embeddings for national-scale crop type mapping in Morocco. The proposed workflow operates directly on publicly available 64-dimensional pretrained embeddings using lightweight downstream classifiers, eliminating the need to process raw satellite imagery during model training and inference. The approach targets three crop categories, namely winter cereals, tree crops, and other crops. For nationwide inference, the Fields of the World global field boundary map is used to constrain predictions to agricultural parcels, enabling efficient large-scale mapping. Experimental evaluation on an independent test set over ten repeated runs achieved an average classification accuracy of (87.17 +/- 0.42%). Nationwide inference over Morocco was completed in approximately five hours, with the dominant computational cost arising from cloud-based retrieval of the embeddings rather than model execution. These results demonstrate the potential of pretrained embedding representations for computationally efficient national-scale crop type mapping.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Mapeo nacional de cultivos en Marruecos usando embeddings de IA de Google, logrando 87% de precisión con alta eficiencia.",
+        "problema": "El mapeo a gran escala de tipos de cultivos a nivel nacional es computacionalmente costoso y requiere el procesamiento de grandes cantidades de imágenes satelitales.",
+        "propuesta": "Utilizar los embeddings preentrenados de Google AlphaEarth Foundations con clasificadores ligeros para mapear cultivos (cereales de invierno, cultivos arbóreos, otros) en Marruecos, aprovechando el mapa global de límites de parcelas 'Fields of the World'.",
+        "resultados": "Se alcanzó una precisión promedio de clasificación del 87.17% (+/- 0.42%) en un conjunto de prueba independiente. La inferencia a nivel nacional se completó en aproximadamente cinco horas.",
+        "por_que_importa": "Demuestra que los modelos de IA preentrenados (embeddings) permiten un mapeo de cultivos a escala nacional mucho más eficiente y accesible, reduciendo la necesidad de procesar imágenes crudas.",
+        "tags": [
+          "agricultura",
+          "IA",
+          "imágenes satelitales",
+          "mapeo de cultivos",
+          "computación eficiente",
+          "observación terrestre"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-10T19:54:46Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.12856v1",
+      "rank": 7,
+      "title": "WorkflowArena: Benchmarking Executable Workflow Orchestration in LLM-Based Multi-Agent Systems",
+      "authors": [
+        "Zheng Jiang",
+        "Fang Niu",
+        "Bo Peng",
+        "Houde Qian"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.SE]",
+      "category": "cs.SE",
+      "date": "2026-11-09",
+      "url": "https://arxiv.org/abs/2611.12856v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.12856v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Large language model agents are increasingly deployed as multi-agent systems rather than as a standalone model operating within a single context. Recent agent harnesses allow the model to instantiate worker agents and to author the executable workflow that coordinates them, shifting the design of system structure from developers to the model at run time. The quality of this organization therefore constitutes a distinct capability, yet existing benchmarks either measure end-to-end task completion or evaluate coordination under structures specified in advance. We formalize this capability as workflow orchestration and introduce WorkflowArena, a benchmark of 145 long-horizon tasks spanning 8 professional domains, from software engineering and formal mathematics to legal analysis and 3D production. Each task specifies an initial workspace and an integrated deliverable composed of interdependent components, which is assessed by a hidden verifier. Agents determine autonomously whether and how to delegate, and all delegation is recorded, enabling joint evaluation of deliverable quality and the organization of the underlying work. Experiments with nine models show that no single configuration performs best across all domains and that systems exhibit distinct delegation strategies: at high effort, Claude models in Claude Code invoke workflows less frequently but with larger worker groups, whereas GPT models in Codex delegate more frequently in smaller units. When the executing model is held fixed on a challenging subset of tasks, workflows authored by Claude Opus 5.5 substantially improve weaker executors, indicating that workflow organization is itself a measurable determinant of task performance.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa la capacidad de los agentes de IA para organizar flujos de trabajo complejos y coordinar equipos de forma autónoma.",
+        "problema": "Los sistemas multi-agente basados en LLM necesitan una forma de medir y mejorar cómo los agentes organizan y coordinan tareas complejas, algo que los benchmarks actuales no abordan adecuadamente.",
+        "propuesta": "Se introduce WorkflowArena, un benchmark con 145 tareas en 8 dominios, para evaluar la orquestación de flujos de trabajo. Permite a los agentes decidir autónomamente cómo delegar tareas y se evalúa tanto la calidad del resultado como la organización del trabajo.",
+        "resultados": "Los experimentos con nueve modelos mostraron que ningún modelo es el mejor en todos los dominios. Claude tiende a invocar flujos de trabajo menos frecuentes pero con grupos más grandes, mientras que GPT delega más frecuentemente en unidades más pequeñas. Los flujos de trabajo de Claude Opus 5.5 mejoraron significativamente el rendimiento de ejecutores más débiles en tareas desafiantes.",
+        "por_que_importa": "Permite medir y mejorar la habilidad de los sistemas de IA para auto-organizarse y coordinar eficientemente, lo cual es crucial para su aplicación práctica en tareas complejas del mundo real.",
+        "tags": [
+          "IA multi-agente",
+          "orquestación de flujos de trabajo",
+          "benchmarking",
+          "delegación de tareas",
+          "evaluación de IA",
+          "ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-10T19:54:56Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.11558",
+      "rank": 1,
+      "title": "InfraRSI: Harnessing Recursive Self-Improvement for Training Infrastructure",
+      "authors": [
+        "InfraRSI Team",
+        "Yuchuan Tian",
+        "Haocheng Mei",
+        "Ye Yuan"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-08",
+      "url": "https://arxiv.org/abs/2611.11558",
+      "pdf_url": "https://arxiv.org/pdf/2611.11558",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "While Recursive Self-Improvement (RSI) accelerates isolated algorithm and kernel synthesis, distributed LLM training depends on tightly coupled launch settings, operator kernels, and communication schedules, where single edits often hit out-of-memory (OOM) boundaries, compiler conflicts, measurement jitter, or silent numerical drift. We present InfraRSI, the agentic harness that turns open-ended human commands into verified training optimizations via a five-stage workflow: init locks editable scope and a fixed task contract over workload, loss, and timing invariants to prevent reward hacking, doctor profiles baseline phases and calibrates cluster noise, run co-optimizes launch knobs and code patches before re-verifying top candidates against the baseline and logging findings to a cross-hardware experience bank, and report and apply audit source paths, track failed-trial costs, and commit promoted changes. Rather than stepping greedily from a single incumbent, InfraRSI initializes from diverse experience-seeded configurations and fits global execution-time and censored peak-memory models across all trials, including OOMs. Using these models, it prices per-setting memory costs, revises miscalibrated LLM priors from live runs, and pairs memory-hungry optimizations with memory savers and verified code patches. Across four single- and multi-node dense and Mixture-of-Experts (MoE) LLM workloads, InfraRSI achieves a speedup of up to $2.75\\times$ and lifts mean Model FLOPs Utilization (MFU) from $17.4\\%$ to $30.0\\%$, outperforming existing tuners and coding agents while transferring experience across GPUs. As it improves training infrastructure efficiency, InfraRSI forms a two-level Recursive Self-Improvement loop---revising priors online within runs and distilling experience across clusters---to push foundation model scaling.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "InfraRSI automatiza la optimización de la infraestructura de entrenamiento de LLMs, logrando mejoras significativas de velocidad y eficiencia.",
+        "problema": "El entrenamiento distribuido de LLMs es complejo y sensible a ajustes finos, lo que dificulta la optimización manual y puede llevar a errores como desbordamientos de memoria (OOM) o deriva numérica.",
+        "propuesta": "InfraRSI es un sistema que utiliza la auto-mejora recursiva (RSI) para optimizar automáticamente la infraestructura de entrenamiento de LLMs. Lo hace a través de un flujo de trabajo de cinco etapas que incluye la fijación de invariantes, la calibración del ruido del clúster, la co-optimización de parámetros de lanzamiento y parches de código, y la aplicación de cambios verificados.",
+        "resultados": "InfraRSI logra una aceleración de hasta 2.75x y aumenta la Utilización Media de FLOPs del Modelo (MFU) del 17.4% al 30.0% en diversas cargas de trabajo de LLMs, superando a los sintonizadores y agentes de codificación existentes.",
+        "por_que_importa": "Mejora drásticamente la eficiencia del entrenamiento de LLMs, reduciendo costos y tiempos, y permitiendo escalar modelos más grandes al optimizar la infraestructura subyacente y transferir conocimiento entre diferentes configuraciones de hardware.",
+        "tags": [
+          "LLMs",
+          "Optimización",
+          "Infraestructura",
+          "Ciberseguridad",
+          "IA",
+          "Entrenamiento"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-10T19:55:05Z"
+      }
+    },
+    {
+      "id": "arxiv:2610.36980",
+      "rank": 2,
+      "title": "AutoVend: Benchmarking LLM Agents on Long-Horizon Autonomous Vending Operations",
+      "authors": [
+        "Qiming Shi",
+        "Yikun Li",
+        "Beidi Luan",
+        "Rui Sun"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-10-27",
+      "url": "https://arxiv.org/abs/2610.36980",
+      "pdf_url": "https://arxiv.org/pdf/2610.36980",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Large language model (LLM) agents are extending agent-mediated commerce on the Web from shopping for consumers to operating businesses for sellers. In online-to-offline (O2O) commerce, decisions are issued through Web-based platforms but realized through costly physical execution. Evaluating such agents requires going beyond individual transactions to ask whether decisions made online turn into sustained economic returns. We introduce AutoVend, a benchmark in which one LLM agent manages 20 vending machines across five site types through a Web-based operating interface for 180 simulated days. Its data-grounded simulator combines a shared warehouse, procurement lead times, paid replenishment, inventory expiration, and recurring operating costs. We evaluate five LLM agents against a rule-based inventory-control baseline and diagnose their site coordination, execution, and performance over time. Four of five evaluated LLM agents fall short of this baseline, and returns per dollar of inference cost rank models differently from returns alone. Operational analyses show that gains in individual metrics do not consistently yield stronger economic growth, as inventory and execution costs erode these gains. Trajectory analysis further reveals difficulties in grounding feasible actions, managing inventory commitments, and converting feedback into effective policy revisions.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evaluamos agentes LLM para gestionar operaciones de venta autónoma a largo plazo, superando las transacciones individuales para obtener beneficios económicos sostenidos.",
+        "problema": "Evaluar la capacidad de los agentes LLM para gestionar operaciones comerciales en el mundo real (online-to-offline) que implican decisiones en línea y ejecución física costosa, y determinar si generan beneficios económicos sostenidos.",
+        "propuesta": "Se introduce AutoVend, un benchmark con un simulador de datos que gestiona 20 máquinas expendedoras en cinco tipos de sitios durante 180 días simulados, incluyendo un almacén compartido, plazos de reabastecimiento, costes y expiración de inventario. Se evalúan cinco agentes LLM contra una línea base basada en reglas.",
+        "resultados": "Cuatro de los cinco agentes LLM evaluados no superan a la línea base basada en reglas. La clasificación de los modelos por retorno por dólar de coste de inferencia difiere de la clasificación solo por retorno. Los análisis operativos muestran que las mejoras en métricas individuales no siempre se traducen en un mayor crecimiento económico, ya que los costes de inventario y ejecución erosionan estas ganancias.",
+        "por_que_importa": "Este benchmark es crucial para entender y mejorar la viabilidad económica de los agentes LLM en aplicaciones comerciales del mundo real, yendo más allá de las métricas de rendimiento individuales para evaluar la rentabilidad y la sostenibilidad a largo plazo.",
+        "tags": [
+          "agentes LLM",
+          "comercio electrónico",
+          "ciberseguridad",
+          "benchmark",
+          "operaciones autónomas",
+          "rentabilidad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-10T19:55:15Z"
+      }
+    }
+  ],
+  "generated_at": "2026-11-10T19:55:15Z"
+}
