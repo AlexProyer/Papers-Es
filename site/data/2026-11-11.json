@@ -1,0 +1,599 @@
+{
+  "date": "2026-11-11",
+  "report_type": "filtrado",
+  "evaluated": 179,
+  "selected": 14,
+  "papers": [
+    {
+      "id": "arxiv:2611.13696v1",
+      "rank": 1,
+      "title": "On Private Knowledge Retrieval and Private Inference for secure multi-agent systems",
+      "authors": [
+        "Vicenç Torra",
+        "Maria Bras-Amorós"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-10",
+      "url": "https://arxiv.org/abs/2611.13696v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.13696v1",
+      "score": 56,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Multi-agent systems provide a convenient framework for the massive deployment of agents based on Large Language Models (LLMs). It provides a sound framework where agents can interact with existing software to perform actions in an autonomous way. Agentic AI is the new term to denote these AI-based autonomous systems. In real multi-agent systems, agents need to deal with malicious agents some of which can exploit security vulnerabilities to do harm. A memory poisoning attack is an example of exploiting a vulnerability to modify agents knowledge and, thus, affect its behavior. In an agent, there are different types of memory systems (semantic, episodic, and short-term) which have their own characteristics and for which different memory poisoning attacks may be developed. In this paper we focus on semantic memory, we discuss its attack, and mitigation strategies. We introduce private knowledge retrieval and private inference. We propose a signature system in the knowledge base to prevent from undesired manipulation. This should avoid memory poisoning attacks by introducing security by design in the construction of the semantic memory. In our architecture, an agent contains a local Prolog-like inference system (i.e., using Horn clauses to represent knowledge) which accesses an external knowledge base to get the required knowledge. This externally signed knowledge base is accessed privately. We provide different implementations in Python using different privacy levels including k-anonymity and information-theoretical privacy (IT-PIR).",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Protege sistemas multi-agente de ataques de envenenamiento de memoria mediante recuperación de conocimiento privada y firmas.",
+        "problema": "Los sistemas multi-agente basados en LLMs son vulnerables a ataques de envenenamiento de memoria, que modifican el conocimiento de los agentes y su comportamiento, especialmente en su memoria semántica.",
+        "propuesta": "Introduce la recuperación de conocimiento privada y la inferencia privada, proponiendo un sistema de firmas en la base de conocimiento externa para prevenir la manipulación no deseada y ataques de envenenamiento.",
+        "resultados": "Se discuten estrategias de ataque y mitigación para la memoria semántica. Se proponen implementaciones en Python con diferentes niveles de privacidad (k-anonimato, privacidad teórica de la información).",
+        "por_que_importa": "Asegura la integridad y el comportamiento fiable de los agentes autónomos en sistemas multi-agente, introduciendo seguridad desde el diseño en la memoria semántica.",
+        "tags": [
+          "sistemas multi-agente",
+          "seguridad IA",
+          "LLMs",
+          "privacidad",
+          "ciberseguridad",
+          "envenenamiento de memoria"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-11T19:45:43Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.13684v1",
+      "rank": 2,
+      "title": "BypassGym: A Benchmark for Evaluating AI Agents' Endpoint Defense Evasion Capabilities",
+      "authors": [
+        "Weifeng Yuan",
+        "Zifan Chen",
+        "Yucheng Zhang",
+        "Feng Dong"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-10",
+      "url": "https://arxiv.org/abs/2611.13684v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.13684v1",
+      "score": 56,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: cybersecurity, vuln & threats, LLM"
+      ],
+      "abstract_en": "Artificial intelligence agents increasingly automate cybersecurity tasks, including offensive operations. Frequent attacks across the web make endpoint detection and response (EDR) a critical defense, but whether AI agents can evade it remains unclear. Benchmarks evaluate the offensive capabilities of large language model (LLM) agents in areas such as penetration testing and vulnerability discovery. One important capability that these benchmarks do not address is defense evasion, specifically whether an agent can develop a program that executes a payload without being blocked or terminated by a deployed EDR. We introduce BypassGym, to our knowledge the first benchmark to systematically evaluate this capability on real endpoints. Given command-and-control (C2) shellcode, an agent must generate and compile a loader that executes the payload without being blocked or terminated. A supplementary evasion knowledge skill provides domain knowledge and supports comparisons with and without this input. BypassGym is built on Proxmox VE(PVE), so the evaluation environment runs real Windows systems and EDR products inside virtual machines and returns structured detection feedback to the agent. We evaluate 5 lightweight model backends against 6 EDR products and 3 payloads, and find that even these simple models generate successful submissions, with DeepSeek-V4.1 Flash reaching 17/18 successful runs and Bitdefender allowing only 5 of 15 runs to pass. These results provide a systematic measurement of current AI agents' endpoint defense evasion capabilities and identify areas for defenders to investigate.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa la capacidad de los agentes de IA para evadir defensas de ciberseguridad en endpoints, revelando vulnerabilidades inesperadas.",
+        "problema": "Los agentes de IA se usan cada vez más en ciberseguridad, pero no se sabe si pueden evadir las defensas de Endpoint Detection and Response (EDR) al ejecutar cargas maliciosas.",
+        "propuesta": "Se introduce BypassGym, un benchmark que evalúa sistemáticamente la habilidad de un agente de IA para generar un programa (loader) que ejecute un payload sin ser detectado o bloqueado por EDRs en entornos reales.",
+        "resultados": "Modelos de IA, incluso los ligeros, demostraron éxito en evadir EDRs. DeepSeek-V4.1 Flash logró 17/18 ejecuciones exitosas y Bitdefender permitió el paso de 5/15 intentos.",
+        "por_que_importa": "Proporciona una métrica sistemática de las capacidades de evasión de defensas de los agentes de IA actuales, identificando áreas clave para que los defensores mejoren la seguridad de los endpoints.",
+        "tags": [
+          "ciberseguridad",
+          "inteligencia artificial",
+          "EDR",
+          "evasión de defensas",
+          "benchmark"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-11T19:45:53Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.13578v1",
+      "rank": 3,
+      "title": "POEM: Output-Relative Block-Sparse Attention for Long-Context Prefilling",
+      "authors": [
+        "Haoyi Wu",
+        "Yunkai Dang",
+        "Wanyu Zhang",
+        "Lei Wang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-10",
+      "url": "https://arxiv.org/abs/2611.13578v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.13578v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Large language models (LLMs) have shown strong capabilities across diverse applications, making both safety and utility essential for reliable deployment. Jailbreak attacks use diverse forms of adversarial prompting to bypass alignment safeguards and induce LLMs to generate harmful responses. Some representation-based defenses regulate internal activations using predefined steering directions or learned safety regions. However, adapting intervention to each input without a predefined representational target while limiting over-refusal remains a challenge. In this paper, we propose Target-free Entropy-guided Residual Modulation (TERM), an inference-time defense that uses prompt-calibrated attention entropy deviations to guide adaptive modulation of the model's own residual updates. Attention patterns vary across prompts and decoding steps, making raw entropy values difficult to interpret as a consistent signal for intervention. We therefore calibrate attention entropy against each prompt's own prefill baseline to establish an input-specific reference for reducing unnecessary intervention on benign requests. Adaptive scale normalization and temporal accumulation then account for differences in deviation scale and persistence to determine intervention strength. The resulting signal controls bounded scaling of the model's own residual updates, without relying on a predefined safety direction. We compare our method with seven defenses on seven jailbreak attacks and two over-refusal benchmarks across Llama, Qwen, and Gemma models, including Qwen3 models from 0.6B to 32B. Results show our method improves jailbreak robustness while maintaining low over-refusal on benign safety-sensitive requests with modest inference overhead.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Defensa de IA en tiempo de inferencia para prevenir ataques de jailbreak sin afectar respuestas legítimas.",
+        "problema": "Los LLMs son vulnerables a ataques de 'jailbreak' que eluden sus salvaguardas de seguridad, generando respuestas dañinas. Las defensas actuales luchan por adaptarse a cada entrada sin un objetivo predefinido y sin aumentar el rechazo innecesario de peticiones benignas.",
+        "propuesta": "Se propone TERM (Target-free Entropy-guided Residual Modulation), una defensa en tiempo de inferencia que modula las actualizaciones residuales del modelo basándose en desviaciones de la entropía de atención calibradas por el prompt, evitando direcciones de seguridad predefinidas.",
+        "resultados": "TERM mejora la robustez frente a jailbreaks manteniendo bajo rechazo en peticiones benignas en varios modelos (Llama, Qwen, Gemma) y ataques, con un modesto sobrecoste de inferencia.",
+        "por_que_importa": "Permite desplegar LLMs de forma más segura y fiable al mitigar ataques sin perjudicar la usabilidad en interacciones cotidianas.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "LLM",
+          "Defensa",
+          "Jailbreak",
+          "Prompt Engineering"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-11T19:46:19Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.13577v1",
+      "rank": 4,
+      "title": "TERM: Target-Free Jailbreak Defense via Entropy-Guided Residual Modulation",
+      "authors": [
+        "Yunkai Dang",
+        "Wanyu Zhang",
+        "Meiyi Zhu",
+        "Qi Fan"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-10",
+      "url": "https://arxiv.org/abs/2611.13577v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.13577v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Large language models (LLMs) have shown strong capabilities across diverse applications, making both safety and utility essential for reliable deployment. Jailbreak attacks use diverse forms of adversarial prompting to bypass alignment safeguards and induce LLMs to generate harmful responses. Some representation-based defenses regulate internal activations using predefined steering directions or learned safety regions. However, adapting intervention to each input without a predefined representational target while limiting over-refusal remains a challenge. In this paper, we propose Target-free Entropy-guided Residual Modulation (TERM), an inference-time defense that uses prompt-calibrated attention entropy deviations to guide adaptive modulation of the model's own residual updates. Attention patterns vary across prompts and decoding steps, making raw entropy values difficult to interpret as a consistent signal for intervention. We therefore calibrate attention entropy against each prompt's own prefill baseline to establish an input-specific reference for reducing unnecessary intervention on benign requests. Adaptive scale normalization and temporal accumulation then account for differences in deviation scale and persistence to determine intervention strength. The resulting signal controls bounded scaling of the model's own residual updates, without relying on a predefined safety direction. We compare our method with seven defenses on seven jailbreak attacks and two over-refusal benchmarks across Llama, Qwen, and Gemma models, including Qwen3 models from 0.6B to 32B. Results show our method improves jailbreak robustness while maintaining low over-refusal on benign safety-sensitive requests with modest inference overhead.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Defensa innovadora contra ataques 'jailbreak' en LLMs que modula las actualizaciones internas del modelo sin necesidad de objetivos predefinidos.",
+        "problema": "Los LLMs son vulnerables a ataques 'jailbreak' que eluden sus salvaguardas de alineación, generando respuestas dañinas. Las defensas actuales a menudo requieren objetivos de intervención predefinidos y pueden causar rechazos excesivos en solicitudes benignas.",
+        "propuesta": "TERM (Target-free Entropy-guided Residual Modulation), una defensa en tiempo de inferencia que utiliza desviaciones de entropía de atención calibradas por el prompt para modular adaptativamente las actualizaciones residuales del propio modelo, sin depender de direcciones de seguridad predefinidas.",
+        "resultados": "TERM mejora la robustez contra ataques 'jailbreak' manteniendo bajos niveles de sobre-rechazo en solicitudes de seguridad sensibles, con una sobrecarga de inferencia modesta. Se compara favorablemente con siete defensas contra siete ataques 'jailbreak' en varios modelos LLM (Llama, Qwen, Gemma).",
+        "por_que_importa": "Permite desplegar LLMs de forma más segura y fiable al mitigar ataques sin sacrificar la utilidad en solicitudes legítimas, abordando una limitación clave de las defensas existentes.",
+        "tags": [
+          "LLMs",
+          "Ciberseguridad",
+          "Defensa",
+          "Jailbreak",
+          "IA",
+          "Adaptativo"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-11T19:46:28Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.14491v1",
+      "rank": 5,
+      "title": "TimeSeek: Multi-Task and Multi-Domain Pretraining for Generalized Time Series Analytics",
+      "authors": [
+        "Peng Chen",
+        "Yihang Wang",
+        "Zhongwen Rao",
+        "Yang Shu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.LG]",
+      "category": "cs.LG",
+      "date": "2026-11-10",
+      "url": "https://arxiv.org/abs/2611.14491v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.14491v1",
+      "score": 54,
+      "topics": [
+        "anomaly detection",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: anomaly detection, LLM"
+      ],
+      "abstract_en": "Time series analytics has been widely applied across various domains. While existing time series foundation models (TSFMs) have demonstrated promising results, they still face two major challenges: 1) Most TSFMs mainly rely on stacking Transformer layers to increase parameter size, lacking the ability to adaptively model complex time series patterns from multi-domain data. 2) Current TSFMs are primarily pre-trained for specific tasks, e.g., forecasting or anomaly detection, and a few models support multiple tasks, but they fail to fully leverage task specificity and commonality, resulting in suboptimal performance. To address these challenges, we propose TimeSeek, a novel generalized time series analytics model that adaptively models time series patterns from multi-domain data and unifies multiple tasks in pre-training. Conceptually, TimeSeek is guided by selective information sharing under domain and task heterogeneity. From the perspective of multi-domain data, we propose a Multi-Domain Feature Extractor that adaptively captures temporal dependencies and channel correlations based on domain-specific characteristics, including progressive multi-scale modeling and adaptive slot channel modeling. From the perspective of the diversity of tasks, we propose multi-task collaborative training, which leverages task specificity and task commonality through task customization and cross-task training, effectively unifying multiple tasks in pre-training and better adapting to diverse downstream scenarios. After pre-training on large-scale time series data, TimeSeek achieves state-of-the-art performance in forecasting, anomaly detection, and classification tasks across both few-shot learning and zero-shot situations, together with favorable inference efficiency.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "TimeSeek revoluciona el análisis de series temporales con un modelo pre-entrenado multi-tarea y multi-dominio para mayor adaptabilidad y rendimiento.",
+        "problema": "Los modelos actuales de series temporales (TSFM) tienen dificultades para modelar patrones complejos de forma adaptativa en datos de múltiples dominios y a menudo están pre-entrenados para tareas específicas, lo que limita su rendimiento general y su capacidad para manejar diversas tareas simultáneamente.",
+        "propuesta": "TimeSeek propone un modelo generalizado que utiliza un 'Extractor de Características Multi-Dominio' para capturar dependencias temporales y correlaciones de canales de forma adaptativa, y un esquema de 'entrenamiento colaborativo multi-tarea' que aprovecha tanto las especificidades como las generalidades de las tareas para unificar múltiples análisis en el pre-entrenamiento.",
+        "resultados": "TimeSeek logra un rendimiento de vanguardia en tareas de pronóstico, detección de anomalías y clasificación, tanto en escenarios de aprendizaje con pocos ejemplos (few-shot) como sin ejemplos (zero-shot), además de ofrecer una eficiencia de inferencia favorable. Los resultados numéricos específicos no se detallan en el resumen.",
+        "por_que_importa": "Mejora significativamente la capacidad de los modelos de IA para analizar datos de series temporales en diversos dominios y para múltiples aplicaciones sin necesidad de reentrenamiento extensivo, abriendo puertas a análisis más eficientes y precisos en finanzas, salud, IoT y más.",
+        "tags": [
+          "series temporales",
+          "inteligencia artificial",
+          "aprendizaje profundo",
+          "modelos fundacionales",
+          "multi-tarea",
+          "adaptabilidad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-11T19:46:38Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.14115v1",
+      "rank": 6,
+      "title": "LEASH: Stay Safe in Agentic Robotics",
+      "authors": [
+        "Qinfeng Zhu",
+        "Weiguang Zhao",
+        "Ke Sun",
+        "Xihao Guo"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.RO]",
+      "category": "cs.RO",
+      "date": "2026-11-10",
+      "url": "https://arxiv.org/abs/2611.14115v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.14115v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Foundation models such as GPT and Claude have shown strong capabilities in spatial understanding and embodied intelligence. These advances make agentic robotics a promising path toward artificial general intelligence in robotics. However, we find that using foundation models to control robots poses serious safety risks, and comprehensive safety evaluation is still lacking. We introduce RoboRisk, a comprehensive benchmark for evaluating safety in agentic robotics. Its 92 simulated tasks and 13 physical-robot tasks fall into five categories: Task-level Refusal (T), Plan Repair (P), Execution-time Hazard (E), Injection (I), and Sequential Memory (S). Prior benchmarks cover at most two of these categories, and several evaluate only text outputs. In contrast, RoboRisk covers all five and executes every task in closed loop. We evaluate six state-of-the-art foundation models on RoboRisk: GPT-6 Astra, GPT-6.1 Sol, GPT-6 Luna, Claude Opus 5.5, Gemini 4 Argon, and Grok 4.7. These models generally show high harm rates. We also evaluate two robot-specific APIs: the Dream API and PokeBot's RoboAPI. We further propose the Lease-Enforced Agentic Safety Harness (LEASH), which offers essential safety infrastructure for agentic robotics and can be integrated into nearly any agentic architecture. LEASH leverages a decision model (Jev or OpenAI's Decisions API) to implement task, action, and commit gates, which review the task, each action, and each irreversible operation in their visual context. The planner and all three gates share a common safety policy. Experiments on RoboRisk in simulation and on physical robots show that LEASH effectively reduces harm across all six foundation models. It largely preserves their task completion performance and adds little time and token overhead.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "LEASH es un sistema de seguridad para robots controlados por IA que reduce drásticamente los riesgos sin afectar su rendimiento.",
+        "problema": "Los modelos de IA avanzados (foundation models) usados para controlar robots presentan graves riesgos de seguridad, y las evaluaciones de seguridad existentes son insuficientes.",
+        "propuesta": "Se propone LEASH (Lease-Enforced Agentic Safety Harness), una infraestructura de seguridad que utiliza un modelo de decisión para implementar 'gates' (puertas de control) en tareas, acciones y operaciones, revisando el contexto visual y compartiendo una política de seguridad común.",
+        "resultados": "LEASH reduce significativamente las tasas de daño en seis modelos de IA evaluados en el benchmark RoboRisk (92 tareas simuladas, 13 físicas), manteniendo el rendimiento de finalización de tareas y añadiendo mínima sobrecarga de tiempo y tokens.",
+        "por_que_importa": "Permite el despliegue seguro de robots autónomos controlados por IA avanzada, mitigando riesgos sin comprometer la eficiencia operativa, crucial para la adopción en el mundo real.",
+        "tags": [
+          "Seguridad Robótica",
+          "IA Confiable",
+          "Modelos Fundacionales",
+          "Robots Autónomos",
+          "Evaluación de Riesgos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-11T19:46:47Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.14227v1",
+      "rank": 7,
+      "title": "Model-Based Authoring of SOC Simulation Exercises for Cybersecurity Education",
+      "authors": [
+        "Felix Härer"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-10",
+      "url": "https://arxiv.org/abs/2611.14227v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.14227v1",
+      "score": 50,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🎯 temas: cybersecurity, vuln & threats, LLM"
+      ],
+      "abstract_en": "Cybersecurity training and classroom exercises with a virtual Security Operations Center (SOC) combine alerts, evidence, timeline entries, learner tasks, and assessment items that must remain consistent across an evolving incident. This paper presents a model-based authoring method in which a technical and educational specification is used to construct an incident exercise model and a large language model (LLM) generates selected scenario text based on that model. The incident exercise model combines an incident model of events, objects, and evidence with an exercise orchestration model of SOC alerts, timeline entries, learner tasks, and assessment items. The method is implemented in a Virtual SOC prototype and evaluated using a phishing-to-ransomware reference exercise. Its incident exercise model contains eight incident events, eight incident objects, six evidence items, seven alerts in five batches, 13 timeline entries including 12 learner tasks, and five representative assessment items. GLM-5.3-generated alert descriptions are inserted and a separate validator checks references, ordering, evidence links, assessment completeness, and selected fixed fields. Validation is demonstrated with reference data, resulting in true-negative outcomes for valid data and true-positive outcomes for deliberately placed inconsistencies. The resulting exercise package is executable within the Virtual SOC learner environment. Overall, the evaluation indicates consistency across the involved model elements and establishes the feasibility of the model-based and generative approach.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Crea ejercicios de simulación de SOC automatizados y consistentes para la educación en ciberseguridad usando modelos y LLMs.",
+        "problema": "La creación manual de ejercicios de simulación para centros de operaciones de seguridad (SOC) es laboriosa y propensa a inconsistencias entre alertas, evidencia y tareas del estudiante.",
+        "propuesta": "Un método de autoría basado en modelos que define un incidente y su orquestación, y utiliza un modelo de lenguaje grande (LLM) para generar el texto del escenario, asegurando la coherencia.",
+        "resultados": "El prototipo Virtual SOC implementó un ejercicio de referencia con 8 eventos, 8 objetos, 6 evidencias, 7 alertas, 13 entradas de línea de tiempo (12 tareas) y 5 ítems de evaluación. La validación automática detectó inconsistencias y confirmó la consistencia de los datos válidos.",
+        "por_que_importa": "Permite la creación eficiente y fiable de materiales de entrenamiento de ciberseguridad de alta calidad, mejorando la preparación de los profesionales de SOC.",
+        "tags": [
+          "ciberseguridad",
+          "educación",
+          "simulación",
+          "SOC",
+          "LLM",
+          "automatización"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-11T19:47:13Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.13960v1",
+      "rank": 8,
+      "title": "From Attack Surface to Defense Architecture: Compositional Security for Agentic Coding Harnesses",
+      "authors": [
+        "Simon Hegelich",
+        "Bardh Prenkaj",
+        "Habiba Sarhan",
+        "Morteza Shahrezaye"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-10",
+      "url": "https://arxiv.org/abs/2611.13960v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.13960v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "AI coding harnesses couple language models to shells, filesystems, and network sockets, turning the harness into an automated Living-off-the-Land (LotL) platform: once an adversary injects instructions into retrieved content, dual-use binaries such as bash, curl, and find become the payload. We argue that security in agentic systems is a structural property of the cognitive architecture and permission composition rather than an emergent property of individual models. Static regex blacklists miss structural evasions, whereas LLM-as-a-Judge guardrails incur high latency while over-blocking benign work. We present ActiveSecHarness, a neurosymbolic reference-monitor architecture built around Separation of Intelligence and Authority. It combines (1) Macaroon-inspired HMAC capability tokens across four Trust and Authority Rings, (2) a 2D product taint lattice $\\mathcal{L} = \\mathcal{L}_{\\mathrm{trust}} \\times \\mathcal{L}_{\\mathrm{sens}}$ and a workspace provenance ledger that prevents secret laundering across disk, (3) deterministic Ring-0 OS/tool guards, and (4) bytecode certificates, split-horizon audit logs, self-healing security test synthesis, and an adaptive UserWikiManager. Across $N=252$ fixtures ($120$ attack, $120$ benign, $12$ kill chains), a live local LLM judge (qwen3:4b) refuses $98.3\\%$ of benign work at $142.3\\,\\mathrm{ms}$ latency, whereas Ring 0 achieves $\\mathrm{ABR}=1.000$ and $\\mathrm{FPR}=0.000$ in $12.7\\,μ\\mathrm{s}$ ($11{,}200\\times$ faster). In a multi-step trajectory ablation, an oracle Conseca-style stateless policy misses $4/12$ kill chains ($\\mathrm{ABR}=0.667$) and coarse Boolean taint blocks $83.3\\%$ of benign workflows, while our 2D product lattice achieves $\\mathrm{ABR}=1.000$ and $\\mathrm{FPR}=0.000$ at $\\approx 20\\,μ\\mathrm{s}$ per step.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Protegiendo sistemas de codificación con IA: una arquitectura neurosimbólica para prevenir ataques de 'Living-off-the-Land'.",
+        "problema": "Los sistemas de codificación con IA (AI coding harnesses) son vulnerables a ataques 'Living-off-the-Land' (LotL) donde los atacantes usan herramientas legítimas del sistema para ejecutar código malicioso. Los métodos de seguridad actuales (listas negras, LLM-as-a-Judge) son ineficientes, lentos o bloquean trabajo legítimo.",
+        "propuesta": "Presentamos ActiveSecHarness, una arquitectura de monitor de referencia neurosimbólica basada en la 'Separación de Inteligencia y Autoridad'. Combina tokens de capacidad inspirados en Macaroon, una red de contaminación de producto 2D, un registro de procedencia del espacio de trabajo, guardas deterministas en Ring-0, certificados de bytecode y un gestor adaptativo de UserWiki.",
+        "resultados": "ActiveSecHarness logra una tasa de bloqueo de ataques (ABR) de 1.000 y una tasa de falsos positivos (FPR) de 0.000 con una latencia de 12.7 μs. En comparación, un juez LLM local rechaza el 98.3% del trabajo benigno con 142.3 ms de latencia. La red de contaminación 2D también logra ABR=1.000 y FPR=0.000 con latencia de ~20 μs por paso.",
+        "por_que_importa": "Proporciona una defensa mucho más rápida y precisa contra ataques complejos en sistemas de IA de codificación, mejorando la seguridad sin sacrificar el rendimiento, lo que es crucial para la adopción práctica de estas tecnologías.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Seguridad de Sistemas",
+          "Arquitectura de Seguridad",
+          "Living-off-the-Land",
+          "Neurosimbólico"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-11T19:47:23Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.14210",
+      "rank": 1,
+      "title": "Tree-Ising: Repairing Language Models with Bit-Level Ising Edits",
+      "authors": [
+        "Hadi Salloum",
+        "Ammar Ali"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-10",
+      "url": "https://arxiv.org/abs/2611.14210",
+      "pdf_url": "https://arxiv.org/pdf/2611.14210",
+      "score": 73,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+4)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Weight-space programming, introduced in recent MIT work by Takehi et al., enables a frontier LLM agent to read a network's weights and write a repair. Their GPT-6 Astra agent corrected the reasoning loops of Qwen3.5-0.8B without gradients, using 158 agent turns, 89.7 million tokens, and 50 forward-pass requests. Our method, Tree-Ising, casts this repair as a sparse discrete optimization problem over the model's own BF16 weights. Forward statistics define an objective that weakens a loop direction, strengthens a concluding direction, and preserves the layer's output on productive tokens. Within a state-tree representation, where lossless BF16 storage acts as a special case, the admissible edits are sign flips and exponent shifts that preserve all shared group exponents and mantissas. We decompose this objective exactly into independent QUBO (Ising) problems, one per output row, which we solve on a GPU using simulated annealing or quantum-inspired simulated bifurcation. On the agent's two layers, Tree-Ising achieves 54.6% on MATH-500, outperforming the agent's edit (51.7%) under the same evaluation protocol, while the base model scores 7.9% as reported. The simulated bifurcation solver yields a statistically indistinguishable repair at 55.1%. Both solvers outperform the agent edit across all five math benchmarks, with statistically significant improvements on MATH-500 and GSM8K after correcting for multiple comparisons. Our approach modifies 13% to 17% fewer weights and reduces BF16 bit flips by a factor of 2.2 to 2.3. It requires only four forward-pass requests and zero LLM tokens, with the annealing recipe costing about $0.90 in GPU time. On Qwen3.5-2B, with layers and dose selected using only the base model, the same recipe increases greedy GSM8K accuracy from 21.6% to 69.4%. As a proof of concept, we execute an eight-variable repair subproblem using QAOA on an IBM Heron processor.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Tree-Ising repara modelos de lenguaje optimizando pesos a nivel de bit, superando a métodos previos en benchmarks matemáticos.",
+        "problema": "Los modelos de lenguaje a veces exhiben comportamientos indeseados como bucles de razonamiento, y las técnicas actuales para repararlos son costosas o menos efectivas.",
+        "propuesta": "Se propone Tree-Ising, un método que formula la reparación de modelos como un problema de optimización discreta (QUBO/Ising) a nivel de bits (BF16) sobre los pesos del modelo. Utiliza estadísticas de forward pass para guiar la optimización y se resuelve mediante simulated annealing o simulated bifurcation en GPU.",
+        "resultados": "Tree-Ising logra un 54.6% en MATH-500 (vs 51.7% del agente) y 69.4% en GSM8K (vs 21.6% base) en un modelo, modificando 13-17% menos pesos y requiriendo solo 4 forward passes y $0.90 de costo GPU.",
+        "por_que_importa": "Ofrece una forma más eficiente y efectiva de corregir fallos en LLMs, reduciendo el costo computacional y mejorando el rendimiento en tareas críticas como el razonamiento matemático.",
+        "tags": [
+          "LLMs",
+          "Reparación de Modelos",
+          "Optimización Discreta",
+          "Ciberseguridad",
+          "Hardware Cuántico",
+          "BF16"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-11T19:47:33Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.13572",
+      "rank": 2,
+      "title": "Market-Conditioned JEPA: Learning from Unpredictable Market Shocks",
+      "authors": [
+        "Yuqi Wang",
+        "Fengyuan Liu",
+        "Mukai Li",
+        "Haochen Luo"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-10",
+      "url": "https://arxiv.org/abs/2611.13572",
+      "pdf_url": "https://arxiv.org/pdf/2611.13572",
+      "score": 62,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Much of the variation in financial time series is driven by market-wide shocks that cannot be predicted from an asset's own history. Per-asset self-supervised learning treats this variation as irreducible noise. Under a latent factor model, we show that conditioning prediction on the realized market factor makes the asset's market exposure necessary for optimal prediction, while reducing the noise against which the asset-specific component is learned. Building on this insight, we introduce Market-Conditioned JEPA (MC-JEPA), a joint-embedding predictive architecture for financial time series. During training, we construct a leave-one-out market condition for each asset from the future target embeddings of other assets and incorporate it through factor loadings derived from the asset's own representation. On 11 years of minute-level Chinese A-share data, MC-JEPA improves over per-asset JEPA across nine targets spanning returns, market exposure, risk, and liquidity, with the strongest and most statistically significant gains in exposure, risk, and liquidity. It achieves the best RankIC on all liquidity targets and on return horizons from two hours to five days, outperforming time-series foundation models and self-supervised baselines, and delivers the best portfolio performance in a historical backtest. Ablations show that the return and exposure gains require the condition to be aligned with the realized market movement. After restoring the volatility scale removed by normalization, the predictor's factor loadings rank stocks by market beta nearly as well as a supervised probe, without labels. A synthetic factor-model study with known parameters shows that conditioning improves the recovery of both market exposure and the asset-specific component.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "MC-JEPA aprende de shocks de mercado impredecibles en finanzas, mejorando predicciones y rendimiento de portafolios.",
+        "problema": "Los modelos de auto-supervisión actuales tratan las variaciones de series temporales financieras causadas por shocks de mercado como ruido irreductible, impidiendo predicciones óptimas.",
+        "propuesta": "Se introduce Market-Conditioned JEPA (MC-JEPA), una arquitectura predictiva que condiciona el aprendizaje en el factor de mercado realizado, utilizando información de otros activos para predecir mejor la exposición y el componente específico de cada activo.",
+        "resultados": "MC-JEPA mejora las predicciones en nueve objetivos (retornos, exposición de mercado, riesgo, liquidez) en datos de acciones chinas. Logra el mejor RankIC en liquidez y retornos a mediano y largo plazo, superando a otros modelos y obteniendo el mejor rendimiento de portafolio en backtesting. Las ablaciones confirman la importancia de alinear la condición con el movimiento del mercado.",
+        "por_que_importa": "Permite a los profesionales financieros construir modelos predictivos más robustos y rentables al incorporar de manera efectiva la dinámica impredecible de los shocks de mercado, mejorando la gestión de riesgos y la toma de decisiones de inversión.",
+        "tags": [
+          "finanzas",
+          "series temporales",
+          "aprendizaje profundo",
+          "ciberseguridad",
+          "predicción de mercado",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-11T19:47:43Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.12885",
+      "rank": 3,
+      "title": "World In-Context Learning for Agentic Robot Manipulation",
+      "authors": [
+        "Heng Fang",
+        "Zehui Guo",
+        "Yuehan Zhang",
+        "Mingyang Du"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-09",
+      "url": "https://arxiv.org/abs/2611.12885",
+      "pdf_url": "https://arxiv.org/pdf/2611.12885",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Trained action policies write manipulation skill into network weights, tying what is learned to the distribution it is learned from. In-context learning (ICL) avoids this coupling but has not matched trained policies, because a demonstration recorded in another scene carries no feedback from the world the robot currently faces. We observe that what an agent learns in context is semantic, recording task steps and object roles rather than visual appearance, so experience gathered in one world transfers to another. Based on this insight, we propose World In-Context Learning (WICL), a paradigm in which a frozen model starts from a demonstration, rehearses the task in a world such as a simulator, and writes the feedback into its context rather than its weights. We build RoboScript, a modular infrastructure that implements WICL for agentic manipulation. From a single demonstration, RoboScript learns each task through rehearsal in simulation, freezes the learned knowledge as a Task Memory, and deploys the frozen memory on new scenes with data isolation that ensures every deployment input is available on a real robot. On all 50 tasks of RoboTwin 2.0, RoboScript reaches 83.4% mean success across clean and randomized settings with one demonstration per task and no gradient updates, exceeding the strongest trained action policy by over 20 points. The method generalizes across visual distributions, improves through reflection, scales with the foundation model, and transfers to a physical dual-arm robot through cross-embodiment memory adaptation. With a world in the loop, a robot can learn a manipulation task in its context as well as it learns one in its weights. All code is available at https://github.com/ArcheOne-AI/RoboScript",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Aprendizaje en contexto para robots: ensayar tareas en simulación para mejorar la manipulación sin reentrenar el modelo.",
+        "problema": "Las políticas de acción tradicionales atan el aprendizaje a la distribución de datos, limitando la generalización. El aprendizaje en contexto (ICL) evita esto pero no iguala a las políticas entrenadas, ya que las demostraciones previas no consideran el entorno actual del robot.",
+        "propuesta": "Proponemos World In-Context Learning (WICL), un paradigma donde un modelo congelado ensaya la tarea en un mundo simulado, incorporando el feedback en su contexto (memoria) en lugar de actualizar sus pesos. Se implementa mediante RoboScript, que aprende tareas, las congela en una Memoria de Tarea y las despliega en robots reales.",
+        "resultados": "RoboScript alcanza un 83.4% de éxito medio en 50 tareas de RoboTwin 2.0, superando a las políticas entrenadas en más de 20 puntos, usando una sola demostración por tarea y sin actualizaciones de gradiente.",
+        "por_que_importa": "Permite a los robots aprender y adaptarse a nuevas tareas de manipulación de forma más eficiente y generalizable, transfiriendo conocimiento entre entornos y a robots físicos sin necesidad de reentrenamiento costoso.",
+        "tags": [
+          "Robótica",
+          "Aprendizaje por Refuerzo",
+          "Simulación",
+          "Manipulación",
+          "Inteligencia Artificial"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-11T19:47:52Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.03142",
+      "rank": 4,
+      "title": "DepthGraft: Structural Regularization through Hierarchical Cross-Layer KV Reconstruction",
+      "authors": [
+        "Xiaohan Qin",
+        "Xiangdong Zhang",
+        "Yu Wang",
+        "Huaijin Wu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-02",
+      "url": "https://arxiv.org/abs/2611.03142",
+      "pdf_url": "https://arxiv.org/pdf/2611.03142",
+      "score": 52,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Scaling depth is a key route to stronger large language models, but Pre-LN architectures often suffer from depth-wise information dilution, limiting the effective use of deep layers. While cross-layer connectivity has proven effective at mitigating this problem, existing designs usually introduce additional computation or memory access. We revisit cross-layer KV sharing as an efficient form of such connectivity. Beyond cache compression, each KV reuse edge creates a direct gradient path from deep layers to source KV projections, turning KV sharing into an implicit structural regularizer for KV representation geometry. We provide a systematic analysis of this mechanism, showing that proper sharing topologies sharpen key retrieval directions while enriching the value content subspace, whereas existing adjacent or global-anchor designs do not fully exploit this effect. Motivated by this, we propose DepthGraft, a hierarchical KV-sharing architecture that reconstructs deep-layer KV from stride-aligned shallow-middle source pairs. DepthGraft distributes non-local gradient flow across source layers, while preserving prefill early completion and reducing KV cache by roughly one third. Experiments on dense and MoE models from 0.5B to 16B parameters show consistent downstream improvements under both GQA and MLA. Notably, on the 16B MoE model, DepthGraft achieves a 7.0% absolute improvement on MMLU-Pro, along with gains of 6.6% on CMMLU and 6.4% on C3. These results validate the potential of DepthGraft as a scalable design for large-scale pretraining. The project page is available at https://github.com/jianke0604/DepthGraft.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "DepthGraft mejora modelos de lenguaje profundos con una nueva forma de compartir información entre capas, reduciendo el uso de memoria y mejorando el rendimiento.",
+        "problema": "Los modelos de lenguaje grandes (LLMs) pre-entrenados con arquitecturas Pre-LN sufren de dilución de información a medida que aumenta su profundidad, lo que limita la efectividad de las capas más profundas. Las conexiones entre capas existentes para mitigar esto a menudo incrementan la computación o el acceso a memoria.",
+        "propuesta": "DepthGraft propone una arquitectura jerárquica de compartición de KV (Key-Value) que reconstruye la información KV de capas profundas a partir de pares de capas superficiales y medias alineadas por stride. Esto actúa como un regularizador estructural implícito para la geometría de la representación KV.",
+        "resultados": "DepthGraft reduce la caché KV en aproximadamente un tercio. En modelos de 16B parámetros, se observó una mejora absoluta del 7.0% en MMLU-Pro, 6.6% en CMMLU y 6.4% en C3.",
+        "por_que_importa": "Permite entrenar modelos de lenguaje más profundos y eficientes sin sacrificar rendimiento, reduciendo la huella de memoria y mejorando las capacidades del modelo en tareas downstream, lo que es crucial para el desarrollo de LLMs a gran escala.",
+        "tags": [
+          "LLMs",
+          "Arquitectura de Modelos",
+          "Eficiencia",
+          "Compartición KV",
+          "Regularización Estructural",
+          "Pre-entrenamiento"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-11T19:48:20Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.12184",
+      "rank": 5,
+      "title": "Blind Variation, Selective Retention: Improving Creative Idea Generation in AI Scientists",
+      "authors": [
+        "Guowei Xu",
+        "Jiaru Zou",
+        "Mete Erdogan",
+        "Haotian Ye"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-09",
+      "url": "https://arxiv.org/abs/2611.12184",
+      "pdf_url": "https://arxiv.org/pdf/2611.12184",
+      "score": 51,
+      "topics": [
+        "vuln & threats",
+        "anomaly detection"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: vuln & threats, anomaly detection"
+      ],
+      "abstract_en": "Scientific discovery requires ideas that are original, useful, and non-obvious. Yet AI scientists are typically given as much task information as possible during idea generation, which can anchor generation toward familiar approaches. Inspired by the cognitive framework of Blind Variation and Selective Retention (BVSR), we propose a discovery framework that separates these two roles of information: it generates proposals under deliberately limited task information to broaden exploration, then learns from proposals previously verified on the same task and their outcomes to retain promising candidates for costly empirical evaluation. We evaluate BVSR across five proposer models and 12 scientific tasks. Limiting task information substantially increases proposal originality and non-obviousness, and produces a larger share of highly creative and high-utility proposals than existing state-of-the-art prompting-based baselines. Learning from prior proposal outcomes on the task further improves candidate selection, discarding half of the candidates while retaining most top-performing proposals. When incorporated into existing AI-scientist workflows, BVSR achieves stronger discoveries across gene expression analysis, drug response prediction, anomaly detection, scaling law discovery, and brain activity prediction. These results suggest that effective AI scientists should use information differently across stages of discovery: constrain task-specific information during exploration while exploiting accumulated empirical experience on the task.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Una nueva técnica de IA imita la creatividad humana para generar ideas científicas más originales y útiles.",
+        "problema": "Los científicos de IA suelen recibir demasiada información, lo que limita su exploración de enfoques novedosos y originales para el descubrimiento científico.",
+        "propuesta": "Se propone un marco llamado Blind Variation, Selective Retention (BVSR) que separa la generación de ideas (con información limitada para fomentar la exploración) de la selección (basada en resultados previos para retener las más prometedoras).",
+        "resultados": "Limitar la información aumenta la originalidad y la utilidad de las ideas. El aprendizaje a partir de resultados previos permite descartar la mitad de los candidatos reteniendo la mayoría de los de mejor rendimiento. Se lograron descubrimientos más sólidos en cinco tareas científicas.",
+        "por_que_importa": "Permite a los científicos de IA ser más creativos y eficientes, generando descubrimientos más valiosos al usar la información de manera estratégica en diferentes etapas del proceso.",
+        "tags": [
+          "IA creativa",
+          "descubrimiento científico",
+          "generación de ideas",
+          "optimización de IA",
+          "aprendizaje por refuerzo"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-11T19:48:29Z"
+      }
+    }
+  ],
+  "generated_at": "2026-11-11T19:48:29Z"
+}

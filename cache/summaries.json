@@ -12761,5 +12761,222 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-11-10T19:55:15Z"
+  },
+  "arxiv:2611.13696v1": {
+    "tldr": "Protege sistemas multi-agente de ataques de envenenamiento de memoria mediante recuperación de conocimiento privada y firmas.",
+    "problema": "Los sistemas multi-agente basados en LLMs son vulnerables a ataques de envenenamiento de memoria, que modifican el conocimiento de los agentes y su comportamiento, especialmente en su memoria semántica.",
+    "propuesta": "Introduce la recuperación de conocimiento privada y la inferencia privada, proponiendo un sistema de firmas en la base de conocimiento externa para prevenir la manipulación no deseada y ataques de envenenamiento.",
+    "resultados": "Se discuten estrategias de ataque y mitigación para la memoria semántica. Se proponen implementaciones en Python con diferentes niveles de privacidad (k-anonimato, privacidad teórica de la información).",
+    "por_que_importa": "Asegura la integridad y el comportamiento fiable de los agentes autónomos en sistemas multi-agente, introduciendo seguridad desde el diseño en la memoria semántica.",
+    "tags": [
+      "sistemas multi-agente",
+      "seguridad IA",
+      "LLMs",
+      "privacidad",
+      "ciberseguridad",
+      "envenenamiento de memoria"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-11T19:45:43Z"
+  },
+  "arxiv:2611.13684v1": {
+    "tldr": "Evalúa la capacidad de los agentes de IA para evadir defensas de ciberseguridad en endpoints, revelando vulnerabilidades inesperadas.",
+    "problema": "Los agentes de IA se usan cada vez más en ciberseguridad, pero no se sabe si pueden evadir las defensas de Endpoint Detection and Response (EDR) al ejecutar cargas maliciosas.",
+    "propuesta": "Se introduce BypassGym, un benchmark que evalúa sistemáticamente la habilidad de un agente de IA para generar un programa (loader) que ejecute un payload sin ser detectado o bloqueado por EDRs en entornos reales.",
+    "resultados": "Modelos de IA, incluso los ligeros, demostraron éxito en evadir EDRs. DeepSeek-V4.1 Flash logró 17/18 ejecuciones exitosas y Bitdefender permitió el paso de 5/15 intentos.",
+    "por_que_importa": "Proporciona una métrica sistemática de las capacidades de evasión de defensas de los agentes de IA actuales, identificando áreas clave para que los defensores mejoren la seguridad de los endpoints.",
+    "tags": [
+      "ciberseguridad",
+      "inteligencia artificial",
+      "EDR",
+      "evasión de defensas",
+      "benchmark"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-11T19:45:53Z"
+  },
+  "arxiv:2611.13578v1": {
+    "tldr": "Defensa de IA en tiempo de inferencia para prevenir ataques de jailbreak sin afectar respuestas legítimas.",
+    "problema": "Los LLMs son vulnerables a ataques de 'jailbreak' que eluden sus salvaguardas de seguridad, generando respuestas dañinas. Las defensas actuales luchan por adaptarse a cada entrada sin un objetivo predefinido y sin aumentar el rechazo innecesario de peticiones benignas.",
+    "propuesta": "Se propone TERM (Target-free Entropy-guided Residual Modulation), una defensa en tiempo de inferencia que modula las actualizaciones residuales del modelo basándose en desviaciones de la entropía de atención calibradas por el prompt, evitando direcciones de seguridad predefinidas.",
+    "resultados": "TERM mejora la robustez frente a jailbreaks manteniendo bajo rechazo en peticiones benignas en varios modelos (Llama, Qwen, Gemma) y ataques, con un modesto sobrecoste de inferencia.",
+    "por_que_importa": "Permite desplegar LLMs de forma más segura y fiable al mitigar ataques sin perjudicar la usabilidad en interacciones cotidianas.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "LLM",
+      "Defensa",
+      "Jailbreak",
+      "Prompt Engineering"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-11T19:46:19Z"
+  },
+  "arxiv:2611.13577v1": {
+    "tldr": "Defensa innovadora contra ataques 'jailbreak' en LLMs que modula las actualizaciones internas del modelo sin necesidad de objetivos predefinidos.",
+    "problema": "Los LLMs son vulnerables a ataques 'jailbreak' que eluden sus salvaguardas de alineación, generando respuestas dañinas. Las defensas actuales a menudo requieren objetivos de intervención predefinidos y pueden causar rechazos excesivos en solicitudes benignas.",
+    "propuesta": "TERM (Target-free Entropy-guided Residual Modulation), una defensa en tiempo de inferencia que utiliza desviaciones de entropía de atención calibradas por el prompt para modular adaptativamente las actualizaciones residuales del propio modelo, sin depender de direcciones de seguridad predefinidas.",
+    "resultados": "TERM mejora la robustez contra ataques 'jailbreak' manteniendo bajos niveles de sobre-rechazo en solicitudes de seguridad sensibles, con una sobrecarga de inferencia modesta. Se compara favorablemente con siete defensas contra siete ataques 'jailbreak' en varios modelos LLM (Llama, Qwen, Gemma).",
+    "por_que_importa": "Permite desplegar LLMs de forma más segura y fiable al mitigar ataques sin sacrificar la utilidad en solicitudes legítimas, abordando una limitación clave de las defensas existentes.",
+    "tags": [
+      "LLMs",
+      "Ciberseguridad",
+      "Defensa",
+      "Jailbreak",
+      "IA",
+      "Adaptativo"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-11T19:46:28Z"
+  },
+  "arxiv:2611.14491v1": {
+    "tldr": "TimeSeek revoluciona el análisis de series temporales con un modelo pre-entrenado multi-tarea y multi-dominio para mayor adaptabilidad y rendimiento.",
+    "problema": "Los modelos actuales de series temporales (TSFM) tienen dificultades para modelar patrones complejos de forma adaptativa en datos de múltiples dominios y a menudo están pre-entrenados para tareas específicas, lo que limita su rendimiento general y su capacidad para manejar diversas tareas simultáneamente.",
+    "propuesta": "TimeSeek propone un modelo generalizado que utiliza un 'Extractor de Características Multi-Dominio' para capturar dependencias temporales y correlaciones de canales de forma adaptativa, y un esquema de 'entrenamiento colaborativo multi-tarea' que aprovecha tanto las especificidades como las generalidades de las tareas para unificar múltiples análisis en el pre-entrenamiento.",
+    "resultados": "TimeSeek logra un rendimiento de vanguardia en tareas de pronóstico, detección de anomalías y clasificación, tanto en escenarios de aprendizaje con pocos ejemplos (few-shot) como sin ejemplos (zero-shot), además de ofrecer una eficiencia de inferencia favorable. Los resultados numéricos específicos no se detallan en el resumen.",
+    "por_que_importa": "Mejora significativamente la capacidad de los modelos de IA para analizar datos de series temporales en diversos dominios y para múltiples aplicaciones sin necesidad de reentrenamiento extensivo, abriendo puertas a análisis más eficientes y precisos en finanzas, salud, IoT y más.",
+    "tags": [
+      "series temporales",
+      "inteligencia artificial",
+      "aprendizaje profundo",
+      "modelos fundacionales",
+      "multi-tarea",
+      "adaptabilidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-11T19:46:38Z"
+  },
+  "arxiv:2611.14115v1": {
+    "tldr": "LEASH es un sistema de seguridad para robots controlados por IA que reduce drásticamente los riesgos sin afectar su rendimiento.",
+    "problema": "Los modelos de IA avanzados (foundation models) usados para controlar robots presentan graves riesgos de seguridad, y las evaluaciones de seguridad existentes son insuficientes.",
+    "propuesta": "Se propone LEASH (Lease-Enforced Agentic Safety Harness), una infraestructura de seguridad que utiliza un modelo de decisión para implementar 'gates' (puertas de control) en tareas, acciones y operaciones, revisando el contexto visual y compartiendo una política de seguridad común.",
+    "resultados": "LEASH reduce significativamente las tasas de daño en seis modelos de IA evaluados en el benchmark RoboRisk (92 tareas simuladas, 13 físicas), manteniendo el rendimiento de finalización de tareas y añadiendo mínima sobrecarga de tiempo y tokens.",
+    "por_que_importa": "Permite el despliegue seguro de robots autónomos controlados por IA avanzada, mitigando riesgos sin comprometer la eficiencia operativa, crucial para la adopción en el mundo real.",
+    "tags": [
+      "Seguridad Robótica",
+      "IA Confiable",
+      "Modelos Fundacionales",
+      "Robots Autónomos",
+      "Evaluación de Riesgos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-11T19:46:47Z"
+  },
+  "arxiv:2611.14227v1": {
+    "tldr": "Crea ejercicios de simulación de SOC automatizados y consistentes para la educación en ciberseguridad usando modelos y LLMs.",
+    "problema": "La creación manual de ejercicios de simulación para centros de operaciones de seguridad (SOC) es laboriosa y propensa a inconsistencias entre alertas, evidencia y tareas del estudiante.",
+    "propuesta": "Un método de autoría basado en modelos que define un incidente y su orquestación, y utiliza un modelo de lenguaje grande (LLM) para generar el texto del escenario, asegurando la coherencia.",
+    "resultados": "El prototipo Virtual SOC implementó un ejercicio de referencia con 8 eventos, 8 objetos, 6 evidencias, 7 alertas, 13 entradas de línea de tiempo (12 tareas) y 5 ítems de evaluación. La validación automática detectó inconsistencias y confirmó la consistencia de los datos válidos.",
+    "por_que_importa": "Permite la creación eficiente y fiable de materiales de entrenamiento de ciberseguridad de alta calidad, mejorando la preparación de los profesionales de SOC.",
+    "tags": [
+      "ciberseguridad",
+      "educación",
+      "simulación",
+      "SOC",
+      "LLM",
+      "automatización"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-11T19:47:13Z"
+  },
+  "arxiv:2611.13960v1": {
+    "tldr": "Protegiendo sistemas de codificación con IA: una arquitectura neurosimbólica para prevenir ataques de 'Living-off-the-Land'.",
+    "problema": "Los sistemas de codificación con IA (AI coding harnesses) son vulnerables a ataques 'Living-off-the-Land' (LotL) donde los atacantes usan herramientas legítimas del sistema para ejecutar código malicioso. Los métodos de seguridad actuales (listas negras, LLM-as-a-Judge) son ineficientes, lentos o bloquean trabajo legítimo.",
+    "propuesta": "Presentamos ActiveSecHarness, una arquitectura de monitor de referencia neurosimbólica basada en la 'Separación de Inteligencia y Autoridad'. Combina tokens de capacidad inspirados en Macaroon, una red de contaminación de producto 2D, un registro de procedencia del espacio de trabajo, guardas deterministas en Ring-0, certificados de bytecode y un gestor adaptativo de UserWiki.",
+    "resultados": "ActiveSecHarness logra una tasa de bloqueo de ataques (ABR) de 1.000 y una tasa de falsos positivos (FPR) de 0.000 con una latencia de 12.7 μs. En comparación, un juez LLM local rechaza el 98.3% del trabajo benigno con 142.3 ms de latencia. La red de contaminación 2D también logra ABR=1.000 y FPR=0.000 con latencia de ~20 μs por paso.",
+    "por_que_importa": "Proporciona una defensa mucho más rápida y precisa contra ataques complejos en sistemas de IA de codificación, mejorando la seguridad sin sacrificar el rendimiento, lo que es crucial para la adopción práctica de estas tecnologías.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Seguridad de Sistemas",
+      "Arquitectura de Seguridad",
+      "Living-off-the-Land",
+      "Neurosimbólico"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-11T19:47:23Z"
+  },
+  "arxiv:2611.14210": {
+    "tldr": "Tree-Ising repara modelos de lenguaje optimizando pesos a nivel de bit, superando a métodos previos en benchmarks matemáticos.",
+    "problema": "Los modelos de lenguaje a veces exhiben comportamientos indeseados como bucles de razonamiento, y las técnicas actuales para repararlos son costosas o menos efectivas.",
+    "propuesta": "Se propone Tree-Ising, un método que formula la reparación de modelos como un problema de optimización discreta (QUBO/Ising) a nivel de bits (BF16) sobre los pesos del modelo. Utiliza estadísticas de forward pass para guiar la optimización y se resuelve mediante simulated annealing o simulated bifurcation en GPU.",
+    "resultados": "Tree-Ising logra un 54.6% en MATH-500 (vs 51.7% del agente) y 69.4% en GSM8K (vs 21.6% base) en un modelo, modificando 13-17% menos pesos y requiriendo solo 4 forward passes y $0.90 de costo GPU.",
+    "por_que_importa": "Ofrece una forma más eficiente y efectiva de corregir fallos en LLMs, reduciendo el costo computacional y mejorando el rendimiento en tareas críticas como el razonamiento matemático.",
+    "tags": [
+      "LLMs",
+      "Reparación de Modelos",
+      "Optimización Discreta",
+      "Ciberseguridad",
+      "Hardware Cuántico",
+      "BF16"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-11T19:47:33Z"
+  },
+  "arxiv:2611.13572": {
+    "tldr": "MC-JEPA aprende de shocks de mercado impredecibles en finanzas, mejorando predicciones y rendimiento de portafolios.",
+    "problema": "Los modelos de auto-supervisión actuales tratan las variaciones de series temporales financieras causadas por shocks de mercado como ruido irreductible, impidiendo predicciones óptimas.",
+    "propuesta": "Se introduce Market-Conditioned JEPA (MC-JEPA), una arquitectura predictiva que condiciona el aprendizaje en el factor de mercado realizado, utilizando información de otros activos para predecir mejor la exposición y el componente específico de cada activo.",
+    "resultados": "MC-JEPA mejora las predicciones en nueve objetivos (retornos, exposición de mercado, riesgo, liquidez) en datos de acciones chinas. Logra el mejor RankIC en liquidez y retornos a mediano y largo plazo, superando a otros modelos y obteniendo el mejor rendimiento de portafolio en backtesting. Las ablaciones confirman la importancia de alinear la condición con el movimiento del mercado.",
+    "por_que_importa": "Permite a los profesionales financieros construir modelos predictivos más robustos y rentables al incorporar de manera efectiva la dinámica impredecible de los shocks de mercado, mejorando la gestión de riesgos y la toma de decisiones de inversión.",
+    "tags": [
+      "finanzas",
+      "series temporales",
+      "aprendizaje profundo",
+      "ciberseguridad",
+      "predicción de mercado",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-11T19:47:43Z"
+  },
+  "arxiv:2611.12885": {
+    "tldr": "Aprendizaje en contexto para robots: ensayar tareas en simulación para mejorar la manipulación sin reentrenar el modelo.",
+    "problema": "Las políticas de acción tradicionales atan el aprendizaje a la distribución de datos, limitando la generalización. El aprendizaje en contexto (ICL) evita esto pero no iguala a las políticas entrenadas, ya que las demostraciones previas no consideran el entorno actual del robot.",
+    "propuesta": "Proponemos World In-Context Learning (WICL), un paradigma donde un modelo congelado ensaya la tarea en un mundo simulado, incorporando el feedback en su contexto (memoria) en lugar de actualizar sus pesos. Se implementa mediante RoboScript, que aprende tareas, las congela en una Memoria de Tarea y las despliega en robots reales.",
+    "resultados": "RoboScript alcanza un 83.4% de éxito medio en 50 tareas de RoboTwin 2.0, superando a las políticas entrenadas en más de 20 puntos, usando una sola demostración por tarea y sin actualizaciones de gradiente.",
+    "por_que_importa": "Permite a los robots aprender y adaptarse a nuevas tareas de manipulación de forma más eficiente y generalizable, transfiriendo conocimiento entre entornos y a robots físicos sin necesidad de reentrenamiento costoso.",
+    "tags": [
+      "Robótica",
+      "Aprendizaje por Refuerzo",
+      "Simulación",
+      "Manipulación",
+      "Inteligencia Artificial"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-11T19:47:52Z"
+  },
+  "arxiv:2611.03142": {
+    "tldr": "DepthGraft mejora modelos de lenguaje profundos con una nueva forma de compartir información entre capas, reduciendo el uso de memoria y mejorando el rendimiento.",
+    "problema": "Los modelos de lenguaje grandes (LLMs) pre-entrenados con arquitecturas Pre-LN sufren de dilución de información a medida que aumenta su profundidad, lo que limita la efectividad de las capas más profundas. Las conexiones entre capas existentes para mitigar esto a menudo incrementan la computación o el acceso a memoria.",
+    "propuesta": "DepthGraft propone una arquitectura jerárquica de compartición de KV (Key-Value) que reconstruye la información KV de capas profundas a partir de pares de capas superficiales y medias alineadas por stride. Esto actúa como un regularizador estructural implícito para la geometría de la representación KV.",
+    "resultados": "DepthGraft reduce la caché KV en aproximadamente un tercio. En modelos de 16B parámetros, se observó una mejora absoluta del 7.0% en MMLU-Pro, 6.6% en CMMLU y 6.4% en C3.",
+    "por_que_importa": "Permite entrenar modelos de lenguaje más profundos y eficientes sin sacrificar rendimiento, reduciendo la huella de memoria y mejorando las capacidades del modelo en tareas downstream, lo que es crucial para el desarrollo de LLMs a gran escala.",
+    "tags": [
+      "LLMs",
+      "Arquitectura de Modelos",
+      "Eficiencia",
+      "Compartición KV",
+      "Regularización Estructural",
+      "Pre-entrenamiento"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-11T19:48:20Z"
+  },
+  "arxiv:2611.12184": {
+    "tldr": "Una nueva técnica de IA imita la creatividad humana para generar ideas científicas más originales y útiles.",
+    "problema": "Los científicos de IA suelen recibir demasiada información, lo que limita su exploración de enfoques novedosos y originales para el descubrimiento científico.",
+    "propuesta": "Se propone un marco llamado Blind Variation, Selective Retention (BVSR) que separa la generación de ideas (con información limitada para fomentar la exploración) de la selección (basada en resultados previos para retener las más prometedoras).",
+    "resultados": "Limitar la información aumenta la originalidad y la utilidad de las ideas. El aprendizaje a partir de resultados previos permite descartar la mitad de los candidatos reteniendo la mayoría de los de mejor rendimiento. Se lograron descubrimientos más sólidos en cinco tareas científicas.",
+    "por_que_importa": "Permite a los científicos de IA ser más creativos y eficientes, generando descubrimientos más valiosos al usar la información de manera estratégica en diferentes etapas del proceso.",
+    "tags": [
+      "IA creativa",
+      "descubrimiento científico",
+      "generación de ideas",
+      "optimización de IA",
+      "aprendizaje por refuerzo"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-11T19:48:29Z"
   }
 }
