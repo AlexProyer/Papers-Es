@@ -1,0 +1,100 @@
+{
+  "date": "2026-11-12",
+  "report_type": "filtrado",
+  "evaluated": 19,
+  "selected": 2,
+  "papers": [
+    {
+      "id": "arxiv:2611.11306",
+      "rank": 1,
+      "title": "ScrapeBench: Evaluating Legal Compliance of AI Agents in Website Scraping",
+      "authors": [
+        "Joseph Marvin Imperial",
+        "Daniel Slate",
+        "Noam Kolt"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-10",
+      "url": "https://arxiv.org/abs/2611.11306",
+      "pdf_url": "https://arxiv.org/pdf/2611.11306",
+      "score": 52,
+      "topics": [
+        "AI agents",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: AI agents, compliance & audit"
+      ],
+      "abstract_en": "AI agents deployed on the open web are becoming more capable of performing actions that may breach contractual provisions and violate computer security laws. In this paper, we introduce ScrapeBench, the first agentic benchmark for empirically evaluating the legal compliance of AI agents with website scraping policies, namely terms of service (ToS) and $\\texttt{robots.txt}$ directives. Across widely used closed-weight and open-weight AI agents, we find that most agents exhibit low compliance rates (< 5%) when instructed to scrape websites in our sample of 1,626 popular websites that explicitly prohibit scraping. In addition, we observe that even where AI agents actively check the applicable ToS and $\\texttt{robots.txt}$, they continue to exhibit low compliance rates. Conversely, in our sample of 269 websites that do not prohibit scraping, we observe that agents sometimes refuse to scrape despite it being lawful, such as Claude Opus 4.6 exhibiting an over-refusal rate of 98.5%. Our human baseline experiments (n = 180 participants) suggest that humans exhibit compliance rates comparable to AI agents but over-refuse at much higher rates.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "ScrapeBench evalúa la legalidad de los agentes de IA al 'scrapear' sitios web, revelando bajas tasas de cumplimiento y excesivas negativas.",
+        "problema": "Los agentes de IA que operan en la web pueden violar términos de servicio y leyes de seguridad al 'scrapear' sitios web sin cumplir las normativas.",
+        "propuesta": "Se introduce ScrapeBench, un benchmark para evaluar empíricamente el cumplimiento legal de agentes de IA con las políticas de 'scraping' (ToS y robots.txt).",
+        "resultados": "La mayoría de los agentes de IA muestran bajas tasas de cumplimiento (<5%) en sitios que prohíben el 'scraping'. Incluso al verificar las normas, el cumplimiento es bajo. En sitios que no lo prohíben, algunos agentes se niegan excesivamente (ej. Claude Opus 4.6 con 98.5% de sobre-negativa). Los humanos muestran tasas de cumplimiento similares pero sobre-niegan más.",
+        "por_que_importa": "Es crucial para asegurar que los agentes de IA operen legalmente en la web, evitando multas, litigios y daños a la reputación, y garantizando un uso ético de la tecnología.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Legalidad",
+          "Web Scraping",
+          "Cumplimiento",
+          "Ética"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-12T20:13:09Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.13410",
+      "rank": 2,
+      "title": "SteerDistill: Quantizing LLM Agents via Closed-Loop Teacher Steering",
+      "authors": [
+        "Genming Cui",
+        "Xiangyu Li",
+        "Zixu Hao",
+        "Xin Ding"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-10",
+      "url": "https://arxiv.org/abs/2611.13410",
+      "pdf_url": "https://arxiv.org/pdf/2611.13410",
+      "score": 51,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Low-bit quantization reduces the inference cost of LLM agents but can compromise task success. Examining failed rollouts, we find that quantized agents overlook task requirements or environmental conditions, producing environment transitions that diverge from successful full-precision references. Correcting these behavioral divergences remains difficult: offline data may miss the student's failure contexts, while its own rollouts may provide few correct responses in those contexts. We introduce SteerDistill, a quantization-aware distillation method in which a full-precision teacher guides the student to revise failed responses and iteratively refines its guidance using feedback from student execution. This closed-loop teacher steering produces locally verified behavioral corrections. We internalize these corrections by training the student without guidance to match the steered student's predictions at corrected turns and the full-precision teacher's at other turns, enabling unassisted inference. Across five agentic benchmarks and three models, SteerDistill exceeds the strongest quantized baseline by 1.67--2.18 points in average score under W4A16 and stays within one point of BF16. On $τ^2$-Bench, it outperforms QeRL by 1.84 percentage points in success rate using 67% fewer training GPU hours and produces shorter successful trajectories than the quantized baselines.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "SteerDistill refina LLMs cuantificados para mejorar su rendimiento sin sacrificar eficiencia, guiando su aprendizaje con un modelo de mayor precisión.",
+        "problema": "La cuantificación de LLMs para reducir costos de inferencia compromete su éxito, ya que los modelos cuantificados fallan al ignorar requisitos o condiciones, divergiendo de las referencias exitosas.",
+        "propuesta": "Se introduce SteerDistill, un método de destilación consciente de la cuantificación. Un profesor de alta precisión guía al estudiante (cuantificado) para corregir respuestas fallidas, refinando la guía con retroalimentación de la ejecución del estudiante en un ciclo cerrado.",
+        "resultados": "SteerDistill supera al mejor baseline cuantificado en 1.67-2.18 puntos en cinco benchmarks y tres modelos bajo W4A16, manteniéndose a menos de un punto de BF16. En $τ^2$-Bench, mejora la tasa de éxito en 1.84 puntos porcentuales respecto a QeRL, usando 67% menos horas de GPU y produciendo trayectorias exitosas más cortas.",
+        "por_que_importa": "Permite desplegar LLMs más eficientes (cuantificados) con un rendimiento cercano a los modelos de alta precisión, crucial para aplicaciones prácticas con recursos limitados.",
+        "tags": [
+          "cuantificación",
+          "LLMs",
+          "destilación",
+          "agentes IA",
+          "ciberseguridad",
+          "eficiencia"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-12T20:13:18Z"
+      }
+    }
+  ],
+  "generated_at": "2026-11-12T20:13:18Z"
+}
