@@ -13012,5 +13012,54 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-11-12T20:13:18Z"
+  },
+  "arxiv:2611.13509": {
+    "tldr": "Crea modelos de lenguaje especializados para tu móvil, protegiendo tu privacidad y sin necesidad de conexión.",
+    "problema": "Entrenar modelos de lenguaje pequeños (SLMs) para dispositivos móviles es complejo, requiere ajustes expertos repetidos y no considera las limitaciones específicas de cada teléfono.",
+    "propuesta": "Mobile AI Factory es un sistema que automatiza la creación de SLMs optimizados para tareas y teléfonos específicos, eligiendo entre ajustar hiperparámetros, minar datos reales o generar datos sintéticos, y adaptándose a las mediciones del dispositivo.",
+    "resultados": "Los modelos creados superan a modelos de vanguardia en 5 de 10 tareas (hasta 0.34 de mejora) y igualan en 3 más. El proceso de búsqueda es 19 veces más rápido que el entrenamiento exhaustivo, con una diferencia mínima en precisión. Las mediciones del teléfono son cruciales, afectando la mejor configuración.",
+    "por_que_importa": "Permite desplegar IA potente y privada en móviles de forma eficiente, superando las limitaciones de hardware y garantizando el rendimiento sin depender de la nube.",
+    "tags": [
+      "IA móvil",
+      "Modelos de lenguaje",
+      "Privacidad",
+      "Optimización",
+      "Android",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-16T22:23:59Z"
+  },
+  "arxiv:2611.18359": {
+    "tldr": "La robótica agentic, impulsada por modelos fundacionales como GPT-6 Astra, revoluciona las tareas robóticas al permitir razonamiento y adaptación en tiempo real.",
+    "problema": "La robótica tradicional requiere políticas específicas para cada tarea. La comunidad carece de una definición, evaluación y hoja de ruta claras para los sistemas robóticos agentic.",
+    "propuesta": "Se propone la 'Embodied System 2', un sistema centralizado basado en un modelo fundacional y un 'arnés' para tareas corporales, que opera en un ciclo cerrado de observación, interpretación, razonamiento, ejecución y adaptación.",
+    "resultados": "Los modelos agentic han igualado o superado a políticas específicas en muchos benchmarks corporales. El resumen no especifica métricas numéricas detalladas.",
+    "por_que_importa": "Permite a los robots abordar tareas complejas en entornos abiertos de manera más general y adaptable, allanando el camino hacia la autonomía sostenida y la ejecución de roles.",
+    "tags": [
+      "robótica agentic",
+      "modelos fundacionales",
+      "IA corporizada",
+      "evaluación de sistemas",
+      "autonomía robótica"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-16T22:24:08Z"
+  },
+  "arxiv:2611.17820": {
+    "tldr": "Entrenar IA individualmente falla en equipos; proponemos soluciones para mantener la alineación en grupos.",
+    "problema": "El entrenamiento de alineación de seguridad en agentes de IA individuales no se transfiere de manera confiable a equipos de agentes, lo que genera brechas de seguridad en configuraciones multi-agente.",
+    "propuesta": "Investiga las causas de la falla en la transferencia de alineación a equipos de IA y propone intervenciones como la asignación de roles de 'líder de seguridad' o 'coordinador' con especificaciones claras para restaurar la alineación.",
+    "resultados": "Se observó que la difusión de responsabilidad es un factor clave en la brecha de seguridad. Las intervenciones como la crítica mutua o los chats grupales no siempre restauran la alineación. Designar un líder de seguridad y un coordinador con especificaciones de seguridad fueron efectivos para restaurar la alineación.",
+    "por_que_importa": "Permite a los profesionales diseñar equipos de IA que mantengan los comportamientos de seguridad esperados de los agentes individuales, crucial para aplicaciones críticas y confiables.",
+    "tags": [
+      "IA multi-agente",
+      "Alineación de IA",
+      "Ciberseguridad",
+      "Ingeniería de software",
+      "LLMs"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-16T22:24:18Z"
   }
 }

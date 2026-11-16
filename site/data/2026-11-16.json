@@ -1,0 +1,145 @@
+{
+  "date": "2026-11-16",
+  "report_type": "filtrado",
+  "evaluated": 30,
+  "selected": 3,
+  "papers": [
+    {
+      "id": "arxiv:2611.13509",
+      "rank": 1,
+      "title": "Mobile AI Factory: Building Specialized Language Models for Your Mobile Device",
+      "authors": [
+        "Evan Li",
+        "Krishna Deshpande",
+        "Wen Cheng",
+        "Shyamnath Gollakota"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-10",
+      "url": "https://arxiv.org/abs/2611.13509",
+      "pdf_url": "https://arxiv.org/pdf/2611.13509",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Small language models (SLMs) running on mobile devices can keep user data private and work without connectivity. But they perform well only when fine-tuned for the target task and sized for the target device, a process that today requires repeated expert tuning. We present {\\it Mobile AI Factory}, an agentic system that builds a fine-tuned, quantized SLM for a given task and phone. Given a task specification and a target phone, an orchestrator LLM chooses whether to tune hyperparameters, mine real data, or generate synthetic examples, while fixed rules roll back changes that hurt accuracy. The factory searches from small to large models across base models and quantizations, adapts its accuracy goal as it searches, and uses real measurements of the target phone across inference engines and backends. We evaluate Mobile AI Factory on ten tasks and four Android phones. On an unseen testset, its on-device models outperform two five-shot frontier models on five tasks, by up to 0.34, and match them on three more. Its search comes within 0.03 of exhaustively training all 27 model variants on an entity extraction task, while using 19$\\times$ less GPU time. Phone measurements also matter: the best configuration changes across phones. Without phone measurements, Claude Opus 5.5, given the full hardware and model specifications, misses the app's requirements in 25\\% of easy and moderate cases and in 60\\% of hard ones. Code is available at: https://github.com/evanly-gh/SLM_Factory.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Crea modelos de lenguaje especializados para tu móvil, protegiendo tu privacidad y sin necesidad de conexión.",
+        "problema": "Entrenar modelos de lenguaje pequeños (SLMs) para dispositivos móviles es complejo, requiere ajustes expertos repetidos y no considera las limitaciones específicas de cada teléfono.",
+        "propuesta": "Mobile AI Factory es un sistema que automatiza la creación de SLMs optimizados para tareas y teléfonos específicos, eligiendo entre ajustar hiperparámetros, minar datos reales o generar datos sintéticos, y adaptándose a las mediciones del dispositivo.",
+        "resultados": "Los modelos creados superan a modelos de vanguardia en 5 de 10 tareas (hasta 0.34 de mejora) y igualan en 3 más. El proceso de búsqueda es 19 veces más rápido que el entrenamiento exhaustivo, con una diferencia mínima en precisión. Las mediciones del teléfono son cruciales, afectando la mejor configuración.",
+        "por_que_importa": "Permite desplegar IA potente y privada en móviles de forma eficiente, superando las limitaciones de hardware y garantizando el rendimiento sin depender de la nube.",
+        "tags": [
+          "IA móvil",
+          "Modelos de lenguaje",
+          "Privacidad",
+          "Optimización",
+          "Android",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-16T22:23:59Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.18359",
+      "rank": 2,
+      "title": "Envisioning Agentic Robotics: A New Era of Robotic Systems",
+      "authors": [
+        "Grid Robotics",
+        "Qingfeng Lan",
+        "Duo Li",
+        "Siyao Li"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-13",
+      "url": "https://arxiv.org/abs/2611.18359",
+      "pdf_url": "https://arxiv.org/pdf/2611.18359",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "The release of GPT-6 Astra marks the emergence of a new paradigm in robotics: agentic robotics. Within weeks, frontier models with agentic harnesses matched or exceeded task-specific policies on many embodied benchmarks. Instead of training a dedicated policy for each family of tasks, an agentic robotic system applies a foundation model to open-world embodied tasks. It operates in a closed loop: observing the environment, interpreting user intent, reasoning about the task, invoking skills and tools, verifying outcomes, and adapting its strategy. Despite these advances, the community has yet to converge on a shared definition, a reliable evaluation framework, or a research roadmap. We argue that Embodied System 2, realized by a foundation model together with an embodied harness, forms the decision-making core of agentic robotics. Its central challenge is to translate general-purpose reasoning into effective and verifiable actions under physical constraints such as limited reaction time, mechanical limits, unpredictable environment changes, and irreversible consequences. Motivated by this perspective, we propose an evaluation framework that measures both model capabilities and closed-loop system performance. Furthermore, we identify the principles that carry over from digital to physical agents and the challenges that must be addressed to achieve reliable physical autonomy. On top of the Embodied System 2 and the evaluation framework, we envision a research roadmap toward sustained autonomy: the ability to perform work safely and reliably with progressively broader responsibility, from executing individual primitives to fulfilling standing roles.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "La robótica agentic, impulsada por modelos fundacionales como GPT-6 Astra, revoluciona las tareas robóticas al permitir razonamiento y adaptación en tiempo real.",
+        "problema": "La robótica tradicional requiere políticas específicas para cada tarea. La comunidad carece de una definición, evaluación y hoja de ruta claras para los sistemas robóticos agentic.",
+        "propuesta": "Se propone la 'Embodied System 2', un sistema centralizado basado en un modelo fundacional y un 'arnés' para tareas corporales, que opera en un ciclo cerrado de observación, interpretación, razonamiento, ejecución y adaptación.",
+        "resultados": "Los modelos agentic han igualado o superado a políticas específicas en muchos benchmarks corporales. El resumen no especifica métricas numéricas detalladas.",
+        "por_que_importa": "Permite a los robots abordar tareas complejas en entornos abiertos de manera más general y adaptable, allanando el camino hacia la autonomía sostenida y la ejecución de roles.",
+        "tags": [
+          "robótica agentic",
+          "modelos fundacionales",
+          "IA corporizada",
+          "evaluación de sistemas",
+          "autonomía robótica"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-16T22:24:08Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.17820",
+      "rank": 3,
+      "title": "Aligning AI Teams",
+      "authors": [
+        "Siddarth Srinivasan",
+        "Morgan Jane Matthews",
+        "Jascha Sohl-Dickstein",
+        "Erik Jones"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-13",
+      "url": "https://arxiv.org/abs/2611.17820",
+      "pdf_url": "https://arxiv.org/pdf/2611.17820",
+      "score": 51,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Previous work has shown that alignment training on individual LLM agents can fail to transfer to multi-agent settings. We investigate the underlying mechanisms for this failure, and explore interventions to preserve alignment transfer to multi-agent LLM teams. We focus on two software-engineering tasks (sepsis triage, a news recommender) and ten consulting-proposal generation tasks. We present four findings: (1) The single-vs-team safety gap does not show a clear trend with more capable models. We find that Anthropic's Mythos Preview shows the largest gap on one of our tasks but the smallest on another; (2) Many natural interventions, such as having agents critique each other's work or coordinate in a group chat, do not reliably bring agent teams back to single-agent alignment behavior; (3) diffusion of responsibility substantially accounts for the safety gap: agents in teams are less likely to proactively check for system-level safety failures and more likely to ignore, rationalize, or deflect responsibility for issues when they arise; (4) having a designated safety lead agent ensure system-level safety, and having a coordinator agent publish a safety specifications document are effective at restoring single-agent alignment. We also release magelab, a multi-agent LLM orchestration and experimentation framework. Our findings can help practitioners design agent teams that successfully preserve the behaviors expected of aligned individual agents.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Entrenar IA individualmente falla en equipos; proponemos soluciones para mantener la alineación en grupos.",
+        "problema": "El entrenamiento de alineación de seguridad en agentes de IA individuales no se transfiere de manera confiable a equipos de agentes, lo que genera brechas de seguridad en configuraciones multi-agente.",
+        "propuesta": "Investiga las causas de la falla en la transferencia de alineación a equipos de IA y propone intervenciones como la asignación de roles de 'líder de seguridad' o 'coordinador' con especificaciones claras para restaurar la alineación.",
+        "resultados": "Se observó que la difusión de responsabilidad es un factor clave en la brecha de seguridad. Las intervenciones como la crítica mutua o los chats grupales no siempre restauran la alineación. Designar un líder de seguridad y un coordinador con especificaciones de seguridad fueron efectivos para restaurar la alineación.",
+        "por_que_importa": "Permite a los profesionales diseñar equipos de IA que mantengan los comportamientos de seguridad esperados de los agentes individuales, crucial para aplicaciones críticas y confiables.",
+        "tags": [
+          "IA multi-agente",
+          "Alineación de IA",
+          "Ciberseguridad",
+          "Ingeniería de software",
+          "LLMs"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-16T22:24:18Z"
+      }
+    }
+  ],
+  "generated_at": "2026-11-16T22:24:18Z"
+}
