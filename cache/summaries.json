@@ -13061,5 +13061,207 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-11-16T22:24:18Z"
+  },
+  "arxiv:2611.21480v1": {
+    "tldr": "RESILAGENT protege redes eléctricas contra amenazas híbridas combinando IA, gemelos digitales y blockchain para una resiliencia sin precedentes.",
+    "problema": "Los sistemas eléctricos enfrentan amenazas híbridas (ciberataques, sabotaje, estrés climático) que superan las soluciones de monitoreo actuales y aisladas.",
+    "propuesta": "Se propone RESILAGENT, una arquitectura de tres pilares (Detección Inteligente, Análisis de Resiliencia, Respuesta a Incidentes) orquestada en la nube, utilizando IA, LLMs multimodales, gemelos digitales y blockchain para un ciclo de detección, simulación y recuperación.",
+    "resultados": "La arquitectura se probó en dos escenarios y un micro-benchmark que cuantificó la detección de ataques de inyección de datos falsos, la mejora en la fusión ciber-física y el costo de la cadena de bloques.",
+    "por_que_importa": "Proporciona un marco unificado y robusto para mejorar la resiliencia de las infraestructuras críticas de energía, crucial para la estabilidad social y económica.",
+    "tags": [
+      "ciberseguridad",
+      "redes eléctricas",
+      "resiliencia",
+      "IA",
+      "blockchain",
+      "gemelos digitales"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-17T21:09:29Z"
+  },
+  "arxiv:2611.20765v1": {
+    "tldr": "Atacante temporal dividido (STA) evalúa la robustez de la conducción autónoma multimodal, superando a los métodos actuales.",
+    "problema": "Las políticas de conducción autónoma multimodal son vulnerables a la desalineación temporal entre sensores, lo que puede causar fallos en la toma de decisiones.",
+    "propuesta": "STA, un método de ataque temporal dividido, optimiza conjuntamente el momento del ataque y la selección de modalidad, introduciendo perturbaciones temporales unificadas y adaptándose a la política víctima.",
+    "resultados": "STA duplica la tasa de colisión contra PPO con menos intentos de ataque (17.8% menos) y se generaliza a políticas basadas en VLM, demostrando su eficacia.",
+    "por_que_importa": "Garantizar la robustez temporal es crucial para la seguridad de la conducción autónoma, y STA proporciona una forma más realista y efectiva de evaluar esta vulnerabilidad.",
+    "tags": [
+      "conducción autónoma",
+      "robustez temporal",
+      "ataques adversarios",
+      "aprendizaje multimodal",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-17T21:09:38Z"
+  },
+  "arxiv:2611.20827v1": {
+    "tldr": "ProcReverser automatiza la ingeniería inversa de microarquitecturas de procesadores para encontrar vulnerabilidades de seguridad.",
+    "problema": "Identificar detalles de microarquitectura de procesadores para analizar vulnerabilidades de seguridad es un proceso manual, lento y costoso que requiere mucho esfuerzo.",
+    "propuesta": "ProcReverser es un sistema multiagente que automatiza el diseño de experimentos, la creación de programas de prueba y el análisis de resultados para inferir propiedades microarquitectónicas relevantes para ataques como Spectre.",
+    "resultados": "ProcReverser alcanzó puntuaciones Pass@1 del 81.3% y Pass@5 del 93.8% en el procesador XuanTie C910, y del 83.0% y 100.0% en el modelo gem5 O3. También caracterizó propiedades en el SiFive P550.",
+    "por_que_importa": "La automatización de este proceso acelera significativamente el análisis de vulnerabilidades en procesadores, permitiendo un desarrollo de defensas más rápido y eficaz.",
+    "tags": [
+      "ingeniería inversa",
+      "microarquitectura",
+      "seguridad de hardware",
+      "vulnerabilidades",
+      "automatización",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-17T21:09:47Z"
+  },
+  "arxiv:2611.21562v1": {
+    "tldr": "Las métricas actuales de \"severidad\" de cambios en datos de series temporales no predicen la degradación de modelos de IA, incluso empeorando el rendimiento.",
+    "problema": "Los modelos de IA para series temporales (TSFM) fallan ante cambios en los datos (distribution shifts), pero las métricas actuales para medir la \"severidad\" de estos cambios no predicen de forma fiable cuánto se degradará el modelo.",
+    "propuesta": "Se realiza un análisis de \"stress-testing\" basado en la equivariancia para explicar por qué las métricas de severidad no se correlacionan con la degradación real del modelo en TSFMs normalizados.",
+    "resultados": "Se demostró que las métricas de severidad comunes no predicen la degradación del modelo. En algunos casos, la degradación alcanzó el 29% en los regímenes calificados como menos severos, y en la mayoría de los casos no hubo relación positiva entre la severidad medida y la degradación del modelo.",
+    "por_que_importa": "Es crucial para evaluar la robustez de los modelos de IA en el mundo real, donde los datos cambian constantemente. Las métricas actuales pueden ser engañosas, llevando a una falsa sensación de seguridad o a subestimar problemas críticos.",
+    "tags": [
+      "series temporales",
+      "inteligencia artificial",
+      "ciberseguridad",
+      "robustez",
+      "modelos fundacionales",
+      "evaluación"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-17T21:09:56Z"
+  },
+  "arxiv:2611.20595": {
+    "tldr": "Protege a los agentes de IA de fallos silenciosos de API que devuelven datos incorrectos pero válidos.",
+    "problema": "Los agentes de IA que usan APIs pueden recibir respuestas erróneas (fallos silenciosos) que parecen correctas (HTTP 200) pero contienen información incorrecta, lo que lleva a decisiones equivocadas. Las soluciones actuales, como revisiones por modelos, no son efectivas.",
+    "propuesta": "SilentGuard, un sistema que se integra en el 'harness' (la capa que ejecuta las llamadas a la API) para verificar los resultados de las APIs contra 'invariantes' predefinidas. Si un resultado viola estas reglas, se considera un fallo y no se entrega al agente.",
+    "resultados": "SilentGuard redujo las respuestas incorrectas debidas a fallos silenciosos del 74.0% al 1.7% en modelos abiertos y del 70.2% al 0.5% en modelos de vanguardia. Detectó fallos silenciosos en 11 de 15 APIs públicas, con aumentos de hasta 691 veces en recuentos. Las soluciones actuales dejan más del 70% de las respuestas incorrectas.",
+    "por_que_importa": "Asegura la fiabilidad de los agentes de IA en entornos reales al prevenir que tomen decisiones basadas en datos de API erróneos pero aparentemente válidos, mejorando drásticamente su precisión y seguridad.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "APIs",
+      "Fiabilidad",
+      "Agentes Inteligentes",
+      "Fallos Silenciosos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-17T21:10:06Z"
+  },
+  "arxiv:2611.07222": {
+    "tldr": "SPILLWAY defiende agentes de IA contra inyecciones maliciosas separando la admisión de objetivos de la sanitización, garantizando seguridad y utilidad.",
+    "problema": "Los agentes de IA que usan herramientas (para email, pagos, etc.) son vulnerables a ataques de inyección de prompts, donde instrucciones ocultas pueden redirigir acciones o datos a atacantes, comprometiendo la seguridad.",
+    "propuesta": "SPILLWAY propone separar la admisión de objetivos de la sanitización. Utiliza las salidas tipadas de las herramientas para verificar los objetivos de las acciones, distinguiendo entre datos legítimos y texto libre inyectado. Implementa un sanitizador determinista que elimina regiones de instrucciones antes de que el modelo las lea y un juez local para restaurar llamadas rechazadas.",
+    "resultados": "SPILLWAY bloquea inyecciones de prompts estándar, logrando las puntuaciones más altas en utilidad y métricas compuestas (NRP, ERS) frente a otros métodos. Un ataque de plantilla de chat forjada resulta en cero éxito, y un atacante de aprendizaje por refuerzo tiene un éxito promedio de 0.005. Alcanza esto sin reejecuciones del modelo base y con un mínimo de llamadas adicionales al modelo.",
+    "por_que_importa": "Para agentes de IA personales que manejan datos sensibles (email, archivos, pagos), SPILLWAY proporciona un nivel auditable de rechazo de acciones, manteniendo la utilidad del agente y la seguridad contra ataques de inyección de prompts, crucial para la confianza y adopción.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Inyección de Prompts",
+      "Agentes Autónomos",
+      "Seguridad de IA",
+      "Defensa"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-17T21:10:33Z"
+  },
+  "arxiv:2611.20986": {
+    "tldr": "Calpha integra modelos de lenguaje con predicción de estructuras de proteínas, permitiendo razonamiento biomolecular y lingüístico en un solo modelo.",
+    "problema": "Los modelos de IA para predecir estructuras de proteínas y los modelos de lenguaje grandes (LLMs) operan de forma separada, sin compartir sus capacidades.",
+    "propuesta": "Calpha es un modelo general que integra la predicción de estructuras de proteínas y la comprensión del lenguaje natural, permitiendo que el razonamiento del LLM influya en las estructuras predichas. Este primer paso se enfoca en que un LLM prediga estructuras de cadenas de proteínas únicas.",
+    "resultados": "El modelo logra puntuaciones TM de 0.808 en FoldBench-334, 0.635 en dominios CASP16 y 0.900 en un conjunto estilo CAMEO. Para cadenas de 300-600 residuos, las diferencias medias con un baseline son de -0.044, -0.160 y -0.025. La precisión en un subconjunto MMLU-Pro se redujo del 77.4% al 70.3% tras el entrenamiento con proteínas.",
+    "por_que_importa": "Permite unificar el razonamiento biomolecular y lingüístico en un solo modelo de IA, abriendo la puerta a avances en el diseño de fármacos, medicina personalizada y comprensión de procesos biológicos.",
+    "tags": [
+      "modelos fundacionales",
+      "proteínas",
+      "lenguaje natural",
+      "IA biomolecular",
+      "ciberseguridad",
+      "predicción de estructura"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-17T21:10:42Z"
+  },
+  "arxiv:2611.21003": {
+    "tldr": "Presentamos K2-Horizon, modelos de lenguaje abiertos y potentes para razonamiento y tareas complejas, con innovaciones en arquitectura y datos.",
+    "problema": "La necesidad de modelos de lenguaje de IA potentes, abiertos y transparentes para tareas complejas de razonamiento, codificación y automatización, con un enfoque en la eficiencia y la reproducibilidad.",
+    "propuesta": "Lanzamiento de K2-Horizon, una flota de seis modelos de lenguaje totalmente abiertos (0.9B a 375B MoE), introduciendo Mixture-of-Value Attention (MoVA) y softplus attention gating para mejorar el razonamiento, y adaptadores de difusión Uno para acelerar la decodificación. Se libera todo el historial de desarrollo, datos y código.",
+    "resultados": "Los modelos son competitivos con modelos abiertos de su tamaño en benchmarks de agentes y codificación. El modelo 36B-A4B con MoVA y softplus iguala casi a un modelo denso de 32B con 1/7 de parámetros activos. Los adaptadores Uno aceleran la decodificación hasta 2.2x. Se usaron ~10T tokens sintéticos.",
+    "por_que_importa": "Fomenta la investigación y el desarrollo en IA al proporcionar modelos de vanguardia, transparentes y reproducibles, acelerando la adopción de IA en diversas aplicaciones profesionales y de investigación.",
+    "tags": [
+      "modelos de lenguaje",
+      "IA abierta",
+      "ciberseguridad",
+      "razonamiento",
+      "eficiencia",
+      "transparencia"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-17T21:10:52Z"
+  },
+  "arxiv:2611.21072": {
+    "tldr": "Sage S1.5 Flash: un modelo de IA de 320B parámetros para razonar sobre ciencia y actuar en entornos interactivos.",
+    "problema": "El paper aborda la necesidad de modelos de IA capaces de procesar información científica multimodal (moléculas, secuencias, espectros) y actuar de forma verificable en entornos complejos como el uso de herramientas, codificación y experimentos de machine learning.",
+    "propuesta": "Se propone Sage S1.5 Flash, un modelo de expertos mixtos (MoE) de 320 mil millones de parámetros con codificadores específicos para grafos moleculares, secuencias biológicas y espectros. Se mapean estas modalidades a un backbone compartido con texto e imágenes, y se entrena en entornos verificables para el uso de herramientas, codificación y tareas de ML.",
+    "resultados": "Sage S1.5 Flash obtiene el primer puesto en OfficeQA Pro (72.2), MLE-bench Lite (90.3 HumanRank), Harvey LAB y SpreadsheetBench~2. Queda en segundo lugar en OSWorld-Verified (85.2), WebArena-Verified (67.6) y DeepResearch Bench~II (54.2) frente a cinco bases de comparación.",
+    "por_que_importa": "Demuestra la capacidad de la IA para integrar y razonar sobre datos científicos complejos y realizar tareas prácticas y verificables, abriendo puertas a la automatización en investigación y desarrollo científico.",
+    "tags": [
+      "IA multimodal",
+      "Ciencia",
+      "Modelos de Lenguaje Grandes",
+      "Interacción",
+      "Verificación"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-17T21:11:02Z"
+  },
+  "arxiv:2611.21218": {
+    "tldr": "InclusionMed evalúa la IA médica para asegurar que beneficie a todos los profesionales y pacientes en diversos entornos de atención.",
+    "problema": "La evaluación de la IA médica actual es desigual y no cubre la diversidad de roles, tareas y entornos de atención sanitaria, lo que limita la inclusión.",
+    "propuesta": "Se introduce InclusionMed, una iniciativa abierta para evaluar la IA médica, organizada en un Atlas que cubre roles (médico, enfermero, administrador) y capacidades de IA (diagnóstico, comunicación, toma de decisiones). Incluye benchmarks públicos y uno privado (InclusionMed-DxFiles).",
+    "resultados": "Se evaluaron modelos de lenguaje avanzados, obteniendo puntuaciones en el InclusionMed Index entre 17.5 y 49.1/100. Los modelos destacaron más en comunicación con el paciente que en toma de decisiones clínicas. Los costes de inferencia variaron significativamente entre modelos con puntuaciones similares.",
+    "por_que_importa": "Es crucial para seleccionar modelos de IA médica adecuados al contexto y asegurar que la tecnología beneficie equitativamente a todos los profesionales y pacientes, promoviendo una atención sanitaria más inclusiva y eficiente.",
+    "tags": [
+      "IA médica",
+      "Inclusión",
+      "Evaluación de IA",
+      "Ciberseguridad",
+      "Atención sanitaria",
+      "Benchmarks"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-17T21:11:11Z"
+  },
+  "arxiv:2611.21339": {
+    "tldr": "MovieRoll optimiza la generación de videos largos en streaming, manteniendo calidad y eficiencia con técnicas innovadoras.",
+    "problema": "Generar videos largos en streaming de forma continua y con alta calidad, superando las limitaciones de la ventana de entrenamiento y los costos de caché.",
+    "propuesta": "MovieRoll utiliza un marco de base a destilado que combina afinamiento en streaming, destilación de 'long-rollout' y inferencia de largo alcance. Emplea Window-wise Teacher Forcing (WinTF) para el entrenamiento base, compresión jerárquica de caché KV (HieraKV) para eficiencia, y ajuste acumulativo con destilación de coincidencia de distribución (CuLT-DMD) para el entrenamiento de largo alcance.",
+    "resultados": "MovieRoll-Base mantiene competitividad a 30s. MovieRoll-Distilled logra las puntuaciones más altas en HeliosBench hasta 60s, combinando naturalidad y movimiento activo, con una reducción de caché de hasta 78% gracias a HieraKV.",
+    "por_que_importa": "Permite la creación eficiente y de alta calidad de contenido de video extenso para plataformas de streaming, mejorando la experiencia del usuario y reduciendo costos computacionales.",
+    "tags": [
+      "generación de video",
+      "streaming",
+      "IA",
+      "ciberseguridad",
+      "eficiencia",
+      "calidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-17T21:11:20Z"
+  },
+  "arxiv:2611.17933": {
+    "tldr": "Evalúa la capacidad de los agentes LLM para gestionar recursos a largo plazo, coordinando compromisos y asignación de inventario en un negocio de alquiler de equipos.",
+    "problema": "Los agentes LLM actuales tienen dificultades para mantener la viabilidad de sus planes a largo plazo, especialmente al gestionar recursos finitos y coordinar compromisos cambiantes, lo que afecta su rendimiento en operaciones continuas.",
+    "propuesta": "Se introduce OutfitterBench, un benchmark que simula la gestión de un negocio de alquiler de equipos durante 200 días, con 46 productos, ~1100 solicitudes y demanda incierta, bajo un capital fijo y recursos reutilizables con disponibilidad variable.",
+    "resultados": "Siete LLMs de vanguardia fueron evaluados; varios agentes tuvieron un rendimiento inferior a una línea base simple basada en reglas. Solo el agente líder superó consistentemente la línea base. El análisis de trayectorias reveló inconsistencias en la aplicación de restricciones y conflictos con compromisos existentes.",
+    "por_que_importa": "Este trabajo identifica limitaciones clave en la capacidad de los agentes LLM para mantener planes de recursos coherentes y reevaluar su valor a lo largo del tiempo, crucial para aplicaciones prácticas en logística, gestión de inventario y planificación a largo plazo.",
+    "tags": [
+      "agentes LLM",
+      "gestión de recursos",
+      "planificación a largo plazo",
+      "ciberseguridad",
+      "benchmarking",
+      "coordinación de compromisos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-17T21:11:30Z"
   }
 }
