@@ -13263,5 +13263,157 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-11-17T21:11:30Z"
+  },
+  "arxiv:2611.22292v1": {
+    "tldr": "Atacamos MLLMs explotando su sesgo de confianza visual hacia imágenes 'autorizadas' para eludir sus defensas de seguridad.",
+    "problema": "Los modelos de lenguaje multimodales (MLLMs) son vulnerables a ataques de 'jailbreak' que les hacen generar contenido dañino, y los métodos actuales son poco prácticos o fáciles de detectar.",
+    "propuesta": "Proponemos el Ataque de Sesgo de Confianza Visual (VTBA), que explota la tendencia de los MLLMs a confiar en imágenes con características visuales autorizadas para crear ataques más efectivos y sigilosos.",
+    "resultados": "VTBA logra altas tasas de éxito en MLLMs potentes utilizando un conjunto de datos de 2.500 pares de imágenes y texto naturales, demostrando una debilidad significativa en la alineación de seguridad multimodal.",
+    "por_que_importa": "Revela una vulnerabilidad de seguridad práctica y generalizable en los MLLMs que los desarrolladores deben abordar para proteger contra la generación de contenido dañino.",
+    "tags": [
+      "MLLMs",
+      "Ciberseguridad",
+      "Jailbreaking",
+      "Sesgo Visual",
+      "Seguridad IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-18T20:46:09Z"
+  },
+  "arxiv:2611.22274v1": {
+    "tldr": "GuardAgent protege los sistemas de recomendación basados en LLM de promociones maliciosas adaptándose y aprendiendo continuamente.",
+    "problema": "Los sistemas de recomendación basados en LLM son vulnerables a manipulaciones mediante promociones, que son difíciles de detectar con métodos tradicionales.",
+    "propuesta": "Se propone GuardAgent, un marco de detección agentico que utiliza un ciclo de Percepción, Acción, Reflexión y Memoria para aprender y adaptarse a nuevas amenazas, generando explicaciones.",
+    "resultados": "GuardAgent logra un rendimiento de generalización de vanguardia en conjuntos de datos del mundo real, superando los métodos existentes.",
+    "por_que_importa": "Establece las bases para sistemas de recomendación robustos y confiables en entornos prácticos, protegiendo a los usuarios de contenido promocional engañoso.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "LLM",
+      "Sistemas de Recomendación",
+      "Detección de Ataques",
+      "GuardAgent"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-18T20:46:18Z"
+  },
+  "arxiv:2611.23140v1": {
+    "tldr": "GameRealm revoluciona el aprendizaje visual en IA con un dataset masivo de videojuegos, mejorando la inteligencia física.",
+    "problema": "Los modelos de IA visual se ven limitados por datos de entrenamiento fragmentados, anotaciones inconsistentes y escasa supervisión multimodal.",
+    "propuesta": "Se introduce GameRealm, un dataset a gran escala con más de 120 millones de fotogramas y 1000 horas de gameplay, que integra observaciones visuales con supervisión nativa del juego (profundidad, cámara, audio, controles, trayectorias 3D).",
+    "resultados": "Experimentos demuestran que GameRealm fortalece consistentemente los modelos visuales en generación y aprendizaje geométrico, sin especificar mejoras numéricas concretas en el resumen.",
+    "por_que_importa": "Este recurso de datos versátil y a gran escala abre nuevas vías para avanzar la inteligencia visual y la IA en entornos interactivos y físicos.",
+    "tags": [
+      "aprendizaje visual",
+      "inteligencia artificial",
+      "datasets",
+      "videojuegos",
+      "ciberseguridad",
+      "visión por computadora"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-18T20:46:28Z"
+  },
+  "arxiv:2611.23202v1": {
+    "tldr": "Infraestructura de Confianza para Agentes (ATI): Asegura la colaboración entre agentes de IA de distintas organizaciones mediante identidad federada y verificación.",
+    "problema": "Los agentes de IA que colaboran entre organizaciones carecen de mecanismos comunes para verificar su identidad, integridad y autorización, lo que genera riesgos de seguridad.",
+    "propuesta": "Se propone la Arquitectura de Infraestructura de Confianza para Agentes (ATI), un sistema independiente de frameworks que utiliza PKI y Zero Trust para establecer confianza federada mediante CAs de organizaciones, verificando identidades, configuraciones y autorizaciones antes de la ejecución.",
+    "resultados": "Con todos los mecanismos habilitados, la contención de ataques aumenta del 43% al 84% (40% a 80% en 11 escenarios consistentes), con una sobrecarga de ~174 microsegundos por solicitud. La evaluación incluyó 8 organizaciones, 6 frameworks, 5 agentes por equipo, 14 escenarios de ataque y 6 tareas benignas.",
+    "por_que_importa": "ATI mejora significativamente la seguridad en la colaboración interorganizacional de agentes de IA, permitiendo interacciones más seguras y confiables sin modificar los frameworks existentes, lo cual es crucial para la adopción generalizada de IA colaborativa.",
+    "tags": [
+      "IA colaborativa",
+      "Ciberseguridad",
+      "Confianza federada",
+      "Agentes autónomos",
+      "Verificación de identidad",
+      "Zero Trust"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-18T20:46:37Z"
+  },
+  "arxiv:2611.22949v1": {
+    "tldr": "Modelos de decisión compiten con LLMs en tareas de contact center, ofreciendo una alternativa rentable y precisa para decisiones acotadas.",
+    "problema": "Evaluar si los modelos de decisión, más económicos, pueden reemplazar a los LLMs en tareas de clasificación y juicio en centros de contacto del mundo real, donde los LLMs son costosos.",
+    "propuesta": "Se comparan nueve modelos de decisión con trece LLMs generativos en un entorno 'zero-shot' para ocho casos de uso en centros de contacto (clasificación y juicio).",
+    "resultados": "Muchos modelos de decisión igualan el rendimiento de LLMs de vanguardia en clasificación, con modelos cerrados de API siendo los más económicos. Sus predicciones seguras son más precisas. La principal debilidad es la abstención (raramente eligen 'sin respuesta'), excepto Gemini-Decision-1. La calidad de juicio de los modelos de decisión cae con modelos más pequeños y son propensos a sesgo de posición.",
+    "por_que_importa": "Proporciona orientación práctica para elegir modelos de decisión basándose en su comportamiento de abstención, confianza y costo de implementación, no solo en la precisión general, optimizando costos y rendimiento en centros de contacto.",
+    "tags": [
+      "modelos de decisión",
+      "LLMs",
+      "centros de contacto",
+      "clasificación",
+      "ciberseguridad",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-18T20:47:03Z"
+  },
+  "arxiv:2611.22115": {
+    "tldr": "Xing 4: Modelos de IA avanzados entrenados en chips domésticos Ascend, optimizando arquitectura y entrenamiento para tareas complejas.",
+    "problema": "Desarrollar modelos de lenguaje grandes y potentes (LLMs) para tareas de razonamiento y agentes, optimizando su entrenamiento y ejecución en hardware específico (chips Ascend) y frameworks (MindSpore).",
+    "propuesta": "Presentan Xing 4, una serie de LLMs que mejoran la arquitectura y la infraestructura de entrenamiento sobre chips Ascend usando MindSpore HyperParallel. Incluyen optimizaciones en activación dispersa, diseño de atención, profundidad/ancho del modelo y decodificación especulativa. Para la ejecución de agentes, introducen TeleGym, una plataforma unificada de ejecución, evaluación y optimización.",
+    "resultados": "Se entrenó un modelo de 285 mil millones de parámetros en 8,192 tarjetas Ascend 910C. El resumen no especifica otros resultados cuantitativos sobre el rendimiento de los modelos en tareas específicas.",
+    "por_que_importa": "Establece una base de entrenamiento optimizada para chips Ascend, permitiendo el desarrollo de modelos de IA más capaces y eficientes para cargas de trabajo de razonamiento y agentes complejos, promoviendo la independencia tecnológica.",
+    "tags": [
+      "IA",
+      "LLM",
+      "Chips Ascend",
+      "Ciberseguridad",
+      "Entrenamiento Distribuido",
+      "Agentes IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-18T20:47:13Z"
+  },
+  "arxiv:2611.22275": {
+    "tldr": "Heave-Ho permite a varios robots humanoides colaborar de forma autónoma y coordinada en tareas complejas a largo plazo.",
+    "problema": "La colaboración entre robots humanoides para tareas complejas a largo plazo es difícil debido a la necesidad de coordinación, planificación y sincronización precisas, especialmente sin comunicación constante.",
+    "propuesta": "Se propone Heave-Ho, un marco descentralizado que utiliza un modelo de seguimiento adaptado para interacciones físicas acopladas y un planificador basado en lenguaje visual con coordinación por voz para sincronizar la ejecución sin comunicación en red.",
+    "resultados": "El sistema escala de 2 a 10 robots, se generaliza a equipos heterogéneos sin reentrenamiento y supera consistentemente los métodos de referencia en el benchmark HH-Bench y en experimentos del mundo real.",
+    "por_que_importa": "Permite la colaboración robótica avanzada y autónoma en entornos del mundo real, abriendo la puerta a aplicaciones más complejas y eficientes con equipos de robots.",
+    "tags": [
+      "colaboración robótica",
+      "humanoides",
+      "planificación descentralizada",
+      "IA multi-agente",
+      "ciberseguridad",
+      "automatización"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-18T20:47:22Z"
+  },
+  "arxiv:2611.22055": {
+    "tldr": "Los LLMs pueden diseñar arquitecturas eficientes sin Transformers, superando a modelos tradicionales en precisión y velocidad.",
+    "problema": "Las arquitecturas Transformer, optimizadas para entrenamiento con gradientes y GPUs, no son necesariamente las más eficientes cuando los LLMs generan pesos directamente sin entrenamiento basado en gradientes.",
+    "propuesta": "Se explora si los LLMs pueden diseñar arquitecturas eficientes (en lugar de solo generar pesos para arquitecturas fijas) cuando se les da una tarea de 'programación en espacio de pesos'. Los LLMs diseñan modelos basados en tablas de consulta para representar pesos, que son consultadas por un procedimiento fijo.",
+    "resultados": "Los LLMs diseñaron modelos basados en tablas que alcanzaron hasta un 54.4% de precisión en pruebas. Un modelo diseñado por LLM logró mayor precisión que el Transformer más preciso escrito por el mismo LLM, usando 1800 veces menos parámetros. El modelo propuesto basado en memoria asociativa es hasta 17 veces más rápido en GPUs que un Transformer de tamaño similar.",
+    "por_que_importa": "Demuestra que las arquitecturas eficientes y rápidas para la inferencia pueden ser diseñadas por LLMs sin depender de la arquitectura Transformer, abriendo nuevas vías para modelos más compactos y rápidos.",
+    "tags": [
+      "LLMs",
+      "Arquitectura de Modelos",
+      "Eficiencia Computacional",
+      "Diseño de Modelos",
+      "Memoria Asociativa",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-18T20:47:31Z"
+  },
+  "arxiv:2611.21152": {
+    "tldr": "Automatizamos la creación de entornos de entrenamiento para agentes de codificación, mejorando su rendimiento en tareas complejas.",
+    "problema": "Entrenar agentes de IA para tareas de codificación a largo plazo es difícil debido a la falta de entornos de entrenamiento escalables y con retroalimentación útil. Los métodos actuales son lentos y costosos.",
+    "propuesta": "Se presenta RepoFactory, una pipeline automatizada que genera entornos de codificación verificables a partir de repositorios reales. Utiliza un 'Environment Evolution Loop' para optimizar estos entornos mediante señales proxy, mejorando el valor del entrenamiento.",
+    "resultados": "RepoFactory generó 10,159 entornos. El agente entrenado (RepoHorizen-35B-A3B) mejoró 22.6 puntos en NL2Repo-Bench y 8.5 puntos en promedio en cinco benchmarks de codificación a largo plazo, comparado con el entrenamiento sin evolución del entorno (17.5 y 6.4 puntos respectivamente).",
+    "por_que_importa": "Permite entrenar agentes de IA más capaces para tareas de codificación complejas y de larga duración de manera más eficiente, acercándonos a la automatización de la ingeniería de software.",
+    "tags": [
+      "IA",
+      "Agentes de Codificación",
+      "Entornos de Entrenamiento",
+      "Ciberseguridad",
+      "Automatización",
+      "Machine Learning"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-18T20:47:41Z"
   }
 }

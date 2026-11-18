@@ -1,0 +1,418 @@
+{
+  "date": "2026-11-18",
+  "report_type": "filtrado",
+  "evaluated": 177,
+  "selected": 9,
+  "papers": [
+    {
+      "id": "arxiv:2611.22292v1",
+      "rank": 1,
+      "title": "Dressed in Authority: Practical Black-Box Jailbreaking of MLLMs via Visual Trust Bias",
+      "authors": [
+        "Weihang Liu",
+        "Qianqian Xu",
+        "Yangbangyan Jiang",
+        "Zitai Wang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-17",
+      "url": "https://arxiv.org/abs/2611.22292v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.22292v1",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "Multimodal large language models (MLLMs) are rapidly advancing, yet their safety remains a critical concern, especially under jailbreak attempts. Existing MLLM jailbreaks either inject fragile adversarial perturbations into irrelevant images or synthesize toxic visual cues to achieve text-driven attack intents. In contrast, a more practical MLLM jailbreak emphasizes enhancing attack efficacy directly on naturally occurring harmful image-text pairs. We address this problem by proposing Visual Trust Bias Attack (VTBA), a new jailbreak framework that exploits a previously overlooked attack surface: MLLMs exhibit an intrinsic trust bias toward authoritative visual features, which enables transferable and stealthy jailbreaks. VTBA constructs a bank of authoritative templates, matches each input pair to the most relevant one, and integrates the harmful intent into the selected layout, thereby leveraging credible visual cues to override safety refusals while preserving naturalness. We further construct a dataset of 2,500 naturally occurring image-text pairs to evaluate jailbreaks in this practical multimodal setting. Extensive experiments show that our method consistently achieves high attack success rates across strong MLLMs, revealing a severe and previously underexplored weakness in current multimodal safety alignment. Warning: This paper may contain sensitive content.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Atacamos MLLMs explotando su sesgo de confianza visual hacia imágenes 'autorizadas' para eludir sus defensas de seguridad.",
+        "problema": "Los modelos de lenguaje multimodales (MLLMs) son vulnerables a ataques de 'jailbreak' que les hacen generar contenido dañino, y los métodos actuales son poco prácticos o fáciles de detectar.",
+        "propuesta": "Proponemos el Ataque de Sesgo de Confianza Visual (VTBA), que explota la tendencia de los MLLMs a confiar en imágenes con características visuales autorizadas para crear ataques más efectivos y sigilosos.",
+        "resultados": "VTBA logra altas tasas de éxito en MLLMs potentes utilizando un conjunto de datos de 2.500 pares de imágenes y texto naturales, demostrando una debilidad significativa en la alineación de seguridad multimodal.",
+        "por_que_importa": "Revela una vulnerabilidad de seguridad práctica y generalizable en los MLLMs que los desarrolladores deben abordar para proteger contra la generación de contenido dañino.",
+        "tags": [
+          "MLLMs",
+          "Ciberseguridad",
+          "Jailbreaking",
+          "Sesgo Visual",
+          "Seguridad IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-18T20:46:09Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.22274v1",
+      "rank": 2,
+      "title": "GuardAgent: A Memory-Augmented Agentic Framework for Adaptive Detection of Adversarial Promotions in LLM-Based Recommendation",
+      "authors": [
+        "Shiyi Yang",
+        "Xinshu Li",
+        "Chen Wang",
+        "Xiwei Xu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-17",
+      "url": "https://arxiv.org/abs/2611.22274v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.22274v1",
+      "score": 58,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: LLM, AI agents, adversarial ML"
+      ],
+      "abstract_en": "In traditional recommender systems (RSs), textual information typically serves as auxiliary signals for representation learning. In contrast, in LLM-based RSs, textual information becomes the primary medium for recommendation generation through semantic understanding and reasoning. This shift fundamentally changes the attack surface, making promotion-driven manipulations more feasible, effective, and harder to detect. However, effectively detecting such attacks remains largely unexplored. To fill this gap, we present the first systematic study on detecting promotion-driven attacks against LLM-based RSs, aiming to safeguard next-generation recommendation platforms. Specifically, we propose GuardAgent, a novel LLM-powered agentic detection framework that operates through a loop of Perception, Action, Reflection and Memory. In contrast to conventional LLM-based detectors that function in a static, one-off, and opaque fashion, GuardAgent continually learns and self-evolves to adapt to unseen threat patterns while generating explainable reasoning traces and outcomes. Extensive experiments on real-world datasets demonstrate that GuardAgent achieves state-of-the-art generalization performance, laying the foundation for robust and trustworthy recommendation in practical settings.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "GuardAgent protege los sistemas de recomendación basados en LLM de promociones maliciosas adaptándose y aprendiendo continuamente.",
+        "problema": "Los sistemas de recomendación basados en LLM son vulnerables a manipulaciones mediante promociones, que son difíciles de detectar con métodos tradicionales.",
+        "propuesta": "Se propone GuardAgent, un marco de detección agentico que utiliza un ciclo de Percepción, Acción, Reflexión y Memoria para aprender y adaptarse a nuevas amenazas, generando explicaciones.",
+        "resultados": "GuardAgent logra un rendimiento de generalización de vanguardia en conjuntos de datos del mundo real, superando los métodos existentes.",
+        "por_que_importa": "Establece las bases para sistemas de recomendación robustos y confiables en entornos prácticos, protegiendo a los usuarios de contenido promocional engañoso.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "LLM",
+          "Sistemas de Recomendación",
+          "Detección de Ataques",
+          "GuardAgent"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-18T20:46:18Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.23140v1",
+      "rank": 3,
+      "title": "GameRealm: Grounding Visual Learning in Interactive Games",
+      "authors": [
+        "Weiguang Zhao",
+        "Yifan Wang",
+        "Ni Yang",
+        "Yating Wang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CV]",
+      "category": "cs.CV",
+      "date": "2026-11-17",
+      "url": "https://arxiv.org/abs/2611.23140v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.23140v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Visual foundation models are central to physical intelligence, yet their development remains constrained by fragmented training datasets, inconsistent annotation quality, and limited multimodal supervision. To address these challenges, we introduce GameRealm, a large-scale, richly annotated dataset that grounds visual observations in synchronized, game-native supervision. GameRealm encompasses over 120 million RGB frames and 1,000 hours of gameplay footage across all views. Beyond its unprecedented scale, GameRealm provides rich multimodal supervision, including metric depth, camera parameters, synchronized audio, control inputs, and 3D point trajectories. Its diversity further extends to flexible view configurations, spanning single-view, stereo, multi-view, and panoramic recordings. To enable scalable acquisition across diverse game environments, we develop a unified data collection pipeline that combines human-operated interaction with agentic exploration. Extensive experiments across diverse visual learning tasks demonstrate that GameRealm consistently strengthens visual foundation models in both visual generation and geometric learning. These results establish GameRealm as a versatile and valuable data resource, unlocking new opportunities for advancing visual intelligence.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "GameRealm revoluciona el aprendizaje visual en IA con un dataset masivo de videojuegos, mejorando la inteligencia física.",
+        "problema": "Los modelos de IA visual se ven limitados por datos de entrenamiento fragmentados, anotaciones inconsistentes y escasa supervisión multimodal.",
+        "propuesta": "Se introduce GameRealm, un dataset a gran escala con más de 120 millones de fotogramas y 1000 horas de gameplay, que integra observaciones visuales con supervisión nativa del juego (profundidad, cámara, audio, controles, trayectorias 3D).",
+        "resultados": "Experimentos demuestran que GameRealm fortalece consistentemente los modelos visuales en generación y aprendizaje geométrico, sin especificar mejoras numéricas concretas en el resumen.",
+        "por_que_importa": "Este recurso de datos versátil y a gran escala abre nuevas vías para avanzar la inteligencia visual y la IA en entornos interactivos y físicos.",
+        "tags": [
+          "aprendizaje visual",
+          "inteligencia artificial",
+          "datasets",
+          "videojuegos",
+          "ciberseguridad",
+          "visión por computadora"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-18T20:46:28Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.23202v1",
+      "rank": 4,
+      "title": "Agent Trust Infrastructure (ATI): A Federated Identity, Trust, Attestation, and Accountability Architecture for Cross-Organization Autonomous AI Agents",
+      "authors": [
+        "Viet K. Nguyen",
+        "Mohammad I. Husain"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-11-17",
+      "url": "https://arxiv.org/abs/2611.23202v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.23202v1",
+      "score": 52,
+      "topics": [
+        "cybersecurity",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: cybersecurity, AI agents"
+      ],
+      "abstract_en": "AI agents increasingly collaborate across organizational boundaries, invoking tools and interacting with agents operated by independent entities. Although existing agent frameworks support planning and coordination, they lack a common mechanism for verifying cross-organizational agent identity, execution integrity, and authorization. We propose the Agent Trust Infrastructure (ATI), a framework-independent security architecture built on Public Key Infrastructure (PKI), Zero Trust Architecture (ZTA), and remote attestation. ATI establishes federated trust through peer organizational certificate authorities (AgentCAs), eliminating the need for a shared root authority. Before executing requests, ATI validates agent certificates, verifies approved model, tool, and system-prompt configurations, and enforces authorization through three policy checks. We implement ATI as an external security enforcement layer that integrates with existing agent frameworks without modifying their underlying models. We evaluate ATI in a simulated federation of eight organizations using six agent frameworks, each deploying a five-agent team. Security experiments involve two organizations and assess 14 attack scenarios and six benign tasks across five agent models, using five attack variations and three repetitions per variation. A panel of judge models evaluates the experimental outcomes. With all enforcement mechanisms enabled, attack containment increases from 43% to 84% (40% to 80% for the 11 attack scenarios evaluated consistently across all configurations), while enforcement introduces approximately 174 microseconds of overhead per request. ATI is released as an open-source, framework-independent package that uses IETF WIMSE workload token formats for identity and request verification and Entity Attestation Tokens for model, tool, and system-prompt integrity verification.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Infraestructura de Confianza para Agentes (ATI): Asegura la colaboración entre agentes de IA de distintas organizaciones mediante identidad federada y verificación.",
+        "problema": "Los agentes de IA que colaboran entre organizaciones carecen de mecanismos comunes para verificar su identidad, integridad y autorización, lo que genera riesgos de seguridad.",
+        "propuesta": "Se propone la Arquitectura de Infraestructura de Confianza para Agentes (ATI), un sistema independiente de frameworks que utiliza PKI y Zero Trust para establecer confianza federada mediante CAs de organizaciones, verificando identidades, configuraciones y autorizaciones antes de la ejecución.",
+        "resultados": "Con todos los mecanismos habilitados, la contención de ataques aumenta del 43% al 84% (40% a 80% en 11 escenarios consistentes), con una sobrecarga de ~174 microsegundos por solicitud. La evaluación incluyó 8 organizaciones, 6 frameworks, 5 agentes por equipo, 14 escenarios de ataque y 6 tareas benignas.",
+        "por_que_importa": "ATI mejora significativamente la seguridad en la colaboración interorganizacional de agentes de IA, permitiendo interacciones más seguras y confiables sin modificar los frameworks existentes, lo cual es crucial para la adopción generalizada de IA colaborativa.",
+        "tags": [
+          "IA colaborativa",
+          "Ciberseguridad",
+          "Confianza federada",
+          "Agentes autónomos",
+          "Verificación de identidad",
+          "Zero Trust"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-18T20:46:37Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.22949v1",
+      "rank": 5,
+      "title": "Can Decision Models Replace LLMs in Real-World Contact Center Classification and Judging Tasks?",
+      "authors": [
+        "Md Tahmid Rahman Laskar",
+        "Xue-Yong Fu",
+        "Shashi Bhushan TN"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CL]",
+      "category": "cs.CL",
+      "date": "2026-11-17",
+      "url": "https://arxiv.org/abs/2611.22949v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.22949v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, compliance & audit"
+      ],
+      "abstract_en": "Contact center systems often need to make bounded decisions, such as identifying a caller's intent, retrieving the knowledge-base article that answers a query, assessing agent compliance, or judging the output of AI models used in production. Decision models return a typed answer and its probability directly, making them a promising cost-effective alternative to generative Large Language Models (LLMs) in such bounded conversational tasks. However, their effectiveness in real-world contact center applications remains unclear. In this paper, we compare nine decision models against thirteen generative LLMs in zero-shot settings across eight contact center use cases: six classification tasks and two judging tasks. Our experiments demonstrate that many decision models can match the performance of frontier LLMs on contact center classification, and API-based closed decision models achieve this at the lowest per-request cost among the API models we evaluate. We further observe that their confident predictions are more accurate, enabling selective routing in real-world production scenarios. Across classification tasks, the main weakness of most decision models is abstention: they rarely choose the no-answer option, which accounts for most of their gap to the strongest LLMs (although Gemini-Decision-1 is the notable exception in this regard). We also find that the judging quality of decision models drops sharply for smaller models, and they are also more prone to position bias. In short, our findings provide practical guidance for selecting decision models based on abstention behavior, confidence, and deployment cost, rather than overall accuracy alone.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Modelos de decisión compiten con LLMs en tareas de contact center, ofreciendo una alternativa rentable y precisa para decisiones acotadas.",
+        "problema": "Evaluar si los modelos de decisión, más económicos, pueden reemplazar a los LLMs en tareas de clasificación y juicio en centros de contacto del mundo real, donde los LLMs son costosos.",
+        "propuesta": "Se comparan nueve modelos de decisión con trece LLMs generativos en un entorno 'zero-shot' para ocho casos de uso en centros de contacto (clasificación y juicio).",
+        "resultados": "Muchos modelos de decisión igualan el rendimiento de LLMs de vanguardia en clasificación, con modelos cerrados de API siendo los más económicos. Sus predicciones seguras son más precisas. La principal debilidad es la abstención (raramente eligen 'sin respuesta'), excepto Gemini-Decision-1. La calidad de juicio de los modelos de decisión cae con modelos más pequeños y son propensos a sesgo de posición.",
+        "por_que_importa": "Proporciona orientación práctica para elegir modelos de decisión basándose en su comportamiento de abstención, confianza y costo de implementación, no solo en la precisión general, optimizando costos y rendimiento en centros de contacto.",
+        "tags": [
+          "modelos de decisión",
+          "LLMs",
+          "centros de contacto",
+          "clasificación",
+          "ciberseguridad",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-18T20:47:03Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.22115",
+      "rank": 1,
+      "title": "TeleChat to Xing4: Advancing Frontier Agentic Models on Domestic Chips and Frameworks",
+      "authors": [
+        "Xingchen AGI Lab",
+        "Baotian Hu",
+        "Bingkai Yang",
+        "Boyang Wang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-17",
+      "url": "https://arxiv.org/abs/2611.22115",
+      "pdf_url": "https://arxiv.org/pdf/2611.22115",
+      "score": 72,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "We present Xing 4, a series of large language models that extends the TeleChat lineage through coordinated advances in model architecture and training infrastructure on Ascend. This report describes the design principles and systems engineering behind the series, spanning architecture selection, large-scale pretraining, and reasoning and agentic post-training. We study how sparse activation, attention design, model depth and width, and speculative decoding balance model capacity with computation, memory access, and execution overhead. Our pretraining infrastructure builds on MindSpore HyperParallel, combining topology-aware hybrid sharding, efficient distributed optimizer execution, and coordinated management of long-sequence workloads and activation memory. CPU affinity and core isolation further reduce host scheduling interference. Together, these mechanisms support the pretraining of a 285B-parameter model on 8,192 Ascend 910C cards, providing a concrete setting for the architectural and systems studies. For post-training, we introduce TeleGym, a unified agent execution platform that connects execution, evaluation, and trajectory construction to policy optimization. Disaggregated asynchronous execution, bounded oversampling, and partial rollout accommodate heterogeneous task durations while preserving trajectory continuity across policy updates. Together, these advances establish an Ascend-oriented training foundation for the continued development of Xing 4 across model scales and increasingly demanding reasoning and agent workloads.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Xing 4: Modelos de IA avanzados entrenados en chips domésticos Ascend, optimizando arquitectura y entrenamiento para tareas complejas.",
+        "problema": "Desarrollar modelos de lenguaje grandes y potentes (LLMs) para tareas de razonamiento y agentes, optimizando su entrenamiento y ejecución en hardware específico (chips Ascend) y frameworks (MindSpore).",
+        "propuesta": "Presentan Xing 4, una serie de LLMs que mejoran la arquitectura y la infraestructura de entrenamiento sobre chips Ascend usando MindSpore HyperParallel. Incluyen optimizaciones en activación dispersa, diseño de atención, profundidad/ancho del modelo y decodificación especulativa. Para la ejecución de agentes, introducen TeleGym, una plataforma unificada de ejecución, evaluación y optimización.",
+        "resultados": "Se entrenó un modelo de 285 mil millones de parámetros en 8,192 tarjetas Ascend 910C. El resumen no especifica otros resultados cuantitativos sobre el rendimiento de los modelos en tareas específicas.",
+        "por_que_importa": "Establece una base de entrenamiento optimizada para chips Ascend, permitiendo el desarrollo de modelos de IA más capaces y eficientes para cargas de trabajo de razonamiento y agentes complejos, promoviendo la independencia tecnológica.",
+        "tags": [
+          "IA",
+          "LLM",
+          "Chips Ascend",
+          "Ciberseguridad",
+          "Entrenamiento Distribuido",
+          "Agentes IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-18T20:47:13Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.22275",
+      "rank": 2,
+      "title": "Heave-Ho: Decentralized Long-Horizon Multi-Humanoid Collaboration",
+      "authors": [
+        "Ting-Hsuan Chen",
+        "Siheng Zhao",
+        "Han Jiang",
+        "Qi Pan"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-17",
+      "url": "https://arxiv.org/abs/2611.22275",
+      "pdf_url": "https://arxiv.org/pdf/2611.22275",
+      "score": 59,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "Collaboration promises to extend humanoid capabilities beyond what individual robots can achieve. However, realizing this potential requires coordinated whole-body interactions, coherent long-horizon planning, and precise synchronization across robots. We introduce Heave-Ho, a decentralized framework for long-horizon collaborative multi-humanoid loco-manipulation. At the low level, we develop a multi-agent post-training framework that adapts a humanoid foundation tracking model to physically coupled interactions between humanoids, enabling coordinated decentralized control from local observations alone. At the high level, we train a vision-language planner and design a speech-based leader-follower coordination mechanism to synchronize decentralized execution without network communication. Trained with two identical humanoids, our system scales to teams of up to ten robots and generalizes to heterogeneous teams without retraining. To benchmark these capabilities, we introduce HH-Bench, comprising 12 tasks involving teams of 2 to 10 humanoids, including heterogeneous teams. Systematic evaluations show that Heave-Ho consistently outperforms baseline methods, while real-world experiments demonstrate robust decentralized collaboration across challenging tasks.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Heave-Ho permite a varios robots humanoides colaborar de forma autónoma y coordinada en tareas complejas a largo plazo.",
+        "problema": "La colaboración entre robots humanoides para tareas complejas a largo plazo es difícil debido a la necesidad de coordinación, planificación y sincronización precisas, especialmente sin comunicación constante.",
+        "propuesta": "Se propone Heave-Ho, un marco descentralizado que utiliza un modelo de seguimiento adaptado para interacciones físicas acopladas y un planificador basado en lenguaje visual con coordinación por voz para sincronizar la ejecución sin comunicación en red.",
+        "resultados": "El sistema escala de 2 a 10 robots, se generaliza a equipos heterogéneos sin reentrenamiento y supera consistentemente los métodos de referencia en el benchmark HH-Bench y en experimentos del mundo real.",
+        "por_que_importa": "Permite la colaboración robótica avanzada y autónoma en entornos del mundo real, abriendo la puerta a aplicaciones más complejas y eficientes con equipos de robots.",
+        "tags": [
+          "colaboración robótica",
+          "humanoides",
+          "planificación descentralizada",
+          "IA multi-agente",
+          "ciberseguridad",
+          "automatización"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-18T20:47:22Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.22055",
+      "rank": 3,
+      "title": "Weight-Space Programming Doesn't Need Transformers",
+      "authors": [
+        "Hyunjong Ok",
+        "Jaeho Lee"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-17",
+      "url": "https://arxiv.org/abs/2611.22055",
+      "pdf_url": "https://arxiv.org/pdf/2611.22055",
+      "score": 57,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Standard neural architectures such as the Transformer were chosen because they train well with gradient descent and run fast on GPUs. In weight-space programming, a large language model (LLM) writes target weights by hand without gradient-based training, so those reasons no longer apply. Should we keep the Transformer? Given minimal guidance, ten labeled examples, and a sandbox, mainly on multiple-choice questions, we task three frontier LLMs with either generating the weights of a fixed architecture or designing the architecture themselves. When free to design, all three compile plain-text facts into a sparse table queried by a fixed procedure, reaching up to 54.4% test accuracy. An LLM-designed model achieves higher test accuracy than the most accurate released Transformer that the same LLM wrote while using about 1,800x fewer parameters. Without gradients, they choose a table, in which the LLM can state what each weight means and can find and rewrite a wrong one. Each wrong answer points to one row, and removing a row changes about one other answer. From this, we propose an associative-memory-based model up to 17x faster on GPUs than a same-sized Transformer. We also test pretrained weights, other benchmarks, and tasks where models generate answers. Pretrained LLMs remain more accurate; the claim concerns which structure to build when writing weights.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los LLMs pueden diseñar arquitecturas eficientes sin Transformers, superando a modelos tradicionales en precisión y velocidad.",
+        "problema": "Las arquitecturas Transformer, optimizadas para entrenamiento con gradientes y GPUs, no son necesariamente las más eficientes cuando los LLMs generan pesos directamente sin entrenamiento basado en gradientes.",
+        "propuesta": "Se explora si los LLMs pueden diseñar arquitecturas eficientes (en lugar de solo generar pesos para arquitecturas fijas) cuando se les da una tarea de 'programación en espacio de pesos'. Los LLMs diseñan modelos basados en tablas de consulta para representar pesos, que son consultadas por un procedimiento fijo.",
+        "resultados": "Los LLMs diseñaron modelos basados en tablas que alcanzaron hasta un 54.4% de precisión en pruebas. Un modelo diseñado por LLM logró mayor precisión que el Transformer más preciso escrito por el mismo LLM, usando 1800 veces menos parámetros. El modelo propuesto basado en memoria asociativa es hasta 17 veces más rápido en GPUs que un Transformer de tamaño similar.",
+        "por_que_importa": "Demuestra que las arquitecturas eficientes y rápidas para la inferencia pueden ser diseñadas por LLMs sin depender de la arquitectura Transformer, abriendo nuevas vías para modelos más compactos y rápidos.",
+        "tags": [
+          "LLMs",
+          "Arquitectura de Modelos",
+          "Eficiencia Computacional",
+          "Diseño de Modelos",
+          "Memoria Asociativa",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-18T20:47:31Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.21152",
+      "rank": 4,
+      "title": "From Repositories to Training Environments: Scaling Long-Horizon Coding Agents with Environment Evolution Loop",
+      "authors": [
+        "Yang Tian",
+        "Tianyu Zheng",
+        "Xiyuan Yang",
+        "Yaxin Du"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-17",
+      "url": "https://arxiv.org/abs/2611.21152",
+      "pdf_url": "https://arxiv.org/pdf/2611.21152",
+      "score": 57,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "Training coding agents for long-horizon tasks requires environments with verifiable feedback. Existing pipelines often follow a linear process that ends with validation, establishing usability but providing little guidance on improving training value. Recursive self-improvement (RSI) often requires model rollouts or model training followed by downstream evaluation, with costs and feedback delays amplified on long-horizon tasks. How can we use timely, reliable proxy signals to improve training value and synthesize environments at scale? We present RepoFactory, an automated pipeline that converts real repositories into verifiable environments where agents build complete projects from scratch given a language specification. Its Environment Evolution Loop optimizes a multiplicative objective combining validity, structural coupling, and implementation scope through proxy feedback. RepoFactory produces 10,159 environments across 17 software domains. Training Qwen3.5-35B-A3B on these environments yields RepoHorizen-35B-A3B, which achieves gains of 22.6 percentage points on NL2Repo-Bench and 8.5 points on average across five benchmarks covering long-horizon coding and agentic tasks in real-world production settings, compared with 17.5 and 6.4 points without environment evolution. These results highlight the training value of RepoFactory environments and the additional gains from the Environment Evolution Loop.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Automatizamos la creación de entornos de entrenamiento para agentes de codificación, mejorando su rendimiento en tareas complejas.",
+        "problema": "Entrenar agentes de IA para tareas de codificación a largo plazo es difícil debido a la falta de entornos de entrenamiento escalables y con retroalimentación útil. Los métodos actuales son lentos y costosos.",
+        "propuesta": "Se presenta RepoFactory, una pipeline automatizada que genera entornos de codificación verificables a partir de repositorios reales. Utiliza un 'Environment Evolution Loop' para optimizar estos entornos mediante señales proxy, mejorando el valor del entrenamiento.",
+        "resultados": "RepoFactory generó 10,159 entornos. El agente entrenado (RepoHorizen-35B-A3B) mejoró 22.6 puntos en NL2Repo-Bench y 8.5 puntos en promedio en cinco benchmarks de codificación a largo plazo, comparado con el entrenamiento sin evolución del entorno (17.5 y 6.4 puntos respectivamente).",
+        "por_que_importa": "Permite entrenar agentes de IA más capaces para tareas de codificación complejas y de larga duración de manera más eficiente, acercándonos a la automatización de la ingeniería de software.",
+        "tags": [
+          "IA",
+          "Agentes de Codificación",
+          "Entornos de Entrenamiento",
+          "Ciberseguridad",
+          "Automatización",
+          "Machine Learning"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-18T20:47:41Z"
+      }
+    }
+  ],
+  "generated_at": "2026-11-18T20:47:41Z"
+}
