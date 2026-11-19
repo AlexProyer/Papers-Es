@@ -13415,5 +13415,222 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-11-18T20:47:41Z"
+  },
+  "arxiv:2611.24362v1": {
+    "tldr": "PIPETTE mejora la seguridad de agentes LLM contra ataques de inyección de prompts mediante un enfoque de 'purple-teaming' más robusto.",
+    "problema": "Los agentes LLM son vulnerables a ataques de inyección de prompts indirectos (IPI) que secuestran sus funciones. Los métodos actuales de 'red-teaming' basados en RL descubren ataques repetitivos que no mejoran significativamente la robustez tras el entrenamiento adversarial.",
+    "propuesta": "PIPETTE es un marco de 'purple-teaming' que utiliza aprendizaje por diccionario para fomentar la diversidad de ataques durante el 'red-teaming' y un entrenamiento adversarial adaptado para la defensa contra IPI, manteniendo la utilidad de las tareas.",
+    "resultados": "Los agentes defendidos con PIPETTE logran tasas de éxito de ataque cercanas a cero contra ataques estáticos y resisten ataques adaptativos fuertes, manteniendo una utilidad de tarea similar a la de los agentes sin defensa.",
+    "por_que_importa": "Asegura que los agentes LLM sean más seguros y confiables en entornos del mundo real al abordar de manera efectiva las vulnerabilidades de inyección de prompts, protegiendo contra el secuestro de tareas.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Inyección de Prompts",
+      "Purple Teaming",
+      "Robustez",
+      "Agentes IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-19T20:51:50Z"
+  },
+  "arxiv:2611.24313v1": {
+    "tldr": "AutoPI es un sistema que descubre nuevas formas de atacar a los LLM, yendo más allá de las vulnerabilidades conocidas.",
+    "problema": "Los sistemas de seguridad para LLM se evalúan con ataques conocidos, dejando vulnerabilidades nuevas sin descubrir y sin corregir.",
+    "propuesta": "AutoPI utiliza una taxonomía de ataques de 'prompt injection' para guiar la búsqueda de nuevas vulnerabilidades, adaptándose y generando ataques diversos.",
+    "resultados": "AutoPI logró cubrir todas las clases de ataques en un modelo (Qwen3.6-35B) y superó a otros sistemas en tasa de éxito y cobertura de ataques contra Claude Haiku 5.5.",
+    "por_que_importa": "Permite una evaluación de seguridad más completa y realista para los LLM, descubriendo debilidades que los métodos actuales pasan por alto.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Prompt Injection",
+      "Red Teaming",
+      "Evaluación de Seguridad",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-19T20:51:59Z"
+  },
+  "arxiv:2611.24839v1": {
+    "tldr": "Kaer protege los sistemas multiagente de ataques maliciosos durante la reprogramación dinámica de planes.",
+    "problema": "Los sistemas multiagente (MAS) con reprogramación dinámica son vulnerables a que agentes maliciosos manipulen el proceso de revisión de planes a través de su feedback.",
+    "propuesta": "Kaer introduce una reprogramación consciente de la seguridad, utilizando plantillas abstractas para el feedback de los agentes y operadores de reparación deterministas para las revisiones de planes, asegurando que los planes modificados cumplan políticas preestablecidas.",
+    "resultados": "Kaer demuestra una mayor robustez contra exploits de reprogramación en comparación con Magentic-One y ControlValve, manteniendo una utilidad comparable a ControlValve en el benchmark Cintra. Las plantillas de fallo abstractas pueden limitar ligeramente la utilidad en tareas específicas.",
+    "por_que_importa": "Permite que los sistemas multiagente realicen revisiones de planes dinámicas y seguras sin exponer el orquestador a feedback no confiable, crucial para aplicaciones críticas.",
+    "tags": [
+      "ciberseguridad",
+      "sistemas multiagente",
+      "reprogramación",
+      "IA",
+      "defensa"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-19T20:52:09Z"
+  },
+  "arxiv:2611.24876v1": {
+    "tldr": "Genera escenarios de conducción autónoma complejos y controlables mediante auto-juego multi-agente con objetivos dinámicos.",
+    "problema": "Los métodos actuales de auto-juego multi-agente para generar escenarios de conducción autónoma no logran producir interacciones complejas y críticas para la seguridad, como adelantamientos agresivos o colas de tráfico, necesarios para pruebas rigurosas.",
+    "propuesta": "Se propone un marco de auto-juego multi-agente extendido que introduce objetivos dinámicos relativos al agente, permitiendo condicionar las políticas para la síntesis controlada de escenarios interactivos.",
+    "resultados": "El enfoque propuesto genera con éxito comportamientos de conducción interactivos que las líneas base con objetivos estáticos no pueden simular, facilitando la generación de escenarios de 'long-tail' para pruebas.",
+    "por_que_importa": "Permite la creación de escenarios de prueba más realistas y controlables para vehículos autónomos, mejorando la seguridad y robustez al exponerlos a casos límite complejos y poco comunes.",
+    "tags": [
+      "conducción autónoma",
+      "inteligencia artificial",
+      "auto-juego",
+      "escenarios de prueba",
+      "ciberseguridad",
+      "aprendizaje por refuerzo"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-19T20:52:18Z"
+  },
+  "arxiv:2611.24936v1": {
+    "tldr": "Detecta 'jailbreaks' en modelos de lenguaje grandes usando prototipos de seguridad aprendidos, sin necesidad de clasificadores adicionales.",
+    "problema": "Los intentos de 'jailbreak' y los prompts dañinos dificultan el despliegue seguro de modelos de lenguaje grandes (LLMs).",
+    "propuesta": "Proponen Jailbreak Detection with Prototype Inference (JDPI), un método que utiliza representaciones aprendidas de forma contrastiva para detectar prompts maliciosos basándose en la distancia a prototipos de seguridad (dañinos vs. benignos), adaptando el modelo solo con etiquetas binarias.",
+    "resultados": "JDPI mejora la precisión de detección entre 9.1 y 18.0 puntos porcentuales en cuatro benchmarks. Supera a Llama Guard 3-8B en ROC-AUC (0.173-0.310) y muestra mayor robustez entre datasets (1.59 pp de mejora en precisión).",
+    "por_que_importa": "Permite una detección de seguridad más eficiente y robusta en LLMs, reduciendo la necesidad de grandes conjuntos de datos etiquetados y mejorando la seguridad en aplicaciones prácticas.",
+    "tags": [
+      "LLMs",
+      "Ciberseguridad",
+      "Detección de Jailbreaks",
+      "IA Segura",
+      "Prototipos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-19T20:52:27Z"
+  },
+  "arxiv:2611.24765v1": {
+    "tldr": "Identifica rutas de ciberataques en redes eléctricas inteligentes usando LLMs, mejorando la eficiencia y la precisión.",
+    "problema": "Identificar rutas de ataque realistas en sistemas de energía ciberfísicos es difícil, ya que los métodos actuales no integran bien la topología, la semántica de amenazas y el impacto físico.",
+    "propuesta": "Un marco que utiliza LLMs para modelar amenazas (STRIDE, MITRE ATT&CK) y analizar la topología del sistema, guiado por rankings de impacto derivados de fallos en cascada.",
+    "resultados": "El solapamiento de nodos críticos mejora de ~33% a 100% (top-K). La similitud a nivel de nodo alcanza el 65% y la alineación a nivel de ruta el 48%. El tiempo de ejecución se reduce un 75-85% comparado con métodos de fusión.",
+    "por_que_importa": "Permite una identificación más rápida y precisa de las rutas de ataque más peligrosas en redes eléctricas, mejorando la resiliencia y la seguridad.",
+    "tags": [
+      "ciberseguridad",
+      "redes eléctricas",
+      "LLMs",
+      "ataques ciberfísicos",
+      "resiliencia"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-19T20:52:36Z"
+  },
+  "arxiv:2611.24276v1": {
+    "tldr": "Se descubre una vulnerabilidad en la ofuscación de caché KV de LLM que permite recuperar tokens incluso con barajado de datos.",
+    "problema": "Los sistemas de servicio de LLM ofuscan las cachés KV (clave-valor) para proteger los tokens, pero la simetría de la entrada y los tokens repetidos invalidan los argumentos de seguridad de la ofuscación basada en permutaciones aleatorias.",
+    "propuesta": "Se propone el ataque Repeat-to-Reveal, que explota las diferencias de rango uno entre estados distinguibles para recuperar un denoiser equivalente y, posteriormente, recuperar el multiconjunto de tokens de forma pasiva.",
+    "resultados": "El ataque recupera parámetros secretos con alta precisión y logra una recuperación del 100% de multiconjuntos de tokens en GPU. Se confirma la reutilización de secretos entre épocas como la vulnerabilidad operativa.",
+    "por_que_importa": "Esta vulnerabilidad expone la información sensible de los tokens en LLM, incluso con mecanismos de defensa, lo que requiere un rediseño de las estrategias de ofuscación para proteger la privacidad y la seguridad de los datos.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Privacidad",
+      "Caché KV",
+      "Ofuscación",
+      "Vulnerabilidad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-19T20:52:46Z"
+  },
+  "arxiv:2611.24025v1": {
+    "tldr": "Los contratos de intención limitan el acceso de los agentes LLM a las herramientas, mejorando la seguridad al separar la planificación de la ejecución.",
+    "problema": "Los agentes LLM que utilizan herramientas pueden ejecutar acciones no autorizadas o realizar trabajo adicional no solicitado por el usuario, lo que plantea riesgos de seguridad y eficiencia.",
+    "propuesta": "Se propone un sistema de 'contratos de intención' donde el modelo de planificación no tiene acceso directo a las herramientas. En su lugar, genera un contrato con un objetivo, una cita textual del usuario y campos de alcance. Un modelo de confianza más pequeño valida este contrato y escribe la llamada a la herramienta.",
+    "resultados": "Bajo contratos de intención, cada objeto modificado se nombra en el objetivo del contrato. Los contratos completan tareas solicitadas por el usuario en 27/30 ejecuciones cuando el planificador añade trabajo extra, frente a 16/30 con un sistema de revisión. Sin embargo, los contratos no reducen las acciones no autorizadas y se observan errores del 40-49% en la selección de objetivos por referencia ambigua, ya que el modelo de confianza no puede verificar el entorno.",
+    "por_que_importa": "Este enfoque mejora la seguridad y el control sobre las acciones de los agentes LLM al limitar su acceso a herramientas y verificar explícitamente sus intenciones, aunque aún existen desafíos en la gestión de referencias ambiguas y acciones no autorizadas.",
+    "tags": [
+      "agentes LLM",
+      "ciberseguridad",
+      "contratos de intención",
+      "autorización de herramientas",
+      "IA confiable"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-19T20:52:55Z"
+  },
+  "arxiv:2611.23751": {
+    "tldr": "AnyS1 reduce drásticamente el costo y la latencia de los agentes IA al usar un modelo ligero para decisiones rutinarias, manteniendo la fiabilidad.",
+    "problema": "Los agentes IA autónomos son costosos y lentos porque usan modelos grandes (System-2) en cada paso, incluso para decisiones simples. Los sistemas actuales requieren adaptaciones específicas por entorno.",
+    "propuesta": "AnyS1 es un framework que convierte habilidades procedimentales humanas en puntos de decisión reutilizables. Mina decisiones de miles de habilidades, entrena un modelo ligero (System-1) y lo usa para resolver decisiones rutinarias, recurriendo al System-2 solo cuando es necesario.",
+    "resultados": "AnyS1 reduce el costo de episodios entre un 75-91% y el tiempo de llamadas al modelo entre un 63-92% en benchmarks no vistos, manteniendo la fiabilidad y el rendimiento bajo transferencia zero-shot.",
+    "por_que_importa": "Permite crear agentes IA más eficientes y económicos, haciéndolos más prácticos para aplicaciones del mundo real al optimizar el uso de recursos computacionales.",
+    "tags": [
+      "agentes IA",
+      "optimización",
+      "eficiencia",
+      "modelos de lenguaje",
+      "ciberseguridad",
+      "computación"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-19T20:53:05Z"
+  },
+  "arxiv:2611.23808": {
+    "tldr": "Asistentes de IA personalizados necesitan entender peligros visuales y tu historial para darte consejos seguros y relevantes.",
+    "problema": "Los asistentes de IA personalizados fallan al combinar el reconocimiento de peligros visuales con el contexto personal del usuario (ej. alergias, condiciones médicas), lo que lleva a consejos inapropiados o inseguros.",
+    "propuesta": "Se propone PReMind, un marco de aprendizaje por refuerzo en dos fases que entrena conjuntamente el uso de memoria contextual y la respuesta a peligros, combinando interacciones bajo demanda y forzadas para mejorar la toma de decisiones.",
+    "resultados": "PReMind mejora el éxito conjunto (combinar peligro y contexto) del 12.9% al 28.6% en casos de interdependencia, y aumenta la adecuación de la respuesta al peligro y la abstención correcta en el conjunto de pruebas principal. Las mejoras persisten bajo diferentes evaluaciones y jueces.",
+    "por_que_importa": "Es crucial para desarrollar asistentes de IA más seguros y útiles que puedan adaptarse a las necesidades individuales, especialmente en situaciones que involucran riesgos físicos.",
+    "tags": [
+      "IA personalizada",
+      "visión por computadora",
+      "seguridad",
+      "memoria contextual",
+      "asistentes virtuales",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-19T20:53:14Z"
+  },
+  "arxiv:2611.24098": {
+    "tldr": "Nuevo benchmark 'RoughCut-Bench' para evaluar modelos de lenguaje visual en la edición automática de video, revelando limitaciones actuales.",
+    "problema": "La edición automática de video, específicamente la fase de 'rough-cut' (primer corte), carece de benchmarks estandarizados y flujos de trabajo maduros para evaluar el rendimiento de los modelos de lenguaje visual (LVLMs).",
+    "propuesta": "Se introduce RoughCut-Bench, un benchmark con dos configuraciones (visual y basada en audio) y 101 casos de uso para evaluar LVLMs en tareas como detección de highlights, ordenación de clips y eliminación de contenido irrelevante. También se proponen flujos de trabajo 'agentic' para guiar a los LVLMs en la generación de planes de corte.",
+    "resultados": "Los experimentos demuestran que los LVLMs actuales tienen limitaciones significativas para generar planes de corte de calidad profesional. El benchmark incluye 831 videos y 84 transcripciones de audio con anotaciones específicas.",
+    "por_que_importa": "Permite medir y mejorar objetivamente la capacidad de los modelos de IA para automatizar tareas complejas de edición de video, acelerando flujos de trabajo en la producción multimedia.",
+    "tags": [
+      "edición de video",
+      "inteligencia artificial",
+      "modelos de lenguaje visual",
+      "benchmarking",
+      "automatización",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-19T20:53:23Z"
+  },
+  "arxiv:2611.24733": {
+    "tldr": "Explora eficientemente el diseño de NPUs para LLMs, identificando cuellos de botella y mejorando el rendimiento con menos simulaciones.",
+    "problema": "La exploración del espacio de diseño de NPUs para inferencia de LLMs se basa en simuladores lentos que solo dan métricas generales (latencia, potencia), sin explicar por qué una configuración falla o cómo mejorarla, especialmente con cargas de trabajo mixtas (prefill/decode) limitadas por cómputo o ancho de banda de memoria.",
+    "propuesta": "Propone CriticNPU, un framework de exploración de diseño (DSE) eficiente en el uso de datos. Utiliza un 'crítico' mecanicista calibrado online que estima la viabilidad de configuraciones antes de la simulación y resume los cuellos de botella (cómputo/memoria) después de la simulación, basándose en límites explícitos de hardware y un modelo estilo Roofline.",
+    "resultados": "CriticNPU logra el mejor o igual mejor latencia en el 74% de los casos de prefill y el 87.5% de los casos de decode, utilizando aproximadamente la mitad de las llamadas al simulador comparado con métodos de base competitivos.",
+    "por_que_importa": "Permite diseñar NPUs más eficientes para LLMs de forma más rápida y con mejor comprensión de los factores de rendimiento, reduciendo costos computacionales y acelerando la optimización de hardware para IA.",
+    "tags": [
+      "NPU",
+      "LLM",
+      "Exploración de Diseño",
+      "Optimización de Hardware",
+      "Ciberseguridad",
+      "Inteligencia Artificial"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-19T20:53:33Z"
+  },
+  "arxiv:2611.23257": {
+    "tldr": "StatePortal automatiza la creación de puntos de control para probar estados complejos en software interactivo, mejorando drásticamente la eficiencia de las pruebas.",
+    "problema": "Probar software interactivo con interfaces gráficas (GUI) es costoso, especialmente para alcanzar 'estados profundos' que requieren largas secuencias de interacciones. La automatización actual falla porque no puede acceder a los árboles de renderizado interno y el costo de alcanzar estos estados se repite con cada cambio de código.",
+    "propuesta": "StatePortal es un agente que genera 'puntos de control' (artefactos que restauran un estado específico) a partir de descripciones en lenguaje natural y acceso al código fuente. Utiliza un hook de aplicación para restaurar el estado y evalúa la corrección mediante una combinación de verificación programática y visual.",
+    "resultados": "Los agentes guiados por puntos de control de StatePortal completaron el 10.4% de las pruebas (frente al 0% sin ellos). StatePortal, que también usa el hook para la acción, alcanzó el 27.5%. El 98.90% de los puntos de control reproducen veredictos sin llamadas a modelos, y el sistema de oráculo híbrido detecta el 96.25% de fallos visuales.",
+    "por_que_importa": "Reduce significativamente el esfuerzo y el costo de probar software interactivo complejo, permitiendo una detección más temprana y eficiente de errores, especialmente aquellos relacionados con la interfaz visual y estados profundos.",
+    "tags": [
+      "pruebas de software",
+      "inteligencia artificial",
+      "interfaces graficas",
+      "automatizacion",
+      "estados profundos",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-19T20:53:43Z"
   }
 }
