@@ -1,0 +1,557 @@
+{
+  "date": "2026-11-20",
+  "report_type": "filtrado",
+  "evaluated": 183,
+  "selected": 12,
+  "papers": [
+    {
+      "id": "arxiv:2611.26553v1",
+      "rank": 1,
+      "title": "Replication of Agentic Security Events: Audit and Investigation (ROGUE-AI)",
+      "authors": [
+        "Mengxiao Wang",
+        "Mahbub Alam",
+        "Kalyan Nakka",
+        "Nitesh Saxena"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-19",
+      "url": "https://arxiv.org/abs/2611.26553v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.26553v1",
+      "score": 60,
+      "topics": [
+        "LLM",
+        "AI agents",
+        "fintech & payments"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents, fintech & payments"
+      ],
+      "abstract_en": "Agents based on large language models (LLMs) can now delete files and send payments on behalf of their users. News media reports routinely describe failures of these agents (e.g., Replit's coding agent deleting a production database), but a report often only says what went wrong and rarely (in)validates the incident or finds its root cause. Incident catalogs collect these reports, and benchmarks record whether agents fail, but neither replicates an incident nor tests the cause its report might identify. In this paper, we present ROGUE-AI (Replication of Agentic Security Events: Audit and Investigation), a multi-agent framework that closes the above gap and rebuilds each reported incident offline together with a matched control that lacks only the blamed cause, and runs agents on both. Our results suggest that ROGUE-AI is able to reproduce the reported harm in 89% of its 108 attempted replications. Agents built on five current GPT, Claude, Gemini and DeepSeek models made the reported mistake in 18% to 33% of runs, against at most 1% without the blamed cause. Of the 72 incidents with real-world harm, 62 had no underlying attacker, and in these, agents did what their task asked for but missed an ordinary hazard, such as a database shared with the live site. Replications without an attacker caused more harm than replications of prompt injection for all five models. Defenses against prompt injection look for injected instructions, but these replications contain none. Further, a warning after each tool output that names the hazard and its consequence lowered harm for all five models, whereas a note of the same length that does not mention the hazard left most of the harm in place. Built from real incidents, the ROGUE-AI replications form a reusable audit framework that vendors can rerun before each new release.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "ROGUE-AI replica incidentes de seguridad de agentes LLM offline para auditar y prevenir fallos.",
+        "problema": "Los informes de fallos de agentes LLM a menudo no validan el incidente ni encuentran la causa raíz, y los catálogos de incidentes y benchmarks no replican ni prueban las causas.",
+        "propuesta": "Se presenta ROGUE-AI, un framework multi-agente que reconstruye incidentes reportados offline junto con un control sin la causa culpada, y ejecuta agentes en ambos para validar la causa.",
+        "resultados": "ROGUE-AI reprodujo el daño reportado en el 89% de 108 intentos. Agentes de 5 modelos actuales cometieron el error en 18%-33% de los casos, contra <1% sin la causa culpada. De 72 incidentes con daño real, 62 no tuvieron atacante; los agentes fallaron por no ver peligros ordinarios. Las advertencias de peligro redujeron el daño en los 5 modelos.",
+        "por_que_importa": "Proporciona un framework de auditoría reutilizable para que los proveedores prueben y mejoren la seguridad de sus agentes LLM antes de lanzamientos, reduciendo fallos y daños accidentales.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Auditoría",
+          "Replicación",
+          "Seguridad de Agentes",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-20T20:36:14Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.25809v1",
+      "rank": 2,
+      "title": "ALIoTh: Orchestrating Multi-Agent LLMs for Autonomous IoT Penetration Testing",
+      "authors": [
+        "Pironti Francesco Aurelio",
+        "Arena Luigi",
+        "Blefari Francesco",
+        "Lupinacci Matteo"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-19",
+      "url": "https://arxiv.org/abs/2611.25809v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.25809v1",
+      "score": 58,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Penetration testing in Internet of Things (IoT) environments, especially those composed of various different devices, e.g., smart plugs, smart cameras, and smart doors, presents great challenges across the phases of information gathering, attack surface enumeration, privilege escalation, and lateral movement. This paper introduces ALIoTh, a multi-agent, workflow-driven penetration testing framework that integrates Large Language Models agents within a Self-Retrieval-Augmented Generation (Self-RAG) architecture to autonomously identify and exploit vulnerabilities in IoT and Industrial-IoT (IIoT) environments. By leveraging state-of-the-art language models and orchestrating specialized agents via the LangGraph framework, ALIoTh dynamically plans and executes a full-spectrum offensive pipeline. This includes network, devices, and service enumeration, vulnerability assessment, payload generation, reverse shell deployment, and privilege escalation on each device. The Self-RAG mechanism equips expert agents with contextual access to IoT security knowledge, e.g., related documentation, tool manuals, and known attack techniques, enhancing their reasoning capabilities in scenarios involving multiple device exploitation and group policy manipulation.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "ALIoTh usa IA multi-agente para automatizar pruebas de penetración en entornos IoT complejos, identificando y explotando vulnerabilidades.",
+        "problema": "Las pruebas de penetración en entornos IoT heterogéneos son complejas, abarcando desde la recopilación de información hasta la escalada de privilegios y el movimiento lateral.",
+        "propuesta": "ALIoTh es un framework que orquesta agentes LLM especializados, utilizando Self-RAG, para planificar y ejecutar automáticamente un pipeline de pruebas de penetración completo en dispositivos IoT e IIoT.",
+        "resultados": "El resumen no especifica resultados numéricos, pero describe la capacidad de ALIoTh para realizar enumeración, evaluación de vulnerabilidades, generación de payloads, despliegue de reverse shells y escalada de privilegios.",
+        "por_que_importa": "Automatiza y mejora la eficiencia de las pruebas de seguridad en sistemas IoT, un área crítica y en crecimiento, permitiendo la identificación proactiva de vulnerabilidades.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "IoT",
+          "Pruebas de Penetración",
+          "Automatización",
+          "LLM"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-20T20:36:23Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.26131v1",
+      "rank": 3,
+      "title": "SCARVA: Interpretable Agentic Reasoning in Software Supply-Chain Analysis",
+      "authors": [
+        "Tim Barsch",
+        "Bruno Nogueira",
+        "Tobias Wienand",
+        "Jan Fopma"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-19",
+      "url": "https://arxiv.org/abs/2611.26131v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.26131v1",
+      "score": 55,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Complex applications may inherit security vulnerabilities from their dependencies, though a vulnerable dependency does not necessarily endanger the application. Existing tools flag dependencies associated with public vulnerabilities, and more advanced ones analyze the call graph to assess whether the vulnerable code is reachable. However, these approaches are limited to specific programming languages and ecosystems. LLM agents are promising candidates for this task, yet they hallucinate, take shortcuts, and reward hack. As these behaviors are opaque, the agents' conclusions may not be trusted. We present SCARVA a framework designed to produce interpretable reports. SCARVA combines advanced agent reasoning with an evidence-collection methodology that assesses the agent's analysis and improves its trustworthiness. Specifically, the ANALYST performs a software security assessment while SCARVA records every tool call, file access, and web request. Then, one or more independent JUDGE agents inspect the ANALYST's result and produce an evidence-backed report. We evaluate SCARVA on 54 manually curated cases, balanced across exploitable, non-exploitable, and vulnerability-free projects, using both open-weight and frontier models. The best ANALYST model, Qwen 3.8, reaches 82% balanced accuracy and surpasses the evaluated proprietary models. Human annotation validates the JUDGE findings: Claude Opus 5.5 performs best, agreeing with annotators in 94% of claim checks. Finally, we discuss the most common failure modes of agents on supply-chain vulnerability assessment.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "SCARVA mejora la confianza en agentes de IA para analizar vulnerabilidades en la cadena de suministro de software mediante informes interpretables.",
+        "problema": "Las herramientas actuales para detectar vulnerabilidades en dependencias de software son limitadas por lenguaje y ecosistema, y los agentes de IA, aunque prometedores, a menudo alucinan o toman atajos de forma opaca, minando la confianza en sus conclusiones.",
+        "propuesta": "SCARVA es un framework que combina razonamiento avanzado de agentes con una metodología de recolección de evidencia. Un agente ANALYST realiza la evaluación de seguridad, mientras SCARVA registra todas sus acciones. Agentes JUDGE independientes revisan el análisis del ANALYST y generan un informe respaldado por evidencia.",
+        "resultados": "En 54 casos curados, el mejor modelo ANALYST (Qwen 3.8) alcanzó un 82% de precisión balanceada. Los agentes JUDGE, con Claude Opus 5.5 liderando, coincidieron con anotadores humanos en el 94% de las verificaciones de afirmaciones.",
+        "por_que_importa": "Proporciona una forma más fiable y transparente de utilizar agentes de IA para la crítica tarea de asegurar la cadena de suministro de software, permitiendo a los profesionales confiar en las evaluaciones de seguridad.",
+        "tags": [
+          "IA explicable",
+          "Seguridad de software",
+          "Cadena de suministro",
+          "Agentes autónomos",
+          "Análisis de vulnerabilidades"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-20T20:36:33Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.25718v1",
+      "rank": 4,
+      "title": "Hardening JavaScript Programs against LLM-Based Vulnerability Detection",
+      "authors": [
+        "Zhenhao Tian",
+        "Jintong Yu",
+        "Jingwei Feng",
+        "Jianwei Zhuge"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-19",
+      "url": "https://arxiv.org/abs/2611.25718v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.25718v1",
+      "score": 54,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "JavaScript programs are often distributed as source code, so attackers can analyze them for vulnerabilities. LLM-based vulnerability detection agents now make this analysis much easier. To mitigate this emerging threat, we present AntiAgent, a defense that lets developers harden their programs against such detection agents. AntiAgent transforms a program before release to impede an agent's analysis. To find effective transformations, AntiAgent evolves a corpus of programs with known vulnerabilities and traces how a detection agent analyzes each evolved version. It keeps the versions on which the agent misses or misreports the vulnerability and extracts their transformations into reusable rules. To protect a new program, AntiAgent carefully divides the task between an LLM and the rules, so that the transformations adapt to the program while preserving its semantics. We evaluate AntiAgent on real-world JavaScript applications against four detection agents, including Claude Code and Codex. AntiAgent reduces the number of vulnerabilities that each agent detects by 52.0-60.7%, outperforming the conventional obfuscator JS-Obfuscator and the LLM-based transformation method FPA on every agent. The transformed programs pass all project tests, indicating that AntiAgent preserves the original program semantics. The transformation rules also remain effective on vulnerability types absent from the corpus and on programs written in another language like Python.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "AntiAgent protege código JavaScript contra la detección de vulnerabilidades por parte de modelos de lenguaje, reduciendo su efectividad.",
+        "problema": "Los modelos de lenguaje (LLMs) facilitan la detección de vulnerabilidades en código JavaScript distribuido como fuente, amenazando la seguridad de las aplicaciones.",
+        "propuesta": "AntiAgent transforma el código JavaScript antes de su distribución para dificultar el análisis de los LLMs. Utiliza un proceso evolutivo para identificar transformaciones efectivas y las aplica de forma adaptativa al nuevo código, preservando su semántica.",
+        "resultados": "AntiAgent reduce la detección de vulnerabilidades por parte de cuatro agentes LLM (incluyendo Claude Code y Codex) entre un 52.0% y un 60.7%, superando a métodos convencionales y a FPA. Las transformaciones preservan la semántica del programa y son efectivas en otros lenguajes como Python.",
+        "por_que_importa": "Ofrece una defensa práctica para desarrolladores contra una nueva clase de atacantes (LLMs), protegiendo la propiedad intelectual y la seguridad del software distribuido.",
+        "tags": [
+          "ciberseguridad",
+          "javascript",
+          "inteligencia artificial",
+          "deteccion de vulnerabilidades",
+          "ofuscacion"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-20T20:36:42Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.26298v1",
+      "rank": 5,
+      "title": "DailySafe: Benchmarking Dynamic Safety Awareness in Everyday Multi-Turn Multimodal Interactions",
+      "authors": [
+        "Xuankun Rong",
+        "Xinhao Deng",
+        "Wenzhang Jiang",
+        "Ziheng Peng"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-19",
+      "url": "https://arxiv.org/abs/2611.26298v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.26298v1",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "As multimodal large language models (MLLMs) become increasingly integrated into everyday life, their ability to provide safe and reliable assistance in realistic daily activities remains insufficiently explored. Existing safety benchmarks primarily focus on isolated harmful requests or adversarial scenarios, overlooking the safety risks that may arise as ordinary tasks unfold. In practice, users pursue legitimate goals through multi-turn, multimodal interactions, where seemingly benign requests may become safety-critical when considered alongside earlier actions and visual observations. This calls for Dynamic Safety Awareness, the ability to track evolving task conditions, recognize implicit contextual risks, and provide safe and helpful assistance. To systematically evaluate this capability, we introduce DailySafe, a benchmark comprising 195 naturalistic multi-turn, multi-image interactions across 10 everyday domains and 42 task categories. Grounded in authentic user dialogue topics and documented safety knowledge, DailySafe captures realistic scenarios where safety-critical evidence is progressively revealed across conversational turns and visual observations. Using case-specific safety annotations, DailySafe assesses whether MLLMs can recognize and appropriately address evolving risks while supporting users' legitimate goals, bringing multimodal safety evaluation closer to real-world everyday AI assistance. DailySafe is publicly available at: https://github.com/XuankunRong/DailySafe.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa la seguridad de los modelos de IA multimodales en interacciones diarias complejas y evolutivas.",
+        "problema": "Los modelos de IA multimodales (MLLMs) se usan en la vida diaria, pero las pruebas de seguridad actuales no cubren cómo los riesgos evolucionan en conversaciones y tareas cotidianas con múltiples pasos y modalidades (texto/imágenes).",
+        "propuesta": "Se introduce DailySafe, un benchmark con 195 interacciones multimodales y multi-turno basadas en escenarios reales de la vida diaria, diseñadas para evaluar la 'Conciencia de Seguridad Dinámica' de los MLLMs.",
+        "resultados": "El resumen no especifica resultados cuantitativos de la evaluación, pero presenta un benchmark diseñado para medir la capacidad de los MLLMs de reconocer y manejar riesgos cambiantes.",
+        "por_que_importa": "Es crucial para asegurar que los asistentes de IA multimodales sean seguros y confiables en el uso cotidiano, adaptándose a los riesgos que surgen dinámicamente durante las interacciones.",
+        "tags": [
+          "IA multimodal",
+          "Seguridad de IA",
+          "Benchmarks",
+          "Interacciones diarias",
+          "Evaluación de riesgos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-20T20:36:51Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.25832v1",
+      "rank": 6,
+      "title": "RAVEN: A Self-RAG Based Agent for Threat Classification and Response",
+      "authors": [
+        "Pironti Francesco Aurelio",
+        "Arena Luigi",
+        "Blefari Francesco",
+        "Lupinacci Matteo"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-19",
+      "url": "https://arxiv.org/abs/2611.25832v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.25832v1",
+      "score": 50,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🎯 temas: cybersecurity, vuln & threats, AI agents"
+      ],
+      "abstract_en": "Security event analysis in large enterprises can be overwhelming, as each alert typically requires manual in- spection by human operators. This process is time-consuming and prone to inconsistencies, especially in high-volume Secu- rity Operations Center (SOC) environments. In this work- in-progress paper, we present RAVEN: Retrieval-Augmented Vulnerability & Event aNalysis, an agentic framework designed to support SOC analysts by automating the initial stages of alert investigation. The proposed system leverages a Self- Reflective Retrieval-Augmented Generation-based approach to provide an initial classification of security events and enables interactive refinement through analyst-in-the-loop queries. Un- like traditional approaches that rely on generic mitigation strategies, RAVEN generates context-aware remediation sug- gestions by incorporating knowledge of the target enterprise infrastructure. We implement an early-stage prototype and report preliminary results on three balanced test sets of 400 curated web payloads each (SQLi, XSS, SSTI) and a qualitative case study of mitigation generation; an evaluation on IDS- generated alerts and a user study are ongoing and outlined as remaining work.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "RAVEN automatiza la investigación inicial de alertas de seguridad, clasificando eventos y sugiriendo respuestas contextualizadas para analistas SOC.",
+        "problema": "El análisis manual de alertas de seguridad en centros de operaciones (SOC) es lento, inconsistente y abrumador, especialmente con alto volumen.",
+        "propuesta": "RAVEN es un agente que usa Generación Aumentada por Recuperación (RAG) autorreflexiva para clasificar eventos de seguridad y generar sugerencias de mitigación adaptadas a la infraestructura de la empresa, permitiendo la interacción con el analista.",
+        "resultados": "Se implementó un prototipo y se reportaron resultados preliminares en tres conjuntos de datos de 400 cargas útiles web (SQLi, XSS, SSTI) y un estudio cualitativo de generación de mitigaciones. La evaluación en alertas IDS y un estudio de usuario están en curso.",
+        "por_que_importa": "Reduce la carga de trabajo de los analistas SOC, acelera la respuesta a incidentes y mejora la consistencia y contextualización de las acciones de seguridad.",
+        "tags": [
+          "ciberseguridad",
+          "inteligencia artificial",
+          "automatización",
+          "SOC",
+          "análisis de amenazas",
+          "RAG"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-20T20:37:00Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.26409",
+      "rank": 1,
+      "title": "WeMM-Video: Pushing the Frontiers of Open-Source Omni-Modal Video Understanding",
+      "authors": [
+        "Changli Tang",
+        "Jie Yang",
+        "Tianyi Wang",
+        "Lei Li"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-19",
+      "url": "https://arxiv.org/abs/2611.26409",
+      "pdf_url": "https://arxiv.org/pdf/2611.26409",
+      "score": 67,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Video understanding, particularly with accompanying audio, remains a central challenge in multimodal intelligence. In this report, we introduce \\textbf{WeMM-Video}, a family of Chinese-English bilingual omni-modal foundation models spanning 2B, 4B, 9B, and 35B-A3B variants. Centering on joint audio-visual perception and reasoning, WeMM-Video unifies text, image, audio, and video processing within a hybrid-thinking paradigm, seamlessly supporting both a non-thinking instruct mode for fast, direct responses and a thinking mode for explicit step-by-step reasoning. The models are trained on a large-scale multimodal corpus of approximately 1.2 trillion tokens through progressive pre-training and a multi-stage post-training pipeline incorporating multi-teacher OPD, anti-repetition MrDPO, and specialist RL. Evaluated across more than 120 benchmarks, WeMM-Video demonstrates superior performance in omni-modal video understanding and reasoning, while maintaining highly competitive capabilities across general audio, silent video, image, and text tasks. Specifically, in omni-modal video evaluations, our flagship WeMM-Video-35B-A3B establishes a new open-source state of the art, substantially outperforming proprietary models such as Qwen3.5-Omni-Flash and Seed2.0-Mini-0428 while narrowing the gap with the strong Gemini-3.0-Flash, and our compact WeMM-Video-9B surpasses the larger open-source Qwen3-Omni-30B-A3B-Instruct. We publicly release the WeMM-Video family along with our evaluation and reproduction pipeline to foster further research and development in the open-source community.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Presentamos WeMM-Video, modelos multimodales de código abierto para entender videos combinando audio, imagen y texto.",
+        "problema": "La comprensión de videos, especialmente con audio, es un desafío en la inteligencia multimodal. Los modelos existentes a menudo no manejan bien la combinación de todas estas modalidades.",
+        "propuesta": "Se propone WeMM-Video, una familia de modelos multimodales (2B a 35B parámetros) bilingües (chino-inglés) que integran texto, imagen, audio y video. Soporta modos de 'pensamiento' (razonamiento paso a paso) y 'sin pensamiento' (respuestas directas), entrenados con 1.2 billones de tokens y técnicas avanzadas de entrenamiento.",
+        "resultados": "WeMM-Video-35B-A3B establece un nuevo estado del arte en código abierto para comprensión omnimodal de video, superando a modelos propietarios como Qwen3.5-Omni-Flash y Seed2.0-Mini-0428, y compitiendo con Gemini-3.0-Flash. WeMM-Video-9B supera a Qwen3-Omni-30B-A3B-Instruct.",
+        "por_que_importa": "Avanza significativamente la capacidad de los modelos de código abierto para entender videos de forma integral, combinando múltiples fuentes de información, lo que es crucial para aplicaciones prácticas y para democratizar la investigación en IA.",
+        "tags": [
+          "IA multimodal",
+          "comprensión de video",
+          "código abierto",
+          "modelos fundacionales",
+          "procesamiento de audio",
+          "razonamiento"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-20T20:37:10Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.26380",
+      "rank": 2,
+      "title": "EgoCaptioner: Towards Comprehensive and Fine-Grained Egocentric Video Captioning",
+      "authors": [
+        "Yuqi Tang",
+        "Yang Shi",
+        "Yuran Wang",
+        "Tengfei Liu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-19",
+      "url": "https://arxiv.org/abs/2611.26380",
+      "pdf_url": "https://arxiv.org/pdf/2611.26380",
+      "score": 66,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Egocentric video captioning requires fine-grained detail and accurate timing, yet current multimodal large language models (MLLMs) often miss brief actions, confuse their order, or misinterpret the wearer's motion. Existing caption formats also offer limited support for combining detailed narration with precise timing. We present EgoCaptioner, which pairs a video-level overview of the setting, participants, and the wearer's overall activity with timed steps whose narration adapts to varying perceptual demands and marks key moments at specific timestamps. We develop a coarse-to-fine annotation pipeline that establishes event structure before expanding step descriptions, yielding 50,000 training examples from eight egocentric video sources. Complementary rewards assess factual accuracy and coverage, measure step-level temporal alignment, and penalize fragmented or redundant narration, guiding caption refinement through Group Relative Policy Optimization (GRPO). To improve the reliability of factual supervision, we supplement caption references with pose-derived motion facts when sensor data are available. Across five egocentric benchmarks, EgoCaptioner achieves leading performance among evaluated open-source models in caption quality, caption-conditioned question answering, and temporal alignment. It also surpasses Gemini 3.1 Pro on PhysCapBench and all evaluated proprietary baselines on Minerva-Ego under the caption-to-QA protocol. Ablations support the complementary roles of factual and temporal rewards and show that coarse-to-fine annotation provides more effective supervision than single-pass annotation.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "EgoCaptioner mejora la descripción de videos egocéntricos con narraciones detalladas y precisas en el tiempo.",
+        "problema": "Los modelos actuales de lenguaje multimodal (MLLMs) fallan al describir videos egocéntricos, omitiendo acciones breves, confundiendo el orden o malinterpretando el movimiento del usuario, y los formatos de descripción actuales no integran bien detalles y tiempo.",
+        "propuesta": "Se introduce EgoCaptioner, un sistema que combina una descripción general del video con pasos de acción detallados y con marcas de tiempo precisas. Utiliza un pipeline de anotación 'coarse-to-fine' y recompensas complementarias para la precisión fáctica y la alineación temporal, optimizado con GRPO.",
+        "resultados": "EgoCaptioner lidera en calidad de descripción, respuesta a preguntas condicionadas por descripciones y alineación temporal en cinco benchmarks egocéntricos. Supera a modelos como Gemini 3.1 Pro y bases de referencia propietarias en tareas específicas.",
+        "por_que_importa": "Permite una comprensión más profunda y precisa de las acciones en videos personales o de robots, crucial para la asistencia, la formación o el análisis de interacciones.",
+        "tags": [
+          "videos egocéntricos",
+          "descripción de video",
+          "IA multimodal",
+          "procesamiento temporal",
+          "lenguaje natural"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-20T20:37:19Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.26414",
+      "rank": 3,
+      "title": "ZeroVLN: Learning to Navigate without Supervised Fine-Tuning of the VLM Brain",
+      "authors": [
+        "Zixuan Huang",
+        "Yang Zhou",
+        "Guli Zhang",
+        "Sunzhu Li"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-19",
+      "url": "https://arxiv.org/abs/2611.26414",
+      "pdf_url": "https://arxiv.org/pdf/2611.26414",
+      "score": 61,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+4)",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "Representative vision-language navigation (VLN) methods typically couple a vision-language model (VLM) brain with a learnable action head and fine-tune the VLM brain on navigation-domain data to predict geometric goals. However, such adaptation can substantially alter base VLM weights and degrade general visual capabilities. We introduce ZeroVLN, a slow-fast navigation framework that achieves effective navigation with zero navigation-domain SFT of the VLM brain. Rather than teaching the brain to predict geometric goals, we equip it with a semantic tool-calling interface for conveying movement decisions to an action expert in natural language. We first adapt the action expert to carry out these movement requests, then jointly improve the brain's movement decisions and the action expert's continuous execution through closed-loop reinforcement learning (RL). Trained on the same navigation episodes, ZeroVLN substantially outperforms representative SFT-based hierarchical VLN methods on standard VLN-CE (continuous environments) benchmarks, while inducing only minor changes to the brain's weights and largely preserving its general capabilities. To our knowledge, ZeroVLN is the first slow-fast VLN framework with zero navigation-domain SFT of the VLM brain, and the first to jointly optimize its slow and fast policies through closed-loop agentic RL in VLN-CE.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "ZeroVLN navega sin entrenar el cerebro del modelo de visión y lenguaje, usando un enfoque 'slow-fast' y RL.",
+        "problema": "Los métodos de navegación visión-lenguaje (VLN) actuales modifican significativamente los modelos de visión y lenguaje (VLMs) base al reentrenarlos para predecir objetivos geométricos, degradando sus capacidades generales.",
+        "propuesta": "ZeroVLN propone un marco 'slow-fast' que evita el ajuste fino (SFT) del VLM para la navegación. En su lugar, el VLM usa una interfaz de 'llamada a herramientas' semántica para comunicar decisiones de movimiento en lenguaje natural a un experto en acciones, que luego se optimiza conjuntamente mediante aprendizaje por refuerzo (RL) en bucle cerrado.",
+        "resultados": "ZeroVLN supera a métodos jerárquicos basados en SFT en los benchmarks VLN-CE. El resumen no especifica mejoras numéricas exactas, pero indica que induce cambios mínimos en los pesos del VLM y preserva sus capacidades generales.",
+        "por_que_importa": "Permite la navegación eficiente sin degradar las capacidades generales de los grandes modelos de lenguaje, abriendo la puerta a sistemas de IA más versátiles y robustos en entornos reales.",
+        "tags": [
+          "navegación",
+          "visión-lenguaje",
+          "aprendizaje por refuerzo",
+          "modelos de lenguaje",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-20T20:37:29Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.25387",
+      "rank": 4,
+      "title": "TuringSpace: Grounding Spatial Intelligence in Action with Interactive CAPTCHAs",
+      "authors": [
+        "Xuwei Ding",
+        "Skylar Zhai",
+        "Linxin Song",
+        "Jiarui Feng"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-19",
+      "url": "https://arxiv.org/abs/2611.25387",
+      "pdf_url": "https://arxiv.org/pdf/2611.25387",
+      "score": 60,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Humans act in the visual world by inferring the 3D layout behind a 2D view, predicting how an action changes it, and correcting themselves after seeing the result. Can multimodal large language models (MLLMs) do the same? CAPTCHAs offer a natural test, since humans solve them through this very loop, clicking and dragging on the screen and adjusting after each result. Yet existing CAPTCHA benchmarks are largely solved and rarely spatial, while spatial benchmarks rarely require action. We therefore present TuringSpace, a synthetic web environment of 125 interactive CAPTCHAs that span five spatial abilities and must be solved through clicks and drags on the screen. Every task is a program that generates new instances with a checker and an oracle, so the tasks also form a scalable training gym. Humans solve 94.1% of the tasks, whereas the best model, GPT-6 Astra, still fails 25.9% of them, and the best open-weight model, Kimi K3, fails 68.0%. Our further analysis shows that most failures come from misreading the screenshot, and that model reasoning rarely corrects a wrong belief but hallucinates evidence to defend it. To test whether such spatial abilities can be learned, we fine-tune Qwen3.5-9B on this gym. Its success rate rises from 1.6% to 33.1%, above Kimi K3, and it improves on all seven out-of-distribution benchmarks, including a 9.9-point gain on the real-world indoor videos of VSI-Bench. These results show that grounding spatial intelligence in screen actions exposes what MLLMs lack and offers a scalable way to teach it, with gains that transfer to real-world scenes. We will release TuringSpace to support further study.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evaluamos la inteligencia espacial de los MLLMs con CAPTCHAs interactivos, revelando deficiencias y un camino para mejorar su comprensión del mundo.",
+        "problema": "Los modelos de lenguaje multimodales (MLLMs) actuales carecen de inteligencia espacial y la capacidad de actuar y corregirse en entornos 2D interactivos, algo que los humanos hacen naturalmente.",
+        "propuesta": "Presentamos TuringSpace, un entorno de 125 CAPTCHAs sintéticos que requieren interacciones de clic y arrastre para resolver problemas espaciales. Se utiliza para evaluar y entrenar MLLMs.",
+        "resultados": "Los humanos resuelven el 94.1% de las tareas. GPT-6 Astra falla el 25.9% y Kimi K3 el 68.0%. El fine-tuning de Qwen3.5-9B en TuringSpace mejora su tasa de éxito del 1.6% al 33.1%, superando a Kimi K3 y mejorando en benchmarks de la vida real como VSI-Bench (+9.9 puntos).",
+        "por_que_importa": "Evaluar y entrenar la inteligencia espacial de los MLLMs en interacciones de pantalla expone sus limitaciones actuales y proporciona un método escalable para mejorar su comprensión y razonamiento en el mundo real, con beneficios que se transfieren a tareas prácticas.",
+        "tags": [
+          "inteligencia artificial",
+          "multimodalidad",
+          "ciberseguridad",
+          "vision por computador",
+          "aprendizaje profundo",
+          "evaluacion de modelos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-20T20:37:38Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.26408",
+      "rank": 5,
+      "title": "Training Vision Models for LLM-Driven Weight-Space Programming",
+      "authors": [
+        "Timo Ropinski",
+        "Sebastian Kranz"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-19",
+      "url": "https://arxiv.org/abs/2611.26408",
+      "pdf_url": "https://arxiv.org/pdf/2611.26408",
+      "score": 60,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "It has been demonstrated that, in certain settings, large language models can perform weight-space programming to directly modify the weights of neural networks. However, it is unknown how dedicated training of these networks can contribute to the successes of weight-space programming. We present a benchmark of LLM-driven weight-space programming on vision models, in which five LLMs edit convolutional networks and vision transformers on relabeling and error-correction tasks on Waterbirds, CIFAR-100, PACS and Entity-30. We report more than 2,600 such edit processes, whereby each edit is scored on held-out images for success, side effects and accuracy loss. We compare standard training with label smoothing, gradient-based editable training, and our Edit-Ready Training (ERT), a novel method that rehearses the direct, closed-form weight edits LLMs perform. We show that preparing networks for editing raises the success of LLM edits substantially where standard networks are hard to edit. ERT further achieves the highest mean score for GPT-6 Astra and Claude Opus 5.5 across all evaluated baselines. We will release our LLM testing framework alongside all tasks, editing trajectories and scores. Project page: https://viscom.uni-ulm.de/wsp",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Preparamos modelos de visión para que los LLMs modifiquen sus pesos directamente, mejorando la edición y corrección de errores.",
+        "problema": "Los modelos de lenguaje grandes (LLMs) pueden modificar los pesos de redes neuronales, pero no se sabe cómo entrenar estas redes para facilitar esta 'programación en el espacio de pesos'.",
+        "propuesta": "Se presenta un benchmark para evaluar la programación en el espacio de pesos con LLMs en modelos de visión (CNNs y ViTs) y se propone un nuevo método, Edit-Ready Training (ERT), que entrena las redes para anticipar y facilitar las ediciones directas de pesos.",
+        "resultados": "ERT mejora sustancialmente el éxito de las ediciones de LLMs en comparación con el entrenamiento estándar. ERT logra la puntuación media más alta para GPT-6 Astra y Claude Opus 5.5 en comparación con otros métodos.",
+        "por_que_importa": "Permite que los LLMs modifiquen de forma más fiable y eficiente los modelos de IA, facilitando su adaptación, corrección y mejora sin necesidad de reentrenamiento completo.",
+        "tags": [
+          "IA",
+          "LLMs",
+          "Ciberseguridad",
+          "Edición de Modelos",
+          "Visión por Computadora",
+          "Entrenamiento"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-20T20:37:51Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.25279",
+      "rank": 6,
+      "title": "Accord: Universal Online Metric Localization and Dense Mapping from one Camera and an IMU",
+      "authors": [
+        "Jaafar Mahmoud",
+        "Arthur Movsesyan",
+        "Cuong Huynh",
+        "Mikhail Iumanov"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-18",
+      "url": "https://arxiv.org/abs/2611.25279",
+      "pdf_url": "https://arxiv.org/pdf/2611.25279",
+      "score": 54,
+      "topics": [
+        "vuln & threats",
+        "LLM"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: vuln & threats, LLM"
+      ],
+      "abstract_en": "Dense metric mapping from a single camera and IMU remains challenging: visual-inertial odometry (VIO) provides metric motion but sparse geometry, whereas feed-forward depth models predict dense structure without ensuring metric scale. We present Accord, which constructs an accurate online dense metric map from any camera with an IMU. A VIO filter publishes metric poses, a depth foundation model conditioned on them predicts depth for short keyframe windows, and a factor graph fuses the resulting submaps. Recent work has explored several approaches to this problem. What is essential is the multi-view agreement (Accord), which is considered in SLAM as a source of geometric self-consistency. Accord anchors each keyframe window to metric 3D points triangulated from the filter poses, then exploits bidirectional dense depth agreement between co-visible images to estimate and correct per-image scale errors while preserving the metric scale established by the anchors. Context keyframes further improve depth prediction, and the resulting submaps are fused in a factor graph. We evaluate a single mapping configuration across five public camera-IMU setups and a new Phone-rig/GoPro dataset. With nothing tuned per dataset/setup and every map aligned only by Accord's own trajectory, Accord achieves consistently best/second-best mean F-score at 5 cm on every platform. Accord is open-source along with the phone-rig dataset for the benefit of the research community",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Accord crea mapas 3D densos y métricos precisos usando solo una cámara y un IMU, superando limitaciones previas.",
+        "problema": "La creación de mapas 3D densos y métricos con una sola cámara y un IMU es difícil: la odometría visual-inercial da movimiento métrico pero geometría dispersa, y los modelos de profundidad predictivos carecen de escala métrica.",
+        "propuesta": "Accord utiliza un filtro visual-inercial para obtener poses métricas, un modelo de profundidad condicionado para predecir la profundidad de ventanas de fotogramas clave, y un grafo de factores para fusionar submapas. Se basa en el acuerdo multi-vista para estimar y corregir errores de escala por imagen, anclando cada ventana a puntos 3D métricos.",
+        "resultados": "Accord logra consistentemente la mejor o segunda mejor puntuación F media a 5 cm en cinco configuraciones de cámara-IMU públicas y un nuevo conjunto de datos Phone-rig/GoPro, sin ajustes por configuración.",
+        "por_que_importa": "Permite la creación de mapas 3D densos y métricos precisos y universales con hardware accesible (cámara+IMU), abriendo puertas a aplicaciones de robótica, realidad aumentada y mapeo autónomo más robustas.",
+        "tags": [
+          "mapeo 3D",
+          "visual-inercial",
+          "odometría",
+          "visión por computador",
+          "IA",
+          "ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-20T20:38:01Z"
+      }
+    }
+  ],
+  "generated_at": "2026-11-20T20:38:01Z"
+}

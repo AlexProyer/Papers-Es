@@ -13632,5 +13632,204 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-11-19T20:53:43Z"
+  },
+  "arxiv:2611.26553v1": {
+    "tldr": "ROGUE-AI replica incidentes de seguridad de agentes LLM offline para auditar y prevenir fallos.",
+    "problema": "Los informes de fallos de agentes LLM a menudo no validan el incidente ni encuentran la causa raíz, y los catálogos de incidentes y benchmarks no replican ni prueban las causas.",
+    "propuesta": "Se presenta ROGUE-AI, un framework multi-agente que reconstruye incidentes reportados offline junto con un control sin la causa culpada, y ejecuta agentes en ambos para validar la causa.",
+    "resultados": "ROGUE-AI reprodujo el daño reportado en el 89% de 108 intentos. Agentes de 5 modelos actuales cometieron el error en 18%-33% de los casos, contra <1% sin la causa culpada. De 72 incidentes con daño real, 62 no tuvieron atacante; los agentes fallaron por no ver peligros ordinarios. Las advertencias de peligro redujeron el daño en los 5 modelos.",
+    "por_que_importa": "Proporciona un framework de auditoría reutilizable para que los proveedores prueben y mejoren la seguridad de sus agentes LLM antes de lanzamientos, reduciendo fallos y daños accidentales.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Auditoría",
+      "Replicación",
+      "Seguridad de Agentes",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-20T20:36:14Z"
+  },
+  "arxiv:2611.25809v1": {
+    "tldr": "ALIoTh usa IA multi-agente para automatizar pruebas de penetración en entornos IoT complejos, identificando y explotando vulnerabilidades.",
+    "problema": "Las pruebas de penetración en entornos IoT heterogéneos son complejas, abarcando desde la recopilación de información hasta la escalada de privilegios y el movimiento lateral.",
+    "propuesta": "ALIoTh es un framework que orquesta agentes LLM especializados, utilizando Self-RAG, para planificar y ejecutar automáticamente un pipeline de pruebas de penetración completo en dispositivos IoT e IIoT.",
+    "resultados": "El resumen no especifica resultados numéricos, pero describe la capacidad de ALIoTh para realizar enumeración, evaluación de vulnerabilidades, generación de payloads, despliegue de reverse shells y escalada de privilegios.",
+    "por_que_importa": "Automatiza y mejora la eficiencia de las pruebas de seguridad en sistemas IoT, un área crítica y en crecimiento, permitiendo la identificación proactiva de vulnerabilidades.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "IoT",
+      "Pruebas de Penetración",
+      "Automatización",
+      "LLM"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-20T20:36:23Z"
+  },
+  "arxiv:2611.26131v1": {
+    "tldr": "SCARVA mejora la confianza en agentes de IA para analizar vulnerabilidades en la cadena de suministro de software mediante informes interpretables.",
+    "problema": "Las herramientas actuales para detectar vulnerabilidades en dependencias de software son limitadas por lenguaje y ecosistema, y los agentes de IA, aunque prometedores, a menudo alucinan o toman atajos de forma opaca, minando la confianza en sus conclusiones.",
+    "propuesta": "SCARVA es un framework que combina razonamiento avanzado de agentes con una metodología de recolección de evidencia. Un agente ANALYST realiza la evaluación de seguridad, mientras SCARVA registra todas sus acciones. Agentes JUDGE independientes revisan el análisis del ANALYST y generan un informe respaldado por evidencia.",
+    "resultados": "En 54 casos curados, el mejor modelo ANALYST (Qwen 3.8) alcanzó un 82% de precisión balanceada. Los agentes JUDGE, con Claude Opus 5.5 liderando, coincidieron con anotadores humanos en el 94% de las verificaciones de afirmaciones.",
+    "por_que_importa": "Proporciona una forma más fiable y transparente de utilizar agentes de IA para la crítica tarea de asegurar la cadena de suministro de software, permitiendo a los profesionales confiar en las evaluaciones de seguridad.",
+    "tags": [
+      "IA explicable",
+      "Seguridad de software",
+      "Cadena de suministro",
+      "Agentes autónomos",
+      "Análisis de vulnerabilidades"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-20T20:36:33Z"
+  },
+  "arxiv:2611.25718v1": {
+    "tldr": "AntiAgent protege código JavaScript contra la detección de vulnerabilidades por parte de modelos de lenguaje, reduciendo su efectividad.",
+    "problema": "Los modelos de lenguaje (LLMs) facilitan la detección de vulnerabilidades en código JavaScript distribuido como fuente, amenazando la seguridad de las aplicaciones.",
+    "propuesta": "AntiAgent transforma el código JavaScript antes de su distribución para dificultar el análisis de los LLMs. Utiliza un proceso evolutivo para identificar transformaciones efectivas y las aplica de forma adaptativa al nuevo código, preservando su semántica.",
+    "resultados": "AntiAgent reduce la detección de vulnerabilidades por parte de cuatro agentes LLM (incluyendo Claude Code y Codex) entre un 52.0% y un 60.7%, superando a métodos convencionales y a FPA. Las transformaciones preservan la semántica del programa y son efectivas en otros lenguajes como Python.",
+    "por_que_importa": "Ofrece una defensa práctica para desarrolladores contra una nueva clase de atacantes (LLMs), protegiendo la propiedad intelectual y la seguridad del software distribuido.",
+    "tags": [
+      "ciberseguridad",
+      "javascript",
+      "inteligencia artificial",
+      "deteccion de vulnerabilidades",
+      "ofuscacion"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-20T20:36:42Z"
+  },
+  "arxiv:2611.26298v1": {
+    "tldr": "Evalúa la seguridad de los modelos de IA multimodales en interacciones diarias complejas y evolutivas.",
+    "problema": "Los modelos de IA multimodales (MLLMs) se usan en la vida diaria, pero las pruebas de seguridad actuales no cubren cómo los riesgos evolucionan en conversaciones y tareas cotidianas con múltiples pasos y modalidades (texto/imágenes).",
+    "propuesta": "Se introduce DailySafe, un benchmark con 195 interacciones multimodales y multi-turno basadas en escenarios reales de la vida diaria, diseñadas para evaluar la 'Conciencia de Seguridad Dinámica' de los MLLMs.",
+    "resultados": "El resumen no especifica resultados cuantitativos de la evaluación, pero presenta un benchmark diseñado para medir la capacidad de los MLLMs de reconocer y manejar riesgos cambiantes.",
+    "por_que_importa": "Es crucial para asegurar que los asistentes de IA multimodales sean seguros y confiables en el uso cotidiano, adaptándose a los riesgos que surgen dinámicamente durante las interacciones.",
+    "tags": [
+      "IA multimodal",
+      "Seguridad de IA",
+      "Benchmarks",
+      "Interacciones diarias",
+      "Evaluación de riesgos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-20T20:36:51Z"
+  },
+  "arxiv:2611.25832v1": {
+    "tldr": "RAVEN automatiza la investigación inicial de alertas de seguridad, clasificando eventos y sugiriendo respuestas contextualizadas para analistas SOC.",
+    "problema": "El análisis manual de alertas de seguridad en centros de operaciones (SOC) es lento, inconsistente y abrumador, especialmente con alto volumen.",
+    "propuesta": "RAVEN es un agente que usa Generación Aumentada por Recuperación (RAG) autorreflexiva para clasificar eventos de seguridad y generar sugerencias de mitigación adaptadas a la infraestructura de la empresa, permitiendo la interacción con el analista.",
+    "resultados": "Se implementó un prototipo y se reportaron resultados preliminares en tres conjuntos de datos de 400 cargas útiles web (SQLi, XSS, SSTI) y un estudio cualitativo de generación de mitigaciones. La evaluación en alertas IDS y un estudio de usuario están en curso.",
+    "por_que_importa": "Reduce la carga de trabajo de los analistas SOC, acelera la respuesta a incidentes y mejora la consistencia y contextualización de las acciones de seguridad.",
+    "tags": [
+      "ciberseguridad",
+      "inteligencia artificial",
+      "automatización",
+      "SOC",
+      "análisis de amenazas",
+      "RAG"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-20T20:37:00Z"
+  },
+  "arxiv:2611.26409": {
+    "tldr": "Presentamos WeMM-Video, modelos multimodales de código abierto para entender videos combinando audio, imagen y texto.",
+    "problema": "La comprensión de videos, especialmente con audio, es un desafío en la inteligencia multimodal. Los modelos existentes a menudo no manejan bien la combinación de todas estas modalidades.",
+    "propuesta": "Se propone WeMM-Video, una familia de modelos multimodales (2B a 35B parámetros) bilingües (chino-inglés) que integran texto, imagen, audio y video. Soporta modos de 'pensamiento' (razonamiento paso a paso) y 'sin pensamiento' (respuestas directas), entrenados con 1.2 billones de tokens y técnicas avanzadas de entrenamiento.",
+    "resultados": "WeMM-Video-35B-A3B establece un nuevo estado del arte en código abierto para comprensión omnimodal de video, superando a modelos propietarios como Qwen3.5-Omni-Flash y Seed2.0-Mini-0428, y compitiendo con Gemini-3.0-Flash. WeMM-Video-9B supera a Qwen3-Omni-30B-A3B-Instruct.",
+    "por_que_importa": "Avanza significativamente la capacidad de los modelos de código abierto para entender videos de forma integral, combinando múltiples fuentes de información, lo que es crucial para aplicaciones prácticas y para democratizar la investigación en IA.",
+    "tags": [
+      "IA multimodal",
+      "comprensión de video",
+      "código abierto",
+      "modelos fundacionales",
+      "procesamiento de audio",
+      "razonamiento"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-20T20:37:10Z"
+  },
+  "arxiv:2611.26380": {
+    "tldr": "EgoCaptioner mejora la descripción de videos egocéntricos con narraciones detalladas y precisas en el tiempo.",
+    "problema": "Los modelos actuales de lenguaje multimodal (MLLMs) fallan al describir videos egocéntricos, omitiendo acciones breves, confundiendo el orden o malinterpretando el movimiento del usuario, y los formatos de descripción actuales no integran bien detalles y tiempo.",
+    "propuesta": "Se introduce EgoCaptioner, un sistema que combina una descripción general del video con pasos de acción detallados y con marcas de tiempo precisas. Utiliza un pipeline de anotación 'coarse-to-fine' y recompensas complementarias para la precisión fáctica y la alineación temporal, optimizado con GRPO.",
+    "resultados": "EgoCaptioner lidera en calidad de descripción, respuesta a preguntas condicionadas por descripciones y alineación temporal en cinco benchmarks egocéntricos. Supera a modelos como Gemini 3.1 Pro y bases de referencia propietarias en tareas específicas.",
+    "por_que_importa": "Permite una comprensión más profunda y precisa de las acciones en videos personales o de robots, crucial para la asistencia, la formación o el análisis de interacciones.",
+    "tags": [
+      "videos egocéntricos",
+      "descripción de video",
+      "IA multimodal",
+      "procesamiento temporal",
+      "lenguaje natural"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-20T20:37:19Z"
+  },
+  "arxiv:2611.26414": {
+    "tldr": "ZeroVLN navega sin entrenar el cerebro del modelo de visión y lenguaje, usando un enfoque 'slow-fast' y RL.",
+    "problema": "Los métodos de navegación visión-lenguaje (VLN) actuales modifican significativamente los modelos de visión y lenguaje (VLMs) base al reentrenarlos para predecir objetivos geométricos, degradando sus capacidades generales.",
+    "propuesta": "ZeroVLN propone un marco 'slow-fast' que evita el ajuste fino (SFT) del VLM para la navegación. En su lugar, el VLM usa una interfaz de 'llamada a herramientas' semántica para comunicar decisiones de movimiento en lenguaje natural a un experto en acciones, que luego se optimiza conjuntamente mediante aprendizaje por refuerzo (RL) en bucle cerrado.",
+    "resultados": "ZeroVLN supera a métodos jerárquicos basados en SFT en los benchmarks VLN-CE. El resumen no especifica mejoras numéricas exactas, pero indica que induce cambios mínimos en los pesos del VLM y preserva sus capacidades generales.",
+    "por_que_importa": "Permite la navegación eficiente sin degradar las capacidades generales de los grandes modelos de lenguaje, abriendo la puerta a sistemas de IA más versátiles y robustos en entornos reales.",
+    "tags": [
+      "navegación",
+      "visión-lenguaje",
+      "aprendizaje por refuerzo",
+      "modelos de lenguaje",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-20T20:37:29Z"
+  },
+  "arxiv:2611.25387": {
+    "tldr": "Evaluamos la inteligencia espacial de los MLLMs con CAPTCHAs interactivos, revelando deficiencias y un camino para mejorar su comprensión del mundo.",
+    "problema": "Los modelos de lenguaje multimodales (MLLMs) actuales carecen de inteligencia espacial y la capacidad de actuar y corregirse en entornos 2D interactivos, algo que los humanos hacen naturalmente.",
+    "propuesta": "Presentamos TuringSpace, un entorno de 125 CAPTCHAs sintéticos que requieren interacciones de clic y arrastre para resolver problemas espaciales. Se utiliza para evaluar y entrenar MLLMs.",
+    "resultados": "Los humanos resuelven el 94.1% de las tareas. GPT-6 Astra falla el 25.9% y Kimi K3 el 68.0%. El fine-tuning de Qwen3.5-9B en TuringSpace mejora su tasa de éxito del 1.6% al 33.1%, superando a Kimi K3 y mejorando en benchmarks de la vida real como VSI-Bench (+9.9 puntos).",
+    "por_que_importa": "Evaluar y entrenar la inteligencia espacial de los MLLMs en interacciones de pantalla expone sus limitaciones actuales y proporciona un método escalable para mejorar su comprensión y razonamiento en el mundo real, con beneficios que se transfieren a tareas prácticas.",
+    "tags": [
+      "inteligencia artificial",
+      "multimodalidad",
+      "ciberseguridad",
+      "vision por computador",
+      "aprendizaje profundo",
+      "evaluacion de modelos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-20T20:37:38Z"
+  },
+  "arxiv:2611.26408": {
+    "tldr": "Preparamos modelos de visión para que los LLMs modifiquen sus pesos directamente, mejorando la edición y corrección de errores.",
+    "problema": "Los modelos de lenguaje grandes (LLMs) pueden modificar los pesos de redes neuronales, pero no se sabe cómo entrenar estas redes para facilitar esta 'programación en el espacio de pesos'.",
+    "propuesta": "Se presenta un benchmark para evaluar la programación en el espacio de pesos con LLMs en modelos de visión (CNNs y ViTs) y se propone un nuevo método, Edit-Ready Training (ERT), que entrena las redes para anticipar y facilitar las ediciones directas de pesos.",
+    "resultados": "ERT mejora sustancialmente el éxito de las ediciones de LLMs en comparación con el entrenamiento estándar. ERT logra la puntuación media más alta para GPT-6 Astra y Claude Opus 5.5 en comparación con otros métodos.",
+    "por_que_importa": "Permite que los LLMs modifiquen de forma más fiable y eficiente los modelos de IA, facilitando su adaptación, corrección y mejora sin necesidad de reentrenamiento completo.",
+    "tags": [
+      "IA",
+      "LLMs",
+      "Ciberseguridad",
+      "Edición de Modelos",
+      "Visión por Computadora",
+      "Entrenamiento"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-20T20:37:51Z"
+  },
+  "arxiv:2611.25279": {
+    "tldr": "Accord crea mapas 3D densos y métricos precisos usando solo una cámara y un IMU, superando limitaciones previas.",
+    "problema": "La creación de mapas 3D densos y métricos con una sola cámara y un IMU es difícil: la odometría visual-inercial da movimiento métrico pero geometría dispersa, y los modelos de profundidad predictivos carecen de escala métrica.",
+    "propuesta": "Accord utiliza un filtro visual-inercial para obtener poses métricas, un modelo de profundidad condicionado para predecir la profundidad de ventanas de fotogramas clave, y un grafo de factores para fusionar submapas. Se basa en el acuerdo multi-vista para estimar y corregir errores de escala por imagen, anclando cada ventana a puntos 3D métricos.",
+    "resultados": "Accord logra consistentemente la mejor o segunda mejor puntuación F media a 5 cm en cinco configuraciones de cámara-IMU públicas y un nuevo conjunto de datos Phone-rig/GoPro, sin ajustes por configuración.",
+    "por_que_importa": "Permite la creación de mapas 3D densos y métricos precisos y universales con hardware accesible (cámara+IMU), abriendo puertas a aplicaciones de robótica, realidad aumentada y mapeo autónomo más robustas.",
+    "tags": [
+      "mapeo 3D",
+      "visual-inercial",
+      "odometría",
+      "visión por computador",
+      "IA",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-20T20:38:01Z"
   }
 }
