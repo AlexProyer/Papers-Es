@@ -13831,5 +13831,38 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-11-20T20:38:01Z"
+  },
+  "arxiv:2611.24025": {
+    "tldr": "Los contratos de intención autorizan a agentes LLM a usar herramientas, separando la planificación de la ejecución para mayor seguridad.",
+    "problema": "Los agentes LLM que usan herramientas a menudo ejecutan acciones no deseadas o no autorizadas porque el modelo de planificación tiene acceso directo a las herramientas.",
+    "propuesta": "Introduce 'Intent Contracts', una interfaz de autorización donde el modelo de planificación solo propone un 'contrato' (objetivo, cita del usuario, alcance) que un modelo de confianza valida y ejecuta.",
+    "resultados": "Bajo contratos, los objetos modificados se nombran en el objetivo del contrato. Los contratos completan tareas solicitadas por el usuario en 27/30 ejecuciones cuando el planificador añade trabajo extra, superando a la revisión visible por intención (16/30). Sin embargo, no reducen las acciones no autorizadas (40-49% de errores en condiciones ambiguas).",
+    "por_que_importa": "Mejora la seguridad y el control en agentes LLM que usan herramientas, asegurando que las acciones se alineen con la intención del usuario y reduciendo la ejecución de tareas no solicitadas.",
+    "tags": [
+      "agentes LLM",
+      "ciberseguridad",
+      "autorización",
+      "contratos de intención",
+      "seguridad de IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-24T00:09:04Z"
+  },
+  "arxiv:2611.25252": {
+    "tldr": "Los agentes LLM superan a AutoML y métodos publicados en el desarrollo de modelos de predicción de fallos, moviendo la generalidad del modelo al agente.",
+    "problema": "Los modelos de predicción de fallos (PHM) deben generalizar a equipos no vistos. Los métodos actuales y AutoML no logran esta generalización de manera consistente, y los resultados publicados a menudo dependen de convenciones específicas no replicables.",
+    "propuesta": "Se propone que la generalidad resida en el agente LLM que diseña el modelo para cada tarea específica, en lugar de en el modelo en sí. Se introduce NextUnit-Bench, un benchmark de estilo de despliegue con 24 datasets y 58 folds, donde los agentes tienen 2 horas para crear un predictor ejecutable.",
+    "resultados": "Los agentes LLM superan a AutoML (logrando más del doble de puntuación) y a implementaciones publicadas (6 de 30 superan al mejor agente). La ventaja principal de los agentes es el diseño adaptado a los datos de cada máquina. Los planes de diseño de los agentes explican la mayor parte de la brecha de rendimiento. La capacidad de aprender de los datos es clave. Los modelos de código abierto locales, incluso optimizados, logran la mitad de las predicciones exitosas que los agentes.",
+    "por_que_importa": "Mover la generalidad al agente LLM simplifica el desarrollo de modelos de PHM robustos y adaptables. Permite crear predictores más precisos y fiables para equipos no vistos, mejorando la mantenibilidad predictiva en la práctica industrial.",
+    "tags": [
+      "agentes LLM",
+      "mantenibilidad predictiva",
+      "PHM",
+      "benchmarking",
+      "IA explicable",
+      "generalización"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-24T00:09:14Z"
   }
 }
