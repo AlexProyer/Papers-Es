@@ -13864,5 +13864,171 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-11-24T00:09:14Z"
+  },
+  "arxiv:2611.31129v1": {
+    "tldr": "Atacan la integridad del hardware de IA para eludir sus mecanismos de seguridad y provocar comportamientos peligrosos.",
+    "problema": "Los modelos de IA actuales confían en la alineación a nivel de modelo para rechazar instrucciones maliciosas, pero esta defensa es vulnerable a fallos físicos en el hardware subyacente.",
+    "propuesta": "FATCAT es un ataque de inyección de fallos electromagnéticos no invasivo que corrompe transacciones de memoria críticas en GPUs y DRAM, sin requerir acceso al software o al modelo, sincronizando fallos con la fase de prellenado de prompts.",
+    "resultados": "Se demostró que los fallos físicos localizados fuerzan a modelos como Llama 3.2 1B y Gemma 3 1B a cumplir peticiones restringidas. En un robot controlado por IA, el ataque provocó movimientos peligrosos y agresivos.",
+    "por_que_importa": "Demuestra que la seguridad de los modelos de IA depende de la integridad del hardware. Los fallos de hardware pueden tener consecuencias físicas directas y peligrosas, especialmente en sistemas robóticos.",
+    "tags": [
+      "ciberseguridad",
+      "IA",
+      "ataques fisicos",
+      "hardware",
+      "vulnerabilidad",
+      "robótica"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-24T22:39:12Z"
+  },
+  "arxiv:2611.30621v1": {
+    "tldr": "AgentBouncer protege a los agentes de ingeniería de software de ataques maliciosos mediando sus llamadas al sistema en tiempo de ejecución.",
+    "problema": "Los agentes de ingeniería de software (SE), aunque útiles, son vulnerables a ataques (inyecciones de prompt, herramientas maliciosas) que pueden llevar a acciones no deseadas o maliciosas, y las defensas actuales que analizan la trayectoria del agente no detectan estas acciones maliciosas ejecutadas.",
+    "propuesta": "AgentBouncer es un sistema de ejecución en tiempo de ejecución que media y deniega llamadas al sistema iniciadas por agentes SE. Utiliza un árbitro LLM que evalúa la necesidad y seguridad de las llamadas al sistema, denegando las inseguras y requiriendo mayor certeza de seguridad para las menos necesarias. Emplea reglas de política predefinidas y caché jerárquica para optimizar el rendimiento.",
+    "resultados": "AgentBouncer reduce la tasa de éxito de ataques del 99.41% a 10.59%, superando a defensas de vanguardia en 18.23-73.53 puntos porcentuales. Mantiene una alta tasa de éxito en tareas benignas (0.25% de llamadas a herramientas fallidas) y añade solo 47 segundos y $0.0036 por tarea benigna, siendo significativamente más eficiente que defensas comparables.",
+    "por_que_importa": "Este sistema mejora drásticamente la seguridad de los agentes de ingeniería de software, permitiendo su uso confiable en entornos de desarrollo sin comprometer la integridad del sistema o la seguridad de los datos, a la vez que es eficiente en términos de tiempo y coste.",
+    "tags": [
+      "ciberseguridad",
+      "agentes IA",
+      "ingeniería de software",
+      "protección en tiempo de ejecución",
+      "LLM"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-24T22:39:22Z"
+  },
+  "arxiv:2611.31002v1": {
+    "tldr": "Presentamos RoboUniverse-10K, un conjunto masivo de entornos de simulación para robótica basada en modelos de lenguaje, impulsando la era de escalado.",
+    "problema": "La robótica basada en agentes (Agentic Robotics) carece de entornos de entrenamiento y evaluación a gran escala, a diferencia de la ingeniería de software, lo que limita su progreso.",
+    "propuesta": "Se introduce RoboUniverse-10K, un conjunto de 10,807 entornos físicos interactivos y verificables generados automáticamente a partir de vídeos reales (Real2Sim), junto con un benchmark verificado (RoboUniverse-Verified) y un modelo ajustado (RoboUniverse-35B-A3B).",
+    "resultados": "Los modelos de vanguardia alcanzan un 85.8% de éxito en el benchmark, mientras que los modelos de código abierto rondan el 2.6%-10.0%. El modelo RoboUniverse-35B-A3B mejora la tasa de éxito del 0.8% al 21.2% en RoboUniverse-Verified y demuestra capacidades en otros benchmarks y un brazo robótico real.",
+    "por_que_importa": "Permite el escalado del entrenamiento y la evaluación en robótica basada en agentes, reduciendo la brecha entre simulación y realidad y acelerando el desarrollo de robots más capaces.",
+    "tags": [
+      "Robótica",
+      "Inteligencia Artificial",
+      "Simulación",
+      "Modelos de Lenguaje",
+      "Aprendizaje por Refuerzo",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-24T22:39:31Z"
+  },
+  "arxiv:2611.30533v1": {
+    "tldr": "Evalúa el riesgo dual de los modelos de lenguaje avanzados en ciberseguridad, equilibrando utilidad defensiva y prevención de mal uso.",
+    "problema": "Los modelos de lenguaje avanzados son útiles para la ciberseguridad, pero sus capacidades pueden ser mal utilizadas por atacantes. Las evaluaciones actuales no miden este riesgo dual de manera efectiva.",
+    "propuesta": "Se introduce CyberDualEval, un benchmark con 430 tareas vulnerables para evaluar el riesgo dual en modelos de lenguaje. Las tareas se dividen en análisis de seguridad, generación de pruebas de concepto y generación de exploits, con una puntuación de 'weaponization' para medir el riesgo residual.",
+    "resultados": "Ningún modelo evaluado navega eficazmente entre la asistencia segura y el rechazo de solicitudes de riesgo, mostrando ser demasiado cautelosos. Los modelos de código abierto recientes rara vez rechazan y tienen alta precisión en solicitudes de riesgo.",
+    "por_que_importa": "Es crucial para desarrollar modelos de IA que sean herramientas seguras para defensores sin convertirse en armas para atacantes, garantizando un avance responsable de la tecnología.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Modelos de Lenguaje",
+      "Riesgo Dual",
+      "Evaluación"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-24T22:39:41Z"
+  },
+  "arxiv:2611.31201v1": {
+    "tldr": "Embo-Harness revoluciona la robótica al usar modelos de IA de vanguardia como políticas directas, mejorando drásticamente el rendimiento y la generalización.",
+    "problema": "Los principios de diseño y las capacidades subyacentes de los modelos de IA de vanguardia utilizados directamente como políticas en sistemas robóticos cerrados (harnesses) no están claros, limitando su adopción y eficacia.",
+    "propuesta": "Se presenta Embo-Harness, un marco para estudiar sistemáticamente estos sistemas, analizando componentes clave como el prompting, la planificación, la ejecución de acciones y el uso de herramientas. Se propone una receta práctica que prioriza las interfaces que aprovechan el razonamiento visual nativo del modelo sobre planes o habilidades predefinidos.",
+    "resultados": "Embo-Harness logra una tasa de éxito del 83.3% en RoboLab-120, superando al mejor baseline en 26.2 puntos porcentuales. También tiene éxito en 15 de 20 pruebas zero-shot en tareas de manipulación reales. Los análisis indican que el modelo depende más de la estimación espacial precisa que de la generación explícita de trayectorias.",
+    "por_que_importa": "Proporciona una receta práctica para construir sistemas robóticos más eficientes y robustos utilizando modelos de IA de vanguardia, y aclara las capacidades clave que impulsan su alto rendimiento, facilitando su aplicación en el mundo real.",
+    "tags": [
+      "robótica",
+      "IA",
+      "modelos de lenguaje",
+      "políticas",
+      "generalización",
+      "ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-24T22:39:50Z"
+  },
+  "arxiv:2611.30932v1": {
+    "tldr": "Investiga vulnerabilidades no intencionadas en las 'habilidades' de los agentes LLM, revelando riesgos significativos en su cadena de suministro.",
+    "problema": "Las 'habilidades' de los agentes LLM, que extienden sus capacidades, pueden contener vulnerabilidades no intencionadas (en dependencias o código propio) que son explotables mediante ataques de inyección de prompts, escalando a ejecución de código.",
+    "propuesta": "Se realiza el primer estudio empírico a escala de registro sobre la superficie de ataque de la cadena de suministro de habilidades de agentes LLM (48,682 en ClawHub), analizando riesgos de dependencias y código propio, así como instrucciones de instalación y credenciales. Se evalúa la alcanzabilidad de estas vulnerabilidades mediante análisis estático, revisión manual y pruebas en sandbox y con un agente LLM real.",
+    "resultados": "El 49.6% de las habilidades con dependencias usan versiones con CVEs conocidas, y el 78.3% nacen vulnerables. La entrada del agente alcanza la función vulnerable en solo el 3.0% de las habilidades afectadas, pero el 21/22 de las fallas de código propio son explotadas end-to-end en sandbox. Un agente real ejecuta payloads inyectados en el 48.5% de las habilidades, pero usualmente en su propio shell, y solo el 5.0% alcanza una falla en la habilidad misma.",
+    "por_que_importa": "Prioriza la corrección de vulnerabilidades de código propio sobre las de dependencias en registros de habilidades. Sugiere que los entornos de ejecución de agentes no deben pasar argumentos de habilidades a través de un shell para mitigar riesgos.",
+    "tags": [
+      "LLM Agents",
+      "Supply Chain Attacks",
+      "Vulnerabilities",
+      "Prompt Injection",
+      "Cybersecurity",
+      "Software Engineering"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-24T22:40:00Z"
+  },
+  "arxiv:2611.30383v1": {
+    "tldr": "Defensa innovadora para proteger agentes LLM contra ataques que agotan recursos mediante un sistema de confianza y límites estrictos.",
+    "problema": "Los agentes LLM que usan herramientas son vulnerables a ataques que consumen excesivos tokens (costosos) mediante la amplificación de contexto, salidas de herramientas y bucles de error, sin defensas sistemáticas y deterministas.",
+    "propuesta": "Se propone un marco de defensa cerrado anclado en la confianza ('trust-anchored closed-loop defense') con cuatro fases: orquestación guiada por certificados, presupuesto de nodos calibrado, control de ejecución basado en 'Gateway' y recuperación acotada con un pool compartido.",
+    "resultados": "Los experimentos demuestran que el marco limita el consumo acumulado de tokens, mitiga ataques de amplificación de recursos y preserva la utilidad de tareas benignas bajo supuestos de ejecución confiable.",
+    "por_que_importa": "Es crucial para la seguridad y viabilidad económica de los agentes LLM, previniendo el abuso de recursos y asegurando su funcionamiento confiable en aplicaciones prácticas.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Defensa",
+      "Ataques de Recursos",
+      "Agentes Autónomos"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-24T22:40:10Z"
+  },
+  "arxiv:2611.30006v1": {
+    "tldr": "Selecciona la mejor estrategia de IA contra un oponente que aprende, asegurando que cumpla objetivos de rendimiento.",
+    "problema": "Evaluar estrategias de IA contra oponentes adaptativos es difícil porque la estrategia ganadora puede dejar de serlo al momento de su uso. Se busca seleccionar una estrategia que mantenga una probabilidad de victoria objetivo.",
+    "propuesta": "Se propone la regla SPAR (Sequential Private Accumulated-excess Rule) para una sola estrategia, que acumula evidencia y se detiene al alcanzar un umbral aleatorio privado. Para múltiples estrategias, se introduce Screen-then-SPAR, que filtra candidatas en etapas antes de aplicar SPAR.",
+    "resultados": "SPAR requiere un número de juegos inversamente proporcional a la tolerancia de error, siendo esta tasa óptima. Screen-then-SPAR alcanza la tasa minimax (con factores logarítmicos) y su rendimiento se demuestra en simulaciones y estudios con ataques de agentes de codificación y partidas de piedra-papel-tijera.",
+    "por_que_importa": "Permite a los profesionales de IA seleccionar de manera confiable estrategias efectivas en entornos dinámicos y adversarios, crucial para la seguridad y el rendimiento de sistemas de IA.",
+    "tags": [
+      "IA adaptativa",
+      "evaluación de estrategias",
+      "ciberseguridad",
+      "toma de decisiones",
+      "aprendizaje automático"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-24T22:40:19Z"
+  },
+  "arxiv:2611.30013": {
+    "tldr": "Generación de movimientos 3D complejos y fiables para diversos activos, superando las limitaciones de los métodos actuales.",
+    "problema": "Los métodos actuales para animar activos 3D a partir de instrucciones son limitados, especialmente para esqueletos no convencionales y con instrucciones complejas que requieren coordinación, temporización y restricciones espaciales específicas.",
+    "propuesta": "Se introduce DivDynBench para evaluar la generación de movimientos y rigging en diversas morfologías. Se propone un Marco de Movimiento Agéntico (Agentic Motion Framework) donde un agente genera programas de esqueleto y movimiento paramétricos, ejecutados de forma determinista para rigging, cinemática y corrección geométrica.",
+    "resultados": "El marco propuesto mejora la fiabilidad del rigging y la precisión del control del movimiento, reduciendo la sobrecarga de generación. El resumen no especifica resultados numéricos concretos.",
+    "por_que_importa": "Permite crear animaciones 3D complejas y precisas para una gama más amplia de activos, facilitando su aplicación práctica en la industria y la investigación.",
+    "tags": [
+      "animación 3D",
+      "generación de movimiento",
+      "inteligencia artificial",
+      "ciberseguridad",
+      "rigging",
+      "control paramétrico"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-24T22:40:29Z"
+  },
+  "arxiv:2611.30662": {
+    "tldr": "Presentamos WeMM-Ecom, modelos multimodales avanzados para e-commerce que superan a modelos más grandes y ya se usan a escala en WeChat.",
+    "problema": "La comprensión multimodal de contenido es crucial para el e-commerce, pero los modelos generales a menudo no son suficientes para tareas específicas de este dominio.",
+    "propuesta": "WeMM-Ecom es una familia de modelos multimodales de lenguaje grande, entrenados en dos etapas con datos progresivamente más enfocados en e-commerce y post-entrenamiento híbrido para optimizar su rendimiento.",
+    "resultados": "WeMM-Ecom-35B-A3B supera a modelos open-source más grandes en benchmarks de e-commerce. Los modelos ligeros superan a sus contrapartes de tamaño similar. Ya maneja miles de millones de solicitudes diarias en WeChat.",
+    "por_que_importa": "Ofrece un rendimiento de vanguardia en e-commerce, mejorando la eficiencia y las capacidades de plataformas como WeChat, y sus pesos y métodos son liberados para impulsar la investigación futura.",
+    "tags": [
+      "IA multimodal",
+      "e-commerce",
+      "modelos de lenguaje grande",
+      "WeChat",
+      "ciberseguridad",
+      "procesamiento de lenguaje natural"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-24T22:41:23Z"
   }
 }

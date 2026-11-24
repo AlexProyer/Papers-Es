@@ -1,0 +1,463 @@
+{
+  "date": "2026-11-24",
+  "report_type": "filtrado",
+  "evaluated": 200,
+  "selected": 10,
+  "papers": [
+    {
+      "id": "arxiv:2611.31129v1",
+      "rank": 1,
+      "title": "FATCAT: Fault Injection Attacks Targeting Chip-level Alignment",
+      "authors": [
+        "Peter Horvath",
+        "Ilia Shumailov",
+        "Zhuoran Liu",
+        "Lukasz Chmielewski"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-23",
+      "url": "https://arxiv.org/abs/2611.31129v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.31129v1",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, adversarial ML"
+      ],
+      "abstract_en": "Model alignment is the primary safety and security mechanism for enforcing refusal of malicious prompts in modern foundation models; yet, existing adversarial evaluations implicitly assume underlying hardware integrity. In this paper, we present FATCAT, the first physical fault-injection attacks capable of eliminating refusal in modern large language and vision-language models. Specifically, we present a non-invasive electromagnetic (EM) fault injection attack targeting GPU-accelerated Systems-on-Chip with physical access, requiring neither software execution privileges nor model-layer access. By leveraging an autonomous Radio Frequency (RF) side-channel trigger to synchronize EM faults to the prompt prefill phase, the attack corrupts safety-critical memory transactions across off-chip LPDDR5 DRAM and on-chip LPDDR physical interfaces without crashing the system while preserving model coherence. Evaluated on an NVIDIA Jetson Orin Nano and AGX Thor running Llama 3.2 1B and Gemma 3 1B, localized physical faults reliably force models to fulfill restricted requests, demonstrating that model-level alignment provides no robust security guarantees without hardware-level fault tolerance. Finally, we demonstrate the physical-world consequences of this vulnerability on an active 6-DoF robotic manipulator controlled by a SmolVLA vision-language-action policy. Our attack silently corrupts the model forcing the arm into abrupt, hazardous lunges; in two instances the robotic arm attempted to pinch the paper author -- proving that hardware faults can directly translate into real physical harm.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Atacan la integridad del hardware de IA para eludir sus mecanismos de seguridad y provocar comportamientos peligrosos.",
+        "problema": "Los modelos de IA actuales confían en la alineación a nivel de modelo para rechazar instrucciones maliciosas, pero esta defensa es vulnerable a fallos físicos en el hardware subyacente.",
+        "propuesta": "FATCAT es un ataque de inyección de fallos electromagnéticos no invasivo que corrompe transacciones de memoria críticas en GPUs y DRAM, sin requerir acceso al software o al modelo, sincronizando fallos con la fase de prellenado de prompts.",
+        "resultados": "Se demostró que los fallos físicos localizados fuerzan a modelos como Llama 3.2 1B y Gemma 3 1B a cumplir peticiones restringidas. En un robot controlado por IA, el ataque provocó movimientos peligrosos y agresivos.",
+        "por_que_importa": "Demuestra que la seguridad de los modelos de IA depende de la integridad del hardware. Los fallos de hardware pueden tener consecuencias físicas directas y peligrosas, especialmente en sistemas robóticos.",
+        "tags": [
+          "ciberseguridad",
+          "IA",
+          "ataques fisicos",
+          "hardware",
+          "vulnerabilidad",
+          "robótica"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-24T22:39:12Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.30621v1",
+      "rank": 2,
+      "title": "AgentBouncer: Defending Software Engineering Agents via Dynamic System-Call Mediation",
+      "authors": [
+        "Pascal Joos",
+        "Michael Pradel"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-23",
+      "url": "https://arxiv.org/abs/2611.30621v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.30621v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, adversarial ML"
+      ],
+      "abstract_en": "Software engineering (SE) agents can complete diverse engineering tasks by interacting with the development environment via tools that access files, run commands, and download resources. Unfortunately, the same ability that makes SE agents useful also makes them prone to performing unintended malicious actions through prompt injections, malicious tools, or supply-chain attacks. Existing defenses that analyze the agent trajectory may fail to detect such attacks, as they inspect only the initial prompt and the sequence of tool calls, but not the actual actions that are executed in the environment. This paper presents AgentBouncer, a novel runtime enforcement system that prevents SE agents from performing malicious actions by mediating, and if necessary denying, system calls that agents trigger via tool calls. The core of AgentBouncer is an LLM arbiter that judges system calls along two axes, necessity and safety for the current task. It denies unsafe system calls, and the less necessary a system call appears, the more certain the arbiter has to be about its safety to allow it. To manage runtime overhead, preseeded policy rules and hierarchy-aware caching ensure that the LLM arbiter is only invoked for key decisions. We evaluate AgentBouncer on a dataset of 340 attacks on the development environment, covering four attack vectors, combined with benign issue resolution tasks from SWE-bench Verified. AgentBouncer reduces the attack success rate from 99.41% for an unsupervised agent to 10.59%, which is 18.23-73.53 percentage points lower than competitive state-of-the-art defenses. At the same time, AgentBouncer preserves the task success rate of the agent, with only 0.25% failed benign tool calls. Per benign task, AgentBouncer adds 47 seconds and USD 0.0036 in LLM costs to an unsupervised agent, whereas the closest existing runtime defense adds 4.5x as much time and 9.6x as much cost.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "AgentBouncer protege a los agentes de ingeniería de software de ataques maliciosos mediando sus llamadas al sistema en tiempo de ejecución.",
+        "problema": "Los agentes de ingeniería de software (SE), aunque útiles, son vulnerables a ataques (inyecciones de prompt, herramientas maliciosas) que pueden llevar a acciones no deseadas o maliciosas, y las defensas actuales que analizan la trayectoria del agente no detectan estas acciones maliciosas ejecutadas.",
+        "propuesta": "AgentBouncer es un sistema de ejecución en tiempo de ejecución que media y deniega llamadas al sistema iniciadas por agentes SE. Utiliza un árbitro LLM que evalúa la necesidad y seguridad de las llamadas al sistema, denegando las inseguras y requiriendo mayor certeza de seguridad para las menos necesarias. Emplea reglas de política predefinidas y caché jerárquica para optimizar el rendimiento.",
+        "resultados": "AgentBouncer reduce la tasa de éxito de ataques del 99.41% a 10.59%, superando a defensas de vanguardia en 18.23-73.53 puntos porcentuales. Mantiene una alta tasa de éxito en tareas benignas (0.25% de llamadas a herramientas fallidas) y añade solo 47 segundos y $0.0036 por tarea benigna, siendo significativamente más eficiente que defensas comparables.",
+        "por_que_importa": "Este sistema mejora drásticamente la seguridad de los agentes de ingeniería de software, permitiendo su uso confiable en entornos de desarrollo sin comprometer la integridad del sistema o la seguridad de los datos, a la vez que es eficiente en términos de tiempo y coste.",
+        "tags": [
+          "ciberseguridad",
+          "agentes IA",
+          "ingeniería de software",
+          "protección en tiempo de ejecución",
+          "LLM"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-24T22:39:22Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.31002v1",
+      "rank": 3,
+      "title": "RoboUniverse-10K: Toward the Scaling Era of Agentic Robotics via Real-to-Sim Environments",
+      "authors": [
+        "Jinkun Liu",
+        "Yingze Wang",
+        "Situ Wang",
+        "Deyao Hong"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CL]",
+      "category": "cs.CL",
+      "date": "2026-11-23",
+      "url": "https://arxiv.org/abs/2611.31002v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.31002v1",
+      "score": 54,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Agentic Robotics, in which foundation models act as coding agents to control robots through executable programs, has emerged as a compelling paradigm for embodied intelligence. Yet unlike software engineering, where massive executable environments power post-training, robotics remains constrained by small, manual benchmarks and in-distribution evaluation. To bridge this gap, we introduce RoboUniverse-10K, 10,807 interactive, resettable, and verifiable physics environments built from real-world videos via an automated Real2Sim and quality assurance pipeline. Each runs in an isolated, Harbor-compatible harness that hides privileged states and grading logic to mirror real-world sensing. From the same pipeline, we hold out 500 unseen tasks to establish RoboUniverse-Verified, an expert-verified zero-shot benchmark. Evaluating 11 closed- and open-source models reveals a huge gap: frontier models reach 85.8\\% success, while open-source baselines lag at 2.6\\% to 10.0\\%, bottlenecked by low-level grasping, deformable-object manipulation, and post-contact physical control. Finally, we collect about 17K multi-turn trajectories totaling 0.79B tokens with GPT-6 Astra and perform full-parameter supervised fine-tuning on Qwen3.6-35B-A3B, yielding RoboUniverse-35B-A3B. Our model achieves substantial zero-shot gains on RoboUniverse-Verified, lifting the success rate from 0.8\\% to 21.2\\%, while achieving zero-shot task completions across LIBERO-MAX, RoboCasa, RoboTwin 2.0, and a real Franka arm. We open-source the RL-ready environments and model to lay the foundation for large-scale reinforcement learning in Agentic Robotics.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Presentamos RoboUniverse-10K, un conjunto masivo de entornos de simulación para robótica basada en modelos de lenguaje, impulsando la era de escalado.",
+        "problema": "La robótica basada en agentes (Agentic Robotics) carece de entornos de entrenamiento y evaluación a gran escala, a diferencia de la ingeniería de software, lo que limita su progreso.",
+        "propuesta": "Se introduce RoboUniverse-10K, un conjunto de 10,807 entornos físicos interactivos y verificables generados automáticamente a partir de vídeos reales (Real2Sim), junto con un benchmark verificado (RoboUniverse-Verified) y un modelo ajustado (RoboUniverse-35B-A3B).",
+        "resultados": "Los modelos de vanguardia alcanzan un 85.8% de éxito en el benchmark, mientras que los modelos de código abierto rondan el 2.6%-10.0%. El modelo RoboUniverse-35B-A3B mejora la tasa de éxito del 0.8% al 21.2% en RoboUniverse-Verified y demuestra capacidades en otros benchmarks y un brazo robótico real.",
+        "por_que_importa": "Permite el escalado del entrenamiento y la evaluación en robótica basada en agentes, reduciendo la brecha entre simulación y realidad y acelerando el desarrollo de robots más capaces.",
+        "tags": [
+          "Robótica",
+          "Inteligencia Artificial",
+          "Simulación",
+          "Modelos de Lenguaje",
+          "Aprendizaje por Refuerzo",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-24T22:39:31Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.30533v1",
+      "rank": 4,
+      "title": "CyberDualEval: Measuring Dual-Use Cyber Risks in Frontier Language Models",
+      "authors": [
+        "Magnus Saebo",
+        "Francesco Piccoli",
+        "Maxwell Watson",
+        "Pranjali Thakur"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-23",
+      "url": "https://arxiv.org/abs/2611.30533v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.30533v1",
+      "score": 53,
+      "topics": [
+        "cybersecurity",
+        "vuln & threats",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: cybersecurity, vuln & threats, compliance & audit"
+      ],
+      "abstract_en": "While frontier language models are becoming capable cybersecurity assistants, they also create a dual-use cyber risk: the same capabilities that help defenders identify and analyze vulnerabilities can similarly help attackers weaponize them. Existing cyber benchmarks measure either raw offensive capability or generic refusal behavior, overlooking the dual-use cyber assessment of preserving benign security utility while refusing assistance that materially advances misuse. We introduce CyberDualEval, a benchmark with 430 vulnerable tasks for measuring dual-use cyber risk in frontier language models. Each task is decomposed into three phases of increasing operationalization: security analysis, proof-of-concept generation, and exploit generation. To quantify the residual cyber risk, we annotate each task with a Task Weaponization Score that measures how much work remains to turn the resulting artifact into unauthorized cyber misuse. CyberDualEval assesses ten closed- and open-weight language models both on correct compliance and on task performance, developing four deterministic mechanisms for determining per-phase success on a large subset of the dataset. Our evaluation reveals that none of the existing frontier models effectively navigate helping with safe requests and refusing risky ones, characterized by being overly-cautious. On the other hand, recent open-weight models rarely refuse and demonstrate strong validated accuracy on risky requests.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa el riesgo dual de los modelos de lenguaje avanzados en ciberseguridad, equilibrando utilidad defensiva y prevención de mal uso.",
+        "problema": "Los modelos de lenguaje avanzados son útiles para la ciberseguridad, pero sus capacidades pueden ser mal utilizadas por atacantes. Las evaluaciones actuales no miden este riesgo dual de manera efectiva.",
+        "propuesta": "Se introduce CyberDualEval, un benchmark con 430 tareas vulnerables para evaluar el riesgo dual en modelos de lenguaje. Las tareas se dividen en análisis de seguridad, generación de pruebas de concepto y generación de exploits, con una puntuación de 'weaponization' para medir el riesgo residual.",
+        "resultados": "Ningún modelo evaluado navega eficazmente entre la asistencia segura y el rechazo de solicitudes de riesgo, mostrando ser demasiado cautelosos. Los modelos de código abierto recientes rara vez rechazan y tienen alta precisión en solicitudes de riesgo.",
+        "por_que_importa": "Es crucial para desarrollar modelos de IA que sean herramientas seguras para defensores sin convertirse en armas para atacantes, garantizando un avance responsable de la tecnología.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Modelos de Lenguaje",
+          "Riesgo Dual",
+          "Evaluación"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-24T22:39:41Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.31201v1",
+      "rank": 5,
+      "title": "Embo-Harness: Towards Understanding Frontier-Model-as-Policy Harness",
+      "authors": [
+        "Xiao-Ming Wu",
+        "Kang Liao",
+        "Yuexiao Ma",
+        "Taolin Zhang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.RO]",
+      "category": "cs.RO",
+      "date": "2026-11-23",
+      "url": "https://arxiv.org/abs/2611.31201v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.31201v1",
+      "score": 52,
+      "topics": [
+        "vuln & threats",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: vuln & threats, AI agents"
+      ],
+      "abstract_en": "Frontier multimodal models exhibit extraordinary generalization in generating robot actions from observations and instructions, enabling a new paradigm in which they serve directly as policies within closed-loop robotic harnesses. However, the design principles of such harnesses, and the capabilities underlying their strong performance, remain unclear. We present Embo-Harness, a framework for systematically studying frontier-model-as-policy harnesses. We investigate four components of the robotic agentic loop, namely, prompting, planning, action execution, and tool use, and distill six empirical findings into a practical recipe. This recipe prioritizes interfaces that exploit the model's native visual reasoning and tool-use capabilities over handcrafted plans, skills, or action priors, and identifies effective choices for action representation, chunking, reasoning effort, visual observations, short multi-action sequences, and policy refinement. On RoboLab-120, Embo-Harness achieves an 83.3\\% success rate, outperforming the strongest reported baseline by 26.2 percentage points. It also succeeds in 15 of 20 zero-shot trials across four real-world manipulation tasks. Beyond performance, controlled interventions indicate that the studied model depends more strongly on accurate spatial target estimation than on explicit low-level joint or trajectory generation. These results provide both a practical recipe for building strong frontier-model-as-policy harnesses and a clearer account of the capabilities that drive their performance.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Embo-Harness revoluciona la robótica al usar modelos de IA de vanguardia como políticas directas, mejorando drásticamente el rendimiento y la generalización.",
+        "problema": "Los principios de diseño y las capacidades subyacentes de los modelos de IA de vanguardia utilizados directamente como políticas en sistemas robóticos cerrados (harnesses) no están claros, limitando su adopción y eficacia.",
+        "propuesta": "Se presenta Embo-Harness, un marco para estudiar sistemáticamente estos sistemas, analizando componentes clave como el prompting, la planificación, la ejecución de acciones y el uso de herramientas. Se propone una receta práctica que prioriza las interfaces que aprovechan el razonamiento visual nativo del modelo sobre planes o habilidades predefinidos.",
+        "resultados": "Embo-Harness logra una tasa de éxito del 83.3% en RoboLab-120, superando al mejor baseline en 26.2 puntos porcentuales. También tiene éxito en 15 de 20 pruebas zero-shot en tareas de manipulación reales. Los análisis indican que el modelo depende más de la estimación espacial precisa que de la generación explícita de trayectorias.",
+        "por_que_importa": "Proporciona una receta práctica para construir sistemas robóticos más eficientes y robustos utilizando modelos de IA de vanguardia, y aclara las capacidades clave que impulsan su alto rendimiento, facilitando su aplicación en el mundo real.",
+        "tags": [
+          "robótica",
+          "IA",
+          "modelos de lenguaje",
+          "políticas",
+          "generalización",
+          "ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-24T22:39:50Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.30932v1",
+      "rank": 6,
+      "title": "Carried-Over and Agent-Native Threats in the Supply Chain of LLM Agent Skills",
+      "authors": [
+        "Kaixuan Li",
+        "Wenbo Guo",
+        "Sen Chen",
+        "Yang Liu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-23",
+      "url": "https://arxiv.org/abs/2611.30932v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.30932v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "Agent skills are reusable packages that extend a large language model (LLM) agent with scripts, third-party dependencies, and natural-language instructions. An agent builds a skill's arguments from user requests and untrusted external content, so a flaw left by a benign author can escalate a prompt injection to code execution. Existing studies target malicious skills or a single attack vector, and none tests whether an agent can reach such flaws. We present the first registry-scale empirical study of the supply chain attack surface arising from unintentional vulnerabilities in agent skills, over all 48,682 skills in ClawHub. The study covers two carried-over risks, dependencies and first-party code, and two agent-native ones, install instructions and credentials printed to stdout. We screen all skills by static analysis, manually review all 3,428 cases flagged by the four main detectors, and test reachability by running sampled flagged skills in a sandbox and with a live LLM agent under indirect prompt injection. First, dependency risk carries over in a different form: 49.6% of the skills with resolvable dependencies depend on a version with a known CVE, and unlike npm packages, which mostly become vulnerable after release, 78.3% of them are born vulnerable, already exposed at publication. Second, few of these CVEs are reachable: agent input reaches the vulnerable function in only 3.0% of the affected skills, whereas 21 of 22 sampled first-party flaws are exploited end to end in the sandbox. Third, a live agent executes the injected payload in 48.5% of the sampled flagged skills, but almost always in its own shell before the skill runs, and the payload reaches a flaw in the skill itself in only 5.0%. Hence, registries should prioritize first-party flaws over dependency alerts, and agent runtimes should not pass skill arguments through a shell.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Investiga vulnerabilidades no intencionadas en las 'habilidades' de los agentes LLM, revelando riesgos significativos en su cadena de suministro.",
+        "problema": "Las 'habilidades' de los agentes LLM, que extienden sus capacidades, pueden contener vulnerabilidades no intencionadas (en dependencias o código propio) que son explotables mediante ataques de inyección de prompts, escalando a ejecución de código.",
+        "propuesta": "Se realiza el primer estudio empírico a escala de registro sobre la superficie de ataque de la cadena de suministro de habilidades de agentes LLM (48,682 en ClawHub), analizando riesgos de dependencias y código propio, así como instrucciones de instalación y credenciales. Se evalúa la alcanzabilidad de estas vulnerabilidades mediante análisis estático, revisión manual y pruebas en sandbox y con un agente LLM real.",
+        "resultados": "El 49.6% de las habilidades con dependencias usan versiones con CVEs conocidas, y el 78.3% nacen vulnerables. La entrada del agente alcanza la función vulnerable en solo el 3.0% de las habilidades afectadas, pero el 21/22 de las fallas de código propio son explotadas end-to-end en sandbox. Un agente real ejecuta payloads inyectados en el 48.5% de las habilidades, pero usualmente en su propio shell, y solo el 5.0% alcanza una falla en la habilidad misma.",
+        "por_que_importa": "Prioriza la corrección de vulnerabilidades de código propio sobre las de dependencias en registros de habilidades. Sugiere que los entornos de ejecución de agentes no deben pasar argumentos de habilidades a través de un shell para mitigar riesgos.",
+        "tags": [
+          "LLM Agents",
+          "Supply Chain Attacks",
+          "Vulnerabilities",
+          "Prompt Injection",
+          "Cybersecurity",
+          "Software Engineering"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-24T22:40:00Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.30383v1",
+      "rank": 7,
+      "title": "Bounded Autonomy: A Trust-Anchored Defense Against Resource-Exhaustion Attacks on Tool-Augmented LLM Agents",
+      "authors": [
+        "Ziyuan Chen",
+        "Yueming Lyu",
+        "Songze Li",
+        "Huafeng Chen"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-23",
+      "url": "https://arxiv.org/abs/2611.30383v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.30383v1",
+      "score": 50,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Tool-augmented Large Language Model (LLM) agents are vulnerable to resource-exhaustion attacks that amplify model-token consumption through persistent context amplification, large tool output amplification, and error-induced agentic loops. Despite growing attention to agent security and resource-abuse risks, a systematic defense framework specifically targeting these attacks remains lacking. Meanwhile, existing general-purpose agent defense frameworks, which address a broader range of security threats, often rely on prompt-level safeguards or coarse-grained resource limits and lack deterministic runtime mechanisms for controlling token consumption. They also provide limited support for balancing fault recovery against the risk of repeated resource-consuming execution. To address these limitations, we propose a trust-anchored closed-loop defense framework consisting of four phases: certificate-guided orchestration with deterministic handoffs, calibrated one-time node budgeting, Gateway-based runtime enforcement, and bounded recovery through a shared, non-resettable recovery pool. By accounting for both input and output tokens across all model invocations, our experiments demonstrate that the framework bounds cumulative token consumption, mitigates resource-amplification attacks, and preserves benign task utility under trusted execution assumptions.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Defensa innovadora para proteger agentes LLM contra ataques que agotan recursos mediante un sistema de confianza y límites estrictos.",
+        "problema": "Los agentes LLM que usan herramientas son vulnerables a ataques que consumen excesivos tokens (costosos) mediante la amplificación de contexto, salidas de herramientas y bucles de error, sin defensas sistemáticas y deterministas.",
+        "propuesta": "Se propone un marco de defensa cerrado anclado en la confianza ('trust-anchored closed-loop defense') con cuatro fases: orquestación guiada por certificados, presupuesto de nodos calibrado, control de ejecución basado en 'Gateway' y recuperación acotada con un pool compartido.",
+        "resultados": "Los experimentos demuestran que el marco limita el consumo acumulado de tokens, mitiga ataques de amplificación de recursos y preserva la utilidad de tareas benignas bajo supuestos de ejecución confiable.",
+        "por_que_importa": "Es crucial para la seguridad y viabilidad económica de los agentes LLM, previniendo el abuso de recursos y asegurando su funcionamiento confiable en aplicaciones prácticas.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Defensa",
+          "Ataques de Recursos",
+          "Agentes Autónomos"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-24T22:40:10Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.30006v1",
+      "rank": 8,
+      "title": "Sequential Selection against an Adaptive Opponent",
+      "authors": [
+        "Zhongyuan Lyu",
+        "Xiaocong Xu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [stat.ML]",
+      "category": "stat.ML",
+      "date": "2026-11-23",
+      "url": "https://arxiv.org/abs/2611.30006v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.30006v1",
+      "score": 50,
+      "topics": [
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: AI agents, adversarial ML"
+      ],
+      "abstract_en": "Selecting a strategy by testing it against an opponent is common in game-playing AI, red-teaming of language models, and safety evaluations of AI agents. In many of these settings, the opponent adapts to what it observes, so a strategy that keeps winning in practice may already have stopped working by the time it is used. Motivated by these settings, we study a player who tries strategies in practice games against an adaptive opponent, decides when to stop, and then either selects one strategy for the next game or abstains. The goal is to select a strategy that meets a target win probability while rarely selecting one that has already fallen below it. For a single strategy, we propose the Sequential Private Accumulated-excess Rule (SPAR), which accumulates evidence through a capped likelihood ratio and selects the strategy once this evidence reaches a privately drawn uniform threshold. We show that the stopping time must involve such private randomness. The number of games SPAR needs is inversely proportional to the error tolerance, and this rate is optimal even when the opponent happens not to adapt. To select among multiple strategies, we introduce Screen-then-SPAR, which screens candidates in stages before applying SPAR. The procedure adapts to the best strategy's unknown initial margin above the target and achieves the minimax rate up to logarithmic factors. The performance of Screen-then-SPAR is demonstrated through simulations and two real-data studies, one using recorded coding-agent attacks from MonitoringBench and the other using rock-paper-scissors matches between human players and an adaptive bot.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Selecciona la mejor estrategia de IA contra un oponente que aprende, asegurando que cumpla objetivos de rendimiento.",
+        "problema": "Evaluar estrategias de IA contra oponentes adaptativos es difícil porque la estrategia ganadora puede dejar de serlo al momento de su uso. Se busca seleccionar una estrategia que mantenga una probabilidad de victoria objetivo.",
+        "propuesta": "Se propone la regla SPAR (Sequential Private Accumulated-excess Rule) para una sola estrategia, que acumula evidencia y se detiene al alcanzar un umbral aleatorio privado. Para múltiples estrategias, se introduce Screen-then-SPAR, que filtra candidatas en etapas antes de aplicar SPAR.",
+        "resultados": "SPAR requiere un número de juegos inversamente proporcional a la tolerancia de error, siendo esta tasa óptima. Screen-then-SPAR alcanza la tasa minimax (con factores logarítmicos) y su rendimiento se demuestra en simulaciones y estudios con ataques de agentes de codificación y partidas de piedra-papel-tijera.",
+        "por_que_importa": "Permite a los profesionales de IA seleccionar de manera confiable estrategias efectivas en entornos dinámicos y adversarios, crucial para la seguridad y el rendimiento de sistemas de IA.",
+        "tags": [
+          "IA adaptativa",
+          "evaluación de estrategias",
+          "ciberseguridad",
+          "toma de decisiones",
+          "aprendizaje automático"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-24T22:40:19Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.30013",
+      "rank": 1,
+      "title": "3AGameFactory-Motion: Agentic Rigging and Reliable Complex Motion Generation for Diverse 3D Assets",
+      "authors": [
+        "Bohan Zeng",
+        "Kaixin Zhu",
+        "Yifan Yang",
+        "Dongge Yu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-23",
+      "url": "https://arxiv.org/abs/2611.30013",
+      "pdf_url": "https://arxiv.org/pdf/2611.30013",
+      "score": 69,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Animating arbitrary 3D assets from instructions requires both structural inference and motion control, yet existing motion benchmarks mostly cover conventional human or animal skeletons with simple instructions. We introduce DivDynBench, which evaluates rigging and motion generation across six morphology categories, with instructions requiring multi-phase part coordination and explicit timing, angle, repetition, and trajectory constraints. With large language models, we systematically compare three common paradigms: specialized motion generation, video generation followed by motion recovery, and direct agent-driven generation. We analyze their control capabilities, cross-morphology adaptability, and generation costs. Guided by this comparison, we propose an Agentic Motion Framework in which an agent writes compact parametric skeleton and motion programs, and a deterministic executor performs rigging, kinematic solving, and geometric correction. Compact parameter control reduces generation overhead and improves rigging reliability and motion-control accuracy, providing practical guidance for deploying complex 3D motion generation.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Generación de movimientos 3D complejos y fiables para diversos activos, superando las limitaciones de los métodos actuales.",
+        "problema": "Los métodos actuales para animar activos 3D a partir de instrucciones son limitados, especialmente para esqueletos no convencionales y con instrucciones complejas que requieren coordinación, temporización y restricciones espaciales específicas.",
+        "propuesta": "Se introduce DivDynBench para evaluar la generación de movimientos y rigging en diversas morfologías. Se propone un Marco de Movimiento Agéntico (Agentic Motion Framework) donde un agente genera programas de esqueleto y movimiento paramétricos, ejecutados de forma determinista para rigging, cinemática y corrección geométrica.",
+        "resultados": "El marco propuesto mejora la fiabilidad del rigging y la precisión del control del movimiento, reduciendo la sobrecarga de generación. El resumen no especifica resultados numéricos concretos.",
+        "por_que_importa": "Permite crear animaciones 3D complejas y precisas para una gama más amplia de activos, facilitando su aplicación práctica en la industria y la investigación.",
+        "tags": [
+          "animación 3D",
+          "generación de movimiento",
+          "inteligencia artificial",
+          "ciberseguridad",
+          "rigging",
+          "control paramétrico"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-24T22:40:29Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.30662",
+      "rank": 2,
+      "title": "WeMM-Ecom: Advancing Multimodal Content Understanding for WeChat E-Commerce",
+      "authors": [
+        "Binhui Xie",
+        "Jinmin Li",
+        "Haomiao Tang",
+        "Guangting Wang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-23",
+      "url": "https://arxiv.org/abs/2611.30662",
+      "pdf_url": "https://arxiv.org/pdf/2611.30662",
+      "score": 66,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "We present WeMM-Ecom, a family of multimodal large language models that deliver frontier e-commerce capabilities while achieving state-of-the-art general-purpose performance at their respective scales. The family spans five sizes, from a 0.8B dense model to a 35B mixture-of-experts model with 3B active parameters. Our training pipeline begins with two-stage continued pre-training that progressively raises the proportion of e-commerce data within a diverse multimodal data mixture, followed by hybrid-thinking post-training that combines on-policy distillation and reinforcement learning to support both non-thinking and thinking modes. For evaluation, we construct a comprehensive suite of 28 e-commerce benchmarks (23 in-house and five open-source) covering eight business scenarios and complement it with 64 public general-purpose benchmarks. On the e-commerce suite, WeMM-Ecom-35B-A3B surpasses substantially larger open-source flagship models, including Qwen3.8-Flash-Next, HY4, and DeepSeek-V4.1-Flash. On the general-purpose suite, every WeMM-Ecom model surpasses its similarly sized Qwen3.5 counterpart, with the lightweight variants (e.g., WeMM-Ecom-2B) showing clear advantages over leading lightweight models such as Qwen3.5-2B, MiniCPM-V-4.7-1B, and LFM3-VL-2B. Beyond benchmarks, WeMM-Ecom now powers hundreds of production use cases in WeChat, including catalog management, multimodal product search, and livestream commerce, serving billion-scale requests per day. We publicly release all model weights and detail our data curation, training recipe, and benchmark construction to facilitate future work on domain-specialized multimodal models. We have released the model weights and code to facilitate future research at https://github.com/Tencent/WeMM-Ecom.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Presentamos WeMM-Ecom, modelos multimodales avanzados para e-commerce que superan a modelos más grandes y ya se usan a escala en WeChat.",
+        "problema": "La comprensión multimodal de contenido es crucial para el e-commerce, pero los modelos generales a menudo no son suficientes para tareas específicas de este dominio.",
+        "propuesta": "WeMM-Ecom es una familia de modelos multimodales de lenguaje grande, entrenados en dos etapas con datos progresivamente más enfocados en e-commerce y post-entrenamiento híbrido para optimizar su rendimiento.",
+        "resultados": "WeMM-Ecom-35B-A3B supera a modelos open-source más grandes en benchmarks de e-commerce. Los modelos ligeros superan a sus contrapartes de tamaño similar. Ya maneja miles de millones de solicitudes diarias en WeChat.",
+        "por_que_importa": "Ofrece un rendimiento de vanguardia en e-commerce, mejorando la eficiencia y las capacidades de plataformas como WeChat, y sus pesos y métodos son liberados para impulsar la investigación futura.",
+        "tags": [
+          "IA multimodal",
+          "e-commerce",
+          "modelos de lenguaje grande",
+          "WeChat",
+          "ciberseguridad",
+          "procesamiento de lenguaje natural"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-24T22:41:23Z"
+      }
+    }
+  ],
+  "generated_at": "2026-11-24T22:41:23Z"
+}
