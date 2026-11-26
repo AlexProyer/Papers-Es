@@ -1,0 +1,693 @@
+{
+  "date": "2026-11-26",
+  "report_type": "filtrado",
+  "evaluated": 175,
+  "selected": 15,
+  "papers": [
+    {
+      "id": "arxiv:2611.34278v1",
+      "rank": 1,
+      "title": "Latent-in-the-Middle: On the Security of Cross-Model Latent Communication in Multi-Agent Systems",
+      "authors": [
+        "Manit Baser",
+        "Vyoman Jain",
+        "Rachel Yeo Hui Min",
+        "Xianglin Yang"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-25",
+      "url": "https://arxiv.org/abs/2611.34278v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.34278v1",
+      "score": 60,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "As large language models increasingly collaborate in heterogeneous multi-agent systems, latent communication has emerged as an efficient alternative to exchanging natural-language messages. By sharing internal representations, agents can avoid repeatedly processing the same context, reducing communication overhead and prefill computation. One such mechanism is cross-model Key-Value (KV) cache transfer, which uses a learned mapper to translate a source model's KV cache into one a target model can use. However, this handoff means the target model consumes context it did not encode itself, thus calling into question whether its safety alignment still holds. In this work, we investigate the security implications of latent handoffs by introducing Chasm, a framework characterizing cross-model handoff attacks across three new attack surfaces: the source model, mapper, and handoff mechanism itself. Our experiments reveal that latent handoffs substantially undermine safety alignment and prompt-injection defenses. Notably, a target model that follows only 0.4% of benchmark prompt injections natively, follows up to 44.2% when transferred through a mapper from a source model. On the other hand, for jailbreak attacks, transfer alone raises attack success by up to 24.6 pp within a model family and zero-shot attacks by up to 69.2 pp, whereas white-box optimization through the mapper boosts the attack success rate to 92.5%, against 37.5% for ordinary GCG on the same target. To address these vulnerabilities, we propose a lightweight target-side cache guard that corrects transferred caches to restore the target model's refusal, considerably mitigating these attacks.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "La comunicación interna entre modelos de IA debilita las defensas de seguridad, pero un nuevo método puede restaurarlas.",
+        "problema": "La comunicación interna (latent communication) entre modelos de IA, que transfiere representaciones internas (KV cache) para mayor eficiencia, puede comprometer la alineación de seguridad y las defensas contra inyecciones de código del modelo receptor.",
+        "propuesta": "Se introduce Chasm, un framework para caracterizar ataques a través de la transferencia de KV cache en sistemas multi-agente, y se propone un método ligero en el lado del receptor ('cache guard') para corregir las cachés transferidas y restaurar la seguridad.",
+        "resultados": "La transferencia de KV cache aumenta la tasa de éxito de ataques de inyección de prompts hasta un 44.2% y ataques de jailbreak hasta un 69.2% (o 92.5% con optimización). El 'cache guard' propuesto mitiga considerablemente estos ataques.",
+        "por_que_importa": "Asegura que los sistemas multi-agente que utilizan comunicación interna eficiente no sacrifiquen la seguridad y la resistencia a ataques maliciosos, crucial a medida que estos sistemas se vuelven más comunes.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Sistemas Multi-Agente",
+          "Seguridad de Modelos",
+          "Comunicación Latente"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-26T21:46:56Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.34380v1",
+      "rank": 2,
+      "title": "AgentLens: Graph-guided Security Auditing for LLM-based Agents",
+      "authors": [
+        "Peizhuo Lv",
+        "Tao Chen",
+        "Mengya Shi",
+        "Ziyu Lin"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-25",
+      "url": "https://arxiv.org/abs/2611.34380v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.34380v1",
+      "score": 58,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: vuln & threats, LLM, compliance & audit"
+      ],
+      "abstract_en": "LLM-based agents are emerging as a key paradigm for automating software engineering by coupling LLM-driven decision-making with external tools, files, APIs, and execution environments. However, weaknesses in agent implementations and insecure interactions between the agent and external resources can lead to severe consequences, including remote code execution, arbitrary file access, SQL injection, and data leakage. This makes pre-deployment auditing essential for systematically identifying implementation weaknesses and validating whether they can manifest as concrete security risks in realistic agent workflows. Existing approaches either focus on specific vulnerability classes or lack the capability to validate whether identified static weaknesses correspond to executable exploits. In this paper, we propose AgentLens, a systematic auditing framework for LLM-based agents. AgentLens analyzes the target agent's implementation, component interactions, and built-in defenses, and organizes them into an Audit Knowledge Graph that captures how these factors interact to expose potential security risks. Based on this graph, AgentLens derives candidate attack paths, generates path-specific validation payloads, and constructs realistic multi-turn audit scenarios that place these payloads in task-relevant contexts to validate whether suspected risks manifest as security-violating behaviors during execution. Across five widely-used agent applications, each with over 24,000 GitHub stars, AgentLens identifies 44 vulnerabilities, and every vulnerability is validated by being triggered during execution. Compared with the state-of-the-art approach (AgentFuzz), AgentLens detects 3.67$\\times$ more vulnerabilities. To date, 12 reported issues have been assigned CVE IDs.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "AgentLens audita agentes basados en LLMs para encontrar y validar vulnerabilidades de seguridad antes de su despliegue.",
+        "problema": "Los agentes basados en LLMs, al interactuar con herramientas externas, pueden presentar graves vulnerabilidades de seguridad (ejecución remota de código, acceso a archivos, etc.) que requieren una auditoría exhaustiva antes de su uso.",
+        "propuesta": "AgentLens es un framework de auditoría que analiza la implementación del agente, sus interacciones y defensas, creando un grafo de conocimiento para identificar y validar rutas de ataque realistas con payloads específicos.",
+        "resultados": "AgentLens identificó 44 vulnerabilidades en 5 aplicaciones de agentes populares, todas validadas durante la ejecución. Detectó 3.67 veces más vulnerabilidades que AgentFuzz y 12 de ellas recibieron IDs CVE.",
+        "por_que_importa": "Asegura la robustez y seguridad de los agentes basados en LLMs, previniendo ataques críticos y garantizando la confianza en su uso en entornos de ingeniería de software.",
+        "tags": [
+          "LLM Agents",
+          "Ciberseguridad",
+          "Auditoría de Seguridad",
+          "Vulnerabilidades",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-26T21:47:05Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.34181v1",
+      "rank": 3,
+      "title": "Agentic-Level Adversarial Purification: Revisiting Diffusion Purifiers on Native-Resolution Agentic Inputs",
+      "authors": [
+        "Yan Lin",
+        "Zhongliang Guo",
+        "Jingyu Lin",
+        "Daizong Liu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-25",
+      "url": "https://arxiv.org/abs/2611.34181v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.34181v1",
+      "score": 53,
+      "topics": [
+        "AI agents",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+9)",
+        "🎯 temas: AI agents, adversarial ML"
+      ],
+      "abstract_en": "Vision-language agents act on native-resolution renders of multi-element pages, where one perturbed photo or a few altered text strokes can redirect the decision. Any content provider can craft such a perturbation on the open model behind the agent, so a plug-in purifier is the natural first line of defense. Yet diffusion purifiers were designed and evaluated at the fixed resolution of the diffusion model on classifier or natural-image benchmarks, and defense evaluations for agents test JPEG, blur and noise but no diffusion purifier. We present the first study of adversarial purification at the agentic level, for an agent built on Qwen3-VL-8B: purifiers run at native resolution on multi-element inputs, face grey-box attackers who know the agent's model but not the defense, and are compared at matched clean cost. We show that treating agentic inputs as classifier inputs misleads both evaluation and design. Resizing the input to the resolution of the diffusion model, as existing purifiers do, raises the TextVQA clean cost of the Divide-and-Conquer purifier (DC) from 4.0 to 35.7 points. On web-shop pages, DC keeps 85.0% grey-box robust accuracy against web-hardened perturbations, where cheap input transformations at matched clean cost keep at most 40.0%, and this robustness comes from the global noise level: input-estimated masks and noise levels add none. These findings hold on a disjoint held-out set and on a second VLM and yield three requirements for defenses, we release the protocol.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Defensa contra ataques adversarios en agentes de visión-lenguaje: purificadores de difusión adaptados a la resolución nativa.",
+        "problema": "Los agentes de visión-lenguaje son vulnerables a pequeñas perturbaciones en imágenes o texto que alteran sus decisiones. Los purificadores de difusión existentes, diseñados para resoluciones fijas, no son efectivos para estos agentes que operan a resolución nativa.",
+        "propuesta": "Se introduce el primer estudio de purificación adversaria a nivel de agente, ejecutando purificadores de difusión a la resolución nativa de las entradas multi-elemento de agentes como Qwen3-VL-8B. Se evalúa la defensa contra atacantes 'grey-box' que conocen el modelo del agente pero no la defensa, comparando costos limpios.",
+        "resultados": "Redimensionar la entrada a la resolución del modelo de difusión aumenta el costo de 'clean' en TextVQA de 4.0 a 35.7 puntos. El purificador 'Divide-and-Conquer' (DC) mantiene el 85.0% de precisión robusta contra perturbaciones 'web-hardened' en páginas de tiendas, superando transformaciones de entrada que solo alcanzan el 40.0%. La robustez se debe al nivel de ruido global, no a máscaras o niveles de ruido estimados de entrada.",
+        "por_que_importa": "Establece la necesidad de adaptar las defensas de purificación a la resolución nativa de los agentes de IA para garantizar su seguridad y fiabilidad en aplicaciones del mundo real, como la navegación web y el comercio electrónico.",
+        "tags": [
+          "IA",
+          "Ciberseguridad",
+          "Agentes de Visión-Lenguaje",
+          "Defensa Adversaria",
+          "Purificación de Difusión"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-26T21:47:15Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.33605v1",
+      "rank": 4,
+      "title": "The Detour Is the Danger: Preserving Security During LLM Agent Recovery",
+      "authors": [
+        "Boyang Ma",
+        "Jinku Li",
+        "Hao Wu",
+        "Sheng Gao"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-25",
+      "url": "https://arxiv.org/abs/2611.33605v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.33605v1",
+      "score": 53,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "LLM agents increasingly rely on external tools and reusable Skills to execute complex workflows, autonomously replanning when operations fail. However, such recovery may preserve task functionality while silently discarding the security protections required by the original workflow. In this paper, we investigate workflow security downgrade, a failure-induced security threat in which agents execute sensitive operations without satisfying their original protection requirements. Unlike prompt injection, this threat exploits autonomous recovery decisions triggered by execution failures, without modifying instructions or tool definitions. We systematically evaluate this behavior through fault injection in an executable MCP/Skill environment spanning seven LLMs, twelve task templates, and three security-sensitive domains. To address this threat, we propose ARGUS, an obligation-preserving recovery framework that combines resource-bound security evidence, isolated recovery-plan validation, and execution-time enforcement. In a separate 864-run evaluation, ARGUS prevents all observed protection-loss events under enforcement, while recovery assistance yields model-dependent improvements in protected task completion over blocking alone. Our findings demonstrate that secure agent recovery requires preserving security obligations across workflow changes, rather than merely restoring task functionality.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Los agentes LLM pueden perder seguridad al recuperarse de fallos; ARGUS preserva las protecciones originales.",
+        "problema": "Los agentes LLM, al recuperarse de fallos en sus flujos de trabajo, pueden mantener la funcionalidad pero omitir las protecciones de seguridad originales, introduciendo vulnerabilidades sin modificar las instrucciones.",
+        "propuesta": "Se propone ARGUS, un marco de recuperación que combina evidencia de seguridad ligada a recursos, validación aislada de planes de recuperación y aplicación en tiempo de ejecución para asegurar que las recuperaciones preserven las obligaciones de seguridad.",
+        "resultados": "En una evaluación de 864 ejecuciones, ARGUS evitó todos los eventos de pérdida de protección. La asistencia a la recuperación mostró mejoras dependientes del modelo en la finalización de tareas protegidas comparado con el bloqueo simple.",
+        "por_que_importa": "Garantiza que la recuperación de fallos en agentes LLM no comprometa la seguridad, un aspecto crucial para su adopción en tareas sensibles y flujos de trabajo complejos.",
+        "tags": [
+          "LLM",
+          "Ciberseguridad",
+          "Agentes Autónomos",
+          "Recuperación de Fallos",
+          "Seguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-26T21:47:24Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.34819v1",
+      "rank": 5,
+      "title": "VulnSafe: Measuring Vulnerability-Aware Relational Safety in Large Language Models",
+      "authors": [
+        "Jiaming Luo",
+        "Jiacheng Ji",
+        "Haoan Jin",
+        "Xiaoning Sun"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CL]",
+      "category": "cs.CL",
+      "date": "2026-11-25",
+      "url": "https://arxiv.org/abs/2611.34819v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.34819v1",
+      "score": 53,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: vuln & threats, LLM, compliance & audit"
+      ],
+      "abstract_en": "Emotionally supportive interactions require large language models not only to avoid overtly harmful content, but also to recognize vulnerability-related risk, regulate their relational stance, preserve user agency, and provide context-appropriate support. Existing safety benchmarks often measure isolated violations, leaving unclear what underlying response competence their scores represent. We introduce VulnSafe, a Chinese capability assessment centered on Vulnerability-Aware Response Competence (VARC). VARC organizes relational safety into five complementary constructs: Risk Perception, Safety Preservation, Autonomy Protection, Supportive Response, and Boundary Management. Following an evidence-centered design, 41 scenarios elicit construct-relevant behavior through 2,050 balanced prompts and scenario-specific scoring rubrics. The assessment further separates proactive should-do behavior from prohibitive should-not behavior. Across eight representative LLMs, results show distinct competence profiles and larger disparities than prohibitive requirements. VulnSafe therefore makes relational safety interpretable as a multidimensional model capability rather than as refusal compliance alone.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "VulnSafe evalúa la seguridad relacional de los LLM, yendo más allá de la simple evitación de contenido dañino.",
+        "problema": "Las evaluaciones de seguridad actuales para LLM se centran en violaciones aisladas, sin medir la competencia subyacente para manejar interacciones vulnerables de forma segura y empática.",
+        "propuesta": "Se introduce VulnSafe, una evaluación en chino para la Competencia de Respuesta Consciente de la Vulnerabilidad (VARC), que mide cinco aspectos de la seguridad relacional: percepción de riesgo, preservación de la seguridad, protección de la autonomía, respuesta de apoyo y gestión de límites. Separa comportamientos proactivos de los prohibitivos.",
+        "resultados": "Las pruebas en ocho LLM revelaron perfiles de competencia distintos y mayores disparidades en comportamientos proactivos ('debería hacer') que en los prohibitivos ('no debería hacer').",
+        "por_que_importa": "Permite interpretar la seguridad relacional como una capacidad multidimensional de los LLM, no solo como cumplimiento de negativas, mejorando su uso en interacciones de apoyo emocional.",
+        "tags": [
+          "LLM",
+          "Seguridad IA",
+          "Evaluación",
+          "Vulnerabilidad",
+          "IA Responsable"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-26T21:47:36Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.34750v1",
+      "rank": 6,
+      "title": "SOLVE: Sparse, Ordered Keyposes Make LLM Agents Versatile and Efficient Robot Manipulator",
+      "authors": [
+        "Xiang Li",
+        "Hongyu Zhou",
+        "Ya-Li Li",
+        "Tao Li"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.RO]",
+      "category": "cs.RO",
+      "date": "2026-11-25",
+      "url": "https://arxiv.org/abs/2611.34750v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.34750v1",
+      "score": 52,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+8)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "LLM agents have made remarkable progress in robot manipulation, yet they suffer from expensive inference, dense step-by-step control, and tool bottlenecks. We introduce SOLVE, a training-free, versatile and efficient agent policy: a multimodal LLM agent writes a sparse, ordered sequence of 6-DoF end-effector keyposes per call, observes the result, and writes the next, while a motion planner interpolates between them. The agent decides the number and spacing of keyposes for both fast long-range motion and fine-grained manipulation. This granularity matches the sparsity of teleoperated manipulation: most demonstrations in DROID can be compressed into a few keyposes instead of dense actions. SOLVE grounds keyposes with sparse depth queries answered by noisy sources, such as multi-view triangulation, stereo, or monocular depth, and copes with that noise itself. It also improves from execution feedback, reflecting on its own rollouts and distilling a few rules per task. SOLVE reaches state-of-the-art performance of 74.5% on RoboDojo and 84.5% on RoboLab, with only $1.7 per episode on average, 12x less than previous dense-control agent policies. On a real robot, the same agent achieves an 88% success rate (75 of 85 episodes) over 16 challenging zero-shot tasks. Our project page is at https://serenos.github.io/solve-website.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "SOLVE: Agentes LLM más eficientes y versátiles para robots, usando poses clave en lugar de control paso a paso.",
+        "problema": "Los agentes LLM para manipulación robótica son caros de ejecutar, requieren control detallado paso a paso y sufren cuellos de botella en herramientas.",
+        "propuesta": "SOLVE es una política de agente que no requiere entrenamiento. Un LLM multimodal genera una secuencia dispersa y ordenada de 'keyposes' (posiciones y orientaciones clave) del efector final. Un planificador de movimiento interpola entre estas poses. El agente decide el número y espaciado de las keyposes, adaptándose a movimientos largos y manipulaciones finas. También se adapta al ruido en la información de profundidad y mejora con la retroalimentación de la ejecución.",
+        "resultados": "Alcanza un rendimiento del 74.5% en RoboDojo y 84.5% en RoboLab, con un coste promedio de $1.7 por episodio (12 veces menor que políticas de control denso). En un robot real, logra un 88% de éxito en 16 tareas complejas 'zero-shot'.",
+        "por_que_importa": "Reduce drásticamente el coste computacional y la complejidad del control para que los LLM puedan usarse de manera más práctica y eficiente en tareas de manipulación robótica, incluso con información de profundidad ruidosa y en entornos reales.",
+        "tags": [
+          "LLM",
+          "Robótica",
+          "Manipulación",
+          "Eficiencia",
+          "Keyposes",
+          "Control Robótico"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-26T21:47:46Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.33810v1",
+      "rank": 7,
+      "title": "FlipVLA: Backdoor Attacks on Vision-Language-Action(VLA) Models Only Through Bit Flips",
+      "authors": [
+        "Zexi Zhao",
+        "Zizhen Liu",
+        "Jing Justin Ye",
+        "Huawei Li"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.CR]",
+      "category": "cs.CR",
+      "date": "2026-11-25",
+      "url": "https://arxiv.org/abs/2611.33810v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.33810v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "adversarial ML"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: vuln & threats, adversarial ML"
+      ],
+      "abstract_en": "Vision-language-action (VLA) models generate robot actions from visual observations and language instructions in real-world environments, making malicious model tampering a potential threat to physical safety. We study whether object-triggered backdoors can be implanted through a small, fixed set of parameter bit flips without retraining. The central challenge is to make persistent weight modifications disrupt trigger-present behavior while preserving performance on non-trigger inputs. We propose FlipVLA, a two-stage selector-amplifier method that exploits existing visual features within an FC-GELU-FC structure. The selector constructs a trigger-dependent response in a selected channel, using GELU to attenuate background activity. The amplifier modifies a connected downstream weight to convert this response into an action-relevant perturbation. Channel screening and discrete bit search construct both components under a limited modification budget. Experiments on OpenVLA-OFT and GR00T N1.7 across four LIBERO suites achieve attack success rates of 90.22% to 100%, with task success decreasing by at most 1.5 percentage points on clean scenes.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Se proponen ataques de puerta trasera en modelos VLA mediante simples cambios de bits, comprometiendo la seguridad robótica sin necesidad de reentrenamiento.",
+        "problema": "Los modelos Visión-Lenguaje-Acción (VLA), cruciales para robots, son vulnerables a manipulaciones maliciosas que podrían comprometer la seguridad física al alterar su comportamiento ante estímulos específicos.",
+        "propuesta": "FlipVLA es un método en dos etapas que implanta puertas traseras explotando características visuales y la estructura FC-GELU-FC. Un selector crea una respuesta dependiente del disparador y un amplificador la convierte en una perturbación de acción, todo con un presupuesto limitado de modificaciones de bits.",
+        "resultados": "Se lograron tasas de éxito de ataque del 90.22% al 100% en los benchmarks OpenVLA-OFT y GR00T. El rendimiento en escenas limpias se degradó como máximo en 1.5 puntos porcentuales.",
+        "por_que_importa": "Demuestra la vulnerabilidad de los modelos VLA a ataques sigilosos y de bajo costo, subrayando la necesidad de mecanismos de defensa robustos para garantizar la seguridad en aplicaciones robóticas críticas.",
+        "tags": [
+          "ciberseguridad",
+          "IA",
+          "VLA",
+          "ataques de puerta trasera",
+          "seguridad robótica",
+          "cambios de bits"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-26T21:47:56Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.34762v1",
+      "rank": 8,
+      "title": "TASK Memory: Beyond Text-Only Memory with Activation Steering and Knowledge Editing against Memory Hallucination",
+      "authors": [
+        "Jinkun Zhao",
+        "Wenjun Wu"
+      ],
+      "source": "arXiv",
+      "venue": "arXiv [cs.AI]",
+      "category": "cs.AI",
+      "date": "2026-11-25",
+      "url": "https://arxiv.org/abs/2611.34762v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.34762v1",
+      "score": 50,
+      "topics": [
+        "vuln & threats",
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🎯 temas: vuln & threats, LLM, AI agents"
+      ],
+      "abstract_en": "LLM agents increasingly rely on external memory, yet they still hallucinate about what they remember. Often the correct memory is retrieved and placed in the prompt, but the answer contradicts it or the memory is applied to the wrong question. We call these use-time memory hallucinations. Across five open models, we find that they arise from the conflict between parametric knowledge and external memory and take three forms: memory-ignoring, where the model returns to a stale fact in its weights (up to 46% of queries); memory-misapplying, where it attributes the memory to unrelated entities (up to 24%, and 49% when retrieval is combined with weight editing); and version confusion, where 53% of answers about revised facts assert the superseded value when both versions remain stored. We propose TASK memory, which goes beyond text-only memory by combining a Text note with Activation Steering and Knowledge editing that share one in-model address. The text holds the content. A removable knowledge edit supplies the address through its subject key and supports multi-hop composition. A pair of steering vectors decides, query by query, whether the model adopts the memory or keeps its own answer; the vectors store no content and control how the text memory is used. On frozen models under a pre-registered, test-once protocol, TASK reduces memory-ignoring hallucinations to at most 1.5% in all ten model-dataset cells and cuts neighbour misuse from 39.2% to 7.5% (+10.8 pp composite on CounterFact). It improves a 300-memory library over BM25 RAG by 16.4 pp, an advantage that holds at 3,000 memories, resolves fact revisions without fact IDs, and adds 7.5 pp of multi-hop accuracy on MQuAKE. 21 of 23 cross-model comparisons (8B-27B, four families) are significant, and TASK beats three recent context-steering methods in 9 of 10 model-dataset cells.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "TASK Memory combate las alucinaciones de los LLM al integrar memoria textual con control de activación y edición de conocimiento.",
+        "problema": "Los agentes LLM, a pesar de recuperar información correcta, a menudo 'alucinan' sobre lo que recuerdan, contradiciendo la memoria o aplicándola incorrectamente, debido a conflictos entre su conocimiento interno y la memoria externa.",
+        "propuesta": "Se propone TASK Memory, que combina memoria textual con 'Activation Steering' (control de activación) y 'Knowledge Editing' (edición de conocimiento). La memoria textual guarda el contenido, la edición de conocimiento proporciona una dirección a través de claves de sujeto, y los vectores de activación deciden si el modelo usa la memoria o su propia respuesta para cada consulta.",
+        "resultados": "TASK Memory reduce las alucinaciones de 'ignorar memoria' a un máximo del 1.5% y el mal uso de memorias cercanas del 39.2% al 7.5%. Mejora la precisión en bibliotecas de memoria y tareas de composición multi-salto, superando a métodos de 'context steering' recientes.",
+        "por_que_importa": "Aborda un fallo crítico en la fiabilidad de los LLM al usar memoria externa, mejorando la precisión y la utilidad de los agentes de IA en aplicaciones prácticas al garantizar que utilicen la información correcta de manera consistente.",
+        "tags": [
+          "LLM",
+          "Memoria Artificial",
+          "Alucinaciones",
+          "Ciberseguridad",
+          "IA Explicable",
+          "Edición de Conocimiento"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-26T21:48:05Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.33915",
+      "rank": 1,
+      "title": "SEEK: Self-Evolution through Execution Knowledge for Agentic Robot Manipulation",
+      "authors": [
+        "Zeyang Guan",
+        "Qihao Zhao",
+        "Rui Gong",
+        "Zhang Haitian"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-25",
+      "url": "https://arxiv.org/abs/2611.33915",
+      "pdf_url": "https://arxiv.org/pdf/2611.33915",
+      "score": 75,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+6)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "General-purpose multimodal foundation models enable robots to adapt during deployment from observations and execution feedback, without task-specific demonstrations or training. However, the robot retains what it learns only in the model's working context. Once the task ends, it loses this execution knowledge, such as how to carry a bowl between two grippers. On the next attempt at the task, the robot may take just as long and repeat the same mistakes. To avoid this repetition, robots must retain execution knowledge across attempts. Yet replaying past actions is insufficient, because their effects depend on the current conditions. Procedures that determine actions from the current scene address this, but when they meet conditions that earlier attempts did not cover, revising them requires the measured effects of earlier actions. We therefore propose SEEK, an agentic framework that retains both, enabling robots to improve across attempts while keeping the underlying model fixed. To adapt retained knowledge to the current scene, SEEK adopts a Self-Evolving Programmatic Policy (SEPP) that encodes manipulation as executable procedures and determines each action from current observations. As the robot executes these procedures, SEEK records the measured effects of its actions, including those from failed attempts, in a Persistent Action-Effect Bank (PAEB). Where a retained procedure applies, it acts without a model request; where it meets a condition it does not cover, this evidence guides its revision. On RoboDojo, knowledge retained over ten attempts raises SEEK's average task score from 27.0 to 54.4 and its success rate from 19.7% to 48.0% across all 42 tasks. On 34 of these tasks with GPT-6.2 Astra, SEEK reaches 80.1 after five attempts, against 49.6 for the same model acting directly, and uses 77.6% fewer model requests. https://zeyangguan.github.io/SEEK-Agentic-Robot-Manipulation/",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "SEEK permite a los robots aprender y mejorar de forma autónoma a través de la experiencia, reteniendo conocimiento entre intentos sin reentrenamiento.",
+        "problema": "Los robots pierden el conocimiento adquirido durante la ejecución de tareas al finalizar, repitiendo errores en intentos posteriores y necesitando costosas demostraciones o reentrenamiento.",
+        "propuesta": "SEEK es un marco que retiene conocimiento de ejecución mediante una Política Programática Auto-Evolutiva (SEPP) y un Banco Persistente de Acción-Efecto (PAEB), adaptando el conocimiento a la escena actual y guiando revisiones con evidencia de intentos pasados.",
+        "resultados": "En RoboDojo, SEEK mejoró la puntuación media de 27.0 a 54.4 y la tasa de éxito del 19.7% al 48.0% en 42 tareas. Con GPT-4o, alcanzó 80.1 tras 5 intentos (vs 49.6 sin SEEK) y usó un 77.6% menos de peticiones al modelo.",
+        "por_que_importa": "Permite a los robots mejorar continuamente y de forma autónoma en el mundo real, reduciendo la necesidad de datos de entrenamiento y la dependencia de modelos costosos, lo que acelera la adopción de la robótica generalista.",
+        "tags": [
+          "robótica",
+          "aprendizaje por refuerzo",
+          "conocimiento de ejecución",
+          "mejora continua",
+          "políticas programáticas"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-26T21:48:15Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.34128",
+      "rank": 2,
+      "title": "FoundSurface: Feedforward Ray-Based 3D Scene Surface Reconstruction from Unposed Images",
+      "authors": [
+        "Shenxing Wei",
+        "Jinxi Li",
+        "Zihui Zhang",
+        "Ajay Kumar"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-25",
+      "url": "https://arxiv.org/abs/2611.34128",
+      "pdf_url": "https://arxiv.org/pdf/2611.34128",
+      "score": 67,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+10)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Accurate 3D surface reconstruction from unposed images remains a fundamental challenge in computer vision. Recent feed-forward pointmap methods eliminate the need for camera poses but inherently produce discrete, sparse representations. In this paper, we present a generalizable pipeline that directly recovers continuous, high-fidelity 3D surfaces from unposed images by seamlessly integrating pointmap- and ray-based representations. Our approach first extracts explicit geometric priors using a pre-trained pointmap model. A query-view-centric selection module then identifies geometrically relevant reference views via a robust surfel voting mechanism. Next, a cross-attention regressor bridges target query rays with reference features to estimate a continuous coarse surface. Lastly, a raylet-based module aggregates local 3D features to carve out high-frequency details and analytical normals. Trained as a single foundation model on 9 diverse datasets, our method demonstrates exceptional zero-shot generalization on 6 unseen datasets, clearly surpassing state-of-the-art baselines in geometric accuracy and detail preservation.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Reconstruye superficies 3D continuas y detalladas a partir de imágenes sin poses, superando métodos actuales.",
+        "problema": "La reconstrucción de superficies 3D a partir de imágenes sin conocer la pose de la cámara es un desafío, y los métodos actuales generan representaciones discretas y dispersas.",
+        "propuesta": "FoundSurface integra representaciones basadas en 'pointmap' y 'ray' para recuperar directamente superficies 3D continuas. Extrae 'priors' geométricos, selecciona vistas de referencia relevantes y utiliza un regresor de 'cross-attention' para estimar una superficie gruesa, refinando detalles con un módulo 'raylet'.",
+        "resultados": "Demuestra una generalización excepcional en modo 'zero-shot' en 6 datasets no vistos, superando a los métodos de vanguardia en precisión geométrica y preservación de detalles. El resumen no especifica métricas numéricas exactas.",
+        "por_que_importa": "Permite crear modelos 3D detallados y precisos a partir de colecciones de imágenes comunes, abriendo puertas a aplicaciones más realistas en realidad aumentada, virtual y robótica.",
+        "tags": [
+          "reconstrucción 3D",
+          "visión por computadora",
+          "aprendizaje profundo",
+          "imágenes sin pose",
+          "superficies continuas"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-26T21:48:24Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.34575",
+      "rank": 3,
+      "title": "Sage-Med: Scaling Medical Multimodal Intelligence",
+      "authors": [
+        "Med Team",
+        "Ming Hu",
+        "Cheng Tang",
+        "Wei Li"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-25",
+      "url": "https://arxiv.org/abs/2611.34575",
+      "pdf_url": "https://arxiv.org/pdf/2611.34575",
+      "score": 62,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "Establishing effective scaling laws for medical multimodal large language models (MLLMs) remains a persistent and fundamental challenge. Our systematic evaluation shows that existing medical MLLMs tend to underperform frontier general-purpose MLLMs across a range of medical tasks, while scaling model size primarily improves text capabilities rather than multimodal perception, and enabling reasoning modes fails to close this visual gap. To investigate how medical multimodal intelligence scales in practice, we introduce Sage-Med-Preview, a 35B-parameter medical multimodal model with 3B activated parameters, built by combining stage-specific curation over 322.7 million candidate records with a progressive training curriculum spanning medical pretraining, staged supervised fine-tuning, and adaptive reinforcement learning. Across this curriculum, progressive supervised refinement and adaptive reinforcement learning yield consistent stage-wise gains, substantially advancing both specialized visual understanding and medical language capabilities. Evaluated against 77 competing models across 238 clinical tasks spanning 61 public and 13 private multi-center benchmarks in more than 40 modalities, Sage-Med-Preview achieves an average score of 58.26% on the 31 public multimodal benchmarks. It outperforms the state-of-the-art open-source medical model Hulu-Med-235B-A22B at 50.99% and the general scientific model Intern-S2-Preview at 52.24%, and approaches the advanced proprietary model GPT-6.2-Sol across multiple tasks such as comprehensive multimodal understanding, report generation, and visual grounding. Although substantial challenges remain in complex medical reasoning and multi-step clinical workflows, this report provides empirical evidence, actionable data and training recipes, and a rigorous benchmark toward scalable clinical multimodal intelligence.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Sage-Med-Preview, un modelo multimodal médico de 35B parámetros, mejora la comprensión visual y del lenguaje médico, superando modelos de código abierto.",
+        "problema": "Los modelos multimodales grandes de lenguaje médico (MLLMs) existentes rinden por debajo de los modelos de propósito general y su escalado mejora principalmente las capacidades de texto, no la percepción multimodal.",
+        "propuesta": "Se introduce Sage-Med-Preview, un modelo multimodal médico de 35B parámetros con 3B activados, utilizando curación específica por etapas y un currículum de entrenamiento progresivo que incluye preentrenamiento médico, ajuste supervisado por etapas y aprendizaje por refuerzo adaptativo.",
+        "resultados": "Sage-Med-Preview logra una puntuación promedio del 58.26% en 31 benchmarks multimodales públicos, superando a Hulu-Med-235B-A22B (50.99%) y a Intern-S2-Preview (52.24%), y se acerca a GPT-6.2-Sol.",
+        "por_que_importa": "Proporciona evidencia empírica, datos y recetas de entrenamiento para la inteligencia multimodal clínica escalable, mejorando la comprensión visual y del lenguaje médico en comparación con modelos anteriores.",
+        "tags": [
+          "IA médica",
+          "Modelos multimodales",
+          "Procesamiento de lenguaje natural",
+          "Visión por computadora",
+          "Aprendizaje automático",
+          "Ciberseguridad"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-26T21:48:34Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.28732",
+      "rank": 4,
+      "title": "Entangle: Scaling Human-Video In-Context World-Action Models across Unseen Tasks and Contexts",
+      "authors": [
+        "Chendong Xiang",
+        "Chengwen Zhang",
+        "Ruowen Zhao",
+        "Zeyuan Wang"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-25",
+      "url": "https://arxiv.org/abs/2611.28732",
+      "pdf_url": "https://arxiv.org/pdf/2611.28732",
+      "score": 62,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+5)",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "In-context learning (ICL) enables foundation models to perform unseen tasks from context without parameter updates. In robotic manipulation, a human video provides the context that specifies how a task should be performed. However, scaling human-video ICL on world-action models (WAMs) faces two challenges: task-level human-robot pairs are not temporally aligned with robot actions, and standard action losses allow policies to rely on initial-scene or task-identity shortcuts rather than tracking the context. We present Entangle, an in-context world-action model that maps a single human video and current robot observations to future visual states and executable actions. To scale temporally aligned training data, we convert recorded robot videos into matched human contexts via video-to-video generation, supplemented by real paired recordings. For model training, we combine variable-length video windows with an intra-task contrastive objective that distinguishes the paired action trajectory from other executions of the same task, preventing task-identity shortcuts. Without task-specific fine-tuning, Entangle improves steadily as aligned training data scales, reaching an average score of 83.5/100 across six unseen tasks on an Astribot S1 robot, and achieves a 69.5% average success rate on seven unseen RoboTwin tasks, outperforming Zero-WAM by 22.6 percentage points. Under Context-OOD, although trained only on scene-aligned pairs, Entangle transfers context-specified behaviors across rearranged layouts and substituted tools. Project page at https://entangle-robotics.github.io/",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Entangle permite a robots aprender tareas complejas de videos humanos sin reentrenamiento, mejorando la adaptabilidad y el rendimiento en entornos no vistos.",
+        "problema": "Los modelos de aprendizaje en contexto (ICL) para robótica, usando videos humanos como guía, tienen dificultades para alinear temporalmente los datos de entrenamiento y evitar que los robots 'atajen' aprendiendo de la escena en lugar de seguir la acción del video.",
+        "propuesta": "Entangle es un modelo que usa videos humanos y observaciones robóticas para predecir estados visuales futuros y acciones ejecutables. Utiliza generación de video a video para crear datos de entrenamiento alineados temporalmente y un objetivo de contraste para asegurar que el robot siga la acción del video, no atajos.",
+        "resultados": "Entangle alcanza 83.5/100 en seis tareas no vistas en un robot Astribot S1 y un 69.5% de éxito en siete tareas no vistas de RoboTwin, superando a Zero-WAM en 22.6 puntos porcentuales. Transfiere comportamientos a través de diseños reorganizados y herramientas sustituidas.",
+        "por_que_importa": "Mejora significativamente la capacidad de los robots para aprender y ejecutar nuevas tareas de forma autónoma a partir de demostraciones visuales, haciéndolos más versátiles y eficientes en aplicaciones del mundo real sin necesidad de costoso reentrenamiento.",
+        "tags": [
+          "Robótica",
+          "Aprendizaje en Contexto",
+          "Visión por Computadora",
+          "IA",
+          "Manipulación"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-26T21:48:43Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.28010",
+      "rank": 5,
+      "title": "Beyond Code and Pixels: Co-Generating Editable and Visually Rich Presentations",
+      "authors": [
+        "Wenrui Zhou",
+        "Jiashun Liu",
+        "Sujie Hu",
+        "Bang Liu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-25",
+      "url": "https://arxiv.org/abs/2611.28010",
+      "pdf_url": "https://arxiv.org/pdf/2611.28010",
+      "score": 60,
+      "topics": [
+        "AI agents"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+3)",
+        "🎯 temas: AI agents"
+      ],
+      "abstract_en": "Generating PPTX presentations is a structured task that requires semantic planning, visual composition, precise layout, and editability, motivating collaboration among specialized agents. However, programmatic methods offer editability but often produce rigid designs, while image-based methods provide visual richness but flatten content into difficult-to-edit pixels. A hybrid system can combine these strengths, but must coordinate interdependent decisions across content, layout, and appearance. To address this challenge, we propose SlidesWeaver, a hybrid multi-agent system that coordinates language and vision agents through shared deck- and slide-level states. Specifically, it uses staged multimodal commitment, diffusion-based composition planning, and two generation schedules for different priorities between composition freedom and accurate text preservation, while preserving native text and geometry. Across 1,728 generations spanning 24 system-model configurations, SlidesWeaver achieves consistently superior overall quality across all evaluated dimensions while maintaining structural control, editability, and practical generation efficiency.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "SlidesWeaver crea presentaciones editables y visualmente ricas combinando IA de lenguaje y visión de forma coordinada.",
+        "problema": "Generar presentaciones (PPTX) es complejo, requiriendo planificación semántica, diseño visual y editabilidad. Los métodos actuales fallan al ofrecer o bien editabilidad (diseños rígidos) o bien riqueza visual (contenido pixelado e ineditable).",
+        "propuesta": "SlidesWeaver es un sistema multi-agente híbrido que coordina agentes de lenguaje y visión mediante estados compartidos. Utiliza 'staged multimodal commitment', planificación de composición basada en difusión y dos esquemas de generación para equilibrar libertad compositiva y preservación de texto, manteniendo la editabilidad nativa.",
+        "resultados": "SlidesWeaver logra una calidad general superior en todas las dimensiones evaluadas, manteniendo control estructural, editabilidad y eficiencia práctica. Se realizaron 1.728 generaciones en 24 configuraciones.",
+        "por_que_importa": "Permite crear presentaciones profesionales que son tanto visualmente atractivas como fácilmente editables, mejorando la colaboración y la eficiencia en la creación de contenido.",
+        "tags": [
+          "IA generativa",
+          "Presentaciones",
+          "Multimodal",
+          "Edición",
+          "Diseño visual",
+          "Agentes"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-26T21:48:52Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.34237",
+      "rank": 6,
+      "title": "VibeVideoAgent: Closing the Perceptual Loop for Code-Driven Video Generation",
+      "authors": [
+        "Xuanyu Zheng",
+        "Luoyuan Zhang",
+        "Yancheng Long",
+        "Haoyang Xu"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-25",
+      "url": "https://arxiv.org/abs/2611.34237",
+      "pdf_url": "https://arxiv.org/pdf/2611.34237",
+      "score": 59,
+      "topics": [
+        "compliance & audit"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+2)",
+        "🎯 temas: compliance & audit"
+      ],
+      "abstract_en": "Code-driven video generation asks a coding agent to write and run rendering programs. This gives exact control over typography, data visualizations, synchronized audio, and multi-shot scenes, and it leaves an editable project behind. A program that exits cleanly can still render overlapping labels, a camera aimed away from its subject, broken object interactions, or narration that drifts out of sync, and none of these raise a runtime error. Feeding rendered frames and audio back into the coding session bloats its long-horizon context, while critiquing only the finished full-resolution render turns early design mistakes into costly rewrites. We introduce VibeVideoAgent, a training-free framework that lets coding agents inspect their drafts throughout production. Multimodal perception runs in short-lived contexts kept apart from the coder and returns compact, grounded Findings. Seven primitives operate on a unified multi-clock representation of assets and drafts: they explore media from coarse to fine, verify quoted requirements with evidence from every required modality, compare a draft with a reference or an earlier revision on separate clocks, and measure stream signals locally. A lightweight staged protocol has the agent test its riskiest decision on a minimal preview first. On all 239 VibeVideoBench tasks, with matched agent runtimes and a fixed perception model, VibeVideoAgent improves holistic audiovisual quality (L3) for Claude Opus 5.5 (4.03 -> 4.43, while L2 rubric compliance rises from 98.87% to 99.35%), GPT-6 Astra (4.03 -> 4.27), and Claude Sonnet 5.5 (3.97 -> 4.10), with the largest gains in audio-visual synchronization (up to +0.56). Controlled ablations show that each component contributes, and trajectory audits show that the granularity of code edits governs the trade-off between rubric adherence and perceptual quality.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "VibeVideoAgent permite a los agentes de IA generar videos de alta calidad inspeccionando borradores y corrigiendo errores tempranamente.",
+        "problema": "Los agentes de IA que generan videos a través de código a menudo producen errores sutiles (ej. texto superpuesto, audio desincronizado) que no causan errores de ejecución, llevando a costosas reescrituras.",
+        "propuesta": "VibeVideoAgent es un framework que permite a los agentes de IA inspeccionar borradores de video durante la producción mediante un sistema de percepción multimodal y primitivas de edición.",
+        "resultados": "Mejora la calidad audiovisual holística (L3) en VibeVideoBench para Claude Opus 5.5 (4.03 a 4.43), GPT-6 Astra (4.03 a 4.27) y Claude Sonnet 5.5 (3.97 a 4.10), aumentando el cumplimiento de la rúbrica L2 del 98.87% al 99.35%. Las mayores mejoras se observan en la sincronización audiovisual.",
+        "por_que_importa": "Reduce significativamente los errores en la generación de video por IA, mejorando la calidad y eficiencia del proceso, lo que es crucial para aplicaciones prácticas de creación de contenido multimedia.",
+        "tags": [
+          "generación de video",
+          "IA",
+          "ciberseguridad",
+          "agentes de codificación",
+          "percepción multimodal",
+          "corrección de errores"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-26T21:49:02Z"
+      }
+    },
+    {
+      "id": "arxiv:2611.34331",
+      "rank": 7,
+      "title": "Puzzling-Bench: Evaluating Language Models on 23,777 Human-Written Puzzles with Community-Verified Answers",
+      "authors": [
+        "Abhinav Sharma",
+        "Li Li",
+        "Chien Van Nguyen",
+        "Sai Karthik Navuluru"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-25",
+      "url": "https://arxiv.org/abs/2611.34331",
+      "pdf_url": "https://arxiv.org/pdf/2611.34331",
+      "score": 57,
+      "topics": [
+        "LLM"
+      ],
+      "reasons": [
+        "📅 paper reciente (24-48h)",
+        "🤗 destacado en HF Daily Papers",
+        "🎯 temas: LLM"
+      ],
+      "abstract_en": "We introduce Puzzling-Bench, a benchmark of 23,777 puzzles with community-verified answers drawn from the Puzzling Stack Exchange archive (2014-2026): riddles, ciphers, logic grids, lateral-thinking problems, wordplay and recreational mathematics, a third of them with images. Every puzzle carries the answer accepted by its author, a short reference answer taken from it (LLM-extracted for the evaluation sets and checked on a 50-puzzle human review), the author's own hints, community tags and a creation date, so that the benchmark supports hint ablations, category analysis and a rolling post-cutoff slice (254 puzzles posted after the training cutoff of six of the nine models we evaluate, including the best one) as a contamination check. We evaluate nine frontier and open models with a two-tier scorer (normalized exact match, then an LLM judge) and validate the judge with three judges from two model families: they agree on 95-97% of verdicts (kappa 0.82-0.96), move no model by more than 1.6 points, and show no own-family preference. The best model, GPT-6.1, reaches 74.8% on a shared 255-puzzle set; a hard core of 17 puzzles defeats all nine models; model failures are strongly correlated, and the second-best model contributes a single puzzle to a greedy ensemble, yet an oracle over all nine reaches 91%. On a 100-puzzle multimodal pilot, withholding the question's image costs the two best models 24 and 35 points. We release the dataset, the scoring pipeline and all per-row provenance.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "Evalúa modelos de lenguaje en 23,777 puzzles humanos para medir su razonamiento y comprensión.",
+        "problema": "Los modelos de lenguaje actuales tienen dificultades para resolver puzzles complejos que requieren razonamiento, comprensión del lenguaje natural y, a veces, interpretación de imágenes, lo que limita su aplicabilidad en tareas del mundo real.",
+        "propuesta": "Se introduce Puzzling-Bench, un conjunto de datos de 23,777 puzzles con respuestas verificadas por la comunidad, extraído de Puzzling Stack Exchange, que incluye acertijos, cifrados, lógicas y juegos de palabras, con el objetivo de evaluar rigurosamente las capacidades de los modelos de lenguaje.",
+        "resultados": "El mejor modelo, GPT-6.1, alcanza el 74.8% en un conjunto compartido. Un núcleo difícil de 17 puzzles derrota a todos los modelos. La omisión de imágenes en puzzles multimodales reduce la puntuación de los mejores modelos en 24 y 35 puntos. Un oráculo sobre nueve modelos alcanza el 91%.",
+        "por_que_importa": "Este benchmark permite una evaluación más profunda de las capacidades de razonamiento y comprensión de los LLMs, identificando sus limitaciones y guiando el desarrollo futuro hacia modelos más robustos y versátiles.",
+        "tags": [
+          "modelos de lenguaje",
+          "benchmarking",
+          "razonamiento",
+          "puzzles",
+          "evaluación",
+          "IA"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-26T21:49:11Z"
+      }
+    }
+  ],
+  "generated_at": "2026-11-26T21:49:11Z"
+}

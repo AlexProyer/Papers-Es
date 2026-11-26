@@ -14248,5 +14248,252 @@
     ],
     "model": "gemini-2.5-flash-lite",
     "generated_at": "2026-11-25T21:54:19Z"
+  },
+  "arxiv:2611.34278v1": {
+    "tldr": "La comunicación interna entre modelos de IA debilita las defensas de seguridad, pero un nuevo método puede restaurarlas.",
+    "problema": "La comunicación interna (latent communication) entre modelos de IA, que transfiere representaciones internas (KV cache) para mayor eficiencia, puede comprometer la alineación de seguridad y las defensas contra inyecciones de código del modelo receptor.",
+    "propuesta": "Se introduce Chasm, un framework para caracterizar ataques a través de la transferencia de KV cache en sistemas multi-agente, y se propone un método ligero en el lado del receptor ('cache guard') para corregir las cachés transferidas y restaurar la seguridad.",
+    "resultados": "La transferencia de KV cache aumenta la tasa de éxito de ataques de inyección de prompts hasta un 44.2% y ataques de jailbreak hasta un 69.2% (o 92.5% con optimización). El 'cache guard' propuesto mitiga considerablemente estos ataques.",
+    "por_que_importa": "Asegura que los sistemas multi-agente que utilizan comunicación interna eficiente no sacrifiquen la seguridad y la resistencia a ataques maliciosos, crucial a medida que estos sistemas se vuelven más comunes.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Sistemas Multi-Agente",
+      "Seguridad de Modelos",
+      "Comunicación Latente"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-26T21:46:56Z"
+  },
+  "arxiv:2611.34380v1": {
+    "tldr": "AgentLens audita agentes basados en LLMs para encontrar y validar vulnerabilidades de seguridad antes de su despliegue.",
+    "problema": "Los agentes basados en LLMs, al interactuar con herramientas externas, pueden presentar graves vulnerabilidades de seguridad (ejecución remota de código, acceso a archivos, etc.) que requieren una auditoría exhaustiva antes de su uso.",
+    "propuesta": "AgentLens es un framework de auditoría que analiza la implementación del agente, sus interacciones y defensas, creando un grafo de conocimiento para identificar y validar rutas de ataque realistas con payloads específicos.",
+    "resultados": "AgentLens identificó 44 vulnerabilidades en 5 aplicaciones de agentes populares, todas validadas durante la ejecución. Detectó 3.67 veces más vulnerabilidades que AgentFuzz y 12 de ellas recibieron IDs CVE.",
+    "por_que_importa": "Asegura la robustez y seguridad de los agentes basados en LLMs, previniendo ataques críticos y garantizando la confianza en su uso en entornos de ingeniería de software.",
+    "tags": [
+      "LLM Agents",
+      "Ciberseguridad",
+      "Auditoría de Seguridad",
+      "Vulnerabilidades",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-26T21:47:05Z"
+  },
+  "arxiv:2611.34181v1": {
+    "tldr": "Defensa contra ataques adversarios en agentes de visión-lenguaje: purificadores de difusión adaptados a la resolución nativa.",
+    "problema": "Los agentes de visión-lenguaje son vulnerables a pequeñas perturbaciones en imágenes o texto que alteran sus decisiones. Los purificadores de difusión existentes, diseñados para resoluciones fijas, no son efectivos para estos agentes que operan a resolución nativa.",
+    "propuesta": "Se introduce el primer estudio de purificación adversaria a nivel de agente, ejecutando purificadores de difusión a la resolución nativa de las entradas multi-elemento de agentes como Qwen3-VL-8B. Se evalúa la defensa contra atacantes 'grey-box' que conocen el modelo del agente pero no la defensa, comparando costos limpios.",
+    "resultados": "Redimensionar la entrada a la resolución del modelo de difusión aumenta el costo de 'clean' en TextVQA de 4.0 a 35.7 puntos. El purificador 'Divide-and-Conquer' (DC) mantiene el 85.0% de precisión robusta contra perturbaciones 'web-hardened' en páginas de tiendas, superando transformaciones de entrada que solo alcanzan el 40.0%. La robustez se debe al nivel de ruido global, no a máscaras o niveles de ruido estimados de entrada.",
+    "por_que_importa": "Establece la necesidad de adaptar las defensas de purificación a la resolución nativa de los agentes de IA para garantizar su seguridad y fiabilidad en aplicaciones del mundo real, como la navegación web y el comercio electrónico.",
+    "tags": [
+      "IA",
+      "Ciberseguridad",
+      "Agentes de Visión-Lenguaje",
+      "Defensa Adversaria",
+      "Purificación de Difusión"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-26T21:47:15Z"
+  },
+  "arxiv:2611.33605v1": {
+    "tldr": "Los agentes LLM pueden perder seguridad al recuperarse de fallos; ARGUS preserva las protecciones originales.",
+    "problema": "Los agentes LLM, al recuperarse de fallos en sus flujos de trabajo, pueden mantener la funcionalidad pero omitir las protecciones de seguridad originales, introduciendo vulnerabilidades sin modificar las instrucciones.",
+    "propuesta": "Se propone ARGUS, un marco de recuperación que combina evidencia de seguridad ligada a recursos, validación aislada de planes de recuperación y aplicación en tiempo de ejecución para asegurar que las recuperaciones preserven las obligaciones de seguridad.",
+    "resultados": "En una evaluación de 864 ejecuciones, ARGUS evitó todos los eventos de pérdida de protección. La asistencia a la recuperación mostró mejoras dependientes del modelo en la finalización de tareas protegidas comparado con el bloqueo simple.",
+    "por_que_importa": "Garantiza que la recuperación de fallos en agentes LLM no comprometa la seguridad, un aspecto crucial para su adopción en tareas sensibles y flujos de trabajo complejos.",
+    "tags": [
+      "LLM",
+      "Ciberseguridad",
+      "Agentes Autónomos",
+      "Recuperación de Fallos",
+      "Seguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-26T21:47:24Z"
+  },
+  "arxiv:2611.34819v1": {
+    "tldr": "VulnSafe evalúa la seguridad relacional de los LLM, yendo más allá de la simple evitación de contenido dañino.",
+    "problema": "Las evaluaciones de seguridad actuales para LLM se centran en violaciones aisladas, sin medir la competencia subyacente para manejar interacciones vulnerables de forma segura y empática.",
+    "propuesta": "Se introduce VulnSafe, una evaluación en chino para la Competencia de Respuesta Consciente de la Vulnerabilidad (VARC), que mide cinco aspectos de la seguridad relacional: percepción de riesgo, preservación de la seguridad, protección de la autonomía, respuesta de apoyo y gestión de límites. Separa comportamientos proactivos de los prohibitivos.",
+    "resultados": "Las pruebas en ocho LLM revelaron perfiles de competencia distintos y mayores disparidades en comportamientos proactivos ('debería hacer') que en los prohibitivos ('no debería hacer').",
+    "por_que_importa": "Permite interpretar la seguridad relacional como una capacidad multidimensional de los LLM, no solo como cumplimiento de negativas, mejorando su uso en interacciones de apoyo emocional.",
+    "tags": [
+      "LLM",
+      "Seguridad IA",
+      "Evaluación",
+      "Vulnerabilidad",
+      "IA Responsable"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-26T21:47:36Z"
+  },
+  "arxiv:2611.34750v1": {
+    "tldr": "SOLVE: Agentes LLM más eficientes y versátiles para robots, usando poses clave en lugar de control paso a paso.",
+    "problema": "Los agentes LLM para manipulación robótica son caros de ejecutar, requieren control detallado paso a paso y sufren cuellos de botella en herramientas.",
+    "propuesta": "SOLVE es una política de agente que no requiere entrenamiento. Un LLM multimodal genera una secuencia dispersa y ordenada de 'keyposes' (posiciones y orientaciones clave) del efector final. Un planificador de movimiento interpola entre estas poses. El agente decide el número y espaciado de las keyposes, adaptándose a movimientos largos y manipulaciones finas. También se adapta al ruido en la información de profundidad y mejora con la retroalimentación de la ejecución.",
+    "resultados": "Alcanza un rendimiento del 74.5% en RoboDojo y 84.5% en RoboLab, con un coste promedio de $1.7 por episodio (12 veces menor que políticas de control denso). En un robot real, logra un 88% de éxito en 16 tareas complejas 'zero-shot'.",
+    "por_que_importa": "Reduce drásticamente el coste computacional y la complejidad del control para que los LLM puedan usarse de manera más práctica y eficiente en tareas de manipulación robótica, incluso con información de profundidad ruidosa y en entornos reales.",
+    "tags": [
+      "LLM",
+      "Robótica",
+      "Manipulación",
+      "Eficiencia",
+      "Keyposes",
+      "Control Robótico"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-26T21:47:46Z"
+  },
+  "arxiv:2611.33810v1": {
+    "tldr": "Se proponen ataques de puerta trasera en modelos VLA mediante simples cambios de bits, comprometiendo la seguridad robótica sin necesidad de reentrenamiento.",
+    "problema": "Los modelos Visión-Lenguaje-Acción (VLA), cruciales para robots, son vulnerables a manipulaciones maliciosas que podrían comprometer la seguridad física al alterar su comportamiento ante estímulos específicos.",
+    "propuesta": "FlipVLA es un método en dos etapas que implanta puertas traseras explotando características visuales y la estructura FC-GELU-FC. Un selector crea una respuesta dependiente del disparador y un amplificador la convierte en una perturbación de acción, todo con un presupuesto limitado de modificaciones de bits.",
+    "resultados": "Se lograron tasas de éxito de ataque del 90.22% al 100% en los benchmarks OpenVLA-OFT y GR00T. El rendimiento en escenas limpias se degradó como máximo en 1.5 puntos porcentuales.",
+    "por_que_importa": "Demuestra la vulnerabilidad de los modelos VLA a ataques sigilosos y de bajo costo, subrayando la necesidad de mecanismos de defensa robustos para garantizar la seguridad en aplicaciones robóticas críticas.",
+    "tags": [
+      "ciberseguridad",
+      "IA",
+      "VLA",
+      "ataques de puerta trasera",
+      "seguridad robótica",
+      "cambios de bits"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-26T21:47:56Z"
+  },
+  "arxiv:2611.34762v1": {
+    "tldr": "TASK Memory combate las alucinaciones de los LLM al integrar memoria textual con control de activación y edición de conocimiento.",
+    "problema": "Los agentes LLM, a pesar de recuperar información correcta, a menudo 'alucinan' sobre lo que recuerdan, contradiciendo la memoria o aplicándola incorrectamente, debido a conflictos entre su conocimiento interno y la memoria externa.",
+    "propuesta": "Se propone TASK Memory, que combina memoria textual con 'Activation Steering' (control de activación) y 'Knowledge Editing' (edición de conocimiento). La memoria textual guarda el contenido, la edición de conocimiento proporciona una dirección a través de claves de sujeto, y los vectores de activación deciden si el modelo usa la memoria o su propia respuesta para cada consulta.",
+    "resultados": "TASK Memory reduce las alucinaciones de 'ignorar memoria' a un máximo del 1.5% y el mal uso de memorias cercanas del 39.2% al 7.5%. Mejora la precisión en bibliotecas de memoria y tareas de composición multi-salto, superando a métodos de 'context steering' recientes.",
+    "por_que_importa": "Aborda un fallo crítico en la fiabilidad de los LLM al usar memoria externa, mejorando la precisión y la utilidad de los agentes de IA en aplicaciones prácticas al garantizar que utilicen la información correcta de manera consistente.",
+    "tags": [
+      "LLM",
+      "Memoria Artificial",
+      "Alucinaciones",
+      "Ciberseguridad",
+      "IA Explicable",
+      "Edición de Conocimiento"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-26T21:48:05Z"
+  },
+  "arxiv:2611.33915": {
+    "tldr": "SEEK permite a los robots aprender y mejorar de forma autónoma a través de la experiencia, reteniendo conocimiento entre intentos sin reentrenamiento.",
+    "problema": "Los robots pierden el conocimiento adquirido durante la ejecución de tareas al finalizar, repitiendo errores en intentos posteriores y necesitando costosas demostraciones o reentrenamiento.",
+    "propuesta": "SEEK es un marco que retiene conocimiento de ejecución mediante una Política Programática Auto-Evolutiva (SEPP) y un Banco Persistente de Acción-Efecto (PAEB), adaptando el conocimiento a la escena actual y guiando revisiones con evidencia de intentos pasados.",
+    "resultados": "En RoboDojo, SEEK mejoró la puntuación media de 27.0 a 54.4 y la tasa de éxito del 19.7% al 48.0% en 42 tareas. Con GPT-4o, alcanzó 80.1 tras 5 intentos (vs 49.6 sin SEEK) y usó un 77.6% menos de peticiones al modelo.",
+    "por_que_importa": "Permite a los robots mejorar continuamente y de forma autónoma en el mundo real, reduciendo la necesidad de datos de entrenamiento y la dependencia de modelos costosos, lo que acelera la adopción de la robótica generalista.",
+    "tags": [
+      "robótica",
+      "aprendizaje por refuerzo",
+      "conocimiento de ejecución",
+      "mejora continua",
+      "políticas programáticas"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-26T21:48:15Z"
+  },
+  "arxiv:2611.34128": {
+    "tldr": "Reconstruye superficies 3D continuas y detalladas a partir de imágenes sin poses, superando métodos actuales.",
+    "problema": "La reconstrucción de superficies 3D a partir de imágenes sin conocer la pose de la cámara es un desafío, y los métodos actuales generan representaciones discretas y dispersas.",
+    "propuesta": "FoundSurface integra representaciones basadas en 'pointmap' y 'ray' para recuperar directamente superficies 3D continuas. Extrae 'priors' geométricos, selecciona vistas de referencia relevantes y utiliza un regresor de 'cross-attention' para estimar una superficie gruesa, refinando detalles con un módulo 'raylet'.",
+    "resultados": "Demuestra una generalización excepcional en modo 'zero-shot' en 6 datasets no vistos, superando a los métodos de vanguardia en precisión geométrica y preservación de detalles. El resumen no especifica métricas numéricas exactas.",
+    "por_que_importa": "Permite crear modelos 3D detallados y precisos a partir de colecciones de imágenes comunes, abriendo puertas a aplicaciones más realistas en realidad aumentada, virtual y robótica.",
+    "tags": [
+      "reconstrucción 3D",
+      "visión por computadora",
+      "aprendizaje profundo",
+      "imágenes sin pose",
+      "superficies continuas"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-26T21:48:24Z"
+  },
+  "arxiv:2611.34575": {
+    "tldr": "Sage-Med-Preview, un modelo multimodal médico de 35B parámetros, mejora la comprensión visual y del lenguaje médico, superando modelos de código abierto.",
+    "problema": "Los modelos multimodales grandes de lenguaje médico (MLLMs) existentes rinden por debajo de los modelos de propósito general y su escalado mejora principalmente las capacidades de texto, no la percepción multimodal.",
+    "propuesta": "Se introduce Sage-Med-Preview, un modelo multimodal médico de 35B parámetros con 3B activados, utilizando curación específica por etapas y un currículum de entrenamiento progresivo que incluye preentrenamiento médico, ajuste supervisado por etapas y aprendizaje por refuerzo adaptativo.",
+    "resultados": "Sage-Med-Preview logra una puntuación promedio del 58.26% en 31 benchmarks multimodales públicos, superando a Hulu-Med-235B-A22B (50.99%) y a Intern-S2-Preview (52.24%), y se acerca a GPT-6.2-Sol.",
+    "por_que_importa": "Proporciona evidencia empírica, datos y recetas de entrenamiento para la inteligencia multimodal clínica escalable, mejorando la comprensión visual y del lenguaje médico en comparación con modelos anteriores.",
+    "tags": [
+      "IA médica",
+      "Modelos multimodales",
+      "Procesamiento de lenguaje natural",
+      "Visión por computadora",
+      "Aprendizaje automático",
+      "Ciberseguridad"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-26T21:48:34Z"
+  },
+  "arxiv:2611.28732": {
+    "tldr": "Entangle permite a robots aprender tareas complejas de videos humanos sin reentrenamiento, mejorando la adaptabilidad y el rendimiento en entornos no vistos.",
+    "problema": "Los modelos de aprendizaje en contexto (ICL) para robótica, usando videos humanos como guía, tienen dificultades para alinear temporalmente los datos de entrenamiento y evitar que los robots 'atajen' aprendiendo de la escena en lugar de seguir la acción del video.",
+    "propuesta": "Entangle es un modelo que usa videos humanos y observaciones robóticas para predecir estados visuales futuros y acciones ejecutables. Utiliza generación de video a video para crear datos de entrenamiento alineados temporalmente y un objetivo de contraste para asegurar que el robot siga la acción del video, no atajos.",
+    "resultados": "Entangle alcanza 83.5/100 en seis tareas no vistas en un robot Astribot S1 y un 69.5% de éxito en siete tareas no vistas de RoboTwin, superando a Zero-WAM en 22.6 puntos porcentuales. Transfiere comportamientos a través de diseños reorganizados y herramientas sustituidas.",
+    "por_que_importa": "Mejora significativamente la capacidad de los robots para aprender y ejecutar nuevas tareas de forma autónoma a partir de demostraciones visuales, haciéndolos más versátiles y eficientes en aplicaciones del mundo real sin necesidad de costoso reentrenamiento.",
+    "tags": [
+      "Robótica",
+      "Aprendizaje en Contexto",
+      "Visión por Computadora",
+      "IA",
+      "Manipulación"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-26T21:48:43Z"
+  },
+  "arxiv:2611.28010": {
+    "tldr": "SlidesWeaver crea presentaciones editables y visualmente ricas combinando IA de lenguaje y visión de forma coordinada.",
+    "problema": "Generar presentaciones (PPTX) es complejo, requiriendo planificación semántica, diseño visual y editabilidad. Los métodos actuales fallan al ofrecer o bien editabilidad (diseños rígidos) o bien riqueza visual (contenido pixelado e ineditable).",
+    "propuesta": "SlidesWeaver es un sistema multi-agente híbrido que coordina agentes de lenguaje y visión mediante estados compartidos. Utiliza 'staged multimodal commitment', planificación de composición basada en difusión y dos esquemas de generación para equilibrar libertad compositiva y preservación de texto, manteniendo la editabilidad nativa.",
+    "resultados": "SlidesWeaver logra una calidad general superior en todas las dimensiones evaluadas, manteniendo control estructural, editabilidad y eficiencia práctica. Se realizaron 1.728 generaciones en 24 configuraciones.",
+    "por_que_importa": "Permite crear presentaciones profesionales que son tanto visualmente atractivas como fácilmente editables, mejorando la colaboración y la eficiencia en la creación de contenido.",
+    "tags": [
+      "IA generativa",
+      "Presentaciones",
+      "Multimodal",
+      "Edición",
+      "Diseño visual",
+      "Agentes"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-26T21:48:52Z"
+  },
+  "arxiv:2611.34237": {
+    "tldr": "VibeVideoAgent permite a los agentes de IA generar videos de alta calidad inspeccionando borradores y corrigiendo errores tempranamente.",
+    "problema": "Los agentes de IA que generan videos a través de código a menudo producen errores sutiles (ej. texto superpuesto, audio desincronizado) que no causan errores de ejecución, llevando a costosas reescrituras.",
+    "propuesta": "VibeVideoAgent es un framework que permite a los agentes de IA inspeccionar borradores de video durante la producción mediante un sistema de percepción multimodal y primitivas de edición.",
+    "resultados": "Mejora la calidad audiovisual holística (L3) en VibeVideoBench para Claude Opus 5.5 (4.03 a 4.43), GPT-6 Astra (4.03 a 4.27) y Claude Sonnet 5.5 (3.97 a 4.10), aumentando el cumplimiento de la rúbrica L2 del 98.87% al 99.35%. Las mayores mejoras se observan en la sincronización audiovisual.",
+    "por_que_importa": "Reduce significativamente los errores en la generación de video por IA, mejorando la calidad y eficiencia del proceso, lo que es crucial para aplicaciones prácticas de creación de contenido multimedia.",
+    "tags": [
+      "generación de video",
+      "IA",
+      "ciberseguridad",
+      "agentes de codificación",
+      "percepción multimodal",
+      "corrección de errores"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-26T21:49:02Z"
+  },
+  "arxiv:2611.34331": {
+    "tldr": "Evalúa modelos de lenguaje en 23,777 puzzles humanos para medir su razonamiento y comprensión.",
+    "problema": "Los modelos de lenguaje actuales tienen dificultades para resolver puzzles complejos que requieren razonamiento, comprensión del lenguaje natural y, a veces, interpretación de imágenes, lo que limita su aplicabilidad en tareas del mundo real.",
+    "propuesta": "Se introduce Puzzling-Bench, un conjunto de datos de 23,777 puzzles con respuestas verificadas por la comunidad, extraído de Puzzling Stack Exchange, que incluye acertijos, cifrados, lógicas y juegos de palabras, con el objetivo de evaluar rigurosamente las capacidades de los modelos de lenguaje.",
+    "resultados": "El mejor modelo, GPT-6.1, alcanza el 74.8% en un conjunto compartido. Un núcleo difícil de 17 puzzles derrota a todos los modelos. La omisión de imágenes en puzzles multimodales reduce la puntuación de los mejores modelos en 24 y 35 puntos. Un oráculo sobre nueve modelos alcanza el 91%.",
+    "por_que_importa": "Este benchmark permite una evaluación más profunda de las capacidades de razonamiento y comprensión de los LLMs, identificando sus limitaciones y guiando el desarrollo futuro hacia modelos más robustos y versátiles.",
+    "tags": [
+      "modelos de lenguaje",
+      "benchmarking",
+      "razonamiento",
+      "puzzles",
+      "evaluación",
+      "IA"
+    ],
+    "model": "gemini-2.5-flash-lite",
+    "generated_at": "2026-11-26T21:49:11Z"
   }
 }
