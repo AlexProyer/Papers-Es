@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-27",
+  "report_type": "filtrado",
+  "evaluated": 21,
+  "selected": 1,
+  "papers": [
+    {
+      "id": "arxiv:2611.34290",
+      "rank": 1,
+      "title": "StateWeaver: Multi-Agent Coordination of Story-State Transitions for Long-Horizon Video Generation",
+      "authors": [
+        "Modi Jin",
+        "Xuying Zhang",
+        "Yijing Guo",
+        "Haoran Li"
+      ],
+      "source": "HuggingFace Daily Papers",
+      "venue": "HuggingFace Daily Papers",
+      "category": null,
+      "date": "2026-11-25",
+      "url": "https://arxiv.org/abs/2611.34290",
+      "pdf_url": "https://arxiv.org/pdf/2611.34290",
+      "score": 53,
+      "topics": [
+        "LLM",
+        "AI agents"
+      ],
+      "reasons": [
+        "🤗 destacado en HF Daily Papers",
+        "🔬 señales de novedad en abstract (+4)",
+        "🎯 temas: LLM, AI agents"
+      ],
+      "abstract_en": "Modern video foundation models generate high-quality short clips, but preserving long-video consistency and correctly depicting event-driven state changes remain challenging. Existing agentic workflows face these challenges because continual planning and repair accumulate context, while reference updates remain limited. We introduce StateWeaver, which combines Active States and Hierarchical Collaboration to connect review-driven visual reference updates with cross-shot state inheritance. Active States translate state discrepancies identified during review into concrete visual asset requirements that guide reference construction, validation, and regeneration, preserving identity and already-correct content while repairing target attributes. Confirmed generation results are linked to the corresponding asset states, story time, and reference versions for verification and reuse by subsequent shots. Hierarchical Collaboration isolates execution contexts by task, clip, and repair round, and uses hierarchical memory to organize this process across multiple sets. Across multiple benchmarks, StateWeaver outperforms existing methods and produces long videos with sustained cross-shot consistency under predefined and autonomously planned storyboards.",
+      "abstract_full": true,
+      "summary_es": {
+        "tldr": "StateWeaver mejora la generación de videos largos manteniendo la consistencia y el cambio de estado a través de agentes coordinados.",
+        "problema": "Los modelos actuales de video generan clips cortos de alta calidad, pero tienen dificultades para mantener la consistencia en videos largos y representar correctamente los cambios de estado impulsados por eventos.",
+        "propuesta": "StateWeaver utiliza 'Active States' y 'Hierarchical Collaboration' para vincular actualizaciones de referencias visuales con la herencia de estado entre tomas. 'Active States' traduce las discrepancias de estado en requisitos de activos visuales para guiar la reparación y actualización de referencias, mientras que 'Hierarchical Collaboration' organiza el proceso a través de múltiples niveles.",
+        "resultados": "StateWeaver supera a los métodos existentes en varios benchmarks, produciendo videos largos con consistencia sostenida entre tomas bajo storyboards predefinidos y planificados autónomamente.",
+        "por_que_importa": "Permite la creación de videos de mayor duración y coherencia, crucial para aplicaciones como la narración de historias, la simulación y la creación de contenido, superando las limitaciones de los enfoques actuales.",
+        "tags": [
+          "generación de video",
+          "IA",
+          "consistencia a largo plazo",
+          "coordinación de agentes",
+          "ciberseguridad",
+          "tecnología"
+        ],
+        "model": "gemini-2.5-flash-lite",
+        "generated_at": "2026-11-27T21:29:56Z"
+      }
+    }
+  ],
+  "generated_at": "2026-11-27T21:29:56Z"
+}
